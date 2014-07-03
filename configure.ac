@@ -9,10 +9,10 @@ AC_SUBST(VERSION)
 AC_PROG_CC
 
 AC_CHECK_PROG(XSLTPROC, xsltproc, xsltproc)
-AC_CHECK_PROG(NSGMLS, nsgmls, nsgmls)
 AC_CHECK_PROG(XML2PO, xml2po, xml2po)
 AC_CHECK_PROG(MSGMERGE, msgmerge, msgmerge)
 AC_CHECK_PROG(MSGCAT, msgcat, msgcat)
+AC_CHECK_PROG(MSGEN, msgen, msgen)
 
 AC_PATH_PROG([FO2PDF], [fop])
 AC_PATH_PROG([W3M], [w3m])

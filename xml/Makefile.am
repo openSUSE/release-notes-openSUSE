@@ -24,26 +24,20 @@ XSLTPROC_COMPLEX_COMMAND = $(XSLTPROC) \
 all: release-notes.txt release-notes.html release-notes-static	\
 release-notes.rtf release-notes.pdf
 
-release-notes.pdf: merged.xml
-if ENABLE_GENERATE_PDF
+release-notes.pdf: release-notes.ent release-notes.en.xml
 	PDF=$$(daps -d ../DC-release-notes pdf-name); \
 	daps -v -d ../DC-release-notes pdf; \
 	mv $$PDF $@
-else
-	echo "No fo2pdf processor installed, skip PDF generation"
-endif
 
 release-notes.txt: release-notes.html
 	sed 's|&#9675;|-|g;s|&#8226;|+|g;s|&#822[01];|"|g;s|&#8212;|--|g' $< \
 	  | $(W3M_COMMAND) > $@
 
-# param.xsl:<xsl:param name="html.stylesheet">suse-rn.css</xsl:param>
-# --stringparam html.stylesheet "suse-rn.css"
-release-notes.html: release-notes.ent release-notes.xml
+release-notes.html: release-notes.ent release-notes.en.xml
 	$(XSLTPROC_COMPLEX_COMMAND) ./yast.xsl $< > $@
 	recode latin1..ascii $@
 
-release-notes-static: release-notes.ent release-notes.xml
+release-notes-static: release-notes.ent release-notes.en.xml
 	WEB=$$(daps -d ../DC-release-notes html-dir-name --single); \
 	daps -v -d ../DC-release-notes html --single --static; \
 	rm -fr $@; mv $$WEB $@
