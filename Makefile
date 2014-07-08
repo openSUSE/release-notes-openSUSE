@@ -30,7 +30,7 @@ ifndef
   LANGS := en ar cs de el es fi fr hu it ja lt nb nl pl pt_BR ro ru zh_CN zh_TW
 endif
 ifndef
-  STYLEROOT := /home/rsalevsky/doku/daps-svn/daps/suse/opensuse2013/
+  STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013
 endif
 PO_FILES := $(foreach l, $(LANGS), po/$(l).po)
 XML_FILES := $(foreach l, $(LANGS), xml/release-notes.$(l).xml)
