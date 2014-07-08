@@ -44,7 +44,7 @@ all: single-html yast-html pdf txt
 
 pot: release-notes.pot
 release-notes.pot: xml/release-notes.ent xml/release-notes.xml
-	$(XML2PO) --expand-all-entities -o release-notes.pot xml/release-notes.xml
+	xml2po --expand-all-entities -o release-notes.pot xml/release-notes.xml
 
 po: $(PO_FILES)
 po/%.po: release-notes.pot
