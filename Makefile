@@ -12,7 +12,7 @@ EXTRA_DIST = $(M4_FILES) DC-release-notes LICENSE xml/release-notes.ent.in \
 
 ACLOCAL_AMFLAGS = -I m4
 
-.PHONY: clean po pdf txt single-html yast-html
+.PHONY: clean po pot pdf txt single-html yast-html
 
 XSLTPROC_COMMAND = xsltproc \
 --stringparam generate.toc "book toc" \
