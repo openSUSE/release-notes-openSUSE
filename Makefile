@@ -60,13 +60,13 @@ xml/release-notes.%.xml: po/%.po xml/release-notes.ent xml/release-notes.xml
 pdf: $(PDF_FILES)
 $(PDF_FILES): $(XML_FILES)
 	lang=`echo $@ | awk -F '.' '{print $$2}' | awk -F '/' '{print $$1}'`; \
-	daps -m  xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT) pdf
+	daps -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT) pdf
 
 single-html: $(SINGLE_HTML_FILES)
 $(SINGLE_HTML_FILES): $(XML_FILES)
 	lang=`echo $@ | awk -F '.' '{print $$2}' | awk -F '/' '{print $$1}'`; \
-	daps -m  xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT) html --single \
-	--static --xsltparam="'$XSLTPARAM --stringparam homepage=http://www.opensuse.com'"
+	daps -m xml/release-notes.$${lang}.xml --styleroot "$(STYLEROOT)" html --single \
+	--static --xsltparam="'--stringparam homepage=http://www.opensuse.com'"
 
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
 $(YAST_HTML_FILES): xml/release-notes.ent xml/release-notes.xml
@@ -76,7 +76,7 @@ $(YAST_HTML_FILES): xml/release-notes.ent xml/release-notes.xml
 txt: $(TXT_FILES)
 $(TXT_FILES): $(XML_FILES)
 	lang=`echo $@ | awk -F '.' '{print $$2}' | awk -F '/' '{print $$1}'`; \
-	daps -m  xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT) text
+	daps -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT) text
 
 $(DIRS):
 	mkdir -p $@
