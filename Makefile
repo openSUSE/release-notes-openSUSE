@@ -27,7 +27,7 @@ XSLTPROC_COMMAND = xsltproc \
 --stringparam profile.os "$(prod)"
 
 ifndef
-  LANGS := en ar cs de el es fi fr hu it ja lt nb nl pl pt_BR ro ru zh_CN zh_TW
+  LANGS := en ar cs de el es fi fr hu it ja lt nb nl pl pt_br ro ru zh_cn zh_tw
 endif
 ifndef
   STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013
