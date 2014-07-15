@@ -1,17 +1,6 @@
 #
 # Copyright (c) 2014 Rick Salevsky <rsalevsky@suse.de>
 #
-MAKEFLAGS = --no-print-directory
-
-CLEANFILES = *~
-
-M4_FILES = m4/jh_path_xml_catalog.m4
-
-EXTRA_DIST = $(M4_FILES) DC-release-notes LICENSE xml/release-notes.ent.in \
-			 xml/release-notes.xml xml/yast.xsl
-
-ACLOCAL_AMFLAGS = -I m4
-
 .PHONY: clean po pot pdf txt single-html yast-html
 
 XSLTPROC_COMMAND = xsltproc \
@@ -26,10 +15,10 @@ XSLTPROC_COMMAND = xsltproc \
 --stringparam profile.arch "$(arch)" \
 --stringparam profile.os "$(prod)"
 
-ifndef
+ifndef LANGS
   LANGS := en ar cs de el es fi fr hu it ja lt nb nl pl pt_br ro ru zh_cn zh_tw
 endif
-ifndef
+ifndef STYLEROOT
   STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013
 endif
 PO_FILES := $(foreach l, $(LANGS), po/$(l).po)
@@ -83,10 +72,3 @@ $(DIRS):
 
 clean:
 	rm -rf po/*~ build/ $(XML_FILES) release-notes.pot
-
-dist-hook:
-	sed -i "s/\(RN_DATE, \).*/\1$$(date --iso))/" configure.ac \
-	&& autoreconf \
-    && for file in configure configure.ac aclocal.m4 Makefile.in; do \
-		cp -p  $(srcdir)/$$file $(distdir)/$$file ; \
-    done
