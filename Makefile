@@ -1,6 +1,7 @@
 #
 # Copyright (c) 2014 Rick Salevsky <rsalevsky@suse.de>
 #
+
 .PHONY: clean po pot pdf txt single-html yast-html
 
 XSLTPROC_COMMAND = xsltproc \
@@ -11,9 +12,7 @@ XSLTPROC_COMMAND = xsltproc \
 --stringparam variablelist.as.blocks 1 \
 --stringparam toc.max.depth 3 \
 --stringparam show.comments 0 \
---xinclude --nonet \
---stringparam profile.arch "$(arch)" \
---stringparam profile.os "$(prod)"
+--xinclude --nonet
 
 ifndef LANGS
   LANGS := en ar cs de el es fi fr hu it ja lt nb nl pl pt_br ro ru zh_cn zh_tw
@@ -59,7 +58,7 @@ $(SINGLE_HTML_FILES): $(XML_FILES)
 
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
 $(YAST_HTML_FILES): xml/release-notes.ent xml/release-notes.xml
-	$(XSLTPROC_COMMAND) ./yast.xsl xml/release-notes.xml > $@; \
+	$(XSLTPROC_COMMAND) /usr/share/daps/daps-xslt/common/yast.xsl xml/release-notes.xml > $@; \
 	recode latin1..ascii $@
 
 txt: $(TXT_FILES)
