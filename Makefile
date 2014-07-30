@@ -15,7 +15,7 @@ XSLTPROC_COMMAND = xsltproc \
 --xinclude --nonet
 
 ifndef LANGS
-  LANGS := en ar cs de el es fi fr hu it ja lt nb nl pl pt_BR ro ru zh_CN zh_TW
+  LANGS := en ja it fr fi zh_TW de zh_CN es nb cs pl nl lt ru pt_BR ar
 endif
 ifndef STYLEROOT
   STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013

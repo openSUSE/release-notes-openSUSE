@@ -2,14 +2,14 @@
 # Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
 # This file is distributed under the same license as the package.
 #
-# Guillaume GARDET <guillaume.gardet@opensuse.org>, 2007, 2008, 2009, 2012, 2013.
+# Guillaume GARDET <guillaume.gardet@opensuse.org>, 2007, 2008, 2009, 2012, 2013, 2014.
 # Fabien Crespel <fabien@crespel.net>, 2008, 2009, 2010, 2011, 2012.
 # Sylvain Tostain <locnar@gmx.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2014-07-24 14:28+0200\n"
-"PO-Revision-Date: 2013-11-18 14:39+0100\n"
+"POT-Creation-Date: 2014-07-30 12:54+0200\n"
+"PO-Revision-Date: 2014-06-22 11:53+0200\n"
 "Last-Translator: Guillaume GARDET <guillaume.gardet@opensuse.org>\n"
 "Language-Team: French <opensuse-fr@opensuse.org>\n"
 "Language: fr\n"
@@ -65,7 +65,7 @@ msgstr "Généralités"
 
 #: xml/release-notes.xml:101(title)
 msgid "openSUSE Documentation"
-msgstr "Documentation openSUSE"
+msgstr "Documentation d'openSUSE"
 
 #. <listitem>
 #: xml/release-notes.xml:105(para)
@@ -221,22 +221,21 @@ msgid "AppArmor and Permission Settings"
 msgstr "AppArmor et la configuration des permissions"
 
 #: xml/release-notes.xml:303(para)
-#, fuzzy
 msgid "AppArmor is enabled by default. This means more security, but might prevent services from working, if you run them in unexpected ways. If you encounter strange permission problems, try to switch the AppArmor profile for the affected service to complain mode with:"
-msgstr "AppArmor est activé par défaut. Ceci est gage de plus de sécurité, mais empêche les services de fonctionner, si vous les employez selon des modalités peu répandues. Si vous êtes confronté à des problèmes de permissions étranges, essayez de désactiver AppArmor pour le service concerné. Signalez le bogue même si cette solution fonctionne, car nous souhaitons corriger les profils AppArmor pour qu'ils couvrent également les cas particuliers."
+msgstr "AppArmor est activé par défaut. Ceci est gage de plus de sécurité, mais empêche les services de fonctionner, si vous les employez selon des modalités peu répandues. Si vous êtes confronté à des problèmes de permissions étranges, essayez de commuter le profile AppArmor pour le service concerné sur le mode plainte avec :"
 
 #: xml/release-notes.xml:306(screen)
 #, no-wrap
 msgid "aa-complain /usr/bin/$your_service"
-msgstr ""
+msgstr "aa-complain /usr/bin/$votre_service"
 
 #: xml/release-notes.xml:307(para)
 msgid "Complain mode means: allow everything, and log things that the profile would not allow."
-msgstr ""
+msgstr "Le mode plainte signifie : tout autoriser, et enregistrer les choses que le profile n'autoriserait pas."
 
 #: xml/release-notes.xml:308(para)
 msgid "Even if it helps report it as a bug! We want to fix AppArmor profiles to cover also corner cases."
-msgstr ""
+msgstr "Même si cela aide, reportez-le comme un bogue. Nous souhaitons améliorer les profils AppArmor pour aussi couvrir les cas particuliers."
 
 #. bnc#850057
 #: xml/release-notes.xml:314(title)
@@ -258,17 +257,16 @@ msgstr "Pour davantage d'informations au sujet de ce bug, consulter <ulink url=\
 
 #. bnc#851588
 #: xml/release-notes.xml:325(title)
-#, fuzzy
 msgid "AutoYaST"
-msgstr "Fichier AutoYaST"
+msgstr "AutoYast"
 
 #: xml/release-notes.xml:327(para)
 msgid "If the autoyast profile contains entries in an <literal>&lt;add-on&gt;</literal> section there is a bug triggered that prevents information in the profile from being transferred from the first stage into the second stage. Therefore, in this case all second stage configuration steps are skipped, which normally leads to more or less completely unusable installations."
-msgstr ""
+msgstr "Si le profile autoyast contient des entrées dans une section <literal>&lt;add-on&gt;</literal>, il y a un bogue qui empêche les informations du profile d'être transférée de la première étape vers la deuxième étape. Ainsi, dans ce cas, toutes les configurations de la deuxième étape sont ignorées, ce qui mène vers des installations plus ou moins inutilisables."
 
 #: xml/release-notes.xml:331(para)
 msgid "As a temporary workaround, avoid using <literal>&lt;add-on&gt;</literal> sections in profiles with AutoYaST in openSUSE 13.1."
-msgstr ""
+msgstr "Comme contournement temporaire de bogue, évitez d'utiliser les sections <literal>&lt;add-on&gt;</literal> dans les profiles avec AutoYaST dans openSUSE 13.1."
 
 #: xml/release-notes.xml:338(title)
 msgid "Miscellaneous"
@@ -334,7 +332,7 @@ msgstr ""
 #: xml/release-notes.xml:0(None)
 msgid "translator-credits"
 msgstr ""
-"Guillaume GARDET <guillaume.gardet@opensuse.org>, 2007-2013.\n"
+"Guillaume GARDET <guillaume.gardet@opensuse.org>, 2007-2014.\n"
 "Sylvain TOSTAIN <locnar@gmx.com>, 2013.\n"
 "Fabien CRESPEL <fabien@crespel.net>, 2008-2012.\n"
 "Damien LOZACH <damien.lozach@gmail.com>, 2007.\n"
@@ -343,10 +341,8 @@ msgstr ""
 #~ msgid "<phrase os=\"slprof\">openSUSE 13.1</phrase> Release Notes"
 #~ msgstr "Notes de version d'<phrase os=\"slprof\">openSUSE 13.1</phrase>"
 
-#, fuzzy
-#~| msgid "Version: 13.1.5 (2013-10-17)"
 #~ msgid "Version: 13.1.8 (2013-11-19)"
-#~ msgstr "Version : 13.1.5 (17-10-2013)"
+#~ msgstr "Version : 13.1.8 (19-11-2013)"
 
 #~ msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included as the <filename>fdl.txt</filename> file."
 #~ msgstr "Il est permis de copier, distribuer et/ou modifier ce document selon les conditions de la licence GNU Free Documentation, Version 1.2 ou n'importe quelle version plus récente publiée par la Free Software Foundation ; sans section inaltérable, sans texte de première page de couverture ni texte de dernière page de couverture. Une copie de la licence est incluse dans le fichier <filename>fdl.txt</filename>."

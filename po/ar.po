@@ -4,13 +4,13 @@
 # Mohammad Alhargan <malham1@gmail.com>, 2011.
 # mohammad <malham1@gmail.com>, 2012.
 # Mohammad Alhargan <malham1@hotmail.com>, 2012.
-# محمد الحرقان <malham1@gmail.com>, 2013.
+# محمد الحرقان <malham1@gmail.com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2014-07-24 14:28+0200\n"
-"PO-Revision-Date: 2013-11-07 10:00+0300\n"
+"POT-Creation-Date: 2014-07-30 12:54+0200\n"
+"PO-Revision-Date: 2014-01-26 08:58+0300\n"
 "Last-Translator: محمد الحرقان <malham1@gmail.com>\n"
 "Language-Team: ترجمة سوزي\n"
 "Language: ar\n"
@@ -106,28 +106,28 @@ msgstr "<emphasis>معلومات أساسية:</emphasis> هناك علل في �
 #. bnc#850056
 #: xml/release-notes.xml:180(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
-msgstr ""
+msgstr "UEFI، GPT، وأقسام MS-DOS"
 
 #: xml/release-notes.xml:182(para)
 msgid "Together with the EFI/UEFI specification a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
-msgstr ""
+msgstr "مع مواصفات EFI/UEFI هناك نمط جديد من التقسيم: GPT (جدول أقسام GUID). هذا مخطط جديد يستخدم معرفات فريدة عالمياً (128-بت القيم المعروضة في أرقام ست عشرية 32) للتعرف على الأجهزة وأنواع التقسيم."
 
 #: xml/release-notes.xml:185(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to generate automatically a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
-msgstr ""
+msgstr "بالإضافة إلى ذلك، تسمح مواصفات UEFI أيضا بأقسام MBR (MS-DOS) القديمة. بمحمل إقلاع لينكس (ELILO أو GRUB2) يحاولة تلقائياً إنشاء GUID لتلك الأقسام القديمة، ويكتبها إلى البرامج الثابتة. GUID يمكن أن يتغير بشكل متكرر، مما يتسبب في إعادة كتابة البرامج الثابتة. إعادة الكتابة تتألف من اثنين من العمليات المختلفة: إزالة الإدخال القديم وإنشاء إدخال جديد يحل محله."
 
 #: xml/release-notes.xml:190(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
-msgstr ""
+msgstr "البرامج الثابتة الحديثة تقوم بتجميع الإدخالات المحذوفة وتحرر الذاكرة من الإدخالات القديمة. قد تنشأ مشكلة عند وجود خلل في البرامج الثابتة أثناء جمع وتحرير هذه الإدخالات؛ وهذا قد يتسبب في عدم قدرة النظام على الإقلاع."
 
 #: xml/release-notes.xml:193(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
-msgstr ""
+msgstr "الحل بسيط: تحويل قسم MBR القديم إلى GPT جديد لتفادي هذه المشكلة تماما."
 
 #. bnc#850052
 #: xml/release-notes.xml:199(title)
 msgid "Booting When in Secure Boot Mode"
-msgstr ""
+msgstr "الإقلاع عندما تكون في وضع الإقلاع الأمن"
 
 #: xml/release-notes.xml:201(para)
 msgid "This only affects machines in UEFI mode with secure boot enabled."
@@ -135,7 +135,7 @@ msgstr "هذا يؤثر فقط على الأجهزة في وضع UEFI عند ت�
 
 #: xml/release-notes.xml:202(para)
 msgid "The new version of the shim loader allows more machines to boot with Secure Boot enabled than with openSUSE 12.3. Nevertheless, in case of trouble, first update the BIOS of your machine to the latest version. If the BIOS update does not help, report the model of your machine it the wiki (http://en.opensuse.org/openSUSE:UEFI). Then we can track it for the next release."
-msgstr ""
+msgstr "إصدار جديد من مُحمل الرقاقات يتيح للمزيد من الأجهزة استخدام الإقلاع الآمن مع أوبن سوزي 12.3. ومع ذلك، في حالة حدوث مشكلة، حدث أولاً BIOS للجهاز الخاص بك إلى الإصدار الأحدث. إذا لم يساعدك تحديث BIOS، قم بالتبليغ عن وجود علة في الويكي (http://en.opensuse.org/openSUSE:UEFI). لنتمكن من حل المشكلة مع الإصدار التالي."
 
 #: xml/release-notes.xml:211(title)
 msgid "System Upgrade"
@@ -179,19 +179,18 @@ msgstr "على ATI ل GPUs الحالي يستعيد <literal>radeonhd</literal>
 #. bnc#850053
 #: xml/release-notes.xml:260(title)
 msgid "Garbage on the Screen During Installation with the Nouveau Driver"
-msgstr ""
+msgstr "البيانات المهملة على الشاشة أثناء عملية التثبيت مع سواقة Nouveau"
 
 #: xml/release-notes.xml:262(para)
 msgid "On some systems with NVIDIA cards, the installer may show garbage on the top part of the screen due to problems with the default nouveau driver. If you are affected by this problem, you can disable the nouveau kernel module to run the installer and then enable it again once the system is installed or upgraded."
-msgstr ""
+msgstr "في بعض الأنظمة مع بطاقات NVIDIA، قد يظهر المثبت تشويش في الجزء العلوي من الشاشة بسبب مشاكل مع برنامج التشغيل الافتراضي nouveau. إذا واجهتك هذه المشكلة، يمكنك تعطيل الوحدة النمطية kernel nouveau لتشغيل المثبت ومن ثم تمكينها مرة أخرى بعد تثبيت أو ترقية النظام."
 
 #: xml/release-notes.xml:266(para)
 msgid "To disable the kernel module, once you boot from the installation media, select the 'Installation' entry in grub and press 'e' to edit the parameters. Then go to the line starting with 'linux' (or 'linuxefi') and add <literal>brokenmodules=nouveau</literal> at the end. Now press F10 to continue booting with the new parameter. After the system is installed, you can re-enable the nouveau module by editing <filename>/etc/modprobe.d/50-blacklist.conf</filename> and removing the entry that blacklists nouveau."
-msgstr ""
+msgstr "لتعطيل الوحدة النمطية kernel، بمجرد تشغيل وسائط التثبيت، حدد خيار'تثبيت' في grub ثم اختر 'e' لتحرير المعلمات. ثم اذهب إلى السطر اللذي يبدء بكلمة 'linux' (or 'linuxefi') وقم بإضافة <literal>brokenmodules=nouveau</literal> في النهاية. الآن اضغط على المفتاح F10 لمتابعة الإقلاع مع المعلمات الجديدة. بعد تثبيت النظام، يمكنك إعادة تمكين' الوحدة النمطية nouveau بتحرير <filename>/etc/modprobe.d/50-blacklist.conf</filename> وإزالة الإدخالات اللتي أضفتها."
 
 #. via mail: ddiss
 #: xml/release-notes.xml:277(title)
-#, fuzzy
 msgid "Samba Version 4.1"
 msgstr "سامبا الإصدار 4.1"
 
@@ -202,72 +201,72 @@ msgstr "سامبا الإصدار 4.1 يتم إرفاقها مع اوبن سوز
 #. bnc#848969
 #: xml/release-notes.xml:287(title)
 msgid "KDE and Bluetooth"
-msgstr ""
+msgstr "كدي، والبلوتوث"
 
 #: xml/release-notes.xml:289(para)
 msgid "The Bluetooth stack is provided by Bluez 5 (a major, backwards-incompatbile version), a necessary upgrade for GNOME desktop and some other components of the base system. Unfortunately, the KDE workspace only supports Bluez version 4 in its currently-released versions."
-msgstr ""
+msgstr "Bluetooth stack تقوم بتوفيرها Bluez 5 (a major, backwards-incompatbile version), وهي ترقية لازمة لسطح المكتب غنوم وبعض المكونات الأخرى للنظام الأساسي. ولسوء الحظ، سطح المكتب كدي يدعم فقط Bluez الإصدار 4 في نسخته الحالية."
 
 #: xml/release-notes.xml:292(para)
 msgid "Therefore, the openSUSE KDE community team offers an unofficial Bluedevil package providing at least basic functionality such as device pairing or support for bluetooth mice; Some other features are known not to work jet, like file transfer."
-msgstr ""
+msgstr "ولذلك، يقدم فريق مجتمع أوبن سوزي كدي حزمة Bluedevil غير الرسمية واللتي تقدم الوظائف الأساسية الأقل مثل أقتران الأجهزة أو دعم فأرة البلوتوث؛ وبعض المميزات الأخرى المعروفة لا تعمل مثل نقل ملف."
 
 #: xml/release-notes.xml:295(para)
 msgid "For the moment, bugs should not be filed against Bluetooth support in KDE as the Bluez 5 port of Bluedevil is still ongoing."
-msgstr ""
+msgstr "في الوقت الحاضر، ينبغي عدم رفع العلل في مشكلة دعم Bluetooth في كدي وكمخرج لهذه المشكلة Bluez 5 من Bluedevil لا يزال متاح للمستخدم."
 
 #. bnc#850058
 #: xml/release-notes.xml:301(title)
 msgid "AppArmor and Permission Settings"
-msgstr ""
+msgstr "AppArmor and وإعدادات الأذونات"
 
 #: xml/release-notes.xml:303(para)
 msgid "AppArmor is enabled by default. This means more security, but might prevent services from working, if you run them in unexpected ways. If you encounter strange permission problems, try to switch the AppArmor profile for the affected service to complain mode with:"
-msgstr ""
+msgstr "AppArmor يتم تمكينه بشكل افتراضي. وهذا يعني المزيد من الأمن، ولكن قد يمنع بعض الخدمات من العمل، إذا قمت بتشغيلها بطرق غير متوقعة. إذا واجهتك مشاكل إذونات غريبة، حاول تبديل إعدادات AppArmor لوضع شكوى الخدمات المتضررة:"
 
 #: xml/release-notes.xml:306(screen)
 #, no-wrap
 msgid "aa-complain /usr/bin/$your_service"
-msgstr ""
+msgstr "aa-complain /usr/bin/$your_service"
 
 #: xml/release-notes.xml:307(para)
 msgid "Complain mode means: allow everything, and log things that the profile would not allow."
-msgstr ""
+msgstr "وضع شكوى الخدمات المتضررة يعني: السماح بكل شيء، وتسجيل الأشياء التي لا تسمح بها."
 
 #: xml/release-notes.xml:308(para)
 msgid "Even if it helps report it as a bug! We want to fix AppArmor profiles to cover also corner cases."
-msgstr ""
+msgstr "حتى إذا كان ذلك يساعد في الإبلاغ عنه كعلة! نحن نريد إصلاح تشكيلات AppArmor الجانبية لتشمل أيضا حالات الاحتكار."
 
 #. bnc#850057
 #: xml/release-notes.xml:314(title)
 msgid "Skype"
-msgstr ""
+msgstr "سكايب"
 
 #: xml/release-notes.xml:316(para)
 msgid "PulseAudio 4.0 exposes a bug in the current version of Skype for Linux (v4.2). Until Skype is fixed and updated, run <command>skype</command> from the command line:"
-msgstr ""
+msgstr "PulseAudio 4.0 يكشف عن وجود خلل في الإصدار الحالي من سكايب لينكس (v4.2). حتى يتم إصلاح سكايب وتحديثه، قم بتشغيل <command>سكايب</command> من سطر الأوامر:"
 
 #: xml/release-notes.xml:318(screen)
 #, no-wrap
 msgid "PULSE_LATENCY_MSEC=60 skype"
-msgstr ""
+msgstr "PULSE_LATENCY_MSEC = 60 سكايب"
 
 #: xml/release-notes.xml:319(para)
 msgid "For more information about this bug, see <ulink url=\"http://arunraghavan.net/2013/08/pulseaudio-4-0-and-skype/\"/>."
-msgstr ""
+msgstr "للمزيد من المعلومات حول هذه العلة, راجع <ulink url=\"http://arunraghavan.net/2013/08/pulseaudio-4-0-and-skype/\"/>."
 
 #. bnc#851588
 #: xml/release-notes.xml:325(title)
 msgid "AutoYaST"
-msgstr ""
+msgstr "AutoYaST"
 
 #: xml/release-notes.xml:327(para)
 msgid "If the autoyast profile contains entries in an <literal>&lt;add-on&gt;</literal> section there is a bug triggered that prevents information in the profile from being transferred from the first stage into the second stage. Therefore, in this case all second stage configuration steps are skipped, which normally leads to more or less completely unusable installations."
-msgstr ""
+msgstr "إذا كان التشكيل autoyast الجانبي يحتوي على الإدخالات في مقطع <literal>&lt; الوظيفة الإضافية &gt;</literal> يوجد علة تسبب منع نقله من المرحلة الأولى إلى المرحلة الثانية من معلومات ملف التعريف. ولذلك، في هذه الحالة جميع خطوات إعداد المرحلة الثانية يتم تخطيها، الأمر الذي يؤدي عادة إلى تجهيزات أكثر أو أقل غير صالحة للاستعمال تماما."
 
 #: xml/release-notes.xml:331(para)
 msgid "As a temporary workaround, avoid using <literal>&lt;add-on&gt;</literal> sections in profiles with AutoYaST in openSUSE 13.1."
-msgstr ""
+msgstr "كحل مؤقت، تجنب استخدام قسم <literal>&lt; الوظيفة الإضافية &gt;</literal> في التشكيلات الجانبية مع AutoYaST في openSUSE 13.1."
 
 #: xml/release-notes.xml:338(title)
 msgid "Miscellaneous"
@@ -337,10 +336,8 @@ msgstr "محمد الحرقان"
 #~ msgid "<phrase os=\"slprof\">openSUSE 13.1</phrase> Release Notes"
 #~ msgstr "<phrase os=\"slprof\">أوبن سوزي 13.1</phrase> ملاحظات الاصدار"
 
-#, fuzzy
-#~| msgid "Version: 13.1.5 (2013-10-17)"
 #~ msgid "Version: 13.1.8 (2013-11-19)"
-#~ msgstr "الإصدار: 13.1.5 (2013-10-17)"
+#~ msgstr "الإصدار: 13.1.8 (2013-11-19)"
 
 #~ msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included as the <filename>fdl.txt</filename> file."
 #~ msgstr "يتم منح الإذن نسخ، توزيع و/أو تعديل هذا المستند تحت شروط رخصة جنو للوثائق الحرة، الإصدار 1.2 أو أي إصدار أحدث المنشورة من قبل مؤسسة البرمجيات الحرة؛ مع لا الأقسام الثابتة ونصوص الغلاف الأمامي واي نصوص أخرى. وترد نسخة من الترخيص كملف في <filename>fdl.txt</filename> ملف."
@@ -405,10 +402,17 @@ msgstr "محمد الحرقان"
 #~ msgid "The main reason for dropping was to decrease the maintenance effort and better focus on other more used modules."
 #~ msgstr "السبب الرئيسي لإسقاطها هو تقليل أعباء الصيانة، والتركيز بشكل أفضل على الوحدات النمطية الأخرى المستخدمة أكثر."
 
-#, fuzzy
-#~| msgid "Alternatively, users can install the proprietary driver from AMD. For more information, see <ulink url=\"http://en.opensuse.org/SDB:ATI_drivers\"/>."
+#~ msgid "Adobe Reader (acroread) and Other PDF Readers"
+#~ msgstr "Adobe Reader (acroread) وغيرها من برامج قراءة PDF"
+
+#~ msgid "Adobe no longer provides (security) updates for Adobe Reader (<systemitem>acroread</systemitem>). Therefore the <systemitem>acroread</systemitem> package was dropped from the distribution to protect openSUSE users."
+#~ msgstr "أدوبي لم تعد توفر تحديثات (الأمن) Adobe Reader (<systemitem>acroread</systemitem>). ولذلك تم إسقاط حزمة <systemitem>acroread</systemitem> من التوزيعة لحماية مستخدمي أوبن سوزي."
+
+#~ msgid "openSUSE includes various PDF viewing tools like Okular, Evince, and poppler-tools. These tools are actively maintained and get security fixes from openSUSE and their upstream authors."
+#~ msgstr "أوبن سوزي يوفر برامج مختلف لقراءة ملفات PDF مثل Okular, Evince, and poppler-tools. يتم الاحتفاظ بنشاط هذه الأدوات والحصول على تصحيحات الأمان من أوبن سوزي ومزودي البرامج الأصليين."
+
 #~ msgid "For more information, see <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
-#~ msgstr "بدلاً من ذلك، يمكن للمستخدمين تثبيت برنامج التشغيل الاحتكارية من AMD. للحصول على مزيد من المعلومات، انظر <ulink url=\"http://en.opensuse.org/SDB:ATI_drivers\"/>."
+#~ msgstr "للحصول على مزيد من المعلومات، راجع <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
 
 #~ msgid "Upgrading with Zypper (dup) Requires /etc/fstab Cleanup"
 #~ msgstr "الترقية باستخدام Zypper (dup) تتطلب /etc/fstab Cleanup"
@@ -439,10 +443,17 @@ msgstr "محمد الحرقان"
 #~ msgid "For details, see the syslog(8) manpage."
 #~ msgstr "راجع استخدام syslog(8) للحصول على تفاصيل."
 
-#, fuzzy
-#~| msgid "<command>systemctl</command> only supports \"standard\" parameters (see <ulink url=\"http://www.freedesktop.org/wiki/Software/systemd/Incompatibilities\"/>)."
+#~ msgid "Duplicated Network Interfaces"
+#~ msgstr "واجة شبكة الاتصال المكررة"
+
+#~ msgid "The current version of systemd uses a new convention for assigning predictable names to network interfaces. YaST is changed accordingly."
+#~ msgstr "يستخدم الإصدار الحالي من systemd اتفاقية جديدة لتعيين أسماء يمكن التنبؤ بها لواجهات شبكة الاتصال. YaST يتغير تبعاً لذلك."
+
+#~ msgid "Some reports indicate a bug in YaST when conversion from one naming scheme to another takes place. If the same network interface has two different names, you have been hit by this bug. In this case remove the different network interfaces in <filename>/etc/sysconfig/network</filename> and use YaST to configure the network anew."
+#~ msgstr "تشير بعض التقارير إلى وجود خلل في YaST عند التحويل من نظام تسمية إلى آخر. إذا كانت واجهة شبكة الاتصال لها اسمين مختلفة، ستتضرر بهذا الخطأ. في هذه الحالة قم بإزالة واجهات شبكة الاتصال مختلفة في <filename>/etc/sysconfig/network</filename> واستخدم YaST لإعداد شبكة الاتصال مجددا."
+
 #~ msgid "For more information about predictable network interface names, see <ulink url=\"http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/\"/>."
-#~ msgstr "<command>systemctl</command> يدعم فقط المعلمات \"القياسية\" (انظر <ulink url=\"http://www.freedesktop.org/wiki/Software/systemd/Incompatibilities\"/>)."
+#~ msgstr "للحصول على مزيد من المعلومات حول أسماء واجهة شبكة الاتصال اللتي يمكن التنبؤ بها، راجع <ulink url=\"http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/\"/>."
 
 #~ msgid "Configuring Postfix"
 #~ msgstr "إعداد Postfix"
@@ -476,6 +487,21 @@ msgstr "محمد الحرقان"
 
 #~ msgid "If upgrading from a previous release to openSUSE 13.1 old cache files may no longer work. In this case removing <filename>~/.cache/darktable/mipmaps</filename> is necessary."
 #~ msgstr "إذا كانت الترقية من إصدار سوزي سابق سوزي 13.1 قد لا تعمل ذاكرة التخزين المؤقت للملفات القديمة. من الضروري في هذه الحالة إزالة <filename>~/.cache/darktable/mipmaps</filename> لحل المشكلة."
+
+#~ msgid "Locate: Replacing findutils-locate by mlocate"
+#~ msgstr "موقع: استبدال findutils-locate من قبل mlocate"
+
+#~ msgid "The <command>mlocate</command> tool is the replacement for <command>findutils-locate</command>. In the default configuration <command>mlocate</command> behave the same as <command>findutils-locate</command>. Because of an improved permission handling, it could take up to 24 hours, until the database file will become available to regular users."
+#~ msgstr "أداة <command>mlocate</command> هي أداة تحل محل <command>findutils-locate</command>. في الإعداد الافتراضي <command>mlocate</command> تعمل عمل <command>findutils-locate</command>. بسبب تحسين أذونات المعالجة، يمكن أن يستغرق مدة تصل إلى 24 ساعة، حتى يصبح ملف قاعدة البيانات متاح للمستخدم العادي."
+
+#~ msgid "In case you encounter a \"Permission denied\" message shortly after installing <command>mlocate</command>, run"
+#~ msgstr "في حال واجهتك رسالة \"تم رفض الإذن\" بعد وقت قصير من تثبيت <command>mlocate</command>، قم بتشغيل"
+
+#~ msgid "/etc/cron.daily/mlocate.cron"
+#~ msgstr "/etc/cron.daily/mlocate.cron"
+
+#~ msgid "as root once."
+#~ msgstr "كجذر مرة واحدة."
 
 #~ msgid "No Network after Installation"
 #~ msgstr "لا توجد شبكة اتصال بعد التثبيت"

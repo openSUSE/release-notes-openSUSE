@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2014-07-24 14:28+0200\n"
-"PO-Revision-Date: 2013-11-16 11:16+0100\n"
+"POT-Creation-Date: 2014-07-30 12:54+0200\n"
+"PO-Revision-Date: 2013-12-11 19:00+0100\n"
 "Last-Translator: Michael Skiba <trans@michael-skiba.de>\n"
 "Language-Team: German <opensuse-translation-de@opensuse.org>\n"
 "Language: de\n"
@@ -222,22 +222,21 @@ msgid "AppArmor and Permission Settings"
 msgstr "AppArmor und Einstellen von Berechtigungen"
 
 #: xml/release-notes.xml:303(para)
-#, fuzzy
 msgid "AppArmor is enabled by default. This means more security, but might prevent services from working, if you run them in unexpected ways. If you encounter strange permission problems, try to switch the AppArmor profile for the affected service to complain mode with:"
-msgstr "AppArmor ist standardmäßig eingeschaltet. Das bedeutet mehr Sicherheit, verhindert aber das Funktionieren von Diensten, wenn Sie diese auf weniger übliche Art und Weise verwenden. Wenn Sie seltsame Berechtigungsprobleme haben, versuchen Sie AppArmor für den betroffenen Dienst abzuschalten. Selbst wenn das hilft, melden Sie das bitte als Fehler, denn wir möchten die AppArmor-Profile auch für Randfälle anpassen."
+msgstr "AppArmor ist standardmäßig eingeschaltet. Das bedeutet mehr Sicherheit, verhindert aber evtl. das Funktionieren von Diensten, wenn Sie diese auf weniger übliche Art und Weise verwenden. Wenn Sie seltsame Berechtigungsprobleme haben, versuchen Sie, AppArmor für den betroffenen Dienst in den \"complain\"-Modus zu schalten, mit:"
 
 #: xml/release-notes.xml:306(screen)
 #, no-wrap
 msgid "aa-complain /usr/bin/$your_service"
-msgstr ""
+msgstr "aa-complain /usr/bin/$ihr_dienst"
 
 #: xml/release-notes.xml:307(para)
 msgid "Complain mode means: allow everything, and log things that the profile would not allow."
-msgstr ""
+msgstr "\"complain\"-Modus bedeutet: Erlaube alles und protokolliere Dinge, die das Profil nicht erlauben würde."
 
 #: xml/release-notes.xml:308(para)
 msgid "Even if it helps report it as a bug! We want to fix AppArmor profiles to cover also corner cases."
-msgstr ""
+msgstr "Auch wenn das hilft, melden Sie es bitte als Fehler! Wir möchten die AppArmor-Profile auch für Randfälle anpassen."
 
 #. bnc#850057
 #: xml/release-notes.xml:314(title)
@@ -260,17 +259,16 @@ msgstr "Weitere Informationen über diesen Fehler finden Sie unter <ulink url=\"
 # 55051 AttribValues/label
 #. bnc#851588
 #: xml/release-notes.xml:325(title)
-#, fuzzy
 msgid "AutoYaST"
-msgstr "AutoYaST-Datei"
+msgstr "AutoYaST"
 
 #: xml/release-notes.xml:327(para)
 msgid "If the autoyast profile contains entries in an <literal>&lt;add-on&gt;</literal> section there is a bug triggered that prevents information in the profile from being transferred from the first stage into the second stage. Therefore, in this case all second stage configuration steps are skipped, which normally leads to more or less completely unusable installations."
-msgstr ""
+msgstr "Wenn das AutoYast-Profil Einträge in einer <literal>&lt;Zusatz-Produkt&gt;</literal>-Sektion (Add-On) enthält, tritt ein Fehler auf, der verhindert, dass Informationen aus dem Profil von der ersten in die zweite Stufe übertragen werden. Deshalb werden in diesem Fall in der zweiten Stufe alle Konfigurationsschritte übersprungen, was normalerweise zu mehr oder weniger komplett unbenutzbaren Installationen führt."
 
 #: xml/release-notes.xml:331(para)
 msgid "As a temporary workaround, avoid using <literal>&lt;add-on&gt;</literal> sections in profiles with AutoYaST in openSUSE 13.1."
-msgstr ""
+msgstr "Um das Problem zu umgehen, vermeiden Sie es, <literal>&lt;Zusatz-Produkt&gt;</literal>-Sektionen in AutoYast-Profilen mit openSUSE 13.1 zu benutzen."
 
 #: xml/release-notes.xml:338(title)
 msgid "Miscellaneous"
@@ -340,10 +338,8 @@ msgstr "Übersetzer-Credits: Michael Skiba <trans@michael-skiba.de>, 2007-2009; 
 #~ msgid "<phrase os=\"slprof\">openSUSE 13.1</phrase> Release Notes"
 #~ msgstr "<phrase os=\"slprof\">openSUSE 13.1</phrase> Versionshinweise"
 
-#, fuzzy
-#~| msgid "Version: 13.1.5 (2013-10-17)"
 #~ msgid "Version: 13.1.8 (2013-11-19)"
-#~ msgstr "Version: 13.1.5 (2013-10-17)"
+#~ msgstr "Version: 13.1.8 (2013-11-19)"
 
 #~ msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included as the <filename>fdl.txt</filename> file."
 #~ msgstr "Sie können dieses Dokument unter den Bedingungen der GNU-Free-Documentation-Lizenz (Version 1.2 oder jede später durch die Free-Software-Foundation veröffentlichte Version) kopieren, verteilen und/oder bearbeiten; mit keinen invarianten Abschnitten, Deckblatt- und Rückseitentexten. Eine Kopie der Lizenz ist als Datei <filename>fdl.txt</filename> enthalten."
