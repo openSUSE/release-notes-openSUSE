@@ -55,7 +55,7 @@ $(PDF_FILES): $(XML_FILES)
 single-html: $(SINGLE_HTML_FILES)
 $(SINGLE_HTML_FILES): $(XML_FILES)
 	lang=$(LANG_COMMAND) ; \
-	daps -m xml/release-notes.$${lang}.xml --styleroot "$(STYLEROOT)" html --single \
+	daps -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT) html --single \
 	--static --xsltparam="'--stringparam homepage=http://www.opensuse.com'"
 
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
