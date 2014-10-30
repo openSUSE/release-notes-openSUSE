@@ -122,37 +122,37 @@ picture was taken by N/A
    <!-- bnc#895447 -->
    <title>Network After an Update With YaST</title>
    <para>
-    After updating from 13.1 to 13.2 using YaST, there are good
-    chances that the new wicked network manager is running together
-    with the old NetworkManager (bnc#895447) if we are using a laptop
-    with a wifi connection.
+    After updating from 13.1 to 13.2 using YaST, there are good chances
+    that the new Wicked network method is running together with the old
+    NetworkManager, if you are using a laptop with a wifi connection.
    </para>
 
    <para>
-    The solution for this issue is not very complex. First we need to
-    disable Wicked and enable again NetworkManager:
+    To solve this, first disable Wicked and enable again NetworkManager:
    </para>
 
-   <screen>systemctl is-active network.service &amp;&amp; systemctl stop network.service</screen>
-   <screen>systemctl is-active wickedd.service &amp;&amp; systemctl stop wickedd.service</screen>
-   <screen>systemctl disable wicked.service</screen>
-   <screen>systemctl --force enable NetworkManager.service</screen>
-   <screen>systemctl start network.service</screen>
+   <screen>systemctl is-active network.service &amp;&amp; systemctl stop network.service
+systemctl is-active wickedd.service &amp;&amp; systemctl stop wickedd.service
+systemctl disable wicked.service
+systemctl --force enable NetworkManager.service
+systemctl start network.service</screen>
 
    <para>
-    We can check the the current selected service is NetworkManager:
+    Then check whether the currently selected service is actually
+    NetworkManager:
    </para>
 
    <screen>systemctl -p Id show network.service</screen>
 
    <para>
-    Once we make the switch, we can update /etc/resolv.conf
+    And update <filename>/etc/resolv.conf</filename>:
    </para>
 
    <screen>netconfig update</screen>
 
    <para>
-    Or simply we can reboot to restart also wpa_suplicant.
+    Or reboot after the <command>systemctl</command> commands to restart
+    also <command>wpa_suplicant</command>.
    </para>
   </section>
 
