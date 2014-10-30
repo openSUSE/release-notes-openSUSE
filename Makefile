@@ -5,7 +5,7 @@
 .PHONY: clean po pot pdf txt single-html yast-html
 
 ifndef LANGS
-  LANGS := en ar cs de el es fi fr it ja lt nb nl pt_BR ru uk zh_CN zh_TW
+  LANGS := en ar cs de el fr it ja nl pt_BR ru uk zh_CN zh_TW
 endif
 ifndef STYLEROOT
   STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013
