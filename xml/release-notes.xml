@@ -118,6 +118,44 @@ picture was taken by N/A
    </para>
   </section>
 
+  <section>
+   <!-- bnc#895447 -->
+   <title>Network After an Update With YaST</title>
+   <para>
+    After updating from 13.1 to 13.2 using YaST, there are good
+    chances that the new wicked network manager is running together
+    with the old NetworkManager (bnc#895447) if we are using a laptop
+    with a wifi connection.
+   </para>
+
+   <para>
+    The solution for this issue is not very complex. First we need to
+    disable Wicked and enable again NetworkManager:
+   </para>
+
+   <screen>systemctl is-active network.service &amp;&amp; systemctl stop network.service</screen>
+   <screen>systemctl is-active wickedd.service &amp;&amp; systemctl stop wickedd.service</screen>
+   <screen>systemctl disable wicked.service</screen>
+   <screen>systemctl --force enable NetworkManager.service</screen>
+   <screen>systemctl start network.service</screen>
+
+   <para>
+    We can check the the current selected service is NetworkManager:
+   </para>
+
+   <screen>systemctl -p Id show network.service</screen>
+
+   <para>
+    Once we make the switch, we can update /etc/resolv.conf
+   </para>
+
+   <screen>netconfig update</screen>
+
+   <para>
+    Or simply we can reboot to restart also wpa_suplicant.
+   </para>
+  </section>
+
  <section id="general">
   <title>General</title>
   <para/>
