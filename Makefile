@@ -29,6 +29,7 @@ TXT_FILES := $(foreach l, $(LANGS), build/release-notes.$(l)/release-notes.$(l).
 DIRS := $(foreach l, $(LANGS), build/release-notes.$(l)/yast-html/)
 
 LANG_COMMAND = `echo $@ | awk -F '.' '{print $$2}' | awk -F '/' '{print $$1}'`
+DAPS_COMMAND = daps -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT)
 
 all: single-html yast-html pdf txt
 
@@ -50,12 +51,12 @@ xml/release-notes.%.xml: po/%.po xml/release-notes.ent xml/release-notes.xml
 pdf: $(PDF_FILES)
 $(PDF_FILES): $(XML_FILES)
 	lang=$(LANG_COMMAND) ; \
-	daps -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT) pdf
+	$(DAPS_COMMAND) pdf
 
 single-html: $(SINGLE_HTML_FILES)
 $(SINGLE_HTML_FILES): $(XML_FILES)
 	lang=$(LANG_COMMAND) ; \
-	daps -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT) html --single \
+	$(DAPS_COMMAND) html --single \
 	--static --xsltparam="'--stringparam homepage=http://www.opensuse.com'"
 
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
@@ -66,7 +67,7 @@ $(YAST_HTML_FILES): xml/release-notes.ent xml/release-notes.xml
 txt: $(TXT_FILES)
 $(TXT_FILES): $(XML_FILES)
 	lang=$(LANG_COMMAND) ; \
-	daps -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT) text
+	$(DAPS_COMMAND) text
 
 $(DIRS):
 	mkdir -p $@
