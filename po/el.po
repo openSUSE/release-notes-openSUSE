@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-30 10:31+0100\n"
+"POT-Creation-Date: 2014-10-30 16:34+0100\n"
 "PO-Revision-Date: 2014-10-29 16:10+0200\n"
 "Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
 "Language-Team: Greek, Modern (1453-) <opensuse-translation-el@opensuse.org>\n"
@@ -54,187 +54,287 @@ msgstr "Εάν αναβαθμίζετε από μία παλιότερη έκδ�
 msgid "Installation"
 msgstr "Εγκατάσταση"
 
-#: xml/release-notes.xml:103(title)
+#. bnc#903242
+#: xml/release-notes.xml:102(title)
+msgid "Live CD Installer and Keyboard Settings"
+msgstr ""
+
+#: xml/release-notes.xml:103(para)
+msgid "The Live CD installer presents a problem related with the keyboard settings. If the user changes from the QWERTY keyboard layout (the default en-US variant), this setting will not be properly applied, and the new system will stay with a QWERTY pre-configuration."
+msgstr ""
+
+#: xml/release-notes.xml:109(para)
+msgid "As a workaround, use the <command>localectl</command> command-line tool after the installation. For example (to install a German keyboard layout):"
+msgstr ""
+
+#: xml/release-notes.xml:115(screen)
+#, no-wrap
+msgid "localectl set-x11-keymap de pc105 nodeadkeys"
+msgstr ""
+
+#: xml/release-notes.xml:116(para)
+msgid "This issue is not present in the DVD Installer."
+msgstr ""
+
+#. bnc#895447
+#: xml/release-notes.xml:123(title)
+msgid "Network After an Update With YaST"
+msgstr ""
+
+#: xml/release-notes.xml:124(para)
+msgid "After updating from 13.1 to 13.2 using YaST, there are good chances that the new Wicked network method is running together with the old NetworkManager, if you are using a laptop with a wifi connection."
+msgstr ""
+
+#: xml/release-notes.xml:130(para)
+msgid "To solve this, first disable Wicked and enable again NetworkManager:"
+msgstr ""
+
+#: xml/release-notes.xml:134(screen)
+#, no-wrap
+msgid ""
+"systemctl is-active network.service &amp;&amp; systemctl stop network.service\n"
+"systemctl is-active wickedd.service &amp;&amp; systemctl stop wickedd.service\n"
+"systemctl disable wicked.service\n"
+"systemctl --force enable NetworkManager.service\n"
+"systemctl start network.service"
+msgstr ""
+
+#: xml/release-notes.xml:140(para)
+#, fuzzy
+msgid "Then check whether the currently selected service is actually NetworkManager:"
+msgstr "Για ερώτημα στην τρέχουσα επιλεγμένη υπηρεσία, χρησιμοποιήστε:"
+
+#: xml/release-notes.xml:145(screen)
+#, no-wrap
+msgid "systemctl -p Id show network.service"
+msgstr "systemctl -p Id show network.service"
+
+#: xml/release-notes.xml:147(para)
+#, fuzzy
+msgid "And update <filename>/etc/resolv.conf</filename>:"
+msgstr "Πληροφορίες Ζώνης Ώρας στο αρχείο <filename>/etc/adjtime</filename>"
+
+#: xml/release-notes.xml:151(screen)
+#, no-wrap
+msgid "netconfig update"
+msgstr ""
+
+#: xml/release-notes.xml:153(para)
+msgid "Or reboot after the <command>systemctl</command> commands to restart also <command>wpa_suplicant</command>."
+msgstr ""
+
+#: xml/release-notes.xml:160(title)
 msgid "General"
 msgstr "Γενικά"
 
-#: xml/release-notes.xml:172(title)
+#: xml/release-notes.xml:229(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
-#: xml/release-notes.xml:173(para)
+#: xml/release-notes.xml:230(para)
 #, fuzzy
-#| msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface) you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "Πριν την εγκατάσταση openSUSE σε σύστημα που εκκινεί με την χρήση UEFI (Unified Extensible Firmware Interface) συνίσταται επειγόντως να ελέγξετε για προτεινόμενες ενημερώσεις firmware από τον κατασκευαστή υλικού και, εάν είναι διαθέσιμες, να τις εγκαταστήσετε. Ένα προ-εγκατεστημένο σύστημα με Windows 8 είναι μια ισχυρή ένδειξη ότι το σύστημά σας εκκινεί με χρήση UEFI."
 
-#: xml/release-notes.xml:181(para)
+#: xml/release-notes.xml:238(para)
 #, fuzzy
-#| msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless it is recommended to install any firmware updates the hardware vendor recommends."
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>Ιστορικό:</emphasis> Μερικά UEFI firmware έχουν σφάλματα που μπορούν να προκαλέσουν κατάρρευση εάν εγγραφούν πολλά δεδομένα στο αποθηκευτικό μέσο UEFI. Εν τούτοις, κανείς δεν γνωρίζει στην πραγματικότητα πόσο είναι το \"πολλά\". Το openSUSE ελαχιστοποιεί τον κίνδυνο με την εγγραφή των ελάχιστων απαιτουμένων για την εκκίνηση του λειτουργικού. Το ελάχιστο σημαίνει ενημέρωση του UEFI firmware σχετικά με την τοποθεσία του διαχειριστή εκκίνησης του openSUSE. Upstream λειτουργίες του Πυρήνα Linux που χρησιμοποιούν το αποθηκευτικό μέσο UEFI για αποθήκευση πληροφοριών εκκίνησης και κατάρρευσης (<literal>pstore</literal>), έχουν απενεργοποιηθεί από προεπιλογή. Παρ' όλα αυτά συνίσταται να εγκαταστήσετε τις ενημερώσεις firmware που συνιστά ο προμηθευτής υλικού."
 
 #. bnc#850056
-#: xml/release-notes.xml:198(title)
+#: xml/release-notes.xml:255(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "Κατατμήσεις UEFI, GPT, και MS-DOS"
 
-#: xml/release-notes.xml:199(para)
+#: xml/release-notes.xml:256(para)
 #, fuzzy
-#| msgid "Together with the EFI/UEFI specification a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "Μαζί με το EFI/UEFI, κατέφθασε ένα νέο στυλ κατάτμησης: το GPT (GUID Partition Table). Αυτό το νέο σχήμα χρησιμοποιεί γενικά μοναδικά αναγνωριστικά (οι τιμές 128-bit εμφανίζονται σε 32 δεκαεξαδικά ψηφία) για να προσδιορίσουν συσκευές και τύπους κατατμήσεων."
 
-#: xml/release-notes.xml:205(para)
+#: xml/release-notes.xml:262(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
 
-#: xml/release-notes.xml:214(para)
+#: xml/release-notes.xml:271(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:277(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr ""
 
 #. bnc#850052
-#: xml/release-notes.xml:228(title)
+#: xml/release-notes.xml:285(title)
 msgid "Booting When in Secure Boot Mode"
 msgstr ""
 
-#: xml/release-notes.xml:229(para)
+#: xml/release-notes.xml:286(para)
 msgid "This only affects machines in UEFI mode with secure boot enabled."
 msgstr "Αυτό επηρεάζει μόνο μηχανήματα σε κατάσταση UEFI με ενεργοποιημένη ασφαλή εκκίνηση."
 
-#: xml/release-notes.xml:232(para)
+#: xml/release-notes.xml:289(para)
 msgid "The new version of the shim loader allows more machines to boot with Secure Boot enabled than with openSUSE 13.1. Nevertheless, in case of trouble, first update the BIOS of your machine to the latest version. If the BIOS update does not help, report the model of your machine to the wiki (http://en.opensuse.org/openSUSE:UEFI). Then we can track it for the next release."
 msgstr ""
 
-#: xml/release-notes.xml:245(title)
+#: xml/release-notes.xml:302(title)
 msgid "System Upgrade"
 msgstr "Αναβάθμιση Συστήματος"
 
-#: xml/release-notes.xml:252(title)
+#: xml/release-notes.xml:309(title)
 msgid "Technical"
 msgstr "Τεχνικά"
 
 #. bnc#850053
-#: xml/release-notes.xml:256(title)
+#: xml/release-notes.xml:313(title)
 msgid "Garbage on the Screen During Installation with the Nouveau Driver"
 msgstr ""
 
-#: xml/release-notes.xml:257(para)
+#: xml/release-notes.xml:314(para)
 msgid "On some systems with NVIDIA cards, the installer may show garbage on the top part of the screen due to problems with the default nouveau driver. If you are affected by this problem, you can disable the nouveau kernel module to run the installer and then enable it again once the system is installed or upgraded."
 msgstr "Σε μερικά συστήματα με κάρτες NVIDIA, ο εγκαταστάτης πιθανό να μην εμφανίζει σωστά το επάνω μέρος της οθόνης λόγω προβλημάτων με τον οδηγό nouveau. Εάν σας επηρεάζει το πρόβλημα, μπορείτε να απενεργοποιήσετε το άρθρωμα πυρήνα nouveau ώστε να εκτελέσετε τον εγκαταστάτη και μετά να το ενεργοποιήσετε ξανά μόλις το σύστημα εγκατασταθεί ή αναβαθμιστεί."
 
-#: xml/release-notes.xml:261(para)
+#: xml/release-notes.xml:321(para)
 msgid "To disable the kernel module, once you boot from the installation media, select the 'Installation' entry in grub and press 'e' to edit the parameters. Then go to the line starting with 'linux' (or 'linuxefi') and add <literal>brokenmodules=nouveau</literal> at the end. Now press F10 to continue booting with the new parameter. After the system is installed, you can re-enable the nouveau module by editing <filename>/etc/modprobe.d/50-blacklist.conf</filename> and removing the entry that blacklists nouveau."
 msgstr ""
 
+#. bnc#899610
+#: xml/release-notes.xml:335(title)
+msgid "Second Static Mouse Pointer"
+msgstr ""
+
+#: xml/release-notes.xml:336(para)
+msgid "If you see two mouse pointers and have two graphic boards, where one is an Intel board, try uninstalling <systemitem>xf86-video-intel</systemitem> and thus using the other one only. This will make disappear the static mouse pointer."
+msgstr ""
+
+#: xml/release-notes.xml:343(para)
+msgid "This and other issues with the Intel driver like (see <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) will be worked on and, if possible, addressed with an online update."
+msgstr ""
+
+#. bnc#901869
+#: xml/release-notes.xml:352(title)
+msgid "Missing Dependencies for virt-manager"
+msgstr ""
+
+#: xml/release-notes.xml:353(para)
+msgid "If you find a problem executing virt-manager, try installing <systemitem>typelib-1_0-Gtk-3_0</systemitem>, <systemitem>typelib-1_0-SpiceClientGtk-3_0</systemitem> and <systemitem>typelib-1-0-GtkVnc-2_0</systemitem>."
+msgstr ""
+
+#: xml/release-notes.xml:359(para)
+msgid "In the online update there will be a new version with those dependencies made explicit."
+msgstr ""
+
 #. bnc#902947
-#: xml/release-notes.xml:271(title)
+#: xml/release-notes.xml:367(title)
 msgid "openSUSE pre-13.2 cifstab Migration"
 msgstr ""
 
-#: xml/release-notes.xml:273(para)
+#: xml/release-notes.xml:369(para)
 msgid "Mounting cifs shares at systems start via <filename>/etc/samba/cifstab</filename> has been discontinued and obsoleted. Now the generic <filename>/etc/fstab</filename> handles it."
 msgstr ""
 
-#: xml/release-notes.xml:279(para)
+#: xml/release-notes.xml:375(para)
 msgid "The migration process requires two steps:"
 msgstr ""
 
-#: xml/release-notes.xml:284(para)
+#: xml/release-notes.xml:380(para)
 msgid "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</filename> to <filename>/etc/fstab</filename>."
 msgstr ""
 
-#: xml/release-notes.xml:291(para)
+#: xml/release-notes.xml:387(para)
 msgid "Add <literal>0 0</literal> to the end of each new cifs mount line in <filename>/etc/fstab</filename>."
 msgstr ""
 
-#: xml/release-notes.xml:298(para)
+#: xml/release-notes.xml:394(para)
 msgid "For more information and examples, see <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> in the installed system."
 msgstr ""
 
 #. bnc#850058
-#: xml/release-notes.xml:335(title)
+#: xml/release-notes.xml:431(title)
 msgid "AppArmor and Permission Settings"
 msgstr "Ρυθμίσεις AppArmor και Δικαιωμάτων"
 
-#: xml/release-notes.xml:336(para)
+#: xml/release-notes.xml:432(para)
 #, fuzzy
-#| msgid "AppArmor is enabled by default. This means more security, but prevent services from working, if you run them in less expected ways. If you encounter strange permission problems, try to disable AppArmor for the affected service. Even if it helps report it as a bug, because we want to fix AppArmor profiles to cover also corner cases."
 msgid "AppArmor is enabled by default. This means more security, but might prevent services from working if you run them in unexpected ways. If you encounter strange permission problems, try to switch the AppArmor profile for the affected service to complain mode with:"
 msgstr "Το AppArmor είναι προεπιλεγμένα ενεργοποιημένο. Αυτό σημαίνει περισσότερη ασφάλεια, αλλά αποτρέπει την λειτουργία μερικών υπηρεσιών, εάν τις εκτελείτε με λιγότερο αναμενόμενους τρόπους. Εάν αντιμετωπίσετε περίεργα προβλήματα δικαιωμάτων, δοκιμάστε να αλλάξετε το προφίλ του AppArmor για την επιρρεαζόμενη υπηρεσία σε λειτουργία complain με:"
 
-#: xml/release-notes.xml:339(screen)
+#: xml/release-notes.xml:435(screen)
 #, no-wrap
 msgid "aa-complain /usr/bin/$your_service"
 msgstr "aa-complain /usr/bin/$your_service"
 
-#: xml/release-notes.xml:340(para)
+#: xml/release-notes.xml:436(para)
 msgid "Complain mode means: allow everything, and log things that the profile would not allow."
 msgstr ""
 
-#: xml/release-notes.xml:341(para)
+#: xml/release-notes.xml:437(para)
 msgid "Even if it helps, report it as a bug! We want to fix AppArmor profiles to also cover corner cases."
 msgstr ""
 
-#: xml/release-notes.xml:374(title)
+#: xml/release-notes.xml:470(title)
 msgid "Miscellaneous"
 msgstr "Διάφορα"
 
-#: xml/release-notes.xml:375(para)
-msgid "N/A"
-msgstr "Μη διαθέσιμο"
+#. bnc#903243
+#: xml/release-notes.xml:475(title)
+msgid "YaST (Qt GUI): \"Service Manager\" Icon Appears Twice"
+msgstr ""
+
+#: xml/release-notes.xml:476(para)
+msgid "In the <guimenu>System</guimenu> section of YaST (Qt GUI) the icon <guimenu>Service Manager</guimenu> appears twice. There is a bug in the Qt version of the YaST Control Center that does not honor the <quote>hidden</quote> flag in the desktop files."
+msgstr ""
+
+#: xml/release-notes.xml:482(para)
+msgid "This will get fixed with the next YaST online update."
+msgstr ""
 
 #. bnc#809347
-#: xml/release-notes.xml:381(title)
+#: xml/release-notes.xml:492(title)
 msgid "More Information and Feedback"
 msgstr "Περισσότερες πληροφορίες και ανατροφοδότηση"
 
-#: xml/release-notes.xml:385(para)
+#: xml/release-notes.xml:496(para)
 msgid "Read the READMEs on the CDs."
 msgstr ""
 
-#: xml/release-notes.xml:388(para)
+#: xml/release-notes.xml:499(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr ""
 
-#: xml/release-notes.xml:389(screen)
+#: xml/release-notes.xml:500(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 
-#: xml/release-notes.xml:390(para)
+#: xml/release-notes.xml:501(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "Το &lt;FILENAME&gt;. είναι το όνομα του RPM."
 
-#: xml/release-notes.xml:393(para)
+#: xml/release-notes.xml:504(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr ""
 
-#: xml/release-notes.xml:397(para)
+#: xml/release-notes.xml:508(para)
 msgid "Find more information in the <filename>docu</filename> directory on the DVD."
 msgstr "Για περισσότερες πληροφορίες δείτε στον κατάλογο <filename>docu</filename> στο DVD."
 
-#: xml/release-notes.xml:400(para)
+#: xml/release-notes.xml:511(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr ""
 
-#: xml/release-notes.xml:405(para)
+#: xml/release-notes.xml:516(para)
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Για τα τελευταία νέα του openSUSE επισκεφθείτε την σελίδα <ulink url=\"http://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:410(para)
+#: xml/release-notes.xml:521(para)
 msgid "Copyright © 2014 SUSE LLC"
 msgstr "Πνευματική ιδιοκτησία © 2014 SUSE LLC"
 
-#: xml/release-notes.xml:412(para)
+#: xml/release-notes.xml:523(para)
 msgid "Thanks for using openSUSE."
 msgstr "Σας ευχαριστούμε που χρησιμοποιείτε openSUSE."
 
-#: xml/release-notes.xml:413(para)
+#: xml/release-notes.xml:524(para)
 msgid "The openSUSE Team."
 msgstr "Η ομάδα openSUSE."
 
@@ -245,6 +345,9 @@ msgstr ""
 "Κώστας Μπουκουβάλας quantis@hellug.gr, 2007\n"
 "Ευστάθιος Ιωσηφίδης iosifidis@opensuse.org 2011, 2012, 2013\n"
 "Κώστας Κουδάρας warlordfff@opensuse.org 2011"
+
+#~ msgid "N/A"
+#~ msgstr "Μη διαθέσιμο"
 
 #~ msgid "For Detailed Installation Information"
 #~ msgstr "Για Λεπτομερείς Πληροφορίες Εγκατάστασης"
@@ -533,9 +636,6 @@ msgstr ""
 #~ msgid "command. It causes the creation of a <literal>network.service</literal> alias link pointing to the <literal>NetworkManager.service</literal>, and thus deactivates the <filename>/etc/init.d/network</filename> script. The command"
 #~ msgstr "εντολή. Προκαλεί την δημιουργία του ψευδώνυμου συνδέσμου <literal>network.service</literal> που καταδεικνύει την <literal>NetworkManager.service</literal>, και έτσι απενεργοποιεί το script <filename>/etc/init.d/network</filename>. Η εντολή"
 
-#~ msgid "systemctl -p Id show network.service"
-#~ msgstr "systemctl -p Id show network.service"
-
 #~ msgid "allows to query the currently selected network service."
 #~ msgstr "επιτρέπει το ερώτημα στην τρέχουσα επιλεγμένη υπηρεσία δικτύου."
 
@@ -585,9 +685,6 @@ msgstr ""
 
 #~ msgid "Start the <command>/etc/init.d/network</command> service: <screen>systemctl     start  network.service</screen>"
 #~ msgstr "Εκκίνηση υπηρεσίας <command>/etc/init.d/network</command>: <screen>systemctl     start  network.service</screen>"
-
-#~ msgid "To query the currently selected service, use:"
-#~ msgstr "Για ερώτημα στην τρέχουσα επιλεγμένη υπηρεσία, χρησιμοποιήστε:"
 
 #~ msgid "systemctl -p Id show     network.service"
 #~ msgstr "systemctl -p Id show     network.service"
@@ -716,9 +813,6 @@ msgstr ""
 #~ msgstr ""
 #~ "d /tmp 1777 root root 10d\n"
 #~ "d /var/tmp 1777 root root 30d\n"
-
-#~ msgid "Timezone Information in <filename>/etc/adjtime</filename>"
-#~ msgstr "Πληροφορίες Ζώνης Ώρας στο αρχείο <filename>/etc/adjtime</filename>"
 
 #~ msgid "The third line of <filename>/etc/adjtime</filename> now contains information whether your BIOS clock runs on UTC or in local timezone (previously stored in <literal>HWCLOCK</literal> in <filename>/etc/sysconfig/clock</filename>)."
 #~ msgstr "Η τρίτη γραμμή του αρχείου <filename>/etc/adjtime</filename> τώρα περιέχει πληροφορίες εάν το ρολόι BIOS έχει τη ρύθμιση για UTC ή τοπική ζώνη ώρας (αποθηκεύτηκε νωρίτερα στο <literal>HWCLOCK</literal> στο αρχείο <filename>/etc/sysconfig/clock</filename>)."

@@ -361,6 +361,32 @@ or online on <ulink url="http://doc.opensuse.org"/>.
     dependencies made explicit.
    </para>
   </section>
+  <section>
+   <!-- bnc#900813 -->
+   <title>Modem Authorization After Suspend</title>
+   <para>
+    openSUSE 13.2 is a more strict in security tha 13.1.
+    If you are connected via a UMTS or 3G modem and you suspend the
+    machine, the system will ask you for the root password before
+    reconnecting.
+   </para>
+   <para>
+    You can change this behavior changing a line in
+    /etc/polkit-default-privs.standard:
+   </para>
+
+   <screen># ModemManager
+org.freedesktop.ModemManager.Device.Control    auth_admin:auth_admin:yes
+   </screen>
+
+   <para>
+    with:
+   </para>
+
+   <screen># ModemManager
+org.freedesktop.ModemManager.Device.Control    auth_admin_keep
+   </screen>
+  </section>
 
   <section>
    <!-- bnc#902947 -->
