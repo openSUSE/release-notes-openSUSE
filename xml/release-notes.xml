@@ -266,6 +266,42 @@ or online on <ulink url="http://doc.opensuse.org"/>.
     and removing the entry that blacklists nouveau. </para>
   </section>
 
+  <section>
+   <!-- bnc#902947 -->
+   <title>openSUSE pre-13.2 cifstab Migration</title>
+
+   <para>
+    Mounting cifs shares at systems start via
+    <filename>/etc/samba/cifstab</filename> has been discontinued and
+    obsoleted. Now the generic <filename>/etc/fstab</filename> handles
+    it.
+   </para>
+   <para>
+    The migration process requires two steps:
+   </para>
+   <orderedlist>
+    <listitem>
+     <para>
+      Append all your mount points from
+      <filename>/etc/samba/cifstab.rpmsave</filename> to
+      <filename>/etc/fstab</filename>.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Add <literal>0 0</literal> to the end of each new cifs mount line
+      in <filename>/etc/fstab</filename>.
+     </para>
+    </listitem>
+   </orderedlist>
+
+   <para>
+    For more information and examples, see
+    <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename>
+    in the installed system.
+   </para>
+  </section>
+
 
   <!--
   <section>
