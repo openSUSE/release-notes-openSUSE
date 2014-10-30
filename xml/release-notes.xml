@@ -254,16 +254,23 @@ or online on <ulink url="http://doc.opensuse.org"/>.
   <section id="sec.131.nouveau-inst">
    <!-- bnc#850053 -->
    <title>Garbage on the Screen During Installation with the Nouveau Driver</title>
-   <para> On some systems with NVIDIA cards, the installer may show garbage on the top part of the
-    screen due to problems with the default nouveau driver. If you are affected by this problem, you
-    can disable the nouveau kernel module to run the installer and then enable it again once the
-    system is installed or upgraded. </para>
-   <para> To disable the kernel module, once you boot from the installation media, select the
-    'Installation' entry in grub and press 'e' to edit the parameters. Then go to the line starting
-    with 'linux' (or 'linuxefi') and add <literal>brokenmodules=nouveau</literal> at the end. Now
-    press F10 to continue booting with the new parameter. After the system is installed, you can
-    re-enable the nouveau module by editing <filename>/etc/modprobe.d/50-blacklist.conf</filename>
-    and removing the entry that blacklists nouveau. </para>
+   <para>
+    On some systems with NVIDIA cards, the installer may show garbage on
+    the top part of the screen due to problems with the default nouveau
+    driver. If you are affected by this problem, you can disable the
+    nouveau kernel module to run the installer and then enable it again
+    once the system is installed or upgraded.
+   </para>
+   <para>
+    To disable the kernel module, once you boot from the installation
+    media, select the 'Installation' entry in grub and press 'e' to edit
+    the parameters. Then go to the line starting with 'linux' (or
+    'linuxefi') and add <literal>brokenmodules=nouveau</literal> at the
+    end. Now press F10 to continue booting with the new parameter. After
+    the system is installed, you can re-enable the nouveau module by
+    editing <filename>/etc/modprobe.d/50-blacklist.conf</filename> and
+    removing the entry that blacklists nouveau.
+   </para>
   </section>
 
   <section>
