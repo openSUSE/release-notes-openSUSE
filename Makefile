@@ -4,16 +4,6 @@
 
 .PHONY: clean po pot pdf txt single-html yast-html
 
-XSLTPROC_COMMAND = xsltproc \
---stringparam generate.toc "book toc" \
---stringparam generate.section.toc.level 0 \
---stringparam section.autolabel 1 \
---stringparam section.label.includes.component.label 2 \
---stringparam variablelist.as.blocks 1 \
---stringparam toc.max.depth 3 \
---stringparam show.comments 0 \
---xinclude --nonet
-
 ifndef LANGS
   LANGS := en ar cs de el es fi fr it ja lt nb nl pt_BR ru uk zh_CN zh_TW
 endif
@@ -30,6 +20,15 @@ DIRS := $(foreach l, $(LANGS), build/release-notes.$(l)/yast-html/)
 
 LANG_COMMAND = `echo $@ | awk -F '.' '{print $$2}' | awk -F '/' '{print $$1}'`
 DAPS_COMMAND = daps -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT)
+XSLTPROC_COMMAND = xsltproc \
+--stringparam generate.toc "book toc" \
+--stringparam generate.section.toc.level 0 \
+--stringparam section.autolabel 1 \
+--stringparam section.label.includes.component.label 2 \
+--stringparam variablelist.as.blocks 1 \
+--stringparam toc.max.depth 3 \
+--stringparam show.comments 0 \
+--xinclude --nonet
 
 all: single-html yast-html pdf txt
 
