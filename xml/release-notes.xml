@@ -170,48 +170,73 @@ or online on <ulink url="http://doc.opensuse.org"/>.
 
   <section id="sec.123.uefi">
    <title>UEFI&mdash;Unified Extensible Firmware Interface</title>
-   <para> Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible
-    Firmware Interface), you are urgently advised to check for any firmware updates the hardware
-    vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a
-    strong indication that your system boots using UEFI. </para>
+   <para>
+    Prior to installing openSUSE on a system that boots using UEFI
+    (Unified Extensible Firmware Interface), you are urgently advised to
+    check for any firmware updates the hardware vendor recommends and,
+    if available, to install such an update. A pre-installed Windows 8
+    is a strong indication that your system boots using UEFI.
+   </para>
 
    <para>
-    <emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much
-    data gets written to the UEFI storage area. Nobody really knows how much "too much" is, though.
-    openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS.
-    The minimum means telling the UEFI firmware about the location of the openSUSE boot loader.
-    Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash
-    information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is
-    recommended to install any firmware updates the hardware vendor recommends. </para>
+    <emphasis>Background:</emphasis> Some UEFI firmware has bugs that
+    cause it to break if too much data gets written to the UEFI storage
+    area. Nobody really knows how much "too much" is, though.  openSUSE
+    minimizes the risk by not writing more than the bare minimum
+    required to boot the OS.  The minimum means telling the UEFI
+    firmware about the location of the openSUSE boot loader.  Upstream
+    Linux Kernel features that use the UEFI storage area for storing
+    boot and crash information (<literal>pstore</literal>) have been
+    disabled by default. Nevertheless, it is recommended to install any
+    firmware updates the hardware vendor recommends.
+   </para>
   </section>
 
 
   <section id="sec.123.uefi-part">
    <!-- bnc#850056 -->
    <title>UEFI, GPT, and MS-DOS Partitions</title>
-   <para> Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID
-    Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in
-    32 hexadecimal digits) to identify devices and partition types. </para>
-   <para> Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux
-    boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions,
-    and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the
-    firmware. A rewrite consist of two different operation: removing the old entry and creating a
-    new entry that replaces the first one. </para>
-   <para> Modern firmware has a garbage collector that collects deleted entries and frees the memory
-    reserved for old entries. A problem arises when faulty firmware does not collect and free those
-    entries; this may end up with a non-bootable system. </para>
-   <para> The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this
-    problem completely. </para>
+   <para>
+    Together with the EFI/UEFI specification, a new style of
+    partitioning arrived: GPT (GUID Partition Table). This new schema
+    uses globally unique identifiers (128-bit values displayed in 32
+    hexadecimal digits) to identify devices and partition types.
+   </para>
+   <para>
+    Additionally, the UEFI specification also allows legacy MBR (MS-DOS)
+    partitions. The Linux boot loaders (ELILO or GRUB2) try to
+    automatically generate a GUID for those legacy partitions, and write
+    them to the firmware. Such a GUID can change frequently, causing a
+    rewrite in the firmware. A rewrite consist of two different
+    operation: removing the old entry and creating a new entry that
+    replaces the first one.
+   </para>
+   <para>
+    Modern firmware has a garbage collector that collects deleted
+    entries and frees the memory reserved for old entries. A problem
+    arises when faulty firmware does not collect and free those entries;
+    this may end up with a non-bootable system.
+   </para>
+   <para>
+    The workaround is simple: convert the legacy MBR partition to the
+    new GPT to avoid this problem completely.
+   </para>
   </section>
 
   <section id="sec.131.secboot">
    <!-- bnc#850052 -->
    <title>Booting When in Secure Boot Mode</title>
-   <para> This only affects machines in UEFI mode with secure boot enabled. </para>
-   <para> The new version of the shim loader allows more machines to boot with Secure Boot enabled
-    than with openSUSE 13.1. Nevertheless, in case of trouble, first update the BIOS of your machine
-    to the latest version. If the BIOS update does not help, report the model of your machine to the
-    wiki (http://en.opensuse.org/openSUSE:UEFI). Then we can track it for the next release. </para>
+   <para>
+    This only affects machines in UEFI mode with secure boot enabled.
+   </para>
+   <para>
+    The new version of the shim loader allows more machines to boot with
+    Secure Boot enabled than with openSUSE 13.1. Nevertheless, in case
+    of trouble, first update the BIOS of your machine to the latest
+    version. If the BIOS update does not help, report the model of your
+    machine to the wiki (http://en.opensuse.org/openSUSE:UEFI). Then we
+    can track it for the next release.
+   </para>
   </section>
 
  </section>
