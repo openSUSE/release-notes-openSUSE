@@ -97,7 +97,26 @@ picture was taken by N/A
    <para>For detailed installation information, see <xref linkend="sec.123.documentation"/>.</para>
   </section>
   -->
- </section>
+  <section>
+   <!-- bnc#903242 -->
+   <title>Live CD Installer and Keyboard Settings</title>
+   <para>
+    The Live CD installer presents a problem related with the keyboard
+    settings.  If the user changes from the QWERTY keyboard layout (the
+    default en-US variant), this setting will not be properly applied,
+    and the new system will stay with a QWERTY pre-configuration.
+   </para>
+   <para>
+    As a workaround, use the <command>localectl</command> command-line
+    tool after the installation. For example (to install a German
+    keyboard layout):
+   </para>
+   
+   <screen>localectl set-x11-keymap de pc105 nodeadkeys</screen>
+   <para>
+    This issue is not present in the DVD Installer.
+   </para>
+  </section>
 
  <section id="general">
   <title>General</title>
