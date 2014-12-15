@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2014-11-03 15:57+0100\n"
+"POT-Creation-Date: 2014-12-15 15:51+0100\n"
 "PO-Revision-Date: 2014-11-08 10:25+0800\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
@@ -104,6 +104,7 @@ msgid "And update <filename>/etc/resolv.conf</filename>:"
 msgstr "並且更新 <filename>/etc/resolv.conf</filename>："
 
 #: xml/release-notes.xml:151(screen)
+#, no-wrap
 msgid "netconfig update"
 msgstr "netconfig update"
 
@@ -124,13 +125,15 @@ msgstr "在初始安裝時，在 YaST 的摘要畫面上，一個如下的警告
 msgid "This warning is a bug in YaST (now fixed in Factory) and you can safely ignore it."
 msgstr "該警告訊息是 YaST 的一個臭蟲 (現已在 Factory 中修正)，您可以安心地忽略它。"
 
-#. bnc#900954
+#. bnc#900954 bnc#903231 bnc#904268
 #: xml/release-notes.xml:175(title)
-msgid "BtrFS and Windows 7"
+#, fuzzy
+msgid "BtrFS and Windows XP"
 msgstr "BtrFS 與 Windows 7"
 
 #: xml/release-notes.xml:176(para)
-msgid "If you have Windows XP and you want to install openSUSE 13.2 with Btrfs, an error message in YaST will inform you about problems during the bootloader installation."
+#, fuzzy
+msgid "If you have Windows XP and want to install openSUSE 13.2 with BtrFS, an error message in YaST will inform you about problems during the bootloader installation."
 msgstr "若您有安裝 Windows XP 且想要安裝 openSUSE 13.2 並使用 Btrfs，YaST 會有一個錯誤訊息通知您在安裝開機引導程式時出現問題。"
 
 #: xml/release-notes.xml:181(para)
@@ -248,33 +251,34 @@ msgstr "若您看到有出現二個滑鼠指標，且您安裝了二張顯示卡
 msgid "This and other issues with the Intel driver like (see <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) will be worked on and, if possible, addressed with an online update."
 msgstr "該問題及其他與 Intel 驅動程式相關的問題將會被處理。若可能的話，會提供線上更新來解決。"
 
-#. bnc#901869
-#: xml/release-notes.xml:411(title)
+#. bnc#903998
+#: xml/release-notes.xml:412(title)
 msgid "Missing Dependencies for virt-manager"
 msgstr "virt-manager 缺少相依套件"
 
-#: xml/release-notes.xml:412(para)
-msgid "If you find a problem executing virt-manager, try installing <systemitem>typelib-1_0-Gtk-3_0</systemitem>, <systemitem>typelib-1_0-SpiceClientGtk-3_0</systemitem> and <systemitem>typelib-1-0-GtkVnc-2_0</systemitem>."
+#: xml/release-notes.xml:413(para)
+#, fuzzy
+msgid "If you find a problem executing virt-manager, try installing <systemitem>typelib-1_0-Gtk-3_0</systemitem>, <systemitem>typelib-1_0-SpiceClientGtk-3_0</systemitem> and <systemitem>typelib-1_0-GtkVnc-2_0</systemitem>."
 msgstr "若您發現執行 virt-manager 有問題，請嘗試安裝 <systemitem>typelib-1_0-Gtk-3_0</systemitem>、<systemitem>typelib-1_0-SpiceClientGtk-3_0</systemitem> 以及 <systemitem>typelib-1-0-GtkVnc-2_0</systemitem>。"
 
-#: xml/release-notes.xml:418(para)
+#: xml/release-notes.xml:419(para)
 msgid "In the online update there will be a new version with those dependencies made explicit."
 msgstr "將來在線上更新時，會有新版本將以上相依套件加入。"
 
 #. bnc#900813
-#: xml/release-notes.xml:425(title)
+#: xml/release-notes.xml:426(title)
 msgid "Modem Authorization After Suspend"
 msgstr "休眠後的新認證方式"
 
-#: xml/release-notes.xml:426(para)
+#: xml/release-notes.xml:427(para)
 msgid "openSUSE 13.2 is a more strict in security tha 13.1. If you are connected via a UMTS or 3G modem and you suspend the machine, the system will ask you for the root password before reconnecting."
 msgstr "openSUSE 13.2 在安全性方面比起 13.1 更嚴格。若您已透過 UMTS 或是 3G 數據機連上網路，並且讓機器進入休眠，系統將會在重新連線前再次詢問您的 root 密碼。"
 
-#: xml/release-notes.xml:432(para)
+#: xml/release-notes.xml:433(para)
 msgid "You can change this behavior changing a line in /etc/polkit-default-privs.standard:"
 msgstr "您可以修改 /etc/polkit-default-privs.standard 其中一行來改變該行為。將"
 
-#: xml/release-notes.xml:437(screen)
+#: xml/release-notes.xml:438(screen)
 #, no-wrap
 msgid ""
 "# ModemManager\n"
@@ -285,11 +289,11 @@ msgstr ""
 "org.freedesktop.ModemManager.Device.Control    auth_admin:auth_admin:yes\n"
 "   "
 
-#: xml/release-notes.xml:441(para)
+#: xml/release-notes.xml:442(para)
 msgid "with:"
 msgstr "改為"
 
-#: xml/release-notes.xml:445(screen)
+#: xml/release-notes.xml:446(screen)
 #, no-wrap
 msgid ""
 "# ModemManager\n"
@@ -301,164 +305,164 @@ msgstr ""
 "   "
 
 #. bnc#901511
-#: xml/release-notes.xml:452(title)
+#: xml/release-notes.xml:453(title)
 msgid "Package Search Missing in GTK UI of YaST"
 msgstr "YaST GTK 使用介面缺少套件搜尋功能"
 
-#: xml/release-notes.xml:453(para)
+#: xml/release-notes.xml:454(para)
 msgid "The GTK interface of YaST does not feature a package search box. So if you are in GNOME or XFCE and you need this feature, use QT interface instead:"
 msgstr "YaST 的 GTK 介面沒有套件搜尋欄位。故若您在 GNOME 或 XFCE 環境下且需要該功能，請使用 QT 介面的 YaST："
 
-#: xml/release-notes.xml:459(screen)
+#: xml/release-notes.xml:460(screen)
 #, no-wrap
 msgid "sudo /sbin/yast2 --qt"
 msgstr "sudo /sbin/yast2 --qt"
 
 #. bnc#902947
-#: xml/release-notes.xml:464(title)
+#: xml/release-notes.xml:465(title)
 msgid "openSUSE pre-13.2 cifstab Migration"
 msgstr "轉換 openSUSE 13.2 之前的 cifstab 至 fstab"
 
-#: xml/release-notes.xml:466(para)
+#: xml/release-notes.xml:467(para)
 msgid "Mounting cifs shares at systems start via <filename>/etc/samba/cifstab</filename> has been discontinued and obsoleted. Now the generic <filename>/etc/fstab</filename> handles it."
 msgstr "在系統開機時透過 <filename>/etc/samba/cifstab</filename> 來掛載 cifs 共享目錄的功能已不再繼續維護，並且已經過時。現在是由通用的 <filename>/etc/fstab</filename> 來處理。"
 
-#: xml/release-notes.xml:472(para)
+#: xml/release-notes.xml:473(para)
 msgid "The migration process requires two steps:"
 msgstr "轉換過程需要二個步驟："
 
-#: xml/release-notes.xml:477(para)
+#: xml/release-notes.xml:478(para)
 msgid "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</filename> to <filename>/etc/fstab</filename>."
 msgstr "將所有您設定在 <filename>/etc/samba/cifstab.rpmsave</filename> 的掛載點新增到 <filename>/etc/fstab</filename>。"
 
-#: xml/release-notes.xml:484(para)
+#: xml/release-notes.xml:485(para)
 msgid "Add <literal>0 0</literal> to the end of each new cifs mount line in <filename>/etc/fstab</filename>."
 msgstr "增加 <literal>0 0</literal> 到 <filename>/etc/fstab</filename> 中每個新增的 cifs 掛載點設定行的後面。"
 
-#: xml/release-notes.xml:491(para)
+#: xml/release-notes.xml:492(para)
 msgid "For more information and examples, see <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> in the installed system."
 msgstr "欲了解更多資訊與範例，請見已安裝系統中的 <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename>。"
 
-#: xml/release-notes.xml:499(title)
+#: xml/release-notes.xml:500(title)
 msgid "Removing openSUSE 13.1 KDE Wallpaper After Upgrade"
 msgstr "在升級後移除 openSUSE 13.1 KDE 桌布"
 
-#: xml/release-notes.xml:500(para)
+#: xml/release-notes.xml:501(para)
 msgid "If the openSUSE 13.1 KDE Wallpaper still appears after the system upgrade, remove it from the user cache manually:"
 msgstr "在系統升級後，若 openSUSE 13.1 KDE 桌面仍會出現，請手動將它自使用者目錄下的快取移除："
 
-#: xml/release-notes.xml:505(screen)
+#: xml/release-notes.xml:506(screen)
 #, no-wrap
 msgid "rm ~/.kde4/cache-*/plasma-wallpapers/usr/share/wallpapers/openSUSEdefault/contents/images/*"
 msgstr "rm ~/.kde4/cache-*/plasma-wallpapers/usr/share/wallpapers/openSUSEdefault/contents/images/*"
 
-#: xml/release-notes.xml:509(title)
+#: xml/release-notes.xml:510(title)
 msgid "MATE Desktop official integration"
 msgstr "MATE 桌面的官方整合"
 
-#: xml/release-notes.xml:511(para)
+#: xml/release-notes.xml:512(para)
 msgid "The MATE desktop is now officially available under openSUSE 13.2 with MATE version 1.8.1, the latest stable release. It provides an intuitive and attractive desktop environment using traditional metaphors for Linux and other Unix-like operating systems."
 msgstr "MATE 桌面環境現在已成為 openSUSE 13.2 官方支援的桌面環境，目前搭載的是最新的穩定版本 MATE 1.8.1。使用了傳統 Linux 與其他 Unix-like 作業系統下的元素，它提供直覺且具吸引力的桌面環境。"
 
-#: xml/release-notes.xml:517(para)
+#: xml/release-notes.xml:518(para)
 msgid "The objective, for openSUSE, is to provide the same experience users had when they used GNOME under openSUSE 11.4, with the main-menu and the Sonar theme."
 msgstr "openSUSE 的目標是提供與過去 openSUSE 11.4 下的 GNOME 桌面 (有主選單及 Sonar 佈景主題) 相同的使用者體驗。"
 
 #. bnc#901013
-#: xml/release-notes.xml:525(title)
+#: xml/release-notes.xml:526(title)
 msgid "Slow Start-up in GNOME"
 msgstr "GNOME 啟動很慢"
 
-#: xml/release-notes.xml:526(para)
+#: xml/release-notes.xml:527(para)
 msgid "GNOME autologin can cause a slow boot process. Probably there is a race between services not correctly marked to depend on each other. Until the fix will be available as an online update, a workaround is to temporarily disable the GNOME autologin feature."
 msgstr "GNOME 自動登入功能會導致緩慢的開機流程。有可能是在未被標註為相互依賴的背景服務間發生了競爭問題所造成。在修正此問題前，作為暫時性的解決方法是先關閉 GNOME 的自動登入功能。"
 
 #. bnc#850058
-#: xml/release-notes.xml:563(title)
+#: xml/release-notes.xml:564(title)
 msgid "AppArmor and Permission Settings"
 msgstr "AppArmor 與權限設定"
 
-#: xml/release-notes.xml:564(para)
+#: xml/release-notes.xml:565(para)
 msgid "AppArmor is enabled by default. This means more security, but might prevent services from working if you run them in unexpected ways. If you encounter strange permission problems, try to switch the AppArmor profile for the affected service to complain mode with:"
 msgstr "AppArmor 預設是被啟用的。這意味著系統會更加安全，但若您以非預期的方式執行某些服務，這些服務可能會無法正常運作。如果您遇到了異常的權限問題，可以嘗試將該受影響服務的 AppArmor 組態切換為 complain 模式："
 
-#: xml/release-notes.xml:567(screen)
+#: xml/release-notes.xml:568(screen)
 #, no-wrap
 msgid "aa-complain /usr/bin/$your_service"
 msgstr "aa-complain /usr/bin/$your_service"
 
-#: xml/release-notes.xml:568(para)
+#: xml/release-notes.xml:569(para)
 msgid "Complain mode means: allow everything, and log things that the profile would not allow."
 msgstr "complain 模式意指允許所有操作，並且記錄那些原本不被允許的操作。"
 
-#: xml/release-notes.xml:569(para)
+#: xml/release-notes.xml:570(para)
 msgid "Even if it helps, report it as a bug! We want to fix AppArmor profiles to also cover corner cases."
 msgstr "即使以上建議有助於解決您的問題，我們仍鼓勵您將您遇到的問題回報為臭蟲。我們想要修正 AppArmor 組態以儘可能涵蓋所有的極端情況。"
 
-#: xml/release-notes.xml:602(title)
+#: xml/release-notes.xml:603(title)
 msgid "Miscellaneous"
 msgstr "雜項"
 
 #. bnc#903243
-#: xml/release-notes.xml:607(title)
+#: xml/release-notes.xml:608(title)
 msgid "YaST (Qt GUI): \"Service Manager\" Icon Appears Twice"
 msgstr "YaST (Qt 介面) 的 \"Service Manager\" 圖示出現二次"
 
-#: xml/release-notes.xml:608(para)
+#: xml/release-notes.xml:609(para)
 msgid "In the <guimenu>System</guimenu> section of YaST (Qt GUI) the icon <guimenu>Service Manager</guimenu> appears twice. There is a bug in the Qt version of the YaST Control Center that does not honor the <quote>hidden</quote> flag in the desktop files."
 msgstr "在 YaST (Qt 介面) 的 <guimenu>System</guimenu> 設定區段，<guimenu>Service Manager</guimenu> 圖示會重覆出現兩次。這是 YaST 控制中心未遵照桌面檔案中的 <quote>hidden</quote> 旗標所造成的問題。"
 
-#: xml/release-notes.xml:614(para)
+#: xml/release-notes.xml:615(para)
 msgid "This will get fixed with the next YaST online update."
 msgstr "這會在下次 YaST 線上更新時解決。"
 
 #. bnc#809347
-#: xml/release-notes.xml:624(title)
+#: xml/release-notes.xml:625(title)
 msgid "More Information and Feedback"
 msgstr "更多資訊與反饋"
 
-#: xml/release-notes.xml:628(para)
+#: xml/release-notes.xml:629(para)
 msgid "Read the READMEs on the CDs."
 msgstr "閱讀安裝 CD 中的 README 檔案。"
 
-#: xml/release-notes.xml:631(para)
+#: xml/release-notes.xml:632(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "從 RPM 獲取某個套件詳細的變動歷史資訊："
 
-#: xml/release-notes.xml:632(screen)
+#: xml/release-notes.xml:633(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 
-#: xml/release-notes.xml:633(para)
+#: xml/release-notes.xml:634(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;FILENAME&gt; 是該套件的名稱。"
 
-#: xml/release-notes.xml:636(para)
+#: xml/release-notes.xml:637(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "請查看在安裝 DVD 最上層目錄下的 <filename>ChangeLog</filename> 檔案以了解所更新套件的變動歷史（按時間先後排序）"
 
-#: xml/release-notes.xml:640(para)
+#: xml/release-notes.xml:641(para)
 msgid "Find more information in the <filename>docu</filename> directory on the DVD."
 msgstr "在安裝 DVD 中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
-#: xml/release-notes.xml:643(para)
+#: xml/release-notes.xml:644(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> 包含了額外或是更新的文件。"
 
-#: xml/release-notes.xml:648(para)
+#: xml/release-notes.xml:649(para)
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "請造訪 <ulink url=\"http://www.opensuse.org\"/> 以了解 openSUSE 最新的產品訊息。"
 
-#: xml/release-notes.xml:653(para)
+#: xml/release-notes.xml:654(para)
 msgid "Copyright © 2014 SUSE LLC"
 msgstr "版權所有 © 2014 SUSE LLC"
 
-#: xml/release-notes.xml:655(para)
+#: xml/release-notes.xml:656(para)
 msgid "Thanks for using openSUSE."
 msgstr "感謝使用 openSUSE。"
 
-#: xml/release-notes.xml:656(para)
+#: xml/release-notes.xml:657(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE 團隊"
 
