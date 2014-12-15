@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2014-10-30 16:34+0100\n"
-"PO-Revision-Date: 2014-09-16 13:09-0300\n"
+"POT-Creation-Date: 2014-11-03 15:57+0100\n"
+"PO-Revision-Date: 2014-11-06 10:41-0200\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <opensuse-pt@opensuse.org>\n"
 "Language: pt_BR\n"
@@ -38,13 +38,26 @@ msgid "13.2"
 msgstr "13.2"
 
 #: xml/release-notes.xml:17(para)
-msgid "openSUSE is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
-msgstr "O openSUSE é um sistema operacional livre baseado no Linux para o seu PC, laptop ou servidor. Você pode navegar na internet, gerenciar seus e-mails e fotos, fazer seu trabalho de escritório, reproduzir vídeos ou músicas e divertir-se!"
+msgid ""
+"openSUSE is a free and Linux-based operating system for your PC, Laptop or "
+"Server. You can surf the web, manage your e-mails and photos, do office work, "
+"play videos or music and have a lot of fun!"
+msgstr ""
+"O openSUSE é um sistema operacional livre baseado no Linux para o seu PC, "
+"laptop ou servidor. Você pode navegar na internet, gerenciar seus e-mails e "
+"fotos, fazer seu trabalho de escritório, reproduzir vídeos ou músicas e "
+"divertir-se!"
 
 #. Previous Release Notes
 #: xml/release-notes.xml:51(para)
-msgid "If you upgrade from an older version to this openSUSE release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
-msgstr "Se você atualizar a partir de uma versão antiga para esta versão do openSUSE, veja as notas de lançamento antigas aqui: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+msgid ""
+"If you upgrade from an older version to this openSUSE release, see previous "
+"release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Releas"
+"e_Notes\"/>"
+msgstr ""
+"Se você atualizar a partir de uma versão antiga para esta versão do openSUSE, "
+"veja as notas de lançamento antigas aqui: <ulink "
+"url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
 
 #: xml/release-notes.xml:90(title)
 msgid "Installation"
@@ -53,52 +66,85 @@ msgstr "Instalação"
 #. bnc#903242
 #: xml/release-notes.xml:102(title)
 msgid "Live CD Installer and Keyboard Settings"
-msgstr ""
+msgstr "Instalador do LiveCD e configuração do teclado"
 
 #: xml/release-notes.xml:103(para)
-msgid "The Live CD installer presents a problem related with the keyboard settings. If the user changes from the QWERTY keyboard layout (the default en-US variant), this setting will not be properly applied, and the new system will stay with a QWERTY pre-configuration."
+msgid ""
+"The Live CD installer presents a problem related with the keyboard settings. "
+"If the user changes from the QWERTY keyboard layout (the default en-US "
+"variant), this setting will not be properly applied, and the new system will "
+"stay with a QWERTY pre-configuration."
 msgstr ""
+"O instalador do LiveCD apresenta um problema relacionado com a configuração "
+"do teclado. Se o usuário alterar do layout QWERTY (o padrão com variante "
+"en-US), esta configuração não será aplicada corretamente e o novo sistema irá "
+"ficar com a configuração padrão QWERTY."
 
 #: xml/release-notes.xml:109(para)
-msgid "As a workaround, use the <command>localectl</command> command-line tool after the installation. For example (to install a German keyboard layout):"
+msgid ""
+"As a workaround, use the <command>localectl</command> command-line tool after "
+"the installation. For example (to install a German keyboard layout):"
 msgstr ""
+"Como contorno use a ferramenta de linha de comando <command>localectl<"
+"/command> após a instalação. Por exemplo (para instalar o layout de teclado "
+"brasileiro):"
 
 #: xml/release-notes.xml:115(screen)
 #, no-wrap
 msgid "localectl set-x11-keymap de pc105 nodeadkeys"
-msgstr ""
+msgstr "localectl set-x11-keymap br abnt2"
 
 #: xml/release-notes.xml:116(para)
 msgid "This issue is not present in the DVD Installer."
-msgstr ""
+msgstr "Este problema não está presente no instalador do DVD."
 
 #. bnc#895447
 #: xml/release-notes.xml:123(title)
 msgid "Network After an Update With YaST"
-msgstr ""
+msgstr "Rede após uma atualização via YaST"
 
 #: xml/release-notes.xml:124(para)
-msgid "After updating from 13.1 to 13.2 using YaST, there are good chances that the new Wicked network method is running together with the old NetworkManager, if you are using a laptop with a wifi connection."
+msgid ""
+"After updating from 13.1 to 13.2 using YaST, there are good chances that the "
+"new Wicked network method is running together with the old NetworkManager, if "
+"you are using a laptop with a wifi connection."
 msgstr ""
+"Após atualizar do 13.1 para o 13.2 usando o YaST, existem boas chances de que "
+"o novo método de rede Wicked esteja em execução juntamente com o antigo "
+"NetworkManager, se você estiver usando um laptop com conexão Wi-Fi."
 
 #: xml/release-notes.xml:130(para)
 msgid "To solve this, first disable Wicked and enable again NetworkManager:"
 msgstr ""
+"Para resolver isto, primeiro desabilite o Wicked e habilite novamente o "
+"NetworkManager:"
 
 #: xml/release-notes.xml:134(screen)
 #, no-wrap
 msgid ""
-"systemctl is-active network.service &amp;&amp; systemctl stop network.service\n"
-"systemctl is-active wickedd.service &amp;&amp; systemctl stop wickedd.service\n"
+"systemctl is-active network.service &amp;&amp; systemctl stop "
+"network.service\n"
+"systemctl is-active wickedd.service &amp;&amp; systemctl stop "
+"wickedd.service\n"
 "systemctl disable wicked.service\n"
 "systemctl --force enable NetworkManager.service\n"
 "systemctl start network.service"
 msgstr ""
+"systemctl is-active network.service &amp;&amp; systemctl stop "
+"network.service\n"
+"systemctl is-active wickedd.service &amp;&amp; systemctl stop "
+"wickedd.service\n"
+"systemctl disable wicked.service\n"
+"systemctl --force enable NetworkManager.service\n"
+"systemctl start network.service"
 
 #: xml/release-notes.xml:140(para)
-#, fuzzy
-msgid "Then check whether the currently selected service is actually NetworkManager:"
-msgstr "Para consultar o serviço selecionado atualmente use:"
+#| msgid "To query the currently selected service, use:"
+msgid ""
+"Then check whether the currently selected service is actually NetworkManager:"
+msgstr ""
+"Para verificar se o serviço selecionado atualmente é atualmente o "
+"NetworkManager:"
 
 #: xml/release-notes.xml:145(screen)
 #, no-wrap
@@ -106,234 +152,660 @@ msgid "systemctl -p Id show network.service"
 msgstr "systemctl -p Id show network.service"
 
 #: xml/release-notes.xml:147(para)
-#, fuzzy
+#| msgid "Timezone Information in <filename>/etc/adjtime</filename>"
 msgid "And update <filename>/etc/resolv.conf</filename>:"
-msgstr "Informação de fuso horário em <filename>/etc/adjtime</filename>"
+msgstr "E atualize o <filename>/etc/resolv.conf</filename>:"
 
 #: xml/release-notes.xml:151(screen)
 #, no-wrap
+#| msgid "Getting updates"
 msgid "netconfig update"
-msgstr ""
+msgstr "netconfig update"
 
 #: xml/release-notes.xml:153(para)
-msgid "Or reboot after the <command>systemctl</command> commands to restart also <command>wpa_suplicant</command>."
+msgid ""
+"Or reboot after the <command>systemctl</command> commands to restart also <"
+"command>wpa_suplicant</command>."
 msgstr ""
+"Ou reinicie após os comandos <command>systemctl</command> para reiniciar "
+"também o <command>wpa_suplicant</command>."
 
-#: xml/release-notes.xml:160(title)
+#. bnc#898023
+#: xml/release-notes.xml:161(title)
+msgid "Warning: No Location for Bootloader Stage1 Selected"
+msgstr ""
+"Aviso: Nenhuma localização para o estágio 1 do carregador de inicialização "
+"selecionado."
+
+#: xml/release-notes.xml:162(para)
+msgid ""
+"During the initial installation, in the summary view of YaST, a warning as "
+"follows can appear bellow the bootloader section: <quote>Warning: No location "
+"for bootloader stage1 selected. Unless you know what are you doing please "
+"select above location.</quote>"
+msgstr ""
+"Durante a instalação inicial, no resumo do YaST, um aviso como o a seguir "
+"aparece abaixo na seção do carregador de inicialização: <quote>Aviso: Nenhuma "
+"localização para o estágio 1 do carregador de inicialização selecionado. A "
+"menos que você saiba o que está fazendo, selecione a localização acima.<"
+"/quote>"
+
+#: xml/release-notes.xml:168(para)
+msgid ""
+"This warning is a bug in YaST (now fixed in Factory) and you can safely "
+"ignore it."
+msgstr ""
+"Este aviso é um bug no YaST (já corrigido no Tumbleweed) e você pode "
+"ignorá-lo com segurança."
+
+#. bnc#900954
+#: xml/release-notes.xml:175(title)
+#| msgid "Start Windows"
+msgid "BtrFS and Windows 7"
+msgstr "BtrFS e Windows 7"
+
+#: xml/release-notes.xml:176(para)
+msgid ""
+"If you have Windows XP and you want to install openSUSE 13.2 with Btrfs, an "
+"error message in YaST will inform you about problems during the bootloader "
+"installation."
+msgstr ""
+"Se você tem o Windows XP e quer instalar o openSUSE 13.2 com Btrfs, uma "
+"mensagem de erro no YaST irá informá-lo sobre problemas durante a instalação "
+"do carregador de inicialização."
+
+#: xml/release-notes.xml:181(para)
+msgid ""
+"The safest option is to install in a partition with Ext4 instead of BtrFS. "
+"There is a fix that will reach Factory soon, but will be not present for 13.2."
+msgstr ""
+"A opção mais segura é instalar em uma partição com Ext4 ao invés do BtrFS. "
+"Existe uma correção que irá chegar no Tumbleweed logo mas não estará presente "
+"no 13.2."
+
+#. bnc#897847
+#: xml/release-notes.xml:189(title)
+msgid "Unbranded Grub2 on New Installs From Live"
+msgstr "Grub2 sem identidade visual em novas instalações a partir do LiveCD"
+
+#: xml/release-notes.xml:190(para)
+msgid ""
+"A bug in YaST prevents the branding in GRUB2 bootloader when installed from "
+"the LiveCD medium. Note, the preferred way to install openSUSE 13.2 is using "
+"the DVD or the NET install. Both mediums generate a proper branded bootloader "
+"during the installation."
+msgstr ""
+"Um bug no YaST previne a identidade visual no carregador de inicialização "
+"GRUB2 quando instalado a partir da mídia do LiveCD. Note que o método "
+"preferido de instalar o openSUSE 13.2 é usando o DVD ou a instalação via "
+"rede. Ambas mídias geram um carregador de inicialização com identidade visual "
+"apropriada durante a instalação."
+
+# dialog title for ftp installation
+#. bnc#899895
+#: xml/release-notes.xml:200(title)
+#| msgid "FTP Installation"
+msgid "NET Installation Using Wifi"
+msgstr "Instalação via rede usando o Wi-Fi"
+
+#: xml/release-notes.xml:201(para)
+msgid ""
+"Performing the NET install using Wifi presents some problems in YaST. Fixing "
+"this is work in progress and will be soon available. Meanwhile the only "
+"option is to use a wire connection to complete the NET installation."
+msgstr ""
+"Executar uma instalação via rede usando o Wi-Fi apresenta alguns problemas no "
+"YaST. A correção para isto está sendo desenvolvida e estará disponível logo. "
+"Neste meio tempo a única opção é usar uma conexão com fio para concluir a "
+"instalação via rede."
+
+#: xml/release-notes.xml:210(title)
 msgid "General"
 msgstr "Geral"
 
-#: xml/release-notes.xml:229(title)
+#: xml/release-notes.xml:279(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
-msgstr "UEFI&mdash;Unified Extensible Firmware Interface (interface unificada de firmware extensível)"
+msgstr ""
+"UEFI&mdash;Unified Extensible Firmware Interface (interface unificada de "
+"firmware extensível)"
 
-#: xml/release-notes.xml:230(para)
-#, fuzzy
-msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
-msgstr "Antes de instalar o openSUSE em um sistema que inicia usando o UEFI (Unified Extensible Firmware Interface) você é aconselhado a verificar por qualquer atualização de firmware que o fabricante do hardware recomenda e, se disponível, instalar tal atualização. Um Windows 8 pré-instalado é uma forte indicação que seu sistema inicia usando o UEFI."
+#: xml/release-notes.xml:280(para)
+msgid ""
+"Prior to installing openSUSE on a system that boots using UEFI (Unified "
+"Extensible Firmware Interface), you are urgently advised to check for any "
+"firmware updates the hardware vendor recommends and, if available, to install "
+"such an update. A pre-installed Windows 8 is a strong indication that your "
+"system boots using UEFI."
+msgstr ""
+"Antes de instalar o openSUSE em um sistema que inicia usando o UEFI (Unified "
+"Extensible Firmware Interface), você é aconselhado a verificar por qualquer "
+"atualização de firmware que o fabricante do hardware recomenda e, se "
+"disponível, instalar tal atualização. Um Windows 8 pré-instalado é uma forte "
+"indicação que seu sistema inicia usando o UEFI."
 
-#: xml/release-notes.xml:238(para)
-#, fuzzy
-msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
-msgstr "<emphasis>Plano de fundo:</emphasis> Alguns firmwares UEFI tem bugs que causam falha se muitos dados são escritos na área de armazenamento do UEFI. Ninguém realmente sabe quando \"muitos dados\" realmente são. O openSUSE minimiza o risco não escrevendo mais que o mínimo necessário para iniciar o SO. O mínimo significa dizer ao firmware UEFI sobre a localização do carregador de inicialização do openSUSE. Os recursos do kernel Linux que usam a área de armazenamento UEFI para armazenar informações de falhas e inicializações (<literal>pstore</literal>) foram desabilitados por padrão.ave been disabled by default. Entretanto, é recomendável instalar qualquer atualização de firmware que o fabricante do hardware recomendar."
+#: xml/release-notes.xml:288(para)
+msgid ""
+"<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to "
+"break if too much data gets written to the UEFI storage area. Nobody really "
+"knows how much \"too much\" is, though. openSUSE minimizes the risk by not "
+"writing more than the bare minimum required to boot the OS. The minimum means "
+"telling the UEFI firmware about the location of the openSUSE boot loader. "
+"Upstream Linux Kernel features that use the UEFI storage area for storing "
+"boot and crash information (<literal>pstore</literal>) have been disabled by "
+"default. Nevertheless, it is recommended to install any firmware updates the "
+"hardware vendor recommends."
+msgstr ""
+"<emphasis>Plano de fundo:</emphasis> Alguns firmwares UEFI tem bugs que "
+"causam falha se muitos dados são escritos na área de armazenamento do UEFI. "
+"Ninguém realmente sabe quando \"muitos dados\" realmente são. O openSUSE "
+"minimiza o risco não escrevendo mais que o mínimo necessário para iniciar o "
+"SO. O mínimo significa dizer ao firmware UEFI sobre a localização do "
+"carregador de inicialização do openSUSE. Os recursos do kernel Linux que usam "
+"a área de armazenamento UEFI para armazenar informações de falhas e "
+"inicializações (<literal>pstore</literal>) foram desabilitados por padrão.ave "
+"been disabled by default. Entretanto, é recomendável instalar qualquer "
+"atualização de firmware que o fabricante do hardware recomendar."
 
 #. bnc#850056
-#: xml/release-notes.xml:255(title)
+#: xml/release-notes.xml:305(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "Partições UEFI, GPT e MS-DOS"
 
-#: xml/release-notes.xml:256(para)
-#, fuzzy
-msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
-msgstr "Junto com a especificação EFI/UEFI um novo estilo de particionamento chegou: GPT (GUID Partition Table - Tabela de Partição GUID). Este novo esquema usa identificadores únicos globais (valores de 128-bit exibidos em 32 dígitos hexadecimais) para identificar os dispositivos e tipos de partições."
+#: xml/release-notes.xml:306(para)
+msgid ""
+"Together with the EFI/UEFI specification, a new style of partitioning "
+"arrived: GPT (GUID Partition Table). This new schema uses globally unique "
+"identifiers (128-bit values displayed in 32 hexadecimal digits) to identify "
+"devices and partition types."
+msgstr ""
+"Junto com a especificação EFI/UEFI um novo estilo de particionamento chegou: "
+"GPT (GUID Partition Table - Tabela de Partição GUID). Este novo esquema usa "
+"identificadores únicos globais (valores de 128-bit exibidos em 32 dígitos "
+"hexadecimais) para identificar os dispositivos e tipos de partições."
 
-#: xml/release-notes.xml:262(para)
-#, fuzzy
-msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
-msgstr "Adicionalmente, a especificação UEFI também permite partições antigas MBR (MS-DOS). Os carregadores de inicialização do Linux (ELILO ou GRUB2) tentam gerar automaticamente um GUID para estas partições antigas e gravá-los no firmware. Tal GUID pode alterar frequentemente, causando uma reescrita no firmware. Uma reescrita consiste em duas operações diferentes: remover a entrada antiga e criar uma nova entrada que substitui a primeira."
+#: xml/release-notes.xml:312(para)
+msgid ""
+"Additionally, the UEFI specification also allows legacy MBR (MS-DOS) "
+"partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically "
+"generate a GUID for those legacy partitions, and write them to the firmware. "
+"Such a GUID can change frequently, causing a rewrite in the firmware. A "
+"rewrite consist of two different operation: removing the old entry and "
+"creating a new entry that replaces the first one."
+msgstr ""
+"Adicionalmente, a especificação UEFI também permite partições antigas MBR "
+"(MS-DOS). Os carregadores de inicialização do Linux (ELILO ou GRUB2) tentam "
+"gerar automaticamente um GUID para estas partições antigas e gravá-los no "
+"firmware. Tal GUID pode alterar frequentemente, causando uma reescrita no "
+"firmware. Uma reescrita consiste em duas operações diferentes: remover a "
+"entrada antiga e criar uma nova entrada que substitui a primeira."
 
-#: xml/release-notes.xml:271(para)
-msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
-msgstr "Firmwares modernos têm um coletor de lixo que coleta entradas removidas e libera a memória reservada para entradas antigas. Um problema pode ocorrer quando um firmware problemático não coleta e libera estas entradas, isto pode levar a um sistema não inicializável."
+#: xml/release-notes.xml:321(para)
+msgid ""
+"Modern firmware has a garbage collector that collects deleted entries and "
+"frees the memory reserved for old entries. A problem arises when faulty "
+"firmware does not collect and free those entries; this may end up with a "
+"non-bootable system."
+msgstr ""
+"Firmwares modernos têm um coletor de lixo que coleta entradas removidas e "
+"libera a memória reservada para entradas antigas. Um problema pode ocorrer "
+"quando um firmware problemático não coleta e libera estas entradas, isto pode "
+"levar a um sistema não inicializável."
 
-#: xml/release-notes.xml:277(para)
-msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
-msgstr "O conserto é simples: converta a partição antiga MBR para a nova GPT para evitar este problema completamente."
+#: xml/release-notes.xml:327(para)
+msgid ""
+"The workaround is simple: convert the legacy MBR partition to the new GPT to "
+"avoid this problem completely."
+msgstr ""
+"O conserto é simples: converta a partição antiga MBR para a nova GPT para "
+"evitar este problema completamente."
 
 #. bnc#850052
-#: xml/release-notes.xml:285(title)
+#: xml/release-notes.xml:335(title)
 msgid "Booting When in Secure Boot Mode"
 msgstr "Inicializando no modo de inicialização segura"
 
-#: xml/release-notes.xml:286(para)
+#: xml/release-notes.xml:336(para)
 msgid "This only affects machines in UEFI mode with secure boot enabled."
-msgstr "Isto afeta apenas máquinas no modo UEFI com a inicialização segura habilitada."
+msgstr ""
+"Isto afeta apenas máquinas no modo UEFI com a inicialização segura habilitada."
 
-#: xml/release-notes.xml:289(para)
-#, fuzzy
-msgid "The new version of the shim loader allows more machines to boot with Secure Boot enabled than with openSUSE 13.1. Nevertheless, in case of trouble, first update the BIOS of your machine to the latest version. If the BIOS update does not help, report the model of your machine to the wiki (http://en.opensuse.org/openSUSE:UEFI). Then we can track it for the next release."
-msgstr "A nova versão do carregador shim permite a mais máquinas inicializar com a inicialização segura habilitada do que com o openSUSE 12.3. Mesmo assim, em caso de problemas, primeiro atualize a BIOS de sua máquina para a última versão. Se a atualização da BIOS não ajudar, relate o modelo de sua máquina na wiki (http://en.opensuse.org/openSUSE:UEFI - em inglês). Então, podemos rastreá-la para a próxima versão."
+#: xml/release-notes.xml:339(para)
+msgid ""
+"The new version of the shim loader allows more machines to boot with Secure "
+"Boot enabled than with openSUSE 13.1. Nevertheless, in case of trouble, first "
+"update the BIOS of your machine to the latest version. If the BIOS update "
+"does not help, report the model of your machine to the wiki "
+"(http://en.opensuse.org/openSUSE:UEFI). Then we can track it for the next "
+"release."
+msgstr ""
+"A nova versão do carregador shim permite a mais máquinas inicializar com a "
+"inicialização segura habilitada do que com o openSUSE 13.1. Mesmo assim, em "
+"caso de problemas, primeiro atualize a BIOS de sua máquina para a última "
+"versão. Se a atualização da BIOS não ajudar, relate o modelo de sua máquina "
+"na wiki (http://en.opensuse.org/openSUSE:UEFI - em inglês). Então, podemos "
+"rastreá-la para a próxima versão."
 
-#: xml/release-notes.xml:302(title)
+#: xml/release-notes.xml:352(title)
 msgid "System Upgrade"
 msgstr "Atualização do sistema"
 
-#: xml/release-notes.xml:309(title)
+#: xml/release-notes.xml:359(title)
 msgid "Technical"
 msgstr "Técnico"
 
 #. bnc#850053
-#: xml/release-notes.xml:313(title)
+#: xml/release-notes.xml:363(title)
 msgid "Garbage on the Screen During Installation with the Nouveau Driver"
 msgstr "Lixo na tela durante a instalação com o driver nouveau"
 
-#: xml/release-notes.xml:314(para)
-msgid "On some systems with NVIDIA cards, the installer may show garbage on the top part of the screen due to problems with the default nouveau driver. If you are affected by this problem, you can disable the nouveau kernel module to run the installer and then enable it again once the system is installed or upgraded."
-msgstr "Em alguns sistemas com placas de vídeo NVIDIA, o instalador pode apresentar lixo na parte superior da tela devido a problemas com o driver padrão nouveau. Se você é afetado por este problema, você pode desabilitar o módulo do kernel nouveau para executar o instalador e então habilitá-lo novamente uma vez que o sistema for instalado ou atualizado."
+#: xml/release-notes.xml:364(para)
+msgid ""
+"On some systems with NVIDIA cards, the installer may show garbage on the top "
+"part of the screen due to problems with the default nouveau driver. If you "
+"are affected by this problem, you can disable the nouveau kernel module to "
+"run the installer and then enable it again once the system is installed or "
+"upgraded."
+msgstr ""
+"Em alguns sistemas com placas de vídeo NVIDIA, o instalador pode apresentar "
+"lixo na parte superior da tela devido a problemas com o driver padrão "
+"nouveau. Se você é afetado por este problema, você pode desabilitar o módulo "
+"do kernel nouveau para executar o instalador e então habilitá-lo novamente "
+"uma vez que o sistema for instalado ou atualizado."
 
-#: xml/release-notes.xml:321(para)
-msgid "To disable the kernel module, once you boot from the installation media, select the 'Installation' entry in grub and press 'e' to edit the parameters. Then go to the line starting with 'linux' (or 'linuxefi') and add <literal>brokenmodules=nouveau</literal> at the end. Now press F10 to continue booting with the new parameter. After the system is installed, you can re-enable the nouveau module by editing <filename>/etc/modprobe.d/50-blacklist.conf</filename> and removing the entry that blacklists nouveau."
-msgstr "Para desabilitar o módulo do kernel, uma vez que você inicializou a partir da mídia de instalação, selecione a entrada 'Instalação' no grub e pressione 'e' para editar os parâmetros. Vá para a linha começando com 'linux' (ou 'linuxefi') e adicione <literal>brokenmodules=nouveau</literal> ao final. Pressione F10 para continuar a inicialização com o novo parâmetro. Após o sistema estar instalado, você pode reabilitar o módulo nouveau editando <filename>/etc/modprobe.d/50-blacklist.conf</filename> e removendo a entrada que coloca o módulo nouveau na lista negra."
+#: xml/release-notes.xml:371(para)
+msgid ""
+"To disable the kernel module, once you boot from the installation media, "
+"select the 'Installation' entry in grub and press 'e' to edit the parameters. "
+"Then go to the line starting with 'linux' (or 'linuxefi') and add <literal>"
+"brokenmodules=nouveau</literal> at the end. Now press F10 to continue booting "
+"with the new parameter. After the system is installed, you can re-enable the "
+"nouveau module by editing <filename>/etc/modprobe.d/50-blacklist.conf</filenam"
+"e> and removing the entry that blacklists nouveau."
+msgstr ""
+"Para desabilitar o módulo do kernel, uma vez que você inicializou a partir da "
+"mídia de instalação, selecione a entrada 'Instalação' no grub e pressione 'e' "
+"para editar os parâmetros. Vá para a linha começando com 'linux' (ou "
+"'linuxefi') e adicione <literal>brokenmodules=nouveau</literal> ao final. "
+"Pressione F10 para continuar a inicialização com o novo parâmetro. Após o "
+"sistema estar instalado, você pode reabilitar o módulo nouveau editando <"
+"filename>/etc/modprobe.d/50-blacklist.conf</filename> e removendo a entrada "
+"que coloca o módulo nouveau na lista negra."
+
+#: xml/release-notes.xml:384(title)
+msgid "Information About the FGLRX Driver"
+msgstr "Informação sobre o driver AMD FGLRX"
+
+#: xml/release-notes.xml:385(para)
+msgid ""
+"For more information about the AMD FGLRX drivers in openSUSE 13.2 and its "
+"status, see <ulink url=\"https://lizards.opensuse.org/2014/11/01/fglrx-warning"
+"-opensuse-13-2-tumbleweed/\">https://lizards.opensuse.org/2014/11/01/fglrx-war"
+"ning-opensuse-13-2-tumbleweed/</ulink>."
+msgstr ""
+"Para mais informação sobre os drivers AMD FGLRX no openSUSE 13.2 e seu "
+"status, veja <ulink url=\"https://lizards.opensuse.org/2014/11/01/fglrx-warnin"
+"g-opensuse-13-2-tumbleweed/\">https://lizards.opensuse.org/2014/11/01/fglrx-wa"
+"rning-opensuse-13-2-tumbleweed/</ulink>."
 
 #. bnc#899610
-#: xml/release-notes.xml:335(title)
+#: xml/release-notes.xml:394(title)
 msgid "Second Static Mouse Pointer"
-msgstr ""
+msgstr "Segundo ponteiro de mouse estático"
 
-#: xml/release-notes.xml:336(para)
-msgid "If you see two mouse pointers and have two graphic boards, where one is an Intel board, try uninstalling <systemitem>xf86-video-intel</systemitem> and thus using the other one only. This will make disappear the static mouse pointer."
+#: xml/release-notes.xml:395(para)
+msgid ""
+"If you see two mouse pointers and have two graphic boards, where one is an "
+"Intel board, try uninstalling <systemitem>xf86-video-intel</systemitem> and "
+"thus using the other one only. This will make disappear the static mouse "
+"pointer."
 msgstr ""
+"Se você ver dois ponteiros de mouse e tem duas placas de vídeo, sendo uma da "
+"Intel, tente desinstalar o pacote <systemitem>xf86-video-intel</systemitem> e "
+"usar apenas o outro. Isto fará o ponteiro do mouse estático desaparecer."
 
-#: xml/release-notes.xml:343(para)
-msgid "This and other issues with the Intel driver like (see <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) will be worked on and, if possible, addressed with an online update."
+#: xml/release-notes.xml:402(para)
+msgid ""
+"This and other issues with the Intel driver like (see <ulink "
+"url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">"
+"http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) will be worked "
+"on and, if possible, addressed with an online update."
 msgstr ""
+"Isto e outros problemas com o driver da Intel como (veja <ulink "
+"url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">"
+"http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) serão "
+"trabalhados e, se possível, corrigidos com uma atualização online."
 
 #. bnc#901869
-#: xml/release-notes.xml:352(title)
+#: xml/release-notes.xml:411(title)
 msgid "Missing Dependencies for virt-manager"
-msgstr ""
+msgstr "Dependências faltantes para o virt-manager"
 
-#: xml/release-notes.xml:353(para)
-msgid "If you find a problem executing virt-manager, try installing <systemitem>typelib-1_0-Gtk-3_0</systemitem>, <systemitem>typelib-1_0-SpiceClientGtk-3_0</systemitem> and <systemitem>typelib-1-0-GtkVnc-2_0</systemitem>."
+#: xml/release-notes.xml:412(para)
+msgid ""
+"If you find a problem executing virt-manager, try installing <systemitem>"
+"typelib-1_0-Gtk-3_0</systemitem>, <systemitem>typelib-1_0-SpiceClientGtk-3_0<"
+"/systemitem> and <systemitem>typelib-1-0-GtkVnc-2_0</systemitem>."
 msgstr ""
+"Se você encontrou um problema ao executar o virt-manager, tente instalar <"
+"systemitem>typelib-1_0-Gtk-3_0</systemitem>, <systemitem>"
+"typelib-1_0-SpiceClientGtk-3_0</systemitem> e <systemitem>"
+"typelib-1-0-GtkVnc-2_0</systemitem>."
 
-#: xml/release-notes.xml:359(para)
-msgid "In the online update there will be a new version with those dependencies made explicit."
+#: xml/release-notes.xml:418(para)
+msgid ""
+"In the online update there will be a new version with those dependencies made "
+"explicit."
 msgstr ""
+"Na atualização online haverá uma nova versão com estas dependências tornadas "
+"explícitas."
+
+#. bnc#900813
+#: xml/release-notes.xml:425(title)
+#| msgid "No Authorization"
+msgid "Modem Authorization After Suspend"
+msgstr "Autorização do modem após a suspensão"
+
+#: xml/release-notes.xml:426(para)
+msgid ""
+"openSUSE 13.2 is a more strict in security tha 13.1. If you are connected via "
+"a UMTS or 3G modem and you suspend the machine, the system will ask you for "
+"the root password before reconnecting."
+msgstr ""
+"O openSUSE 13.2 está mais restrito na segurança que o 13.1. Se você está "
+"conectado via modem 3G e você suspende a máquina, o sistema irá perguntar a "
+"você a senha de root antes de reconectar."
+
+#: xml/release-notes.xml:432(para)
+msgid ""
+"You can change this behavior changing a line in "
+"/etc/polkit-default-privs.standard:"
+msgstr ""
+"Você pode alterar este comportamento alterando uma linha em "
+"/etc/polkit-default-privs.standard:"
+
+#: xml/release-notes.xml:437(screen)
+#, no-wrap
+msgid ""
+"# ModemManager\n"
+"org.freedesktop.ModemManager.Device.Control    auth_admin:auth_admin:yes\n"
+"   "
+msgstr ""
+"# ModemManager\n"
+"org.freedesktop.ModemManager.Device.Control    auth_admin:auth_admin:yes\n"
+"   "
+
+#: xml/release-notes.xml:441(para)
+msgid "with:"
+msgstr "para:"
+
+#: xml/release-notes.xml:445(screen)
+#, no-wrap
+msgid ""
+"# ModemManager\n"
+"org.freedesktop.ModemManager.Device.Control    auth_admin_keep\n"
+"   "
+msgstr ""
+"# ModemManager\n"
+"org.freedesktop.ModemManager.Device.Control    auth_admin_keep\n"
+"   "
+
+#. bnc#901511
+#: xml/release-notes.xml:452(title)
+msgid "Package Search Missing in GTK UI of YaST"
+msgstr "Pesquisa de pacotes faltando na interface GTK do YaST"
+
+#: xml/release-notes.xml:453(para)
+msgid ""
+"The GTK interface of YaST does not feature a package search box. So if you "
+"are in GNOME or XFCE and you need this feature, use QT interface instead:"
+msgstr ""
+"A interface GTK do YaST não tem uma caixa de pesquisa de pacotes. Se você "
+"está no GNOME ou XFCE e necessita deste recurso, use a interface Qt:"
+
+#: xml/release-notes.xml:459(screen)
+#, no-wrap
+msgid "sudo /sbin/yast2 --qt"
+msgstr "sudo /sbin/yast2 --qt"
 
 #. bnc#902947
-#: xml/release-notes.xml:367(title)
+#: xml/release-notes.xml:464(title)
 msgid "openSUSE pre-13.2 cifstab Migration"
-msgstr ""
+msgstr "Migração do cifstab para openSUSE pré-13.2"
 
-#: xml/release-notes.xml:369(para)
-msgid "Mounting cifs shares at systems start via <filename>/etc/samba/cifstab</filename> has been discontinued and obsoleted. Now the generic <filename>/etc/fstab</filename> handles it."
+#: xml/release-notes.xml:466(para)
+msgid ""
+"Mounting cifs shares at systems start via <filename>/etc/samba/cifstab<"
+"/filename> has been discontinued and obsoleted. Now the generic <filename>"
+"/etc/fstab</filename> handles it."
 msgstr ""
+"Montar compartilhamentos cifs na inicialização do sistema via <filename>"
+"/etc/samba/cifstab</filename> foi descontinuado e tornado obsoleto. Agora o  "
+"<filename>/etc/fstab</filename> genérico cuida disto."
 
-#: xml/release-notes.xml:375(para)
+#: xml/release-notes.xml:472(para)
 msgid "The migration process requires two steps:"
-msgstr ""
+msgstr "O processo de migração requer duas etapas:"
 
-#: xml/release-notes.xml:380(para)
-msgid "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</filename> to <filename>/etc/fstab</filename>."
+#: xml/release-notes.xml:477(para)
+msgid ""
+"Append all your mount points from <filename>/etc/samba/cifstab.rpmsave<"
+"/filename> to <filename>/etc/fstab</filename>."
 msgstr ""
+"Anexe todos os pontos de montagem de <filename>/etc/samba/cifstab.rpmsave<"
+"/filename> em <filename>/etc/fstab</filename>."
 
-#: xml/release-notes.xml:387(para)
-msgid "Add <literal>0 0</literal> to the end of each new cifs mount line in <filename>/etc/fstab</filename>."
+#: xml/release-notes.xml:484(para)
+msgid ""
+"Add <literal>0 0</literal> to the end of each new cifs mount line in <"
+"filename>/etc/fstab</filename>."
 msgstr ""
+"Adicione <literal>0 0</literal> no final de cada nova linha de montagens do "
+"cifs em <filename>/etc/fstab</filename>."
 
-#: xml/release-notes.xml:394(para)
-msgid "For more information and examples, see <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> in the installed system."
+#: xml/release-notes.xml:491(para)
+msgid ""
+"For more information and examples, see <filename>"
+"/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> in the "
+"installed system."
 msgstr ""
+"Para mais informações e exemplos, veja <filename>"
+"/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> no "
+"sistema instalado"
+
+#: xml/release-notes.xml:499(title)
+msgid "Removing openSUSE 13.1 KDE Wallpaper After Upgrade"
+msgstr "Removendo o papel de parede do openSUSE 13.1 no KDE após a atualização"
+
+#: xml/release-notes.xml:500(para)
+msgid ""
+"If the openSUSE 13.1 KDE Wallpaper still appears after the system upgrade, "
+"remove it from the user cache manually:"
+msgstr ""
+"Se o papel de parede do openSUSE 13.1 no KDE ainda aparecer após a "
+"atualização do sistema, remova-o do cache de usuário manualmente:"
+
+#: xml/release-notes.xml:505(screen)
+#, no-wrap
+msgid ""
+"rm ~/.kde4/cache-*/plasma-wallpapers/usr/share/wallpapers/openSUSEdefault/cont"
+"ents/images/*"
+msgstr ""
+"rm ~/.kde4/cache-*/plasma-wallpapers/usr/share/wallpapers/openSUSEdefault/cont"
+"ents/images/*"
+
+#: xml/release-notes.xml:509(title)
+msgid "MATE Desktop official integration"
+msgstr "Integração oficial da área de trabalho MATE"
+
+#: xml/release-notes.xml:511(para)
+msgid ""
+"The MATE desktop is now officially available under openSUSE 13.2 with MATE "
+"version 1.8.1, the latest stable release. It provides an intuitive and "
+"attractive desktop environment using traditional metaphors for Linux and "
+"other Unix-like operating systems."
+msgstr ""
+"A área de trabalho MATE está agora disponível oficialmente no openSUSE 13.2 "
+"com o MATE versão 1.8.1, a última versão estável. Ela fornece um ambiente de "
+"trabalho intuitivo e atrativo usando metáforas tradicionais para o Linux e "
+"outros sistemas operacionais tipo Unix."
+
+#: xml/release-notes.xml:517(para)
+msgid ""
+"The objective, for openSUSE, is to provide the same experience users had when "
+"they used GNOME under openSUSE 11.4, with the main-menu and the Sonar theme."
+msgstr ""
+"O objetivo, para o openSUSE, é fornecer a mesma experiência que os usuários "
+"tinham quando eles usavam o GNOME no openSUSE 11.4, com o menu principal e o "
+"tema Sonar."
+
+#. bnc#901013
+#: xml/release-notes.xml:525(title)
+msgid "Slow Start-up in GNOME"
+msgstr "Início lento do GNOME"
+
+#: xml/release-notes.xml:526(para)
+msgid ""
+"GNOME autologin can cause a slow boot process. Probably there is a race "
+"between services not correctly marked to depend on each other. Until the fix "
+"will be available as an online update, a workaround is to temporarily disable "
+"the GNOME autologin feature."
+msgstr ""
+"O login automático do GNOME pode causar uma lentidão no processo de "
+"inicialização. Provavelmente existe uma condição entre os serviços não "
+"marcados corretamente para dependerem de outros. Até que a correção esteja "
+"disponível como uma atualização online, um contorno é desabilitar "
+"temporariamente o recurso de login automático do GNOME."
 
 #. bnc#850058
-#: xml/release-notes.xml:431(title)
+#: xml/release-notes.xml:563(title)
 msgid "AppArmor and Permission Settings"
 msgstr "AppArmor e configurações de permissões"
 
-#: xml/release-notes.xml:432(para)
-#, fuzzy
-msgid "AppArmor is enabled by default. This means more security, but might prevent services from working if you run them in unexpected ways. If you encounter strange permission problems, try to switch the AppArmor profile for the affected service to complain mode with:"
-msgstr "O AppArmor é habilitado por padrão. Isto significa mais segurança, mas previne os serviços de executar, se você executar eles de um jeito não esperado. Se você encontrar problemas de permissão estranhos, tente alterar o perfil do AppArmor para o serviço afetado para o modo de reclamação com:"
+#: xml/release-notes.xml:564(para)
+msgid ""
+"AppArmor is enabled by default. This means more security, but might prevent "
+"services from working if you run them in unexpected ways. If you encounter "
+"strange permission problems, try to switch the AppArmor profile for the "
+"affected service to complain mode with:"
+msgstr ""
+"O AppArmor é habilitado por padrão. Isto significa mais segurança, mas "
+"previne os serviços de executar se você executar eles de um jeito não "
+"esperado. Se você encontrar problemas de permissão estranhos, tente alterar o "
+"perfil do AppArmor para o serviço afetado para o modo de reclamação com:"
 
-#: xml/release-notes.xml:435(screen)
+#: xml/release-notes.xml:567(screen)
 #, no-wrap
 msgid "aa-complain /usr/bin/$your_service"
 msgstr "aa-complain /usr/bin/$your_service"
 
-#: xml/release-notes.xml:436(para)
-msgid "Complain mode means: allow everything, and log things that the profile would not allow."
-msgstr "Modo de reclamação significa: permitir tudo e gravar no log coisas que o perfil não permitiria."
+#: xml/release-notes.xml:568(para)
+msgid ""
+"Complain mode means: allow everything, and log things that the profile would "
+"not allow."
+msgstr ""
+"Modo de reclamação significa: permitir tudo e gravar no log coisas que o "
+"perfil não permitiria."
 
-#: xml/release-notes.xml:437(para)
-#, fuzzy
-msgid "Even if it helps, report it as a bug! We want to fix AppArmor profiles to also cover corner cases."
-msgstr "Mesmo se isto ajudar, relate como erro! Queremos corrigir os perfis do AppArmor para cobrir também os casos limites."
+#: xml/release-notes.xml:569(para)
+msgid ""
+"Even if it helps, report it as a bug! We want to fix AppArmor profiles to "
+"also cover corner cases."
+msgstr ""
+"Mesmo se isto ajudar, relate como erro! Queremos corrigir os perfis do "
+"AppArmor para cobrir também os casos limites."
 
-#: xml/release-notes.xml:470(title)
+#: xml/release-notes.xml:602(title)
 msgid "Miscellaneous"
 msgstr "Diversos"
 
 #. bnc#903243
-#: xml/release-notes.xml:475(title)
+#: xml/release-notes.xml:607(title)
 msgid "YaST (Qt GUI): \"Service Manager\" Icon Appears Twice"
 msgstr ""
+"O ícone de \"Gerenciador de serviços\" aparece duas vezes no YaST (interface "
+"Qt):"
 
-#: xml/release-notes.xml:476(para)
-msgid "In the <guimenu>System</guimenu> section of YaST (Qt GUI) the icon <guimenu>Service Manager</guimenu> appears twice. There is a bug in the Qt version of the YaST Control Center that does not honor the <quote>hidden</quote> flag in the desktop files."
+#: xml/release-notes.xml:608(para)
+msgid ""
+"In the <guimenu>System</guimenu> section of YaST (Qt GUI) the icon <guimenu>"
+"Service Manager</guimenu> appears twice. There is a bug in the Qt version of "
+"the YaST Control Center that does not honor the <quote>hidden</quote> flag in "
+"the desktop files."
 msgstr ""
+"Na seção <guimenu>Sistema</guimenu> do YaST (interface Qt) o ícone <guimenu>"
+"Gerenciador de serviços</guimenu> aparece duas vezes. Há um bug na versão Qt "
+"do Centro de controle do YaST que não honra a marca de <quote>oculto</quote> "
+"nos arquivos .desktop."
 
-#: xml/release-notes.xml:482(para)
+#: xml/release-notes.xml:614(para)
 msgid "This will get fixed with the next YaST online update."
-msgstr ""
+msgstr "Isto será corrigido com a próxima atualização online do YaST."
 
 #. bnc#809347
-#: xml/release-notes.xml:492(title)
+#: xml/release-notes.xml:624(title)
 msgid "More Information and Feedback"
 msgstr "Mais informações e comentários"
 
-#: xml/release-notes.xml:496(para)
+#: xml/release-notes.xml:628(para)
 msgid "Read the READMEs on the CDs."
 msgstr "Leia os READMEs nos CDs."
 
-#: xml/release-notes.xml:499(para)
-msgid "Get detailed changelog information about a particular package from the RPM:"
-msgstr "Obtenha informação de changelog (log de alterações) detalhadas sobre um pacote em particular a partir do RPM:"
+#: xml/release-notes.xml:631(para)
+msgid ""
+"Get detailed changelog information about a particular package from the RPM:"
+msgstr ""
+"Obtenha informação de changelog (log de alterações) detalhadas sobre um "
+"pacote em particular a partir do RPM:"
 
-#: xml/release-notes.xml:500(screen)
+#: xml/release-notes.xml:632(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;NOME_DO_ARQUIVO&gt;.rpm"
 
-#: xml/release-notes.xml:501(para)
+#: xml/release-notes.xml:633(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;NOME_DO_ARQUIVO&gt;. é o nome do RPM."
 
-#: xml/release-notes.xml:504(para)
-msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
-msgstr "Verifique o arquivo <filename>ChangeLog</filename> no nível superior do DVD para um log cronológico de todas as alterações feitas para os pacotes atualizados."
+#: xml/release-notes.xml:636(para)
+msgid ""
+"Check the <filename>ChangeLog</filename> file in the top level of the DVD for "
+"a chronological log of all changes made to the updated packages."
+msgstr ""
+"Verifique o arquivo <filename>ChangeLog</filename> no nível superior do DVD "
+"para um log cronológico de todas as alterações feitas para os pacotes "
+"atualizados."
 
-#: xml/release-notes.xml:508(para)
-msgid "Find more information in the <filename>docu</filename> directory on the DVD."
-msgstr "Encontre mais informação no diretório <filename>docu</filename> no DVD."
+#: xml/release-notes.xml:640(para)
+msgid ""
+"Find more information in the <filename>docu</filename> directory on the DVD."
+msgstr ""
+"Encontre mais informação no diretório <filename>docu</filename> no DVD."
 
-#: xml/release-notes.xml:511(para)
-msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
-msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> contém documentação adicional ou atualizada."
+#: xml/release-notes.xml:643(para)
+msgid ""
+"<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or "
+"updated documentation."
+msgstr ""
+"<ulink url=\"https://activedoc.opensuse.org/\"/> contém documentação "
+"adicional ou atualizada."
 
-#: xml/release-notes.xml:516(para)
-msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
-msgstr "Visite <ulink url=\"http://www.opensuse.org\"/> para as notícias mais recentes de produtos do openSUSE."
+#: xml/release-notes.xml:648(para)
+msgid ""
+"Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news "
+"from openSUSE."
+msgstr ""
+"Visite <ulink url=\"http://www.opensuse.org\"/> para as notícias mais "
+"recentes de produtos do openSUSE."
 
-#: xml/release-notes.xml:521(para)
+#: xml/release-notes.xml:653(para)
 msgid "Copyright © 2014 SUSE LLC"
 msgstr "Direitos autorais © 2014 SUSE LLC"
 
-#: xml/release-notes.xml:523(para)
+#: xml/release-notes.xml:655(para)
 msgid "Thanks for using openSUSE."
 msgstr "Obrigado por usar o openSUSE."
 
-#: xml/release-notes.xml:524(para)
+#: xml/release-notes.xml:656(para)
 msgid "The openSUSE Team."
 msgstr "A equipe do openSUSE."
 
