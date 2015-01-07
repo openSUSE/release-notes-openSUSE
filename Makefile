@@ -18,6 +18,7 @@ YAST_HTML_FILES := $(foreach l, $(LANGS), build/release-notes.$(l)/yast-html/rel
 TXT_FILES := $(foreach l, $(LANGS), build/release-notes.$(l)/release-notes.$(l).txt)
 DIRS := $(foreach l, $(LANGS), build/release-notes.$(l)/yast-html/)
 
+# LANG_COMMAND = `echo $@ | awk -F '.' '{print $$2}' | awk -F '/' '{print $$1}'`
 LANG_COMMAND = `echo $@ | awk -F '.' '{gsub("/.*","",$$2); print($$2)}'`
 DAPS_COMMAND = daps -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT)
 XSLTPROC_COMMAND = xsltproc \
@@ -66,7 +67,7 @@ $(YAST_HTML_FILES): xml/release-notes.ent xml/release-notes.xml
 txt: $(TXT_FILES)
 $(TXT_FILES): $(XML_FILES)
 	lang=$(LANG_COMMAND) ; \
-	$(DAPS_COMMAND) text
+	LANG=$${lang} $(DAPS_COMMAND) text
 
 $(DIRS):
 	mkdir -p $@
