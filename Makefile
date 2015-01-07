@@ -46,7 +46,7 @@ po/%.po: release-notes.pot
     fi
 
 xml/release-notes.%.xml: po/%.po xml/release-notes.ent xml/release-notes.xml
-	xml2po -p $< -o $@ xml/release-notes.xml;
+	xml2po --expand-all-entities -p $< -o $@ xml/release-notes.xml;
 
 pdf: $(PDF_FILES)
 $(PDF_FILES): $(XML_FILES)
