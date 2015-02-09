@@ -61,7 +61,8 @@ $(SINGLE_HTML_FILES): $(XML_FILES)
 
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
 $(YAST_HTML_FILES): xml/release-notes.ent xml/release-notes.xml
-	$(XSLTPROC_COMMAND) /usr/share/daps/daps-xslt/relnotes/yast.xsl xml/release-notes.xml > $@; \
+	lang=$(LANG_COMMAND) ; \
+	$(XSLTPROC_COMMAND) /usr/share/daps/daps-xslt/relnotes/yast.xsl xml/release-notes.$${lang}.xml > $@; \
 	recode latin1..ascii $@
 
 txt: $(TXT_FILES)
