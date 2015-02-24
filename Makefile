@@ -60,9 +60,15 @@ $(SINGLE_HTML_FILES): $(XML_FILES)
 	--static --xsltparam="'--stringparam homepage=http://www.opensuse.com'"
 
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
-$(YAST_HTML_FILES): xml/release-notes.ent xml/release-notes.xml
+$(YAST_HTML_FILES): $(XML_FILES) xml/release-notes.ent xml/release-notes.xml
 	lang=$(LANG_COMMAND) ; \
 	$(XSLTPROC_COMMAND) /usr/share/daps/daps-xslt/relnotes/yast.xsl xml/release-notes.$${lang}.xml > $@
+#	bsc#906936
+	if $$(head -n 1 $@ | grep -q ISO-8859-1; then \
+	  iconv -f ISO-8859-1 -t UTF-8 -o $@.tmp $@ \
+	  && sed '1s/charset=ISO-8859-1/charset=UTF-8/' $@.tmp > $@ \
+	  && rm -f $@.tmp; \
+	fi
 #	recode latin1..ascii $@
 
 txt: $(TXT_FILES)
