@@ -64,7 +64,7 @@ $(YAST_HTML_FILES): $(XML_FILES) xml/release-notes.ent xml/release-notes.xml
 	lang=$(LANG_COMMAND) ; \
 	$(XSLTPROC_COMMAND) /usr/share/daps/daps-xslt/relnotes/yast.xsl xml/release-notes.$${lang}.xml > $@
 #	bsc#906936
-	if $$(head -n 1 $@ | grep -q ISO-8859-1; then \
+	if $$(head -n 1 $@ | grep -q ISO-8859-1); then \
 	  iconv -f ISO-8859-1 -t UTF-8 -o $@.tmp $@ \
 	  && sed '1s/charset=ISO-8859-1/charset=UTF-8/' $@.tmp > $@ \
 	  && rm -f $@.tmp; \
