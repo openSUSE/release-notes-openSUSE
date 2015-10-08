@@ -10,11 +10,11 @@
  <title>&rnotes;</title>
  <articleinfo>
   <releaseinfo>&rversion;</releaseinfo>
-  <productname>&opensuse;</productname>
+  <productname>&opensuseleap;</productname>
   <productnumber>&version;</productnumber>
   <date><?dbtimestamp format="Y-m-d"?></date>
   <abstract>
-   <para> &opensuse; is a free and Linux-based operating system for your
+   <para> &opensuseleap; is a free and Linux-based operating system for your
    PC, Laptop or Server.  You can surf the web, manage your e-mails and
    photos, do office work, play videos or music and have a lot of fun!
    </para>
@@ -49,7 +49,7 @@
 
  <!-- Previous Release Notes -->
  <para>
-  If you upgrade from an older version to this openSUSE release, see
+  If you upgrade from an older version to this &opensuseleap; release, see
   previous release notes listed here: <ulink
   url="http://en.opensuse.org/openSUSE:Release_Notes"/>
  </para>
@@ -96,195 +96,6 @@ picture was taken by N/A
 
    <para>For detailed installation information, see <xref linkend="sec.123.documentation"/>.</para>
   </section>
-  -->
-  <section>
-   <!-- bnc#903242 -->
-   <title>Live CD Installer and Keyboard Settings</title>
-   <para>
-    The Live CD installer presents a problem related with the keyboard
-    settings.  If the user changes from the QWERTY keyboard layout (the
-    default en-US variant), this setting will not be properly applied,
-    and the new system will stay with a QWERTY pre-configuration.
-   </para>
-   <para>
-    As a workaround, use the <command>localectl</command> command-line
-    tool after the installation. For example (to install a German
-    keyboard layout):
-   </para>
-   
-   <screen>localectl set-x11-keymap de pc105 nodeadkeys</screen>
-   <para>
-    This issue is not present in the DVD Installer.
-   </para>
-  </section>
-
-  <section>
-   <!-- bnc#895447 -->
-   <title>Network After an Update With YaST</title>
-   <para>
-    After updating from 13.1 to 13.2 using YaST, there are good chances
-    that the new Wicked network method is running together with the old
-    NetworkManager, if you are using a laptop with a wifi connection.
-   </para>
-
-   <para>
-    To solve this, first disable Wicked and enable again NetworkManager:
-   </para>
-
-   <screen>systemctl is-active network.service &amp;&amp; systemctl stop network.service
-systemctl is-active wickedd.service &amp;&amp; systemctl stop wickedd.service
-systemctl disable wicked.service
-systemctl --force enable NetworkManager.service
-systemctl start network.service</screen>
-
-   <para>
-    Then check whether the currently selected service is actually
-    NetworkManager:
-   </para>
-
-   <screen>systemctl -p Id show network.service</screen>
-
-   <para>
-    And update <filename>/etc/resolv.conf</filename>:
-   </para>
-
-   <screen>netconfig update</screen>
-
-   <para>
-    Or reboot after the <command>systemctl</command> commands to restart
-    also <command>wpa_suplicant</command>.
-   </para>
-  </section>
-
-  <section>
-   <!-- bnc#898023 -->
-   <title>Warning: No Location for Bootloader Stage1 Selected</title>
-   <para>
-    During the initial installation, in the summary view of YaST, a
-    warning as follows can appear bellow the bootloader section:
-    <quote>Warning: No location for bootloader stage1 selected. Unless
-    you know what are you doing please select above location.</quote>
-   </para>
-   <para>
-    This warning is a bug in YaST (now fixed in Factory) and you can
-    safely ignore it.
-   </para>
-  </section>
-  <section>
-   <!-- bnc#900954 bnc#903231 bnc#904268 -->
-   <title>BtrFS and Windows XP</title>
-   <para>
-     If you have Windows XP and want to install openSUSE 13.2 with
-     BtrFS, an error message in YaST will inform you about problems
-     during the bootloader installation.
-   </para>
-   <para>
-    The safest option is to install in a partition with Ext4 instead
-    of BtrFS.  There is a fix that will reach Factory soon, but will
-    be not present for 13.2.
-   </para>
-  </section>
-  <section>
-   <!-- bnc#897847 -->
-   <title>Unbranded Grub2 on New Installs From Live</title>
-   <para>
-    A bug in YaST prevents the branding in GRUB2 bootloader when
-    installed from the LiveCD medium.  Note, the preferred way to
-    install openSUSE 13.2 is using the DVD or the NET install. Both
-    mediums generate a proper branded bootloader during the
-    installation.
-   </para>
-  </section>
-  <section>
-   <!-- bnc#899895 -->
-   <title>NET Installation Using Wifi</title>
-   <para>
-    Performing the NET install using Wifi presents some problems in
-    YaST.  Fixing this is work in progress and  will be soon available.
-    Meanwhile the only option is to use a wire connection to
-    complete the NET installation.
-   </para>
-  </section>
- </section>
-
-  <section>
-   <title>No firewall by default after installation from Live CD</title>
-   <para>
-    When installing from the Live CD no firewall will be active by
-    default.
-   </para>
-   <para>
-    Enable the firewall using YaST or with
-    <command>systemctl enable SuSEfirewall2; systemctl start SuSEfirewall2</command>
-   </para>
-  </section>
- <section id="general">
-  <title>General</title>
-  <para/>
-
-  <!-- was bnc#672889 -->
-  <!--
-  <section id="sec.123.documentation">
-   <title>openSUSE Documentation</title>
-  -->
-   <!-- <itemizedlist> -->
-   <!--  <listitem> -->
-   <!--
-   <para> In <emphasis>Start-Up</emphasis>, find step-by-step installation instructions, as well as
-    introductions to the KDE and Gnome desktops and to the LibreOffice suite. Also covered are basic
-    administration topics such as deployment and software management and an introduction to the bash
-    shell. </para>
-   -->
-   <!-- </listitem> -->
-   <!--
-    <listitem>
-     <para>
-      <emphasis>Reference</emphasis> covers administration, and system
-      configuration in detail and explains how to set up various network
-      services.</para>
-    </listitem>
-    <listitem>
-     <para>
-      The <emphasis>Security Guide</emphasis> introduces basic concepts
-      of system security, covering both local and network security
-      aspects.  </para>
-    </listitem>
-    <listitem>
-     <para>
-      The <emphasis>System Analysis and Tuning Guide</emphasis> helps
-      with problem detection, resolution and optimization.</para>
-    </listitem>
-    <listitem>
-     <para>
-     <emphasis>Virtualization with KVM</emphasis> offers an introduction
-     to setting up and managing virtualization with KVM, libvirt and
-     QEMU tools.</para>
-    </listitem>
-    -->
-   <!-- </itemizedlist> -->
-
-   <!-- bnc#804315 -->
-   <!--
-   <para>
-Find the documentation in
-<filename>/usr/share/doc/manual/opensuse-manuals_$LANG</filename> after
-installing the package <systemitem>opensuse-manuals_$LANG</systemitem>,
-or online on <ulink url="http://doc.opensuse.org"/>.
-   </para>
-   -->
-   <!--
-   <para> Find the documentation in
-     <filename>/usr/share/doc/manual/opensuse-manuals_$LANG</filename> after installing the package
-     <systemitem>opensuse-startup_$LANG</systemitem>, or online on <ulink
-     url="http://doc.opensuse.org"/>. </para>
-   -->
-   <!--
-  </section>
-   -->
-  <!--
-  <section id="sec.131.yastmodules">
-   <!-\- bnc#843201 -\->
-   <title>Dropped YaST Modules</title>
   -->
 
   <section id="sec.123.uefi">
@@ -342,22 +153,6 @@ or online on <ulink url="http://doc.opensuse.org"/>.
    </para>
   </section>
 
-  <section id="sec.131.secboot">
-   <!-- bnc#850052 -->
-   <title>Booting When in Secure Boot Mode</title>
-   <para>
-    This only affects machines in UEFI mode with secure boot enabled.
-   </para>
-   <para>
-    The new version of the shim loader allows more machines to boot with
-    Secure Boot enabled than with openSUSE 13.1. Nevertheless, in case
-    of trouble, first update the BIOS of your machine to the latest
-    version. If the BIOS update does not help, report the model of your
-    machine to the wiki (http://en.opensuse.org/openSUSE:UEFI). Then we
-    can track it for the next release.
-   </para>
-  </section>
-
  </section>
 
  <section id="upgrade">
@@ -370,265 +165,13 @@ or online on <ulink url="http://doc.opensuse.org"/>.
  <section id="technical">
   <title>Technical</title>
 
-  <section id="sec.131.nouveau-inst">
-   <!-- bnc#850053 -->
-   <title>Garbage on the Screen During Installation with the Nouveau Driver</title>
-   <para>
-    On some systems with NVIDIA cards, the installer may show garbage on
-    the top part of the screen due to problems with the default nouveau
-    driver. If you are affected by this problem, you can disable the
-    nouveau kernel module to run the installer and then enable it again
-    once the system is installed or upgraded.
-   </para>
-   <para>
-    To disable the kernel module, once you boot from the installation
-    media, select the 'Installation' entry in grub and press 'e' to edit
-    the parameters. Then go to the line starting with 'linux' (or
-    'linuxefi') and add <literal>brokenmodules=nouveau</literal> at the
-    end. Now press F10 to continue booting with the new parameter. After
-    the system is installed, you can re-enable the nouveau module by
-    editing <filename>/etc/modprobe.d/50-blacklist.conf</filename> and
-    removing the entry that blacklists nouveau.
-   </para>
-  </section>
-
-  <section>
-   <title>Information About the FGLRX Driver</title>
-   <para>
-     For more information about the AMD FGLRX drivers in openSUSE 13.2
-     and its status, see <ulink
-     url="https://lizards.opensuse.org/2014/11/01/fglrx-warning-opensuse-13-2-tumbleweed/">https://lizards.opensuse.org/2014/11/01/fglrx-warning-opensuse-13-2-tumbleweed/</ulink>.
-   </para>
-  </section>
-
-  <section>
-   <!-- bnc#899610 -->
-   <title>Second Static Mouse Pointer</title>
-   <para>
-    If you see two mouse pointers and have two graphic boards, where one
-    is an Intel board, try uninstalling
-    <systemitem>xf86-video-intel</systemitem> and thus using the other
-    one only.  This will make disappear the static mouse pointer.
-   </para>
-
-   <para>
-    This and other issues with the Intel driver like (see <ulink
-    url="http://bugzilla.opensuse.org/show_bug.cgi?id=901506">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>)
-    will be worked on and, if possible, addressed with an online update.
-   </para>
-  </section>
-
-  <section>
-   <!-- bnc#901869 -->
-   <!-- bnc#903998 -->
-   <title>Missing Dependencies for virt-manager</title>
-   <para>
-    If you find a problem executing virt-manager, try installing
-    <systemitem>typelib-1_0-Gtk-3_0</systemitem>,
-    <systemitem>typelib-1_0-SpiceClientGtk-3_0</systemitem> and
-    <systemitem>typelib-1_0-GtkVnc-2_0</systemitem>.
-   </para>
-   <para>
-    In the online update there will be a new version with those
-    dependencies made explicit.
-   </para>
-  </section>
-  <section>
-   <!-- bnc#900813 -->
-   <title>Modem Authorization After Suspend</title>
-   <para>
-    openSUSE 13.2 is a more strict in security tha 13.1.
-    If you are connected via a UMTS or 3G modem and you suspend the
-    machine, the system will ask you for the root password before
-    reconnecting.
-   </para>
-   <para>
-    You can change this behavior changing a line in
-    /etc/polkit-default-privs.standard:
-   </para>
-
-   <screen># ModemManager
-org.freedesktop.ModemManager.Device.Control    auth_admin:auth_admin:yes
-   </screen>
-
-   <para>
-    with:
-   </para>
-
-   <screen># ModemManager
-org.freedesktop.ModemManager.Device.Control    auth_admin_keep
-   </screen>
-  </section>
-
-  <section>
-   <!-- bnc#901511 -->
-   <title>Package Search Missing in GTK UI of YaST</title>
-   <para>
-    The GTK interface of YaST does not feature a package search box. So
-    if you are in GNOME or XFCE and you need this feature, use
-    QT interface instead:
-   </para>
-
-   <screen>sudo /sbin/yast2 --qt</screen>
-  </section>
-
-  <section>
-   <!-- bnc#902947 -->
-   <title>openSUSE pre-13.2 cifstab Migration</title>
-
-   <para>
-    Mounting cifs shares at systems start via
-    <filename>/etc/samba/cifstab</filename> has been discontinued and
-    obsoleted. Now the generic <filename>/etc/fstab</filename> handles
-    it.
-   </para>
-   <para>
-    The migration process requires two steps:
-   </para>
-   <orderedlist>
-    <listitem>
-     <para>
-      Append all your mount points from
-      <filename>/etc/samba/cifstab.rpmsave</filename> to
-      <filename>/etc/fstab</filename>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      Add <literal>0 0</literal> to the end of each new cifs mount line
-      in <filename>/etc/fstab</filename>.
-     </para>
-    </listitem>
-   </orderedlist>
-
-   <para>
-    For more information and examples, see
-    <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename>
-    in the installed system.
-   </para>
-  </section>
-
-  <section>
-   <title>Removing openSUSE 13.1 KDE Wallpaper After Upgrade</title>
-   <para>
-    If the openSUSE 13.1 KDE Wallpaper still appears after the system
-    upgrade,  remove it from the user cache manually:
-   </para>
-   
-   <screen>rm ~/.kde4/cache-*/plasma-wallpapers/usr/share/wallpapers/openSUSEdefault/contents/images/*</screen>
-  </section>
-
-  <section>
-   <title>MATE Desktop official integration</title>
-
-   <para>
-    The MATE desktop is now officially available under openSUSE 13.2
-    with MATE version 1.8.1, the latest stable release. It provides an
-    intuitive and attractive desktop environment using traditional
-    metaphors for Linux and other Unix-like operating systems.
-   </para>
-   <para>
-    The objective, for openSUSE, is to provide the same experience users
-    had when they used GNOME under openSUSE 11.4, with the main-menu and
-    the Sonar theme.
-   </para>
-  </section>
-  <section>
-   <!-- bnc#901013 -->
-   <title>Slow Start-up in GNOME</title>
-   <para>
-    GNOME autologin can cause a slow boot process.  Probably there is
-    a race between services not correctly marked to depend on each
-    other.  Until the fix will be available as an online update, a
-    workaround is to temporarily disable the GNOME autologin feature.
-   </para>
-  </section>
-
-  <!--
-  <section>
-   <!-\- via mail: ddiss -\->
-   <title>Samba Version 4.1</title>
-   <para>CHECKIT:13.1</para>
-   <para> Samba version 4.1 shipped with openSUSE 13.1 does not include support for operating as an
-    Active Directory style domain controller. This functionality is currently disabled, as it lacks
-    integration with system-wide MIT Kerberos. </para>
-  </section>
-  -->
-
-  <!--
-  <section id="sec.131.kdeandbt">
-   <!-\- bnc#848969 -\->
-   <title>KDE and Bluetooth</title>
-   <para>CHECKIT:13.1</para>
-   <para> The Bluetooth stack is provided by Bluez 5 (a major, backwards-incompatbile version), a
-    necessary upgrade for GNOME desktop and some other components of the base system. Unfortunately,
-    the KDE workspace only supports Bluez version 4 in its currently-released versions. </para>
-   <para> Therefore, the openSUSE KDE community team offers an unofficial Bluedevil package
-    providing at least basic functionality such as device pairing or support for bluetooth mice;
-    Some other features are known not to work yet, like file transfer. </para>
-   <para> For the time being, bugs should not be filed against Bluetooth support in KDE, as the Bluez 5
-    port of Bluedevil is still ongoing. </para>
-  </section>
-  -->
-
-  <section id="sec.131.apparmor">
-   <!-- bnc#850058 -->
-   <title>AppArmor and Permission Settings</title>
-   <para> AppArmor is enabled by default. This means more security, but might prevent services from
-    working if you run them in unexpected ways. If you encounter strange permission problems, try
-    to switch the AppArmor profile for the affected service to complain mode with: </para>
-   <screen>aa-complain /usr/bin/$your_service</screen>
-   <para> Complain mode means: allow everything, and log things that the profile would not allow. </para>
-   <para> Even if it helps, report it as a bug! We want to fix AppArmor profiles to also cover corner
-    cases. </para>
-  </section>
-
-  <!--
-      bnc#902977
-  <section id="sec.131.skype">
-   <!-\- bnc#850057 -\->
-   <title>Skype</title>
-   <para> PulseAudio 4.0 exposes a bug in the current version of Skype for Linux (v4.2). Until Skype
-    is fixed and updated, run <command>skype</command> from the command line: </para>
-   <screen>PULSE_LATENCY_MSEC=60 skype</screen>
-   <para> For more information about this bug, see <ulink
-     url="http://arunraghavan.net/2013/08/pulseaudio-4-0-and-skype/"/>. </para>
-  </section>
-  -->
-  <!--
-  <section id="sec.131.autoyast">
-   <!-\- bnc#851588 -\->
-   <title>AutoYaST</title>
-   <para>CHECKIT:13.1</para>
-   <para> If the autoyast profile contains entries in an <literal>&lt;add-on&gt;</literal> section,
-    there is a bug triggered that prevents information in the profile from being transferred from
-    the first stage into the second stage, in which case, all second stage configuration
-    steps are skipped, which normally leads to more or less completely unusable installations. </para>
-   <para> As a temporary workaround, avoid using <literal>&lt;add-on&gt;</literal> sections in
-    profiles with AutoYaST in openSUSE 13.1. </para>
-  </section>
-  -->
+  <para/>
  </section>
 
  <!-- START-FATE-RN -->
  <section id="misc" remap="Misc">
   <title>Miscellaneous</title>
-  <para></para>
-
-  <section>
-   <!-- bnc#903243 -->
-   <title>YaST (Qt GUI): "Service Manager" Icon Appears Twice</title>
-   <para>
-    In the <guimenu>System</guimenu> section of YaST (Qt GUI) the icon
-    <guimenu>Service Manager</guimenu> appears twice.  There is a bug in
-    the Qt version of the YaST Control Center that does not honor the
-    <quote>hidden</quote> flag in the desktop files.
-   </para>
-   <para>
-    This will get fixed with the next YaST online update.
-   </para>
-  </section>
-
+  <para/>
  </section>
  <!-- END-FATE-RN -->
 
@@ -654,8 +197,8 @@ org.freedesktop.ModemManager.Device.Control    auth_admin_keep
    </listitem>
    <listitem>
     <para>
-     <ulink url="https://activedoc.opensuse.org/"/> contains additional or updated
-     documentation.</para>
+     <ulink url="https://activedoc.opensuse.org/"/> contains additional
+     or updated documentation.</para>
    </listitem>
    <listitem>
     <para> Visit <ulink url="http://www.opensuse.org"/> for the latest product news from
@@ -663,7 +206,7 @@ org.freedesktop.ModemManager.Device.Control    auth_admin_keep
    </listitem>
   </itemizedlist>
 
-  <para>Copyright © 2014 SUSE LLC</para>
+  <para>Copyright © 2015 SUSE LLC</para>
 
   <para>Thanks for using &opensuse;.</para>
   <para>The &opensuse; Team.</para>
