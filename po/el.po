@@ -14,11 +14,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-09 15:38+0200\n"
+"POT-Creation-Date: 2015-10-12 17:48+0200\n"
 "PO-Revision-Date: 2015-10-10 17:19+0200\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gmail.com>\n"
-"Language-Team: Greek <http://10n.opensuse.org/projects/release-notes-"
-"opensuse/master/el/>\n"
+"Language-Team: Greek <http://10n.opensuse.org/projects/release-notes-opensuse/master/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,124 +56,149 @@ msgstr "Εάν αναβαθμίζετε από μία παλιότερη έκδ�
 msgid "Installation"
 msgstr "Εγκατάσταση"
 
-#: xml/release-notes.xml:102(title)
+#. https://bugzilla.suse.com/show_bug.cgi?id=947712
+#: xml/release-notes.xml:103(title)
+#, fuzzy
+msgid "Base System Installation"
+msgstr "Εγκατάσταση"
+
+#: xml/release-notes.xml:104(para)
+msgid "If you install a new system as <quote>minimal base system</quote>, the installed system will try to maintain this level and often run into dependency conflicts when you try to install more software."
+msgstr ""
+
+#: xml/release-notes.xml:109(para)
+msgid "To avoid this, uninstall the package <literal>patterns-openSUSE-minimal_base-conflicts</literal>, instructing the system that you no longer want to maintain a minimal installation (<quote>minimal base system</quote>)."
+msgstr ""
+
+#: xml/release-notes.xml:118(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
-#: xml/release-notes.xml:103(para)
+#: xml/release-notes.xml:119(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "Πριν την εγκατάσταση openSUSE σε σύστημα που εκκινεί με την χρήση UEFI (Unified Extensible Firmware Interface) συνίσταται επειγόντως να ελέγξετε για προτεινόμενες ενημερώσεις firmware από τον κατασκευαστή υλικού και, εάν είναι διαθέσιμες, να τις εγκαταστήσετε. Ένα προ-εγκατεστημένο σύστημα με Windows 8 είναι μια ισχυρή ένδειξη ότι το σύστημά σας εκκινεί με χρήση UEFI."
 
-#: xml/release-notes.xml:111(para)
+#: xml/release-notes.xml:127(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>Ιστορικό:</emphasis> Μερικά UEFI firmware έχουν σφάλματα που μπορούν να προκαλέσουν κατάρρευση εάν εγγραφούν πολλά δεδομένα στο αποθηκευτικό μέσο UEFI. Εν τούτοις, κανείς δεν γνωρίζει στην πραγματικότητα πόσο είναι το \"πολλά\". Το openSUSE ελαχιστοποιεί τον κίνδυνο με την εγγραφή των ελάχιστων απαιτουμένων για την εκκίνηση του λειτουργικού. Το ελάχιστο σημαίνει ενημέρωση του UEFI firmware σχετικά με την τοποθεσία του διαχειριστή εκκίνησης του openSUSE. Upstream λειτουργίες του Πυρήνα Linux που χρησιμοποιούν το αποθηκευτικό μέσο UEFI για αποθήκευση πληροφοριών εκκίνησης και κατάρρευσης (<literal>pstore</literal>), έχουν απενεργοποιηθεί από προεπιλογή. Παρ' όλα αυτά συνίσταται να εγκαταστήσετε τις ενημερώσεις firmware που συνιστά ο προμηθευτής υλικού."
 
 #. bnc#850056
-#: xml/release-notes.xml:128(title)
+#: xml/release-notes.xml:144(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "Κατατμήσεις UEFI, GPT, και MS-DOS"
 
-#: xml/release-notes.xml:129(para)
+#: xml/release-notes.xml:145(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "Μαζί με την συγκεκριμενοποιήση του EFI/UEFI, κατέφθασε ένα νέο στυλ κατάτμησης: το GPT (GUID Partition Table). Αυτό το νέο σχήμα χρησιμοποιεί γενικά μοναδικά αναγνωριστικά (οι τιμές 128-bit εμφανίζονται σε 32 δεκαεξαδικά ψηφία) για να προσδιορίσουν συσκευές και τύπους κατατμήσεων."
 
-#: xml/release-notes.xml:135(para)
+#: xml/release-notes.xml:151(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
 "Επιπλέον , η προδιαγραφή UEFI επιτρέπει επίσης κατατμήσεις legacy MBR (MS-DOS). Οι εκκινητές Linux (ELILO ή GRUB2) προσπαθούν να δημιουργήσουν αυτόματα ένα GUID για αυτές τις καταμήσεις, και να τις γράψουν στο firmware. Τέτοια GUID\n"
 "μπορούν να αλλάζουν συχνά,δημιουργώντας μια επανεγγραφή στο firmware. Mια επανεγγραφή αποτελείται από δυο λειτουργίες: την αφαίρεση την παλίας εγγραφής και τη δημιουργία μιας νέας καταχώρησης που αντικαθιστά την πρώτη."
 
-#: xml/release-notes.xml:144(para)
+#: xml/release-notes.xml:160(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr "Το καινούργιο firmware έχει συλλογή απορρημάτων που συλλέγει διεγραμμένες καταχωρήσεις και ελευθερώνει την κατειλημμένη μνήμη για τις παλιές καταχωρήσεις. Προκύπτει πρόβλημα όταν ελαττωματικό firmware δεν συλλέγει και ελευθερώνει αυτές τις καταχωρήσεις. Αυτό μπορεί να καταλήξει σε μη εκκινήσιμο σύστημα."
 
-#: xml/release-notes.xml:150(para)
+#: xml/release-notes.xml:166(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr "Η αντιμετόπιση είναι απλή: μετατρέψτε την κατάτμηση legacy MBR σε νέα GPT για να αποφύγετε εντελώς αυτό το πρόβλημα."
 
-#: xml/release-notes.xml:159(title)
+#: xml/release-notes.xml:175(title)
 msgid "System Upgrade"
 msgstr "Αναβάθμιση Συστήματος"
 
-#: xml/release-notes.xml:166(title)
+#: xml/release-notes.xml:182(title)
 msgid "General"
 msgstr "Γενικά"
 
-#: xml/release-notes.xml:168(title)
+#: xml/release-notes.xml:184(title)
 msgid "No firewall by default after installation from Live CD"
 msgstr ""
 
-#: xml/release-notes.xml:169(para)
+#: xml/release-notes.xml:185(para)
 msgid "When installing from the Live CD no firewall will be active by default."
 msgstr ""
 
-#: xml/release-notes.xml:173(para)
+#: xml/release-notes.xml:189(para)
 msgid "Enable the firewall using YaST or with:"
 msgstr ""
 
-#: xml/release-notes.xml:176(screen)
+#: xml/release-notes.xml:192(screen)
 #, no-wrap
 msgid ""
 "systemctl enable SuSEfirewall2\n"
 "systemctl start SuSEfirewall2"
 msgstr ""
 
-#: xml/release-notes.xml:182(title)
+#: xml/release-notes.xml:198(title)
 msgid "Technical"
 msgstr "Τεχνικά"
 
-#: xml/release-notes.xml:189(title)
+#. bsc#932494
+#: xml/release-notes.xml:203(title)
+#, fuzzy
+msgid "grep Update"
+msgstr "Ενημέρωση"
+
+#: xml/release-notes.xml:205(para)
+#, fuzzy
+msgid "grep was updated. For changes, see <filename>/usr/share/doc/packages/grep/NEWS</filename> on the installed system."
+msgstr "Για περισσότερες πληροφορίες και παραδείγματα, δείτε στο <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> στο εγκατεστημένο σύστημα."
+
+#: xml/release-notes.xml:215(title)
 msgid "Miscellaneous"
 msgstr "Διάφορα"
 
 #. bnc#809347
-#: xml/release-notes.xml:196(title)
+#: xml/release-notes.xml:222(title)
 msgid "More Information and Feedback"
 msgstr "Περισσότερες πληροφορίες και ανατροφοδότηση"
 
-#: xml/release-notes.xml:200(para)
+#: xml/release-notes.xml:226(para)
 msgid "Read the READMEs on the CDs."
 msgstr "Διαβάστε τα αρχεία README στα CDs."
 
-#: xml/release-notes.xml:203(para)
+#: xml/release-notes.xml:229(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "Λάβετε λεπτομερή πληροφόρηση για τις αλλαγές καταγραφής σχετικά με το συγκεκριμένο πακέτο από το RPM:"
 
-#: xml/release-notes.xml:204(screen)
+#: xml/release-notes.xml:230(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 
-#: xml/release-notes.xml:205(para)
+#: xml/release-notes.xml:231(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "Το &lt;FILENAME&gt;. είναι το όνομα του RPM."
 
-#: xml/release-notes.xml:208(para)
+#: xml/release-notes.xml:234(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "Ελέγξτε το αρχείο <filename>ChangeLog</filename> στο ανώτερο επίπεδο του DVD για μία χρονολογική καταγραφή όλων των αλλαγών που έγιναν στα ενημερωμένα πακέτα."
 
-#: xml/release-notes.xml:212(para)
+#: xml/release-notes.xml:238(para)
 msgid "Find more information in the <filename>docu</filename> directory on the DVD."
 msgstr "Για περισσότερες πληροφορίες δείτε στον κατάλογο <filename>docu</filename> στο DVD."
 
-#: xml/release-notes.xml:215(para)
+#: xml/release-notes.xml:241(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "Περιέχονται επιπλέον ή ενημερωμένη τεκμηρίωση στην σελίδα <ulink url=\"https://activedoc.opensuse.org/\"/>."
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:246(para)
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Για τα τελευταία νέα του openSUSE επισκεφθείτε την σελίδα <ulink url=\"http://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:225(para)
+#: xml/release-notes.xml:251(para)
 #, fuzzy
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "Πνευματική ιδιοκτησία © 2014 SUSE LLC"
 
-#: xml/release-notes.xml:227(para)
+#: xml/release-notes.xml:253(para)
 msgid "Thanks for using openSUSE."
 msgstr "Σας ευχαριστούμε που χρησιμοποιείτε το openSUSE."
 
-#: xml/release-notes.xml:228(para)
+#: xml/release-notes.xml:254(para)
 msgid "The openSUSE Team."
 msgstr "Η ομάδα του openSUSE."
 
@@ -380,9 +404,6 @@ msgstr ""
 
 #~ msgid "Add <literal>0 0</literal> to the end of each new cifs mount line in <filename>/etc/fstab</filename>."
 #~ msgstr "Προσθέστε <literal>0 0</literal> στο τέλος κάθε νέας cifs γραμμής προσάρτησης στο <filename>/etc/fstab</filename>."
-
-#~ msgid "For more information and examples, see <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> in the installed system."
-#~ msgstr "Για περισσότερες πληροφορίες και παραδείγματα, δείτε στο <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> στο εγκατεστημένο σύστημα."
 
 #~ msgid "Removing openSUSE 13.1 KDE Wallpaper After Upgrade"
 #~ msgstr "Γίνεται αφαίρεση της ταπετσαρίας του openSUSE 13.1 KDE μέτα την ανβάθμιση"
@@ -1139,9 +1160,6 @@ msgstr ""
 #~| msgid "Default Route"
 #~ msgid "Default Web Browser"
 #~ msgstr "Προεπιλεγμένη Ανακατεύθυνση"
-
-#~ msgid "Update"
-#~ msgstr "Ενημέρωση"
 
 #~| msgid "Name Server"
 #~ msgid "VMware Server v2"

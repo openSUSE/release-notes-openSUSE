@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
-"POT-Creation-Date: 2015-10-09 15:38+0200\n"
+"POT-Creation-Date: 2015-10-12 17:48+0200\n"
 "PO-Revision-Date: 2006-01-04 08:58+0100\n"
 "Last-Translator: Alexander Nyakhaychyk <nyakhaychyk@gmail.com>\n"
 "Language-Team: Belarusian <i18n@suse.de>\n"
@@ -45,121 +45,145 @@ msgstr ""
 msgid "Installation"
 msgstr "Новая ўсталёўка"
 
-#: xml/release-notes.xml:102(title)
+#. https://bugzilla.suse.com/show_bug.cgi?id=947712
+#: xml/release-notes.xml:103(title)
+#, fuzzy
+msgid "Base System Installation"
+msgstr "Новая ўсталёўка"
+
+#: xml/release-notes.xml:104(para)
+msgid "If you install a new system as <quote>minimal base system</quote>, the installed system will try to maintain this level and often run into dependency conflicts when you try to install more software."
+msgstr ""
+
+#: xml/release-notes.xml:109(para)
+msgid "To avoid this, uninstall the package <literal>patterns-openSUSE-minimal_base-conflicts</literal>, instructing the system that you no longer want to maintain a minimal installation (<quote>minimal base system</quote>)."
+msgstr ""
+
+#: xml/release-notes.xml:118(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr ""
 
-#: xml/release-notes.xml:103(para)
+#: xml/release-notes.xml:119(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr ""
 
-#: xml/release-notes.xml:111(para)
+#: xml/release-notes.xml:127(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr ""
 
 #. bnc#850056
-#: xml/release-notes.xml:128(title)
+#: xml/release-notes.xml:144(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr ""
 
-#: xml/release-notes.xml:129(para)
+#: xml/release-notes.xml:145(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
 
-#: xml/release-notes.xml:135(para)
+#: xml/release-notes.xml:151(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
 
-#: xml/release-notes.xml:144(para)
+#: xml/release-notes.xml:160(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
 
-#: xml/release-notes.xml:150(para)
+#: xml/release-notes.xml:166(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr ""
 
-#: xml/release-notes.xml:159(title)
+#: xml/release-notes.xml:175(title)
 msgid "System Upgrade"
 msgstr ""
 
-#: xml/release-notes.xml:166(title)
+#: xml/release-notes.xml:182(title)
 msgid "General"
 msgstr ""
 
-#: xml/release-notes.xml:168(title)
+#: xml/release-notes.xml:184(title)
 msgid "No firewall by default after installation from Live CD"
 msgstr ""
 
-#: xml/release-notes.xml:169(para)
+#: xml/release-notes.xml:185(para)
 msgid "When installing from the Live CD no firewall will be active by default."
 msgstr ""
 
-#: xml/release-notes.xml:173(para)
+#: xml/release-notes.xml:189(para)
 msgid "Enable the firewall using YaST or with:"
 msgstr ""
 
-#: xml/release-notes.xml:176(screen)
+#: xml/release-notes.xml:192(screen)
 #, no-wrap
 msgid ""
 "systemctl enable SuSEfirewall2\n"
 "systemctl start SuSEfirewall2"
 msgstr ""
 
-#: xml/release-notes.xml:182(title)
+#: xml/release-notes.xml:198(title)
 msgid "Technical"
 msgstr ""
 
-#: xml/release-notes.xml:189(title)
+#. bsc#932494
+#: xml/release-notes.xml:203(title)
+#, fuzzy
+msgid "grep Update"
+msgstr "Абнаўленне"
+
+#: xml/release-notes.xml:205(para)
+msgid "grep was updated. For changes, see <filename>/usr/share/doc/packages/grep/NEWS</filename> on the installed system."
+msgstr ""
+
+#: xml/release-notes.xml:215(title)
 msgid "Miscellaneous"
 msgstr ""
 
 #. bnc#809347
-#: xml/release-notes.xml:196(title)
+#: xml/release-notes.xml:222(title)
 msgid "More Information and Feedback"
 msgstr ""
 
-#: xml/release-notes.xml:200(para)
+#: xml/release-notes.xml:226(para)
 msgid "Read the READMEs on the CDs."
 msgstr ""
 
-#: xml/release-notes.xml:203(para)
+#: xml/release-notes.xml:229(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr ""
 
-#: xml/release-notes.xml:204(screen)
+#: xml/release-notes.xml:230(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr ""
 
-#: xml/release-notes.xml:205(para)
+#: xml/release-notes.xml:231(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr ""
 
-#: xml/release-notes.xml:208(para)
+#: xml/release-notes.xml:234(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr ""
 
-#: xml/release-notes.xml:212(para)
+#: xml/release-notes.xml:238(para)
 msgid "Find more information in the <filename>docu</filename> directory on the DVD."
 msgstr ""
 
-#: xml/release-notes.xml:215(para)
+#: xml/release-notes.xml:241(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr ""
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:246(para)
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr ""
 
-#: xml/release-notes.xml:225(para)
+#: xml/release-notes.xml:251(para)
 msgid "Copyright © 2015 SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:227(para)
+#: xml/release-notes.xml:253(para)
 msgid "Thanks for using openSUSE."
 msgstr ""
 
-#: xml/release-notes.xml:228(para)
+#: xml/release-notes.xml:254(para)
 msgid "The openSUSE Team."
 msgstr ""
 
@@ -187,11 +211,6 @@ msgstr ""
 #~| msgid "Stop the Service Now"
 #~ msgid "Stop the running service:"
 #~ msgstr "Спыніць сервіс зараз"
-
-#, fuzzy
-#~| msgid "&Update"
-#~ msgid "Update"
-#~ msgstr "Абнаўленне"
 
 #, fuzzy
 #~| msgid "Release Notes"

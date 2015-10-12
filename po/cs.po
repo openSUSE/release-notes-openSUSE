@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-09 15:38+0200\n"
+"POT-Creation-Date: 2015-10-12 17:48+0200\n"
 "PO-Revision-Date: 2015-02-10 22:09+0100\n"
 "Last-Translator: Jan Papez (honyczek) <honyczek@centrum.cz>\n"
 "Language-Team: Czech <opensuse-translation@opensuse.org>\n"
@@ -64,122 +64,147 @@ msgstr "Pokud aktualizujete openSUSE ze starší verze vydání, můžete si poz
 msgid "Installation"
 msgstr "Instalace"
 
-#: xml/release-notes.xml:102(title)
+#. https://bugzilla.suse.com/show_bug.cgi?id=947712
+#: xml/release-notes.xml:103(title)
+#, fuzzy
+msgid "Base System Installation"
+msgstr "Instalace"
+
+#: xml/release-notes.xml:104(para)
+msgid "If you install a new system as <quote>minimal base system</quote>, the installed system will try to maintain this level and often run into dependency conflicts when you try to install more software."
+msgstr ""
+
+#: xml/release-notes.xml:109(para)
+msgid "To avoid this, uninstall the package <literal>patterns-openSUSE-minimal_base-conflicts</literal>, instructing the system that you no longer want to maintain a minimal installation (<quote>minimal base system</quote>)."
+msgstr ""
+
+#: xml/release-notes.xml:118(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
-#: xml/release-notes.xml:103(para)
+#: xml/release-notes.xml:119(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "Dříve než nainstalujete openSUSE na váš systém, který je zaváděn pomocí UEFI (Unified Extensible Firmware Interface), důrazně doporučujeme zkontrolovat, zda nejsou u výrobce hardwaru k dispozici doporučené aktualizace firmwaru. Pokud jsou k dispozici, nainstalujte je. Předinstalovaný systém Windows 8 je značnou známkou toho, že váš systém UEFI používá."
 
-#: xml/release-notes.xml:111(para)
+#: xml/release-notes.xml:127(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>Pozadí:</emphasis>  Některý firmware UEFI obsahuje chyby, které způsobují znefunkčnění, pokud je zapsáno do uložného prostoru UEFI příliš mnoho dat. Nikdo ve skutečnosti neví, kolik je to \"příliš mnoho\". openSUSE snižuje riziko tím, že nezapisuje více než pouhé minimum potřebné pro zavedení OS. To minimum znamená sdělení firmwaru UEFI, kde se nachází zavaděč openSUSE. Upstreamové funkce jádra Linuxu, které používají úložný prostor UEFI pro ukládání informací o zavádění systému a jeho pádu (<literal>pstore</literal>) jsou ve výchozím stavu zakázané. Přesto však je doporučeno nainstalovat veškeré aktualizace firmwaru, které výrobce doporučuje."
 
 #. bnc#850056
-#: xml/release-notes.xml:128(title)
+#: xml/release-notes.xml:144(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT a oddíly MS-DOSu"
 
-#: xml/release-notes.xml:129(para)
+#: xml/release-notes.xml:145(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "Společně se specifikací EFI/UEFI se objevil nový styl dělení disků: GPT (GUID Partition Table). Je to nové schéma, které k identifikaci zařízení a typů diskových oddílů používá globálně unikátní identifikátory (128bitové hodnoty zobrazené jako 32 šestnáctkových číslic)."
 
-#: xml/release-notes.xml:135(para)
+#: xml/release-notes.xml:151(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr "Navíc pak specifikace UEFI umožňuje užívání starších oddílů MBR (MS-DOS). Zavaděče Linuxu (ELILO nebo GRUB2) zkoušejí automaticky vygenerovat GUID těchto starších oddílů a zapsat je do firmwaru. Takový GUID se může často měnit, což způsobuje přepis firmwaru. Přepis se skládá ze dvou různých operací: odstranění starého záznamu a vytvoření nového, který nahradí ten původní."
 
-#: xml/release-notes.xml:144(para)
+#: xml/release-notes.xml:160(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr "Moderní firmware má garbage collector, který sbírá smazané položky a uvolňuje paměť, která byla pro ně rezervována. Může se objevit problém, když chybný firmware tyto položky nesbírá a neuvolňuje; to může skončit nezaveditelným systémem."
 
-#: xml/release-notes.xml:150(para)
+#: xml/release-notes.xml:166(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr "Je jednoduché to obejít: abyste se tomuto problému úplně vyhli, zkonvertujte starší oddíly MBR na nové GPT."
 
-#: xml/release-notes.xml:159(title)
+#: xml/release-notes.xml:175(title)
 msgid "System Upgrade"
 msgstr "Aktualizace systému"
 
-#: xml/release-notes.xml:166(title)
+#: xml/release-notes.xml:182(title)
 msgid "General"
 msgstr "Obecné"
 
-#: xml/release-notes.xml:168(title)
+#: xml/release-notes.xml:184(title)
 msgid "No firewall by default after installation from Live CD"
 msgstr ""
 
-#: xml/release-notes.xml:169(para)
+#: xml/release-notes.xml:185(para)
 msgid "When installing from the Live CD no firewall will be active by default."
 msgstr ""
 
-#: xml/release-notes.xml:173(para)
+#: xml/release-notes.xml:189(para)
 msgid "Enable the firewall using YaST or with:"
 msgstr ""
 
-#: xml/release-notes.xml:176(screen)
+#: xml/release-notes.xml:192(screen)
 #, no-wrap
 msgid ""
 "systemctl enable SuSEfirewall2\n"
 "systemctl start SuSEfirewall2"
 msgstr ""
 
-#: xml/release-notes.xml:182(title)
+#: xml/release-notes.xml:198(title)
 msgid "Technical"
 msgstr "Technické"
 
-#: xml/release-notes.xml:189(title)
+#. bsc#932494
+#: xml/release-notes.xml:203(title)
+#, fuzzy
+msgid "grep Update"
+msgstr "Aktualizace"
+
+#: xml/release-notes.xml:205(para)
+#, fuzzy
+msgid "grep was updated. For changes, see <filename>/usr/share/doc/packages/grep/NEWS</filename> on the installed system."
+msgstr "Pro více informací a příklady čtěte v nainstalovaném systému soubor <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename>."
+
+#: xml/release-notes.xml:215(title)
 msgid "Miscellaneous"
 msgstr "Různé"
 
 #. bnc#809347
-#: xml/release-notes.xml:196(title)
+#: xml/release-notes.xml:222(title)
 msgid "More Information and Feedback"
 msgstr "Více informací a zpětná vazba"
 
-#: xml/release-notes.xml:200(para)
+#: xml/release-notes.xml:226(para)
 msgid "Read the READMEs on the CDs."
 msgstr "Přečtěte si README na CD."
 
-#: xml/release-notes.xml:203(para)
+#: xml/release-notes.xml:229(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "Získejte podrobné informace o změnách každého balíčku pomocí RPM:"
 
-#: xml/release-notes.xml:204(screen)
+#: xml/release-notes.xml:230(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;JMENOSOUBORU&gt;.rpm"
 
-#: xml/release-notes.xml:205(para)
+#: xml/release-notes.xml:231(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;JMENOSOUBORU&gt;. je název balíčku RPM."
 
-#: xml/release-notes.xml:208(para)
+#: xml/release-notes.xml:234(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "Pro časový protokol všech změn provedených na aktualizovaných balíčcích si prohlédněte soubor <filename>ChangeLog</filename> v kořenovém adresáři tohoto DVD."
 
-#: xml/release-notes.xml:212(para)
+#: xml/release-notes.xml:238(para)
 msgid "Find more information in the <filename>docu</filename> directory on the DVD."
 msgstr "Další informace najdete na DVD v adresáři <filename>docu</filename>."
 
-#: xml/release-notes.xml:215(para)
+#: xml/release-notes.xml:241(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> obsahuje dodatečnou nebo aktualizovanou dokumentaci."
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:246(para)
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Pro poslední novinky o openSUSE navštivte <ulink url=\"http://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:225(para)
+#: xml/release-notes.xml:251(para)
 #, fuzzy
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "Copyright © 2014 SUSE LLC"
 
-#: xml/release-notes.xml:227(para)
+#: xml/release-notes.xml:253(para)
 msgid "Thanks for using openSUSE."
 msgstr "Děkujeme, že používáte openSUSE."
 
-#: xml/release-notes.xml:228(para)
+#: xml/release-notes.xml:254(para)
 msgid "The openSUSE Team."
 msgstr "Tým openSUSE."
 
@@ -383,9 +408,6 @@ msgstr ""
 
 #~ msgid "Add <literal>0 0</literal> to the end of each new cifs mount line in <filename>/etc/fstab</filename>."
 #~ msgstr "Přidejte na konec každého řádku cifs připojení <literal>0 0</literal> (v souboru <filename>/etc/fstab</filename>)."
-
-#~ msgid "For more information and examples, see <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> in the installed system."
-#~ msgstr "Pro více informací a příklady čtěte v nainstalovaném systému soubor <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename>."
 
 #~ msgid "Removing openSUSE 13.1 KDE Wallpaper After Upgrade"
 #~ msgstr "Odstranění pozadí plochy openSUSE 13.1 po povýšení systému"
@@ -1265,9 +1287,6 @@ msgstr ""
 
 #~ msgid "If you still depend on add-ons, which are only available for Thunderbird 2.0, you can install this version from the mozilla buildservice repository at <ulink url=\"http://software.opensuse.org/ymp/mozilla:legacy/openSUSE_11.2/MozillaThunderbird.ymp\"/>. But note, Thunderbird 2.0 will be only supported for very short period of time, once version 3.0 is available."
 #~ msgstr "Pokud stále závisíte na doplňcích, které jsou dostupné jen pro Thunderbird 2.0, můžete nainstalovat tuto verzi z repozitáře mozilla buildservice na <ulink url=\"http://software.opensuse.org/ymp/mozilla:legacy/openSUSE_11.2/MozillaThunderbird.ymp\"/>. Ale vezměte v potaz, že Thunderbird 2.0 bude podporován jen krátce po vydání verze 3.0."
-
-#~ msgid "Update"
-#~ msgstr "Aktualizace"
 
 #~ msgid "System Upgrade with zypper"
 #~ msgstr "Aktualizace systému pomocí zypperu"
