@@ -66,6 +66,16 @@ msgstr ""
 #: xml/release-notes.xml:111(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr ""
+"<emphasis>Pozadie:</emphasis>  Niektoré firmware UEFI obsahujú chyby, ktoré "
+"spôsobujú nefunkčnosť, ak je zapísaných do úložného priestoru UEFI príliš "
+"veľa dát. Nikto v skutočnosti nevie, koľko je to \"príliš veľa\". openSUSE "
+"znižuje riziko tým, že nezapisuje viac než základné minimum potrebné pre "
+"štart OS. Toto minimum znamená oznámenie pre firmware UEFI, kde se nachádza "
+"správca štartu openSUSE. Upstream funkcie jadra Linuxu, ktoré používajú "
+"úložný priestor UEFI pre uloženie informácií o štarte systému a jeho zrútení "
+"(<literal>pstore</literal>) boli v predvolenom nastavení zakázané. Predsa "
+"len je doporučené nainštalovať akékoľvek aktualizácie pre firmware, ktoré "
+"výrobca odporúča."
 
 #. bnc#850056
 #: xml/release-notes.xml:128(title)
@@ -75,18 +85,34 @@ msgstr "UEFI, GPT a MS-DOS oddiely"
 #: xml/release-notes.xml:129(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
+"Spolu so špecifikáciou UEFI/EFI prišiel nový štýl rozdelenia diskov: GPT ("
+"GUID Partition Table). Táto nová schéma používa globálne jedinečné "
+"identifikátory (128-bitové hodnoty zobrazené ako 32 hexadecimálnych číslic) "
+"pre identifikáciu zariadenia a typov oddielov."
 
 #: xml/release-notes.xml:135(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
+"Okrem toho špecifikácia UEFI tiež umožňuje štandardné MBR (MS-DOS) oddiely. "
+"Linuxoví správcovia štartu (ELILO alebo GRUB2) skúšajú automaticky generovať "
+"GUID pre tieto staršie oddiely a zapísať ich do firmware. Takýto GUID sa "
+"môže často meniť, čo spôsobuje prepísanie firmvéru. Prepis sa skladá z dvoch "
+"rôznych operácií: odstránenie starého záznamu a vytvorenie nového, ktorý "
+"nahradí pôvodný."
 
 #: xml/release-notes.xml:144(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
+"Moderný firmware má garbage collector, ktorý zhromažďuje vymazané záznamy a "
+"uvoľňuje pamäť vyhradenú pre staré záznamy. Problém nastáva, keď chybný "
+"firmware nezhromažďuje a neuvoľňuje záznamy; môže to skončiť s "
+"nespustiteľným systémom."
 
 #: xml/release-notes.xml:150(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr ""
+"Riešenie je jednoduché: previesť starší MBR diskový oddiel na nový GPT, aby "
+"ste sa tomuto problému vyhli úplne."
 
 #: xml/release-notes.xml:159(title)
 msgid "System Upgrade"
@@ -98,15 +124,17 @@ msgstr "Všeobecné"
 
 #: xml/release-notes.xml:168(title)
 msgid "No firewall by default after installation from Live CD"
-msgstr ""
+msgstr "Žiadny firewall v predvolenom nastavení po inštalácii z Live CD"
 
 #: xml/release-notes.xml:169(para)
 msgid "When installing from the Live CD no firewall will be active by default."
 msgstr ""
+"Pri inštalácii z Live CD nebude žiadny firewall aktívny v predvolenom "
+"nastavení."
 
 #: xml/release-notes.xml:173(para)
 msgid "Enable the firewall using YaST or with:"
-msgstr ""
+msgstr "Povoľte firewall pomocou YaST alebo s:"
 
 #: xml/release-notes.xml:176(screen)
 #, no-wrap
@@ -114,6 +142,8 @@ msgid ""
 "systemctl enable SuSEfirewall2\n"
 "systemctl start SuSEfirewall2"
 msgstr ""
+"systemctl povoľuje SuSEfirewall2\n"
+"systemctl spúšťa SuSEfirewall2"
 
 #: xml/release-notes.xml:182(title)
 msgid "Technical"
@@ -165,6 +195,8 @@ msgstr ""
 #: xml/release-notes.xml:220(para)
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr ""
+"Navštívte <ulink url=\"http://www.opensuse.org\"/> kvôli najnovším "
+"produktovým novinkám z openSUSE."
 
 #: xml/release-notes.xml:225(para)
 msgid "Copyright © 2015 SUSE LLC"
