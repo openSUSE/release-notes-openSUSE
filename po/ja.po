@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2015-10-23 10:16+0200\n"
-"PO-Revision-Date: 2015-10-11 02:18+0200\n"
+"PO-Revision-Date: 2015-10-23 14:52+0200\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <http://10n.opensuse.org/projects/release-notes-opensuse/master/ja/>\n"
+"Language-Team: Japanese <http://10n.opensuse.org/projects/release-notes-"
+"opensuse/master/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,17 +49,21 @@ msgstr "インストール"
 
 #. https://bugzilla.suse.com/show_bug.cgi?id=947712
 #: xml/release-notes.xml:103(title)
-#, fuzzy
 msgid "Base System Installation"
-msgstr "インストール"
+msgstr "基本システムのインストールについて"
 
 #: xml/release-notes.xml:104(para)
 msgid "If you install a new system as <quote>minimal base system</quote>, the installed system will try to maintain this level and often run into dependency conflicts when you try to install more software."
 msgstr ""
+"新しいシステムをインストールする際、 <quote>最小限のサーバ</quote> "
+"を選択すると、システムはインストール後も最小構成を維持するように動作してしまいます。そのため、追加のソフトウエアをインストールしようとすると、"
+"しばしば依存関係の矛盾 (conflict) が発生します。"
 
 #: xml/release-notes.xml:109(para)
 msgid "To avoid this, uninstall the package <literal>patterns-openSUSE-minimal_base-conflicts</literal>, instructing the system that you no longer want to maintain a minimal installation (<quote>minimal base system</quote>)."
 msgstr ""
+"このような問題を避けるには、 <literal>patterns-openSUSE-minimal_base-conflicts</literal> "
+"パッケージをアンインストールして、最小構成 (<quote>最小限のサーバ</quote>) を維持しないようにしてください。"
 
 #: xml/release-notes.xml:118(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -96,28 +101,34 @@ msgstr "このような場合は、古い MBR 形式のパーティションを�
 #. http://bugzilla.opensuse.org/show_bug.cgi?id=950877
 #: xml/release-notes.xml:174(title)
 msgid "openSUSE Leap as Guest in VirtualBox"
-msgstr ""
+msgstr "VirtualBox 内ゲストとしての openSUSE Leap の動作について"
 
 #: xml/release-notes.xml:175(para)
 msgid "If you are running openSUSE Leap as a guest inside VirtualBox, you must use a different displaymanager than GDM. Switch to using lightdm by installing the \"lightdm\" package and activate it in <filename>/etc/sysconfig/displaymanager</filename> by setting"
 msgstr ""
+"VirtualBox 内のゲストとして openSUSE Leap を動作させる際には、 GDM 以外のディスプレイマネージャを使用しなければなりません。"
+"たとえば lightdm を使用したい場合は、 \"lightdm\" パッケージをインストールしたあと、 "
+"<filename>/etc/sysconfig/displaymanager</filename> に下記のように設定して有効化します:"
 
 #: xml/release-notes.xml:181(screen)
 #, no-wrap
 msgid "DISPLAYMANAGER=\"lightdm\""
-msgstr ""
+msgstr "DISPLAYMANAGER=\"lightdm\""
 
 #: xml/release-notes.xml:183(para)
 msgid "Background information:"
-msgstr ""
+msgstr "背景となる情報:"
 
 #: xml/release-notes.xml:184(para)
 msgid "GDM starts the X server in the user context (unlike all other known DMs at this moment). This is not compatible with the VirtualBox video driver and will result in crashes of the X Window System."
 msgstr ""
+"GDM は X サーバをユーザコンテキスト内で動作させます (GDM 以外の DM は、現時点でそのように動作することはありません) "
+"。このような仕様により、 GDM は VirtualBox のビデオドライバとは互換性がなく、 X Window System "
+"をクラッシュさせてしまいます。"
 
 #: xml/release-notes.xml:189(para)
 msgid "You can still use a full GNOME3 session"
-msgstr ""
+msgstr "なお、この場合も GNOME3 セッションを使用することはできます。"
 
 #: xml/release-notes.xml:197(title)
 msgid "System Upgrade"
@@ -155,67 +166,114 @@ msgstr "テクニカル"
 #. sort_key="None"; non-rn-fate-cats="";
 #: xml/release-notes.xml:225(title)
 msgid "Printing System: Improvements and Incompatible Changes"
-msgstr ""
+msgstr "印刷システム: 改善点と互換性を失う変更について"
 
 #: xml/release-notes.xml:228(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr ""
+msgstr "CUPS バージョン 1.7 へのアップグレードについて"
 
 #: xml/release-notes.xml:230(para)
 msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
-msgstr ""
+msgstr "CUPS &gt;= 1.6 では、 1.5.4 以前と比べ、特にネットワーク経由での印刷で互換性を失う大きな変更が加えられています:"
 
 #: xml/release-notes.xml:231(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
 msgstr ""
+"IPP のデフォルトバージョンが 1.1 から 2.0 にアップグレードされています。たとえば SLE 11 では CUPS 1.3.x "
+"が使用されていますが、このような IPP サーバは IPP 2.0 のリクエストを \"Bad Request\" として拒否してしまいます (詳しくは "
+"<ulink url=\"http://www.cups.org/str.php?L4231\""
+">http://www.cups.org/str.php?L4231</ulink> をお読みください) 。このような場合は、 client.conf "
+"内の ServerName に '/version=1.1' を追加する (例: \"ServerName "
+"older.server.example.com/version=1.1\") か、 CUPS_SERVER 環境変数または '-h' オプション (例:"
+" lpstat -h older.server.example.com/version=1.1 -p) でそれを指定して、古いバージョンの IPP "
+"プロトコルを使用するように明示的に指定してください。"
 
 #: xml/release-notes.xml:232(para)
 msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
 msgstr ""
+"CUPS ブラウジング処理は CUPS 本体では廃止されてしまいましたが、新しい cups-filters パッケージには、基本的な CUPS "
+"ブラウジング処理とポーリング機能に対応した cups-browsed が用意されています。なお、自動的にプリンタのクライアントを検出するにあたって、 "
+"CUPS でネイティブに使用されるプロトコルは DNS-SD になっています。 cups-browsed はローカルホストで動作し、古いリモートの "
+"CUPS サーバが提供するブラウジング情報を取得することができます。逆に、従来の CUPS "
+"ブラウジング情報をネットワークに送信してリモートのサーバで受信したい場合は、  <literal moreinfo=\"none\">/etc/cups"
+"/cups-browsed.conf</literal> 内に \"BrowseLocalProtocols CUPS\" を設定して、 cups-"
+"browsed を起動してください。"
 
 #: xml/release-notes.xml:233(para)
 msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
 msgstr ""
+"また、新しい cups-filters パッケージで提供されるようになったことから、 CUPS "
+"本体側ではいくつかのフィルタおよびバックエンドが廃止されています。そのため、 cups-filters は一般に必要なパッケージとなっています (RPM "
+"でも推奨指定がなされています) が、必須というわけではありません。"
 
 #: xml/release-notes.xml:234(para)
 msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, and bnc#789566)."
 msgstr ""
+"cupsd の設定ディレクティブは 2 つのファイルに分割されています。それぞれ cupsd.conf (cupsctl などを利用することで HTTP "
+"PUT プロトコルで編集することができます) と cups-files.conf (root でのみ編集できます) というファイル名です。これは、 "
+"root に対してのみ許可されるべき設定を一般ユーザが書き換えてしまうような事故を防ぐためのものです (それぞれ <ulink url=\""
+"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
+" , CVE-2012-5519, bnc#789566 をお読みください) 。"
 
 #: xml/release-notes.xml:235(para)
 msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
 msgstr ""
+"CUPS のバナーと CUPS のテストページは、 CUPS &gt;= 1.6 ではサポートされなくなりました。 cups-filters "
+"が提供するバナーとテストページを使用しなければなりません。また、 <literal moreinfo=\"none\""
+">/usr/share/cups/banners/</literal> に存在していた CUPS バナーファイルと、 <literal moreinfo="
+"\"none\">/usr/share/cups/data/testprint</literal> に存在していたテストページは、 CUPS &gt;= "
+"1.6 では CUPS バナーファイルを変換することのできるフィルタが用意されていないため、 cups 本体の RPM には含まれていません (詳しくは "
+"<ulink url=\"http://www.cups.org/str.php?L4120\""
+">http://www.cups.org/str.php?L4120</ulink> をお読みください) 。 CUPS &gt;= 1.6 では、 "
+"cups-filters パッケージ内に用意されているバナーファイルとテストページをお使いください。こちらは PDF ワークフロー経由で動作するほか、"
+"該当する bannertopdf フィルタも用意されています。"
 
 #: xml/release-notes.xml:236(para)
 msgid "For details, see bsc#735404."
-msgstr ""
+msgstr "詳しくは bsc#735404 をお読みください。"
 
 #: xml/release-notes.xml:238(emphasis)
 msgid "PDF Now Common Printing Data Format"
-msgstr ""
+msgstr "PDF が新しい汎用印刷データ形式となった件について"
 
 #: xml/release-notes.xml:240(para)
 msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
 msgstr ""
+"印刷ジョブの形式は、一般に PostScript から PDF へと移り変わっています。 Linux Foundation 内のOpenPrinting "
+"ワークグループや CUPS の著者も、このような変更を支持しています。"
 
 #: xml/release-notes.xml:241(para)
 msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
 msgstr ""
+"そのため、アプリケーションプログラムでは一般に、印刷にあたっての PostScript の生成機能が廃止されつつあり、 代わりに PDF "
+"が用いられるようになっています。"
 
 #: xml/release-notes.xml:242(para)
 msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
 msgstr ""
+"そのため、アプリケーションプログラムからの印刷では、プリンタが受け入れることのできる \"言語\" に変換するにあたって、 PostScript "
+"を基準としたワークフローから、 PDF を基準としたワークフローに変更されつつあります。"
 
 #: xml/release-notes.xml:243(para)
 msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
 msgstr ""
+"Linux における CUPS でもそれは同じで、  CUPS と cups-filters パッケージを組み合わせて印刷する際、 PDF "
+"をベースとしたジョブ処理を行なうようになっています。つまり、 PDF 以外の入力はまず PDF に変換され、ページの管理などのオプションは "
+"pdftopdf のフィルタで処理され、 Ghostscript が PDF を入力として受け取ります。"
 
 #: xml/release-notes.xml:244(para)
 msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
 msgstr ""
+"標準の印刷ジョブ形式は PDF になっていることから、古い PostScript "
+"形式のプリンタを利用している場合は、アプリケーションから直接印刷することができなくなっています。このようなプリンタをお使いの場合は、 PDF を "
+"PostScript に変換してお使いください。なお、 PostScript, PDF の両方の形式に対応したプリンタであれば、 PDF "
+"のまま印刷することができます。"
 
 #: xml/release-notes.xml:245(para)
 msgid "For details, see the section \"Common printing data formats\" in the SUSE wiki article \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
 msgstr ""
+"詳しくは SUSE wiki 内の <ulink url=\"http://ja.opensuse.org/印刷処理\""
+">http://ja.opensuse.org/印刷処理</ulink> にある \"一般的な印刷データ形式\" の章をお読みください。"
 
 #: xml/release-notes.xml:250(title)
 msgid "Miscellaneous"
