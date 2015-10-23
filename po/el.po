@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-12 17:48+0200\n"
+"POT-Creation-Date: 2015-10-23 10:16+0200\n"
 "PO-Revision-Date: 2015-10-10 17:19+0200\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gmail.com>\n"
 "Language-Team: Greek <http://10n.opensuse.org/projects/release-notes-opensuse/master/el/>\n"
@@ -105,100 +105,180 @@ msgstr "Το καινούργιο firmware έχει συλλογή απορρη�
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr "Η αντιμετόπιση είναι απλή: μετατρέψτε την κατάτμηση legacy MBR σε νέα GPT για να αποφύγετε εντελώς αυτό το πρόβλημα."
 
-#: xml/release-notes.xml:175(title)
-msgid "System Upgrade"
-msgstr "Αναβάθμιση Συστήματος"
-
-#: xml/release-notes.xml:182(title)
-msgid "General"
-msgstr "Γενικά"
-
-#: xml/release-notes.xml:184(title)
-msgid "No firewall by default after installation from Live CD"
+#. http://bugzilla.opensuse.org/show_bug.cgi?id=950877
+#: xml/release-notes.xml:174(title)
+msgid "openSUSE Leap as Guest in VirtualBox"
 msgstr ""
 
-#: xml/release-notes.xml:185(para)
-msgid "When installing from the Live CD no firewall will be active by default."
+#: xml/release-notes.xml:175(para)
+msgid "If you are running openSUSE Leap as a guest inside VirtualBox, you must use a different displaymanager than GDM. Switch to using lightdm by installing the \"lightdm\" package and activate it in <filename>/etc/sysconfig/displaymanager</filename> by setting"
+msgstr ""
+
+#: xml/release-notes.xml:181(screen)
+#, fuzzy, no-wrap
+msgid "DISPLAYMANAGER=\"lightdm\""
+msgstr "DISPLAYMANAGER_KDM_THEME=\"\""
+
+#: xml/release-notes.xml:183(para)
+msgid "Background information:"
+msgstr ""
+
+#: xml/release-notes.xml:184(para)
+msgid "GDM starts the X server in the user context (unlike all other known DMs at this moment). This is not compatible with the VirtualBox video driver and will result in crashes of the X Window System."
 msgstr ""
 
 #: xml/release-notes.xml:189(para)
+msgid "You can still use a full GNOME3 session"
+msgstr ""
+
+#: xml/release-notes.xml:197(title)
+msgid "System Upgrade"
+msgstr "Αναβάθμιση Συστήματος"
+
+#: xml/release-notes.xml:204(title)
+msgid "General"
+msgstr "Γενικά"
+
+#: xml/release-notes.xml:206(title)
+msgid "No firewall by default after installation from Live CD"
+msgstr ""
+
+#: xml/release-notes.xml:207(para)
+msgid "When installing from the Live CD no firewall will be active by default."
+msgstr ""
+
+#: xml/release-notes.xml:211(para)
 msgid "Enable the firewall using YaST or with:"
 msgstr ""
 
-#: xml/release-notes.xml:192(screen)
+#: xml/release-notes.xml:214(screen)
 #, no-wrap
 msgid ""
 "systemctl enable SuSEfirewall2\n"
 "systemctl start SuSEfirewall2"
 msgstr ""
 
-#: xml/release-notes.xml:198(title)
+#: xml/release-notes.xml:220(title)
 msgid "Technical"
 msgstr "Τεχνικά"
 
-#. bsc#932494
-#: xml/release-notes.xml:203(title)
-#, fuzzy
-msgid "grep Update"
-msgstr "Ενημέρωση"
+#. sort_key="None"; non-rn-fate-cats="";
+#: xml/release-notes.xml:225(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr ""
 
-#: xml/release-notes.xml:205(para)
-#, fuzzy
-msgid "grep was updated. For changes, see <filename>/usr/share/doc/packages/grep/NEWS</filename> on the installed system."
-msgstr "Για περισσότερες πληροφορίες και παραδείγματα, δείτε στο <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> στο εγκατεστημένο σύστημα."
+#: xml/release-notes.xml:228(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr ""
 
-#: xml/release-notes.xml:215(title)
+#: xml/release-notes.xml:230(para)
+msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
+msgstr ""
+
+#: xml/release-notes.xml:231(para)
+msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
+msgstr ""
+
+#: xml/release-notes.xml:232(para)
+msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
+msgstr ""
+
+#: xml/release-notes.xml:233(para)
+msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
+msgstr ""
+
+#: xml/release-notes.xml:234(para)
+msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, and bnc#789566)."
+msgstr ""
+
+#: xml/release-notes.xml:235(para)
+msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
+msgstr ""
+
+#: xml/release-notes.xml:236(para)
+msgid "For details, see bsc#735404."
+msgstr ""
+
+#: xml/release-notes.xml:238(emphasis)
+msgid "PDF Now Common Printing Data Format"
+msgstr ""
+
+#: xml/release-notes.xml:240(para)
+msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
+msgstr ""
+
+#: xml/release-notes.xml:241(para)
+msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
+msgstr ""
+
+#: xml/release-notes.xml:242(para)
+msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
+msgstr ""
+
+#: xml/release-notes.xml:243(para)
+msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
+msgstr ""
+
+#: xml/release-notes.xml:244(para)
+msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
+msgstr ""
+
+#: xml/release-notes.xml:245(para)
+msgid "For details, see the section \"Common printing data formats\" in the SUSE wiki article \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
+msgstr ""
+
+#: xml/release-notes.xml:250(title)
 msgid "Miscellaneous"
 msgstr "Διάφορα"
 
 #. bnc#809347
-#: xml/release-notes.xml:222(title)
+#: xml/release-notes.xml:257(title)
 msgid "More Information and Feedback"
 msgstr "Περισσότερες πληροφορίες και ανατροφοδότηση"
 
-#: xml/release-notes.xml:226(para)
+#: xml/release-notes.xml:261(para)
 msgid "Read the READMEs on the CDs."
 msgstr "Διαβάστε τα αρχεία README στα CDs."
 
-#: xml/release-notes.xml:229(para)
+#: xml/release-notes.xml:264(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "Λάβετε λεπτομερή πληροφόρηση για τις αλλαγές καταγραφής σχετικά με το συγκεκριμένο πακέτο από το RPM:"
 
-#: xml/release-notes.xml:230(screen)
+#: xml/release-notes.xml:265(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 
-#: xml/release-notes.xml:231(para)
+#: xml/release-notes.xml:266(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "Το &lt;FILENAME&gt;. είναι το όνομα του RPM."
 
-#: xml/release-notes.xml:234(para)
+#: xml/release-notes.xml:269(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "Ελέγξτε το αρχείο <filename>ChangeLog</filename> στο ανώτερο επίπεδο του DVD για μία χρονολογική καταγραφή όλων των αλλαγών που έγιναν στα ενημερωμένα πακέτα."
 
-#: xml/release-notes.xml:238(para)
+#: xml/release-notes.xml:273(para)
 msgid "Find more information in the <filename>docu</filename> directory on the DVD."
 msgstr "Για περισσότερες πληροφορίες δείτε στον κατάλογο <filename>docu</filename> στο DVD."
 
-#: xml/release-notes.xml:241(para)
+#: xml/release-notes.xml:276(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "Περιέχονται επιπλέον ή ενημερωμένη τεκμηρίωση στην σελίδα <ulink url=\"https://activedoc.opensuse.org/\"/>."
 
-#: xml/release-notes.xml:246(para)
+#: xml/release-notes.xml:281(para)
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Για τα τελευταία νέα του openSUSE επισκεφθείτε την σελίδα <ulink url=\"http://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:251(para)
+#: xml/release-notes.xml:286(para)
 #, fuzzy
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "Πνευματική ιδιοκτησία © 2014 SUSE LLC"
 
-#: xml/release-notes.xml:253(para)
+#: xml/release-notes.xml:288(para)
 msgid "Thanks for using openSUSE."
 msgstr "Σας ευχαριστούμε που χρησιμοποιείτε το openSUSE."
 
-#: xml/release-notes.xml:254(para)
+#: xml/release-notes.xml:289(para)
 msgid "The openSUSE Team."
 msgstr "Η ομάδα του openSUSE."
 
@@ -210,6 +290,14 @@ msgstr ""
 "Ευστάθιος Ιωσηφίδης iosifidis@opensuse.org 2011, 2012, 2013\n"
 "Κώστας Κουδάρας warlordfff@opensuse.org 2011\n"
 "Νίκος Μαντάς nmantas@aol.com 2015"
+
+#, fuzzy
+#~ msgid "grep Update"
+#~ msgstr "Ενημέρωση"
+
+#, fuzzy
+#~ msgid "grep was updated. For changes, see <filename>/usr/share/doc/packages/grep/NEWS</filename> on the installed system."
+#~ msgstr "Για περισσότερες πληροφορίες και παραδείγματα, δείτε στο <filename>/usr/share/doc/packages/cifs-utils/README.cifstab.migration</filename> στο εγκατεστημένο σύστημα."
 
 #~ msgid "openSUSE"
 #~ msgstr "openSUSE"
@@ -944,9 +1032,6 @@ msgstr ""
 
 #~ msgid "To work around this issue, set DISPLAYMANAGER_KDM_THEME to an empty string in <filename>/etc/sysconfig/displaymanager</filename> to use the default KDM theme:"
 #~ msgstr "Για να επιλύσετε αυτο το πρόβλημα, ρυθμίστε το DISPLAYMANAGER_KDM_THEME σε ένα κενό string στο <filename>/etc/sysconfig/displaymanager</filename> για να χρησιμοποιεί το προεπιλεγμένο KDM θέμα: "
-
-#~ msgid "DISPLAYMANAGER_KDM_THEME=\"\""
-#~ msgstr "DISPLAYMANAGER_KDM_THEME=\"\""
 
 #~ msgid "CHECKIT for 12.2. Is this entry still required?"
 #~ msgstr "CHECKIT για το 12.2. Εξακολουθεί να απαιτείται αυτή η καταγραφή;"
