@@ -14,14 +14,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2015-10-23 10:16+0200\n"
-"PO-Revision-Date: 2015-10-11 10:57+0200\n"
+"PO-Revision-Date: 2015-10-24 11:58+0200\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
-"Language-Team: Ukrainian <http://10n.opensuse.org/projects/release-notes-opensuse/master/uk/>\n"
+"Language-Team: Ukrainian <http://10n.opensuse.org/projects/release-notes-"
+"opensuse/master/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.3\n"
 
 #: xml/release-notes.xml:10(title)
@@ -55,17 +57,24 @@ msgstr "Встановлення"
 
 #. https://bugzilla.suse.com/show_bug.cgi?id=947712
 #: xml/release-notes.xml:103(title)
-#, fuzzy
 msgid "Base System Installation"
-msgstr "Встановлення"
+msgstr "Встановлення основної системи"
 
 #: xml/release-notes.xml:104(para)
 msgid "If you install a new system as <quote>minimal base system</quote>, the installed system will try to maintain this level and often run into dependency conflicts when you try to install more software."
 msgstr ""
+"Коли ви встановлюєте нову систему як <quote>мінімальну основну "
+"систему</quote>, встановлена система намагатиметься підтримувати цей рівень "
+"і часто спричинятиме конфлікти залежностей при спробі встановити більше "
+"програм."
 
 #: xml/release-notes.xml:109(para)
 msgid "To avoid this, uninstall the package <literal>patterns-openSUSE-minimal_base-conflicts</literal>, instructing the system that you no longer want to maintain a minimal installation (<quote>minimal base system</quote>)."
 msgstr ""
+"Для уникнення цього видаліть пакунок <literal>patterns-openSUSE-minimal_base-"
+"conflicts</literal>, тим самим вказавши системі, що ви більше не хочете "
+"підтримувати мінімальне встановлення (<quote>мінімальну основну "
+"систему</quote>)."
 
 #: xml/release-notes.xml:118(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -103,28 +112,35 @@ msgstr "Обхідний шлях дуже простий: конвертуйт�
 #. http://bugzilla.opensuse.org/show_bug.cgi?id=950877
 #: xml/release-notes.xml:174(title)
 msgid "openSUSE Leap as Guest in VirtualBox"
-msgstr ""
+msgstr "openSUSE Leap як гостьова ОС у VirtualBox"
 
 #: xml/release-notes.xml:175(para)
 msgid "If you are running openSUSE Leap as a guest inside VirtualBox, you must use a different displaymanager than GDM. Switch to using lightdm by installing the \"lightdm\" package and activate it in <filename>/etc/sysconfig/displaymanager</filename> by setting"
 msgstr ""
+"Коли ви запускаєте openSUSE Leap як гостьову ОС через VirtualBox, вам "
+"потрібно вживати інший менедже вікон, ніж GDM. Перемкніться на використання "
+"lightdm, встановивши пакунок \"lightdm\" та активувавши його у  "
+"<filename>/etc/sysconfig/displaymanager</filename> шляхом задання"
 
 #: xml/release-notes.xml:181(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "DISPLAYMANAGER=\"lightdm\""
-msgstr "DISPLAYMANAGER_KDM_THEME=\"\""
+msgstr "DISPLAYMANAGER=\"lightdm\""
 
 #: xml/release-notes.xml:183(para)
 msgid "Background information:"
-msgstr ""
+msgstr "Довідкова інформація:"
 
 #: xml/release-notes.xml:184(para)
 msgid "GDM starts the X server in the user context (unlike all other known DMs at this moment). This is not compatible with the VirtualBox video driver and will result in crashes of the X Window System."
 msgstr ""
+"GDM запускає X сервер у контексті користувача (на відміну від інших відомих "
+"віконних менеджерів). Це не сумісно із відеодрайвером VirtualBox та "
+"спричинятиму збої системи X Window."
 
 #: xml/release-notes.xml:189(para)
 msgid "You can still use a full GNOME3 session"
-msgstr ""
+msgstr "Ви як і раніше можете використовувати повний сеанс Gnome3"
 
 #: xml/release-notes.xml:197(title)
 msgid "System Upgrade"
@@ -162,15 +178,17 @@ msgstr "Технічне"
 #. sort_key="None"; non-rn-fate-cats="";
 #: xml/release-notes.xml:225(title)
 msgid "Printing System: Improvements and Incompatible Changes"
-msgstr ""
+msgstr "Система друку: покращення та несумісні зміни"
 
 #: xml/release-notes.xml:228(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr ""
+msgstr "Оновлено версію CUPS до 1.7"
 
 #: xml/release-notes.xml:230(para)
 msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 msgstr ""
+"CUPS &gt;= 1.6 має істотні несумісні зміни порівняно з CUPS до версії 1.5.4. "
+"Зокрема, при друці через мережу:"
 
 #: xml/release-notes.xml:231(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
