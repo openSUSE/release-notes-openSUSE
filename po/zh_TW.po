@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2015-10-23 10:16+0200\n"
-"PO-Revision-Date: 2015-10-26 16:20+0200\n"
+"PO-Revision-Date: 2015-10-26 16:45+0200\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <http://10n.opensuse.org/projects/release-"
 "notes-opensuse/master/zh_TW/>\n"
@@ -116,10 +116,11 @@ msgstr "背景資訊："
 #: xml/release-notes.xml:184(para)
 msgid "GDM starts the X server in the user context (unlike all other known DMs at this moment). This is not compatible with the VirtualBox video driver and will result in crashes of the X Window System."
 msgstr ""
+"不像其他顯示管理員，GDM 會在使用者環境下啟動 X server。這與 VirtualBox 顯示驅動程式不相容，且會導致 X Window 系統崩潰。"
 
 #: xml/release-notes.xml:189(para)
 msgid "You can still use a full GNOME3 session"
-msgstr ""
+msgstr "您仍然可以使用完整的 GNOME3 執行階段"
 
 #: xml/release-notes.xml:197(title)
 msgid "System Upgrade"
@@ -157,19 +158,25 @@ msgstr "技術議題"
 #. sort_key="None"; non-rn-fate-cats="";
 #: xml/release-notes.xml:225(title)
 msgid "Printing System: Improvements and Incompatible Changes"
-msgstr ""
+msgstr "列印系統：改進以及不相容的變動"
 
 #: xml/release-notes.xml:228(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr ""
+msgstr "CUPS 版本昇級至 1.7"
 
 #: xml/release-notes.xml:230(para)
 msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
-msgstr ""
+msgstr "CUPS &gt;= 1.6 有一主要變動和 1.5.4 版以前的版本不相容，特別是在網路列印這部分："
 
 #: xml/release-notes.xml:231(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
 msgstr ""
+"IPP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 "
+"的連線要求，並回傳 \"Bad Request\" (請見 <ulink url=\"http://www.cups.org/str.php?"
+"L4231\">http://www.cups.org/str.php?L4231</ulink>)。對於舊伺服器使用舊 IPP 通訊協定必須明確指定，"
+"例如在 client.conf 中的 ServerName 加入 '/version=1.1' (ServerName "
+"older.server.example.com/version=1.1)，或加到 CUPS_SERVER 環境變數，或是加到 '-h' "
+"選項指定的伺服器名稱 (lpstat -h older.server.example.com/version=1.1 -p)。"
 
 #: xml/release-notes.xml:232(para)
 msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
@@ -189,7 +196,7 @@ msgstr ""
 
 #: xml/release-notes.xml:236(para)
 msgid "For details, see bsc#735404."
-msgstr ""
+msgstr "欲了解更多詳請，請見 bsc#735404。"
 
 #: xml/release-notes.xml:238(emphasis)
 msgid "PDF Now Common Printing Data Format"
