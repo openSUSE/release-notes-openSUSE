@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-23 10:16+0200\n"
-"PO-Revision-Date: 2015-10-24 17:12+0200\n"
-"Last-Translator: Ondřej Súkup <mimi.vx@gmail.com>\n"
+"PO-Revision-Date: 2015-10-26 07:59+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.com>\n"
 "Language-Team: Czech <http://10n.opensuse.org/projects/release-notes-"
 "opensuse/master/cs/>\n"
 "Language: cs\n"
@@ -116,6 +116,9 @@ msgstr "openSUSE Leap jako host ve VirtualBoxu"
 #: xml/release-notes.xml:175(para)
 msgid "If you are running openSUSE Leap as a guest inside VirtualBox, you must use a different displaymanager than GDM. Switch to using lightdm by installing the \"lightdm\" package and activate it in <filename>/etc/sysconfig/displaymanager</filename> by setting"
 msgstr ""
+"Pokud spouštíte  openSUSE Leap ve VirtualBoxu, musíte použít jiný správce "
+"přihlášení než GDM. Přejděte na lightdm instalací balíčku \"lightdm\" a jeho "
+"povolením v <filename>/etc/sysconfig/displaymanager</filename> nastavením"
 
 #: xml/release-notes.xml:181(screen)
 #, no-wrap
@@ -124,15 +127,18 @@ msgstr "DISPLAYMANAGER=\"lightdm\""
 
 #: xml/release-notes.xml:183(para)
 msgid "Background information:"
-msgstr ""
+msgstr "Vysvětlující informace:"
 
 #: xml/release-notes.xml:184(para)
 msgid "GDM starts the X server in the user context (unlike all other known DMs at this moment). This is not compatible with the VirtualBox video driver and will result in crashes of the X Window System."
 msgstr ""
+"GDM spouští X server v uživatelském kontextu (narozdíl od všech ostatních "
+"současných správců). TOto není kompatibilní s ovladačem videa VirtualBoxu a "
+"povede k pádům systému X Window."
 
 #: xml/release-notes.xml:189(para)
 msgid "You can still use a full GNOME3 session"
-msgstr ""
+msgstr "Stále můžete používat sezení GNOME 3"
 
 #: xml/release-notes.xml:197(title)
 msgid "System Upgrade"
@@ -174,11 +180,13 @@ msgstr ""
 
 #: xml/release-notes.xml:228(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr ""
+msgstr "Aktualizace verze CUPS na 1.7"
 
 #: xml/release-notes.xml:230(para)
 msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 msgstr ""
+"CUPS &gt;= 1.6 obsahuje velké změny narušující kompatibilitu s CUPS po verzi "
+"1.5.4 obzvláště během tisku po síti:"
 
 #: xml/release-notes.xml:231(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
