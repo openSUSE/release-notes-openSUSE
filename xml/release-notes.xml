@@ -175,29 +175,10 @@ picture was taken by N/A
     new GPT to avoid this problem completely.
    </para>
   </section>
-  
-  <section>
+
    <!-- http://bugzilla.opensuse.org/show_bug.cgi?id=950877 -->
    <!-- http://bugzilla.opensuse.org/show_bug.cgi?id=952019 -->
-   <title>openSUSE Leap as Guest in VirtualBox</title>
-   <para>
-    If you are running openSUSE Leap as a guest inside VirtualBox, you
-    must use a different displaymanager than GDM.  Switch to using
-    lightdm by installing the "lightdm" package and activate it in
-    <filename>/etc/sysconfig/displaymanager</filename> by setting
-   </para>
-   <screen>DISPLAYMANAGER="lightdm"</screen>
-
-   <para>Background information:</para>
-   <para>
-    GDM starts the X server in the user context (unlike all other known
-    DMs at this moment). This is not compatible with the VirtualBox
-    video driver and will result in crashes of the X Window System.
-   </para>
-   <para>
-    You can still use a full GNOME3 session
-   </para>
-  </section>
+   <!-- <title>openSUSE Leap as Guest in VirtualBox</title> -->
 
  </section>
 
