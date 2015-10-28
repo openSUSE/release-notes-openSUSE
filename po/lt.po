@@ -1,0 +1,1159 @@
+# translation of RELEASE-NOTES-openSUSE.po to Lietuvių
+# Copyright (C) 2006, SUSE Linux GmbH, Nuremberg
+# Andrius Štikonas <stikonas@gmail.com>, 2006.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2009, 2010, 2011, 2012, 2013, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: RELEASE-NOTES-openSUSE\n"
+"Report-Msgid-Bugs-To: translation@suse.de\n"
+"POT-Creation-Date: 2015-10-23 10:16+0200\n"
+"PO-Revision-Date: 2015-10-28 11:18+0200\n"
+"Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
+"Language-Team: Lithuanian <http://10n.opensuse.org/projects/release-notes-open"
+"suse/master/lt/>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10==1 && n%100!=11 ? 1 : n%"
+"10>=2 && (n%100<10 || n%100>=20) ? 2 : 3);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: xml/release-notes.xml:10(title)
+msgid "Release Notes"
+msgstr "Laidos informacija"
+
+#: xml/release-notes.xml:12(releaseinfo)
+msgid "@VERSION@"
+msgstr "@VERSION@"
+
+#: xml/release-notes.xml:13(productname)
+msgid "openSUSE Leap"
+msgstr "openSUSE Leap"
+
+#: xml/release-notes.xml:14(productnumber)
+msgid "42.1"
+msgstr "42.1"
+
+#: xml/release-notes.xml:17(para)
+msgid ""
+"openSUSE Leap is a free and Linux-based operating system for your PC, Laptop "
+"or Server. You can surf the web, manage your e-mails and photos, do office "
+"work, play videos or music and have a lot of fun!"
+msgstr ""
+"„openSUSE Leap“ yra atviro kodo „Linux“ operacinė sistema ir skirta "
+"staliniams, nešiojamiesiems kompiuteriams, serveriams. Su ja galite naršyti "
+"saityne, naudotis el. paštu, redaguoti nuotraukas, atlikti raštinės darbus, "
+"leisti vaizdo ir garso kūrinius bei tiesiog patirti daug džiugių "
+"akimirkų!"
+
+#. Previous Release Notes
+#: xml/release-notes.xml:51(para)
+msgid ""
+"If you upgrade from an older version to this openSUSE Leap release, see "
+"previous release notes listed here: <ulink "
+"url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+msgstr ""
+"Jei senesnę sistemos versiją naujovinote iki šios „openSUSE Leap“ laidos, "
+"ankstesnių laidos informacijų ieškokite čia: <ulink "
+"url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+
+#: xml/release-notes.xml:90(title)
+msgid "Installation"
+msgstr "Diegimas"
+
+#. https://bugzilla.suse.com/show_bug.cgi?id=947712
+#: xml/release-notes.xml:103(title)
+msgid "Base System Installation"
+msgstr "Minimalios sistemos diegimas"
+
+#: xml/release-notes.xml:104(para)
+msgid ""
+"If you install a new system as <quote>minimal base system</quote>, the "
+"installed system will try to maintain this level and often run into "
+"dependency conflicts when you try to install more software."
+msgstr ""
+"Jei naujai diegdami pasirenkate <quote>minimalią bazinę sistemą</quote>, "
+"tuomet įdiegta sistema stengsis išlikti minimalia, o bandant įdiegti daugiau "
+"programinės įrangos dažnai praneš apie konfliktuojančias priklausomybes."
+
+#: xml/release-notes.xml:109(para)
+msgid ""
+"To avoid this, uninstall the package <literal>"
+"patterns-openSUSE-minimal_base-conflicts</literal>, instructing the system "
+"that you no longer want to maintain a minimal installation (<quote>minimal "
+"base system</quote>)."
+msgstr ""
+"Norėdami to išvengti, pašalinkite <literal>"
+"patterns-openSUSE-minimal_base-conflicts</literal> paketą. Tokiu būdu sistema "
+"žinos, kad jūs nebenorite naudotis išskirtinai (<quote>minimalia bazine "
+"sistema</quote>)."
+
+#: xml/release-notes.xml:118(title)
+msgid "UEFI&mdash;Unified Extensible Firmware Interface"
+msgstr "UEFI&mdash;Unifikuota išplečiama programinės aparatinės įrangos sąsaja"
+
+#: xml/release-notes.xml:119(para)
+msgid ""
+"Prior to installing openSUSE on a system that boots using UEFI (Unified "
+"Extensible Firmware Interface), you are urgently advised to check for any "
+"firmware updates the hardware vendor recommends and, if available, to install "
+"such an update. A pre-installed Windows 8 is a strong indication that your "
+"system boots using UEFI."
+msgstr ""
+"Prieš diegdami openSUSE į sistemą, kuriai paleisti reikalinga UEFI (angl. "
+"„Unified Extensible Firmware Interface“), patikrinkite, ar jūsų aparatinės "
+"įrangos gamintojas nepateikė programinės aparatinės įrangos (angl. "
+"„firmware“) atnaujinimų; jei pateikia – juos įdiekite pirmiausiai. Jei Jūsų "
+"kompiuteryje jau įdiegta Windows 8 sistema, tuomet jūsų sistemos paleidimui "
+"UEFI tikrai reikia."
+
+#: xml/release-notes.xml:127(para)
+msgid ""
+"<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to "
+"break if too much data gets written to the UEFI storage area. Nobody really "
+"knows how much \"too much\" is, though. openSUSE minimizes the risk by not "
+"writing more than the bare minimum required to boot the OS. The minimum means "
+"telling the UEFI firmware about the location of the openSUSE boot loader. "
+"Upstream Linux Kernel features that use the UEFI storage area for storing "
+"boot and crash information (<literal>pstore</literal>) have been disabled by "
+"default. Nevertheless, it is recommended to install any firmware updates the "
+"hardware vendor recommends."
+msgstr ""
+"<emphasis>Papildomi paaiškinimai:</emphasis> UEFI programinėje aparatinėje "
+"įrangoje („firmware“) kai kuriais atvejais gali būti klaidų, kurios gali "
+"sutrikdyti sistemą, bet tik tada, jei į UEFI atmintį įrašoma per daug "
+"duomenų. Niekas nežino, kiek būtų jau per daug. Norėdama kaip galima "
+"sumažinti riziką, openSUSE įrašo tik tiek, kiek reikia operacinei sistemai "
+"paleisti. Minimumas reiškia tai, kad UEFI programinė įranga sužino apie "
+"openSUSE paleidyklės vietą. Standartiniame Linux branduolyje išjungta tiek "
+"savybė naudoti UEFI atmintį paleidimo informacijos laikymui, tiek lūžių "
+"informacijos laikymui (<literal>pstore</literal>). Vis dėl to, jei yra "
+"atnaujinimų, patariama atnaujinti programinę aparatinę įrangą („firmware“)."
+
+#. bnc#850056
+#: xml/release-notes.xml:144(title)
+msgid "UEFI, GPT, and MS-DOS Partitions"
+msgstr "UEFI, GPT ir MS-DOS skaidiniai"
+
+#: xml/release-notes.xml:145(para)
+msgid ""
+"Together with the EFI/UEFI specification, a new style of partitioning "
+"arrived: GPT (GUID Partition Table). This new schema uses globally unique "
+"identifiers (128-bit values displayed in 32 hexadecimal digits) to identify "
+"devices and partition types."
+msgstr ""
+"Su EFI/UEFI specifikacija ateina naujas skaidinių tvarkymo stilius: GPT (GUID "
+"Partition Table). Šioje naujoje schemoje įrenginiams ir skaidinių tipams "
+"identifikuoti naudojami bendrieji unikalūs identifikatoriai (128 bitų "
+"reikšmės rodomos 32 šešioliktainiais skaitmenimis)."
+
+#: xml/release-notes.xml:151(para)
+msgid ""
+"Additionally, the UEFI specification also allows legacy MBR (MS-DOS) "
+"partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically "
+"generate a GUID for those legacy partitions, and write them to the firmware. "
+"Such a GUID can change frequently, causing a rewrite in the firmware. A "
+"rewrite consist of two different operation: removing the old entry and "
+"creating a new entry that replaces the first one."
+msgstr ""
+"Be to, UEFI specifikacija be kita ko leidžia senuosius MBR (MS-DOS) "
+"skaidinius. Linux paleidyklės (ELILO ar GRUB2) šiems seniems skaidiniams "
+"bando automatiškai sukurti GUID ir į juos įrašyti programinę aparatinę įrangą "
+"(angl. firmware). Toks GUID gali dažnai keistis, tad gali būti perrašyta "
+"programinė aparatinė įranga. Perrašymą sudaro du atskiri žingsniai: senojo "
+"įrašo pašalinimas ir naujojo įrašo sukūrimas, kuris pakeičia senąjį."
+
+#: xml/release-notes.xml:160(para)
+msgid ""
+"Modern firmware has a garbage collector that collects deleted entries and "
+"frees the memory reserved for old entries. A problem arises when faulty "
+"firmware does not collect and free those entries; this may end up with a "
+"non-bootable system."
+msgstr ""
+"Šiuolaikinė programinė aparatinė įranga stengiasi surinkti „šiukšles“ – "
+"ištrintus įrašus ir išlaisvina seniesiems įrašams skirtą vietą. Problemų "
+"kyla, kai klaidinga programinė įranga nesurenka šiukšlių ir neišlaisvina tų "
+"įrašų; dėl to sistema gali nebepasileisti."
+
+#: xml/release-notes.xml:166(para)
+msgid ""
+"The workaround is simple: convert the legacy MBR partition to the new GPT to "
+"avoid this problem completely."
+msgstr ""
+"Sprendimas paprastas: nesklandumų visiškai išvengsite senąjį MBR skaidinį "
+"konvertavę į naująjį GPT."
+
+#. http://bugzilla.opensuse.org/show_bug.cgi?id=950877
+#: xml/release-notes.xml:174(title)
+msgid "openSUSE Leap as Guest in VirtualBox"
+msgstr "„openSUSE Leap“ naudojimas per „VirtualBox“ kaip svečio sistemą"
+
+#: xml/release-notes.xml:175(para)
+msgid ""
+"If you are running openSUSE Leap as a guest inside VirtualBox, you must use a "
+"different displaymanager than GDM. Switch to using lightdm by installing the "
+"\"lightdm\" package and activate it in <filename>"
+"/etc/sysconfig/displaymanager</filename> by setting"
+msgstr ""
+"Jei „VirtualBox“ programoje paleidžiate „openSUSE Leap“ tarsi svečio sistemą, "
+"tuomet būtinai rinkitės kitokią nei GDM prisijungimų tvarkyklę. Pavyzdžiui, "
+"norėdami naudoti „lightdm“ prisijungimų tvarkyklę, įdiekite „lightdm“ paketą "
+"ir aktyvuokite jį <filename>/etc/sysconfig/displaymanager</filename> "
+"rinkmenoje nustatydami parametrą"
+
+#: xml/release-notes.xml:181(screen)
+#, no-wrap
+msgid "DISPLAYMANAGER=\"lightdm\""
+msgstr "DISPLAYMANAGER=\"lightdm\""
+
+#: xml/release-notes.xml:183(para)
+msgid "Background information:"
+msgstr "Papildomi paaiškinimai:"
+
+#: xml/release-notes.xml:184(para)
+msgid ""
+"GDM starts the X server in the user context (unlike all other known DMs at "
+"this moment). This is not compatible with the VirtualBox video driver and "
+"will result in crashes of the X Window System."
+msgstr ""
+"GDM paleidžia X serverį naudotojo kontekste (kitaip nei kitos šiuo metu "
+"žinomos prisijungimų tvarkyklės). Tačiau toks GDM elgesys nesuderinamas su "
+"„VirtualBox“ vaizdo tvarkyklėmis, todėl X langų sistema nulūžta."
+
+#: xml/release-notes.xml:189(para)
+msgid "You can still use a full GNOME3 session"
+msgstr ""
+"Nepriklausomai nuo prisijungimų tvarkyklės, galite naudotis pilnaverte GNOME3 "
+"sesija."
+
+#: xml/release-notes.xml:197(title)
+msgid "System Upgrade"
+msgstr "Sistemos naujovinimas"
+
+#: xml/release-notes.xml:204(title)
+msgid "General"
+msgstr "Bendrybės"
+
+#: xml/release-notes.xml:206(title)
+msgid "No firewall by default after installation from Live CD"
+msgstr "Sistemą įdiegus iš demonstracinės laikmenos, neįjungiama užkarda"
+
+#: xml/release-notes.xml:207(para)
+msgid "When installing from the Live CD no firewall will be active by default."
+msgstr ""
+"Jei sistemą įdiegiate iš laikmenos, leidžiančios prieš diegimą išbandyti "
+"sistemą (angl. Live CD), tuomet numatytuoju atveju užkarda neįjungiama."
+
+#: xml/release-notes.xml:211(para)
+msgid "Enable the firewall using YaST or with:"
+msgstr "Užkardą įgalinkite per YaST arba įvykdydami komandą:"
+
+#: xml/release-notes.xml:214(screen)
+#, no-wrap
+msgid ""
+"systemctl enable SuSEfirewall2\n"
+"systemctl start SuSEfirewall2"
+msgstr ""
+"systemctl enable SuSEfirewall2\n"
+"systemctl start SuSEfirewall2"
+
+#: xml/release-notes.xml:220(title)
+msgid "Technical"
+msgstr "Techninė informacija"
+
+#. sort_key="None"; non-rn-fate-cats="";
+#: xml/release-notes.xml:225(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr "Spausdinimo sistema: patobulinimai ir nesuderinami pakeitimai"
+
+#: xml/release-notes.xml:228(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr "CUPS versija naujovinta iki 1.7"
+
+#: xml/release-notes.xml:230(para)
+msgid ""
+"CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version "
+"1.5.4 in particular when printing via network:"
+msgstr ""
+"CUPS &gt;= 1.6 versijoje yra didelių pakeitimų, kurie nesuderinami su CUPS "
+"1.5.4 ir senesnėmis versijomis, ypač spausdinant per tinklą:"
+
+#: xml/release-notes.xml:231(para)
+msgid ""
+"The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers "
+"like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad "
+"Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">"
+"http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to "
+"ServerName in client.conf (e.g., ServerName "
+"older.server.example.com/version=1.1) or to the CUPS_SERVER environment "
+"variable value or by adding it to the server name value of the '-h' option "
+"(e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP "
+"protocol version for older servers must be specified explicitly."
+msgstr ""
+"Numatytoji IPP protokolo versija iš 1.1 pakeista į 2.0. Senesni IPP "
+"serveriai, pvz., CUPS 1.3.x "
+"(naudojami, pvz., SLE 11), atmes IPP 2.0 užklausas pranešdami apie blogos "
+"užklausos klaidą "
+"(žr. <ulink url=\"http://www.cups.org/str.php?L4231\">"
+"http://www.cups.org/str.php?L4231</ulink> ). "
+"Tokiu atveju turėtumėte nurodyti, kad į senus serverius būtų kreipiamasi "
+"naudojant būtent senesnį protokolą:"
+"arba konfigūracinėje rinkmenoje client.conf ties ServerName pridedant "
+"„/version=1.1“ "
+"(pvz., ServerName senesnis.serveris.pavyzdys.lt/version=1.1), "
+"arba keičiant CUPS_SERVER aplinkos kintamojo reikšmę, "
+"arba „/version=1.1“ pridedant prie serverio vardo reikšmės naudojant „-h“ "
+"parinktį "
+"(pvz., lpstat -h senesnis.serveris.pavyzdys.lt/version=1.1 -p)."
+
+#: xml/release-notes.xml:232(para)
+msgid ""
+"CUPS Browsing is dropped in CUPS but the new package cups-filters provides "
+"the cups-browsed that provides basic CUPS Browsing and Polling functionality. "
+"The native protocol in CUPS for automatic client discovery of printers is now "
+"DNS-SD. Start cups-browsed on the local host to receive traditional CUPS "
+"Browsing information from traditional remote CUPS servers. To broadcast "
+"traditional CUPS Browsing information into the network so that traditional "
+"remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <"
+"literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start "
+"cups-browsed."
+msgstr ""
+"CUPS naršymas nebėra palaikomas pačiame CUPS, tačiau naujas „cups-filters“ "
+"paketas siūlo „cups-browsed“, kuri įgalina "
+"pagrindines CUPS naršymo ir stebėjimo funkcijas. Gimtasis CUPS protokolas "
+"automatiniam kliento spausdintuvų aptikimui "
+"dabar yra DNS-SD. Norėdami gauti tradicinę CUPS naršymo informaciją iš "
+"tradicinių nuotolinių CUPS serverių, "
+"vietiniame kompiuteryje paleiskite  „cups-browsed“. Norėdami siųsti tradicinę "
+"CUPS naršymo informaciją į tinklą – "
+"tada kiti tradiciniai nuotoliniai CUPS klientai galės ją gauti, – "
+"<literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> rinkmenoje "
+"nurodykite „BrowseLocalProtocols CUPS“ "
+"ir paleiskite „cups-browsed“."
+
+#: xml/release-notes.xml:233(para)
+msgid ""
+"Some printing filters and back-ends are dropped in CUPS but the new package "
+"cups-filters provides them. So cups-filters is usually needed (recommended by "
+"RPM) but cups-filters is not strictly required."
+msgstr ""
+"Grynasis CUPS nebepalaiko kai kurių spausdintuvų tvarkyklių ir sąsajų, tačiau "
+"juos rasite „cups-filters“ pakete. Taigi „cups-filters“ dažniausias "
+"reikalingas (RPM pataria jį įdiegti), tačiau „cups-filters“ nebėra būtinas."
+
+#: xml/release-notes.xml:234(para)
+msgid ""
+"The cupsd configuration directives are split into two files: cupsd.conf (can "
+"also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only "
+"be modified manually by root) to have better default protection against "
+"misuse of privileges by normal users who have been specifically allowed by "
+"root to do cupsd configuration changes (see <ulink "
+"url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223<"
+"/ulink> , CVE-2012-5519, and bnc#789566)."
+msgstr ""
+"Cupsd konfigūracijos direktyvos padalintos dviejose rinkmenose: cupsd.conf "
+"(galima modifikuoti per HTTP PUT, pvz., per „cupsctl“) ir "
+"cups-files.conf (gali keisti tik root naudotojas rankiniu būdu). "
+"Tai leidžia geriau apsisaugoti nuo netinkamo įprastų naudotojų teisių "
+"naudojimo, kuriuos root tyčia leidžia (žr. "
+"<ulink url=\"http://www.cups.org/str.php?L4223\">"
+"http://www.cups.org/str.php?L4223</ulink> , "
+"CVE-2012-5519 ir bnc#789566)."
+
+#: xml/release-notes.xml:235(para)
+msgid ""
+"CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= "
+"1.6. The banners and the test page from cups-filters must be used. The CUPS "
+"banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> "
+"and the CUPS testpage <literal moreinfo=\"none\">"
+"/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file "
+"type) are no longer provided in the cups RPM because they do no longer work "
+"since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">"
+"http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a "
+"filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the "
+"banner files and testpage in the cups-filters package work via the "
+"cups-filters PDF workflow and the cups-filters package also provides the "
+"matching bannertopdf filter."
+msgstr ""
+"Grynasis CUPS &gt;= 1.6 nebepalaiko CUPS papildomų antraščių (angl. banners) "
+"ir bandomųjų puslapių. Papildomas antraštes ir bandomieji puslapiai dabar yra "
+"„cups-filters“ pakete. CUPS RPM paketas nebepateikia papildomų antraščių <"
+"literal moreinfo=\"none\">/usr/share/cups/banners/</literal> kelyje ir "
+"bandomųjų puslapių <literal moreinfo=\"none\">/usr/share/cups/data/testprint<"
+"/literal> kelyje (tai to paties tipo rinkmenos), nes jie tiesiog nebeveikia "
+"su CUPS &gt;= 1.6 (žr. <ulink url=\"http://www.cups.org/str.php?L4120\">"
+"http://www.cups.org/str.php?L4120</ulink> ) nesant tvarkyklių, kurios "
+"konvertuotų šias rinkmenas. Dabar CUPS &gt;= 1.6 papildomos antraštės ir "
+"bandomieji puslapiai veikia tik naudojant PDF per „cups-filters“ paketą, nes "
+"juose pateikiamos reikalingos tvarkyklės."
+
+#: xml/release-notes.xml:236(para)
+msgid "For details, see bsc#735404."
+msgstr "Daugiau informacijos rasite bsc#735404."
+
+#: xml/release-notes.xml:238(emphasis)
+msgid "PDF Now Common Printing Data Format"
+msgstr "Bendruoju spausdinimo duomenų formatu tapo PDF"
+
+#: xml/release-notes.xml:240(para)
+msgid ""
+"There is a general move away from PostScript to PDF as the standard print job "
+"format. This change is advocated by the OpenPrinting workgroup of the Linux "
+"Foundation and the CUPS author."
+msgstr ""
+"Spausdinimo užduotys visuotinai imamos tvarkyti nebe PostScript, o PDF "
+"formatu. Pakeitimus remia „Linux Foundation“ „OpenPrinting“ darbo grupė ir "
+"CUPS kūrėjai."
+
+#: xml/release-notes.xml:241(para)
+msgid ""
+"This means that application programs usually no longer produce PostScript "
+"output by default when printing but instead PDF."
+msgstr ""
+"Tai reiškia, kad programos numatytuoju atveju spausdindamos sukurs PDF, o ne "
+"PostScript (kaip buvo ligi šiol)."
+
+#: xml/release-notes.xml:242(para)
+msgid ""
+"As a consequence the default processing how application programs printing "
+"output is converted into the \"language\" that the particular printer accepts "
+"(the so called \"CUPS filter chain\") has fundamentally changed from a "
+"PostScript-centric workflow to a PDF-centric workflow."
+msgstr ""
+"Todėl numatytasis spausdinimo užduoties apdorojimo būdas, kuriuo užduotis "
+"konvertuojama į konkrečiam spausdintuvui suprantamą kalbą, iš pagrindų "
+"pakeistas iš PostScript apdorojimo į PDF apdorojimą."
+
+#: xml/release-notes.xml:243(para)
+msgid ""
+"Accordingly the upstream standard for CUPS under Linux (using CUPS plus the "
+"cups-filters package) is now PDF-based job processing, letting every non-PDF "
+"input be converted to PDF first, page management options being applied by a "
+"pdftopdf filter and Ghostscript being called with PDF as input."
+msgstr ""
+"Remiantis priešakiniais Linux CUPS standartais (CUPS naudojant kartu su "
+"„cups-filters“ paketu), spausdinimo užduotys vykdomos PDF pagrindu, tad jei "
+"prašoma spausdinti ne PDF dokumentą, jis pirmiausia konvertuojamas į PDF, "
+"puslapiai apdorojami naudojant „pdftopdf“ ir sukurtas PDF perduodamas "
+"„Ghostscript“."
+
+#: xml/release-notes.xml:244(para)
+msgid ""
+"With PDF as the standard print job format traditional PostScript printers can "
+"no longer print application's printing output directly so that a conversion "
+"step in the printing workflow is required that converts PDF into PostScript. "
+"But there are also PostScript+PDF printers that can print both PostScript and "
+"PDF directly."
+msgstr ""
+"Kai PDF tampa pagrindiniu spausdinimo užduočių formatu, tradiciniai "
+"PostScript spausdintuvai nebegali tiesiogiai spausdinti joms pateiktų "
+"užduočių, tad jas reikia konvertuoti iš PDF į PostScript. Kita vertus, "
+"rinkoje yra PostScript+PDF spausdintuvų, kurie gali tiesiogiai spausdinti "
+"tiek PostScript, tiek PDF."
+
+#: xml/release-notes.xml:245(para)
+msgid ""
+"For details, see the section \"Common printing data formats\" in the SUSE "
+"wiki article \"Concepts printing\" at <ulink "
+"url=\"http://en.opensuse.org/Concepts_printing\">"
+"http://en.opensuse.org/Concepts_printing</ulink> ."
+msgstr ""
+"Daugiau informacijos SUSE vikio straipsnelio „Concepts printing“ <ulink "
+"url=\"http://en.opensuse.org/Concepts_printing\">"
+"http://en.opensuse.org/Concepts_printing</ulink> skyriuje „Common printing "
+"data formats“."
+
+#: xml/release-notes.xml:250(title)
+msgid "Miscellaneous"
+msgstr "Įvairenybės"
+
+#. bnc#809347
+#: xml/release-notes.xml:257(title)
+msgid "More Information and Feedback"
+msgstr "Išsamesnė informacija ir grįžtamasis ryšys"
+
+#: xml/release-notes.xml:261(para)
+msgid "Read the READMEs on the CDs."
+msgstr "Skaitykite diegimo laikmenose esančias README rinkmenas."
+
+#: xml/release-notes.xml:264(para)
+msgid ""
+"Get detailed changelog information about a particular package from the RPM:"
+msgstr ""
+"Išsami informacija apie paskiro RPM paketo pakeitimus pateikiama įvykdžius:"
+
+#: xml/release-notes.xml:265(screen)
+#, no-wrap
+msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+msgstr "rpm --changelog -qp &lt;RINKMENA&gt;.rpm"
+
+#: xml/release-notes.xml:266(para)
+msgid "&lt;FILENAME&gt;. is the name of the RPM."
+msgstr "&lt;RINKMENA&gt;. yra RPM paketo pavadinimas."
+
+#: xml/release-notes.xml:269(para)
+msgid ""
+"Check the <filename>ChangeLog</filename> file in the top level of the DVD for "
+"a chronological log of all changes made to the updated packages."
+msgstr ""
+"Norėdami matyti atnaujintų paketų visus pakeitimus laiko bėgyje, DVD "
+"laikmenos šakniniame kataloge ieškokite <filename>ChangeLog</filename> "
+"rinkmenos."
+
+#: xml/release-notes.xml:273(para)
+msgid ""
+"Find more information in the <filename>docu</filename> directory on the DVD."
+msgstr "Daugiau informacijos DVD laikmenos <filename>docu</filename> kataloge."
+
+#: xml/release-notes.xml:276(para)
+msgid ""
+"<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or "
+"updated documentation."
+msgstr ""
+"<ulink url=\"https://activedoc.opensuse.org/\"/> adresu pateikta papildoma ir "
+"atnaujinta dokumentacija."
+
+#: xml/release-notes.xml:281(para)
+msgid ""
+"Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news "
+"from openSUSE."
+msgstr ""
+"Daugiau naujienų apie naujausius openSUSE produktus rasite apsilankę <ulink "
+"url=\"http://www.opensuse.org\"/>."
+
+#: xml/release-notes.xml:286(para)
+msgid "Copyright © 2015 SUSE LLC"
+msgstr "Autorinės teisės © 2015 SUSE LLC."
+
+#: xml/release-notes.xml:288(para)
+msgid "Thanks for using openSUSE."
+msgstr "Ačiū, kad pasirinkote openSUSE"
+
+#: xml/release-notes.xml:289(para)
+msgid "The openSUSE Team."
+msgstr "openSUSE komanda"
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: xml/release-notes.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Jonas Gocentas, 2001 "
+"Linas Spraunius, 2004 "
+"Andrius Štikonas <stikonas@gmail.com>, 2006, 2008 "
+"Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2009, 2010, 2013, "
+"2015."
+
+#, fuzzy
+#~ msgid "Then check whether the currently selected service is actually NetworkManager:"
+#~ msgstr "Norėdami užklausti šiuo metu pasirinktas paslaugas, įvykdykite:"
+
+#~ msgid "systemctl -p Id show network.service"
+#~ msgstr "systemctl -p Id show network.service"
+
+#, fuzzy
+#~ msgid "NET Installation Using Wifi"
+#~ msgstr "Diegimas"
+
+#~ msgid "Booting When in Secure Boot Mode"
+#~ msgstr "Paleidimas, kai įgalinta saugaus paleidimo veiksena"
+
+#~ msgid "This only affects machines in UEFI mode with secure boot enabled."
+#~ msgstr "Tai liečia tik kompiuterius su UEFI veiksena, kuriuose įjungtas saugus sistemos paleidimas (secure boot)."
+
+#~ msgid "AppArmor and Permission Settings"
+#~ msgstr "AppArmor ir leidimų nustatymai"
+
+#, fuzzy
+#~ msgid "AppArmor is enabled by default. This means more security, but might prevent services from working if you run them in unexpected ways. If you encounter strange permission problems, try to switch the AppArmor profile for the affected service to complain mode with:"
+#~ msgstr "Numatytuoju atveju AppArmor yra įgalinta. Tai reiškia, kad sistema yra saugesnė, tačiau dėl to gali neveikti kai kurios paslaugos tada, kai jas paleidžiate kiek neįprastai. Jei kyla kyla keistų nesklandumų dėl leidimų, pamėginkite toms paslaugoms išjungti AppArmor. Galite apie tokius atvejus pranešti kaip apie klaidą (angl. bug), nes mes norime patobulinti AppArmor profilius taip, kad jie apimtų ir retesnius atvejus."
+
+#~ msgid "N/A"
+#~ msgstr "Nėra informacijos"
+
+#~ msgid "<phrase os=\"slprof\">openSUSE 13.1</phrase> Release Notes"
+#~ msgstr "<phrase os=\"slprof\">openSUSE 13.1</phrase> laidos pastabos"
+
+#, fuzzy
+#~| msgid "Version: 13.1.5 (2013-10-17)"
+#~ msgid "Version: 13.1.8 (2013-11-19)"
+#~ msgstr "Versija: 13.1.5 (2013-10-17)"
+
+#~ msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included as the <filename>fdl.txt</filename> file."
+#~ msgstr "Leidžiama kopijuoti, platinti ir/arba keisti šį dokumentą GNU laisvosios dokumentacijos licencijos, 1.2 ar bet kurios vėlesnės versijos, paskelbtos Laisvos Programinės Įrangos Fondo (Free Software Foundation), sąlygomis; jokių pakeistų skyrių, jokių tekstų priekyje ir jokių tekstų gale. Licencijos kopija įtraukta kaip rinkmena <filename>fdl.txt</filename>."
+
+#~ msgid "These release notes cover the following areas:"
+#~ msgstr "Laidos pastabos aprėpia šias sritis:"
+
+#~ msgid "<xref linkend=\"misc\"/>: These entries are automatically included from openFATE, the Feature- and Requirements Management System (<ulink url=\"http://features.opensuse.org\"/>)."
+#~ msgstr "<xref linkend=\"misc\"/>: Šie įrašai įterpti automatiškai iš pageidaujamų savybių tvarkymo sistemos „openFATE“ (<ulink url=\"http://features.opensuse.org\"/>)."
+
+#~ msgid "<xref linkend=\"installation\"/>: Read this if you want to install the system from scratch."
+#~ msgstr "<xref linkend=\"installation\"/>: skaitykite, jei ketinate diegti nuo nulio."
+
+#~ msgid "<xref linkend=\"general\"/>: Information that everybody should read."
+#~ msgstr "<xref linkend=\"general\"/>: informacija, kurią visi turėtų perskaityti."
+
+#~ msgid "<xref linkend=\"upgrade\"/>: Issues related to the process if you run a system upgrade from the previous release to this openSUSE version."
+#~ msgstr "<xref linkend=\"upgrade\"/>: klausimai, susiję su ankstesnės versijos naujovinimu iki šios openSUSE versijos."
+
+#~ msgid "<xref linkend=\"technical\"/>: This section contains a number of technical changes and enhancements for the experienced user."
+#~ msgstr "<xref linkend=\"technical\"/>: šioje dalyje techniniai pakeitimai ir patobulinimai, skirti patyrusiam naudotojui."
+
+#~ msgid "For Detailed Installation Information"
+#~ msgstr "Išsami informacija apie diegimą"
+
+#~ msgid "For detailed installation information, see <xref linkend=\"sec.123.documentation\"/>."
+#~ msgstr "Išsamesnės informacijos apie diegimą ieškokite <xref linkend=\"sec.123.documentation\"/>."
+
+#~ msgid "In <emphasis>Start-Up</emphasis>, find step-by-step installation instructions, as well as introductions to the KDE and Gnome desktops and to the LibreOffice suite. Also covered are basic administration topics such as deployment and software management and an introduction to the bash shell."
+#~ msgstr "<emphasis>Pradžiamokslyje</emphasis> rasite diegimo instrukcijas, KDE ir GNOME darbalaukių bei LibreOffice raštinės programų rinkinio trumpus aprašymus. Taip pat paliečiamos svarbiausios administravimo temos, pvz., išskleidimas ir programinės įrangos tvarkymas, įvadas į bash apvalkalą."
+
+#~ msgid "Find the documentation in <filename>/usr/share/doc/manual/opensuse-manuals_$LANG</filename> after installing the package <systemitem>opensuse-startup_$LANG</systemitem>, or online on <ulink url=\"http://doc.opensuse.org\"/>."
+#~ msgstr "Įdiegę <systemitem>opensuse-manuals_$LANG</systemitem>, dokumentaciją rasite <filename>/usr/share/doc/manual/opensuse-startup_$LANG</filename>. Ji prieinama ir saityne adresu <ulink url=\"http://doc.opensuse.org\"/>."
+
+#~ msgid "Dropped YaST Modules"
+#~ msgstr "Atsisakyta kai kurių YaST modulių"
+
+#~ msgid "The following YaST modules were obsolete and rarely used these days:"
+#~ msgstr "Kai kurie YaST moduliai paseno ir pastaruoju metu būdavo retai naudojami:"
+
+#~ msgid "yast2-autofs"
+#~ msgstr "AUTOFS (yast2-autofs)"
+
+#~ msgid "yast2-dbus-client"
+#~ msgstr "DBUS kleintas (yast2-dbus-client)"
+
+#~ msgid "yast2-dirinstall"
+#~ msgstr "Diegimas į katalogą (yast2-dirinstall)"
+
+#~ msgid "yast2-fingerprint-reader"
+#~ msgstr "Pirštų antspaudų skaitytuvo konfigūravimas (yast2-fingerprint-reader)"
+
+#~ msgid "yast2-irda"
+#~ msgstr "IrDA konfigūravimas (yast2-fingerprint-reader)"
+
+#~ msgid "yast2-mouse"
+#~ msgstr "Pelės konfigūravimas (yast2-mouse)"
+
+#~ msgid "yast2-phone-services"
+#~ msgstr "Telefonijos paslaugos (yast2-phone-services)"
+
+#~ msgid "yast2-power-management"
+#~ msgstr "Energijos valdymas (yast2-power-management)"
+
+#~ msgid "yast2-profile-manager"
+#~ msgstr "Profilių tvarkytuvė (yast2-profile-manager)"
+
+#~ msgid "yast2-sshd"
+#~ msgstr "SSHD (yast2-sshd)"
+
+#~ msgid "yast2-tv"
+#~ msgstr "TV konfigūravimas (yast2-tv)"
+
+#~ msgid "The main reason for dropping was to decrease the maintenance effort and better focus on other more used modules."
+#~ msgstr "Pagrindinė modulių atsisakymo priežastis – pajėgų trukumas juos prižiūrint bei susitelkimas į dažniau naudojamus modulius."
+
+#~ msgid "Adobe Reader (acroread) and Other PDF Readers"
+#~ msgstr "Adobe Reader (acroread) ir kitos PDF skaitytuvės"
+
+#~ msgid "Adobe no longer provides (security) updates for Adobe Reader (<systemitem>acroread</systemitem>). Therefore the <systemitem>acroread</systemitem> package was dropped from the distribution to protect openSUSE users."
+#~ msgstr "Adobe nebepateikia (saugumo) atnaujinimų savo „Adobe Reader“ (<systemitem>acroread</systemitem>) programai. Todėl <systemitem>acroread</systemitem> paketas pašalintas iš openSUSE platinamojo paketo, kad naudotojai būtų saugesni."
+
+#~ msgid "openSUSE includes various PDF viewing tools like Okular, Evince, and poppler-tools. These tools are actively maintained and get security fixes from openSUSE and their upstream authors."
+#~ msgstr "openSUSE siūlo rinktis įvairias PDF peržiūros programas, pvz.: Okular, Evince, poppler-tools. Šie įrankiai aktyviai prižiūrimi ir sulaukia saugumo atnaujinimų tiek iš openSUSE, tiek iš pačių programų kūrėjų."
+
+#~ msgid "For more information, see <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
+#~ msgstr "Daugiau informacijos rasite <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
+
+#~ msgid "Upgrading with Zypper (dup) Requires /etc/fstab Cleanup"
+#~ msgstr "Atnaujinant su Zypper (dup), reikia išvalyti /etc/fstab"
+
+#~ msgid "When upgrading with <command>zypper dup</command> (YaST upgrade handles it automatically) users should remove the following <filename>/etc/fstab</filename> entries if present:"
+#~ msgstr "Atnaujinant su <command>zypper dup</command> (YaST šią komandą įvykdo automatiškai), naudotojas turėtų pašalinti tokius <filename>/etc/fstab</filename> įrašus:"
+
+#~ msgid ""
+#~ "tmpfs   /dev/shm\n"
+#~ "devpts  /dev/pts\n"
+#~ "sysfs   /sys sysfs\n"
+#~ "proc    /proc proc"
+#~ msgstr ""
+#~ "tmpfs   /dev/shm\n"
+#~ "devpts  /dev/pts\n"
+#~ "sysfs   /sys sysfs\n"
+#~ "proc    /proc proc"
+
+#~ msgid "This is especially important for Gnome users, otherwise the Gnome terminal will fail with \"<literal>grantpt failed: Operation not permitted</literal>\". These mount points are managed by <command>systemd</command> and should no longer be present in <filename>/etc/fstab</filename>."
+#~ msgstr "Tai ypač svarbu GNOME naudotojams, nes antraip Gnome terminalas neveiks ir praneš apie klaidą: „<literal>grantpt failed: Operation not permitted</literal>“. Šias prijungimo vietas tvarko <command>systemd</command>, tad jų neturėtų būti <filename>/etc/fstab</filename> rinkmenoje."
+
+#~ msgid "SYSLOG_DAEMON Variable Removed"
+#~ msgstr "Pašalintas SYSLOG_DAEMON kintamasis"
+
+#~ msgid "The SYSLOG_DAEMON variable has been removed. Previously, it was used to select the syslog daemon. Starting with openSUSE 12.3, only one syslog implementation can be installed at a time on a system and will be selected automatically for usage."
+#~ msgstr "SYSLOG_DAEMON kintamasis pašalintas. Anksčiau šis kintamasis naudotas sistemos žurnalo tarnybai pasirinkti. Nuo openSUSE 12.3 laidos vienu metu bus galima įdiegti tik vieną sistemos žurnalo tarnybą."
+
+#~ msgid "For details, see the syslog(8) manpage."
+#~ msgstr "Daugiau informacijos rasite syslog(8)."
+
+#~ msgid "Duplicated Network Interfaces"
+#~ msgstr "Besidubliuojančios tinklo sąsajos"
+
+#~ msgid "The current version of systemd uses a new convention for assigning predictable names to network interfaces. YaST is changed accordingly."
+#~ msgstr "Dabartinė systemd versija kitokiu būdu priskiria pavadinimus tinklo sąsajoms. Atitinkamai atsirado pokyčių YaST centre."
+
+#~ msgid "For more information about predictable network interface names, see <ulink url=\"http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/\"/>."
+#~ msgstr "Daugiau informacijos apie tinklo sąsajų vardų parinkimą rasite <ulink url=\"http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/\"/>."
+
+#~ msgid "Initializing Graphics with KMS (Kernel Mode Setting)"
+#~ msgstr "Ruošiama grafika su KMS (Branduolio Veiksenos Parinktis)"
+
+#~ msgid "With openSUSE 11.3 we switched to KMS (Kernel Mode Setting) for Intel, ATI and NVIDIA graphics, which now is our default. If you encounter problems with the KMS driver support (intel, radeon, nouveau), disable KMS by adding <literal>nomodeset</literal> to the kernel boot command line. To set this permanently using Grub 2, the default boot loader, add it to the <literal>GRUB_CMDLINE_LINUX_DEFAULT</literal> kernel default load options line in your <filename>/etc/default/grub</filename> text file as root and running the terminal command"
+#~ msgstr "Nuo openSUSE 11.3 pereita prie KMS (branduolio veiksenos parinktis) Intel, ATI ir NVIDIA vaido plokštėms kaip numatytąja parinktimi. Jei kils nesklandumų naudojant KMS tvarkyklių palaikymą (intel, radeon, nouveau), uždrauskite KMS pridėdami <literal>nomodeset</literal> prie branduolio įkrovos komandinės eilutės. Norėdami, kad parinkties pakeitimas būtų ilgalaikis ir veiktų su numatytąja Grub 2 paleidykle, parinktį prirašykite ties <literal>GRUB_CMDLINE_LINUX_DEFAULT</literal> branduolio įkėlimo parinktimis <filename>/etc/default/grub</filename> tekstinėje rinkmenoje root naudotojo teisėmis ir įvykdykite komandą terminale"
+
+#~ msgid "sudo /usr/sbin/grub2-mkconfig --output=/boot/grub2/grub.cfg"
+#~ msgstr "sudo /usr/sbin/grub2-mkconfig --output=/boot/grub2/grub.cfg"
+
+#~ msgid "for the changes to take effect. Else, for Grub Legacy, add it to the kernel command line in <filename>/boot/grub/menu.lst</filename>, also done as root. This option makes sure the appropriate kernel module (intel, radeon, nouveau) is loaded with <literal>modeset=0</literal> in <filename>initrd</filename>, i.e. KMS is disabled."
+#~ msgstr "Arba, jei naudojate senąjį Grub, parinktį prirašykite prie branduolio įkrovos komandinės eilutės rinkmenoje <filename>/boot/grub/menu.lst</filename> (irgi administratoriaus teisėmis). Tokia parinktis užtikrins, kad atitinkamas branduolio modulis (intel, radeon, nouveau) bus paleistas su parametru <literal>modeset=0</literal> ties <filename>initrd</filename>, t. y. KMS bus uždraustas."
+
+#~ msgid "In the rare cases when loading the DRM module from <filename>initrd</filename> is a general problem and unrelated to KMS, it is even possible to disable loading of the DRM module in <filename>initrd</filename> completely. For this set the <literal>NO_KMS_IN_INITRD</literal> sysconfig variable to <literal>yes</literal> via YaST, which then recreates <filename>initrd</filename> afterwards. Reboot your machine."
+#~ msgstr "Retais atvejais įkeliant DRM modulį iš <filename>initrd</filename> gali kilti nesklandumų, nesusijusių su KMS, tad galima visiškai uždrausti DRM modulio įkėlimą iš <filename>initrd</filename>. Tai galite padaryti nurodydami <literal>NO_KMS_IN_INITRD</literal> sysconfig kintamojo reikšmę <literal>yes</literal> per YaST, kuris po to iš naujo sukurs <filename>initrd</filename>. Perkraukite kompiuterį."
+
+#~ msgid "On Intel without KMS the Xserver falls back to the <literal>fbdev</literal> driver (the <literal>intel</literal> driver only supports KMS); alternatively, for legacy GPUs from Intel the \"intellegacy\" driver (<systemitem>xorg-x11-driver-video-intel-legacy</systemitem> package) is available, which still supports UMS (User Mode Setting). To use it, edit <filename>/etc/X11/xorg.conf.d/50-device.conf</filename> and change the driver entry to <literal>intellegacy</literal>."
+#~ msgstr "Intel be KMS plokštėse Xserver gali naudoti <literal>fbdev</literal> tvarkyklę (tik <literal>intel</literal> tvarkyklė palaiko KMS). Tačiau taip pat yra ir „intellegacy“ tvarkyklė (<systemitem>xorg-x11-driver-video-intel-legacy</systemitem> pakete) senoms Intel vaizdo plokštėms, kuri vis dar palaiko UMS (naudotojo veiksenos parinktį). Norėdami ją naudoti,  <filename>/etc/X11/xorg.conf.d/50-device.conf</filename> rinkmenoje tuščią tvarkyklės (angl. driver) įrašą pakeiskite į <literal>intellegacy</literal>."
+
+#~ msgid "On ATI for current GPUs it falls back to <literal>radeonhd</literal>. On NVIDIA without KMS the <literal>nv</literal> driver is used (the <literal>nouveau</literal> driver supports only KMS). Note, newer ATI and NVIDIA GPUs are falling back to <literal>fbdev</literal>, if you specify the <literal>nomodeset</literal> kernel boot parameter."
+#~ msgstr "ATI plokštėms šiuolaikiniuose kompiuteriuose tiks <literal>radeonhd</literal>. NVIDIA be KMS plokštėse turėtų būti naudojama <literal>nv</literal> tvarkyklė (tik <literal>nouveau</literal> tvarkyklė palaiko KMS). Atminkite, jei branduolio įkėlimo parinktyse nurodysite <literal>nomodeset</literal>, sistemose su naujesnėmis ATI ir NVIDIA vaizdo plokštėmis bus naudojama <literal>fbdev</literal> tvarkyklė."
+
+#~ msgid "Samba Version 4.1"
+#~ msgstr "Samba 4.1"
+
+#~ msgid "Configuring Postfix"
+#~ msgstr "Postfix konfigūravimas"
+
+#~ msgid "With openSUSE 12.3, <filename>SuSEconfig.postfix</filename> was renamed as <filename>/usr/sbin/config.postfix</filename>. If you set sysconfig variables in <filename>/etc/sysconfig/postfix</filename> or <filename>/etc/sysconfig/mail</filename>, you must manually run <filename>/usr/sbin/config.postfix</filename> as root."
+#~ msgstr "Nuo openSUSE 12.3 <filename>SuSEconfig.postfix</filename> pervadinta į <filename>/usr/sbin/config.postfix</filename>. Jei sysconfig kintamuosius nurodėte <filename>/etc/sysconfig/postfix</filename> arba <filename>/etc/sysconfig/mail</filename> rinkmenoje, privalote root teisėmis rankiniu būdu įvykdyti <filename>/usr/sbin/config.postfix</filename>."
+
+#~ msgid "xinetd: Logging to the System Log"
+#~ msgstr "xinetd: rašymas į sistemos žurnalą"
+
+#~ msgid "Apache Version 2.4"
+#~ msgstr "Apache 2.4"
+
+#~ msgid "tomcat: Logging to the System Log"
+#~ msgstr "tomcat: rašymas į sistemos žurnalą"
+
+#~ msgid "/etc/cron.daily/mlocate.cron"
+#~ msgstr "/etc/cron.daily/mlocate.cron"
+
+#~ msgid "KDE and Bluetooth"
+#~ msgstr "KDE ir Bluetooth"
+
+#~ msgid "Skype"
+#~ msgstr "Skype"
+
+#~ msgid "PulseAudio 4.0 exposes a bug in the current version of Skype for Linux (v4.2). Until Skype is fixed and updated, run <command>skype</command> from the command line:"
+#~ msgstr "Naudojant PulseAudio 4.0 kyla bėdų su dabartine Skype versija, kuri skirta Linux sistemai (v4.2). Kol nebus atnaujinta Skype programa, programą paleiskite komandinėje eilutėje:"
+
+#~ msgid "PULSE_LATENCY_MSEC=60 skype"
+#~ msgstr "PULSE_LATENCY_MSEC=60 skype"
+
+#~ msgid "For more information about this bug, see <ulink url=\"http://arunraghavan.net/2013/08/pulseaudio-4-0-and-skype/\"/>."
+#~ msgstr "Daugiau informacijos apie šį riktą <ulink url=\"http://arunraghavan.net/2013/08/pulseaudio-4-0-and-skype/\"/>."
+
+#~ msgid "rm /var/spool/cron/lastrun/cron.daily"
+#~ msgstr "rm /var/spool/cron/lastrun/cron.daily"
+
+#~ msgid "No Network after Installation"
+#~ msgstr "Nėra tinklo po diegimo"
+
+#, fuzzy
+#~| msgid "CHECKIT for 12.2"
+#~ msgid "CHECKIT:12.3"
+#~ msgstr "PATIKRINTI (12.2)"
+
+#~ msgid "<emphasis>Reference</emphasis> covers administration, and system configuration in detail and explains how to set up various network services."
+#~ msgstr "<emphasis>Žinyne</emphasis> detaliai aprašyta administravimo ir sistemos konfigūravimo temomis, paaiškinama, kaip nustatyti įvairias tinklo paslaugas."
+
+#~ msgid "The <emphasis>Security Guide</emphasis> introduces basic concepts of system security, covering both local and network security aspects."
+#~ msgstr "<emphasis>Saugumo vadove</emphasis> supažindina su pagrindinėmis sistemos saugumo koncepcijomis, apimančias tiek vietinio, tiek tinklo saugumo aspektus."
+
+#~ msgid "The <emphasis>System Analysis and Tuning Guide</emphasis> helps with problem detection, resolution and optimization."
+#~ msgstr "<emphasis>Sistemos analizavimo ir derinimo vadovas</emphasis> padeda aptikti problemas, rasti sprendimus, optimizuoti darbą."
+
+#~ msgid "<emphasis>Virtualization with KVM</emphasis> offers an introduction to setting up and managing virtualization with KVM, libvirt and QEMU tools."
+#~ msgstr "<emphasis>Virtualizacija su KVM</emphasis> pateikia įvadą apie virtualizacijos su KVM, libvirt, QEMU įrankiais įdiegimą ir tvarkymą."
+
+#~ msgid "systemd: Activating NetworkManager with a network.service Alias Link"
+#~ msgstr "systemd: NetworkManager aktyvavimas su network.service nuoroda"
+
+#~ msgid "By default, you use the YaST Network Settings dialog (<command>yast2 network</command>) to activate NetworkManager. If you want to activate NetworkManager, proceed as follows."
+#~ msgstr "Norėdami aktyvuoti NetworkManager, paprastai einate į YaST tinklo nuostatas (<command>yast2 network</command>). Jei norite aktyvuoti NetworkManager, atlikite tai, kas parašyta žemiau."
+
+#~ msgid "The <literal>NETWORKMANAGER</literal> sysconfig variable in <filename>/etc/sysconfig/network/config</filename> to activate NetworkManager has been replaced with a systemd <literal>network.service</literal> alias link, which will be created with the"
+#~ msgstr "„NetworkManager“ tarnybą aktyvuojantis <literal>NETWORKMANAGER</literal> konfigūracijos kintamasis, esantis <filename>/etc/sysconfig/network/config</filename> rinkmenoje, pakeistas į systemd nuorodą <literal>network.service</literal>, kurią galima sukurti įvykdžius"
+
+#~ msgid "systemctl enable  NetworkManager.service"
+#~ msgstr "systemctl enable  NetworkManager.service"
+
+#~ msgid "command. It causes the creation of a <literal>network.service</literal> alias link pointing to the <literal>NetworkManager.service</literal>, and thus deactivates the <filename>/etc/init.d/network</filename> script. The command"
+#~ msgstr "komandą. Ji sukuria <literal>network.service</literal> nuorodą į <literal>NetworkManager.service</literal>, tad deaktyvuoja <filename>/etc/init.d/network</filename> scenarijų. Komanda"
+
+#~ msgid "allows to query the currently selected network service."
+#~ msgstr "leidžia užklausti šiuo metu pasirinktas tinklo paslaugas."
+
+#~ msgid "To enable NetworkManager, use:"
+#~ msgstr "Norėdami įgalinti NetworkManager:"
+
+#~ msgid "First, stop the running service:"
+#~ msgstr "Pirmiausia sustabdyti paleistą paslaugą:"
+
+#~ msgid ""
+#~ "systemctl     is-active network.service &amp;&amp; \\\n"
+#~ " systemctl     stop      network.service"
+#~ msgstr ""
+#~ "systemctl     is-active network.service &amp;&amp; \\\n"
+#~ " systemctl     stop      network.service"
+
+#~ msgid "Enable the NetworkManager service:"
+#~ msgstr "Įgalinti NetworkManager paslaugą:"
+
+#~ msgid "systemctl --force        enable NetworkManager.service"
+#~ msgstr "systemctl --force        enable NetworkManager.service"
+
+#~ msgid "Start the NetworkManager service (via alias link):"
+#~ msgstr "Norėdami paleisti NetworkManager paslaugą (per nuorodas):"
+
+#~ msgid "systemctl     start     network.service"
+#~ msgstr "systemctl     start     network.service"
+
+#~ msgid "To disable NetworkManager, use:"
+#~ msgstr "Norėdami uždrausti NetworkManager:"
+
+#~ msgid "Stop the running service:"
+#~ msgstr "Sustabdyti veikiančią paslaugą:"
+
+#~ msgid ""
+#~ "systemctl     is-active network.service &amp;&amp; \\\n"
+#~ "systemctl     stop      network.service"
+#~ msgstr ""
+#~ "systemctl     is-active network.service &amp;&amp; \\\n"
+#~ "systemctl     stop      network.service"
+
+#~ msgid "Disable the NetworkManager service:"
+#~ msgstr "Uždrausti NetworkManager paslaugą:"
+
+#~ msgid "systemctl disable NetworkManager.service"
+#~ msgstr "systemctl disable NetworkManager.service"
+
+#~ msgid "Start the <command>/etc/init.d/network</command> service: <screen>systemctl     start  network.service</screen>"
+#~ msgstr "Paleisti <command>/etc/init.d/network</command> paslaugą: <screen>systemctl     start  network.service</screen>"
+
+#~ msgid "systemctl -p Id show     network.service"
+#~ msgstr "systemctl -p Id show     network.service"
+
+#~ msgid "It returns \"<literal>Id=NetworkManager.service</literal>\" if the NetworkManager service is enabled, otherwise \"<literal>Id=network.service</literal>\" and <command>/etc/init.d/network</command> is acting as the network service."
+#~ msgstr "Jei NetworkManager paslauga įgalinta, komanda grąžins „<literal>Id=NetworkManager.service</literal>“; priešingu atveju grąžins „<literal>Id=network.service</literal>“, o tai reiškia, kad tinklo paslaugą valdoma per <command>/etc/init.d/network</command>."
+
+#~ msgid "GNOME: Workaround to Set Shift or Ctrl+Shift as Shortcut Keys for Input Source Selection"
+#~ msgstr "GNOME: naudojamų sparčiųjų klavišų Lyg2 (Shift) ir Vald+Lyg2 (Ctrl+Shift) nustatymas įvedimo būdo pasirinkimui"
+
+#~ msgid "In Gnome 3.6 use the following workaround to set Shift or Ctrl+Shift as shortcut keys for input source selection:"
+#~ msgstr "GNOME 3.6 sistemoje naudojamų sparčiųjų klavišų Lyg2 (Shift) ir Vald+Lyg2 (Ctrl+Shift) nustatymas įvedimo būdo pasirinkimui:"
+
+#~ msgid "Install gnome-tweak-tool."
+#~ msgstr "Įdiekite gnome-tweak-tool."
+
+#~ msgid "This is also being tracked in the upstream bug report <ulink url=\"https://bugzilla.gnome.org/show_bug.cgi?id=689839\"/>."
+#~ msgstr "Naujausią informaciją apie šią klaidą galite rasti čia: <ulink url=\"https://bugzilla.gnome.org/show_bug.cgi?id=689839\"/>."
+
+#~ msgid "systemd: Cleaning Directories (/tmp and /var/tmp)"
+#~ msgstr "systemd: katalogų išvalymas (/tmp ir /var/tmp)"
+
+#~ msgid "By default, systemd cleans tmp directories daily as configured in <filename>/usr/lib/tmpfiles.d/tmp.conf</filename>. Users can change it by copying <filename>/usr/lib/tmpfiles.d/tmp.conf</filename> to <filename>/etc/tmpfiles.d/tmp.conf</filename> and modifying the copied file. It will override <filename>/usr/lib/tmpfiles.d/tmp.conf</filename>."
+#~ msgstr "Numatytuoju atveju systemd pašalina laikinuosius (tmp) katalogus pagal  <filename>/usr/lib/tmpfiles.d/tmp.conf</filename> konfigūraciją. Naudotojai nuostatas gali keisti nukopijavę  <filename>/usr/lib/tmpfiles.d/tmp.conf</filename> į <filename>/etc/tmpfiles.d/tmp.conf</filename> ir redaguodami nukopijuotąją rinkmeną. Ji nustelbs <filename>/usr/lib/tmpfiles.d/tmp.conf</filename>."
+
+#~ msgid "Note: systemd does not honor obsolete sysconfig variables in <filename>/etc/sysconfig/cron</filename> such as <literal>TMP_DIRS_TO_CLEAR</literal>."
+#~ msgstr "Pastaba: systemd nekreipia dėmesio į <filename>/etc/sysconfig/cron</filename> rinkmenoje esančius pasenusius sysconfig kintamuosius, pvz., <literal>TMP_DIRS_TO_CLEAR</literal>."
+
+#~ msgid "Version:"
+#~ msgstr "Versija:"
+
+#~ msgid "Then in the 'Typing' section, at the very bottom, find the 'Modifiers-only input source switch' option, where you can set Ctrl Shift_L, for example (meaning, Ctrl key and left shift) or Shift_L Shift_R (meaning both Shift Keys)."
+#~ msgstr "Įvedimo („Typing“)  sekcijos pačioje apačioje susiraskite „Modifiers-only input source switch“ parinktį, kurią galite nustatyti į „Ctrl Shift_L“ (Vald ir kairysis Lyg2) arba „Shift_L Shift_R“ (abu Lyg2 klavišai)."
+
+#~ msgid "sysvinit Deprecated"
+#~ msgstr "sysvinit paseno"
+
+#~ msgid "Some desktop components depend on services provided by systemd only. So while openSUSE 12.2 still has basic support for booting a system with sysvinit as fallback, sysvinit nevertheless is considered deprecated and probably even faulty or broken in some regard. If you have any issues with a sysvinit booted system, use systemd before filing bug reports."
+#~ msgstr "Kai kurie darbalaukio komponentai priklauso nuo paslaugų, kurias gali suteikti tik systemd. Kadangi openSUSE 12.2 vis dar palaiko sistemos paleidimą naudojant sysvinit kaip atsarginį, tačiau sysvinit laikoma pasenusia ir tikriausiai netgi tam tikru aspektu sugadinta. Jei turite problemų su sysvinit paleidimu, prieš ketindami pranešti apie nesklandumą, išbandykite systemd."
+
+#~ msgid "mount and losetup Dropped Support for cryptoloop"
+#~ msgstr "mount ir losetup nebepalaiko cryptoloop"
+
+#~ msgid "<command>cryptoloop</command> has known weaknesses and is therefore considered obsolete in favor of <command>dm-crypt</command> since years. <command>mount</command> (e.g., via <filename>/etc/fstab</filename>) and <command>losetup</command> now finally dropped support for <command>cryptoloop</command>. This means old fstab entries that use <command>cryptoloop</command> to access encrypted containers no longer work this way. The containers can still be accessed with <command>dm-crypt</command> (<filename>/etc/crypttab</filename>), though. Refer to <ulink url=\"http://en.opensuse.org/Encrypted_Filesystems\"/> for examples how to use to the new method."
+#~ msgstr "<command>cryptoloop</command> turi trūkumų, tad ją pakeičia <command>dm-crypt</command>. <command>mount</command> (pvz., per <filename>/etc/fstab</filename>) ir <command>losetup</command> dabar visiškai nutraukė <command>cryptoloop</command> palaikymą. Tai reiškia, kad nebegalios seni fstab įrašai, kurie naudoja <command>cryptoloop</command> prieigai prie šifruotų duomenų. Šiuos duomenis galėsite pasiekti naudodami <command>dm-crypt</command> (<filename>/etc/crypttab</filename>). Daugiau informacijos ir naudojimo pavyzdžių rasite <ulink url=\"http://en.opensuse.org/Encrypted_Filesystems\"/>."
+
+#~ msgid "Mounting Encrypted Partitions Using systemd"
+#~ msgstr "Užšifruotų skaidinių prijungimas naudojant systemd"
+
+#~ msgid "If encrypted partitions are not automatically mounted when using systemd, the <literal>noauto</literal> flag in <filename>/etc/fstab</filename> for these partitions could be the cause. Replacing this flag with <literal>nofail</literal> will fix it. For instance, change the following line:"
+#~ msgstr "Jei systemd automatiškai neprijungia užšifruotų skaidinių, greičiausiai <filename>/etc/fstab</filename> rinkmenoje tiems skaidiniams nurodyta reikšmė <literal>noauto</literal>. Problemą išspręsite šią reikšmę pakeitę į <literal>nofail</literal>. Pavyzdžiui, pakeiskite tokią eilutę:"
+
+#~ msgid "/dev/mapper/cr_sda3  /home   ext4    acl,user_xattr,noauto 0 2"
+#~ msgstr "/dev/mapper/cr_sda3  /home   ext4    acl,user_xattr,noauto 0 2"
+
+#~ msgid "to"
+#~ msgstr "į"
+
+#~ msgid "/dev/mapper/cr_sda3  /home   ext4    acl,user_xattr,nofail 0 2"
+#~ msgstr "/dev/mapper/cr_sda3  /home   ext4    acl,user_xattr,nofail 0 2"
+
+#~ msgid "Booting with Deprecated sysvinit"
+#~ msgstr "Sistemos paleidimas su pasenusia sysvinit"
+
+#~ msgid "By default, openSUSE now boots using <command>systemd</command>. In case of trouble, you can try to switch back to the deprecated <command>sysvinit</command> way by pressing the F5 key on the boot. For more information about limitations when booting with sysvinit, see <xref linkend=\"sec.122.sysv\"/>."
+#~ msgstr "Numatytuoju atveju openSUSE paleidžiama naudojant <command>systemd</command>. Jei turite bėdų su pastarąja, galite persijungti prie pasenusios <command>sysvinit</command> nuspausdami F5 klavišą, kai rodomas paleidimo meniu. Daugiau informacijos apie paleidimo su sysvinit ribotumus: <xref linkend=\"sec.122.sysv\"/>."
+
+#~ msgid "systemd: Supplying Service Start-up Parameters"
+#~ msgstr "systemd: paleidimo paslaugų parametrų nurodymas"
+
+#~ msgid "You can bypass this new behavior by calling the start-up script directly, for example:"
+#~ msgstr "Norėdami įvykdyti savitą komandą, galite tiesiogiai iškviesti paleidimo scenarijų, pvz.:"
+
+#~ msgid ""
+#~ "cd /etc/init.d\n"
+#~ "./apache2 &lt;your_parameters&gt;\n"
+#~ msgstr ""
+#~ "cd /etc/init.d\n"
+#~ "./apache2 &lt;jūsų_parametrai&gt;\n"
+
+#~ msgid "systemd: System Shutdown"
+#~ msgstr "systemd: sistemos išjungimas"
+
+#~ msgid "To halt and poweroff the system when using <command>systemd</command>, issue <command>halt -p</command> or <command>shutdown -h now</command> on the command-line or use the shutdown button provided by your desktop environment."
+#~ msgstr "Norėdami sustabdyti ir išjungti sistemą su <command>systemd</command>, komandinėje eilutėje įvykdykite <command>halt -p</command> arba <command>shutdown -h now</command>; arba darbalaukio aplinkoje nuspauskite atitinkamą mygtuką."
+
+#~ msgid "Note: A plain <command>halt</command> will not shutdown the system properly."
+#~ msgstr "Pastaba: <command>halt</command> komanda sistemos tinkamai neišjungtų."
+
+#~ msgid "systemd: Making Use of tmpfs: /run, /var/run, /media, etc."
+#~ msgstr "systemd: tmpfs naudojimas: /run, /var/run, /media, ir t. t."
+
+#~ msgid "systemd mounts several directories that are meant to contain volatile data only, as tmpfs filesystems: <filename>/run</filename>, <filename>/var/run</filename>, <filename>/var/lock</filename>, and <filename>/media</filename> are those directories. For background information, see <ulink url=\"http://lwn.net/Articles/436012/\"/>."
+#~ msgstr "systemd kai kuriuos aplankus, kuriuose gana dažnai keičiami duomenys, prijungiami kaip tmpfs rinkmenų išdėstymo sistema: <filename>/run</filename>, <filename>/var/run</filename>, <filename>/var/lock</filename> ir <filename>/media</filename>. Daugiau informacijos rasite <ulink url=\"http://lwn.net/Articles/436012/\"/>."
+
+#~ msgid "Note: Do not store files that are meant to survive a reboot, in <filename>/run</filename>, <filename>/var/run</filename>, etc."
+#~ msgstr "Pastaba: <filename>/run</filename>, <filename>/var/run</filename> ir pan. kataloguose nelaikykite rinkmenų, kurios turėtų išlikti kompiuterį paleidus iš naujo."
+
+#~ msgid "systemd maintains directories as specified in the <filename>tmpfiles.d</filename> directories and in <filename>/lib/systemd/system/systemd-tmpfiles-clean.timer</filename>. For more information, see the <filename>tmpfiles.d</filename> manpage."
+#~ msgstr "systemd sistema aplankus tvarko pagal taisykles, esančias <filename>tmpfilesd</filename> kataloge ir <filename>/lib/systemd/system/systemd-tmpfiles-clean.timer</filename>. Daugiau informacijos rasite <filename>tmpfiles.d</filename> žinyne."
+
+#~ msgid "By default, systemd cleans <filename>tmp</filename> directories daily as configured in <filename>/usr/lib/tmpfiles.d/tmp.conf</filename>:"
+#~ msgstr "Numatytuoju atveju systemd kasdien išvalo <filename>tmp</filename> katalogus – tai konfigūruojama <filename>/usr/lib/tmpfiles.d/tmp.conf</filename> rinkmenoje:"
+
+#~ msgid ""
+#~ "d /tmp 1777 root root 10d\n"
+#~ "d /var/tmp 1777 root root 30d\n"
+#~ msgstr ""
+#~ "d /tmp 1777 root root 10d\n"
+#~ "d /var/tmp 1777 root root 30d\n"
+
+#~ msgid "The third line of <filename>/etc/adjtime</filename> now contains information whether your BIOS clock runs on UTC or in local timezone (previously stored in <literal>HWCLOCK</literal> in <filename>/etc/sysconfig/clock</filename>)."
+#~ msgstr "Trečioje <filename>/etc/adjtime</filename> rinkmenos linijoje dabar yra informacija apie tai, ar BIOS laikrodis yra nustatytas pasauliniu laiku ar vietine laiko juosta (anksčiau informacija buvo <literal>HWCLOCK</literal> <filename>/etc/sysconfig/clock</filename>)."
+
+#~ msgid "If <filename>/etc/adjtime</filename> contains wrong drift information (for example after fixing date and time with <command>ntpdate</command> or have <command>ntpd</command> running), set the variable <literal>USE_ADJUST</literal> to \"<literal>no</literal>\" in <filename>/etc/sysconfig/clock</filename>."
+#~ msgstr "Jei <filename>/etc/adjtime</filename> turi klaidingą informaciją (pavyzdžiui, datą ir laiką pakeitus su <command>ntpdate</command> komanda ar per <command>ntpd</command>), nustatykite kintamajam <literal>USE_ADJUST </literal> reikšmę \"<literal>no</literal>\" <filename>/etc/sysconfig/clock</filename> rinkmenoje."
+
+#~ msgid "Windows Domain Logon with KDM"
+#~ msgstr "Windows srities prisijungimas su KDM"
+
+#~ msgid "The SUSE KDM theme does not allow Windows Domain logons."
+#~ msgstr "Naudojant SUSE KDM apipavidalinimą neįmanomi Windows srities prisijungimai."
+
+#~ msgid "To work around this issue, set DISPLAYMANAGER_KDM_THEME to an empty string in <filename>/etc/sysconfig/displaymanager</filename> to use the default KDM theme:"
+#~ msgstr "Norėdami išvengti šios bėdos, <filename>/etc/sysconfig/displaymanager</filename> rinkmenoje DISPLAYMANAGER_KDM_THEME kintamajam priskirkite tuščią reikšmę; tuomet bus naudojamas numatytasis KDM apipavidalinimas:"
+
+#~ msgid "CHECKIT for 12.2. Is this entry still required?"
+#~ msgstr "PATIKRINTI 12.2. Ar šis įrašas vis dar reikalingas?"
+
+#~ msgid "Radeon HDMI Sound Output Being Disabled"
+#~ msgstr "Uždraustas Radeon HDMI garso išvedimas"
+
+#~ msgid "Due to problems on some hardware HDMI sound output has been disabled by default on the radeon driver, which is the default driver for AMD/ATI graphics cards."
+#~ msgstr "Kadangi pasitaiko tam tikrų nesklandumų kai kuriuose įrenginiuose, HDMI garso išvedimas numatytuoju atveju  uždraudžiamas, jei naudojama radeon tvarkyklė, kuri yra numatytoji AMD/ATI vaizdo plokščių tvarkyklė."
+
+#~ msgid "It can be re-enabled by adding <literal>radeon.audio=1</literal> as a kernel parameter. In YaST, go to System -&gt; Boot Loader, then click Edit on the default entry, and add the following to the end of 'Optional Kernel Command Line Parameter':"
+#~ msgstr "Jį galima vėl įgalinti prie branduolio parametrų pridėjus <literal>radeon.audio=1</literal>. Tam eikite į YaST, Sistema -&gt; Paleidyklė, spauskite Keisti ties numatytuoju įrašu ir ties „Pasirinktiniais branduolio komandinės eilutės parametrai“ dar prirašykite:"
+
+#~ msgid "radeon.audio=1"
+#~ msgstr "radeon.audio=1"
+
+#~ msgid "Then reboot to apply the change."
+#~ msgstr "Tam, kad įsigaliotų pakeitimai, iš naujo paleiskite kompiuterį."
+
+#~ msgid "Alternatively, users can install the proprietary driver from AMD. For more information, see <ulink url=\"http://en.opensuse.org/SDB:ATI_drivers\"/>."
+#~ msgstr "Arba galite įdiegti nuosavybines AMD tvarkykles. Daugiau informacijos rasite <ulink url=\"http://en.opensuse.org/SDB:ATI_drivers\"/>."
+
+#~ msgid "For the moment, these snippets are listed unsorted&mdash;we are working on improvements."
+#~ msgstr "Kol kas elementai nesurūšiuoti &mdash; vis dar tobulinama."
+
+#~ msgid "YaST AppArmor Configuration Module"
+#~ msgstr "YaST AppArmor konfigūravimo modulis"
+
+#~ msgid "FATE Categories for <ulink url=\"https://features.opensuse.org/305278\">#305278</ulink>: AppArmor, YaST."
+#~ msgstr "<ulink url=\"https://features.opensuse.org/305278\">#305278</ulink> FATE kategorijos: AppArmor, YaST."
+
+#~ msgid "Find the AppArmor Configuration module now in the \"Security and Users\" section of the YaST Control Center."
+#~ msgstr "AppArmor konfigūracijos modulį nuo šiol rasite YaST valdymo centro modulių grupėje „Saugumas ir naudotojai“."
+
+#~ msgid "GNOME 3"
+#~ msgstr "GNOME 3"
+
+#~ msgid "GNOME 3 offers a new design for the desktop that is different from GNOME 2. As a result, and in order to have users benefit from the changes, the look and feel of your GNOME 2 desktop will not be migrated automatically. The <guimenu>System Settings</guimenu> can be used to customize GNOME 3, and an advanced tool (<command>gnome-tweak-tool</command>) is provided for more detailed customization."
+#~ msgstr "Siūlomas GNOME 3 darbalaukis skiriasi nuo GNOME 2. Tad tam, kad naudotojai pasinaudotų naujovėmis, nebus automatiškai migruojama iš GNOME 2 darbalaukio. GNOME 3 konfigūruokite per <guimenu>Sistemos nuostatas</guimenu> arba pasinaudoję sudėtingesniu įrankiu (<command>gnome-tweak-tool</command>)."
+
+#~ msgid "For a brief description of many GNOME Shell features, such as keybindings, drag and drop capabilities, and special utilities, see <ulink url=\"https://live.gnome.org/GnomeShell/CheatSheet\"/>."
+#~ msgstr "Trumpą GNOME apvalkalo savybių aprašą (klavišų kombinacijas, vilkimo galimybes, specialias paslaugų programas) rasite <ulink url=\"https://live.gnome.org/GnomeShell/CheatSheet\"/>."
+
+#~ msgid "PulseAudio Sound System"
+#~ msgstr "PulseAudio garso sistema"
+
+#~ msgid "The PulseAudio sound system is now system-wide integrated and enabled by default for new installation. If you disabled it on a previous release, and want to enable it now, check the <literal>PULSEAUDIO_ENABLE</literal> variable in <filename>/etc/sysconfig/sound</filename>:"
+#~ msgstr "PulseAudio garso sistema dabar integruota į sistemą ir įjungiama diegiant naujai. Jei šią sistemą uždraudėte ankstesnėje versijoje, tačiau norite ją įjungti dabar, <filename>/etc/sysconfig/sound</filename> rinkmenoje keiskite <literal>PULSEAUDIO_ENABLE</literal> kintamojo reikšmę:"
+
+#~ msgid "Set <literal>PULSEAUDIO_ENABLE</literal> to \"<literal>yes</literal>\" to forcefully enable PA everywhere. Setting <literal>PULSEAUDIO_ENABLE</literal> to \"<literal>no</literal>\" will disable PulseAudio completely, and setting it to \"custom\" means to keep a custom configuration untouched."
+#~ msgstr "Norėdami visur priverstinai naudoti PA, ties <literal>PULSEAUDIO_ENABLE</literal> įrašykite \"<literal>yes</literal>\". Ties <literal>PULSEAUDIO_ENABLE</literal> nurodę \"<literal>no</literal>\", visiškai uždrausite PulseAudio. Nurodę \"custom\", išlaikysite savitą konfigūraciją."
+
+#~ msgid "Oracle Java Externally Available"
+#~ msgstr "Oracle Java pateikiamas atskirai"
+
+#~ msgid "The java-1_6_0-sun package is not anymore part of openSUSE due to a license change. We ship the OpenJDK build as a replacement. openSUSE users who prefer to use the Oracle JDK binary version over the openSUSE OpenJDK build, can download the Oracle version from <ulink url=\"http://oracle.com/java\"/>."
+#~ msgstr "java-1_6_0-sun paketas nebėra openSUSE dalis dėl pasikeitusių licencijos sąlygų. Todėl vietoj jo pateikiamas OpenJDK. openSUSE naudotojai, norintys vietoj openSUSE OpenJDK naudoti Oracle JDK versiją, ją gali parsisiųsti iš <ulink url=\"http://oracle.com/java\"/>."
+
+#~ msgid "CUPS 1.5"
+#~ msgstr "CUPS 1.5"
+
+#~ msgid "CUPS 1.5 comes with backward incompatible changes:"
+#~ msgstr "CUPS 1.5 turi pakeitimų, nesuderinamų su ankstesnėmis versijomis:"
+
+#~ msgid "CUPS no longer supports the <filename>~/.cupsrc</filename> or <filename>~/.lpoptions</filename> configuration files from CUPS 1.1. Instead use <filename>~/.cups/client.conf</filename> and <filename>~/.cups/lpoptions</filename> that were introduced with CUPS 1.2."
+#~ msgstr "CUPS nebepalaiko <filename>~/.cupsrc</filename> ir <filename>~/.lpoptions</filename> konfigūracijos rinkmenų, naudotų CUPS 1.1 versijoje. Vietoj jų naudokite <filename>~/.cups/client.conf</filename> ir <filename>~/.cups/lpoptions</filename>, kurios įvestos nuo CUPS 1.2 versijos."
+
+#~ msgid "The scheduler now requires that filters and backends have group write permissions disabled for improved security. If you use third party printer drivers from manufacturers with relaxed file permissions, adjust the permissions manually."
+#~ msgstr "Planuoklė dėl saugumo sumetimų dabar reikalauja, kad filtrai ir varikliai neturėtų grupės rašymo leidimų. Jei naudojate gamintojo pateikimas trečiųjų šalių spausdintuvų tvarkykles, kurios turi laisvesnius leidimus, tuomet leidimus pakeiskite rankiniu būdu."
+
+#~ msgid "The rename Command"
+#~ msgstr "Pervadinimo komanda „rename“"
+
+#~ msgid "According to the GNU Coding Standards, the rename command now treats all strings beginning with a dash as a command line option. To prevent this, separate the option from the other arguments with <literal>--</literal> as follows:"
+#~ msgstr "Pagal GNU programavimo standartus, pervadinimo komanda „rename“ visas eilutes, prasidedančias brūkšniu, interpretuoja kaip komandinės eilutės parinktis. Jei norite to išvengti, parinktį nuo kitų argumentų atskirkite naudodami <literal>--</literal>. Pavyzdžiui:"
+
+#~ msgid ""
+#~ "#!/bin/bash\n"
+#~ "for f in *.jpg ; do\n"
+#~ "  rename -- \".jpg\" \"-$RANDOM.jpg\" $f ;\n"
+#~ "done\n"
+#~ msgstr ""
+#~ "#!/bin/bash\n"
+#~ "for f in *.jpg ; do\n"
+#~ "  rename -- \".jpg\" \"-$RANDOM.jpg\" $f ;\n"
+#~ "done\n"
+
+#~ msgid "System Shutdown with systemd"
+#~ msgstr "Sistemos išjungimas su systemd"
+
+#~ msgid "Update Applets with Changed Behavior"
+#~ msgstr "Pakeista atnaujinimo programėlės elgsena"
+
+#~ msgid "Default Download Mode Needs More Space"
+#~ msgstr "Numatytajai parsiuntimo veiksenai reikia daugiau disko vietos"
+
+#~ msgid "The Zypp download mode for package installation has been changed: It first downloads all packages, before it starts installing them. This means, it now needs more disk space. The traditional behavior was to process one package after the other."
+#~ msgstr "Pasikeitė numatytoji Zypp parsiuntimo veiksena diegiant paketus: pirma parsiunčiami visi paketai, o tik po to jie diegiami. Todėl diegimui reikia daugiau laisvos disko vietos. Anksčiau paketai buvo parsiunčiami ir diegiami po vieną."
+
+#~ msgid "If you are short on disk space, switch back to the traditional behavior by setting <literal>commit.downloadMode = DownloadAsNeeded</literal> in <filename>/etc/zypp/zypp.conf</filename>."
+#~ msgstr "Jei turite mažai disko vietos, grįžti prie ankstesnės veiksenos galite <filename>/etc/zypp/zypp.conf</filename> rinkmenoje nurodydami <literal>commit.downloadMode = DownloadAsNeeded</literal>."
+
+#~ msgid "CIFS Service Disabled By Default"
+#~ msgstr "Numatytuoju atveju CIFS paslauga yra uždrausta"
+
+#~ msgid "To reduce security risks, the CIFS service is no longer enabled by default."
+#~ msgstr "CIFS paslauga nebeįgalinama numatytuoju atveju tam, kad būtų sumažinta saugumo rizika."
+
+#~ msgid "To enable it, start the YaST System Services (Runlevel) editor and configure the <systemitem>cifs</systemitem> service."
+#~ msgstr "Norėdami ją įgalinti, paleiskite YaST sistemos paslaugų (paleisties lygmenų) redaktorių ir sukonfigūruokite <systemitem>cifs</systemitem> paslaugą."
+
+#, fuzzy
+#~| msgid "This is just the initial version of the release notes for <phrase os=\"slprof\">openSUSE 11.2</phrase>."
+#~ msgid "This is just the initial version of the release notes for the forthcoming <phrase os=\"slprof\">openSUSE 11.4</phrase>."
+#~ msgstr "Tai yra tik paruošiamoji versija <phrase os=\"slprof\">openSUSE 11.2</phrase> leidimo pastaboms."
+
+#~ msgid "Installation Quick Start guides you step-by-step through the installation process."
+#~ msgstr "Įdiegti padės pažingsninis „Quick Start“ diegimo vediklis."
+
+#~ msgid "In Start-Up, find information about installation and basic system configuration."
+#~ msgstr "Paleidimo žinyne (Start-Up) rasite informacijos apie diegimą ir sistemos pagrindinių dalių konfigūravimą."
+
+#~ msgid "KDE and GNOME Quick Start give a short introduction to the desktops and some key applications running on it."
+#~ msgstr "KDE ir GNOME aplinkų „Quick Start“ vedikliai trumpai pristato darbalaukio aplinką ir supažindina su kai kuriomis svarbiausiomis taikomosiomis programomis."
+
+#~ msgid "The KDE and GNOME User Guide guide you through using and configuring the desktops and help you perform key tasks."
+#~ msgstr "KDE ir GNOME aplinkų naudotojų vedikliai padės naudotis darbalaukiu, jį konfigūruoti, atlikti kai kurias užduotis."
+
+#~ msgid "The Application Guide introduces you to the key desktop applications such as browsers. e-mail clients, office applications and collaboration tools as well as graphics and multimedia applications."
+#~ msgstr "Programų vediklis supažindins su svarbiausiomis darbalaukio programomis, pvz., naršyklėmis, el. pašto, raštinės programomis ir grupinio darbo įrankiais, grafikos ir įvairialypės terpės programomis."
+
+#~ msgid "This is just the initial version of the release notes for the forthcoming <phrase os=\"slprof\">openSUSE 11.4</phrase>. Find previous release notes referenced in the openSUSE wiki at <ulink url=\"http://old-en.opensuse.org/Release_Notes#Last_version_of_the_Previous_Release_Notes\"/>."
+#~ msgstr "Tai yra tik <phrase os=\"slprof\">openSUSE 11.4</phrase> pirminės laidos pastabos. Ankstesnių laidos pastabų nuorodas rasite openSUSE vikyje <ulink url=\"http://en.opensuse.org/Release_Notes#Last_version_of_the_Previous_Release_Notes\"/>."
+
+#~ msgid "This public beta test is part of the openSUSE project. Information about the project is available at <ulink url=\"http://opensuse.org\"/>."
+#~ msgstr "Šis viešas beta testas yra openSUSE projekto dalis. Daugiau informacijos apie projektą rasite <ulink url=\"http://opensuse.org\"/>."
+
+#~ msgid "Find information about known bugs for this beta in the openSUSE wiki at <ulink url=\"http://en.opensuse.org/Bugs:Most_Annoying_Bugs\"/>. Please report all bugs you encounter using this prerelease of openSUSE 11.4 in the Novell Bugzilla at <ulink url=\"http://en.opensuse.org/Submitting_Bug_Reports\"/>. If you would like to see anything added to the release notes, please file a bug report against the <quote>Release Notes</quote> component."
+#~ msgstr "Daugiau informacijos apie šios beta versijos žinomas ydas pateikta openSUSE vikyje <ulink url=\"http://en.opensuse.org/Bugs:Most_Annoying_Bugs\"/>. Visas šioje openSUSE 11.4 versijoje pastebėtas ydas praneškite per „Novell Bugzilla“ adresu <ulink url=\"http://en.opensuse.org/Submitting_Bug_Reports\"/>. Jei norėtume papildyti šias laidos pastabas, pildykite ydos pranešimą tema <quote>Release Notes</quote>."
+
+#~ msgid "Prerelease Notes: Information relevant for alpha and beta releases."
+#~ msgstr "Pirminės laidos pastabos: informacija susijusi su alfa ir beta versijomis."
+
+#~ msgid "Samba: smbfs Service Renamed to cifs"
+#~ msgstr "Samba: smbfs paslauga pervadinta į cifs"
+
+#~ msgid "Since quite some time, smbfs is no longer part of the kernel. The cifs component has replaced it. To avoid confusion with the name of the service, we finally renamed it accordingly."
+#~ msgstr "Jau kuris laikas smbfs nebėra branduolio dalimi. Jį pakeitė cifs komponentas. Tam, kad nebūtų painiavos, šią paslaugą galiausiai atitinkamai pervadinome."
+
+#~ msgid "During the upgrade of a system with an installed samba-client package, the state of the service will be saved, <filename>/etc/samba/smbfstab</filename> migrated to <filename>/etc/samba/cifstab</filename>, and the state of the service restored, if required."
+#~ msgstr "Sistemos naujovinimo metu, kurioje prieš tai buvo įdiegtas samba-client paketas, paslaugos būsena bus išsaugota, <filename>/etc/samba/smbfstab</filename> rinkmena bus perkelta į <filename>/etc/samba/cifstab</filename>, o prireikus paslaugos būsena bus atstatyta."
+
+#~ msgid "Samba: mount.cifs no longer setuid root"
+#~ msgstr "Samba: „mount.cifs“ nebeleidžiama veikti kaip „setuid root“"
+
+#~ msgid "The <command>mount.cifs</command> program that is being used to mount Samba/CIFS shares will not be allowed to be run as a setuid root program. mount.cifs has been the subject of several security bugs that have arisen due to some of the users using it as a setuid root program. For e.g., tools like smb4k on the distribution require <command>mount.cifs</command> setuid root. So there is a chance that users of such tools set the setuid bit. This program has not been properly audited for security and the Samba team strongly recommends that it not be installed as a setuid root program at this time."
+#~ msgstr "<command>mount.cifs</command> programai, skirtai Samba/CIFS bendrinamų duomenų prijungimui, nebus leidžiama veikti kaip „setuid root“ programai. „mount.cifs“ turi keletą saugumo spragų, kurios atsiranda kai kuriems naudotojams naudojant ją kaip setuid root programą. Pavyzdžiui, smb4k ir panašūs įrankiai reikalauja <command>mount.cifs</command> setuid root. Taigi yra tikimybė, kad tokio įrankio naudotojas nurodo setuid bitą. Ši programa dar nepakankamai patikrinta saugumo atžvilgiu, tad Samba komanda labai pataria kol kas jos nediegti kaip „setuid root“ programos."
+
+#~ msgid "To make that very clear, this release forcibly disables the ability for <command>mount.cifs</command> to run as a setuid root program. People are welcome to trivially patch this out, by setting <systemitem>CIFS_DISABLE_SETUID_CHECK</systemitem> to <literal>1</literal>, but they do so at their own peril."
+#~ msgstr "Paprasčiau sakant, ši laida priverstinai uždraudžia galimybę <command>mount.cifs</command> paleisti kaip setuid root programą. Beje, tai galima laikinai pakeisti nurodant <systemitem>CIFS_DISABLE_SETUID_CHECK</systemitem> reikšmę <literal>1</literal>, tačiau tuomet rizikuojama."
+
+#~ msgid "A security audit and redesign of this program is in progress by the Samba Team."
+#~ msgstr "Šiuo metu Samba komanda tikrina saugumą ir perprojektuoja šią programą."
+
+#~ msgid "The release notes are under constant development. Download the newest version as part of the Internet test or refer to <ulink url=\"http://www.suse.com/relnotes/i386/openSUSE/11.2/RELEASE-NOTES.en.html\"/>. <phrase role=\"transwarn\">We update the English release notes whenever need arises. This means that translations might temporarily be incomplete.</phrase><phrase role=\"transwarn\">The translations are updated to match later.</phrase>"
+#~ msgstr "Laidos pastabos nuolatos keičiasi. Naujausią versiją atsisiųskite kaip internetinio bandymo dalį arba žiūrėkite <ulink url=\"http://www.suse.com/relnotes/i386/openSUSE/11.2/RELEASE-NOTES.en.html\"/>. <phrase role=\"transwarn\">Mes atnaujiname laidos pastabas anglų kalba, kai tik jos atsiranda. Tai reiškia, kad vertimai gali būti nepilni.</phrase><phrase role=\"transwarn\">Vertimai atnaujinami žymiai vėliau.</phrase>"
+
+#~ msgid "openSUSE Documentation as E-Books (EPUB)"
+#~ msgstr "openSUSE dokumentacija E-knygose (EPUB)"
+
+#~ msgid "Starting the OpenSSH SSH Daemon (sshd)"
+#~ msgstr "OpenSSH SSH tarnybos (sshd) paleidimas"
+
+#~ msgid "YaST and X.Org Configuration (Keyboard, Mouse, Graphics Board, and Monitor)"
+#~ msgstr "YaST ir X.Org konfigūracija (klaviatūra, pelė, vaizdo plokštė ir vaizduoklis)"
+
+#~ msgid "KDE"
+#~ msgstr "KDE"
+
+#~ msgid "Default Web Browser"
+#~ msgstr "Numatyta saityno naršyklė"
+
+#~ msgid "Update"
+#~ msgstr "Atnaujinti"
