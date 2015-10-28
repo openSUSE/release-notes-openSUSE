@@ -231,18 +231,49 @@ msgstr ""
 #: xml/release-notes.xml:232(para)
 msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
 msgstr ""
+"CUPS Browsing je v CUPS vypustené, ale nový balík cups-filters poskytuje "
+"cups-browsed, ktorý poskytuje základnú funkčnosť CUPS Browsing a Polling. "
+"Natívny protokol CUPS pre automatické zisťovanie klienta tlačiarní je teraz "
+"DNS-SD. Spustite cups-browsed na lokálnom  hostiteľovi pre prijímanie "
+"tradičnej informácie CUPS Browsing od tradičných vzdialených CUPS serverov. "
+"Ak chcete vysielať tradičnú informáciu CUPS Browsing do siete tak, že "
+"tradiční vzdialení CUPS klienti ju môžu prijímať, nastavte \""
+"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-"
+"browsed.conf</literal> a spustite cups-browsed."
 
 #: xml/release-notes.xml:233(para)
 msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
 msgstr ""
+"Niektoré tlačové filtre a backendy sú v CUPS vynechané, ale nový balík cups-"
+"filters ich poskytuje. Takže cups-filters je zvyčajne potrebný (odporúča RPM)"
+", ale cups-filters nie je nevyhnutný."
 
 #: xml/release-notes.xml:234(para)
 msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, and bnc#789566)."
 msgstr ""
+"Konfiguračných direktívy cupsd sú rozdelené do dvoch súborov: cupsd.conf ("
+"možno ho tiež upraviť pomocou HTTP PUT napr. cez cupsctl) a cups-files.conf ("
+"možno ho upraviť len manuálne správcom systému), aby bola lepšia predvolená "
+"ochrana proti zneužitiu výsad bežnými používateľmi, ktorí boli mali "
+"konkrétne správcom systému  povolené robiť zmeny cupsd konfigurácie (pozrite "
+"si <ulink url=\"http://www.cups.org/str.php?L4223\""
+">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 a bnc#789566)."
 
 #: xml/release-notes.xml:235(para)
 msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
 msgstr ""
+"CUPS stránky a CUPS skúšobná strana už nie sú podporované od CUPS &gt;= 1.6. "
+"Musia byť použité stránky a skúšobná strana z cups-filters. Súbory stránok "
+"CUPS v <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> a "
+"skúšobná strana CUPS <literal moreinfo=\"none\""
+">/usr/share/cups/data/testprint</literal> (čo je tiež typ súboru stránky "
+"CUPS) už nie sú poskytované v RPM cups, pretože už nefungujú od CUPS &gt;= "
+"1.6 (pozrite si <ulink url=\"http://www.cups.org/str.php?L4120\""
+">http://www.cups.org/str.php?L4120</ulink> ), lebo už neexistuje filter, "
+"ktorý môže previesť súbory CUPS stránok. Od CUPS &gt;= 1.6 súbory stránok a "
+"testovacia strana v balíku cups-filters fungujú iba cez cups-filters PDF "
+"workflow a balík cups-filters taktiež poskytuje zodpovedajúci filter "
+"bannertopdf."
 
 #: xml/release-notes.xml:236(para)
 msgid "For details, see bsc#735404."
@@ -250,7 +281,7 @@ msgstr "Podrobnosti nájdete v bsc#735404."
 
 #: xml/release-notes.xml:238(emphasis)
 msgid "PDF Now Common Printing Data Format"
-msgstr ""
+msgstr "PDF je teraz všeobecný tlačový dátový formát"
 
 #: xml/release-notes.xml:240(para)
 msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
@@ -262,22 +293,41 @@ msgstr ""
 #: xml/release-notes.xml:241(para)
 msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
 msgstr ""
+"To znamená, že aplikačné programy zvyčajne už viac neprodukujú výstup "
+"PostScript v predvolenom nastavení pri tlači, ale PDF namiesto toho."
 
 #: xml/release-notes.xml:242(para)
 msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
 msgstr ""
+"V dôsledku toho sa predvolené spracovanie toho, ako je tlačový výstup "
+"aplikačných programov premenený na \"jazyk\", ktorý konkrétne tlačiareň "
+"prijíma (tzv. \"reťaz filtrov CUPS\"), zásadne zmenilo z PostScript-centric "
+"workflow na PDF-centric workflow."
 
 #: xml/release-notes.xml:243(para)
 msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
 msgstr ""
+"V súlade s tým upstream štandard pre CUPS pod Linuxom (používajúci CUPS plus "
+"balík cups-filters) je teraz spracovanie úloh založené na PDF, čo umožňuje, "
+"aby bol každý vstup, ktorý nie je PDF, prevedený najprv do formátu PDF, "
+"voľby nastavenia strany sa aplikujú pomocou filtra pdftopdf a Ghostscript je "
+"volaný s PDF ako vstup."
 
 #: xml/release-notes.xml:244(para)
 msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
 msgstr ""
+"S PDF ako štandardným formátom tlačových úloh nemôžu už tradičné PostScript "
+"tlačiarne tlačiť tlačový výstup aplikácie priamo, takže je potrebný "
+"konverzný krok v tlačovom workflow, ktorý prevádza PDF na PostScript. Ale "
+"existujú aj PostScript+PDF tlačiarne, ktoré môžu tlačiť priamo PostScript aj "
+"PDF."
 
 #: xml/release-notes.xml:245(para)
 msgid "For details, see the section \"Common printing data formats\" in the SUSE wiki article \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
 msgstr ""
+"Podrobnosti nájdete v časti \"Common printing data formats\" v článku SUSE "
+"wiki \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/"
+"Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
 
 #: xml/release-notes.xml:250(title)
 msgid "Miscellaneous"
