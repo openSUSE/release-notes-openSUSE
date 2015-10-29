@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2015-10-23 10:16+0200\n"
-"PO-Revision-Date: 2015-10-24 18:24+0200\n"
-"Last-Translator: Victor hck <correohck@gmail.com>\n"
+"PO-Revision-Date: 2015-10-29 08:18+0200\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <http://10n.opensuse.org/projects/release-notes-"
 "opensuse/master/es/>\n"
 "Language: es\n"
@@ -65,14 +65,22 @@ msgstr "Instalación del sistema base"
 #: xml/release-notes.xml:104(para)
 msgid "If you install a new system as <quote>minimal base system</quote>, the installed system will try to maintain this level and often run into dependency conflicts when you try to install more software."
 msgstr ""
+"Si realiza una instalación nueva en el modo <quote>base mínima del "
+"sistema</quote>, el sistema instalado intentará mantenerse en este nivel; "
+"por tanto, puede que se produzcan conflictos de dependencias con cierta "
+"frecuencia al tratar de instalar más software."
 
 #: xml/release-notes.xml:109(para)
 msgid "To avoid this, uninstall the package <literal>patterns-openSUSE-minimal_base-conflicts</literal>, instructing the system that you no longer want to maintain a minimal installation (<quote>minimal base system</quote>)."
 msgstr ""
+"Para evitar el problema, desinstale el paquete <literal>patterns-openSUSE-"
+"minimal_base-conflicts</literal>. Esto le indicará al sistema que ya no "
+"desea mantener una instalación mínima (<quote>base mínima del "
+"sistema</quote>)."
 
 #: xml/release-notes.xml:118(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
-msgstr "UEFI&mdash;Interfaz Unificada Extensible del Firmware"
+msgstr "UEFI: Interfaz Unificada Extensible del Firmware"
 
 #: xml/release-notes.xml:119(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
@@ -97,11 +105,17 @@ msgstr "Además, la especificación UEFI también permite particiones tradiciona
 
 #: xml/release-notes.xml:160(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
-msgstr "Los firmware modernos tienen un recolector de basura que lista las entradas borradas y libera la memoria reservada por entradas antiguas. Surge un problema cuando algún firmware con fallos no lista y libera esas entradas; esto puede terminar con un sistema que no arranca."
+msgstr ""
+"Los firmwares modernos incorporan procesos de mantenimiento que recopilan "
+"las entradas eliminadas y liberan la memoria reservada para las entradas "
+"anteriores. Si hay errores en el firmware que impidan el recopilamiento y la "
+"liberación de entradas, el sistema podría no arrancar."
 
 #: xml/release-notes.xml:166(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
-msgstr "La solución es simple: convertir la partición tradicional MBR al nuevo sistema GPT para evitar el problema por completo."
+msgstr ""
+"Es sencillo evitar esta situación: convierta la partición del sistema "
+"heredado MBR al nuevo GPT y no incurrirá jamás en este problema."
 
 #. http://bugzilla.opensuse.org/show_bug.cgi?id=950877
 #: xml/release-notes.xml:174(title)
@@ -111,6 +125,10 @@ msgstr "openSUSE Leap como sistema invitado en VirtualBox"
 #: xml/release-notes.xml:175(para)
 msgid "If you are running openSUSE Leap as a guest inside VirtualBox, you must use a different displaymanager than GDM. Switch to using lightdm by installing the \"lightdm\" package and activate it in <filename>/etc/sysconfig/displaymanager</filename> by setting"
 msgstr ""
+"Si está ejecutando openSUSE Leap dentro de VirtualBox, debe utilizar un "
+"gestor de sesiones distinto a GDM. Instale el paquete «lightdm» y actívelo "
+"modificando el archivo <filename>/etc/sysconfig/displaymanager</filename> "
+"como se indica a continuación:"
 
 #: xml/release-notes.xml:181(screen)
 #, no-wrap
@@ -124,10 +142,14 @@ msgstr "Antecedentes:"
 #: xml/release-notes.xml:184(para)
 msgid "GDM starts the X server in the user context (unlike all other known DMs at this moment). This is not compatible with the VirtualBox video driver and will result in crashes of the X Window System."
 msgstr ""
+"GDM inicia el servidor X en el contexto del usuario (a diferencia del resto "
+"de gestores de sesiones conocidos por el momento). Esto es incompatible con "
+"el controlador de vídeo de VirtualBox y produce fallos en el Sistema de "
+"ventanas X."
 
 #: xml/release-notes.xml:189(para)
 msgid "You can still use a full GNOME3 session"
-msgstr "Puedes seguir usando una sesión completa de GNOME3"
+msgstr "Todavía podrá utilizar una sesión completa de GNOME3"
 
 # CER: Usamos la misma traducci´on para update y upgrade, y hay que diferenciarlos
 #: xml/release-notes.xml:197(title)
@@ -140,15 +162,19 @@ msgstr "General"
 
 #: xml/release-notes.xml:206(title)
 msgid "No firewall by default after installation from Live CD"
-msgstr "Ningún cortafuego por defecto después de la instalación desde un Live CD"
+msgstr ""
+"No hay cortafuegos activados de manera predeterminada tras instalar mediante "
+"un Live CD"
 
 #: xml/release-notes.xml:207(para)
 msgid "When installing from the Live CD no firewall will be active by default."
-msgstr "Cuando instale desde un Live CD no se activará ningún cortafuegos por defecto."
+msgstr ""
+"Cuando realice una instalación mediante un Live CD no se activará ningún "
+"cortafuegos de manera predeterminada."
 
 #: xml/release-notes.xml:211(para)
 msgid "Enable the firewall using YaST or with:"
-msgstr "Habilite el cortafuegos utilizando YaST o con:"
+msgstr "Active el cortafuegos utilizando YaST o con las órdenes:"
 
 #: xml/release-notes.xml:214(screen)
 #, no-wrap
@@ -156,7 +182,7 @@ msgid ""
 "systemctl enable SuSEfirewall2\n"
 "systemctl start SuSEfirewall2"
 msgstr ""
-"systemctl enable SuSEfirewall2↵\n"
+"systemctl enable SuSEfirewall2\n"
 "systemctl start SuSEfirewall2"
 
 #: xml/release-notes.xml:220(title)
@@ -166,19 +192,32 @@ msgstr "Cuestiones técnicas"
 #. sort_key="None"; non-rn-fate-cats="";
 #: xml/release-notes.xml:225(title)
 msgid "Printing System: Improvements and Incompatible Changes"
-msgstr "Sistema de Impresión: Mejoras y cambios incompatibles"
+msgstr "Sistema de impresión: Mejoras y cambios incompatibles"
 
 #: xml/release-notes.xml:228(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr "CUPS Versión actualizada a 1.7"
+msgstr "CUPS actualizado a la versión 1.7"
 
 #: xml/release-notes.xml:230(para)
 msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 msgstr ""
+"CUPS &gt;= 1.6 incluye cambios sustanciales incompatibles con respecto a las "
+"versiones anteriores a CUPS 1.5.4, en especial durante la impresión a través "
+"de la red:"
 
 #: xml/release-notes.xml:231(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
 msgstr ""
+"La versión predeterminada del protocolo IPP se incrementó de 1.1 a 2.0. Los "
+"servidores de IPP anteriores, como CUPS 1.3.x (p. ej., en SLE 11) rechazan "
+"las solicitudes de IPP 2.0 con el mensaje «Bad Request» (consulte <ulink url="
+"\"http://www.cups.org/str.php?L4231\""
+">http://www.cups.org/str.php?L4231</ulink> ). Al añadir «/version=1.1» a "
+"ServerName en client.conf (p. ej., ServerName "
+"older.server.example.com/version=1.1), o bien, al valor de la variable de "
+"entorno CUPS_SERVER o al del nombre del servidor de la opción «-h» (p. ej., "
+"lpstat -h older.server.example.com/version=1.1 -p), debe especificarse "
+"explícitamente la versión del protocolo IPP para los servidores anteriores."
 
 #: xml/release-notes.xml:232(para)
 msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
@@ -187,6 +226,10 @@ msgstr ""
 #: xml/release-notes.xml:233(para)
 msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
 msgstr ""
+"CUPS ha dejado de incluir algunos filtros de impresión y motores, pero el "
+"nuevo paquete cups-filters los proporciona. Así, por lo general necesitará "
+"instalar cups-filters (recomendado por RPM), pero no es necesario "
+"estrictamente."
 
 #: xml/release-notes.xml:234(para)
 msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, and bnc#789566)."
@@ -202,7 +245,7 @@ msgstr "Para más detalles vea bsc#735404."
 
 #: xml/release-notes.xml:238(emphasis)
 msgid "PDF Now Common Printing Data Format"
-msgstr ""
+msgstr "PDF es ahora el formato común de impresión"
 
 #: xml/release-notes.xml:240(para)
 msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
@@ -214,6 +257,8 @@ msgstr ""
 #: xml/release-notes.xml:241(para)
 msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
 msgstr ""
+"Esto significa que los programas normalmente ya no producirán salidas en "
+"PostScript durante el proceso de impresión, sino en PDF."
 
 #: xml/release-notes.xml:242(para)
 msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
