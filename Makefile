@@ -5,7 +5,7 @@
 .PHONY: clean po pot pdf txt single-html yast-html
 
 ifndef LANGS
-  LANGS := ca cs de en_GB es fr ja lt nl pl pt_BR ru sk uk zh_TW
+  LANGS := $(shell cat po/LINGUAS)
 endif
 ifndef STYLEROOT
   STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013
@@ -31,7 +31,12 @@ XSLTPROC_COMMAND = xsltproc \
 --stringparam show.comments 0 \
 --xinclude --nonet
 
-all: single-html yast-html pdf txt
+all: linguas single-html yast-html pdf txt
+
+linguas: po/LINGUAS
+
+po/LINGUAS: po/*.po po/po-selector
+	po/po-selector
 
 pot: release-notes.pot
 release-notes.pot: xml/release-notes.ent xml/release-notes.xml
