@@ -1,0 +1,333 @@
+# Copyright (C) 2007 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: installation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-09 15:38+0200\n"
+"PO-Revision-Date: 2006-11-03 14:26\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: xml/release-notes.xml:10(title)
+#, fuzzy
+msgid "Release Notes"
+msgstr "Vrystellingsnotas"
+
+#: xml/release-notes.xml:12(releaseinfo)
+msgid "@VERSION@"
+msgstr ""
+
+#: xml/release-notes.xml:13(productname)
+msgid "openSUSE Leap"
+msgstr ""
+
+#: xml/release-notes.xml:14(productnumber)
+msgid "42.1"
+msgstr ""
+
+#: xml/release-notes.xml:17(para)
+msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
+msgstr ""
+
+#. Previous Release Notes
+#: xml/release-notes.xml:51(para)
+msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+msgstr ""
+
+#: xml/release-notes.xml:90(title)
+msgid "Installation"
+msgstr "Installasie"
+
+#: xml/release-notes.xml:102(title)
+msgid "UEFI&mdash;Unified Extensible Firmware Interface"
+msgstr ""
+
+#: xml/release-notes.xml:103(para)
+msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
+msgstr ""
+
+#: xml/release-notes.xml:111(para)
+msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
+msgstr ""
+
+#. bnc#850056
+#: xml/release-notes.xml:128(title)
+msgid "UEFI, GPT, and MS-DOS Partitions"
+msgstr ""
+
+#: xml/release-notes.xml:129(para)
+msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
+msgstr ""
+
+#: xml/release-notes.xml:135(para)
+msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
+msgstr ""
+
+#: xml/release-notes.xml:144(para)
+msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
+msgstr ""
+
+#: xml/release-notes.xml:150(para)
+msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
+msgstr ""
+
+#: xml/release-notes.xml:159(title)
+#, fuzzy
+msgid "System Upgrade"
+msgstr "Stelselarea-items"
+
+#: xml/release-notes.xml:166(title)
+#, fuzzy
+msgid "General"
+msgstr "&Genereer"
+
+#: xml/release-notes.xml:168(title)
+msgid "No firewall by default after installation from Live CD"
+msgstr ""
+
+#: xml/release-notes.xml:169(para)
+msgid "When installing from the Live CD no firewall will be active by default."
+msgstr ""
+
+#: xml/release-notes.xml:173(para)
+msgid "Enable the firewall using YaST or with:"
+msgstr ""
+
+#: xml/release-notes.xml:176(screen)
+#, no-wrap
+msgid ""
+"systemctl enable SuSEfirewall2\n"
+"systemctl start SuSEfirewall2"
+msgstr ""
+
+#: xml/release-notes.xml:182(title)
+msgid "Technical"
+msgstr ""
+
+#: xml/release-notes.xml:189(title)
+msgid "Miscellaneous"
+msgstr "Verskeidenheid"
+
+#. bnc#809347
+#: xml/release-notes.xml:196(title)
+#, fuzzy
+msgid "More Information and Feedback"
+msgstr "Geheue-inligting"
+
+#: xml/release-notes.xml:200(para)
+msgid "Read the READMEs on the CDs."
+msgstr ""
+
+#: xml/release-notes.xml:203(para)
+msgid "Get detailed changelog information about a particular package from the RPM:"
+msgstr ""
+
+#: xml/release-notes.xml:204(screen)
+#, no-wrap
+msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+msgstr ""
+
+#: xml/release-notes.xml:205(para)
+msgid "&lt;FILENAME&gt;. is the name of the RPM."
+msgstr ""
+
+#: xml/release-notes.xml:208(para)
+msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
+msgstr ""
+
+#: xml/release-notes.xml:212(para)
+msgid "Find more information in the <filename>docu</filename> directory on the DVD."
+msgstr ""
+
+#: xml/release-notes.xml:215(para)
+msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
+msgstr ""
+
+#: xml/release-notes.xml:220(para)
+msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
+msgstr ""
+
+#: xml/release-notes.xml:225(para)
+#, fuzzy
+msgid "Copyright © 2015 SUSE LLC"
+msgstr "Kopiereg © 2007 Novell Inc."
+
+#: xml/release-notes.xml:227(para)
+msgid "Thanks for using openSUSE."
+msgstr ""
+
+#: xml/release-notes.xml:228(para)
+msgid "The openSUSE Team."
+msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: xml/release-notes.xml:0(None)
+#, fuzzy
+msgid "translator-credits"
+msgstr "vertaler_krediete"
+
+#, fuzzy
+#~| msgid "Unconfigured"
+#~ msgid "netconfig update"
+#~ msgstr "Ongekonfigureer"
+
+# dialog title for ftp installation
+#, fuzzy
+#~| msgid "FTP Installation"
+#~ msgid "NET Installation Using Wifi"
+#~ msgstr "FTP-installasie"
+
+#, fuzzy
+#~ msgid "For Detailed Installation Information"
+#~ msgstr "Begin installasie of bywerking"
+
+# %s is e.g. SCSI, CD-ROM, USB
+#, fuzzy
+#~| msgid "Load %s Modules"
+#~ msgid "Dropped YaST Modules"
+#~ msgstr "Laai %s modules"
+
+#, fuzzy
+#~| msgid "install"
+#~ msgid "yast2-dirinstall"
+#~ msgstr "installeer"
+
+#, fuzzy
+#~| msgid "Power management (APM)"
+#~ msgid "yast2-power-management"
+#~ msgstr "Kragbestuur (APM)"
+
+#, fuzzy
+#~| msgid "Network Interface"
+#~ msgid "Duplicated Network Interfaces"
+#~ msgstr "Netwerkkoppelvlak"
+
+#, fuzzy
+#~| msgid "Other Versions"
+#~ msgid "Samba Version 4.1"
+#~ msgstr "Ander weergawes"
+
+#, fuzzy
+#~| msgid "Configuration"
+#~ msgid "Configuring Postfix"
+#~ msgstr "Konfigurasie"
+
+#, fuzzy
+#~| msgid "Other Versions"
+#~ msgid "Apache Version 2.4"
+#~ msgstr "Ander weergawes"
+
+#, fuzzy
+#~| msgid "Invalid root device."
+#~ msgid "as root once."
+#~ msgstr "Ongeldige stamtoestel."
+
+#, fuzzy
+#~| msgid "AutoYaST file"
+#~ msgid "AutoYaST"
+#~ msgstr "Outo-YaST-lêer"
+
+#, fuzzy
+#~| msgid "Automated Installation"
+#~ msgid "No Network after Installation"
+#~ msgstr "Geoutomatiseerde installasie"
+
+#, fuzzy
+#~| msgid "Choose the network device."
+#~ msgid "Enable the NetworkManager service:"
+#~ msgstr "Kies die netwerktoestel."
+
+#, fuzzy
+#~| msgid "Sound service"
+#~ msgid "Stop the running service:"
+#~ msgstr "Klankdiens"
+
+#, fuzzy
+#~| msgid "Choose the network device."
+#~ msgid "Disable the NetworkManager service:"
+#~ msgstr "Kies die netwerktoestel."
+
+#, fuzzy
+#~ msgid "Version:"
+#~ msgstr "Weergawe:"
+
+#, fuzzy
+#~ msgid "YaST AppArmor Configuration Module"
+#~ msgstr "W&ysig konfigurasie"
+
+#, fuzzy
+#~| msgid "Network Interface"
+#~ msgid "NetworkManager Command Line Interface"
+#~ msgstr "Netwerkkoppelvlak"
+
+#, fuzzy
+#~| msgid "Removing the request failed (%1)."
+#~ msgid "Removing the Xorg setuid bit"
+#~ msgstr "Verwyder van die versoek het misluk (%1)."
+
+#, fuzzy
+#~ msgid "Configuring Boot Loader Location and Options"
+#~ msgstr "Huidige verbinding"
+
+#~ msgid "KDE"
+#~ msgstr "KDE"
+
+#, fuzzy
+#~| msgid "Default Route"
+#~ msgid "Default Web Browser"
+#~ msgstr "Verstekroete"
+
+#~ msgid "Update"
+#~ msgstr "Werk by"
+
+#, fuzzy
+#~| msgid "Name Server"
+#~ msgid "VMware Server v2"
+#~ msgstr "Naambediener"
+
+#, fuzzy
+#~ msgid "YaST Gtk and Qt Front-Ends"
+#~ msgstr "Sagtewarebestuur loop reeds."
+
+#, fuzzy
+#~ msgid "Note the following changes:"
+#~ msgstr "Deaktiveer volgende toestelle:"
+
+#, fuzzy
+#~ msgid "Features not available any longer:"
+#~ msgstr "Eienskap slegs beskikbaar met HAL"
+
+#, fuzzy
+#~ msgid "Text Installation Pattern"
+#~ msgstr "Installasie-instellings"
+
+#, fuzzy
+#~ msgid "Adding Extra Software Repositories During Installation"
+#~ msgstr "Bykomende installasiebronne"
+
+#, fuzzy
+#~ msgid "KDE 4 Applications Path"
+#~ msgstr "Alle toepassings"
+
+#, fuzzy
+#~ msgid "Installation Media"
+#~ msgstr "Installasiemodus"
+
+#, fuzzy
+#~ msgid "The OpenSync Synchronization Framework"
+#~ msgstr "Afstandsinkronisasie"
+
+#, fuzzy
+#~ msgid "BIOS RAID Supported During Installation"
+#~ msgstr "Begin van installasie ..."
+
+#, fuzzy
+#~ msgid "New Power Management Options"
+#~ msgstr "Kragbestuur_instellings ..."

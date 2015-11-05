@@ -1,0 +1,426 @@
+# translation of RELEASE-NOTES.pa.po to Panjabi
+# @TITLE@
+# Copyright (C) 2006, SUSE Linux GmbH, Nuremberg
+#
+# This file is distributed under the same license as @PACKAGE@ package. FIRST
+#
+# A S Alam <aalam@users.sf.net>, 2007, 2009.
+# ASB <aalam@users.sf.net>, 2007.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2008.
+# KDB <brar.kd@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: RELEASE-NOTES.pa\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-09 15:38+0200\n"
+"PO-Revision-Date: 2009-07-10 16:28+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <punjabi-l10n@users.sf.net>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: xml/release-notes.xml:10(title)
+msgid "Release Notes"
+msgstr ""
+
+#: xml/release-notes.xml:12(releaseinfo)
+msgid "@VERSION@"
+msgstr ""
+
+#: xml/release-notes.xml:13(productname)
+#, fuzzy
+msgid "openSUSE Leap"
+msgstr "openSUSE"
+
+#: xml/release-notes.xml:14(productnumber)
+msgid "42.1"
+msgstr ""
+
+#: xml/release-notes.xml:17(para)
+msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
+msgstr ""
+
+#. Previous Release Notes
+#: xml/release-notes.xml:51(para)
+msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+msgstr ""
+
+#: xml/release-notes.xml:90(title)
+msgid "Installation"
+msgstr "ਇੰਸਟਾਲੇਸ਼ਨ"
+
+#: xml/release-notes.xml:102(title)
+msgid "UEFI&mdash;Unified Extensible Firmware Interface"
+msgstr ""
+
+#: xml/release-notes.xml:103(para)
+msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
+msgstr ""
+
+#: xml/release-notes.xml:111(para)
+msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
+msgstr ""
+
+#. bnc#850056
+#: xml/release-notes.xml:128(title)
+msgid "UEFI, GPT, and MS-DOS Partitions"
+msgstr ""
+
+#: xml/release-notes.xml:129(para)
+msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
+msgstr ""
+
+#: xml/release-notes.xml:135(para)
+msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
+msgstr ""
+
+#: xml/release-notes.xml:144(para)
+msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
+msgstr ""
+
+#: xml/release-notes.xml:150(para)
+msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
+msgstr ""
+
+#: xml/release-notes.xml:159(title)
+#, fuzzy
+msgid "System Upgrade"
+msgstr "ਸਿਸਟਮ ਏਰੀਆ ਆਈਟਮਾਂ"
+
+#: xml/release-notes.xml:166(title)
+msgid "General"
+msgstr "ਆਮ"
+
+#: xml/release-notes.xml:168(title)
+msgid "No firewall by default after installation from Live CD"
+msgstr ""
+
+#: xml/release-notes.xml:169(para)
+msgid "When installing from the Live CD no firewall will be active by default."
+msgstr ""
+
+#: xml/release-notes.xml:173(para)
+msgid "Enable the firewall using YaST or with:"
+msgstr ""
+
+#: xml/release-notes.xml:176(screen)
+#, no-wrap
+msgid ""
+"systemctl enable SuSEfirewall2\n"
+"systemctl start SuSEfirewall2"
+msgstr ""
+
+#: xml/release-notes.xml:182(title)
+msgid "Technical"
+msgstr "ਤਕਨੀਕੀ"
+
+#: xml/release-notes.xml:189(title)
+msgid "Miscellaneous"
+msgstr "ਫੁਟਕਲ"
+
+#. bnc#809347
+#: xml/release-notes.xml:196(title)
+msgid "More Information and Feedback"
+msgstr ""
+
+#: xml/release-notes.xml:200(para)
+msgid "Read the READMEs on the CDs."
+msgstr ""
+
+#: xml/release-notes.xml:203(para)
+msgid "Get detailed changelog information about a particular package from the RPM:"
+msgstr ""
+
+#: xml/release-notes.xml:204(screen)
+#, no-wrap
+msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+msgstr ""
+
+#: xml/release-notes.xml:205(para)
+msgid "&lt;FILENAME&gt;. is the name of the RPM."
+msgstr ""
+
+#: xml/release-notes.xml:208(para)
+msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
+msgstr ""
+
+#: xml/release-notes.xml:212(para)
+msgid "Find more information in the <filename>docu</filename> directory on the DVD."
+msgstr ""
+
+#: xml/release-notes.xml:215(para)
+msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
+msgstr ""
+
+#: xml/release-notes.xml:220(para)
+msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
+msgstr ""
+
+#: xml/release-notes.xml:225(para)
+#, fuzzy
+msgid "Copyright © 2015 SUSE LLC"
+msgstr "Copyright © 2009 Novell, Inc."
+
+#: xml/release-notes.xml:227(para)
+msgid "Thanks for using openSUSE."
+msgstr ""
+
+#: xml/release-notes.xml:228(para)
+msgid "The openSUSE Team."
+msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: xml/release-notes.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"A S Alam <aalam@users.sf.net>,2006,2007,2008\n"
+"JoT <jattontesting@gmail.com>2007"
+
+#, fuzzy
+#~| msgid "Bug fix update"
+#~ msgid "netconfig update"
+#~ msgstr "ਬੱਗ ਫਿਕਸ ਅੱਪਡੇਟ"
+
+# dialog title for ftp installation
+#, fuzzy
+#~| msgid "FTP Installation"
+#~ msgid "NET Installation Using Wifi"
+#~ msgstr "FTP ਇੰਸਟਾਲੇਸ਼ਨ"
+
+#, fuzzy
+#~| msgid "Start Windows"
+#~ msgid "BtrFS and Windows 7"
+#~ msgstr "ਵਿੰਡੋ ਚਲਾਓ"
+
+#, fuzzy
+#~ msgid "For Detailed Installation Information"
+#~ msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਜਾਂ ਅੱਪਡੇਟ ਸ਼ੁਰੂ ਕਰੋ"
+
+#, fuzzy
+#~ msgid "openSUSE Documentation"
+#~ msgstr "ਦਸਤਾਵੇਜ਼"
+
+#, fuzzy
+#~| msgid "Other Versions"
+#~ msgid "Samba Version 4.1"
+#~ msgstr "ਹੋਰ ਵਰਜਨ"
+
+#, fuzzy
+#~| msgid "AutoYaST file"
+#~ msgid "AutoYaST"
+#~ msgstr "AutoYaST ਫਾਇਲ"
+
+#, fuzzy
+#~ msgid "<phrase os=\"slprof\">openSUSE 13.1</phrase> Release Notes"
+#~ msgstr "<phrase os=\"slprof\">openSUSE 10.3</phrase> ਰੀਲਿਜ਼ ਨੋਟਿਸ"
+
+#, fuzzy
+#~ msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included as the <filename>fdl.txt</filename> file."
+#~ msgstr "ਇਹ ਡੌਕੂਮੈੱਟ ਨੂੰ ਕਾਪੀ ਕਰਨ, ਵੰਡਣ ਅਤੇ/ਜਾਂ ਸੋਧ ਕਰਨ ਦਾ ਅਧਿਕਾਰ ਗਨੂ ਫਰੀ ਡੌਕੂਮੈੱਟ ਲਾਈਸੈਂਸ ਵਰਜਨ 1.2 ਜਾਂ ਫਰੀ ਸਾਫਟਵੇਅਰ ਫਾਊਂਡੇਸ਼ਨ ਦੇ ਕਿਸੇ ਵੀ ਨਵੇਂ ਵਰਜਨ ਦੀਆਂ ਸ਼ਰਤਾਂ ਅਧੀਨ ਦਿੱਤਾ ਗਿਆ ਹੈ, ਬਿਨਾਂ ਸਥਿਰ ਸੈਕਸ਼ਨ, ਬਿਨਾਂ ਫਰੰਟ-ਕਰਵ ਟੈਕਸਟ, ਅਤੇ ਬਿਨਾਂ ਬੈਕ-ਕਵਰ ਟੈਕਸਟ ਦੇ। ਲਾਈਸੈਂਸ ਦੀ ਕਾਪੀ <filename>fdl.txt</filename> ਫਾਇਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤੀ ਗਈ ਹੈ।"
+
+#~ msgid "These release notes cover the following areas:"
+#~ msgstr "ਇਹ ਰੀਲਿਜ਼ ਨੋਟਿਸ ਵਿੱਚ ਅੱਗੇ ਦਿੱਤੇ ਖੇਤਰ ਹਨ:"
+
+#, fuzzy
+#~ msgid "<xref linkend=\"general\"/>: Information that everybody should read."
+#~ msgstr "ਜਰਨਲ: ਜਾਣਕਾਰੀ, ਜੋ ਕਿ ਹਰੇਕ ਨੂੰ ਪੜ੍ਹਨੀ ਚਾਹੀਦੀ ਹੈ।"
+
+#, fuzzy
+#~ msgid "<xref linkend=\"technical\"/>: This section contains a number of technical changes and enhancements for the experienced user."
+#~ msgstr "ਤਕਨੀਕੀ: ਇਹ ਸ਼ੈਕਸ਼ਨ ਵਿੱਚ ਤਜਰਬੇਕਾਰ ਯੂਜ਼ਰਾਂ ਲਈ ਤਕਨੀਕੀ ਬਦਲਾਅ ਅਤੇ ਹੋਰ ਜਾਣਕਾਰੀ ਹੈ।"
+
+# %s is e.g. SCSI, CD-ROM, USB
+#, fuzzy
+#~| msgid "Load %s Modules"
+#~ msgid "Dropped YaST Modules"
+#~ msgstr "ਮੋਡੀਊਲ %s ਲੋਡ ਕਰੋ"
+
+#, fuzzy
+#~| msgid "install"
+#~ msgid "yast2-dirinstall"
+#~ msgstr "ਇੰਸਟਾਲ"
+
+#, fuzzy
+#~| msgid "Power management (APM)"
+#~ msgid "yast2-power-management"
+#~ msgstr "ਪਾਵਰ ਪਰਬੰਧ (APM)"
+
+#, fuzzy
+#~| msgid "Find more detailed information about new features at <ulink url=\"http://en.opensuse.org/AppArmor/Changes_AppArmor_2_1\"/>."
+#~ msgid "For more information, see <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
+#~ msgstr "ਨਵੇਂ ਫੀਚਰਾਂ ਦੀ ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਲਈ <ulink url=\"http://en.opensuse.org/AppArmor/Changes_AppArmor_2_1\"/> ਵੇਖੋ।"
+
+#, fuzzy
+#~| msgid "Network Interface"
+#~ msgid "Duplicated Network Interfaces"
+#~ msgstr "ਨੈਟਵਰਕ ਇੰਟਰਫੇਸ"
+
+#, fuzzy
+#~| msgid "Configuration"
+#~ msgid "Configuring Postfix"
+#~ msgstr "ਸੰਰਚਨਾ"
+
+#, fuzzy
+#~| msgid "Other Versions"
+#~ msgid "Apache Version 2.4"
+#~ msgstr "ਹੋਰ ਵਰਜਨ"
+
+#, fuzzy
+#~| msgid "Invalid root device."
+#~ msgid "as root once."
+#~ msgstr "ਗਲਤੀ ਰੂਟ (root) ਜੰਤਰ ਹੈ।"
+
+#, fuzzy
+#~| msgid "Automated Installation"
+#~ msgid "No Network after Installation"
+#~ msgstr "ਆਟੋਮੈਟਡ ਇੰਸਟਾਲੇਸ਼ਨ"
+
+#, fuzzy
+#~| msgid "Choose the network device."
+#~ msgid "Enable the NetworkManager service:"
+#~ msgstr "ਨੈੱਟਵਰਕ ਜੰਤਰ ਦੀ ਚੋਣ ਕਰੋ।"
+
+#, fuzzy
+#~| msgid "Choose the network device."
+#~ msgid "Disable the NetworkManager service:"
+#~ msgstr "ਨੈੱਟਵਰਕ ਜੰਤਰ ਦੀ ਚੋਣ ਕਰੋ।"
+
+#, fuzzy
+#~ msgid "Note: systemd does not honor obsolete sysconfig variables in <filename>/etc/sysconfig/cron</filename> such as <literal>TMP_DIRS_TO_CLEAR</literal>."
+#~ msgstr "<filename>/etc/sysconfig/yast2</filename> ਫਾਇਲ ਨੂੰ <literal>root</literal> ਵਾਂਗ ਖੋਲ੍ਹੋ।"
+
+#, fuzzy
+#~ msgid "Version:"
+#~ msgstr "ਵਰਜਨ: "
+
+#, fuzzy
+#~ msgid "Mounting Encrypted Partitions Using systemd"
+#~ msgstr "ਇੰਕ੍ਰਿਪਟਡ ਪਾਰਟੀਸ਼ਨ ਸੈੱਟਅੱਪ ਵਿੱਚ ਬਦਲਾਅ"
+
+#, fuzzy
+#~| msgid "YaST LDAP Server Configuration"
+#~ msgid "YaST AppArmor Configuration Module"
+#~ msgstr "YaST LDAP ਸਰਵਰ ਸੰਰਚਨਾ"
+
+#, fuzzy
+#~| msgid "Network Interface"
+#~ msgid "NetworkManager Command Line Interface"
+#~ msgstr "ਨੈਟਵਰਕ ਇੰਟਰਫੇਸ"
+
+#, fuzzy
+#~| msgid "Removing the request failed (%1)."
+#~ msgid "Removing the Xorg setuid bit"
+#~ msgstr "ਮੰਗ ਹਟਾਉਣ ਲਈ ਫੇਲ੍ਹ (%1)।"
+
+#, fuzzy
+#~| msgid "This is just the initial version of the release notes for <phrase os=\"slprof\">openSUSE 11.2</phrase>."
+#~ msgid "This is just the initial version of the release notes for the forthcoming <phrase os=\"slprof\">openSUSE 11.4</phrase>."
+#~ msgstr "ਇਹ ਕੇਵਲ <phrase os=\"slprof\">ਓਪਨਸੂਸੇ 11.2ਬੀਟਾ</phrase> ਲਈ ਰੀਲਿਜ਼ ਨੋਟਿਸ ਦਾ ਸ਼ੁਰੂਆਤੀ ਵਰਜਨ ਹੈ।"
+
+#~ msgid "This public beta test is part of the openSUSE project. Information about the project is available at <ulink url=\"http://opensuse.org\"/>."
+#~ msgstr "ਇਹ ਪਬਲਿਕ ਬੀਟਾ ਓਪਨਸੂਸੇ ਪਰੋਜੈੱਕਟ ਦਾ ਭਾਗ ਹੈ। ਪਰੋਜੈੱਕਟ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ <ulink url=\"http://opensuse.org\"/> ਉੱਤੇ ਉਪਲੱਬਧ ਹੈ।"
+
+#~ msgid "Prerelease Notes: Information relevant for alpha and beta releases."
+#~ msgstr "ਪ੍ਰੀ-ਰੀਲਿਜ਼ ਨੋਟਿਸ: ਐਲਫ਼ਾ ਅਤੇ ਬੀਟਾ ਰੀਲਿਜ਼ ਲਈ ਲੋੜੀਦੀ ਜਾਣਕਾਰੀ।"
+
+#, fuzzy
+#~| msgid "<phrase os=\"slprof\">openSUSE 11.2</phrase> Release Notes"
+#~ msgid "<phrase os=\"slprof\">openSUSE Factory</phrase> Release Notes"
+#~ msgstr "<phrase os=\"slprof\">openSUSE 11.2</phrase> ਰੀਲਿਜ਼ ਨੋਟਿਸ"
+
+#~ msgid "The release notes are under constant development. Download the newest version as part of the Internet test or refer to <ulink url=\"http://www.suse.com/relnotes/i386/openSUSE/11.2/RELEASE-NOTES.en.html\"/>. <phrase role=\"transwarn\">We update the English release notes whenever need arises. This means that translations might temporarily be incomplete.</phrase><phrase role=\"transwarn\">The translations are updated to match later.</phrase>"
+#~ msgstr "ਇਹ ਰੀਲਿਜ਼ ਨੋਟਿਸ ਡਿਵੈਲਪਮੈਂਟ ਦੇ ਅਧੀਨ ਹੀ ਹਨ। ਨਵਾਂ ਵਰਜਨ ਇੰਟਰਨੈੱਟ ਟੈਸਟ ਦੇ ਦੌਰਾਨ ਡਾਊਨਲੋਡ ਕਰੋ ਜਾਂ ਵੇਖੋ <ulink url=\"http://www.suse.com/relnotes/i386/openSUSE/11.2/RELEASE-NOTES.en.html\"/>। <phrase role=\"transwarn\">ਅਸੀਂ ਅੰਗਰੇਜ਼ੀ ਰੀਲਿਜ਼ ਨੋਟਿਸ ਜਦੋਂ ਵੀ ਲੋੜ ਪੈਂਦੀ ਹੈ, ਤਦੇ ਹੀ ਅੱਪਡੇਟ ਕਰ ਦਿੰਦੇ ਹਾਂ। ਇਹ ਸੰਭਵ ਹੈ ਕਿ ਟਰਾਂਸਲੇਸ਼ਨ ਸ਼ਾਇਦ ਕੁਝ ਅਧੂਰੀ ਰਹਿ ਗਈ ਹੋਵੇ।</phrase><phrase role=\"transwarn\">ਟਰਾਂਸਲੇਸ਼ਨ ਨੂੰ ਬਾਅਦ ਵਿੱਚ ਅੱਪਡੇਟ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।</phrase>"
+
+#, fuzzy
+#~| msgid "Configuring Network Connections"
+#~ msgid "Configuring Boot Loader Location and Options"
+#~ msgstr "ਨੈੱਟਵਰਕ ਕੁਨੈਕਸ਼ਨ ਦੀ ਸੰਰਚਨਾ"
+
+#~ msgid "KDE"
+#~ msgstr "KDE"
+
+#, fuzzy
+#~| msgid "Default Route"
+#~ msgid "Default Web Browser"
+#~ msgstr "ਡਿਫਾਲਟ ਰਾਊਟ"
+
+#~ msgid "Update"
+#~ msgstr "ਅੱਪਡੇਟ"
+
+#, fuzzy
+#~| msgid "If you want to get back the previous behavior, set <literal>MAN_POSIXLY_CORRECT=1</literal> in a shell initialization file such as <filename>~/.bashrc</filename>."
+#~ msgid "If you want to keep the old behavior, set the <literal>strictatime</literal> option with the YaST partitioner or directly in <filename>/etc/fstab</filename>."
+#~ msgstr "ਜੇ ਤੁਸੀਂ ਪਿਛਲਾ ਰਵੱਈਆ ਵਾਪਸ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ <literal>MAN_POSIXLY_CORRECT=1</literal> ਨੂੰ <filename>~/.bashrc</filename> ਵਿੱਚ ਇੱਕ ਸ਼ੁਰੂ ਸ਼ੈੱਲ ਫਾਇਲ ਵਿੱਚ ਸੈੱਟ ਕਰੋ।"
+
+#, fuzzy
+#~| msgid "Profile Changes"
+#~ msgid "X.Org Keycode Changes Affects xmodmap Usage"
+#~ msgstr "ਪਰੋਫਾਇਲ ਬਦਲਾਅ"
+
+#, fuzzy
+#~| msgid "Name Server"
+#~ msgid "VMware Server v2"
+#~ msgstr "ਨੇਮ ਸਰਵਰ"
+
+#~ msgid "Prerelease Notes"
+#~ msgstr "ਪ੍ਰੀ-ਰੀਲਿਜ਼ ਨੋਟਿਸ"
+
+#~ msgid "N/A&mdash;Codename openSUSE 11.2"
+#~ msgstr "N/A&mdash;Codename openSUSE 11.2"
+
+#~ msgid "The code name for openSUSE 11.2 is N/A. The boot picture was taken by N/A"
+#~ msgstr "openSUSE 11.2 ਦਾ ਕੋਡ ਨਾਂ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ।ਬੂਟ ਤਸਵੀਰ ਵੀ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ।"
+
+#, fuzzy
+#~| msgid "In the Start-Up Manual, find information about installation and basic system configuration. In the Reference Guide, the system configuration is explained in detail. Additionally, the most important applications are described in the GNOME and KDE User Guides. Detailed information on using AppArmor is provided by the AppArmor Administration Guide."
+#~ msgid "In the Start-Up Manual, find information about installation and basic system configuration. There is also an Installation QuickSart Guide now. In the Reference Guide, the system configuration is explained in detail. Find basic information on GNOME and KDE in the QuickStart Guides. Additionally, the most important applications are described in the Applications, GNOME, and KDE User Guide. Detailed information on security issues is provided by the Security Manual."
+#~ msgstr "ਸਟਾਰਟ-ਅੱਪ (start-up) ਮੈਨੂਅਲ ਵਿੱਚ, ਇੰਸਟਾਲੇਸ਼ਨ ਅਤੇ ਬੇਸਿਲ ਸਿਸਟਮ ਸੰਰਚਨਾ ਬਾਰੇ ਜਾਣਕਾਰੀ ਲਵੋ ਜੀ। ਰੈਫ਼ਰੈਂਸ ਗਾਈਡ ਵਿੱਚ ਸਿਸਟਮ ਸੰਰਚਨਾ ਬਾਰੇ ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਹੈ। ਇਸ ਤੋਂ ਇਲਾਵਾ, ਬਹੁਤ ਹੀ ਖਾਸ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਨੂੰ ਗਨੋਮ ਅਤੇ KDE ਯੂਜ਼ਰ ਗਾਈਡ ਵਿੱਚ ਉਪਲੱਬਧ ਕਰਵਾਇਆ ਗਿਆ ਹੈ। AppArmor ਬਾਰੇ ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਲਈ AppArmor ਪਰਸ਼ਾਸ਼ਨ ਗਾਈਡ ਵੇਖੋ।"
+
+#~ msgid "Update: Changes that are not mentioned in the Reference Guide, Chapter 5."
+#~ msgstr "ਅੱਪਡੇਟ: ਰੈਫ਼ਰੈਂਸ ਗਾਈਡ ਵਿੱਚ ਨਾ ਦਿੱਤੇ ਬਦਲਾਅ, ਕਾਂਡ 5"
+
+#~ msgid "In the Start-Up Manual, find information about installation and basic system configuration. In the Reference Guide, the system configuration is explained in detail. Find basic information on GNOME and KDE in the QuickStart Guides. Detailed information on using AppArmor is provided by the AppArmor Administration Guide."
+#~ msgstr "ਸਟਾਰਟ-ਅੱਪ (start-up) ਮੈਨੂਅਲ ਵਿੱਚ, ਇੰਸਟਾਲੇਸ਼ਨ ਅਤੇ ਬੇਸਿਲ ਸਿਸਟਮ ਸੰਰਚਨਾ ਬਾਰੇ ਜਾਣਕਾਰੀ ਲਵੋ ਜੀ। ਰੈਫ਼ਰੈਂਸ ਗਾਈਡ ਵਿੱਚ ਸਿਸਟਮ ਸੰਰਚਨਾ ਬਾਰੇ ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਹੈ। ਇਸ ਤੋਂ ਇਲਾਵਾ, ਬਹੁਤ ਹੀ ਖਾਸ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਨੂੰ ਗਨੋਮ ਅਤੇ KDE ਯੂਜ਼ਰ ਗਾਈਡ ਵਿੱਚ ਉਪਲੱਬਧ ਕਰਵਾਇਆ ਗਿਆ ਹੈ। AppArmor ਬਾਰੇ ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਲਈ AppArmor ਪਰਸ਼ਾਸ਼ਨ ਗਾਈਡ ਵੇਖੋ।"
+
+#~ msgid "Unable to Detect Display with Lid Closed"
+#~ msgstr "Lid ਬੰਦ ਕਰਨ ਨਾਲ ਡਿਸਪਲੇਅ ਖੋਜਣ ਲਈ ਅਸਮਰੱਥ"
+
+#~ msgid "During the installation YaST resp. SaX2 are trying to detect displays and determine the display size and resolution. If you are installing on a notebook with the lid closed it is not be possible to detect the display. To avoid this problem it is highly recommended to keep the lid open during the installation."
+#~ msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਦੇ ਦੌਰਾਨ YaST ਹੈ। SaX2 ਡਿਸਪਲੇਅ ਖੋਜਣ ਅਤੇ ਡਿਸਪਲੇਅ ਸਾਈਜ਼ ਅਤੇ ਰੈਜ਼ੋਲੂਸ਼ਨ ਪਤਾ ਲਗਾਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰਦੀ ਹੈ। ਜੇ ਤੁਸੀਂ ਇੱਕ ਨੋਟਬੁੱਕ ਉੱਤੇ ਇੰਸਟਾਲ ਕਰ ਰਹੇ ਹੋ, ਜਿਸ ਲਈ lid ਬੰਦ ਹੈ ਤਾਂ ਡਿਸਪਲੇਅ ਦੀ ਖੋਜ ਕਰਨ ਸੰਭਵ ਨਹੀਂ ਹੈ। ਇਸ ਸਮੱਸਿਆ ਤੋਂ ਬਚਾਅ ਲਈ ਇੰਸਟਾਲੇਸ਼ਨ ਦੇ ਦੌਰਾਨ lid ਨੂੰ ਖੁੱਲ੍ਹਾ ਰੱਖਣ ਦੀ ਜ਼ੋਰਦਾਰ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।"
+
+#~ msgid "If the detection failed, start YaST and click \"Hardware\" -&gt; \"Graphics Card and Monitor\". Then configure the display manually."
+#~ msgstr "ਜੇ ਖੋਜ ਫੇਲ੍ਹ ਰਹੇ ਤਾਂ, YaST ਨੂੰ ਚਲਾਓ ਅਤੇ \"ਹਾਰਡਵੇਅਰ\" -&gt; \"ਗਰਾਫਿਕਸ ਕਾਰਡ ਅਤੇ ਮਾਨੀਟਰ\" ਉੱਤੇ ਕਲਿੱਕ ਕਰੋ। ਤਦ ਡਿਸਪਲੇਅ ਦੀ ਸੰਰਚਨਾ ਖੁਦ ਕਰੋ।"
+
+#~ msgid "Detecting Lenovo ThinkPad Laptops"
+#~ msgstr "ਲਿਨੋਵੋ ਥਿਕਪੈਂਡ ਲੈਪਟਾਪ ਖੋਜ"
+
+#~ msgid "Lenovo ThinkPad laptops have special code in the MBR (master boot record) because of the \"Blue ThinkVantage button\" functionality. If detecting and preparing it properly fails, it might be necessary to restore the boot sector."
+#~ msgstr "ਲਿਨੋਵੋ ਥਿਕਪੈਂਡ ਲੈਪਟਾਪ ਵਿੱਚ MBR (ਮਾਸਟਰ ਬੂਟ ਰਿਕਾਰਡ) ਵਿੱਚ ਖਾਸ ਕੋਡ ਹੈ, ਕਿਉਂਕਿ \"ਨੀਲਾ ਥਿੰਕਵਾਟੇਡ ਬਟਨ\" ਸਹੂਲਤ ਦਿੱਤੀ ਗਈ ਹੈ। ਖੋਜ ਅਤੇ ਤਿਆਰ ਦੌਰਾਨ ਇਹ ਫੇਲ੍ਹ ਹੋ ਜਾਵੇ ਤਾਂ ਇਸ ਨੂੰ ਬੂਟ ਸੈਕਟਰ ਨੂੰ ਰੀਸਟੋਰ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
+
+#~ msgid "Displaying Man-Pages With the Same Name"
+#~ msgstr "ਇੱਕੋ ਨਾਂ ਨਾਲ ਮੈਨ-ਪੇਜ਼ ਵੇਖਣੇ"
+
+#~ msgid "By default, Network Manager is enabled and manages network connections. If you want configure it, you must use a Network Manager applet to change the settings. As long as Network Manager is running, YaST refuses to configure the network settings, because YaST and Network Manager have different sets of configuration options."
+#~ msgstr "ਡਿਫਾਲਟ ਰੂਪ ਵਿੱਚ, ਨੈੱਟਵਰਕ ਮੈਨੇਜਰ ਚਾਲੂ ਹੈ ਅਤੇ ਨੈੱਟਵਰਕ ਕੁਨੈਕਸ਼ਨਾਂ ਦਾ ਪਰਬੰਧ ਕਰਦਾ ਹੈ। ਜੇ ਤੁਸੀਂ ਇਸ ਦੀ ਸੰਰਚਨਾ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਤੁਹਾਨੂੰ ਨੈੱਟਵਰਕ ਮੈਨੇਜਰ ਐਪਲਿਟ ਵਿੱਚ ਸੈਟਿੰਗਾਂ ਨੂੰ ਬਦਲਣਾ ਪਵੇਗਾ। ਜਦੋਂ ਤੱਕ ਨੈੱਟਵਰਕ ਮੈਨੇਜਰ ਚੱਲਦਾ ਹੈ ਤਾਂ YaST ਨੈੱਟਵਰਕ ਸੈਟਿੰਗ ਦੀ ਸੰਰਚਨਾ ਤੋਂ ਇਨਕਾਰੀ ਹੈ, ਕਿਉਂਕਿ YaST ਅਤੇ ਨੈੱਟਵਰਕ ਮੈਨੇਜਰ ਵਿੱਚ ਸੰਰਚਨਾਂ ਚੋਣਾਂ ਲਈ ਵੱਖ ਵੱਖ ਸੈੱਟ ਹਨ।"
+
+#~ msgid "netconfig Utility to Apply Additional Network Settings"
+#~ msgstr "ਹੋਰ ਨੈੱਟਵਰਕ ਸੈਟਿੰਗ ਲਾਗੂ ਕਰਨ ਲਈ netconfig ਸਹੂਲਤ"
+
+#~ msgid "In the shipped manuals, <command>modify_resolvconf</command> is erroneously referenced. We will correct it in the next release."
+#~ msgstr "ਦਿੱਤੇ ਮੈਨੁਅਲ ਵਿੱਚ, <command>modify_resolvconf</command> ਗਲਤੀ ਨਾਲ ਦਿੱਤੀ ਗਈ ਹੈ। ਅਸੀਂ ਅਗਲੇ ਰੀਲਿਜ਼ ਵਿੱਚ ਇਸ ਦਾ ਸੁਧਾਰ ਕਰਾਂਗੇ।"
+
+#~ msgid "WLAN Channels 12, 13, and 14 Disabled"
+#~ msgstr "WLAN ਚੈਨਲ 12, 13, ਅਤੇ 14 ਆਯੋਗ ਹਨ"
+
+#~ msgid "By default, the WLAN channels 12, 13, and 14 are disabled because it is not allowed to use these channels everywhere. If you want to use them in your region, see <ulink url=\"http://en.opensuse.org/Tracking_down_wireless_problems\"/> for more information."
+#~ msgstr "ਡਿਫਾਲਟ ਰੂਪ ਵਿੱਚ WLAN ਚੈਨਲ 12, 13 ਅਤੇ 14 ਨੂੰ ਆਯੋਗ ਕੀਤਾ ਗਿਆ ਹੈ, ਕਿਉਂਕਿ ਇਹਨਾਂ ਦੀ ਵਰਤੋਂ ਹਰੇਕ ਥਾਂ ਉੱਤੇ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਜੇ ਤੁਸੀਂ ਆਪਣੇ ਖੇਤਰ ਵਿੱਚ ਇੰਨ੍ਹਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ  <ulink url=\"http://en.opensuse.org/Tracking_down_wireless_problems\"/> ਵੇਖੋ।"
+
+#~ msgid "N/A&mdash;Codename openSUSE 11.1beta"
+#~ msgstr "N/A&mdash;ਕੋਡ-ਨਾਂ openSUSE 11.1ਬੀਟਾ"
+
+#~ msgid "The code name for openSUSE 11.1beta is N/A. The boot picture was taken by N/A"
+#~ msgstr "openSUSE 11.1ਬੀਟਾ ਦਾ ਕੋਡ ਨਾਂ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ। ਬੂਟ ਤਸਵੀਰ ਵੀ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ।"

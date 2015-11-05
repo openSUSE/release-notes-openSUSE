@@ -1,0 +1,668 @@
+# translation of RELEASE-NOTES.wa.po_[PqrAXb].po to Walloon
+# Translation into the walloon language.
+# Copyright (C) 2007 SUSE Linux Products GmbH.
+#
+# Pablo Saratxaga <pablo@walon.org>, 2001, 2004.
+# Jean Cayron <jean.cayron@gmail.com>, 2007, 2008, 2009.
+# Jean Cayron <jean.cayron@tele2allin.be>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: RELEASE-NOTES.wa.po_[PqrAXb]\n"
+"POT-Creation-Date: 2015-10-09 15:38+0200\n"
+"PO-Revision-Date: 2009-11-01 15:52+0100\n"
+"Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
+"Language-Team: Walloon <linux-wa@walon.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 0.3\n"
+
+#: xml/release-notes.xml:10(title)
+#, fuzzy
+msgid "Release Notes"
+msgstr "Notes del pré-modêye"
+
+#: xml/release-notes.xml:12(releaseinfo)
+msgid "@VERSION@"
+msgstr ""
+
+#: xml/release-notes.xml:13(productname)
+#, fuzzy
+msgid "openSUSE Leap"
+msgstr "Pordjet openSUSE"
+
+#: xml/release-notes.xml:14(productnumber)
+msgid "42.1"
+msgstr ""
+
+#: xml/release-notes.xml:17(para)
+msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
+msgstr ""
+
+#. Previous Release Notes
+#: xml/release-notes.xml:51(para)
+msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+msgstr ""
+
+#: xml/release-notes.xml:90(title)
+msgid "Installation"
+msgstr "Astalaedje"
+
+#: xml/release-notes.xml:102(title)
+msgid "UEFI&mdash;Unified Extensible Firmware Interface"
+msgstr ""
+
+#: xml/release-notes.xml:103(para)
+msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
+msgstr ""
+
+#: xml/release-notes.xml:111(para)
+msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
+msgstr ""
+
+#. bnc#850056
+#: xml/release-notes.xml:128(title)
+msgid "UEFI, GPT, and MS-DOS Partitions"
+msgstr ""
+
+#: xml/release-notes.xml:129(para)
+msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
+msgstr ""
+
+#: xml/release-notes.xml:135(para)
+msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
+msgstr ""
+
+#: xml/release-notes.xml:144(para)
+msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
+msgstr ""
+
+#: xml/release-notes.xml:150(para)
+msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
+msgstr ""
+
+#: xml/release-notes.xml:159(title)
+#, fuzzy
+msgid "System Upgrade"
+msgstr "Metaedje a livea do sistinme avou zypper"
+
+#: xml/release-notes.xml:166(title)
+msgid "General"
+msgstr "Djenerå"
+
+#: xml/release-notes.xml:168(title)
+msgid "No firewall by default after installation from Live CD"
+msgstr ""
+
+#: xml/release-notes.xml:169(para)
+msgid "When installing from the Live CD no firewall will be active by default."
+msgstr ""
+
+#: xml/release-notes.xml:173(para)
+msgid "Enable the firewall using YaST or with:"
+msgstr ""
+
+#: xml/release-notes.xml:176(screen)
+#, no-wrap
+msgid ""
+"systemctl enable SuSEfirewall2\n"
+"systemctl start SuSEfirewall2"
+msgstr ""
+
+#: xml/release-notes.xml:182(title)
+msgid "Technical"
+msgstr "Tecnike"
+
+#: xml/release-notes.xml:189(title)
+msgid "Miscellaneous"
+msgstr ""
+
+#. bnc#809347
+#: xml/release-notes.xml:196(title)
+#, fuzzy
+msgid "More Information and Feedback"
+msgstr "Informåcion sol memwere"
+
+#: xml/release-notes.xml:200(para)
+msgid "Read the READMEs on the CDs."
+msgstr ""
+
+#: xml/release-notes.xml:203(para)
+msgid "Get detailed changelog information about a particular package from the RPM:"
+msgstr ""
+
+#: xml/release-notes.xml:204(screen)
+#, no-wrap
+msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+msgstr ""
+
+#: xml/release-notes.xml:205(para)
+msgid "&lt;FILENAME&gt;. is the name of the RPM."
+msgstr ""
+
+#: xml/release-notes.xml:208(para)
+msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
+msgstr ""
+
+#: xml/release-notes.xml:212(para)
+msgid "Find more information in the <filename>docu</filename> directory on the DVD."
+msgstr ""
+
+#: xml/release-notes.xml:215(para)
+msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
+msgstr ""
+
+#: xml/release-notes.xml:220(para)
+msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
+msgstr ""
+
+#: xml/release-notes.xml:225(para)
+#, fuzzy
+msgid "Copyright © 2015 SUSE LLC"
+msgstr "Copyright © 2009 Novell, Inc."
+
+#: xml/release-notes.xml:227(para)
+msgid "Thanks for using openSUSE."
+msgstr ""
+
+#: xml/release-notes.xml:228(para)
+msgid "The openSUSE Team."
+msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: xml/release-notes.xml:0(None)
+msgid "translator-credits"
+msgstr "Djan Cayron <jean.cayron@gmail.com>, 2009."
+
+#, fuzzy
+#~| msgid "Start Windows"
+#~ msgid "BtrFS and Windows 7"
+#~ msgstr "Enonder Windows"
+
+#, fuzzy
+#~| msgid "FTP Installation"
+#~ msgid "NET Installation Using Wifi"
+#~ msgstr "Astalaedje FTP"
+
+#, fuzzy
+#~| msgid "No Authorization"
+#~ msgid "Modem Authorization After Suspend"
+#~ msgstr "Pont d' otorijhåcion"
+
+#, fuzzy
+#~ msgid "<phrase os=\"slprof\">openSUSE 13.1</phrase> Release Notes"
+#~ msgstr "<phrase os=\"slprof\">openSUSE 10.3</phrase>Notes del modêye"
+
+#, fuzzy
+#~ msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included as the <filename>fdl.txt</filename> file."
+#~ msgstr "Vos avoz l' droet di copyî, distribouwer eyet/ou candjî çou documint sol les mots del Licince di Documintåcion Libe GNU, modêye 1.2 oudonbén telminme kéne pus nouve modêye eplaideye pal Free Software Foundation avou pont d' candjante seccion, pont d' tecse di covteure oudonbén di drî d' covteure. Ene copeye del licince est metowe e fitchî <filename>fdl.txt</filename>."
+
+#~ msgid "These release notes cover the following areas:"
+#~ msgstr "Ces notes del modêye covrèt les dominnes shuvants:"
+
+#, fuzzy
+#~ msgid "<xref linkend=\"installation\"/>: Read this if you want to install the system from scratch."
+#~ msgstr "Astalaedje : Léjhoz çouci si vs voloz astaler l' sistinme a pårti d' rén."
+
+#, fuzzy
+#~ msgid "<xref linkend=\"general\"/>: Information that everybody should read."
+#~ msgstr "Djenerå: Informåcions ki tot l' monde duvreut lére."
+
+#, fuzzy
+#~ msgid "<xref linkend=\"upgrade\"/>: Issues related to the process if you run a system upgrade from the previous release to this openSUSE version."
+#~ msgstr "Metaedje a djoû : Problinmes ki sont loyîs å processus di metaedje a djoû a pårti del dierinne modêye d' openSUSE viè cisse modêye ci."
+
+#, fuzzy
+#~ msgid "<xref linkend=\"technical\"/>: This section contains a number of technical changes and enhancements for the experienced user."
+#~ msgstr "Tecnike: I gn a dins cisse seccion sacwants tecnikes candjmints eyet des improuvmints pol sipepieus uzeu."
+
+#, fuzzy
+#~ msgid "For Detailed Installation Information"
+#~ msgstr "Patron di tecse d' astalaedje"
+
+#~ msgid "openSUSE Documentation"
+#~ msgstr "Documintåcion d' openSUSE"
+
+#, fuzzy
+#~| msgid "install"
+#~ msgid "yast2-dirinstall"
+#~ msgstr "astaler"
+
+#, fuzzy
+#~| msgid "Download the EPUB files from <ulink url=\"http://en.opensuse.org/Documentation\"/>."
+#~ msgid "For more information, see <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
+#~ msgstr "Aberwetez les fitchîs EPUB di <ulink url=\"http://en.opensuse.org/Documentation\"/>."
+
+#, fuzzy
+#~| msgid "Network Interface"
+#~ msgid "Duplicated Network Interfaces"
+#~ msgstr "Eterface di rantoele"
+
+#, fuzzy
+#~| msgid "Version 1"
+#~ msgid "Samba Version 4.1"
+#~ msgstr "Modêye 1"
+
+#, fuzzy
+#~| msgid "Configure now"
+#~ msgid "Configuring Postfix"
+#~ msgstr "Apontyî sol côp"
+
+#, fuzzy
+#~| msgid "Other Versions"
+#~ msgid "Apache Version 2.4"
+#~ msgstr "Ôtès modêyes"
+
+#, fuzzy
+#~| msgid "Network Administration"
+#~ msgid "No Network after Installation"
+#~ msgstr "Manaedjmint del rantoele"
+
+#, fuzzy
+#~ msgid "<emphasis>Reference</emphasis> covers administration, and system configuration in detail and explains how to set up various network services."
+#~ msgstr "I gn a e « Reference Guide » des spepieusès informåcions sol disployaedje, li manaedjmint eyet l' apontiaedje do sistinme eyet des esplikêyes so comint apontyî sacwants siervices rantoele."
+
+#, fuzzy
+#~| msgid "The Security Guide introduces basic concepts of system security, covering both local and network security aspects."
+#~ msgid "The <emphasis>Security Guide</emphasis> introduces basic concepts of system security, covering both local and network security aspects."
+#~ msgstr "Li « Security Guide » adrove les atuzes di båze del såvrité do sistinme, e djåzant d' ambedeus li såvrité coinrece et del rantoele."
+
+#, fuzzy
+#~| msgid "KNetworkManager"
+#~ msgid "To enable NetworkManager, use:"
+#~ msgstr "KManaedjeuRantoele"
+
+#, fuzzy
+#~| msgid "KNetworkManager"
+#~ msgid "To disable NetworkManager, use:"
+#~ msgstr "KManaedjeuRantoele"
+
+#, fuzzy
+#~ msgid "Note: systemd does not honor obsolete sysconfig variables in <filename>/etc/sysconfig/cron</filename> such as <literal>TMP_DIRS_TO_CLEAR</literal>."
+#~ msgstr "Drovîz l' fitchî <filename>/etc/sysconfig/yast2</filename> come <literal>root</literal>."
+
+#, fuzzy
+#~ msgid "Version:"
+#~ msgstr "Modêye"
+
+#, fuzzy
+#~| msgid "YaST LDAP Server Configuration"
+#~ msgid "YaST AppArmor Configuration Module"
+#~ msgstr "Apontiaedje do sierveu LDAP dins YaST"
+
+#, fuzzy
+#~| msgid "Network Interface"
+#~ msgid "NetworkManager Command Line Interface"
+#~ msgstr "Eterface di rantoele"
+
+#, fuzzy
+#~| msgid "This is just the initial version of the release notes for <phrase os=\"slprof\">openSUSE 11.2</phrase>."
+#~ msgid "This is just the initial version of the release notes for the forthcoming <phrase os=\"slprof\">openSUSE 11.4</phrase>."
+#~ msgstr "Çouci n' est kel prumire modêye des notes del modêye po l' <phrase os=\"slprof\">openSUSE 11.2</phrase>."
+
+#, fuzzy
+#~| msgid "The new Installation QuickStart guides you step-by-step through the installation process."
+#~ msgid "Installation Quick Start guides you step-by-step through the installation process."
+#~ msgstr "Li novea guide « QuickStart » d' astalaedje vos moenne etape après etape totavå l' processus d' astalaedje."
+
+#, fuzzy
+#~| msgid "In the Start-Up Manual, find information about installation and basic system configuration."
+#~ msgid "In Start-Up, find information about installation and basic system configuration."
+#~ msgstr "Ezès esplikêyes « Start-Up Manual » vos trovroz les pondants et les djondants so l' astalaedje eyet l' apontiaedje di båze do sistinme."
+
+#, fuzzy
+#~| msgid "The KDE and GNOME Quickstart guides give a short introduction to the desktops and some key applications running on it."
+#~ msgid "KDE and GNOME Quick Start give a short introduction to the desktops and some key applications running on it."
+#~ msgstr "Les guides « Quickstart » di KDE eyet GNOME vos dinnut on court adrovaedje so les scribannes eyet kékès impôrtants programes ki rotnut ddins."
+
+#, fuzzy
+#~| msgid "The KDE and GNOME User Guides guide you through using and configuring the desktops and help you perform key tasks."
+#~ msgid "The KDE and GNOME User Guide guide you through using and configuring the desktops and help you perform key tasks."
+#~ msgstr "Les Guides po l' uzeu di KDE eyet GNOME vos moennnut totavå l' eployaedje eyet l' apontiaedje des scribannes eyet vs aide a fé des impôrtantès bouyes."
+
+#~ msgid "The Application Guide introduces you to the key desktop applications such as browsers. e-mail clients, office applications and collaboration tools as well as graphics and multimedia applications."
+#~ msgstr "L' « Application Guide » vos adrove les mwaisses programes do scribanne come les betchteus, cliyints emile, programes di burotike eyet usteyes pos ovrer eshonne mins ossu les programes grafikes eyet multimedia."
+
+#~ msgid "Prerelease Notes: Information relevant for alpha and beta releases."
+#~ msgstr "Notes del pré-modêye: Informåcion boune po les modêyes alfa eyet beta."
+
+#, fuzzy
+#~| msgid "<phrase os=\"slprof\">openSUSE 11.2</phrase> Release Notes"
+#~ msgid "<phrase os=\"slprof\">openSUSE Factory</phrase> Release Notes"
+#~ msgstr "<phrase os=\"slprof\">openSUSE 11.2</phrase>Notes del modêye"
+
+#~ msgid "The release notes are under constant development. Download the newest version as part of the Internet test or refer to <ulink url=\"http://www.suse.com/relnotes/i386/openSUSE/11.2/RELEASE-NOTES.en.html\"/>. <phrase role=\"transwarn\">We update the English release notes whenever need arises. This means that translations might temporarily be incomplete.</phrase><phrase role=\"transwarn\">The translations are updated to match later.</phrase>"
+#~ msgstr "Les notes del modêye sont tot l' tins e diswalpaedje. Aberwetez l' pus nouve modêye come saye del Daegntoele oudonbén voeyoz <ulink url=\"http://www.suse.com/relnotes/i386/openSUSE/11.2/RELEASE-NOTES.wa.html\"/>. <phrase role=\"transwarn\">Nos metans a djoû les notes del modêye en inglès ossu sovint ki dandjî. Çoula vout dire kel ratournaedje ni pôreut nén esse pår fini tot l' tins.</phrase><phrase role=\"transwarn\">Les ratournaedjes sont metous a djoû pos aler pus tård.</phrase>"
+
+#~ msgid "Configuring Boot Loader Location and Options"
+#~ msgstr "Apontiaedje di l' eplaeçmint do Tcherdjeu d' enondaedje sistinme eyet tchuzes"
+
+#~ msgid "When setting the Boot Loader Location in the installation proposal, also set the Boot Loader Options. In the options adjust updates of the other system areas of your disk, which may influence the ability of openSUSE and the other installed systems to boot."
+#~ msgstr "Cwand vs metoz a pont l' eplaeçmint do tcherdjeu d' enondaedje sistinme el propôzicion d' astalaedje, definixhoz les tchuzes do tcherdjeu d' enondaedje sistinme eto. Ezès tchuzes, apontyîz les metaedjes a djoû des ôtes redjons sistinme di vosse plake, çou ki pôreut fé k' openSUSE eyet les ôtes sistinmes d' astalés pôrént sawè s' enonder ou nén."
+
+#~ msgid "If the proposed boot loader configuration reports a warning, carefully review the boot loader configuration to avoid breaking the booting of other installed systems to ensure that openSUSE will boot."
+#~ msgstr "Si l' apontiaedje do tcherdjeu d' enondaedje propozé rind en adviertixhmint, riwaitîz spepieuzmint l' apontiaedje do tcherdjeu d' enondaedje po houwer d' siketer l' enondaedje d' ôtes sistinmes d' astalés ey esse seur k' openSUSE s' enondrè."
+
+#~ msgid "openSUSE Documentation as E-Books (EPUB)"
+#~ msgstr "Documintåcion d' openSUSE en E-Books (EPUB)"
+
+#~ msgid "In addition to the traditional output formats PDF and HTML, the openSUSE system Documentation is now available as e-books in the EPUB format. EPUB (electronic publication) is a free and open e-book standard. For more information about EPUB, see <ulink url=\"http://en.wikipedia.org/wiki/EPUB\"/>."
+#~ msgstr "Di pus ki les cognes di rexhowe tradicioneles PDF eyet HTML, li Documintåcion do sistinme openSUSE est asteure disponibe el cogne EPUB. EPUB (eplaidaedje electronike) est on standård d' e-book libe eyet drovou. Po ndè sawè dpus åd fwait d' EPUB, alez vey <ulink url=\"http://en.wikipedia.org/wiki/EPUB\"/>."
+
+#~ msgid "Starting the OpenSSH SSH Daemon (sshd)"
+#~ msgstr "Enondaedje do démon SSH OpenSSH (sshd)"
+
+#~ msgid "The OpenSSH SSH daemon (<command>sshd</command>) is the daemon program for ssh. It is no longer started by default at system boot. If you want to access your computer with <command>ssh</command>, you must enable it as follows:"
+#~ msgstr "Li démon SSH OpenSSH (<command>sshd</command>) est l' programe démon po ssh. I n' est pus enondé come prémetou a l' enondaedje do sistinme. Si vs voloz moussî dins vosse copiutrece avou <command>ssh</command>, vos l' divoz mete ene alaedje come çouci :"
+
+#~ msgid "Start YaST and open the runlevel editor (<guimenu>System</guimenu> &gt; <guimenu>System Services (Runlevel)</guimenu>)."
+#~ msgstr "Enondez YaST eyet drovi l' aspougneu des liveas d' enondaedje (<guimenu>Sistinme</guimenu> &gt; <guimenu>Siervices do sistinme (Livea d' enondaedje)</guimenu>)."
+
+#~ msgid "In the YaST runlevel editor enable <guimenu>Expert Mode</guimenu> and select <guimenu>sshd</guimenu>."
+#~ msgstr "E l' aspougneu des liveas d' enondaedje metoz en alaedje <guimenu>Môde sipepieus</guimenu> eyet tchoezi <guimenu>sshd</guimenu>."
+
+#~ msgid "For example, enable it for runlevel 3 and 5. Then press <guimenu>Start</guimenu> and <guimenu>OK</guimenu>."
+#~ msgstr "Metans, metoz l' en alaedje po les liveas d' enondaedje 3 et 5. Adon-pwis tchôkîz so <guimenu>Enonder</guimenu> eyet <guimenu>I va</guimenu>."
+
+#~ msgid "YaST and X.Org Configuration (Keyboard, Mouse, Graphics Board, and Monitor)"
+#~ msgstr "YaST eyet l' apontiaedje X.Org (taprece, sori, tåvlete grafike eyet waitroûle)"
+
+#~ msgid "In the past, YaST offered an configuration interface for the graphical desktop (X.org) such as keyboard, mouse, graphics board, and monitor. During the installation a suitable <filename>xorg.conf</filename> was created."
+#~ msgstr "Dins l' tins, YaST ofreut en eterface d' apontiaedje pol sicribanne grafike (X.org) come li taprece, li sori, li tåvlete grafike eyet l' waitroûle. Sol tins d' l' astalaedje on <filename>xorg.conf</filename> k' aléve comifåt esteut askepyî."
+
+#~ msgid "In most cases it is no longer needed because the Xserver is now able to automatically configure the system. If it fails for your system, try the following steps:"
+#~ msgstr "Dins les troes cwårts des côps on nd a pus mezåjhe paskel sierveu X sait asteure apontyî otomaticmint l' sistinme. Si ça fwait berwete po vosse sistinme, sayîz les etapes shuvantes :"
+
+#~ msgid "Check whether an old <filename>/etc/X11/xorg.conf</filename> file exists. If so, move it away and start your desktop again."
+#~ msgstr "Verifyîz s' on vî fitchî <filename>/etc/X11/xorg.conf</filename> egzistêye. S' oyi, oistez l' eyet renonder l' sicribanne."
+
+#~ msgid "If it still does not work, run <command>sax2</command> from the command line and execute the configuration procedure."
+#~ msgstr "Si ça n' rote va nén, enondez <command>sax2</command> a pårti del roye di cmande eyet enonder l' procedeure d' apontiaedje."
+
+#~ msgid "To adjust hardware components to your personal needs, start the GNOME desktop control center or Configure Desktop in KDE, and configure your devices such as the mouse or keyboard. The display configuration dialogs also let you configure multiple monitor setups. To configure multiple monitors, in other desktop environments, use xrandr."
+#~ msgstr "Po rapontyî les componints di l' éndjolreye sorlon çou k' vos avoz dandjî vos-ôtes, enondez l' cinte di controle do scribanne GNOME oudonbén Apontiaedje do sistinme dins KDE eyet apontyî vos éndjins come li sori oudonbén l' taprece. Les purneas d' apontiaedje do håynaedje vos leyèt ossu apontyî des apontiaedjes avou sacwantès waitroûles. Pos apontyî sacwantès waitroûles dins d' ôtes evironmints d' sicribanne, siervoz vs di xrandr."
+
+#~ msgid "For more information, see the Desktop User Guides shipping with openSUSE. They are also available from http://en.opensuse.org/Documentation"
+#~ msgstr "Po ndè saveur di pus, alez vey les « Desktop User Guides » metous dins openSUSE. On les sait ossu aveur a pårti di http://en.opensuse.org/Documentation"
+
+#~ msgid "KDE"
+#~ msgstr "KDE"
+
+#~ msgid "Default Web Browser"
+#~ msgstr "Prémetou betchteu waibe"
+
+#~ msgid "Firefox with special settings is now the KDE default browser in openSUSE. Users who want to prefer Konqueror as the KDE default browser can configure KDE accordingly (applications menu &gt; 'Configure desktop'). There in the 'Default Applications' configuration module, select 'Web Browser' and change the radio button back to 'in an application based on the contents of the URL'. Desktop and panel Firefox icons can be replaced by deleting the Firefox icons and dragging the Konqueror icon from the applications menu to their place."
+#~ msgstr "Firefox avou des speciålès tchuzes est asteure li prémetou betchteu KDE dins openSUSE. Les uzeus k' eploynut pus rade Konqueror come prémetou betchteu dins KDE, savnut l' apontyî po ça (dressêye des programes &gt; « Apontiaedje do sistinme »). Vaila, e module d' apontiaedje « Prémetous programes », tchoezi « Betchteu waibe » eyet rcandjî l' boton radio e « dins on programe båzé so ç' k' i gn a dins l' adresse ». Les imådjetes Firefox do scribanne et di scriftôr polnut esse ricandjeyes e oistant ls imådjetes di Firefox eyet bodjî et saetchî l' imådjete Konqueror del dressêye des programes viè zeles."
+
+#~ msgid "KDE3"
+#~ msgstr "KDE3"
+
+#~ msgid "KDE3 is no longer officially shipped with openSUSE. KDE4 is now the only supported KDE version. For information about KDE3 on openSUSE and the possibility of installing it from an unsupported repository, see <ulink url=\"http://en.opensuse.org/KDE3\"/> ."
+#~ msgstr "KDE3 n' est pus metou oficirmint dins openSUSE. KDE4 est asteure li seule modêye di KDE sopoirtêye. Po des informåcions åd fwait di KDE3 eyet l' possibilité d' l' astaler a pårti d' on depot nén sopoirté, alez vey <ulink url=\"http://en.opensuse.org/KDE3\"/> ."
+
+#~ msgid "Strigi/Nepomuk"
+#~ msgstr "Strigi/Nepomuk"
+
+#~ msgid "The Strigi indexing service and Nepomuk semantic desktop service are not enabled by default in KDE in openSUSE 11.2. To explicitly enable them go to KDE configuration (applications menu, 'Configure desktop'), the 'Advanced' tab, and in the 'Desktop Search' configuration module enable the services you wish to run."
+#~ msgstr "Li siervice d' indecsaedje Strigi eyet l' siervice di scribanne semantike Nepomuk sont-st asteure prémetou en alaedje dins KDE dins openSUSE 11.2. Po les mete en alaedje al mwin, alez dins l' apontiaedje di KDE (dressêye des programes, « Apontiaedje do sistinme »), li linwete « Sipepieus » eyet dins l' module d' apontiaedje « Cweraedje sol sicribanne » mete en alaedje les siervices ki vs voloz enonder."
+
+#~ msgid "Thunderbird"
+#~ msgstr "Thunderbird"
+
+#~ msgid "With openSUSE 11.2 we ship Thunderbird 3.0 beta4, which will go final shortly after the 11.2 release."
+#~ msgstr "Nos metans dins openSUSE Thunderbird 3.0 beta4 ki srè fini bén rade après l' rexhowe del modêye 11.2."
+
+#, fuzzy
+#~| msgid "If you still depend on add-ons, which are only available for Thunderbird 2.0, you can install this version from the mozilla buildservice repostitory at <ulink url=\"http://download.opensuse.org\"/>. But note, Thunderbird 2.0 will be only supported for very short period of time, once version 3.0 is available."
+#~ msgid "If you still depend on add-ons, which are only available for Thunderbird 2.0, you can install this version from the mozilla buildservice repository at <ulink url=\"http://software.opensuse.org/ymp/mozilla:legacy/openSUSE_11.2/MozillaThunderbird.ymp\"/>. But note, Thunderbird 2.0 will be only supported for very short period of time, once version 3.0 is available."
+#~ msgstr "Si vs a avoz co vraiymint dandjî d' rawete k' i gn a k' pol Thunderbird 2.0, vos ploz astaler cisse modêye la a pårti do depot mozilla buildservice a <ulink url=\"http://download.opensuse.org\"/>. Mins notez k' Thunderbird 2.0 n' serè sopoirté k' pos on court tins après kel modêye 3.0 soeye disponibe."
+
+#~ msgid "Update"
+#~ msgstr "Metaedje a djoû"
+
+#~ msgid "If you update with <command>zypper dup</command>, packages might get restarted during the update process. It can happen that the restart does not succeed before you adjust the config files. This is especially critical if your system relies on services needed for downloading the update packages, e.g. a local proxy (squid) on the machine you update."
+#~ msgstr "Si vs metoz a djoû avou <command>zypper dup</command>, les pacaedjes pôrént esse renondés sol tins do processus di metaedje a djoû. I s' pout passer kel renondaedje ni våye nén divant k' vos apontyîz les fitchîs d' apontiaedje. C' est mo critike si vosse sistinme ripoize so des siervices k' ons a mezåjhe pos aberweter les pacaedjes di metaedje a djoû, metans on procsi coinrece (squid) so l' éndjole ki vs metoz a djoû."
+
+#~ msgid "Set <literal>commit.downloadMode = DownloadInAdvance</literal> in <filename>/etc/zypp/zypp.conf</filename> so that everything is downloaded first, before the packages get installed. The download transaction needs a huge amount of space on the <filename>/var</filename> partition to store all the software packages."
+#~ msgstr "Metoz <literal>commit.downloadMode = DownloadInAdvance</literal> dins <filename>/etc/zypp/zypp.conf</filename> po k' tot soeye aberweté aprume divant k' les pacaedjes soeynuxhe astalés. Li tranzaccion d' aberwetaedje a dandjî d' ene foû grande plaece sol pårticion <filename>/var</filename> po wårder tos les pacaedjes des programes."
+
+#~ msgid "New Samba Password Configuration Back-End: <command>tdbsam</command>"
+#~ msgstr "Novea programe fondmint d' apontiaedje des sicrets da Samba : <command>tdbsam</command>"
+
+#~ msgid "The new Samba password configuration back-end is <literal>tdbsam</literal>. Previous Samba packages shipped with openSUSE 11.1 and earlier were using <command>smbpasswd</command> as the default <literal>passdb backend</literal>. It was not explicitly set in the shipped <filename>/etc/samba/smb.conf</filename> configuration file. With this openSUSE release two changes are introduced:"
+#~ msgstr "Li novea programe fondmint d' apontiaedje des sicrets da Samba est <literal>tdbsam</literal>. Les pcaedjes metous avou openSUSE 11.1 eyet dvant eployént <command>smbpasswd</command> come prémetou <literal>passdb backend</literal>. Ça n' esteut nén dit clairmint e fitchî d' apontiaedje <filename>/etc/samba/smb.conf</filename> diné. Avou cisse modêye d' openSUSE, deus candjmints arivnut :"
+
+#~ msgid "The new default inherited from source code and if not set otherwise is <command>tdbsam</command>."
+#~ msgstr "Li novea prémetou vént do côde sourdant et s' i n' est nén defini est <command>tdbsam</command>."
+
+#~ msgid "The new default is also explicitly set in <filename>smb.conf</filename>."
+#~ msgstr "Li novea prémetou est ossu bén defini dins <filename>smb.conf</filename>."
+
+#~ msgid "If you have modified <filename>smb.conf</filename> on openSUSE 11.1 or earlier, the update process will install <filename>smb.conf.rpmnew</filename> and keep your old configuration."
+#~ msgstr "Si vs avoz candjî <filename>smb.conf</filename> dins openSUSE 11.1 ou divant, li processus di metaedje a djoû astalrè <filename>smb.conf.rpmnew</filename> eyet wårder vosse vî apontiaedje."
+
+#~ msgid "Check in the old configuration file whether <literal>passdb backend</literal> was set. If not, there are two possibilities to get Samba running again:"
+#~ msgstr "Waitîz e vî fitchî d' apontiaedje si <literal>passdb backend</literal> esteut metou. Si nén, i gn a deus façon po k' Samba s' enonde co :"
+
+#~ msgid "Convert smbpasswd to tdbsam (recommended!); enter as <systemitem>root</systemitem> on the command line:"
+#~ msgstr "Coviersez smbpasswd e tdbsam (ricmandé !) ; tapez come <systemitem>root</systemitem> sol roye di cmande :"
+
+#~ msgid "pdbedit -i smbpasswd:/etc/samba/smbpasswd -e tdbsam:/etc/samba/passdb.tdb\n"
+#~ msgstr "pdbedit -i smbpasswd:/etc/samba/smbpasswd -e tdbsam:/etc/samba/passdb.tdb\n"
+
+#~ msgid "And ensure the global section of <filename>smb.conf</filename> has such an entry:"
+#~ msgstr "Eyet waitîz bén kel seccion globåle di <filename>smb.conf</filename> a ene intrêye come çoula :"
+
+#~ msgid "passdb backend = tdbsam"
+#~ msgstr "passdb backend = tdbsam"
+
+#~ msgid "Set <literal>passdb backend = smbpasswd</literal>"
+#~ msgstr "Metoz <literal>passdb backend = smbpasswd</literal>"
+
+#~ msgid "We strongly recommend using the new default <command>tdbsam</command>. Only keep the old back-end if you have an absolute need. In this case, consider filing a bug report as suggested at <ulink url=\"http://en.openSUSE.org/Samba\"/> in the \"Samba bug reporting and advanced debugging information\" section."
+#~ msgstr "Nos rcomandans pår di s' siervi do novea prémetou <command>tdbsam</command>. Ni wårdez l' vî programe fondmint ki s' vos nd avoz pår mezåjhe. Dabôr, tuzez a rimpli on rapoirt di bug come sudjeré dins <ulink url=\"http://en.openSUSE.org/Samba\"/> el seccion « Samba bug reporting and advanced debugging information »."
+
+#~ msgid "Setting <literal>passdb backend = smbpasswd</literal> allows you to stay with the old configuration."
+#~ msgstr "Mete <literal>passdb backend = smbpasswd</literal> vos permet di dmorer avou l' vî apontiaedje."
+
+#~ msgid "Keep in mind, the old tool provides a smaller feature set than the new default password configuration back-end <command>tdbsam</command>."
+#~ msgstr "Mins n' rovyîz nén, li vî usteye dene moens d' fonccionålités kel novea programe fondmint d' apontiaedje des sicrets <command>tdbsam</command>."
+
+#~ msgid "MySQL 5.1"
+#~ msgstr "MySQL 5.1"
+
+#~ msgid "MySQL version 5.1 is available. Some changes are not backward compatible. The most important are:"
+#~ msgstr "MySQL modêye 5.1 est disponibe. I gn a des candjmints ki n' sont nén copatibes en erî. Les pus impôrtants sont :"
+
+#~ msgid "The MySQL socket is moved to <filename>/var/run/mysql</filename>."
+#~ msgstr "Li soket MySQL est bodjî viè <filename>/var/run/mysql</filename>."
+
+#, fuzzy
+#~| msgid "The Berkley DB storage engine is no longer available."
+#~ msgid "The Berkeley DB storage engine is no longer available."
+#~ msgstr "L' éndjin di wårdaedje Berkley DB n' est pus disponibe."
+
+#, fuzzy
+#~| msgid "Some storage engines are now shipped as modules. You must remove the <literal>skip-federated</literal> option in <filename>/etc/my.cnf</filename>, if you upgrade from a previous openSUSE versions."
+#~ msgid "Some storage engines are now shipped as modules. You must remove the <literal>skip-federated</literal> option in <filename>/etc/my.cnf</filename>, if you upgrade from a previous openSUSE version."
+#~ msgstr "I gn a des éndjins di wårdaedje ki sont asteure dinés come des modules. Vos dvoz oister l' tchuze <literal>skip-federated</literal> e <filename>/etc/my.cnf</filename> si vs metoz a livea a pårti d' ene viye modêye d' openSUSE."
+
+#~ msgid "For more information, see <ulink url=\"http://en.opensuse.org/MySQL-5.1\"/> and <filename>README.SuSE</filename> shipped with the MySQL package."
+#~ msgstr "Po ndè saveur di pus, alez vey <ulink url=\"http://en.opensuse.org/MySQL-5.1\"/> eyet <filename>README.SuSE</filename> metou dins l' pacaedje di MySQL."
+
+#~ msgid "New Default Mount Option: relatime"
+#~ msgstr "Novele tchuze di montaedje prémetowe : relatime"
+
+#~ msgid "The kernel by default mounts file systems now with the <literal>relatime</literal> option and thus updates inode access times relative to modify or change time. This is especially advantageous on desktop system."
+#~ msgstr "Li nawea monte asteure come prémetou les sistinmes di fitchî avou l' tchuze <literal>relatime</literal> et met don a djoû les tins d' accès ås inodes relativmint po candjî l' tins. C' est sor-tot on tchoi d' bon so les sistinmes avou scribanne."
+
+#~ msgid "If you want to keep the old behavior, set the <literal>strictatime</literal> option with the YaST partitioner or directly in <filename>/etc/fstab</filename>."
+#~ msgstr "Si vs voloz wårder li viye dujhance, metoz l' tchuze <literal>strictatime</literal> avou l' pårtixheu di YaST ou direk e <filename>/etc/fstab</filename>."
+
+#, fuzzy
+#~| msgid "Name Server"
+#~ msgid "VMware Server v2"
+#~ msgstr "No do sierveu"
+
+#~ msgid "N/A&mdash;Codename openSUSE 11.2"
+#~ msgstr "N/A&mdash;No d' côde openSUSE 11.2"
+
+#~ msgid "The code name for openSUSE 11.2 is N/A. The boot picture was taken by N/A"
+#~ msgstr "Li no d' côde po-z openSUSE 11.2 est N/A. L' imådje d' enondaedje sistinme a stî prins pa N/A"
+
+#, fuzzy
+#~| msgid "In the Start-Up Manual, find information about installation and basic system configuration. In the Reference Guide, the system configuration is explained in detail. Additionally, the most important applications are described in the GNOME and KDE User Guides. Detailed information on using AppArmor is provided by the AppArmor Administration Guide."
+#~ msgid "In the Start-Up Manual, find information about installation and basic system configuration. There is also an Installation QuickSart Guide now. In the Reference Guide, the system configuration is explained in detail. Find basic information on GNOME and KDE in the QuickStart Guides. Additionally, the most important applications are described in the Applications, GNOME, and KDE User Guide. Detailed information on security issues is provided by the Security Manual."
+#~ msgstr "E ls Esplikêyes d' Enondaedje (Start-Up Manual), trovez ls informåcions so l' astalaedje eyet l' apontiaedje di båze do sistinme. E Guide di Referince, l' apontiaedje do sistinme est esplikî e detays. Di pus, les programes les pus impôrtants sont discrîtes dins les cintes d' aidance da GNOME eyet KDE.  Des informåcions di detay po-z eployî AppArmor est dné dins l' Guide d' apontiaedje d' AppArmor."
+
+#~ msgid "Update: Changes that are not mentioned in the Reference Guide, Chapter 5."
+#~ msgstr "Metaedje a djoû: Candjmints ki sont nén dits dins l' Guide di Referince, tchaptrê 5."
+
+#~ msgid "In the Start-Up Manual, find information about installation and basic system configuration. In the Reference Guide, the system configuration is explained in detail. Find basic information on GNOME and KDE in the QuickStart Guides. Detailed information on using AppArmor is provided by the AppArmor Administration Guide."
+#~ msgstr "E ls Esplikêyes d' Enondaedje (Start-Up Manual), trovez ls informåcions so l' astalaedje eyet l' apontiaedje di båze do sistinme. E Guide di Referince, l' apontiaedje do sistinme est esplikî e detays. Trovez le informåcions d' båze so Gnome eyet KDE dins Guides pos ataker rade (QuickStart Guide). Des spepieusès informåcions pos eployî AppArmor sont dnêyes dins l' Guide do manaedjmint d' AppArmor."
+
+#~ msgid "Unable to Detect Display with Lid Closed"
+#~ msgstr "Nén possibe di detecter l' håynaedje cwand l' covieke et cloyou"
+
+#~ msgid "During the installation YaST resp. SaX2 are trying to detect displays and determine the display size and resolution. If you are installing on a notebook with the lid closed it is not be possible to detect the display. To avoid this problem it is highly recommended to keep the lid open during the installation."
+#~ msgstr "Sol tins d' l' astalaedje, YaST eyet SaX2 sayèt d' detecter l' håynaedje eyet d' dire li grandeu et l' finté d' li håynaedje. Si vs astalez sos on poirtåve avou l' coviek cloyou, i n' est nén possibe di trover l' håynaedje. Po houwer c' problinme la, il est foitmint ricmandé d' wårder l' covieke drovou sol tins d' l' astalaedje."
+
+#~ msgid "If the detection failed, start YaST and click \"Hardware\" -&gt; \"Graphics Card and Monitor\". Then configure the display manually."
+#~ msgstr "Sel deteccion a fwait berwete, enondez YaST eyet clitchî so « Éndjolreye » -&gt; « Waitroûle et cwåte grafike ». Apontyî adon l' håynaedje al mwin."
+
+#~ msgid "Detecting Lenovo ThinkPad Laptops"
+#~ msgstr "Deteccion des poirtåves Lenovo ThinkPad"
+
+#~ msgid "Lenovo ThinkPad laptops have special code in the MBR (master boot record) because of the \"Blue ThinkVantage button\" functionality. If detecting and preparing it properly fails, it might be necessary to restore the boot sector."
+#~ msgstr "Les poirtåves Lenovo ThinkPad ont des speciås côdes dins l' MBR (master boot record) a cåze del fonccionålité « Blue ThinkVantage button ». Sel deteccion eyet l' aprestaedje comifåt fwait berwete, i pôreut faleur rassonrer l' secteur d' enondaedje do sistinme."
+
+#~ msgid "If you have a ThinkPad, ensure that the bootloader is not installed into the MBR (verify it in the installation proposal!) and the MBR is not rewritten by generic code (in installation proposal select Bootloader -&gt; Boot Loader Installation -&gt; Boot Loader Options -&gt; Write Generic Boot Code to MBR -- should be unchecked)."
+#~ msgstr "Si vs avoz on ThinkPad, verifyîz kel tcherdjeu d' enondaedje sistinme ni soeye nén astalé dins l' MBR (a verifyî dins l' propôzucion d' astalaedje !) eyet kel MBR ni soeye nén riscrît pas on côde djenerike (dins les propôzucion d' astalaedje, tchoezixhoz tcherdjeu d' enondaedje sistinme -&gt; Astalaedje do tcherdjeu d' enondaedje sistinme -&gt; Tchuzes do tcherdjeu d' enondaedje sistinme -&gt; Sicrire côde djenerike so MBR -- duvreut esse disclitchî)."
+
+#~ msgid "If your MBR gets rewritten, the ThinkVantage button will not work anymore. The back-up of the MBR is stored in <filename>/var/lib/YaST2/backup_boot_sectors/</filename>."
+#~ msgstr "Si vost MBR est riscrît cwand minme, li boton ThinkVantage n' irè pus. Li copeye di såvrité do MBR est wårdé dins <filename>/var/lib/YaST2/backup_boot_sectors/</filename>."
+
+#~ msgid "Displaying Man-Pages With the Same Name"
+#~ msgstr "Håynaedjes des pådjes man avou l' minme no"
+
+#~ msgid "The <command>man</command> command now asks which man-page the user wants to see if man-pages with the same name exist in different sections. The user is expected to type the section number to make this man-page visible."
+#~ msgstr "Li cmande  <command>man</command> dimande asteure kene pådje man vout vey l' uzeu si des pådjes man avou l' minme no egzistèt dins diferinnès seccions. On ratind d' l' uzeu ki scrijhe li limero d' seccion po rinde cisse pådje man veyåve."
+
+#~ msgid "The YaST LDAP Server module does not store the LDAP Server configuration in <filename>/etc/openldap/slapd.conf</filename> any longer. The module now uses OpenLDAP's dynamic configuration backend, which stores the configuration in an LDAP database itself. That database consists of a set of <literal>.ldif</literal> files in <filename>/etc/openldap/slapd.d</filename>. To access the configuration either use the yast2-ldap-server module or an LDAP client such as <command>ldapmodify</command> or <command>ldapsearch</command>."
+#~ msgstr "Li module di YaST pol sierveu LDAP ni wåde pus l' apontiaedje do sierveu LDAP dins <filename>/etc/openldap/slapd.conf</filename>. Li module si sieve asteure del bouye di fond d' apontiaedje da OpenLDAP ki wåde lu-minme l' apontiaedje dins ene båze di dnêyes LDAP. Cisse båze di dnêyes est èn etrocla d' fitchîs <literal>.ldif</literal> dins <filename>/etc/openldap/slapd.d</filename>. Pos awè accès a l' apontiaedje, siervoz vs soeye-t i do module yast2-ldap-server, soeye-t i d' on cliyint LDAP come <command>ldapmodify</command> u <command>ldapsearch</command>."
+
+#~ msgid "For details on the dymanic configuration of OpenLDAP, see the OpenLDAP Administration Guide."
+#~ msgstr "Po des detays so l' apontiaedje dinamike d' OpenLDAP, veyoz l' guide di manaedjmint d' OpenLDAP."
+
+#~ msgid "By default, Network Manager is enabled and manages network connections. If you want configure it, you must use a Network Manager applet to change the settings. As long as Network Manager is running, YaST refuses to configure the network settings, because YaST and Network Manager have different sets of configuration options."
+#~ msgstr "NetworkManager est prémetou en alaedje eyet manaedje les raloyaedjes al rantoele. Si vos l' voloz apontyî; vos vs duvoz siervi d' ene aplikete po NetworkManager po candjî les apontiaedjes. Ossu lontins k' NetworkManager est enondé, YaST rifuzrè d' apontyî les tchuzes del rantoele, ca YaST eyet NetworkManager ont des diferins djeus d' tchuzes d' apontiaedje."
+
+#~ msgid "netconfig Utility to Apply Additional Network Settings"
+#~ msgstr "Usteye netconfig po mete en alaedje les ôtès tchuzes del rantoele"
+
+#~ msgid "The <command>modify_resolvconf</command> script is removed in favor of the more versatile <command>netconfig</command> script. The new script handles specific network settings from multiple sources more flexible and transparent. For more informations, see the updated manuals and the <systemitem>netconfig</systemitem> man-page."
+#~ msgstr "Li scripe <command>modify_resolvconf</command> est oisté po mete al plaece li scripe pus ahessåve <command>netconfig</command>. Li novea scripe apougne des tchuzes rantoele specifikes a pårti d' sacwantes sourdants avou pus di façon pus ployante et transparinte. Po pus di podants et djondants, veyoz les esplikêyes metowes a djoû dins l' pådje man di <systemitem>netconfig</systemitem>."
+
+#~ msgid "In the shipped manuals, <command>modify_resolvconf</command> is erroneously referenced. We will correct it in the next release."
+#~ msgstr "Dins les esplikêyes dinés avou l' produt,  <command>modify_resolvconf</command> est referincé, c' est ene flotche. Nos l' coridjrans dins l' modêye ki vénrè."
+
+#~ msgid "WLAN Channels 12, 13, and 14 Disabled"
+#~ msgstr "Canås WLAN 12, 13 eyet 14 essoctés"
+
+#~ msgid "By default, the WLAN channels 12, 13, and 14 are disabled because it is not allowed to use these channels everywhere. If you want to use them in your region, see <ulink url=\"http://en.opensuse.org/Tracking_down_wireless_problems\"/> for more information."
+#~ msgstr "Les canås WLAN 12, 13 eyet 14 sont prémetous essoctés a cåze ki c' n' est nén permetou d' si siervi d' ces canås tot costé. Si vs les vloz eployî dins vosse redjon, veyoz <ulink url=\"http://en.opensuse.org/Tracking_down_wireless_problems\"/> po pus di pondants et djondants."
+
+#, fuzzy
+#~ msgid "N/A&mdash;Codename openSUSE 11.1beta"
+#~ msgstr "N/A&mdash;No d' côde openSUSE 10.3"
+
+#, fuzzy
+#~ msgid "The code name for openSUSE 11.1beta is N/A. The boot picture was taken by N/A"
+#~ msgstr "Li no d' côde po-z openSUSE 10.3 est N/A. L' imådje d' enondaedje sistinme a stî prins pa N/A"
+
+#, fuzzy
+#~ msgid "YaST Gtk and Qt Front-Ends"
+#~ msgstr "Eterfaces grafikes Gtk eyet Qt pol manaedjmint d' programes YaST"
+
+#, fuzzy
+#~ msgid "By default, the new YaST gtk front-end runs on the GNOME desktop, and the YaST qt front-end on all the other desktops. Feature-wise, the gtk front-end is very similar to the qt front-end described in the manuals."
+#~ msgstr "Prémetou, li novea eterface grafike gtk di YaST sol sicribanne GNOME eyet l' eterface grafike qt di YaST so tos ls ôtes sicribannes. Les fonccions di l' eterface grafike gtk sont cåzu les minmes ki les cisses di l' eterface grafike qt discrît dins ls esplikêyes."
+
+#, fuzzy
+#~ msgid "An exception is the gtk software management module (see the Start-Up guide in Chapter 3), which differs considerably from the qt port. To start the qt flavor on the GNOME desktop, invoke it as <systemitem>root</systemitem> at the command-line with:"
+#~ msgstr "Ene foû-rîle est l' module di manaedjmint di programe gtk (voeyoz l' guide d' enondaedje e Tchaptrê 3) ki candje foirt do poirt qt. Po-z enonder l' môde qt so vosse sicribanne GNOME, fijhoz come shut:"
+
+#, fuzzy
+#~ msgid "Note the following changes:"
+#~ msgstr "Ces notes del modêye covrèt les dominnes shuvants:"
+
+#, fuzzy
+#~ msgid "Features not available any longer:"
+#~ msgstr "Ces usteyes n' sont disponibes k' avou HAL"
+
+#, fuzzy
+#~ msgid "This is just the initial version of the release notes for <phrase os=\"slprof\">openSUSE 11</phrase>. The release notes are under constant development. Download the newest version as part of the Internet test or refer to <ulink url=\"http://www.suse.com/relnotes/i386/openSUSE/11.0/RELEASE-NOTES.en.html\"/>. <phrase role=\"transwarn\">We update the English release notes whenever need arises. This means that translations might temporarily be incomplete.</phrase><phrase role=\"transwarn\">The translations are updated to match later.</phrase>"
+#~ msgstr "Les notes del pré-modêye sont tot l' tins e disvelopmint. Aberwetez l' pus nove modêye come saye del Daegntoele oudonbén voeyoz <ulink url=\"http://www.suse.com/relnotes/i386/openSUSE/10.3/RELEASE-NOTES.en.html\"/>. <phrase role=\"transwarn\">Nos metans a djoû les notes del modêye en inglès ossu sovint ki dandjî. Çoula vout dire kel ratournaedje ni pôreut nén esse pår fini tot l' tins.</phrase><phrase role=\"transwarn\">Les ratournaedjes sont metous a djoû po-z aler pus tård.</phrase>"
+
+#~ msgid "The scope of the text installation pattern is very limited. It is not recommended to install this pattern without adding additional software. Add packages from other patterns. The purpose of this pattern is to have a minimal bootable system running on real hardware. It provides a multiuser system with local login, network setup, and the default filesystems. No service is enabled by default and the only YaST modules installed that are those needed during installation."
+#~ msgstr "Li possibilité do patron d' astalaedje tecse n' est nén foirt sitindou. I n' est nén ricomandé d' astaler ci patron sins radjouter d' ôtes programes. Radjouter des pacaedjes d' ôtes patrons. Ci patron est fwait po-z awè on minimå sistinme enondåve so-z ene vraiye éndjolreye. I dene on sistinme a sacwants uzeus avou on locå elodjaedje, apontiaedje rantoele eyet l' prémetou sistinme di fitchî. I gn a pont d' prémetous siervice d' astalé eyet les seus modules di YaST d' astalés sont les cis k' on a dandjî tins l' astalaedje."
+
+#~ msgid "Adding Extra Software Repositories During Installation"
+#~ msgstr "Radjoutaedje d' ôtes sourdants di programes tins l' astalaedje "
+
+#~ msgid "After setting up the update configuration at the end of the installation, YaST offers to add the following three software repositories as additional installation sources:"
+#~ msgstr "Après awè apontyî l' metaedje a djoû al difén d' l' astalaedje, YaST propôze di radjouter les troes depots d' programe shuvants come ôtes sourdants d' astalaedje:"
+
+#~ msgid "The <quote>oss</quote> repository contains the complete FTP distribution including more packages than are available on the CDs."
+#~ msgstr "I gn a dins l' depot <quote>oss</quote> tote li distribucion FTP avou dvins pus di pacaedjes ki les cis k' i gn a ezès plakes."
+
+#~ msgid "The <quote>non-oss</quote> repository contains software under a propietary or non-open source license."
+#~ msgstr "I gn a dins l' depot <quote>non-oss</quote> des programes so licince propiétaire odonbén nén libe."
+
+#~ msgid "The <quote>debug</quote> repository contains debuginfo packages used for debugging programs and libraries and getting backtraces. If an error occurs, this additional information helps you write good bug reports."
+#~ msgstr "I gn a dins l' depot <quote>debug</quote> les pacaedjes eployîs po les programes eyet livreye di disbugaedje eyet po trover les pas en erî. S' i gn a åk ki n' va nén, les informåcions di pus vos aidèt a scrire des bons rapoirts di bug."
+
+#~ msgid "The source RPMs for <quote>oss</quote> are available at <ulink url=\"http://download.opensuse.org/distribution/10.3/src-oss\"/>, the source RPMs for <quote>non-oss</quote> are available at <ulink url=\"http://download.opensuse.org/distribution/10.3/src-non-oss\"/>."
+#~ msgstr "Les sourdants RPM po <quote>oss</quote> sont disponibes so <ulink url=\"http://download.opensuse.org/distribution/10.3/src-oss\"/>, les sourdants RPM po <quote>non-oss</quote> sont disponibes so <ulink url=\"http://download.opensuse.org/distribution/10.3/src-non-oss\"/>."
+
+#~ msgid "Localization Support"
+#~ msgstr "Sopoirt di locålijhaedje"
+
+#~ msgid "The 1-CD installation media (GNOME or KDE) come with language support for American English only."
+#~ msgstr "I gn a dins l' media d' astalaedje so ene seule plake (GNOME ou KDE) kel sopoirt po l' inglès amerinkin."
+
+#~ msgid "Support for all the other languages is available separately. If you are interested in additional languages, add an extra online repository during installation offering these translations. The <quote>oss</quote> repository, as mentioned above in Section \"Adding Extra Software Repositories During Installation\", is such a repository."
+#~ msgstr "Li sopoirt po tos les ôtes lingaedjes est disponibe a pår. Si vs estoz intéressé po ds ôtes lingaedjes, radjoutez on depots so fyis di pus tins l' astalaedje k' ofere ces ratournaedjes. Li depot <quote>oss</quote> come dit el seccion \"Radjoutaedje d' ôtes sourdants di programes tins l' astalaedje\" est on té depot."
+
+#~ msgid "Change <literal>WANTED_GUI=\"auto\"</literal> to <literal>WANTED_GUI=\"qt\"</literal>, save and exit the file."
+#~ msgstr "Candjîz <literal>WANTED_GUI=\"auto\"</literal> e <literal>WANTED_GUI=\"qt\"</literal>, schapez eyet cwitez l' fitchî."
+
+#~ msgid "To start the gtk flavor of YaST, no matter on which desktop, proceed accordingly, but changing <literal>WANTED_GUI=\"auto\"</literal> to <literal>WANTED_GUI=\"gtk\"</literal>."
+#~ msgstr "Po-z enonder l' môde gtk di YaST so télminme sicribanne, fijhoz l' minme mins e candjant <literal>WANTED_GUI=\"auto\"</literal> e <literal>WANTED_GUI=\"gtk\"</literal>."
+
+#~ msgid "AppArmor 2.1"
+#~ msgstr "AppArmor 2.1"
+
+#~ msgid "GAIM Renamed to Pidgin"
+#~ msgstr "GAIM rilomé e Pidgin"
+
+#~ msgid "New Location for KDE and GNOME"
+#~ msgstr "Novele plaece po KDE eyet GNOME"
+
+#~ msgid "hwprobe=-modules.pata"
+#~ msgstr "hwprobe=-modules.pata"
+
+#~ msgid "chkconfig boot.crypto on"
+#~ msgstr "chkconfig boot.crypto on"
+
+#~ msgid "/etc/init.d/boot.quota restart"
+#~ msgstr "/etc/init.d/boot.quota restart"
+
+#~ msgid "Zeroconf"
+#~ msgstr "Zeroconf"
+
+#, fuzzy
+#~ msgid "KDE 4 Applications Path"
+#~ msgstr "Programes"
