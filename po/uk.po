@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2015-10-23 10:16+0200\n"
-"PO-Revision-Date: 2015-10-30 10:18+0200\n"
+"PO-Revision-Date: 2015-11-05 07:11+0200\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
 "Language-Team: Ukrainian <http://10n.opensuse.org/projects/release-notes-"
 "opensuse/master/uk/>\n"
@@ -193,22 +193,61 @@ msgstr ""
 #: xml/release-notes.xml:231(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
 msgstr ""
+"Типова версія протоколу IPP збільшена з 1.1 до 2.0. Старіші IPP-типу сервери "
+"CUPS 1.3.x (наприклад, в SLE 11) відхиляють запити по IPP 2.0 з відповіддю «"
+"Bad Request» (див. <ulink url=\"http://www.cups.org/str.php?L4231\""
+">http://www.cups.org/str.php?L4231</ulink> ). Тепер для старих серверів "
+"потрібно явно вказувати стару версію протоколу IPP, додавши «/version=1.1» "
+"до параметра ServerName у файлі client.conf (наприклад, ServerName "
+"stariy.server.primer.ru/version=1.1) або змінну середовища CUPS_SERVER чи "
+"дописавши її до значення назви сервера у параметрі «-h» (наприклад, lpstat -"
+"h stariy.server.primer.ru/version=1.1 -p)."
 
 #: xml/release-notes.xml:232(para)
 msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
 msgstr ""
+"Оглядач CUPS видалено з самого CUPS, але новий пакет cups-filters надає cups-"
+"browsed, який забезпечує базову функціональність огляду і опитування CUPS. "
+"Рідним протоколом CUPS для автоматичного виявлення принтерів клієнтами тепер "
+"є DNS-SD. Запустіть cups-browsed на локальній машині для отримання звичної "
+"інформації про результати огляду CUPS від традиційних віддалених серверів "
+"CUPS. Для передачі даних в мережу, щоби віддалені клієнти CUPS могли "
+"отримувати їх, задайте „BrowseLocalProtocols CUPS“ <literal moreinfo=\"none\""
+">/etc/cups/cups-browsed.conf</literal> і запустіть cups-browsed."
 
 #: xml/release-notes.xml:233(para)
 msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
 msgstr ""
+"Деякі фільтри і фонові механізми друку видалені зі складу CUPS, але їх надає "
+"новий пакет cups-filters. Таким чином, cups-filters зазвичай необхідний ("
+"рекомендується RPM), але не потрібний безпосередньо."
 
 #: xml/release-notes.xml:234(para)
 msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, and bnc#789566)."
 msgstr ""
+"Директиви налаштування cupsd розділені на два файли: cupsd.conf (також може "
+"бути відредагований через HTTP PUT, наприклад, через cupsctl) і cups-"
+"files.conf (може бути відредагований тільки вручну від імені root) для "
+"кращого захисту від помилкового використання привілеїв звичайними "
+"користувачами, яким root окремо дозволив вносити зміни в налаштування cupsd ("
+"див. <ulink url=\"http://www.cups.org/str.php?L4223\""
+">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 і bnc#789566)."
 
 #: xml/release-notes.xml:235(para)
 msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
 msgstr ""
+"Банери CUPS і тестова сторінка CUPS більше не підтримуються, починаючи з "
+"CUPS &gt;= 1.6. Необхідно використовувати банери і тестову сторінку зі "
+"складу cups-filters. Файли банерів CUPS <literal moreinfo=\"none\""
+">/usr/share/cups/banners/</literal> і тестова сторінка CUPS <literal "
+"moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (яка також є "
+"банером CUPS) більш не входять до складу RPM-пакету CUPS, бо вони більше не "
+"працюють, починаючи з CUPS &gt;= 1.6 (див. <ulink url=\""
+"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink>"
+" ), через відсутність фільтра, який перетворював файли банерів CUPS. "
+"Починаючи з CUPS &gt;= 1.6, тільки файли банерів і тестової сторінки зі "
+"складу пакета cups-filters працюють через PDF-потік, також пакет cups-"
+"filters надає відповідний фільтр bannertopdf."
 
 #: xml/release-notes.xml:236(para)
 msgid "For details, see bsc#735404."
@@ -216,31 +255,52 @@ msgstr "За подробицями див. bsc#735404."
 
 #: xml/release-notes.xml:238(emphasis)
 msgid "PDF Now Common Printing Data Format"
-msgstr ""
+msgstr "PDF став новим загальним форматом для друку"
 
 #: xml/release-notes.xml:240(para)
 msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
 msgstr ""
+"Відбувся глобальний перехід від PostScript до PDF як стандартного формату "
+"завдань на друк. Ця зміна просувається робочою групою OpenPrinting з Linux "
+"Foundation і автором CUPS."
 
 #: xml/release-notes.xml:241(para)
 msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
 msgstr ""
+"Це означає, що програми під час друку тепер усталено виводять PDF замість "
+"PostScript."
 
 #: xml/release-notes.xml:242(para)
 msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
 msgstr ""
+"Як наслідок, процес перетворення даних друку від програм у «мову», яка "
+"розуміється конкретним принтером (т. зв. „ланцюжок фільтрів CUPS“) здійснив "
+"фундаментальний перехід з PostScript-центричного на PDF-центричний."
 
 #: xml/release-notes.xml:243(para)
 msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
 msgstr ""
+"Відповідно до цього, вихідний стандарт для CUPS під Linux (використання CUPS "
+"плюс пакунок cups-filters) тепер полягає в обробці завдань на базі PDF, "
+"спочатку перетворюючи будь-який не PDF у PDF, застосовуючи параметри "
+"управління сторінками за допомогою фільтра pdftopdf і викликаючи Ghostscript "
+"з готовим PDF в якості введення."
 
 #: xml/release-notes.xml:244(para)
 msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
 msgstr ""
+"З PDF в якості стандартного формату завдань на друк традиційні PostScript "
+"принтери більше не зможуть приймати завдання від програм безпосередньо, бо "
+"буде потрібно додаткове перетворення з PDF в PostScript. Але існують і "
+"PostScript+PDF-принтери, які можуть безпосередньо друкувати PostScript та "
+"PDF."
 
 #: xml/release-notes.xml:245(para)
 msgid "For details, see the section \"Common printing data formats\" in the SUSE wiki article \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
 msgstr ""
+"Подробиці див. у розділі «Common printing data formats» статті у вікі SUSE «"
+"Concepts printing» за адресою <ulink url=\"http://en.opensuse.org/"
+"Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
 
 #: xml/release-notes.xml:250(title)
 msgid "Miscellaneous"
