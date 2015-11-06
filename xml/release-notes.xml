@@ -101,12 +101,18 @@ picture was taken by N/A
   <section>
    <!-- https://bugzilla.suse.com/show_bug.cgi?id=947712 -->
    <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
-   <title>Base System Installation</title>
+   <title>Minimal System Installation</title>
    <para>
-    <literal>SuSEfirewall2</literal> and <literal>yast2</literal> have
-    been removed from the <quote>minimal base system</quote> to save
-    space.  If you need it, select <literal>SuSEfirewall2</literal> or
-    <literal>patterns-openSUSE-yast2_basis</literal>.
+    In order to avoid some big recommended packages from getting
+    installed the pattern for minimal installations uses another
+    pattern that conflicts with the undesired packages. That pattern
+    can be removed after installation, it's called
+    <literal>patterns-openSUSE-minimal_base-conflicts</literal>
+   </para>
+   <para>
+    Note that the minimal installation has no firewall by
+    default. If you need one, install
+    <literal>SuSEfirewall2</literal>
    </para>
   </section>
 
@@ -235,7 +241,27 @@ systemctl start SuSEfirewall2</screen>
  <!-- START-FATE-RN -->
  <section id="misc" remap="Misc">
   <title>Miscellaneous</title>
-  <para/>
+   <section>
+    <title>KDE and Network Authentication</title>
+    <para>
+     When using the KDE displaymanager SDDM with an authentication
+     method that provides a high number of users SDDM becomes
+     unusable. Additionally if the automounter is used SDDM may
+     block for long time on startup trying to mount every user's home
+    </para>
+    <para>
+     Modify <filename>/etc/sddm.conf</filename> to contain the following entries:
+     <programlisting>[Theme]
+Current=maldives
+
+[Users]
+MaximumUid=1002</programlisting>
+    </para>
+    <para>
+     See <ulink url="https://bugzilla.suse.com/show_bug.cgi?id=953778">Bug 953778</ulink> for details.
+    </para>
+   </section>
+
  </section>
  <!-- END-FATE-RN -->
 
