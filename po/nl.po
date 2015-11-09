@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-09 15:38+0200\n"
+"POT-Creation-Date: 2015-11-09 11:56+0100\n"
 "PO-Revision-Date: 2014-12-17 23:29+0100\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
 "Language-Team: Dutch <opensuse-nl@opensuse.org>\n"
@@ -39,184 +39,232 @@ msgstr "42.1"
 
 #: xml/release-notes.xml:17(para)
 msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
-msgstr ""
-"openSUSE Leap is een vrij en op Linux gebaseerd besturingssysteem voor uw "
-"PC, laptop of server. U kunt over het web surfen, uw e-mailberichten en "
-"foto's beheren, kantoorwerk doen, video's of muziek afspelen en veel plezier "
-"hebben!"
+msgstr "openSUSE Leap is een vrij en op Linux gebaseerd besturingssysteem voor uw PC, laptop of server. U kunt over het web surfen, uw e-mailberichten en foto's beheren, kantoorwerk doen, video's of muziek afspelen en veel plezier hebben!"
 
 #. Previous Release Notes
 #: xml/release-notes.xml:51(para)
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
-msgstr ""
-"Als u opwaardeert van een oudere versie naar deze uitgave van openSUSE Leap, "
-"kijk dan naar de vorige uitgavenotities hier: <ulink url=\""
-"http://nl.opensuse.org/openSUSE:Release_Notes\"/>"
+msgstr "Als u opwaardeert van een oudere versie naar deze uitgave van openSUSE Leap, kijk dan naar de vorige uitgavenotities hier: <ulink url=\"http://nl.opensuse.org/openSUSE:Release_Notes\"/>"
 
 #: xml/release-notes.xml:90(title)
 msgid "Installation"
 msgstr "Installatie"
 
-#: xml/release-notes.xml:102(title)
+#. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
+#: xml/release-notes.xml:104(title)
+#, fuzzy
+msgid "Minimal System Installation"
+msgstr "Installatie"
+
+#: xml/release-notes.xml:105(para)
+msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
+msgstr ""
+
+#: xml/release-notes.xml:112(para)
+msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
+msgstr ""
+
+#: xml/release-notes.xml:120(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
-#: xml/release-notes.xml:103(para)
+#: xml/release-notes.xml:121(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
-msgstr ""
-"Alvorens openSUSE te installeren op een systeem dat boot met UEFI (Unified "
-"Extensible Firmware Interface), wordt u dringend aangeraden om te "
-"controleren op firmware updates, die de maker van de hardware aanbeveelt en, "
-"indien beschikbaar, zo'n update te installeren. Een vooraf geïnstalleerde "
-"Windows 8 is een sterke aanwijzing dat uw systeem boot met UEFI."
+msgstr "Alvorens openSUSE te installeren op een systeem dat boot met UEFI (Unified Extensible Firmware Interface), wordt u dringend aangeraden om te controleren op firmware updates, die de maker van de hardware aanbeveelt en, indien beschikbaar, zo'n update te installeren. Een vooraf geïnstalleerde Windows 8 is een sterke aanwijzing dat uw systeem boot met UEFI."
 
-#: xml/release-notes.xml:111(para)
+#: xml/release-notes.xml:129(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
-msgstr ""
-"<emphasis>Achtergrond:</emphasis> Sommige UEFI firmware bevat bugs die er de "
-"oorzaak van is dat het niet werkt als er te veel gegevens naar het UEFI-"
-"opslaggebied weggeschreven zijn. Niemand weet echter echt hoeveel \"te veel\""
-" is. openSUSE minimaliseert het risico door niet meer weg te schrijven dan "
-"het noodzakelijke minimum nodig om het OS op te starten. Het minimum "
-"betekent het aan de UEFI firmware vertellen van de locatie van de openSUSE "
-"bootloader. Bovenstroomse functies van de Linux-kernel die het UEFI-"
-"opslaggebied gebruikt voor opslag van opstart- and crashinformatie "
-"(<literal>pstore</literal>) zijn standaard uitgeschakeld. Niettemin is het "
-"aanbevolen, om elke update van firmware, die de maker van de hardware "
-"aanbeveelt, uit te voeren."
+msgstr "<emphasis>Achtergrond:</emphasis> Sommige UEFI firmware bevat bugs die er de oorzaak van is dat het niet werkt als er te veel gegevens naar het UEFI-opslaggebied weggeschreven zijn. Niemand weet echter echt hoeveel \"te veel\" is. openSUSE minimaliseert het risico door niet meer weg te schrijven dan het noodzakelijke minimum nodig om het OS op te starten. Het minimum betekent het aan de UEFI firmware vertellen van de locatie van de openSUSE bootloader. Bovenstroomse functies van de Linux-kernel die het UEFI-opslaggebied gebruikt voor opslag van opstart- and crashinformatie (<literal>pstore</literal>) zijn standaard uitgeschakeld. Niettemin is het aanbevolen, om elke update van firmware, die de maker van de hardware aanbeveelt, uit te voeren."
 
 #. bnc#850056
-#: xml/release-notes.xml:128(title)
+#: xml/release-notes.xml:146(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT en MS-DOS partities"
 
-#: xml/release-notes.xml:129(para)
+#: xml/release-notes.xml:147(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
-msgstr ""
-"Samen met de EFI/UEFI specificaties is er een nieuwe stijl van partities "
-"maken gekomen: GPT (GUID Partition Table). Dit nieuwe schema gebruikt "
-"globaal unieke identifiers (128-bit waarden getoond in 32 hexadecimale "
-"tekens) om apparaten en typen partities te identificeren."
+msgstr "Samen met de EFI/UEFI specificaties is er een nieuwe stijl van partities maken gekomen: GPT (GUID Partition Table). Dit nieuwe schema gebruikt globaal unieke identifiers (128-bit waarden getoond in 32 hexadecimale tekens) om apparaten en typen partities te identificeren."
 
-#: xml/release-notes.xml:135(para)
+#: xml/release-notes.xml:153(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
-msgstr ""
-"Bovendien staat de UEFI specificatie ook MBR (MS-DOS) partities toe. De "
-"Linux bootloaders (ELILO of GRUB2) proberen automatisch een GUID voor deze "
-"ouderwetse partities te genereren en schrijven ze naar de firmware. Zo'n "
-"GUID kan frequent wijzigen, wat opnieuw schrijven in de firmware "
-"veroorzaakt. Herschrijven bestaat uit twee verschillende bewerkingen: "
-"verwijderen van het oude item en maken van een nieuw item dat de eerste "
-"vervangt."
+msgstr "Bovendien staat de UEFI specificatie ook MBR (MS-DOS) partities toe. De Linux bootloaders (ELILO of GRUB2) proberen automatisch een GUID voor deze ouderwetse partities te genereren en schrijven ze naar de firmware. Zo'n GUID kan frequent wijzigen, wat opnieuw schrijven in de firmware veroorzaakt. Herschrijven bestaat uit twee verschillende bewerkingen: verwijderen van het oude item en maken van een nieuw item dat de eerste vervangt."
 
-#: xml/release-notes.xml:144(para)
+#: xml/release-notes.xml:162(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
-msgstr ""
-"Moderne firmware heeft een garbage-collector die verwijderde items verzameld "
-"en het voor oude items gereserveerde geheugen vrijmaakt. Er ontstaat een "
-"probleem wanneer foute firmware dit niet verzameld en deze items niet vrij "
-"maakt; dit kan eindigen met een niet te booten systeem."
+msgstr "Moderne firmware heeft een garbage-collector die verwijderde items verzameld en het voor oude items gereserveerde geheugen vrijmaakt. Er ontstaat een probleem wanneer foute firmware dit niet verzameld en deze items niet vrij maakt; dit kan eindigen met een niet te booten systeem."
 
-#: xml/release-notes.xml:150(para)
+#: xml/release-notes.xml:168(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
-msgstr ""
-"Er omheen werken is eenvoudig: converteer de ouderwetse MBR-partitie naar "
-"het nieuwe GPT om dit probleem volledig te vermijden."
+msgstr "Er omheen werken is eenvoudig: converteer de ouderwetse MBR-partitie naar het nieuwe GPT om dit probleem volledig te vermijden."
 
-#: xml/release-notes.xml:159(title)
+#: xml/release-notes.xml:181(title)
 msgid "System Upgrade"
 msgstr "Systeemopwaardering"
 
-#: xml/release-notes.xml:166(title)
+#: xml/release-notes.xml:188(title)
 msgid "General"
 msgstr "Algemeen"
 
-#: xml/release-notes.xml:168(title)
-msgid "No firewall by default after installation from Live CD"
-msgstr "Standaard geen firewall na installatie vanaf Live-cd"
-
-#: xml/release-notes.xml:169(para)
-msgid "When installing from the Live CD no firewall will be active by default."
+#: xml/release-notes.xml:191(title)
+msgid "Non-Oss Repository"
 msgstr ""
-"Bij installeren vanaf de Live-cd zal standaard geen firewall actief zijn."
 
-#: xml/release-notes.xml:173(para)
-msgid "Enable the firewall using YaST or with:"
-msgstr "Schakel de firewall in met YaST of met:"
-
-#: xml/release-notes.xml:176(screen)
-#, no-wrap
-msgid ""
-"systemctl enable SuSEfirewall2\n"
-"systemctl start SuSEfirewall2"
+#: xml/release-notes.xml:192(para)
+msgid "After the installation the non-oss repository is disabled"
 msgstr ""
-"systemctl enable SuSEfirewall2\n"
-"systemctl start SuSEfirewall2"
 
-#: xml/release-notes.xml:182(title)
+#: xml/release-notes.xml:193(para)
+msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
+msgstr ""
+
+#: xml/release-notes.xml:203(title)
 msgid "Technical"
 msgstr "Technisch"
 
-#: xml/release-notes.xml:189(title)
+#. sort_key="None"; non-rn-fate-cats="";
+#: xml/release-notes.xml:208(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr ""
+
+#: xml/release-notes.xml:211(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr ""
+
+#: xml/release-notes.xml:213(para)
+msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
+msgstr ""
+
+#: xml/release-notes.xml:214(para)
+msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
+msgstr ""
+
+#: xml/release-notes.xml:215(para)
+msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
+msgstr ""
+
+#: xml/release-notes.xml:216(para)
+msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
+msgstr ""
+
+#: xml/release-notes.xml:217(para)
+msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr ""
+
+#: xml/release-notes.xml:226(para)
+msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
+msgstr ""
+
+#: xml/release-notes.xml:227(para)
+#, fuzzy
+msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+msgstr "Aan dit en andere problemen met het Intel-apparaatstuurprogramma zoals (zie <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) zal gewerkt worden en, indien mogelijk, opgelost worden met het online bijwerken."
+
+#: xml/release-notes.xml:230(emphasis)
+msgid "PDF Now Common Printing Data Format"
+msgstr ""
+
+#: xml/release-notes.xml:232(para)
+msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
+msgstr ""
+
+#: xml/release-notes.xml:233(para)
+msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
+msgstr ""
+
+#: xml/release-notes.xml:234(para)
+msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
+msgstr ""
+
+#: xml/release-notes.xml:235(para)
+msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
+msgstr ""
+
+#: xml/release-notes.xml:236(para)
+msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
+msgstr ""
+
+#: xml/release-notes.xml:237(para)
+msgid "For details, see the section \"Common printing data formats\" in the SUSE wiki article \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
+msgstr ""
+
+#: xml/release-notes.xml:242(title)
 msgid "Miscellaneous"
 msgstr "Diversen"
 
+#: xml/release-notes.xml:244(title)
+#, fuzzy
+msgid "KDE and Network Authentication"
+msgstr "Geen netwerk na installatie"
+
+#: xml/release-notes.xml:245(para)
+msgid "When using the KDE displaymanager SDDM with an authentication method that provides a high number of users SDDM becomes unusable. Additionally if the automounter is used SDDM may block for long time on startup trying to mount every user's home"
+msgstr ""
+
+#: xml/release-notes.xml:253(programlisting)
+#, no-wrap
+msgid ""
+"[Theme]\n"
+"Current=maldives\n"
+"\n"
+"[Users]\n"
+"MaximumUid=1002"
+msgstr ""
+
+#: xml/release-notes.xml:251(para)
+msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
+msgstr ""
+
+#: xml/release-notes.xml:259(para)
+msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> for details."
+msgstr ""
+
 #. bnc#809347
-#: xml/release-notes.xml:196(title)
+#: xml/release-notes.xml:269(title)
 msgid "More Information and Feedback"
 msgstr "Meer informatie en terugkoppeling"
 
-#: xml/release-notes.xml:200(para)
+#: xml/release-notes.xml:273(para)
 msgid "Read the READMEs on the CDs."
 msgstr "Lees de README's op de cd's."
 
-#: xml/release-notes.xml:203(para)
+#: xml/release-notes.xml:276(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
-msgstr ""
-"Gedetailleerde log met informatie over wijzigingen over een specifiek pakket "
-"uit de RPM:"
+msgstr "Gedetailleerde log met informatie over wijzigingen over een specifiek pakket uit de RPM:"
 
-#: xml/release-notes.xml:204(screen)
+#: xml/release-notes.xml:277(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;BESTANDSNAAM&gt;.rpm"
 
-#: xml/release-notes.xml:205(para)
+#: xml/release-notes.xml:278(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;BESTANDSNAAM&gt;. is de naam van de RPM."
 
-#: xml/release-notes.xml:208(para)
+#: xml/release-notes.xml:281(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
-msgstr ""
-"Controleer het bestand <filename>ChangeLog</filename> op het topniveau van "
-"de dvd voor een chronologische log van alle wijzigingen gemaakt aan de "
-"bijgewerkte pakketten."
+msgstr "Controleer het bestand <filename>ChangeLog</filename> op het topniveau van de dvd voor een chronologische log van alle wijzigingen gemaakt aan de bijgewerkte pakketten."
 
-#: xml/release-notes.xml:212(para)
+#: xml/release-notes.xml:285(para)
 msgid "Find more information in the <filename>docu</filename> directory on the DVD."
 msgstr "Meer informatie in de map <filename>docu</filename> op de dvd."
 
-#: xml/release-notes.xml:215(para)
+#: xml/release-notes.xml:288(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
-msgstr ""
-"<ulink url=\"https://activedoc.opensuse.org/\"/> bevat extra of bijgewerkte "
-"documentatie."
+msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> bevat extra of bijgewerkte documentatie."
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:293(para)
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
-msgstr ""
-"Bezoek <ulink url=\"http://www.opensuse.org\"/> voor de laatste "
-"productnieuws van openSUSE."
+msgstr "Bezoek <ulink url=\"http://www.opensuse.org\"/> voor de laatste productnieuws van openSUSE."
 
-#: xml/release-notes.xml:225(para)
+#: xml/release-notes.xml:298(para)
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "Copyright © 2015 SUSE LLC"
 
-#: xml/release-notes.xml:227(para)
+#: xml/release-notes.xml:300(para)
 msgid "Thanks for using openSUSE."
 msgstr "Bedankt voor het gebruiken van openSUSE."
 
-#: xml/release-notes.xml:228(para)
+#: xml/release-notes.xml:301(para)
 msgid "The openSUSE Team."
 msgstr "Het team van openSUSE."
 
@@ -227,6 +275,22 @@ msgstr ""
 "Ruurd Pels <ruurdpels@kde.nl>, 2006\n"
 "Rinse de Vries <rinsedevries@kde.nl>, 2006, 2007\n"
 "Freek de Kruijf <freek@opensuse.org>, 2008, 2009, 2010, 2011, 2012"
+
+#~ msgid "No firewall by default after installation from Live CD"
+#~ msgstr "Standaard geen firewall na installatie vanaf Live-cd"
+
+#~ msgid "When installing from the Live CD no firewall will be active by default."
+#~ msgstr "Bij installeren vanaf de Live-cd zal standaard geen firewall actief zijn."
+
+#~ msgid "Enable the firewall using YaST or with:"
+#~ msgstr "Schakel de firewall in met YaST of met:"
+
+#~ msgid ""
+#~ "systemctl enable SuSEfirewall2\n"
+#~ "systemctl start SuSEfirewall2"
+#~ msgstr ""
+#~ "systemctl enable SuSEfirewall2\n"
+#~ "systemctl start SuSEfirewall2"
 
 #~ msgid "openSUSE"
 #~ msgstr "openSUSE"
@@ -354,9 +418,6 @@ msgstr ""
 
 #~ msgid "If you see two mouse pointers and have two graphic boards, where one is an Intel board, try uninstalling <systemitem>xf86-video-intel</systemitem> and thus using the other one only. This will make disappear the static mouse pointer."
 #~ msgstr "Als u twee muisaanwijzers ziet en u hebt twee grafische kaarten, waarvan een een Intel kaart is, probeer dan het pakket <systemitem>xf86-video-intel</systemitem> te verwijderen en dus alleen de andere te gebruiken. Dit zal de statische muisaanwijzer laten verdwijnen."
-
-#~ msgid "This and other issues with the Intel driver like (see <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) will be worked on and, if possible, addressed with an online update."
-#~ msgstr "Aan dit en andere problemen met het Intel-apparaatstuurprogramma zoals (zie <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) zal gewerkt worden en, indien mogelijk, opgelost worden met het online bijwerken."
 
 #~ msgid "Missing Dependencies for virt-manager"
 #~ msgstr "Ontbrekende afhankelijkheden voor virt-manager"
@@ -736,9 +797,6 @@ msgstr ""
 
 #~ msgid "Within the next 15 minutes the daily cron routine will start and build a proper mlocate file."
 #~ msgstr "Binnen de volgende 15 minuten zal de dagelijkse cron-routine starten en een juist mlocate-bestand opbouwen."
-
-#~ msgid "No Network after Installation"
-#~ msgstr "Geen netwerk na installatie"
 
 #~ msgid "Directly after installation, NetworkManager is not started automatically and thus WiFi cannot be configured. To enable networking (WiFi), reboot the machine once manually."
 #~ msgstr "Direct na installatie start NetworkManager niet automatisch en dus kan WiFi niet ingesteld worden. Om het netwerk (WiFi) in te schakelen, start u de machine een keer handmatig."

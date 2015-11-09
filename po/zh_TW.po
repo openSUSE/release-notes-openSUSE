@@ -2,11 +2,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2015-10-23 10:16+0200\n"
+"POT-Creation-Date: 2015-11-09 11:56+0100\n"
 "PO-Revision-Date: 2015-10-29 16:03+0200\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <http://10n.opensuse.org/projects/release-"
-"notes-opensuse/master/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) <http://10n.opensuse.org/projects/release-notes-opensuse/master/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,271 +42,222 @@ msgstr "如果您從較舊的發行版本升級至 openSUSE Leap，請由此查�
 msgid "Installation"
 msgstr "安裝"
 
-#. https://bugzilla.suse.com/show_bug.cgi?id=947712
-#: xml/release-notes.xml:103(title)
-msgid "Base System Installation"
+#. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
+#: xml/release-notes.xml:104(title)
+#, fuzzy
+msgid "Minimal System Installation"
 msgstr "基礎系統安裝"
 
-#: xml/release-notes.xml:104(para)
-msgid "If you install a new system as <quote>minimal base system</quote>, the installed system will try to maintain this level and often run into dependency conflicts when you try to install more software."
+#: xml/release-notes.xml:105(para)
+msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
 msgstr ""
-"若您以<quote>最小基礎系統</quote>來安裝新系統，安裝好的系統會嘗試維持此種安裝層級。當您嘗試安裝更多軟體時，這經常會導致相依性衝突發生。"
 
-#: xml/release-notes.xml:109(para)
-msgid "To avoid this, uninstall the package <literal>patterns-openSUSE-minimal_base-conflicts</literal>, instructing the system that you no longer want to maintain a minimal installation (<quote>minimal base system</quote>)."
+#: xml/release-notes.xml:112(para)
+msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
 msgstr ""
-"要避免該問題，請移除套件 <literal>patterns-openSUSE-minimal_base-conflicts</literal>，"
-"以指示系統您不再需要維持最小程度安裝 (<quote>最小基礎系統</quote>)。"
 
-#: xml/release-notes.xml:118(title)
+#: xml/release-notes.xml:120(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;統一可延伸韌體介面"
 
-#: xml/release-notes.xml:119(para)
+#: xml/release-notes.xml:121(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "在安裝 openSUSE 到使用 UEFI (統一可延伸韌體介面) 開機的系統之前，強烈建議您先詢問是否有硬體製造商所建議的韌體更新並加以安裝。若您的系統有預裝 Windows 8，通常就代表您的系統使用 UEFI 開機。"
 
-#: xml/release-notes.xml:127(para)
+#: xml/release-notes.xml:129(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>背景知識：</emphasis> 有些 UEFI 韌體有缺陷，導致當有太多資料被寫入 UEFI 儲存區域時，韌體會發生問題。但是沒人知道究竟寫入多少資料才算「太多」，故 openSUSE 藉由只寫入能夠啟動系統的最少需要的資料量，來降低這個風險。寫入的資料至少要能告訴 UEFI 韌體 openSUSE 啟動程式的位置。官方 Linux 核心提供使用 UEFI 儲存區來寫入開機及當機資訊的功能  (<literal>pstore</literal>)，在此預設被停用。無論如何，建議安裝任何硬體製造商建議的韌體更新。"
 
 #. bnc#850056
-#: xml/release-notes.xml:144(title)
+#: xml/release-notes.xml:146(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI，GPT 與 MS-DOS 磁碟分割區"
 
-#: xml/release-notes.xml:145(para)
+#: xml/release-notes.xml:147(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "在 EFI/UEFI 的規格書中提到一個新的分割磁碟的劃分方式：GPT（GUID Partition Table）。這個新的方式使用 GUID（128位元的值顯示在32個十六進制數字上）來識別裝置及分割區類型。"
 
-#: xml/release-notes.xml:151(para)
+#: xml/release-notes.xml:153(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr "此外，UEFI 規範是允許傳統的 MBR（MS-DOS）分割區。 Linux 引導加載器（ELILO 或 GRUB2）嘗試針對那些傳統的分割區自動產生一個 GUID ，並把它們寫進韌體。像這樣的一個 GUID 可以頻繁變更，導致韌體的重寫入。一次的重寫入包括兩種不同的操作：刪除舊的項目，以及創建一個新的項目以取代第一個項目。"
 
-#: xml/release-notes.xml:160(para)
+#: xml/release-notes.xml:162(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr "現代的韌體都有一個垃圾收集器（garbage collector），可以收集被刪除的進入點（entries），並且釋放原來保留給舊進入點（entries）的記憶體。當故障的韌體不能收集或是釋放這些進入點（entries）時，系統將會出現問題，最終將造成系統無法開機。"
 
-#: xml/release-notes.xml:166(para)
+#: xml/release-notes.xml:168(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr "簡單的替代解決方案是：轉換傳統的 MBR 分割區成為新的 GPT 分割區以完整的避免此問題。"
 
-#. http://bugzilla.opensuse.org/show_bug.cgi?id=950877
-#: xml/release-notes.xml:174(title)
-msgid "openSUSE Leap as Guest in VirtualBox"
-msgstr "以 openSUSE Leap 做為 VirtualBox 的客體系統"
-
-#: xml/release-notes.xml:175(para)
-msgid "If you are running openSUSE Leap as a guest inside VirtualBox, you must use a different displaymanager than GDM. Switch to using lightdm by installing the \"lightdm\" package and activate it in <filename>/etc/sysconfig/displaymanager</filename> by setting"
-msgstr ""
-"若您要在 VirtualBox 上執行 openSUSE Leap 作為客體系統，您必須使用 GDM 以外的其他顯示管理員。您可以安裝 \""
-"lightdm\" 套件來改用 lightdm，並在 <filename>/etc/sysconfig/displaymanager</filename>"
-" 修改以下設定來啟用它"
-
-#: xml/release-notes.xml:181(screen)
-#, no-wrap
-msgid "DISPLAYMANAGER=\"lightdm\""
-msgstr "DISPLAYMANAGER=\"lightdm\""
-
-#: xml/release-notes.xml:183(para)
-msgid "Background information:"
-msgstr "背景資訊："
-
-#: xml/release-notes.xml:184(para)
-msgid "GDM starts the X server in the user context (unlike all other known DMs at this moment). This is not compatible with the VirtualBox video driver and will result in crashes of the X Window System."
-msgstr ""
-"不像其他顯示管理員，GDM 會在使用者環境下啟動 X server。這與 VirtualBox 顯示驅動程式不相容，且會導致 X Window 系統崩潰。"
-
-#: xml/release-notes.xml:189(para)
-msgid "You can still use a full GNOME3 session"
-msgstr "您仍然可以使用完整的 GNOME3 執行階段"
-
-#: xml/release-notes.xml:197(title)
+#: xml/release-notes.xml:181(title)
 msgid "System Upgrade"
 msgstr "系統升級"
 
-#: xml/release-notes.xml:204(title)
+#: xml/release-notes.xml:188(title)
 msgid "General"
 msgstr "一般說明"
 
-#: xml/release-notes.xml:206(title)
-msgid "No firewall by default after installation from Live CD"
-msgstr "從 Live CD 進行安裝後，防火牆預設將不會啟動"
-
-#: xml/release-notes.xml:207(para)
-msgid "When installing from the Live CD no firewall will be active by default."
-msgstr "當使用 Live CD 進行安裝，安裝完成後防火牆預設將不會啟用。"
-
-#: xml/release-notes.xml:211(para)
-msgid "Enable the firewall using YaST or with:"
-msgstr "請使用 YaST 或執行以下指令啟用防火牆："
-
-#: xml/release-notes.xml:214(screen)
-#, no-wrap
-msgid ""
-"systemctl enable SuSEfirewall2\n"
-"systemctl start SuSEfirewall2"
+#: xml/release-notes.xml:191(title)
+msgid "Non-Oss Repository"
 msgstr ""
-"systemctl enable SuSEfirewall2\n"
-"systemctl start SuSEfirewall2"
 
-#: xml/release-notes.xml:220(title)
+#: xml/release-notes.xml:192(para)
+msgid "After the installation the non-oss repository is disabled"
+msgstr ""
+
+#: xml/release-notes.xml:193(para)
+msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
+msgstr ""
+
+#: xml/release-notes.xml:203(title)
 msgid "Technical"
 msgstr "技術議題"
 
 #. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:225(title)
+#: xml/release-notes.xml:208(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "列印系統：改進以及不相容的變動"
 
-#: xml/release-notes.xml:228(emphasis)
+#: xml/release-notes.xml:211(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS 版本昇級至 1.7"
 
-#: xml/release-notes.xml:230(para)
+#: xml/release-notes.xml:213(para)
 msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 msgstr "CUPS &gt;= 1.6 有一主要變動和 1.5.4 版以前的版本不相容，特別是在網路列印這部分："
 
-#: xml/release-notes.xml:231(para)
+#: xml/release-notes.xml:214(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
-msgstr ""
-"IPP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 "
-"的連線要求，並回傳 \"Bad Request\" (請見 <ulink url=\"http://www.cups.org/str.php?"
-"L4231\">http://www.cups.org/str.php?L4231</ulink>)。對於舊伺服器使用舊 IPP 通訊協定必須明確指定，"
-"例如在 client.conf 中的 ServerName 加入 '/version=1.1' (ServerName "
-"older.server.example.com/version=1.1)，或加到 CUPS_SERVER 環境變數，或是加到 '-h' "
-"選項指定的伺服器名稱 (lpstat -h older.server.example.com/version=1.1 -p)。"
+msgstr "IPP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 的連線要求，並回傳 \"Bad Request\" (請見 <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)。對於舊伺服器使用舊 IPP 通訊協定必須明確指定，例如在 client.conf 中的 ServerName 加入 '/version=1.1' (ServerName older.server.example.com/version=1.1)，或加到 CUPS_SERVER 環境變數，或是加到 '-h' 選項指定的伺服器名稱 (lpstat -h older.server.example.com/version=1.1 -p)。"
 
-#: xml/release-notes.xml:232(para)
+#: xml/release-notes.xml:215(para)
 msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
-msgstr ""
-"CUPS Browsing 功能已經被捨棄，但是新的套件 cups-filters 提供 cups-browsed 以支援基本的 CUPS "
-"Browsing 以及 Polling 功能。CUPS 用來自動發掘印表機用戶端的原生通訊協定現在已改為 DNS-SD。您可以在本機啟動 cups-"
-"browsed 來從遠端傳統 CUPS 伺服器接收傳統的 CUPS Browsing 資訊。若要在網路上廣播傳統的 CUPS Browsing 資訊，"
-"以便遠端傳統 CUPS 用戶端能夠接收，請在 <literal moreinfo=\"none\">/etc/cups/cups-"
-"browsed.conf</literal> 中設定 \"BrowseLocalProtocols CUPS\" 並啟動 cups-browsed。"
+msgstr "CUPS Browsing 功能已經被捨棄，但是新的套件 cups-filters 提供 cups-browsed 以支援基本的 CUPS Browsing 以及 Polling 功能。CUPS 用來自動發掘印表機用戶端的原生通訊協定現在已改為 DNS-SD。您可以在本機啟動 cups-browsed 來從遠端傳統 CUPS 伺服器接收傳統的 CUPS Browsing 資訊。若要在網路上廣播傳統的 CUPS Browsing 資訊，以便遠端傳統 CUPS 用戶端能夠接收，請在 <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> 中設定 \"BrowseLocalProtocols CUPS\" 並啟動 cups-browsed。"
 
-#: xml/release-notes.xml:233(para)
+#: xml/release-notes.xml:216(para)
 msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
-msgstr ""
-"有些列印過濾器及後端在 CUPS 中已被捨棄，但在新套件 cups-filters 中則有提供。故 cups-filters 通常是需要的 (列為 "
-"RPM 建議套件)，但並非是嚴格必需的。"
+msgstr "有些列印過濾器及後端在 CUPS 中已被捨棄，但在新套件 cups-filters 中則有提供。故 cups-filters 通常是需要的 (列為 RPM 建議套件)，但並非是嚴格必需的。"
 
-#: xml/release-notes.xml:234(para)
-msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, and bnc#789566)."
-msgstr ""
-"cupsd 設定方式已分離成二個檔案：cupsd.conf (可透過 HTTP PUT 如 cupsctl 來變更)，和 cups-files.conf "
-"(只能以 root 權限手動修改)，以提供更好的保護，避免被 root 授與可變更 cupsd 設定的一般使用者誤用 (詳見 <ulink url=\""
-"http://www.cups.org/str.php?L4223\""
-">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 bnc#789566)。"
+#: xml/release-notes.xml:217(para)
+#, fuzzy
+msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr "cupsd 設定方式已分離成二個檔案：cupsd.conf (可透過 HTTP PUT 如 cupsctl 來變更)，和 cups-files.conf (只能以 root 權限手動修改)，以提供更好的保護，避免被 root 授與可變更 cupsd 設定的一般使用者誤用 (詳見 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 bnc#789566)。"
 
-#: xml/release-notes.xml:235(para)
+#: xml/release-notes.xml:226(para)
 msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
-msgstr ""
-"CUPS banner 頁面及 CUPS 測試頁面在 CUPS &gt;= 1.6 中已不再支援，只能夠使用 cups-filters 提供的頁面。在 <"
-"literal moreinfo=\"none\">/usr/share/cups/banners/</literal> 的 CUPS banner "
-"頁面檔案，以及位於 <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal>"
-" 的測試頁面 (同樣為 CUPS banner 檔案類型)，因為已無法在 CUPS &gt;= 1.6 使用 (無過濾器可以轉換 CUPS banner "
-"檔案)，故 cups RPM 不再提供 (詳見 <ulink url=\"http://www.cups.org/str.php?L4120\""
-">http://www.cups.org/str.php?L4120</ulink> )。自 CUPS &gt;= 1.6 起，只有 cups-"
-"filters 中的 banner 檔案及測試頁面能夠透過 cups-filters PDF workflow 運作，並且 cups-filters "
-"套件也提供相對應的 bannertopdf 過濾器。"
+msgstr "CUPS banner 頁面及 CUPS 測試頁面在 CUPS &gt;= 1.6 中已不再支援，只能夠使用 cups-filters 提供的頁面。在 <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> 的 CUPS banner 頁面檔案，以及位於 <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> 的測試頁面 (同樣為 CUPS banner 檔案類型)，因為已無法在 CUPS &gt;= 1.6 使用 (無過濾器可以轉換 CUPS banner 檔案)，故 cups RPM 不再提供 (詳見 <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> )。自 CUPS &gt;= 1.6 起，只有 cups-filters 中的 banner 檔案及測試頁面能夠透過 cups-filters PDF workflow 運作，並且 cups-filters 套件也提供相對應的 bannertopdf 過濾器。"
 
-#: xml/release-notes.xml:236(para)
-msgid "For details, see bsc#735404."
-msgstr "欲了解更多詳請，請見 bsc#735404。"
+#: xml/release-notes.xml:227(para)
+#, fuzzy
+msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+msgstr "該問題及其他與 Intel 驅動程式相關的問題將會被處理。若可能的話，會提供線上更新來解決。"
 
-#: xml/release-notes.xml:238(emphasis)
+#: xml/release-notes.xml:230(emphasis)
 msgid "PDF Now Common Printing Data Format"
 msgstr "PDF 現在是共通的列印資料格式"
 
-#: xml/release-notes.xml:240(para)
+#: xml/release-notes.xml:232(para)
 msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
-msgstr ""
-"目前有自 PostScript 轉向 PDF 做為標準列印工作格式的提議，主要由 Linux 基金會下的 OpenPrinting 工作組及 CUPS "
-"作者所共同提倡。"
+msgstr "目前有自 PostScript 轉向 PDF 做為標準列印工作格式的提議，主要由 Linux 基金會下的 OpenPrinting 工作組及 CUPS 作者所共同提倡。"
 
-#: xml/release-notes.xml:241(para)
+#: xml/release-notes.xml:233(para)
 msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
 msgstr "這意味著應用程式預設通常不再需要產生 PostScript 輸出以供列印，取而代之的則是 PDF。"
 
-#: xml/release-notes.xml:242(para)
+#: xml/release-notes.xml:234(para)
 msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
-msgstr ""
-"其結果是，如何將應用程式的列印輸出轉換成特定印表機接受的「語言」的預設處理流程 (也就是所謂的 \"CUPS 過濾器串鏈\")，已根本地從以 "
-"PostScript 為主的流程，變成以 PDF 為主的流程。"
+msgstr "其結果是，如何將應用程式的列印輸出轉換成特定印表機接受的「語言」的預設處理流程 (也就是所謂的 \"CUPS 過濾器串鏈\")，已根本地從以 PostScript 為主的流程，變成以 PDF 為主的流程。"
 
-#: xml/release-notes.xml:243(para)
+#: xml/release-notes.xml:235(para)
 msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
-msgstr ""
-"是故，Linux 下的 CUPS 上游標準 (使用 CUPS 加上 cups-filters 套件) 現在已經是以 PDF 為基礎的工作流程，例如每個非 "
-"PDF 的輸入會先被轉換成 PDF；頁面管理選項是設定給 pdftopdf 過濾器；以 PDF 做為輸入來呼叫 Ghostscript。"
+msgstr "是故，Linux 下的 CUPS 上游標準 (使用 CUPS 加上 cups-filters 套件) 現在已經是以 PDF 為基礎的工作流程，例如每個非 PDF 的輸入會先被轉換成 PDF；頁面管理選項是設定給 pdftopdf 過濾器；以 PDF 做為輸入來呼叫 Ghostscript。"
 
-#: xml/release-notes.xml:244(para)
+#: xml/release-notes.xml:236(para)
 msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
-msgstr ""
-"隨著 PDF 成為標準的列印工作格式，傳統的 PostScript 印表機就無法直接列印應用程式的輸出，故在列印流程中需要一個轉換步驟來將 PDF "
-"轉換為 PostScript。然而也是有 PostScript+PDF 的印表機能夠直接列印兩種格式。"
+msgstr "隨著 PDF 成為標準的列印工作格式，傳統的 PostScript 印表機就無法直接列印應用程式的輸出，故在列印流程中需要一個轉換步驟來將 PDF 轉換為 PostScript。然而也是有 PostScript+PDF 的印表機能夠直接列印兩種格式。"
 
-#: xml/release-notes.xml:245(para)
+#: xml/release-notes.xml:237(para)
 msgid "For details, see the section \"Common printing data formats\" in the SUSE wiki article \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
-msgstr ""
-"欲了解更多資訊，請見 SUSE 維基頁面 \"Concepts printing\" (<ulink url=\""
-"http://en.opensuse.org/Concepts_printing\""
-">http://en.opensuse.org/Concepts_printing</ulink>) 中的 \"Common printing data "
-"formats\" 小節。"
+msgstr "欲了解更多資訊，請見 SUSE 維基頁面 \"Concepts printing\" (<ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>) 中的 \"Common printing data formats\" 小節。"
 
-#: xml/release-notes.xml:250(title)
+#: xml/release-notes.xml:242(title)
 msgid "Miscellaneous"
 msgstr "雜項"
 
+#: xml/release-notes.xml:244(title)
+#, fuzzy
+msgid "KDE and Network Authentication"
+msgstr "安裝完成後，沒有網路可用"
+
+#: xml/release-notes.xml:245(para)
+msgid "When using the KDE displaymanager SDDM with an authentication method that provides a high number of users SDDM becomes unusable. Additionally if the automounter is used SDDM may block for long time on startup trying to mount every user's home"
+msgstr ""
+
+#: xml/release-notes.xml:253(programlisting)
+#, no-wrap
+msgid ""
+"[Theme]\n"
+"Current=maldives\n"
+"\n"
+"[Users]\n"
+"MaximumUid=1002"
+msgstr ""
+
+#: xml/release-notes.xml:251(para)
+msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
+msgstr ""
+
+#: xml/release-notes.xml:259(para)
+msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> for details."
+msgstr ""
+
 #. bnc#809347
-#: xml/release-notes.xml:257(title)
+#: xml/release-notes.xml:269(title)
 msgid "More Information and Feedback"
 msgstr "更多資訊與反饋"
 
-#: xml/release-notes.xml:261(para)
+#: xml/release-notes.xml:273(para)
 msgid "Read the READMEs on the CDs."
 msgstr "閱讀安裝 CD 中的 README 檔案。"
 
-#: xml/release-notes.xml:264(para)
+#: xml/release-notes.xml:276(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "從 RPM 獲取某個套件詳細的變動歷史資訊："
 
-#: xml/release-notes.xml:265(screen)
+#: xml/release-notes.xml:277(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 
-#: xml/release-notes.xml:266(para)
+#: xml/release-notes.xml:278(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;FILENAME&gt; 是該套件的名稱。"
 
-#: xml/release-notes.xml:269(para)
+#: xml/release-notes.xml:281(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "請查看在安裝 DVD 最上層目錄下的 <filename>ChangeLog</filename> 檔案以了解所更新套件的變動歷史（按時間先後排序）。"
 
-#: xml/release-notes.xml:273(para)
+#: xml/release-notes.xml:285(para)
 msgid "Find more information in the <filename>docu</filename> directory on the DVD."
 msgstr "在安裝 DVD 中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
-#: xml/release-notes.xml:276(para)
+#: xml/release-notes.xml:288(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> 包含了額外或是更新的文件。"
 
-#: xml/release-notes.xml:281(para)
+#: xml/release-notes.xml:293(para)
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "請造訪 <ulink url=\"http://www.opensuse.org\"/> 以了解 openSUSE 最新的產品訊息。"
 
-#: xml/release-notes.xml:286(para)
+#: xml/release-notes.xml:298(para)
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "版權所有 © 2015 SUSE LLC"
 
-#: xml/release-notes.xml:288(para)
+#: xml/release-notes.xml:300(para)
 msgid "Thanks for using openSUSE."
 msgstr "感謝使用 openSUSE。"
 
-#: xml/release-notes.xml:289(para)
+#: xml/release-notes.xml:301(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE 團隊"
 
@@ -320,6 +270,49 @@ msgstr ""
 "Joe Man <trmetal@yahoo.com.hk>, 2001\n"
 "Ray Chen <swyear@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012\n"
 "Ramax Lo <ramaxlo@gmail.com>, 2013, 2014, 2015"
+
+#~ msgid "If you install a new system as <quote>minimal base system</quote>, the installed system will try to maintain this level and often run into dependency conflicts when you try to install more software."
+#~ msgstr "若您以<quote>最小基礎系統</quote>來安裝新系統，安裝好的系統會嘗試維持此種安裝層級。當您嘗試安裝更多軟體時，這經常會導致相依性衝突發生。"
+
+#~ msgid "To avoid this, uninstall the package <literal>patterns-openSUSE-minimal_base-conflicts</literal>, instructing the system that you no longer want to maintain a minimal installation (<quote>minimal base system</quote>)."
+#~ msgstr "要避免該問題，請移除套件 <literal>patterns-openSUSE-minimal_base-conflicts</literal>，以指示系統您不再需要維持最小程度安裝 (<quote>最小基礎系統</quote>)。"
+
+#~ msgid "openSUSE Leap as Guest in VirtualBox"
+#~ msgstr "以 openSUSE Leap 做為 VirtualBox 的客體系統"
+
+#~ msgid "If you are running openSUSE Leap as a guest inside VirtualBox, you must use a different displaymanager than GDM. Switch to using lightdm by installing the \"lightdm\" package and activate it in <filename>/etc/sysconfig/displaymanager</filename> by setting"
+#~ msgstr "若您要在 VirtualBox 上執行 openSUSE Leap 作為客體系統，您必須使用 GDM 以外的其他顯示管理員。您可以安裝 \"lightdm\" 套件來改用 lightdm，並在 <filename>/etc/sysconfig/displaymanager</filename> 修改以下設定來啟用它"
+
+#~ msgid "DISPLAYMANAGER=\"lightdm\""
+#~ msgstr "DISPLAYMANAGER=\"lightdm\""
+
+#~ msgid "Background information:"
+#~ msgstr "背景資訊："
+
+#~ msgid "GDM starts the X server in the user context (unlike all other known DMs at this moment). This is not compatible with the VirtualBox video driver and will result in crashes of the X Window System."
+#~ msgstr "不像其他顯示管理員，GDM 會在使用者環境下啟動 X server。這與 VirtualBox 顯示驅動程式不相容，且會導致 X Window 系統崩潰。"
+
+#~ msgid "You can still use a full GNOME3 session"
+#~ msgstr "您仍然可以使用完整的 GNOME3 執行階段"
+
+#~ msgid "No firewall by default after installation from Live CD"
+#~ msgstr "從 Live CD 進行安裝後，防火牆預設將不會啟動"
+
+#~ msgid "When installing from the Live CD no firewall will be active by default."
+#~ msgstr "當使用 Live CD 進行安裝，安裝完成後防火牆預設將不會啟用。"
+
+#~ msgid "Enable the firewall using YaST or with:"
+#~ msgstr "請使用 YaST 或執行以下指令啟用防火牆："
+
+#~ msgid ""
+#~ "systemctl enable SuSEfirewall2\n"
+#~ "systemctl start SuSEfirewall2"
+#~ msgstr ""
+#~ "systemctl enable SuSEfirewall2\n"
+#~ "systemctl start SuSEfirewall2"
+
+#~ msgid "For details, see bsc#735404."
+#~ msgstr "欲了解更多詳請，請見 bsc#735404。"
 
 #~ msgid "openSUSE"
 #~ msgstr "openSUSE"
@@ -444,9 +437,6 @@ msgstr ""
 
 #~ msgid "If you see two mouse pointers and have two graphic boards, where one is an Intel board, try uninstalling <systemitem>xf86-video-intel</systemitem> and thus using the other one only. This will make disappear the static mouse pointer."
 #~ msgstr "若您看到有出現二個滑鼠指標，且您安裝了二張顯示卡，其中之一是 Intel 顯示卡，請嘗試移除 <systemitem>xf86-video-intel</systemitem>，並只使用另一張顯示卡。這樣滑鼠指標就會消失。"
-
-#~ msgid "This and other issues with the Intel driver like (see <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) will be worked on and, if possible, addressed with an online update."
-#~ msgstr "該問題及其他與 Intel 驅動程式相關的問題將會被處理。若可能的話，會提供線上更新來解決。"
 
 #~ msgid "Missing Dependencies for virt-manager"
 #~ msgstr "virt-manager 缺少相依套件"
@@ -651,9 +641,6 @@ msgstr ""
 
 #~ msgid "Within the next 15 minutes the daily cron routine will start and build a proper mlocate file."
 #~ msgstr "在接下來的15分鐘內，每日的 cron 服務將啟動，並建立適當的 mlocate 檔案。"
-
-#~ msgid "No Network after Installation"
-#~ msgstr "安裝完成後，沒有網路可用"
 
 #~ msgid "CHECKIT:12.3"
 #~ msgstr "CHECKIT:12.3"
