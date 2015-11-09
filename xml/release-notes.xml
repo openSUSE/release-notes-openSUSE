@@ -180,7 +180,23 @@ picture was taken by N/A
  <section id="upgrade">
   <title>System Upgrade</title>
 
-  <para/>
+   <section>
+    <title>Network Interface Names</title>
+    <para>When upgrading a remote machine from openSUSE 13.2 make sure your
+     network interfaces are named correctly</para>
+    <para>
+     openSUSE 13.2 used so called predictable network interface names (e.g.
+     <literal>enp5s0</literal>) whereas Leap 42.1 uses persistent interface
+     names (<literal>eth0</literal>). After upgrading and rebooting the network
+     interface names may therefore change which could lock you out from a
+     system. To avoid interfaces from getting renamed, run the following
+     command for each of your network interfaces before your reboot the system:
+
+     <screen>/usr/lib/udev/udev-generate-persistent-rule -v -c enp5s0 -n enp5s0 -o /etc/udev/rules.d/70-persistent-net.rules</screen>
+
+     Replace <literal>enp5s0</literal> with the name of your network interface name.
+    </para>
+   </section>
 
  </section>
 
