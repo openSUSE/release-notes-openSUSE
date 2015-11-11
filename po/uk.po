@@ -14,14 +14,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2015-11-09 11:56+0100\n"
-"PO-Revision-Date: 2015-11-05 07:11+0200\n"
+"PO-Revision-Date: 2015-11-11 20:29+0200\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
-"Language-Team: Ukrainian <http://10n.opensuse.org/projects/release-notes-opensuse/master/uk/>\n"
+"Language-Team: Ukrainian <http://l10n.opensuse.org/projects/release-notes-"
+"opensuse/master/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.3\n"
 
 #: xml/release-notes.xml:10(title)
@@ -55,9 +57,8 @@ msgstr "Встановлення"
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #: xml/release-notes.xml:104(title)
-#, fuzzy
 msgid "Minimal System Installation"
-msgstr "Встановлення основної системи"
+msgstr "Встановлення мінімальної системи"
 
 #: xml/release-notes.xml:105(para)
 msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
@@ -150,18 +151,28 @@ msgid "Some printing filters and back-ends are dropped in CUPS but the new packa
 msgstr "Деякі фільтри і фонові механізми друку видалені зі складу CUPS, але їх надає новий пакет cups-filters. Таким чином, cups-filters зазвичай необхідний (рекомендується RPM), але не потрібний безпосередньо."
 
 #: xml/release-notes.xml:217(para)
-#, fuzzy
 msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "Директиви налаштування cupsd розділені на два файли: cupsd.conf (також може бути відредагований через HTTP PUT, наприклад, через cupsctl) і cups-files.conf (може бути відредагований тільки вручну від імені root) для кращого захисту від помилкового використання привілеїв звичайними користувачами, яким root окремо дозволив вносити зміни в налаштування cupsd (див. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 і bnc#789566)."
+msgstr ""
+"Директиви налаштування cupsd розділені на два файли: cupsd.conf (також може "
+"бути відредагований через HTTP PUT, наприклад, через cupsctl) і cups-"
+"files.conf (може бути відредагований тільки вручну від імені root) для "
+"кращого захисту від помилкового використання привілеїв звичайними "
+"користувачами, яким root окремо дозволив вносити зміни в налаштування cupsd ("
+"див. <ulink url=\"http://www.cups.org/str.php?L4223\""
+">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, та <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:226(para)
 msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
 msgstr "Банери CUPS і тестова сторінка CUPS більше не підтримуються, починаючи з CUPS &gt;= 1.6. Необхідно використовувати банери і тестову сторінку зі складу cups-filters. Файли банерів CUPS <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> і тестова сторінка CUPS <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (яка також є банером CUPS) більш не входять до складу RPM-пакету CUPS, бо вони більше не працюють, починаючи з CUPS &gt;= 1.6 (див. <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ), через відсутність фільтра, який перетворював файли банерів CUPS. Починаючи з CUPS &gt;= 1.6, тільки файли банерів і тестової сторінки зі складу пакета cups-filters працюють через PDF-потік, також пакет cups-filters надає відповідний фільтр bannertopdf."
 
 #: xml/release-notes.xml:227(para)
-#, fuzzy
 msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
-msgstr "Над цією та іншими подібними проблемами через драйвер Intel (див. <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) працюють і за можливості вони будуть усунені через мережне оновлення."
+msgstr ""
+"За подробицями див. <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 
 #: xml/release-notes.xml:230(emphasis)
 msgid "PDF Now Common Printing Data Format"
@@ -196,9 +207,8 @@ msgid "Miscellaneous"
 msgstr "Різне"
 
 #: xml/release-notes.xml:244(title)
-#, fuzzy
 msgid "KDE and Network Authentication"
-msgstr "Автоматизоване встановлення"
+msgstr "KDE та мережне розпізнавання"
 
 #: xml/release-notes.xml:245(para)
 msgid "When using the KDE displaymanager SDDM with an authentication method that provides a high number of users SDDM becomes unusable. Additionally if the automounter is used SDDM may block for long time on startup trying to mount every user's home"
