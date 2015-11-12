@@ -8,9 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2015-11-09 11:56+0100\n"
-"PO-Revision-Date: 2015-11-03 22:46+0200\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <http://10n.opensuse.org/projects/release-notes-opensuse/master/pt_BR/>\n"
+"PO-Revision-Date: 2015-11-12 13:37+0200\n"
+"Last-Translator: Ronan Chagas <ronisbr@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <http://l10n.opensuse.org/projects"
+"/release-notes-opensuse/master/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,17 +53,23 @@ msgstr "Instalação"
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #: xml/release-notes.xml:104(title)
-#, fuzzy
 msgid "Minimal System Installation"
-msgstr "Instalação do sistema básico"
+msgstr "Instalação do Sistema Básico"
 
 #: xml/release-notes.xml:105(para)
 msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
 msgstr ""
+"Para evitar que alguns pacotes recomendados grandes sejam instalados, o "
+"padrão para instalações mínimas usa um outro padrão que conflita com os "
+"pacotes não desejados. Esse padrão pode ser removido após a instalação do "
+"sistema, ele se chama <literal>patterns-openSUSE-minimal_base-"
+"conflicts</literal>"
 
 #: xml/release-notes.xml:112(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
 msgstr ""
+"Note que a instalação mínima não possui nenhum firewall por padrão. Se você "
+"necessitar de um, instale <literal>SuSEfirewall2</literal>"
 
 #: xml/release-notes.xml:120(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -107,15 +114,18 @@ msgstr "Geral"
 
 #: xml/release-notes.xml:191(title)
 msgid "Non-Oss Repository"
-msgstr ""
+msgstr "Repositório Non-Oss"
 
 #: xml/release-notes.xml:192(para)
 msgid "After the installation the non-oss repository is disabled"
-msgstr ""
+msgstr "Após a instalação, o repositório non-oss é desabilitado"
 
 #: xml/release-notes.xml:193(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
+"Habilite o repositório <literal>openSUSE-Leap-42.1-Non-Oss</literal> "
+"utilizando o YaST ou utilizando o zypper através da linha de comando: "
+"<screen>zypper mr -e repo-non-oss</screen>"
 
 #: xml/release-notes.xml:203(title)
 msgid "Technical"
@@ -147,18 +157,29 @@ msgid "Some printing filters and back-ends are dropped in CUPS but the new packa
 msgstr "Alguns filtros e back-ends de impressão foram removidos do CUPS, mas estão presentes no pacote cups-filters. Dessa forma, o pacote cups-filters é usualmente necessário (recomendado pelo RPM). No entanto, este pacote não é estritamente requerido."
 
 #: xml/release-notes.xml:217(para)
-#, fuzzy
 msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "As diretivas de configuração do cupsd estão divididas em dois arquivos: cupsd.conf (que pode ser também modificado por HTTP PUT, por exemplo através do cupsctl) e cups-files.conf (que pode ser modificado apenas manualmente pelo administrador) para prover melhor proteção padrão contra má utilização de privilégios pelos usuários que foram especificamente autorizados pelo administrador para alterar as configurações do cupsd (veja <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, e bnc#789566)."
+msgstr ""
+"As diretivas de configuração do cupsd estão divididas em dois arquivos: "
+"cupsd.conf (que pode ser também modificado por HTTP PUT, por exemplo através "
+"do cupsctl) e cups-files.conf (que pode ser modificado apenas manualmente "
+"pelo administrador) para prover melhor proteção padrão contra má utilização "
+"de privilégios pelos usuários que foram especificamente autorizados pelo "
+"administrador para alterar as configurações do cupsd (veja <ulink url=\""
+"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
+" , CVE-2012-5519 e <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:226(para)
 msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
 msgstr "Banners e a página de teste do CUPS não são mais suportados desde o CUPS &gt;= 1.6. Os banners e a página de teste do pacote cups-filters devem ser utilizados. Os arquivos de banners do CUPS em <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> e a página de teste do CUPS em <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (que também é um arquivo tipo banner) não são fornecidos mais pelo RPM do cups porque eles não funcionam mais desde o CUPS &gt;= 1.6 (veja <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ), uma vez em que não existe mais um filtro que pode converter esses arquivos de banner. Desde o CUPS &gt;= 1.6, apenas os arquivos de banner e a página de teste no pacote cups-filters funcionam através do workflow do cups-filters PDF. Note que o pacote cups-filters também provê o filtro bannertopdf correspondente."
 
 #: xml/release-notes.xml:227(para)
-#, fuzzy
 msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
-msgstr "Isto e outros problemas com o driver da Intel como (veja <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) serão trabalhados e, se possível, corrigidos com uma atualização online."
+msgstr ""
+"Para mais detalhes, veja <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 
 #: xml/release-notes.xml:230(emphasis)
 msgid "PDF Now Common Printing Data Format"
@@ -193,13 +214,17 @@ msgid "Miscellaneous"
 msgstr "Diversos"
 
 #: xml/release-notes.xml:244(title)
-#, fuzzy
 msgid "KDE and Network Authentication"
-msgstr "Nenhuma rede após a instalação"
+msgstr "KDE e Autenticação por Rede"
 
 #: xml/release-notes.xml:245(para)
 msgid "When using the KDE displaymanager SDDM with an authentication method that provides a high number of users SDDM becomes unusable. Additionally if the automounter is used SDDM may block for long time on startup trying to mount every user's home"
 msgstr ""
+"Quando estiver utilizando um método de autenticação que provê um alto número "
+"de usuários, o gerenciador de login SDDM do KDE ficará inutilizável. "
+"Adicionalmente, se o montador automático é utilizado, então o SDDM poderá "
+"ficar bloqueado por um longo período na inicialização tentanto montar todas "
+"as pastas dos usuários"
 
 #: xml/release-notes.xml:253(programlisting)
 #, no-wrap
@@ -210,14 +235,23 @@ msgid ""
 "[Users]\n"
 "MaximumUid=1002"
 msgstr ""
+"[Theme]↵\n"
+"Current=maldives↵\n"
+"↵\n"
+"[Users]↵\n"
+"MaximumUid=1002"
 
 #: xml/release-notes.xml:251(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
 msgstr ""
+"Modifique o arquivo <filename>/etc/sddm.conf</filename> para que ele "
+"contenha as seguintes entradas: <placeholder-1/>"
 
 #: xml/release-notes.xml:259(para)
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> for details."
 msgstr ""
+"Veja <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug "
+"953778</ulink> para maiores detalhes."
 
 #. bnc#809347
 #: xml/release-notes.xml:269(title)
