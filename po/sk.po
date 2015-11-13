@@ -44,17 +44,22 @@ msgstr "Inštalácia"
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #: xml/release-notes.xml:104(title)
-#, fuzzy
 msgid "Minimal System Installation"
-msgstr "Inštalácia základného systému"
+msgstr "Inštalácia minimálneho systému"
 
 #: xml/release-notes.xml:105(para)
 msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
 msgstr ""
+"Aby sa zabránilo nainštalovaniu niektorých veľkých odporúčaných balíkov, "
+"šablóna pre minimálnu inštaláciu používa inú šablónu, ktorá je v rozpore s "
+"neželanými balíkmi. Šablóna sa môže po inštalácii odstrániť, sa volá <literal"
+">patterns-openSUSE-minimal_base-conflicts</literal>"
 
 #: xml/release-notes.xml:112(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
 msgstr ""
+"Treba upozorniť, že minimálna inštalácia nemá firewall v predvolenom "
+"nastavení. Ak ho potrebujete, nainštalujte <literal>SuSEfirewall2</literal>"
 
 #: xml/release-notes.xml:120(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -99,15 +104,18 @@ msgstr "Všeobecné"
 
 #: xml/release-notes.xml:191(title)
 msgid "Non-Oss Repository"
-msgstr ""
+msgstr "Repozitár Non-Oss"
 
 #: xml/release-notes.xml:192(para)
 msgid "After the installation the non-oss repository is disabled"
-msgstr ""
+msgstr "Po inštalácii je repozitár non-oss zakázaný"
 
 #: xml/release-notes.xml:193(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
+"Povoľte repozitár <literal>openSUSE-Leap-42.1-Non-Oss</literal> pomocou YaST "
+"alebo na príkazovom riadku pomocou zypper: <screen>zypper mr -e repo-non-"
+"oss</screen>"
 
 #: xml/release-notes.xml:203(title)
 msgid "Technical"
@@ -139,9 +147,17 @@ msgid "Some printing filters and back-ends are dropped in CUPS but the new packa
 msgstr "Niektoré tlačové filtre a backendy sú v CUPS vynechané, ale nový balík cups-filters ich poskytuje. Takže cups-filters je zvyčajne potrebný (odporúča RPM), ale cups-filters nie je nevyhnutný."
 
 #: xml/release-notes.xml:217(para)
-#, fuzzy
 msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "Konfiguračných direktívy cupsd sú rozdelené do dvoch súborov: cupsd.conf (možno ho tiež upraviť pomocou HTTP PUT napr. cez cupsctl) a cups-files.conf (možno ho upraviť len manuálne správcom systému), aby bola lepšia predvolená ochrana proti zneužitiu výsad bežnými používateľmi, ktorí boli mali konkrétne správcom systému  povolené robiť zmeny cupsd konfigurácie (pozrite si <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 a bnc#789566)."
+msgstr ""
+"Konfiguračné direktívy cupsd sú rozdelené do dvoch súborov: cupsd.conf ("
+"možno ho tiež upraviť pomocou HTTP PUT napr. cez cupsctl) a cups-files.conf ("
+"možno ho upraviť len manuálne správcom systému), aby bola lepšia predvolená "
+"ochrana proti zneužitiu výsad bežnými používateľmi, ktorí mali konkrétne "
+"správcom systému  povolené robiť zmeny cupsd konfigurácie (pozrite si <ulink "
+"url=\"http://www.cups.org/str.php?L4223\""
+">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, a <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:226(para)
 msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
@@ -150,6 +166,9 @@ msgstr "CUPS stránky a CUPS skúšobná strana už nie sú podporované od CUPS
 #: xml/release-notes.xml:227(para)
 msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 msgstr ""
+"Podrobnosti nájdete na <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 
 #: xml/release-notes.xml:230(emphasis)
 msgid "PDF Now Common Printing Data Format"
@@ -185,11 +204,15 @@ msgstr "Rôzne"
 
 #: xml/release-notes.xml:244(title)
 msgid "KDE and Network Authentication"
-msgstr ""
+msgstr "KDE a sieťové overenie"
 
 #: xml/release-notes.xml:245(para)
 msgid "When using the KDE displaymanager SDDM with an authentication method that provides a high number of users SDDM becomes unusable. Additionally if the automounter is used SDDM may block for long time on startup trying to mount every user's home"
 msgstr ""
+"Pri použití SDDM správca obrazovky KDE s overovacou metódou, ktorá poskytuje "
+"vysoký počet používateľov, sa SDDM stáva nepoužiteľným. Navyše, ak je "
+"použité automatické pripojenie, môže SDDM blokovať po dlhú dobu na štarte "
+"snahu o pripojenie domovských adresárov všetkých používateľov."
 
 #: xml/release-notes.xml:253(programlisting)
 #, no-wrap
@@ -200,14 +223,23 @@ msgid ""
 "[Users]\n"
 "MaximumUid=1002"
 msgstr ""
+"[Theme]\n"
+"Current=maldives\n"
+"\n"
+"[Users]\n"
+"MaximumUid=1002"
 
 #: xml/release-notes.xml:251(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
 msgstr ""
+"Upravte <filename>/etc/sddm.conf</filename>, aby obsahovali nasledovné "
+"položky: <placeholder-1/>"
 
 #: xml/release-notes.xml:259(para)
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> for details."
 msgstr ""
+"Podrobnosti nájdete na <ulink url=\""
+"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink>."
 
 #. bnc#809347
 #: xml/release-notes.xml:269(title)
