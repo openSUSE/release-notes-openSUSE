@@ -17,9 +17,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2015-11-09 11:56+0100\n"
-"PO-Revision-Date: 2015-10-29 08:18+0200\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
-"Language-Team: Spanish <http://10n.opensuse.org/projects/release-notes-opensuse/master/es/>\n"
+"PO-Revision-Date: 2015-11-18 22:48+0200\n"
+"Last-Translator: jc sl <trcs@gmx.com>\n"
+"Language-Team: Spanish <http://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_1/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,10 +66,17 @@ msgstr "Instalación del sistema base"
 #: xml/release-notes.xml:105(para)
 msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
 msgstr ""
+"Con el fin de evitar que algunos paquetes grandes recomendados sean "
+"instalados, el patrón para instalaciones mínimas usa otro patrón que entra "
+"en conflicto con los paquetes no deseados. Ese patrón se puede borrar tras "
+"la instalación, se llama <literal>patterns-openSUSE-minimal_base-"
+"conflicts</literal>"
 
 #: xml/release-notes.xml:112(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
 msgstr ""
+"Tenga en cuenta que la instalación mínima no incluye un cortafuegos de forma "
+"predeterminada. Si necesita uno, instale <literal>SuSEfirewall2</literal>"
 
 #: xml/release-notes.xml:120(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -114,15 +122,18 @@ msgstr "General"
 
 #: xml/release-notes.xml:191(title)
 msgid "Non-Oss Repository"
-msgstr ""
+msgstr "Repositorio Non-Oss"
 
 #: xml/release-notes.xml:192(para)
 msgid "After the installation the non-oss repository is disabled"
-msgstr ""
+msgstr "Después de la instalación se inhabilita el repositorio non-oss"
 
 #: xml/release-notes.xml:193(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
+"Habilite el repositorio <literal>openSUSE-Leap-42.1-Non-Oss</literal> usando "
+"YaST o desde la línea de órdenes usando zypper: <screen>zypper mr -e repo-"
+"non-oss</screen>"
 
 #: xml/release-notes.xml:203(title)
 msgid "Technical"
@@ -148,6 +159,16 @@ msgstr "La versión predeterminada del protocolo IPP se incrementó de 1.1 a 2.0
 #: xml/release-notes.xml:215(para)
 msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
 msgstr ""
+"CUPS ha retirado la exploración en busca de impresoras (CUPS Browsing) pero "
+"el nuevo paquete cups-filters ofrece cups-browsed que proporciona unas "
+"funcionalidades de exploración y sondeo básicas. El protocolo nativo de CUPS "
+"para el descubrimiento automático de impresoras de los clientes es ahora DNS-"
+"SD. Inicie cups-browsed en el equipo local para recibir la información de la "
+"exploración de CUPS en la forma habitual desde servidores remotos CUPS "
+"tradicionales. Para transmitir información de la exploración de la forma "
+"tradicional a la red de forma que los clientes CUPS tradicionales puedan "
+"recibirla, establezca \"BrowseLocalProtocols CUPS\" en <literal moreinfo=\""
+"none\">/etc/cups/cups-browsed.conf</literal> e inicie cups-browsed."
 
 #: xml/release-notes.xml:216(para)
 msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
@@ -162,9 +183,11 @@ msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &g
 msgstr ""
 
 #: xml/release-notes.xml:227(para)
-#, fuzzy
 msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
-msgstr "Se trabajará en éste y otros problemas con el controlador de Intel (vea <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) y, si es posible, se corregirán con una actualización en línea."
+msgstr ""
+"Para más detalles, vea <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 
 #: xml/release-notes.xml:230(emphasis)
 msgid "PDF Now Common Printing Data Format"
@@ -199,9 +222,8 @@ msgid "Miscellaneous"
 msgstr "Miscelánea"
 
 #: xml/release-notes.xml:244(title)
-#, fuzzy
 msgid "KDE and Network Authentication"
-msgstr "Sin red después de la instalación"
+msgstr "KDE y la autenticación de red"
 
 #: xml/release-notes.xml:245(para)
 msgid "When using the KDE displaymanager SDDM with an authentication method that provides a high number of users SDDM becomes unusable. Additionally if the automounter is used SDDM may block for long time on startup trying to mount every user's home"
@@ -216,14 +238,23 @@ msgid ""
 "[Users]\n"
 "MaximumUid=1002"
 msgstr ""
+"[Theme]↵\n"
+"Current=maldives↵\n"
+"↵\n"
+"[Users]↵\n"
+"MaximumUid=1002"
 
 #: xml/release-notes.xml:251(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
 msgstr ""
+"Modifique <filename>/etc/sddm.conf</filename> para que contenga las "
+"siguientes entradas: <placeholder-1/>"
 
 #: xml/release-notes.xml:259(para)
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> for details."
 msgstr ""
+"Vea el <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Error "
+"953778</ulink> para más detalles."
 
 # CER: no estoy seguro de la traducción de Feedback. Tiene el sentido de comentarios de los usuarios hacia los desarrolladores o la distro.
 #. bnc#809347
