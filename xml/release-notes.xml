@@ -14,9 +14,10 @@
   <productnumber>&version;</productnumber>
   <date><?dbtimestamp format="Y-m-d"?></date>
   <abstract>
-   <para> &opensuseleap; is a free and Linux-based operating system for your
-   PC, Laptop or Server.  You can surf the web, manage your e-mails and
-   photos, do office work, play videos or music and have a lot of fun!
+   <para>
+    &opensuseleap; is a free and Linux-based operating system for your
+    PC, Laptop or Server.  You can surf the web, manage your e-mails and
+    photos, do office work, play videos or music and have a lot of fun!
    </para>
   </abstract>
  </articleinfo>
@@ -50,16 +51,16 @@
  <!-- Previous Release Notes -->
  <para>
   If you upgrade from an older version to this &opensuseleap; release, see
-  previous release notes listed here: <ulink
-  url="http://en.opensuse.org/openSUSE:Release_Notes"/>
+  previous release notes listed here:
+  <ulink url="http://en.opensuse.org/openSUSE:Release_Notes">http://en.opensuse.org/openSUSE:Release_Notes</ulink>
  </para>
 
  <!-- beta statement -->
  <!--
  <para os="slprof">
-  This public beta test is part of the &opensuse; project.  Information 
+  This public beta test is part of the &opensuse; project.  Information
   about the project is available at <ulink url="http://opensuse.org"/>.</para>
- 
+
  <para os="slprof">Find information about known bugs for this beta in the
   &opensuse; wiki at <ulink url="http://en.opensuse.org/Bugs:Most_Annoying_Bugs"/>.
   Please report all bugs you encounter using this prerelease of &opensuse;
@@ -182,14 +183,16 @@ picture was taken by N/A
 
    <section>
     <title>Network Interface Names</title>
-    <para>When upgrading a remote machine from openSUSE 13.2, make sure your
-     network interfaces are named correctly.</para>
     <para>
-     openSUSE 13.2 used so-called predictable network interface names (for example,
-     <literal>enp5s0</literal>), whereas Leap 42.1 uses persistent interface
-     names (<literal>eth0</literal>). After upgrading and rebooting, the network
-     interface names may therefore change. This could lock you out of the
-     system. To avoid interfaces from being renamed, run the following
+     When upgrading a remote machine from openSUSE 13.2, make sure your
+     network interfaces are named correctly.
+    </para>
+    <para>
+     openSUSE 13.2 used so-called predictable network interface names (for
+     example, <literal>enp5s0</literal>), whereas Leap 42.1 uses persistent
+     interface names (<literal>eth0</literal>). After upgrading and rebooting,
+     the network interface names may therefore change. This could lock you out
+     of the system. To avoid interfaces from being renamed, run the following
      command for each of your network interfaces before you reboot the system:
 
      <screen>/usr/lib/udev/udev-generate-persistent-rule -v -c enp5s0 -n enp5s0 -o /etc/udev/rules.d/70-persistent-net.rules</screen>
@@ -209,7 +212,7 @@ picture was taken by N/A
     <para>
      Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using
      YaST or on the command line using zypper:
-    <screen>zypper mr -e repo-non-oss</screen>
+     <screen>zypper mr -e repo-non-oss</screen>
     </para>
    </section>
 
@@ -218,121 +221,138 @@ picture was taken by N/A
  <section id="technical">
   <title>Technical</title>
   <para/>
-  
-      <section role="notoc" id="fate-314630" remap="Packages:Packaging">
-        <!-- sort_key="None"; non-rn-fate-cats=""; -->
-        <title>Printing System: Improvements and Incompatible Changes</title>
-        <!-- href="https://fate.novell.com/314630" -->
-        <para>
-          <emphasis role="bold">CUPS Version Upgrade to 1.7</emphasis>
-        </para>
-        <para>The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments</para>
-        <itemizedlist>
-         <listitem>
-          <para>
-           PDF is now the standard print job format rather than PS.
-           Therefore traditional PostScript printers now also need a
-           filter driver for printing.</para>
-          <para>See <ulink
-            url="http://en.opensuse.org/Concepts_printing">http://en.opensuse.org/Concepts_printing</ulink>
-           for details.</para>
-         </listitem>
 
-         <listitem>
-          <para>The network printer discovery protocol has changed.
-           The native method to discover network printers
-           is now based on DNS Service discovery (DNS-SD, ie via
-           Avahi).
-           The <literal>cups-browsed</literal> service from the
-           <literal>cups-filters</literal> package can be used to
-           bridge old and new protocols. Both
-           <literal>cupsd</literal> and
-           <literal>cups-browsed</literal> need to run to make
-           "legacy" clients discover printers (that includes
-           LibreOffice and KDE).</para>
-         </listitem>
+  <section role="notoc" id="fate-314630" remap="Packages:Packaging">
+   <!-- sort_key="None"; non-rn-fate-cats=""; -->
+   <title>Printing System: Improvements and Incompatible Changes</title>
+   <!-- href="https://fate.novell.com/314630" -->
+   <para>
+    <emphasis role="bold">CUPS Version Upgrade to 1.7</emphasis>
+   </para>
+   <para>
+    The new CUPS version introduced some major changes compared to 1.5
+    that may require manual configuration adjustments
+   </para>
 
-         <listitem>
-          <para> The IPP protocol default version changed from 1.1
-           to 2.0. Older IPP servers like CUPS 1.3.x (for example in
-           SUSE Linux Enteprise 11) reject IPP 2.0 requests with "Bad Request" (see
-           <ulink url="http://www.cups.org/str.php?L4231">http://www.cups.org/str.php?L4231</ulink>).
-          </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      PDF is now the standard print job format rather than PS.
+      Therefore traditional PostScript printers now also need a
+      filter driver for printing.
+     </para>
+     <para>
+      See
+      <ulink url="https://en.opensuse.org/Concepts_printing">https://en.opensuse.org/Concepts_printing</ulink>
+      for details.
+     </para>
+    </listitem>
 
-          <para>
-           To be able to print to old servers the IPP protocol
-           version must be specified explictly by appending
-           '/version=1.1' to either 
-          </para>
+    <listitem>
+     <para>
+      The network printer discovery protocol has changed.
+      The native method to discover network printers is now based on DNS Service
+      discovery (DNS-SD, ie via Avahi).
+      The <literal>cups-browsed</literal> service from the
+      <literal>cups-filters</literal> package can be used to bridge old and new
+      protocols. Both <literal>cupsd</literal> and
+      <literal>cups-browsed</literal> need to run to make "legacy" clients
+      discover printers (that includes LibreOffice and KDE).
+     </para>
+    </listitem>
 
-          <para>
-          <itemizedlist>
-           <listitem><para>the
-            <literal>ServerName</literal> settings in
-            <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)
-           </para></listitem>
+    <listitem>
+     <para> The IPP protocol default version changed from 1.1
+      to 2.0. Older IPP servers like CUPS 1.3.x (for example in
+      SUSE Linux Enteprise 11) reject IPP 2.0 requests with "Bad Request" (see
+      <ulink url="http://www.cups.org/str.php?L4231"/>).
+     </para>
 
-           <listitem><para>
-           the <literal>CUPS_SERVER</literal> environment variable value
-           </para></listitem>
+     <para>
+      To be able to print to old servers the IPP protocol version must be
+      specified explictly by appending '/version=1.1' to either
+     </para>
 
-           <listitem><para>
-             the server name value of the <literal>-h</literal> option of the command line tools
-             e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>
-           </para></listitem>
-          </itemizedlist>
-          </para>
-         </listitem>
+     <itemizedlist>
+      <listitem>
+       <para>
+        the <literal>ServerName</literal> settings in
+        <literal>client.conf</literal> (e.g.,
+        <literal>ServerName older.server.example.com/version=1.1</literal>)
+       </para>
+      </listitem>
 
-         <listitem>
-          <para>Some printing filters and back-ends were moved from
-           the <literal>cups</literal> package to the
-           <literal>cups-filters</literal> package</para>
-         </listitem>
+      <listitem>
+       <para>
+        the <literal>CUPS_SERVER</literal> environment variable value
+       </para>
+      </listitem>
 
-         <listitem>
-          <para> Some configuration directives were split from <literal>cupsd.conf</literal> 
-           into <literal>cups-files.conf</literal>
-           (see <ulink
-            url="http://www.cups.org/str.php?L4223">http://www.cups.org/str.php?L4223</ulink>,
-           CVE-2012-5519, and <ulink
-            url="https://bugzilla.opensuse.org/show_bug.cgi?id=789566">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>).</para>
-         </listitem>
+      <listitem>
+       <para>
+        the server name value of the <literal>-h</literal> option of the
+        command line tools e.g.,
+        <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>
+       </para>
+      </listitem>
+     </itemizedlist>
+    </listitem>
 
-         <listitem>
-          <para>CUPS banners and the CUPS test page were moved from
-           the <literal>cups</literal> package the
-           <literal>cups-filters</literal> package (see <ulink
-            url="http://www.cups.org/str.php?L4120">http://www.cups.org/str.php?L4120</ulink> and
-          <ulink
-           url="https://bugzilla.opensuse.org/show_bug.cgi?id=735404">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>).</para>
-         </listitem>
-        </itemizedlist>
-       </section>
+    <listitem>
+     <para>
+      Some printing filters and back-ends were moved from the
+      <literal>cups</literal> package to the <literal>cups-filters</literal>
+      package
+     </para>
+    </listitem>
+
+    <listitem>
+     <para> Some configuration directives were split from <literal>cupsd.conf</literal>
+      into <literal>cups-files.conf</literal>
+      (see
+      <ulink url="http://www.cups.org/str.php?L4223">http://www.cups.org/str.php?L4223</ulink>,
+      CVE-2012-5519, and
+      <ulink url="https://bugzilla.opensuse.org/show_bug.cgi?id=789566">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>).
+     </para>
+    </listitem>
+
+    <listitem>
+     <para>CUPS banners and the CUPS test page were moved from
+      the <literal>cups</literal> package the
+      <literal>cups-filters</literal> package (see
+      <ulink url="http://www.cups.org/str.php?L4120">http://www.cups.org/str.php?L4120</ulink>
+      and
+      <ulink url="https://bugzilla.opensuse.org/show_bug.cgi?id=735404">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>).
+     </para>
+    </listitem>
+   </itemizedlist>
+  </section>
  </section>
  <!-- START-FATE-RN -->
  <section id="misc" remap="Misc">
   <title>Miscellaneous</title>
-   <section>
-    <title>KDE and Network Authentication</title>
-    <para>
-     When using the KDE displaymanager SDDM with an authentication
-     method that provides a high number of users SDDM becomes
-     unusable. Additionally if the automounter is used SDDM may
-     block for long time on startup trying to mount every user's home
-    </para>
-    <para>
-     Modify <filename>/etc/sddm.conf</filename> to contain the following entries:
-     <programlisting>[Theme]
+  <section>
+   <title>KDE and Network Authentication</title>
+   <para>
+    When using the KDE displaymanager SDDM with an authentication
+    method that provides a high number of users SDDM becomes
+    unusable. Additionally if the automounter is used SDDM may
+    block for long time on startup trying to mount every user's home
+   </para>
+   <para>
+    Modify <filename>/etc/sddm.conf</filename> to contain the following entries:
+    <programlisting>[Theme]
 Current=maldives
 
 [Users]
 MaximumUid=1002</programlisting>
-    </para>
-    <para>
-     See <ulink url="https://bugzilla.suse.com/show_bug.cgi?id=953778">Bug 953778</ulink> for details.
-    </para>
-   </section>
+   </para>
+   <para>
+    See
+    <ulink url="https://bugzilla.suse.com/show_bug.cgi?id=953778">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink>
+    for details.
+   </para>
+  </section>
 
  </section>
  <!-- END-FATE-RN -->
@@ -343,35 +363,54 @@ MaximumUid=1002</programlisting>
 
   <itemizedlist>
    <listitem>
-    <para>Read the READMEs on the CDs.</para>
-   </listitem>
-   <listitem>
-    <para>Get detailed changelog information about a particular package from the RPM: </para>
-    <screen>rpm --changelog -qp &lt;FILENAME&gt;.rpm</screen>
-    <para>&lt;FILENAME&gt;. is the name of the RPM.</para>
-   </listitem>
-   <listitem>
-    <para>Check the <filename>ChangeLog</filename> file in the top level of the DVD for a
-     chronological log of all changes made to the updated packages. </para>
-   </listitem>
-   <listitem>
-    <para>Find more information in the <filename>docu</filename> directory on the DVD.</para>
+    <para>
+     Read the READMEs on the CDs.
+    </para>
    </listitem>
    <listitem>
     <para>
-     <ulink url="https://activedoc.opensuse.org/"/> contains additional
+     Get detailed changelog information about a particular package from the RPM:
+    </para>
+    <screen>rpm --changelog -qp &lt;FILENAME&gt;.rpm</screen>
+    <para>
+     &lt;FILENAME&gt;. is the name of the RPM.
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+     Check the <filename>ChangeLog</filename> file in the top level of the
+     DVD for a chronological log of all changes made to the updated packages.
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+     Find more information in the <filename>docu</filename> directory on the
+     DVD.
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+     <ulink url="https://activedoc.opensuse.org/">https://activedoc.opensuse.org/</ulink> contains additional
      or updated documentation.</para>
    </listitem>
    <listitem>
-    <para> Visit <ulink url="http://www.opensuse.org"/> for the latest product news from
-     &opensuse;.</para>
+    <para>
+     Visit <ulink url="https://www.opensuse.org">https://www.opensuse.org</ulink> for the latest product news
+     from &opensuse;.
+    </para>
    </listitem>
   </itemizedlist>
 
-  <para>Copyright © 2015 SUSE LLC</para>
+  <para>
+   Copyright © 2015 SUSE LLC
+  </para>
 
-  <para>Thanks for using &opensuse;.</para>
-  <para>The &opensuse; Team.</para>
+  <para>
+   Thanks for using &opensuse;.
+  </para>
+  <para>
+   The &opensuse; Team.
+  </para>
  </section>
 
 </article>
