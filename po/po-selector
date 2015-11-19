@@ -102,3 +102,6 @@ for PO in *.po ; do
 		echo >&2 "got $PERCENTAGE%, too weak."
 	fi
 done >LINGUAS
+
+# make sure english is always there
+test -e en.po || echo " en" >> LINGUAS
