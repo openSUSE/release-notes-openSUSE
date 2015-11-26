@@ -190,10 +190,13 @@
      the network interface names may therefore change. This could lock you out
      of the system. To avoid interfaces from being renamed, run the following
      command for each of your network interfaces before you reboot the system:
+    </para>
 
-     <screen>/usr/lib/udev/udev-generate-persistent-rule -v -c enp5s0 -n enp5s0 -o /etc/udev/rules.d/70-persistent-net.rules</screen>
+<screen>/usr/lib/udev/udev-generate-persistent-rule -v -c <replaceable>enp5s0</replaceable> -n <replaceable>enp5s0</replaceable> -o /etc/udev/rules.d/70-persistent-net.rules</screen>
 
-     Replace <literal>enp5s0</literal> with the name of your network interface.
+    <para>
+     Replace <replaceable>enp5s0</replaceable> with the name of your network
+     interface.
     </para>
    </section>
 
@@ -204,7 +207,9 @@
 
    <section>
     <title>Non-Oss Repository</title>
-    <para>After the installation the non-oss repository is disabled</para>
+    <para>
+     After the installation the non-oss repository is disabled.
+    </para>
     <para>
      Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using
      YaST or on the command line using zypper:
