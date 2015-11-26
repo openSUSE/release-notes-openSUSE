@@ -104,12 +104,12 @@
     installed the pattern for minimal installations uses another
     pattern that conflicts with the undesired packages. That pattern
     can be removed after installation, it's called
-    <literal>patterns-openSUSE-minimal_base-conflicts</literal>
+    <literal>patterns-openSUSE-minimal_base-conflicts</literal>.
    </para>
    <para>
     Note that the minimal installation has no firewall by
     default. If you need one, install
-    <literal>SuSEfirewall2</literal>
+    <literal>SuSEfirewall2</literal>.
    </para>
   </section>
 
@@ -129,8 +129,8 @@
     area. Nobody really knows how much "too much" is, though.  openSUSE
     minimizes the risk by not writing more than the bare minimum
     required to boot the OS.  The minimum means telling the UEFI
-    firmware about the location of the openSUSE boot loader.  Upstream
-    Linux Kernel features that use the UEFI storage area for storing
+    firmware about the location of the &opensuse; boot loader.  Upstream
+    Linux kernel features that use the UEFI storage area for storing
     boot and crash information (<literal>pstore</literal>) have been
     disabled by default. Nevertheless, it is recommended to install any
     firmware updates the hardware vendor recommends.
@@ -184,8 +184,8 @@
      network interfaces are named correctly.
     </para>
     <para>
-     openSUSE 13.2 used so-called predictable network interface names (for
-     example, <literal>enp5s0</literal>), whereas Leap 42.1 uses persistent
+     &opensuse; 13.2 used so-called predictable network interface names (for
+     example, <literal>enp5s0</literal>), whereas &opensuseleap; 42.1 uses persistent
      interface names (<literal>eth0</literal>). After upgrading and rebooting,
      the network interface names may therefore change. This could lock you out
      of the system. To avoid interfaces from being renamed, run the following
@@ -208,7 +208,7 @@
    <section>
     <title>Non-Oss Repository</title>
     <para>
-     After the installation the non-oss repository is disabled.
+     After the installation, the non-oss repository is disabled.
     </para>
     <para>
      Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using
@@ -232,7 +232,7 @@
    </para>
    <para>
     The new CUPS version introduced some major changes compared to 1.5
-    that may require manual configuration adjustments
+    that may require manual configuration adjustments.
    </para>
 
    <itemizedlist>
@@ -271,30 +271,30 @@
 
      <para>
       To be able to print to old servers the IPP protocol version must be
-      specified explictly by appending '/version=1.1' to either
+      specified explictly by appending '/version=1.1' to either:
      </para>
 
      <itemizedlist>
       <listitem>
        <para>
-        the <literal>ServerName</literal> settings in
-        <literal>client.conf</literal> (e.g.,
-        <literal>ServerName older.server.example.com/version=1.1</literal>)
+        The <literal>ServerName</literal> settings in
+        <literal>client.conf</literal> (for example,
+        <literal>ServerName older.server.example.com/version=1.1</literal>).
        </para>
       </listitem>
 
       <listitem>
        <para>
-        the <literal>CUPS_SERVER</literal> environment variable value
+        The <literal>CUPS_SERVER</literal> environment variable value.
        </para>
       </listitem>
 
       <listitem>
        <para>
-        the server name value of the <literal>-h</literal> option of the
-        command line tools e.g.,
+        The server name value of the <literal>-h</literal> option of the
+        command line tools, for example:
+       </para>
         <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>
-       </para>
       </listitem>
      </itemizedlist>
     </listitem>
@@ -303,7 +303,7 @@
      <para>
       Some printing filters and back-ends were moved from the
       <literal>cups</literal> package to the <literal>cups-filters</literal>
-      package
+      package.
      </para>
     </listitem>
 
@@ -335,10 +335,10 @@
   <section>
    <title>KDE and Network Authentication</title>
    <para>
-    When using the KDE displaymanager SDDM with an authentication
-    method that provides a high number of users SDDM becomes
-    unusable. Additionally if the automounter is used SDDM may
-    block for long time on startup trying to mount every user's home
+    When using the KDE display manager SDDM with an authentication
+    method that provides a high number of users, SDDM becomes
+    unusable. Additionally, if the automounter is used, SDDM may
+    block for a long time on startup trying to mount every user's home.
    </para>
    <para>
     Modify <filename>/etc/sddm.conf</filename> to contain the following entries:
@@ -364,28 +364,29 @@ MaximumUid=1002</programlisting>
   <itemizedlist>
    <listitem>
     <para>
-     Read the READMEs on the CDs.
+     Read the <filename>README</filename> documents on the medium.
     </para>
    </listitem>
    <listitem>
     <para>
-     Get detailed changelog information about a particular package from the RPM:
+     View a detailed changelog information about a particular package from its
+     RPM:
     </para>
-    <screen>rpm --changelog -qp &lt;FILENAME&gt;.rpm</screen>
+    <screen>rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm</screen>
     <para>
-     &lt;FILENAME&gt;. is the name of the RPM.
+     Replace <replaceable>FILENAME</replaceable> with the name of the RPM.
     </para>
    </listitem>
    <listitem>
     <para>
      Check the <filename>ChangeLog</filename> file in the top level of the
-     DVD for a chronological log of all changes made to the updated packages.
+     medium for a chronological log of all changes made to the updated packages.
     </para>
    </listitem>
    <listitem>
     <para>
      Find more information in the <filename>docu</filename> directory on the
-     DVD.
+     medium.
     </para>
    </listitem>
    <listitem>
