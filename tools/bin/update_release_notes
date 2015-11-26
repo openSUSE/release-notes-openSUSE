@@ -133,8 +133,8 @@ output_package() {
     $DO_ECHO rm -rf $VERBOSE "$DESTINATION"
     $DO_ECHO mkdir -p "$DESTINATION"
     $DO_ECHO cp -a $VERBOSE "$PACKAGE" "$DESTINATION/$PACKNAME"
-    $DO_ECHO cp -a $VERBOSE $TMPDIR/usr/share/doc/release-notes/*.{html,rtf} "$DESTINATION"/ 2>/dev/null
-    $DO_ECHO cp -a $VERBOSE $TMPDIR/usr/share/doc/release-notes/*/*.{html,rtf} "$DESTINATION"/ 2>/dev/null
+    $DO_ECHO cp -a $VERBOSE $TMPDIR/usr/share/doc/release-notes/*.{html,rtf,txt} "$DESTINATION"/ 2>/dev/null
+    $DO_ECHO cp -a $VERBOSE $TMPDIR/usr/share/doc/release-notes/*/*.{html,rtf,txt} "$DESTINATION"/ 2>/dev/null
     for dir in $TMPDIR/usr/share/doc/release-notes/*/release-notes-static ; do
 	    test -d "$dir" || continue
 	    test -L "$dir/index.html" -a -f "$dir/index.html" || continue
@@ -148,16 +148,13 @@ output_package() {
     for i in "$DESTINATION"/*.html ; do
         test -L "$i" -a ! -f "$i" && $DO_ECHO rm $VERBOSE "$i"
     done
-    if [ -f "$DESTINATION/RELEASE-NOTES.en.html" ]; then
-        REL_SOURCE="$DESTINATION/RELEASE-NOTES.en.html"
-    fi
-    if [ -f "$DESTINATION/RELEASE-NOTES-web.en.html" ]; then
-        # REL_SOURCE="$DESTINATION/RELEASE-NOTES-web.html"
-        # below is for FATE #314925 - uncomment the line above and remove the line below once this is 
-        # accepted by everyone
-        $DO_ECHO cp -f $VERBOSE "$DESTINATION/RELEASE-NOTES-web.en.html" "$DESTINATION/index-new.html"
-    fi
-    if [ ! -f "$DESTINATION/index.html" ]; then
+    REL_SOURCE=''
+    for i in en en_US en_GB; do
+	if [ -f "$DESTINATION/RELEASE-NOTES.$i.html" ]; then
+	    REL_SOURCE="$DESTINATION/RELEASE-NOTES.$i.html"
+	fi
+    done
+    if [ -n "$REL_SOURCE" ]; then
         pushd "$DESTINATION" 1>/dev/null
         # use cp as symlinks do not work properly - see bnc #612554 for details (mod_proxy)
         $DO_ECHO cp -f $VERBOSE $REL_SOURCE index.html
@@ -250,7 +247,7 @@ while read line; do
             DISTVERSION=$(echo ${DISTVERSION/obs:\/\//} | sed "s|:|:/|g")
             DISTURL=$(echo ${DISTVERSION/obs:\/\//})
             ISBS="yes"
-            INSTANCE="src-opensuse.suse.de:5352"
+            INSTANCE="https://build.opensuse.org"
             get_package_from_obs "$INSTANCE" "${OBSDIR}/${DISTVERSION}" "$DISTURL" "$RELEASENOTES_NAME" "$PRODUKT_ARCHS"
         ;;
 	*)

@@ -11,14 +11,18 @@
  <articleinfo>
   <releaseinfo>&rversion;</releaseinfo>
   <productname>&opensusetw;</productname>
+  <!-- version doesn't make sense for TW
   <productnumber>&version;</productnumber>
+  -->
   <date><?dbtimestamp format="Y-m-d"?></date>
+  <!--
   <abstract>
    <para> &opensusetw; is a free and Linux-based operating system for your
    PC, Laptop or Server.  You can surf the web, manage your e-mails and
    photos, do office work, play videos or music and have a lot of fun!
    </para>
   </abstract>
+  -->
  </articleinfo>
 
  <!-- split this para on account of bnc#401301 -->
@@ -48,11 +52,13 @@
 -->
 
  <!-- Previous Release Notes -->
+ <!-- doesn't apply to TW
  <para>
   If you upgrade from an older version to this &opensusetw; release, see
   previous release notes listed here: <ulink
   url="http://en.opensuse.org/openSUSE:Release_Notes"/>
  </para>
+ -->
 
  <!-- beta statement -->
  <!--
@@ -90,31 +96,6 @@ picture was taken by N/A
   <title>Installation</title>
 
   <para/>
-  <!--
-  <section>
-   <title>For Detailed Installation Information</title>
-
-   <para>For detailed installation information, see <xref linkend="sec.123.documentation"/>.</para>
-  </section>
-  -->
-
-  <section>
-   <!-- https://bugzilla.suse.com/show_bug.cgi?id=947712 -->
-   <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
-   <title>Minimal System Installation</title>
-   <para>
-    In order to avoid some big recommended packages from getting
-    installed the pattern for minimal installations uses another
-    pattern that conflicts with the undesired packages. That pattern
-    can be removed after installation, it's called
-    <literal>patterns-openSUSE-minimal_base-conflicts</literal>
-   </para>
-   <para>
-    Note that the minimal installation has no firewall by
-    default. If you need one, install
-    <literal>SuSEfirewall2</literal>
-   </para>
-  </section>
 
   <section id="sec.123.uefi">
    <title>UEFI&mdash;Unified Extensible Firmware Interface</title>
@@ -171,49 +152,20 @@ picture was taken by N/A
    </para>
   </section>
 
-   <!-- http://bugzilla.opensuse.org/show_bug.cgi?id=950877 -->
-   <!-- http://bugzilla.opensuse.org/show_bug.cgi?id=952019 -->
-   <!-- <title>openSUSE Leap as Guest in VirtualBox</title> -->
-
  </section>
 
+ <!--
  <section id="upgrade">
   <title>System Upgrade</title>
-
-   <section>
-    <title>Network Interface Names</title>
-    <para>When upgrading a remote machine from openSUSE 13.2, make sure your
-     network interfaces are named correctly.</para>
-    <para>
-     openSUSE 13.2 used so-called predictable network interface names (for example,
-     <literal>enp5s0</literal>), whereas Leap 42.1 uses persistent interface
-     names (<literal>eth0</literal>). After upgrading and rebooting, the network
-     interface names may therefore change. This could lock you out of the
-     system. To avoid interfaces from being renamed, run the following
-     command for each of your network interfaces before you reboot the system:
-
-     <screen>/usr/lib/udev/udev-generate-persistent-rule -v -c enp5s0 -n enp5s0 -o /etc/udev/rules.d/70-persistent-net.rules</screen>
-
-     Replace <literal>enp5s0</literal> with the name of your network interface.
-    </para>
-   </section>
+  <para></para>
 
  </section>
 
  <section id="general">
   <title>General</title>
 
-   <section>
-    <title>Non-Oss Repository</title>
-    <para>After the installation the non-oss repository is disabled</para>
-    <para>
-     Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using
-     YaST or on the command line using zypper:
-    <screen>zypper mr -e repo-non-oss</screen>
-    </para>
-   </section>
-
  </section>
+ -->
 
  <section id="technical">
   <title>Technical</title>
@@ -311,30 +263,13 @@ picture was taken by N/A
        </section>
  </section>
  <!-- START-FATE-RN -->
+
+ <!--
  <section id="misc" remap="Misc">
   <title>Miscellaneous</title>
-   <section>
-    <title>KDE and Network Authentication</title>
-    <para>
-     When using the KDE displaymanager SDDM with an authentication
-     method that provides a high number of users SDDM becomes
-     unusable. Additionally if the automounter is used SDDM may
-     block for long time on startup trying to mount every user's home
-    </para>
-    <para>
-     Modify <filename>/etc/sddm.conf</filename> to contain the following entries:
-     <programlisting>[Theme]
-Current=maldives
-
-[Users]
-MaximumUid=1002</programlisting>
-    </para>
-    <para>
-     See <ulink url="https://bugzilla.suse.com/show_bug.cgi?id=953778">Bug 953778</ulink> for details.
-    </para>
-   </section>
 
  </section>
+ -->
  <!-- END-FATE-RN -->
 
  <section id="Feedback">
@@ -355,15 +290,12 @@ MaximumUid=1002</programlisting>
      chronological log of all changes made to the updated packages. </para>
    </listitem>
    <listitem>
-    <para>Find more information in the <filename>docu</filename> directory on the DVD.</para>
-   </listitem>
-   <listitem>
     <para>
      <ulink url="https://activedoc.opensuse.org/"/> contains additional
      or updated documentation.</para>
    </listitem>
    <listitem>
-    <para> Visit <ulink url="http://www.opensuse.org"/> for the latest product news from
+    <para> Visit <ulink url="http://www.opensuse.org"/> for the latest news from
      &opensuse;.</para>
    </listitem>
   </itemizedlist>
