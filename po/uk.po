@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2015-11-27 15:04+0100\n"
-"PO-Revision-Date: 2015-12-02 09:31+0200\n"
+"PO-Revision-Date: 2015-12-03 07:59+0200\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
 "Language-Team: Ukrainian <http://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/uk/>\n"
@@ -137,6 +137,13 @@ msgstr ""
 #: xml/release-notes.xml:186(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr ""
+"У openSUSE 13.2 використовуються так звані передбачувані назви мережевих "
+"інтерфейсів (наприклад, <literal>enp5s0</literal>), тоді як у openSUSE Leap "
+"42.1 використовуються постійні назви інтерфейсів (<literal>eth0</literal>). "
+"Після оновлення і перезавантаження назви мережевих інтерфейсів можуть "
+"змінюватися. Це у свою чергу спричинить блокування вам доступу до системи. "
+"Щоб уникнути перейменування інтерфейсів, виконайте наступну команду для "
+"кожного з ваших мережевих інтерфейсів, перш ніж ви перезавантажите систему:"
 
 #: xml/release-notes.xml:195(replaceable)
 msgid "enp5s0"
@@ -187,10 +194,14 @@ msgstr "Оновлено версію CUPS до 1.7"
 #: xml/release-notes.xml:233(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgstr ""
+"Нова версія CUPS приносить деякі суттєві нововведення, порівняно із 1.5, які "
+"можуть вимагати ручного коригування налаштувань."
 
 #: xml/release-notes.xml:240(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"PDF тепер став стандартним форматом завдання на друк, а не PS. Тому "
+"традиційним принтерам PostScript тепер потрібний драйвер фільтру для друку."
 
 #: xml/release-notes.xml:245(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
@@ -201,35 +212,55 @@ msgstr ""
 #: xml/release-notes.xml:253(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"Змінено протокол виявлення принтерів у мережі. Рідний метод виявлення "
+"мережевих принтерів базується на пошуку служби DNS (DNS-SD, тобто через "
+"Avahi). Служба <literal>cups-browsed</literal> із пакунку <literal>cups-"
+"filters</literal> може використовуватися для зв'язування старих і нових "
+"протоколів. Обидві <literal>cupsd</literal> та <literal>cups-"
+"browsed</literal> потребують запуску, щоби \"застарілі\" клієнти виявляли "
+"принтери (включаючи LibreOffice та KDE)."
 
 #: xml/release-notes.xml:266(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
+"Типова версія протоколу IPP змінена із 1.1 на 2.0. Старіші сервери IPP на "
+"кшталт CUPS 1.3.x (наприклад, у SUSE Linux Enteprise 11) відхиляють запити "
+"IPP 2.0 із відповіддю \"Bad Request\" (див. <ulink url=\""
+"http://www.cups.org/str.php?L4231\"/>)."
 
 #: xml/release-notes.xml:272(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either:"
 msgstr ""
+"Для друку на старих серверах версія протоколу IPP повинна бути вказана явно "
+"додаванням '/version=1.1' до решти:"
 
 #: xml/release-notes.xml:279(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"Параметр <literal>ServerName</literal> у <literal>client.conf</literal> ("
+"наприклад, <literal>ServerName "
+"older.server.example.com/version=1.1</literal>)."
 
 #: xml/release-notes.xml:287(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
+msgstr "Значення змінної середовища <literal>CUPS_SERVER</literal>."
 
 #: xml/release-notes.xml:293(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
+"Значення назви сервера із параметром <literal>-h</literal> для командного "
+"рядка, наприклад:"
 
 #: xml/release-notes.xml:297(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr ""
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
 #: xml/release-notes.xml:303(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"Деякі фільтри друку та серверні програми були переміщені із пакунку "
+"<literal>cups</literal> до <literal>cups-filters</literal>."
 
 #: xml/release-notes.xml:311(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
@@ -294,19 +325,30 @@ msgstr ""
 
 #: xml/release-notes.xml:359(title)
 msgid "No Screensaver Support in KDE Plasma"
-msgstr ""
+msgstr "Немає підтримки зберігачів екрану у KDE Plasma"
 
 #: xml/release-notes.xml:360(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
 msgstr ""
+"Усталено KDE Plasma не підтримує зберігачів екрану. Якщо вони вам потрібні, "
+"то встановіть пакунок <literal>xscreensaver</literal>."
 
 #: xml/release-notes.xml:365(para)
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, the choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
 msgstr ""
+"Установіть <command>xscreensaver</command> для запуску із стільничним "
+"сеансом, вибравши "
+"<menuchoice><guimenu>K</guimenu><guimenu>Параметри</guimenu><guimenu>"
+"Налаштувати стільницю</guimenu></menuchoice>, потім <menuchoice><guimenu>"
+"Запуск та вимкнення</guimenu><guimenu>Автозапуск</guimenu></menuchoice>. "
+"Клацніть <guimenu>Додати програму</guimenu>, введіть "
+"<literal>xscreensaver</literal> і тицніть <guimenu>Гаразд</guimenu>."
 
 #: xml/release-notes.xml:374(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
 msgstr ""
+"Для налаштування зберігача екрану використовуйте <command>xscreensaver-"
+"demo</command>."
 
 #. bnc#809347
 #: xml/release-notes.xml:383(title)
@@ -315,7 +357,7 @@ msgstr "Додаткові відомості та зворотній зв'яз�
 
 #: xml/release-notes.xml:387(para)
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Прочитайте документи <filename>README</filename> на носії."
 
 #: xml/release-notes.xml:392(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
@@ -323,7 +365,7 @@ msgstr "Переглянути докладний журнал змін конк
 
 #: xml/release-notes.xml:396(replaceable)
 msgid "FILENAME"
-msgstr ""
+msgstr "НАЗВАФАЙЛУ"
 
 #: xml/release-notes.xml:396(screen)
 #, no-wrap
@@ -332,7 +374,7 @@ msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #: xml/release-notes.xml:397(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "Замініть <replaceable>НАЗВАФАЙЛУ</replaceable> назвою пакунку RPM."
 
 #: xml/release-notes.xml:402(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
