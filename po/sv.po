@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-27 15:04+0100\n"
-"PO-Revision-Date: 2015-12-04 15:36+0200\n"
+"PO-Revision-Date: 2015-12-04 21:58+0200\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <http://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/sv/>\n"
@@ -91,41 +91,66 @@ msgstr ""
 #: xml/release-notes.xml:126(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr ""
+"<emphasis>Bakgrund:</emphasis> UEFI är en modern ersättare för datorns BIOS "
+"och hanterar kommunikationen mellan datorns hårdvara och operativsystemet. "
+"UEFI kan även hantera datorns uppstart (boot). En del UEFI-firmware har en "
+"bugg som får datorn att krascha om operativsystemet skriver in för mycket "
+"data i UEFI:ets lagringsutrymme. OpenSUSE skriver in så lite data som "
+"möjligt i detta område för att minimera risken att utlösa buggen, bland "
+"annat har funktioner för att spara uppstartsloggar och kraschdata i UEFI-"
+"området stängts av (<literal>pstore</literal>). Men trots det bör du "
+"uppdatera ditt UFEI-firmware för att undvika eventuella problem."
 
 #. bnc#850056
 #: xml/release-notes.xml:143(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
-msgstr ""
+msgstr "UEFI, GPT och MS-DOS partitioner"
 
 #: xml/release-notes.xml:144(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
+"Med EFI/UEFI specifikationerna kom en ny modell för partitionering: GPT ("
+"GUID Partition Table). Denna nya layout använder GUID-identifierare (ett "
+"globalt unikt 128-bit tal visat i 32 hexadecimala siffror) för att "
+"identifiera enheter och partitionstyper."
 
 #: xml/release-notes.xml:150(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
+"UEFI specifikationerna tillåter också föråldrade MBR (MS-DOS) partitioner. "
+"Linux bootladdare (ELILO eller GRUB2) försöker att automatiskt generera ett "
+"GUID för dessa föråldrade partitioner och skriva in dem i UEFI-firmwaret. "
+"Sådana GUID ändras ofta och måste då omregistreras i firmwaret. En "
+"omregistrering består av två operationer: avlägsna det gamla ID:et och skapa "
+"ett nytt som ersätter det gamla."
 
 #: xml/release-notes.xml:159(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
+"Moderna firmware har en soptunnehanterare som registrerar de borttagna ID:en "
+"och frigör minnet som är reserverat för dessa. Felaktiga firmware som inte "
+"lyckas frigöra dessa resurser kan leda till att datorn inte längre kan "
+"starta."
 
 #: xml/release-notes.xml:165(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr ""
+"Lösningen är enkel - omvandla de föråldrade MBR-partitionerna till GPT för "
+"att undvika detta problem."
 
 #: xml/release-notes.xml:178(title)
-#, fuzzy
 msgid "System Upgrade"
-msgstr "Systemområdesobjekt"
+msgstr "Systemuppdatering"
 
 #: xml/release-notes.xml:181(title)
-#, fuzzy
 msgid "Network Interface Names"
-msgstr "Nätverksgränssnitt"
+msgstr "Namn för nätverksgränssnitt"
 
 #: xml/release-notes.xml:182(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr ""
+"När du gör en fjärruppdatering av en dator från openSUSE 13.2, försäkra dig "
+"om att nätverkskorten är korrekt namngivna."
 
 #: xml/release-notes.xml:186(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
@@ -133,16 +158,19 @@ msgstr ""
 
 #: xml/release-notes.xml:195(replaceable)
 msgid "enp5s0"
-msgstr ""
+msgstr "enp5s0"
 
 #: xml/release-notes.xml:195(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
+"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
+"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
 #: xml/release-notes.xml:197(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr ""
+"Ersätt <replaceable>enp5s0</replaceable> med namnet på ditt nätverkskort."
 
 #: xml/release-notes.xml:206(title)
 msgid "General"
@@ -150,11 +178,11 @@ msgstr "Allmänt"
 
 #: xml/release-notes.xml:209(title)
 msgid "Non-Oss Repository"
-msgstr ""
+msgstr "icke-oss förråd (repository)"
 
 #: xml/release-notes.xml:210(para)
 msgid "After the installation, the non-oss repository is disabled."
-msgstr ""
+msgstr "Efter installationen är icke-oss förrådet (repository) inaktiverat."
 
 #: xml/release-notes.xml:213(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
@@ -231,9 +259,8 @@ msgid "Miscellaneous"
 msgstr "Diverse"
 
 #: xml/release-notes.xml:336(title)
-#, fuzzy
 msgid "KDE and Network Authentication"
-msgstr "Automatisk installation"
+msgstr "KDE och nätverksautentisering"
 
 #: xml/release-notes.xml:337(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
@@ -275,9 +302,8 @@ msgstr ""
 
 #. bnc#809347
 #: xml/release-notes.xml:383(title)
-#, fuzzy
 msgid "More Information and Feedback"
-msgstr "Minnesinformation"
+msgstr "Mer information och feedback"
 
 #: xml/release-notes.xml:387(para)
 msgid "Read the <filename>README</filename> documents on the medium."
@@ -289,12 +315,12 @@ msgstr ""
 
 #: xml/release-notes.xml:396(replaceable)
 msgid "FILENAME"
-msgstr ""
+msgstr "FILNAMN"
 
 #: xml/release-notes.xml:396(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-msgstr ""
+msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #: xml/release-notes.xml:397(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
@@ -307,33 +333,41 @@ msgstr ""
 #: xml/release-notes.xml:408(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr ""
+"För mer information leta i <filename>docu</filename> katalogen på "
+"installationsmediet."
 
 #: xml/release-notes.xml:414(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
 msgstr ""
+"<ulink url=\"https://activedoc.opensuse.org/\""
+">https://activedoc.opensuse.org/</ulink> innehåller kompletterande och "
+"uppdaterad dokumentation."
 
 #: xml/release-notes.xml:419(para)
 msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
 msgstr ""
+"Besök <ulink url=\"https://www.opensuse.org\""
+">https://www.opensuse.org</ulink> för att se de senaste nyheterna från "
+"openSUSE."
 
 #: xml/release-notes.xml:426(para)
-#, fuzzy
 msgid "Copyright © 2015 SUSE LLC"
-msgstr "Copyright © 2007 Novell, Inc."
+msgstr "Copyright © 2015 SUSE LLC"
 
 #: xml/release-notes.xml:430(para)
 msgid "Thanks for using openSUSE."
-msgstr ""
+msgstr "Tack för att du använder openSUSE."
 
 #: xml/release-notes.xml:433(para)
-#, fuzzy
 msgid "The openSUSE Team."
-msgstr "openSUSE"
+msgstr "openSUSE-teamet."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: xml/release-notes.xml:0(None)
 msgid "translator-credits"
-msgstr "Mattias Newzella <newzella@linux.se>, 2006."
+msgstr ""
+"Mattias Newzella <newzella@linux.se>, 2006\n"
+"Jonas Svensson <jks@ekhorva.se>, 2015"
 
 #, fuzzy
 #~| msgid "Start Windows"
