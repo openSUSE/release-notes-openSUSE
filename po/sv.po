@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-09 11:56+0100\n"
-"PO-Revision-Date: 2015-12-04 15:36+0200\n"
+"PO-Revision-Date: 2015-12-04 21:56+0200\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <http://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/sv/>\n"
@@ -49,6 +49,9 @@ msgstr ""
 #: xml/release-notes.xml:51(para)
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
 msgstr ""
+"Om du uppdaterar från en äldre version av openSUSE, se tidigare versions "
+"information här: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\""
+"/>"
 
 #: xml/release-notes.xml:90(title)
 msgid "Installation"
@@ -62,10 +65,16 @@ msgstr "Minimal installation"
 #: xml/release-notes.xml:105(para)
 msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
 msgstr ""
+"För att hindra ett antal stora programpaket att installeras vid minimal "
+"installation, används ett \"blockeringspaket\" <literal>patterns-openSUSE-"
+"minimal_base-conflicts</literal> . När du slutfört installationen av "
+"openSUSE kan du riskfritt ta bort detta paket i YaST"
 
 #: xml/release-notes.xml:112(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
 msgstr ""
+"Tänk på att den minimala installationen inte inkluderar någon brandvägg. "
+"Behöver du en brandvägg installera <literal>SuSEfirewall2</literal>"
 
 #: xml/release-notes.xml:120(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -86,28 +95,43 @@ msgstr ""
 #. bnc#850056
 #: xml/release-notes.xml:146(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
-msgstr ""
+msgstr "UEFI, GPT och MS-DOS partitioner"
 
 #: xml/release-notes.xml:147(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
+"Med EFI/UEFI specifikationerna kom en ny modell för partitionering: GPT ("
+"GUID Partition Table). Denna nya layout använder GUID-identifierare (ett "
+"globalt unikt 128-bit tal visat i 32 hexadecimala siffror) för att "
+"identifiera enheter och partitionstyper."
 
 #: xml/release-notes.xml:153(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
+"UEFI specifikationerna tillåter också föråldrade MBR (MS-DOS) partitioner. "
+"Linux bootladdare (ELILO eller GRUB2) försöker att automatiskt generera ett "
+"GUID för dessa föråldrade partitioner och skriva in dem i UEFI-firmwaret. "
+"Sådana GUID ändras ofta och måste då omregistreras i firmwaret. En "
+"omregistrering består av två operationer: avlägsna det gamla ID:et och skapa "
+"ett nytt som ersätter det gamla."
 
 #: xml/release-notes.xml:162(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
+"Moderna firmware har en soptunnehanterare som registrerar de borttagna ID:en "
+"och frigör minnet som är reserverat för dessa. Felaktiga firmware som inte "
+"lyckas frigöra dessa resurser kan leda till att datorn inte längre kan "
+"starta."
 
 #: xml/release-notes.xml:168(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr ""
+"Lösningen är enkel - omvandla de föråldrade MBR-partitionerna till GPT för "
+"att undvika detta problem."
 
 #: xml/release-notes.xml:181(title)
-#, fuzzy
 msgid "System Upgrade"
-msgstr "Systemområdesobjekt"
+msgstr "Systemuppdatering"
 
 #: xml/release-notes.xml:188(title)
 msgid "General"
@@ -115,7 +139,7 @@ msgstr "Allmänt"
 
 #: xml/release-notes.xml:191(title)
 msgid "Non-Oss Repository"
-msgstr ""
+msgstr "icke-oss förråd (repository)"
 
 #: xml/release-notes.xml:192(para)
 msgid "After the installation the non-oss repository is disabled"
@@ -199,9 +223,8 @@ msgid "Miscellaneous"
 msgstr "Diverse"
 
 #: xml/release-notes.xml:244(title)
-#, fuzzy
 msgid "KDE and Network Authentication"
-msgstr "Automatisk installation"
+msgstr "KDE och nätverksautentisering"
 
 #: xml/release-notes.xml:245(para)
 msgid "When using the KDE displaymanager SDDM with an authentication method that provides a high number of users SDDM becomes unusable. Additionally if the automounter is used SDDM may block for long time on startup trying to mount every user's home"
@@ -227,9 +250,8 @@ msgstr ""
 
 #. bnc#809347
 #: xml/release-notes.xml:269(title)
-#, fuzzy
 msgid "More Information and Feedback"
-msgstr "Minnesinformation"
+msgstr "Mer information och feedback"
 
 #: xml/release-notes.xml:273(para)
 msgid "Read the READMEs on the CDs."
@@ -265,23 +287,23 @@ msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product new
 msgstr ""
 
 #: xml/release-notes.xml:298(para)
-#, fuzzy
 msgid "Copyright © 2015 SUSE LLC"
-msgstr "Copyright © 2007 Novell, Inc."
+msgstr "Copyright © 2015 SUSE LLC"
 
 #: xml/release-notes.xml:300(para)
 msgid "Thanks for using openSUSE."
-msgstr ""
+msgstr "Tack för att du använder openSUSE."
 
 #: xml/release-notes.xml:301(para)
-#, fuzzy
 msgid "The openSUSE Team."
-msgstr "openSUSE"
+msgstr "openSUSE-teamet."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: xml/release-notes.xml:0(None)
 msgid "translator-credits"
-msgstr "Mattias Newzella <newzella@linux.se>, 2006."
+msgstr ""
+"Mattias Newzella <newzella@linux.se>, 2006\n"
+"Jonas Svensson <jks@ekhorva.se>, 2015"
 
 #, fuzzy
 #~| msgid "Start Windows"
