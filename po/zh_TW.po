@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2015-11-27 15:04+0100\n"
-"PO-Revision-Date: 2015-12-05 06:35+0200\n"
+"PO-Revision-Date: 2015-12-05 10:43+0200\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <http://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap_42_1/zh_TW/>\n"
@@ -188,22 +188,27 @@ msgstr ""
 #: xml/release-notes.xml:266(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
+"PP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 "
+"的連線要求，並回傳 \"Bad Request\" (請見 <ulink url=\"http://www.cups.org/str.php?"
+"L4231\"/>)。"
 
 #: xml/release-notes.xml:272(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either:"
-msgstr ""
+msgstr "要能夠使用舊印表機來列印，IPP 通訊協定版本必須要明確指定。將 '/version=1.1' 字串附加在："
 
 #: xml/release-notes.xml:279(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"<literal>client.conf</literal> 設定檔中的 <literal>ServerName</literal> 設定 (例如 "
+"<literal>ServerName older.server.example.com/version=1.1</literal>)。"
 
 #: xml/release-notes.xml:287(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
+msgstr "環境變數 <literal>CUPS_SERVER</literal>。"
 
 #: xml/release-notes.xml:293(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-msgstr ""
+msgstr "在命令列工具中 <literal>-h</literal> 選項所設定的伺服器名稱。例如："
 
 #: xml/release-notes.xml:297(screen)
 #, no-wrap
@@ -213,11 +218,16 @@ msgstr ""
 #: xml/release-notes.xml:303(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"一些列印過濾器和後端已從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。"
 
 #: xml/release-notes.xml:311(para)
-#, fuzzy
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "cupsd 設定方式已分離成二個檔案：cupsd.conf (可透過 HTTP PUT 如 cupsctl 來變更)，和 cups-files.conf (只能以 root 權限手動修改)，以提供更好的保護，避免被 root 授與可變更 cupsd 設定的一般使用者誤用 (詳見 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 bnc#789566)。"
+msgstr ""
+"一些設定指令已經自 <literal>cupsd.conf</literal> 分離出來，並移到 <literal>cups-"
+"files.conf</literal> 設定檔中。請詳見 <ulink url=\"http://www.cups.org/str.php?"
+"L4223\">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 <ulink "
+"url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> 的說明。"
 
 #: xml/release-notes.xml:321(para)
 #, fuzzy
