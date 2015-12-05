@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2015-11-27 15:04+0100\n"
-"PO-Revision-Date: 2015-12-05 02:53+0200\n"
+"PO-Revision-Date: 2015-12-05 06:35+0200\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <http://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap_42_1/zh_TW/>\n"
@@ -36,9 +36,11 @@ msgstr "openSUSE Leap 是一個自由的基於 Linux 的作業系統，可運作
 
 #. Previous Release Notes
 #: xml/release-notes.xml:50(para)
-#, fuzzy
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>"
-msgstr "如果您從較舊的發行版本升級至 openSUSE Leap，請由此查看之前的發行紀事： <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+msgstr ""
+"如果您從較舊的發行版本升級至 openSUSE Leap，請由此查看之前的發行紀事：<ulink url=\""
+"http://en.opensuse.org/openSUSE:Release_Notes\""
+">http://en.opensuse.org/openSUSE:Release_Notes</ulink>"
 
 #: xml/release-notes.xml:87(title)
 msgid "Installation"
@@ -52,10 +54,12 @@ msgstr "最小系統安裝"
 #: xml/release-notes.xml:102(para)
 msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>."
 msgstr ""
+"為避免一些大型的建議套件被安裝，最小安裝樣式 (pattern) 會使用到其他與非預期套件相衝突的樣式。該樣式可以在安裝完成後移除。該樣式為  "
+"<literal>patterns-openSUSE-minimal_base-conflicts</literal>。"
 
 #: xml/release-notes.xml:109(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
-msgstr ""
+msgstr "請注意最小系統安裝預設不會啟動防火牆。若您需要，請安裝 <literal>SuSEfirewall2</literal>。"
 
 #: xml/release-notes.xml:117(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -66,9 +70,12 @@ msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified E
 msgstr "在安裝 openSUSE 到使用 UEFI (統一可延伸韌體介面) 開機的系統之前，強烈建議您先詢問是否有硬體製造商所建議的韌體更新並加以安裝。若您的系統有預裝 Windows 8，通常就代表您的系統使用 UEFI 開機。"
 
 #: xml/release-notes.xml:126(para)
-#, fuzzy
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
-msgstr "<emphasis>背景知識：</emphasis> 有些 UEFI 韌體有缺陷，導致當有太多資料被寫入 UEFI 儲存區域時，韌體會發生問題。但是沒人知道究竟寫入多少資料才算「太多」，故 openSUSE 藉由只寫入能夠啟動系統的最少需要的資料量，來降低這個風險。寫入的資料至少要能告訴 UEFI 韌體 openSUSE 啟動程式的位置。官方 Linux 核心提供使用 UEFI 儲存區來寫入開機及當機資訊的功能  (<literal>pstore</literal>)，在此預設被停用。無論如何，建議安裝任何硬體製造商建議的韌體更新。"
+msgstr ""
+"<emphasis>背景知識：</emphasis> 有些 UEFI 韌體有缺陷，導致當有太多資料被寫入 UEFI "
+"儲存區域時，韌體會發生問題。但是沒人知道究竟寫入多少資料才算「太多」，故 openSUSE 藉由只寫入能夠啟動系統的最少需要的資料量，來降低這個風險。"
+"寫入的資料至少要能告訴 UEFI 韌體 openSUSE 啟動程式的位置。官方 Linux 核心提供使用 UEFI 儲存區來寫入開機及當機資訊的功能  "
+"(<literal>pstore</literal>)，在此預設被停用。無論如何，建議安裝任何硬體製造商建議的韌體更新。"
 
 #. bnc#850056
 #: xml/release-notes.xml:143(title)
@@ -97,28 +104,33 @@ msgstr "系統升級"
 
 #: xml/release-notes.xml:181(title)
 msgid "Network Interface Names"
-msgstr ""
+msgstr "網路介面名稱"
 
 #: xml/release-notes.xml:182(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
-msgstr ""
+msgstr "當您將一台遠端機器從 openSUSE 13.2 昇級時，請確保您的網路介面命名是正確的。"
 
 #: xml/release-notes.xml:186(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr ""
+"openSUSE 13.2 使用可預測的網路介面命名方式 (例如，<literal>enp5s0</literal>)，但 openSUSE Leap "
+"42.1 是使用固定的命名方式 (<literal>eth0</literal>)。當完成昇級並重開機後，網路介面名稱會因此而改變。這可能會造成您無法登入"
+"系統。要避免網路介面被改名，在重開機前，為您的每個網路介面執行下列命令："
 
 #: xml/release-notes.xml:195(replaceable)
 msgid "enp5s0"
-msgstr ""
+msgstr "enp5s0"
 
 #: xml/release-notes.xml:195(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
+"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
+"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
 #: xml/release-notes.xml:197(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
-msgstr ""
+msgstr "請將 <replaceable>enp5s0</replaceable> 代換為您的網路介面名稱。"
 
 #: xml/release-notes.xml:206(title)
 msgid "General"
@@ -130,7 +142,7 @@ msgstr "非開源  (Non-Oss) 套件庫"
 
 #: xml/release-notes.xml:210(para)
 msgid "After the installation, the non-oss repository is disabled."
-msgstr ""
+msgstr "安裝完成後，非開源套件庫預設是關閉的。"
 
 #: xml/release-notes.xml:213(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
@@ -153,20 +165,25 @@ msgstr "CUPS 版本昇級至 1.7"
 
 #: xml/release-notes.xml:233(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
-msgstr ""
+msgstr "新版的 CUPS，相較於 1.5 版，導入了一些重大改變，因此需要手動調整設定。"
 
 #: xml/release-notes.xml:240(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-msgstr ""
+msgstr "PDF 取代 PS 成為標準的列印工作格式。故傳統的 PostScript 印表機現在需要一個過濾器 (filter) 驅動程式才能進行列印。"
 
 #: xml/release-notes.xml:245(para)
-#, fuzzy
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-msgstr "欲了解更多資訊，請見 SUSE 維基頁面 \"Concepts printing\" (<ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>) 中的 \"Common printing data formats\" 小節。"
+msgstr ""
+"請見 <ulink url=\"http://en.opensuse.org/Concepts_printing\""
+">http://en.opensuse.org/Concepts_printing</ulink>) 以了解更多細節。"
 
 #: xml/release-notes.xml:253(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"網路印表機探查通訊協定已經改變為基於 DNS Service discovery 協定 (DNS-SD，透過 Avahi 提供)。<literal"
+">cups-filters</literal> 套件提供的 <literal>cups-browsed</literal> "
+"服務可用來橋接舊的與新的通訊協定。<literal>cupsd</literal> 與 <literal>cups-browsed</literal> "
+"需要一起運作才能讓舊的客戶端 (包括 LibreOffice 與 KDE) 能夠發現網路印表機。"
 
 #: xml/release-notes.xml:266(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
@@ -228,10 +245,15 @@ msgid ""
 "[Users]\n"
 "MaximumUid=1002"
 msgstr ""
+"[Theme]\n"
+"Current=maldives\n"
+"\n"
+"[Users]\n"
+"MaximumUid=1002"
 
 #: xml/release-notes.xml:343(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
-msgstr ""
+msgstr "修改 <filename>/etc/sddm.conf</filename> 來加入以下欄位：<placeholder-1/>"
 
 #: xml/release-notes.xml:351(para)
 #, fuzzy
