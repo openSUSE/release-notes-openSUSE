@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-27 15:04+0100\n"
-"PO-Revision-Date: 2015-12-04 21:58+0200\n"
+"PO-Revision-Date: 2015-12-06 00:55+0200\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <http://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/sv/>\n"
@@ -83,7 +83,7 @@ msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 #: xml/release-notes.xml:118(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr ""
-"Om din dator anväder UEFI-boot (vilket troligtvis är fallet om datorn "
+"Om din dator använder UEFI-boot (vilket troligtvis är fallet om datorn "
 "levererades med Windows 8 eller senare) rekommenderar vi starkt att du "
 "uppdaterar UEFI-firmwaret till senaste version. Firmware och instruktioner "
 "för detta hittar du på din dator- eller moderkortstillverkares hemsida."
@@ -155,6 +155,13 @@ msgstr ""
 #: xml/release-notes.xml:186(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr ""
+"Metoden för namngivning av nätverkskorten har förändras i openSUSE 42.1. "
+"Version 13.2 använde sig av förutsägbara namn (t.ex. "
+"<literal>enp5s0</literal>), medan openSUSE 42.1 använder beständiga namn "
+"(<literal>eth0</literal>). Efter uppdatering och omstart av datorn kan "
+"namnen på dina nätverkskort komma att ändras, vilket kan låsa dig ute från "
+"datorn. För att hindra namnbyte, kör följande kommando för vart och ett av "
+"nätverkskorten innan du startar om datorn:"
 
 #: xml/release-notes.xml:195(replaceable)
 msgid "enp5s0"
@@ -187,6 +194,9 @@ msgstr "Efter installationen är icke-oss förrådet (repository) inaktiverat."
 #: xml/release-notes.xml:213(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
+"Aktivera förrådet <literal>openSUSE-Leap-42.1-Non-Oss</literal> i YaST eller "
+"genom att köra kommandot: <screen>zypper mr -e repo-non-oss</screen> i "
+"kommandoraden"
 
 #: xml/release-notes.xml:223(title)
 msgid "Technical"
@@ -195,64 +205,100 @@ msgstr "Tekniskt"
 #. sort_key="None"; non-rn-fate-cats="";
 #: xml/release-notes.xml:228(title)
 msgid "Printing System: Improvements and Incompatible Changes"
-msgstr ""
+msgstr "Utskrifter: Förbättringar och förändringar"
 
 #: xml/release-notes.xml:231(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr ""
+msgstr "CUPS version uppgraderad till 1.7"
 
 #: xml/release-notes.xml:233(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgstr ""
+"Uppdateringen av CUPS från version 1.5 medför ett antal större förändringar "
+"som kan kärva manuella ändringar i konfigurationen."
 
 #: xml/release-notes.xml:240(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"PDF är nu standardformat på utskrifter i stället för PS som tidigare. Därför "
+"behöver PostScript-printrar nu en filterdrivrutin för att kunna skriva ut."
 
 #: xml/release-notes.xml:245(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
 msgstr ""
+"Se <ulink url=\"https://en.opensuse.org/Concepts_printing\""
+">https://en.opensuse.org/Concepts_printing</ulink> för mer information."
 
 #: xml/release-notes.xml:253(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"Nätverksprotokollet för att upptäcka skrivare har ändrats. Den förvalda "
+"metoden för att hitta nätverksskrivare är nu baserad på DNS Service "
+"discovery (DNS-SD, t.ex. via Avahi). <literal>cups-browsed</literal> "
+"servicen från paketet <literal>cups-filters</literal> kan användas för att "
+"länka samma det gamla och nya protokollet. Både <literal>cupsd</literal> och "
+"<literal>cups-browsed</literal> behöver köra för att \"föråldrade\"  "
+"klienter skall kunna hitta skrivare (så även LibreOffice och KDE)."
 
 #: xml/release-notes.xml:266(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
+"Den förvalda versionen av IPP protokollet har ändras från 1.1 till 2.0. "
+"Äldre IPP servrar såsom CUPS 1.3.x (t.ex. i SUSE Linux Enteprise 11) avvisar "
+"IPP 2.0 förfrågningar med \"Bad Request\" (se <ulink url=\""
+"http://www.cups.org/str.php?L4231\"/>)."
 
 #: xml/release-notes.xml:272(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either:"
 msgstr ""
+"För att kunna skriva ut via äldre servrar måste IPP protokollets version "
+"specificeras med genom tillägget '/version=1.1' i något av följde alternativ:"
 
 #: xml/release-notes.xml:279(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"<literal>ServerName</literal> inställningen i <literal>client.conf</literal> "
+"(t.ex., <literal>ServerName older.server.example.com/version=1.1</literal>)."
 
 #: xml/release-notes.xml:287(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
+msgstr "I miljövariabeln <literal>CUPS_SERVER</literal>."
 
 #: xml/release-notes.xml:293(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
+"Som värde för servernamnet i <literal>-h</literal> växeln i "
+"kommandoradverktyget t.ex:"
 
 #: xml/release-notes.xml:297(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr ""
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
 #: xml/release-notes.xml:303(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"Några printerfilter och \"back-ends\" är flyttade från paketet "
+"<literal>cups</literal> till <literal>cups-filters</literal>."
 
 #: xml/release-notes.xml:311(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgstr ""
+"Några konfigurationsalternativ är flyttade från <literal>cupsd.conf</literal>"
+" till <literal>cups-files.conf</literal> (se <ulink url=\""
+"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
+", CVE-2012-5519, och <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:321(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 msgstr ""
+"CUPS banners och CUPS testsidan är flyttade från <literal>cups</literal> "
+"paketet till <literal>cups-filters</literal> (se <ulink url=\""
+"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink>"
+" och <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #: xml/release-notes.xml:334(title)
 msgid "Miscellaneous"
@@ -265,6 +311,11 @@ msgstr "KDE och nätverksautentisering"
 #: xml/release-notes.xml:337(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
 msgstr ""
+"KDE:s grafiska loginprogram, SDDM, fungerar inte ihop med en "
+"autentiseringsmetod som har ett stort antal användare. Om dessutom en "
+"automounter används kommer SDDM att försöka montera alla användares "
+"hemkataloger vilket medför att datorn är låser sig en lång tid under "
+"uppstarten."
 
 #: xml/release-notes.xml:345(programlisting)
 #, no-wrap
@@ -275,22 +326,34 @@ msgid ""
 "[Users]\n"
 "MaximumUid=1002"
 msgstr ""
+"[Theme]↵\n"
+"Current=maldives↵\n"
+"↵\n"
+"[Users]↵\n"
+"MaximumUid=1002"
 
 #: xml/release-notes.xml:343(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
 msgstr ""
+"Ändra <filename>/etc/sddm.conf</filename> så den innehåller följande: "
+"<placeholder-1/>"
 
 #: xml/release-notes.xml:351(para)
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
 msgstr ""
+"Se <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\""
+">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> för mer "
+"information."
 
 #: xml/release-notes.xml:359(title)
 msgid "No Screensaver Support in KDE Plasma"
-msgstr ""
+msgstr "Ingen support för skärmsläckare i KDE Plasma"
 
 #: xml/release-notes.xml:360(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
 msgstr ""
+"KDE Plasma har som standard igen support för skärmsläckare. Om du vill "
+"använda skärmsläckare, installera paketet <literal>xscreensaver</literal>."
 
 #: xml/release-notes.xml:365(para)
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, the choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
@@ -299,6 +362,8 @@ msgstr ""
 #: xml/release-notes.xml:374(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
 msgstr ""
+"För att konfigurera skärmsläckaren använd <command>xscreensaver-"
+"demo</command>."
 
 #. bnc#809347
 #: xml/release-notes.xml:383(title)
@@ -307,11 +372,13 @@ msgstr "Mer information och feedback"
 
 #: xml/release-notes.xml:387(para)
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Läs <filename>README</filename> filen på installationsmediet."
 
 #: xml/release-notes.xml:392(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr ""
+"Visa en detaljerad logg över ändringarna i ett specifikt paket med kommandot "
+"RPM:"
 
 #: xml/release-notes.xml:396(replaceable)
 msgid "FILENAME"
@@ -324,11 +391,14 @@ msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #: xml/release-notes.xml:397(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "Ersätt <replaceable>FILENAME</replaceable> med namnet på RPM paketet."
 
 #: xml/release-notes.xml:402(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr ""
+"En kronologisk logg över alla förändringarna i de uppdaterade paketen finns "
+"i filen <filename>ChangeLog</filename> som du hittar i rotkatalogen på "
+"installationsmediet."
 
 #: xml/release-notes.xml:408(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
@@ -339,16 +409,14 @@ msgstr ""
 #: xml/release-notes.xml:414(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
 msgstr ""
-"<ulink url=\"https://activedoc.opensuse.org/\""
-">https://activedoc.opensuse.org/</ulink> innehåller kompletterande och "
-"uppdaterad dokumentation."
+"Kompletterande och uppdaterad dokumentation hittar du på <ulink url=\""
+"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink>."
 
 #: xml/release-notes.xml:419(para)
 msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
 msgstr ""
-"Besök <ulink url=\"https://www.opensuse.org\""
-">https://www.opensuse.org</ulink> för att se de senaste nyheterna från "
-"openSUSE."
+"De senaste nyheterna från openSUSE hittar du på <ulink url=\""
+"https://www.opensuse.org\">https://www.opensuse.org</ulink>."
 
 #: xml/release-notes.xml:426(para)
 msgid "Copyright © 2015 SUSE LLC"
