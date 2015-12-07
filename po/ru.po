@@ -46,9 +46,12 @@ msgstr ""
 
 #. Previous Release Notes
 #: xml/release-notes.xml:50(para)
-#, fuzzy
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>"
-msgstr "Если вы обновляетесь с более старой версии до этого выпуска openSUSE Leap, см. предыдущие примечания здесь: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+msgstr ""
+"Если вы обновляетесь с более старой версии до этого выпуска openSUSE Leap, "
+"см. предыдущие примечания здесь: <ulink url=\""
+"http://en.opensuse.org/openSUSE:Release_Notes\""
+">http://en.opensuse.org/openSUSE:Release_Notes</ulink>"
 
 #: xml/release-notes.xml:87(title)
 msgid "Installation"
@@ -62,10 +65,16 @@ msgstr "Установка минимальной системы"
 #: xml/release-notes.xml:102(para)
 msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>."
 msgstr ""
+"Чтобы избежать установки больших рекомендованных пакетов шаблон минимальной "
+"установки использует другой шаблон, конфликтующий с нежелательными пакетами. "
+"Этот шаблон после выполнения установки можно удалить, он называется <literal"
+">patterns-openSUSE-minimal_base-conflicts</literal>."
 
 #: xml/release-notes.xml:109(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr ""
+"Обратите внимание, что в минимальной установке по умолчанию нет брандмауэра. "
+"Если он вам нужен, установите <literal>SuSEfirewall2</literal>."
 
 #: xml/release-notes.xml:117(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -81,9 +90,18 @@ msgstr ""
 "является верным признаком того, что ваша система использует UEFI."
 
 #: xml/release-notes.xml:126(para)
-#, fuzzy
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
-msgstr "<emphasis>Обоснование:</emphasis> Некоторые прошивки UEFI содержат ошибки, приводящие к сбою в случае записи большого объёма данных в область хранения UEFI. Что характерно, никто точно не знает, насколько «большой» объём приводит к такому сбою. openSUSE минимизирует этот риск, записывая минимальный объём данных, необходимых для загрузки ОС. Под минимальным понимается указание прошивке UEFI на расположение загрузчика openSUSE. Специальные возможности ядра Linux, использующие область хранения UEFI для сведений о загрузках и сбоях (<literal>pstore</literal>), по умолчанию отключены. Тем не менее, рекомендуется установить все рекомендованные производителем обновления прошивки."
+msgstr ""
+"<emphasis>Обоснование:</emphasis> Некоторые прошивки UEFI содержат ошибки, "
+"приводящие к сбою в случае записи большого объёма данных в область хранения "
+"UEFI. Что характерно, никто точно не знает, насколько «большой» объём "
+"приводит к такому сбою. openSUSE минимизирует этот риск, записывая "
+"минимальный объём данных, необходимых для загрузки ОС. Под минимальным "
+"понимается указание прошивке UEFI на расположение загрузчика openSUSE. "
+"Специальные возможности ядра Linux, использующие область хранения UEFI для "
+"сведений о загрузках и сбоях (<literal>pstore</literal>), по умолчанию "
+"отключены. Тем не менее, рекомендуется установить все рекомендованные "
+"производителем обновления прошивки."
 
 #. bnc#850056
 #: xml/release-notes.xml:143(title)
@@ -127,30 +145,41 @@ msgid "System Upgrade"
 msgstr "Обновление системы"
 
 #: xml/release-notes.xml:181(title)
-#, fuzzy
 msgid "Network Interface Names"
-msgstr "Дубликаты сетевых интерфейсов"
+msgstr "Имена сетевых интерфейсов"
 
 #: xml/release-notes.xml:182(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr ""
+"При обновлении удалённой машины с openSUSE 13.2 убедитесь, что ваши сетевые "
+"интерфейсы названы правильно."
 
 #: xml/release-notes.xml:186(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr ""
+"openSUSE 13.2 использует т.н. предсказуемые имена сетевых интерфейсов ("
+"например, <literal>enp5s0</literal>), тогда как openSUSE Leap 42.1 "
+"использует постоянные имена (<literal>eth0</literal>). После обновления и "
+"перезагрузки имена сетевых интерфейсов могут измениться. Это может "
+"заблокировать для вас доступ к системе. Чтобы избежать переименования "
+"интерфейсов, перед перезагрузкой запустите для каждого из них следующую "
+"команду:"
 
 #: xml/release-notes.xml:195(replaceable)
 msgid "enp5s0"
-msgstr ""
+msgstr "enp5s1"
 
 #: xml/release-notes.xml:195(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
+"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
+"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
 #: xml/release-notes.xml:197(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr ""
+"Замените <replaceable>enp5s1</replaceable> на имя своего сетевого интерфейса."
 
 #: xml/release-notes.xml:206(title)
 msgid "General"
@@ -162,7 +191,7 @@ msgstr "Репозиторий Non-Oss"
 
 #: xml/release-notes.xml:210(para)
 msgid "After the installation, the non-oss repository is disabled."
-msgstr ""
+msgstr "После установки репозиторий non-oss отключён."
 
 #: xml/release-notes.xml:213(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
@@ -187,58 +216,93 @@ msgstr "Обновление CUPS до версии 1.7"
 #: xml/release-notes.xml:233(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgstr ""
+"В новой версии CUPS представлены существенные по сравнению с версией 1.5 "
+"изменения, которые могут потребовать ручных изменений настроек."
 
 #: xml/release-notes.xml:240(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"Стандартным форматом заданий на печать теперь является PDF, а не PS. Таким "
+"образом, теперь для традиционных PostScript-принтеров тоже нужен фильтр/"
+"драйвер для печати."
 
 #: xml/release-notes.xml:245(para)
-#, fuzzy
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-msgstr "Подробности см. в разделе «Common printing data formats» статьи в вики SUSE «Concepts printing» по адресу <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
+msgstr ""
+"Подробности см. по адресу <ulink url=\"http://en.opensuse.org/"
+"Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
 
 #: xml/release-notes.xml:253(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"Изменился протокол обнаружения сетевых принтеров. «Родной» метод теперь "
+"основан на DNS Service discovery (DNS-SD, т.е. через Avahi). Для обеспечения "
+"совместной работы старого и нового протоколов можно использовать службу "
+"<literal>cups-browsed</literal> из пакета <literal>cups-filters</literal>. И "
+"<literal>cupsd</literal>, и <literal>cups-browsed</literal> должны быть "
+"запущены, чтобы «старые» клиенты (в том числе LibreOffice и KDE) могли "
+"обнаруживать принтеры."
 
 #: xml/release-notes.xml:266(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
+"Версия по умолчанию протокола IPP изменена с 1.1 на 2.0. Более старые "
+"серверы IPP типа CUPS 1.3.x (например, в SUSE Linux Enteprise 11) отклоняют "
+"запросы IPP 2.0 с сообщением «Bad Request» (см. <ulink url=\""
+"http://www.cups.org/str.php?L4231\"/>)."
 
 #: xml/release-notes.xml:272(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either:"
 msgstr ""
+"Чтобы отправлять задания на старые сервера, необходимо вручную указать "
+"версию протокола IPP, добавив «/version=1.1»:"
 
 #: xml/release-notes.xml:279(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"к параметрам <literal>ServerName</literal> в файле "
+"<literal>client.conf</literal> (например, <literal>ServerName "
+"stariy.server.primer.ru/version=1.1</literal>)."
 
 #: xml/release-notes.xml:287(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
+msgstr "к значению переменной окружения <literal>CUPS_SERVER</literal>."
 
 #: xml/release-notes.xml:293(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
+"к значению имени сервера в параметре <literal>-h</literal> инструментов "
+"командной строки, например:"
 
 #: xml/release-notes.xml:297(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr ""
+msgstr "lpstat -h stariy.server.primer.ru/version=1.1 -p"
 
 #: xml/release-notes.xml:303(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"Некоторые фильтры и механизмы печати были перенесены из пакета "
+"<literal>cups</literal> в пакет <literal>cups-filters</literal>."
 
 #: xml/release-notes.xml:311(para)
-#, fuzzy
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "Директивы настройки cupsd разделены на два файла: cupsd.conf (также может быть отредактирован через HTTP PUT, например, через cupsctl) и cups-files.conf (может быть отредактирован только вручную от имени root) для лучшей защиты по умолчанию от неверного использования привилегий обычными пользователями, которым root отдельно разрешил вносить изменения в настройки cupsd (см. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 и bnc#789566)."
+msgstr ""
+"Некоторые параметры настройки были вынесены из <literal>cupsd.conf</literal> "
+"в <literal>cups-files.conf</literal> (см. <ulink url=\""
+"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
+", CVE-2012-5519 и <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:321(para)
-#, fuzzy
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr "Директивы настройки cupsd разделены на два файла: cupsd.conf (также может быть отредактирован через HTTP PUT, например, через cupsctl) и cups-files.conf (может быть отредактирован только вручную от имени root) для лучшей защиты по умолчанию от неверного использования привилегий обычными пользователями, которым root отдельно разрешил вносить изменения в настройки cupsd (см. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 и bnc#789566)."
+msgstr ""
+"Тестовая страница и баннеры CUPS были перенесены из пакета "
+"<literal>cups</literal> в пакет <literal>cups-filters</literal> (см. <ulink "
+"url=\"http://www.cups.org/str.php?L4120\""
+">http://www.cups.org/str.php?L4120</ulink> и <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #: xml/release-notes.xml:334(title)
 msgid "Miscellaneous"
@@ -251,6 +315,11 @@ msgstr "KDE и сетевая аутентификация"
 #: xml/release-notes.xml:337(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
 msgstr ""
+"При использовании менеджера дисплеев KDE SDDM с методом аутентификации, "
+"предоставляющим множество пользователей, SDDM становится непригодным к "
+"использованию. Более того, если используется автоматическое монтирование, то "
+"SDDM может надолго заблокироваться при запуске, пытаясь примонтировать "
+"домашний каталог каждого пользователя."
 
 #: xml/release-notes.xml:345(programlisting)
 #, no-wrap
@@ -274,25 +343,39 @@ msgstr ""
 "<placeholder-1/>"
 
 #: xml/release-notes.xml:351(para)
-#, fuzzy
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
-msgstr "Эту и другие проблемы с драйвером Intel типа <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink> мы по возможности исправим в одном из обновлений."
+msgstr ""
+"Подробнее см. <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\""
+">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink>."
 
 #: xml/release-notes.xml:359(title)
 msgid "No Screensaver Support in KDE Plasma"
-msgstr ""
+msgstr "Нет поддержки хранителей экрана в KDE Plasma"
 
 #: xml/release-notes.xml:360(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
 msgstr ""
+"По умолчанию KDE Plasma не поддерживает хранители экрана (скринсейверы). "
+"Если вы хотите иметь хранитель экрана, установите пакет "
+"<literal>xscreensaver</literal>."
 
 #: xml/release-notes.xml:365(para)
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, the choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
 msgstr ""
+"Настройте запуск <command>xscreensaver</command> одновременно с сеансом "
+"рабочего стола, выбрав "
+"<menuchoice><guimenu>K</guimenu><guimenu>Настройки</guimenu><guimenu>"
+"Настройки системы</guimenu></menuchoice>, затем выберите "
+"<menuchoice><guimenu>Запуск и "
+"завершение</guimenu><guimenu>Автозапуск</guimenu></menuchoice>. Нажмите "
+"<guimenu>Добавить приложение</guimenu>, наберите "
+"<literal>xscreensaver</literal> и нажмите <guimenu>OK</guimenu>."
 
 #: xml/release-notes.xml:374(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
 msgstr ""
+"Чтобы настроить хранитель экрана, используйте команду <command>xscreensaver-"
+"demo</command>."
 
 #. bnc#809347
 #: xml/release-notes.xml:383(title)
@@ -301,45 +384,47 @@ msgstr "Дополнительные сведения и обратная свя
 
 #: xml/release-notes.xml:387(para)
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Читать файлы <filename>README</filename> на установочном носителе."
 
 #: xml/release-notes.xml:392(para)
-#, fuzzy
 msgid "View a detailed changelog information about a particular package from its RPM:"
-msgstr "Получить подробный журнал изменений конкретного пакета с помощью RPM:"
+msgstr "Просмотреть подробный журнал изменений конкретного пакета из его RPM:"
 
 #: xml/release-notes.xml:396(replaceable)
 msgid "FILENAME"
-msgstr ""
+msgstr "ИМЯ_ФАЙЛА"
 
 #: xml/release-notes.xml:396(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-msgstr "rpm --changelog -qp &lt;ИМЯ_ФАЙЛА&gt;.rpm"
+msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #: xml/release-notes.xml:397(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "Замените <replaceable>ИМЯ_ФАЙЛА</replaceable> на имя пакета RPM."
 
 #: xml/release-notes.xml:402(para)
-#, fuzzy
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
-msgstr "Хронологический журнал всех изменений в обновлённых пакетах приведён в файле <filename>ChangeLog</filename> на верхнем уровне DVD."
+msgstr ""
+"Хронологический журнал всех изменений в обновлённых пакетах приведён в файле "
+"<filename>ChangeLog</filename> на верхнем уровне диска."
 
 #: xml/release-notes.xml:408(para)
-#, fuzzy
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
-msgstr "Больше сведений вы найдёте в каталоге <filename>docu</filename> на DVD."
+msgstr ""
+"Больше сведений вы найдёте в каталоге <filename>docu</filename> на диске."
 
 #: xml/release-notes.xml:414(para)
-#, fuzzy
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
-msgstr "Дополнительная и обновлённая документация на сайте <ulink url=\"https://activedoc.opensuse.org/\"/>."
+msgstr ""
+"Дополнительная и обновлённая документация на сайте <ulink url=\""
+"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink>."
 
 #: xml/release-notes.xml:419(para)
-#, fuzzy
 msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
-msgstr "Последние новости от openSUSE на сайте <ulink url=\"http://www.opensuse.org\"/>."
+msgstr ""
+"Последние новости от openSUSE на сайте <ulink url=\"https://www.opensuse."
+"org\">https://www.opensuse.org</ulink>."
 
 #: xml/release-notes.xml:426(para)
 msgid "Copyright © 2015 SUSE LLC"
@@ -358,9 +443,7 @@ msgstr "Команда openSUSE."
 msgid "translator-credits"
 msgstr ""
 "Переводчики:\n"
-"Александр Мелентьев <minton@opensuse.org>, 2008-2015. Отдельная "
-"благодарность Илье Барило за контроль качества <http://sourcelocalizer.ru>, "
-"2013"
+"Александр Мелентьев <minton@opensuse.org>, 2008-2015."
 
 #~ msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 #~ msgstr ""
