@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2015-11-27 15:04+0100\n"
+"POT-Creation-Date: 2015-12-14 13:22+0100\n"
 "PO-Revision-Date: 2015-11-13 17:40+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <http://l10n.opensuse.org/projects/release-notes-opensuse/master/sk/>\n"
@@ -36,7 +36,7 @@ msgstr "openSUSE Leap je slobodný a na Linuxe založený operačný systém pre
 #. Previous Release Notes
 #: xml/release-notes.xml:50(para)
 #, fuzzy
-msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>"
+msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 msgstr "Ak povyšujete zo staršej verzie na toto vydanie openSUSE Leap, pozrite si predchádzajúce poznámky k vydaniu, ktoré sú uvedené tu: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
 
 #: xml/release-notes.xml:87(title)
@@ -121,203 +121,48 @@ msgstr ""
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr ""
 
-#: xml/release-notes.xml:206(title)
-msgid "General"
-msgstr "Všeobecné"
-
-#: xml/release-notes.xml:209(title)
-msgid "Non-Oss Repository"
-msgstr "Repozitár Non-Oss"
-
-#: xml/release-notes.xml:210(para)
-#, fuzzy
-msgid "After the installation, the non-oss repository is disabled."
-msgstr "Po inštalácii je repozitár non-oss zakázaný"
-
-#: xml/release-notes.xml:213(para)
-msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
-msgstr "Povoľte repozitár <literal>openSUSE-Leap-42.1-Non-Oss</literal> pomocou YaST alebo na príkazovom riadku pomocou zypper: <screen>zypper mr -e repo-non-oss</screen>"
-
-#: xml/release-notes.xml:223(title)
-msgid "Technical"
-msgstr "Technické"
-
-#. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:228(title)
-msgid "Printing System: Improvements and Incompatible Changes"
-msgstr "Tlačový systém: Zlepšenia a nekompatibilné zmeny"
-
-#: xml/release-notes.xml:231(emphasis)
-msgid "CUPS Version Upgrade to 1.7"
-msgstr "CUPS zvýšil verziu na 1.7"
-
-#: xml/release-notes.xml:233(para)
-msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
+#: xml/release-notes.xml:204(title)
+msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr ""
 
-#: xml/release-notes.xml:240(para)
-msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+#: xml/release-notes.xml:205(para)
+msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr ""
 
-#: xml/release-notes.xml:245(para)
-#, fuzzy
-msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-msgstr "Podrobnosti nájdete v časti \"Common printing data formats\" v článku SUSE wiki \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
-
-#: xml/release-notes.xml:253(para)
-msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+#: xml/release-notes.xml:212(para)
+msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr ""
 
-#: xml/release-notes.xml:266(para)
-msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+#: xml/release-notes.xml:217(para)
+msgid "Mount the initial root filesystem:"
 msgstr ""
 
-#: xml/release-notes.xml:272(para)
-msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either:"
+#: xml/release-notes.xml:220(replaceable)
+msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr ""
 
-#: xml/release-notes.xml:279(para)
-msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-msgstr ""
-
-#: xml/release-notes.xml:287(para)
-msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
-
-#: xml/release-notes.xml:293(para)
-msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-msgstr ""
-
-#: xml/release-notes.xml:297(screen)
+#: xml/release-notes.xml:220(screen)
 #, no-wrap
-msgid "lpstat -h older.server.example.com/version=1.1 -p"
+msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr ""
 
-#: xml/release-notes.xml:303(para)
-msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
+#: xml/release-notes.xml:223(para)
+msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr ""
 
-#: xml/release-notes.xml:311(para)
-#, fuzzy
-msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "Konfiguračné direktívy cupsd sú rozdelené do dvoch súborov: cupsd.conf (možno ho tiež upraviť pomocou HTTP PUT napr. cez cupsctl) a cups-files.conf (možno ho upraviť len manuálne správcom systému), aby bola lepšia predvolená ochrana proti zneužitiu výsad bežnými používateľmi, ktorí mali konkrétne správcom systému  povolené robiť zmeny cupsd konfigurácie (pozrite si <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-
-#: xml/release-notes.xml:321(para)
-#, fuzzy
-msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr "Konfiguračné direktívy cupsd sú rozdelené do dvoch súborov: cupsd.conf (možno ho tiež upraviť pomocou HTTP PUT napr. cez cupsctl) a cups-files.conf (možno ho upraviť len manuálne správcom systému), aby bola lepšia predvolená ochrana proti zneužitiu výsad bežnými používateľmi, ktorí mali konkrétne správcom systému  povolené robiť zmeny cupsd konfigurácie (pozrite si <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-
-#: xml/release-notes.xml:334(title)
-msgid "Miscellaneous"
-msgstr "Rôzne"
-
-#: xml/release-notes.xml:336(title)
-msgid "KDE and Network Authentication"
-msgstr "KDE a sieťové overenie"
-
-#: xml/release-notes.xml:337(para)
-#, fuzzy
-msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
-msgstr "Pri použití SDDM správca obrazovky KDE s overovacou metódou, ktorá poskytuje vysoký počet používateľov, sa SDDM stáva nepoužiteľným. Navyše, ak je použité automatické pripojenie, môže SDDM blokovať po dlhú dobu na štarte snahu o pripojenie domovských adresárov všetkých používateľov"
-
-#: xml/release-notes.xml:345(programlisting)
+#: xml/release-notes.xml:226(screen)
 #, no-wrap
-msgid ""
-"[Theme]\n"
-"Current=maldives\n"
-"\n"
-"[Users]\n"
-"MaximumUid=1002"
-msgstr ""
-"[Theme]\n"
-"Current=maldives\n"
-"\n"
-"[Users]\n"
-"MaximumUid=1002"
-
-#: xml/release-notes.xml:343(para)
-msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
-msgstr "Upravte <filename>/etc/sddm.conf</filename>, aby obsahovali nasledovné položky: <placeholder-1/>"
-
-#: xml/release-notes.xml:351(para)
-#, fuzzy
-msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
-msgstr "Podrobnosti nájdete na <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink>."
-
-#: xml/release-notes.xml:359(title)
-msgid "No Screensaver Support in KDE Plasma"
+msgid "find /mnt -xdev -delete"
 msgstr ""
 
-#: xml/release-notes.xml:360(para)
-msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
+#: xml/release-notes.xml:229(para)
+msgid "Umount the filesystem again:"
 msgstr ""
 
-#: xml/release-notes.xml:365(para)
-msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, the choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
+#: xml/release-notes.xml:232(screen)
+#, no-wrap
+msgid "umount /mnt"
 msgstr ""
-
-#: xml/release-notes.xml:374(para)
-msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
-msgstr ""
-
-#. bnc#809347
-#: xml/release-notes.xml:383(title)
-msgid "More Information and Feedback"
-msgstr "Ďalšie informácie a spätná väzba"
-
-#: xml/release-notes.xml:387(para)
-msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
-
-#: xml/release-notes.xml:392(para)
-#, fuzzy
-msgid "View a detailed changelog information about a particular package from its RPM:"
-msgstr "Získajte podrobné informácie o zmenách konkrétneho balíka z RPM:"
-
-#: xml/release-notes.xml:396(replaceable)
-msgid "FILENAME"
-msgstr ""
-
-#: xml/release-notes.xml:396(screen)
-#, fuzzy, no-wrap
-msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
-
-#: xml/release-notes.xml:397(para)
-msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
-
-#: xml/release-notes.xml:402(para)
-#, fuzzy
-msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
-msgstr "Chronologický záznam všetkých zmien vykonaných v aktualizovaných balíkoch nájdete v súbore <filename>ChangeLog</filename> v najvyššej adresárovej úrovni DVD."
-
-#: xml/release-notes.xml:408(para)
-#, fuzzy
-msgid "Find more information in the <filename>docu</filename> directory on the medium."
-msgstr "Ďalšie informácie nájdete na DVD v adresári <filename>docu</filename>."
-
-#: xml/release-notes.xml:414(para)
-#, fuzzy
-msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
-msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> obsahuje \tdodatočnú alebo aktualizovanú dokumentáciu."
-
-#: xml/release-notes.xml:419(para)
-#, fuzzy
-msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
-msgstr "Navštívte <ulink url=\"http://www.opensuse.org\"/> kvôli najnovším  novinkám o produkte z openSUSE."
-
-#: xml/release-notes.xml:426(para)
-msgid "Copyright © 2015 SUSE LLC"
-msgstr "Copyright © 2015 SUSE LLC"
-
-#: xml/release-notes.xml:430(para)
-msgid "Thanks for using openSUSE."
-msgstr "Ďakujeme, že používate openSUSE."
-
-#: xml/release-notes.xml:433(para)
-msgid "The openSUSE Team."
-msgstr "Tím openSUSE."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: xml/release-notes.xml:0(None)
@@ -325,6 +170,106 @@ msgid "translator-credits"
 msgstr ""
 "Ladislav Michnovič <lmichnovic@suse.cz>, 2008\n"
 "Ferdinand Galko <galko.ferdinand@gmail.com>, 2015"
+
+#~ msgid "General"
+#~ msgstr "Všeobecné"
+
+#~ msgid "Non-Oss Repository"
+#~ msgstr "Repozitár Non-Oss"
+
+#, fuzzy
+#~ msgid "After the installation, the non-oss repository is disabled."
+#~ msgstr "Po inštalácii je repozitár non-oss zakázaný"
+
+#~ msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
+#~ msgstr "Povoľte repozitár <literal>openSUSE-Leap-42.1-Non-Oss</literal> pomocou YaST alebo na príkazovom riadku pomocou zypper: <screen>zypper mr -e repo-non-oss</screen>"
+
+#~ msgid "Technical"
+#~ msgstr "Technické"
+
+#~ msgid "Printing System: Improvements and Incompatible Changes"
+#~ msgstr "Tlačový systém: Zlepšenia a nekompatibilné zmeny"
+
+#~ msgid "CUPS Version Upgrade to 1.7"
+#~ msgstr "CUPS zvýšil verziu na 1.7"
+
+#, fuzzy
+#~ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
+#~ msgstr "Podrobnosti nájdete v časti \"Common printing data formats\" v článku SUSE wiki \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
+
+#, fuzzy
+#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+#~ msgstr "Konfiguračné direktívy cupsd sú rozdelené do dvoch súborov: cupsd.conf (možno ho tiež upraviť pomocou HTTP PUT napr. cez cupsctl) a cups-files.conf (možno ho upraviť len manuálne správcom systému), aby bola lepšia predvolená ochrana proti zneužitiu výsad bežnými používateľmi, ktorí mali konkrétne správcom systému  povolené robiť zmeny cupsd konfigurácie (pozrite si <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+
+#, fuzzy
+#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+#~ msgstr "Konfiguračné direktívy cupsd sú rozdelené do dvoch súborov: cupsd.conf (možno ho tiež upraviť pomocou HTTP PUT napr. cez cupsctl) a cups-files.conf (možno ho upraviť len manuálne správcom systému), aby bola lepšia predvolená ochrana proti zneužitiu výsad bežnými používateľmi, ktorí mali konkrétne správcom systému  povolené robiť zmeny cupsd konfigurácie (pozrite si <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Rôzne"
+
+#~ msgid "KDE and Network Authentication"
+#~ msgstr "KDE a sieťové overenie"
+
+#, fuzzy
+#~ msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
+#~ msgstr "Pri použití SDDM správca obrazovky KDE s overovacou metódou, ktorá poskytuje vysoký počet používateľov, sa SDDM stáva nepoužiteľným. Navyše, ak je použité automatické pripojenie, môže SDDM blokovať po dlhú dobu na štarte snahu o pripojenie domovských adresárov všetkých používateľov"
+
+#~ msgid ""
+#~ "[Theme]\n"
+#~ "Current=maldives\n"
+#~ "\n"
+#~ "[Users]\n"
+#~ "MaximumUid=1002"
+#~ msgstr ""
+#~ "[Theme]\n"
+#~ "Current=maldives\n"
+#~ "\n"
+#~ "[Users]\n"
+#~ "MaximumUid=1002"
+
+#~ msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
+#~ msgstr "Upravte <filename>/etc/sddm.conf</filename>, aby obsahovali nasledovné položky: <placeholder-1/>"
+
+#, fuzzy
+#~ msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
+#~ msgstr "Podrobnosti nájdete na <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink>."
+
+#~ msgid "More Information and Feedback"
+#~ msgstr "Ďalšie informácie a spätná väzba"
+
+#, fuzzy
+#~ msgid "View a detailed changelog information about a particular package from its RPM:"
+#~ msgstr "Získajte podrobné informácie o zmenách konkrétneho balíka z RPM:"
+
+#, fuzzy
+#~ msgid "rpm --changelog -qp <placeholder-1/>.rpm"
+#~ msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+
+#, fuzzy
+#~ msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
+#~ msgstr "Chronologický záznam všetkých zmien vykonaných v aktualizovaných balíkoch nájdete v súbore <filename>ChangeLog</filename> v najvyššej adresárovej úrovni DVD."
+
+#, fuzzy
+#~ msgid "Find more information in the <filename>docu</filename> directory on the medium."
+#~ msgstr "Ďalšie informácie nájdete na DVD v adresári <filename>docu</filename>."
+
+#, fuzzy
+#~ msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
+#~ msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> obsahuje \tdodatočnú alebo aktualizovanú dokumentáciu."
+
+#, fuzzy
+#~ msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
+#~ msgstr "Navštívte <ulink url=\"http://www.opensuse.org\"/> kvôli najnovším  novinkám o produkte z openSUSE."
+
+#~ msgid "Copyright © 2015 SUSE LLC"
+#~ msgstr "Copyright © 2015 SUSE LLC"
+
+#~ msgid "Thanks for using openSUSE."
+#~ msgstr "Ďakujeme, že používate openSUSE."
+
+#~ msgid "The openSUSE Team."
+#~ msgstr "Tím openSUSE."
 
 #~ msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 #~ msgstr "CUPS &gt;= 1.6 má hlavné nekompatibilné zmeny v porovnaní s CUPS až do verzie 1.5.4 najmä pri tlači po sieti:"
