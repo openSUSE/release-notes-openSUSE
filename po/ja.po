@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2015-12-14 13:22+0100\n"
-"PO-Revision-Date: 2015-11-28 00:43+0200\n"
+"PO-Revision-Date: 2015-12-15 00:02+0200\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/ja/>\n"
+"Language-Team: Japanese <http://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_1/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,9 +40,11 @@ msgstr "openSUSE Leap はお使いの PC やラップトップ、サーバなど
 
 #. Previous Release Notes
 #: xml/release-notes.xml:50(para)
-#, fuzzy
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
-msgstr "openSUSE Leap の旧バージョンからアップグレードした場合は、下記に示す旧バージョンのリリースノートもお読みください: <ulink url=\"http://ja.opensuse.org/openSUSE:Release_Notes\">http://ja.opensuse.org/openSUSE:Release_Notes</ulink>"
+msgstr ""
+"openSUSE Leap リリースの旧バージョンからアップグレードした場合は、下記に示す旧バージョンのリリースノートもあわせてお読みください: <"
+"ulink url=\"http://ja.opensuse.org/openSUSE:Release_Notes\""
+">http://ja.opensuse.org/openSUSE:Release_Notes</ulink>"
 
 #: xml/release-notes.xml:87(title)
 msgid "Installation"
@@ -124,46 +127,50 @@ msgstr "なお、上記の <replaceable>enp5s0</replaceable> を、お使いの�
 
 #: xml/release-notes.xml:204(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
-msgstr ""
+msgstr "Btrfs: システムを巻き戻し (ロールバック) した際のディスク領域の開放漏れについて"
 
 #: xml/release-notes.xml:205(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr ""
+"openSUSE 13.2 で Btrfs のパーティションレイアウトを使用した環境でシステムのロールバック (巻き戻し) "
+"を実行すると、ディスク領域内にアクセス不可能な無効領域が生じてしまいます。このレイアウト問題は openSUSE Leap 42.1 "
+"で解決されていますが、この修正は新しくインストールしたシステムにのみ適用することができます。"
 
 #: xml/release-notes.xml:212(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr ""
+"openSUSE 13.2 からアップグレードする場合は新しいレイアウトに変換することはできませんが、失われたディスク領域を取り戻す方法があります。"
 
 #: xml/release-notes.xml:217(para)
 msgid "Mount the initial root filesystem:"
-msgstr ""
+msgstr "まずはルートファイルシステムをマウントします:"
 
 #: xml/release-notes.xml:220(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-msgstr ""
+msgstr "&lt;ルートファイルシステム&gt;"
 
 #: xml/release-notes.xml:220(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
-msgstr ""
+msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:223(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
-msgstr ""
+msgstr "サブボリューム内に存在しない /mnt 以下のファイルを全て削除します:"
 
 #: xml/release-notes.xml:226(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr ""
+msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:229(para)
 msgid "Umount the filesystem again:"
-msgstr ""
+msgstr "再度ファイルシステムのマウントを解除します:"
 
 #: xml/release-notes.xml:232(screen)
 #, no-wrap
 msgid "umount /mnt"
-msgstr ""
+msgstr "umount /mnt"
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: xml/release-notes.xml:0(None)
