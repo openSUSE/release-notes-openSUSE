@@ -13,17 +13,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
-"POT-Creation-Date: 2015-12-14 13:22+0100\n"
+"POT-Creation-Date: 2016-01-26 19:16+0100\n"
 "PO-Revision-Date: 2015-12-18 20:35+0200\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
-"Language-Team: Ukrainian <http://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap_42_1/uk/>\n"
+"Language-Team: Ukrainian <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.3\n"
 
 #: xml/release-notes.xml:10(title)
@@ -49,10 +47,7 @@ msgstr "openSUSE Leap — це вільна операційна система 
 #. Previous Release Notes
 #: xml/release-notes.xml:50(para)
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
-msgstr ""
-"Якщо ви оновлюєтеся з старішої версії до цього випуску openSUSE Leap, див. "
-"попередні примітки тут: <ulink url=\"http://en.opensuse.org/openSUSE:"
-"Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
+msgstr "Якщо ви оновлюєтеся з старішої версії до цього випуску openSUSE Leap, див. попередні примітки тут: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 
 #: xml/release-notes.xml:87(title)
 msgid "Installation"
@@ -64,7 +59,8 @@ msgid "Minimal System Installation"
 msgstr "Встановлення мінімальної системи"
 
 #: xml/release-notes.xml:102(para)
-msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>."
+#, fuzzy
+msgid "In order to avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
 msgstr "Щоб запобігти встановленню деяких основних рекомендованих пакунків, шаблон для мінімального встановлення використовує інший шаблон, який є несумісним з небажаними пакунками. Шаблон можна вилучити після встановлення. Він називається <literal>patterns-openSUSE-minimal_base-conflicts</literal>."
 
 #: xml/release-notes.xml:109(para)
@@ -139,193 +135,239 @@ msgstr "Btrfs: втрата дискового простору після си�
 
 #: xml/release-notes.xml:205(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
-msgstr ""
-"openSUSE 13.2 використовував розбиття із файловою системою btrfs, яка "
-"дозволяла дисковому простору бути постійно зайнятим несвіжими, недоступними "
-"даними після виконання першого відкочення системи. Ця хиба розмітка "
-"виправлена у openSUSE Leap 42.1. Однак виправлення може застосовуватися "
-"тільки для наново встановлених систем."
+msgstr "openSUSE 13.2 використовував розбиття із файловою системою btrfs, яка дозволяла дисковому простору бути постійно зайнятим несвіжими, недоступними даними після виконання першого відкочення системи. Ця хиба розмітка виправлена у openSUSE Leap 42.1. Однак виправлення може застосовуватися тільки для наново встановлених систем."
 
 #: xml/release-notes.xml:212(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
-msgstr ""
-"Якщо ви оновлюєтеся із openSUSE 13.2, то не можна перерозбити диск у нову "
-"розмітку, але натомість можете повернути втрачений дисковий простір."
+msgstr "Якщо ви оновлюєтеся із openSUSE 13.2, то не можна перерозбити диск у нову розмітку, але натомість можете повернути втрачений дисковий простір."
 
-#: xml/release-notes.xml:217(para)
+#: xml/release-notes.xml:218(para)
 msgid "Mount the initial root filesystem:"
 msgstr "Змонтуйте початкову кореневу файлову систему:"
 
-#: xml/release-notes.xml:220(replaceable)
+#: xml/release-notes.xml:221(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
-#: xml/release-notes.xml:220(screen)
+#: xml/release-notes.xml:221(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:223(para)
+#: xml/release-notes.xml:224(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Вилучіть усі файли нижче /mnt, які не містяться у підтомі:"
 
-#: xml/release-notes.xml:226(screen)
+#: xml/release-notes.xml:227(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:229(para)
+#: xml/release-notes.xml:230(para)
 msgid "Umount the filesystem again:"
 msgstr "Демонтуйте знову файлову систему:"
 
-#: xml/release-notes.xml:232(screen)
+#: xml/release-notes.xml:233(screen)
 #, no-wrap
 msgid "umount /mnt"
 msgstr "umount /mnt"
+
+#: xml/release-notes.xml:241(title)
+msgid "General"
+msgstr "Загальне"
+
+#: xml/release-notes.xml:244(title)
+msgid "Non-Oss Repository"
+msgstr "Сховище Non-Oss"
+
+#: xml/release-notes.xml:245(para)
+msgid "After the installation, the non-oss repository is disabled."
+msgstr "Після встановлення сховище non-oss вимикається."
+
+#: xml/release-notes.xml:248(para)
+msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
+msgstr "Увімкніть сховище <literal>openSUSE-Leap-42.1-Non-Oss</literal> за допомогою YaST або командного рядка через zypper: <screen>zypper mr -e repo-non-oss</screen>"
+
+#: xml/release-notes.xml:258(title)
+msgid "Technical"
+msgstr "Технічне"
+
+#. sort_key="None"; non-rn-fate-cats="";
+#: xml/release-notes.xml:263(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr "Система друку: покращення та несумісні зміни"
+
+#: xml/release-notes.xml:266(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr "Оновлено версію CUPS до 1.7"
+
+#: xml/release-notes.xml:268(para)
+msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
+msgstr "Нова версія CUPS приносить деякі суттєві нововведення, порівняно із 1.5, які можуть вимагати ручного коригування налаштувань."
+
+#: xml/release-notes.xml:275(para)
+msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+msgstr "PDF тепер став стандартним форматом завдання на друк, а не PS. Тому традиційним принтерам PostScript тепер потрібний драйвер фільтру для друку."
+
+#: xml/release-notes.xml:280(para)
+msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
+msgstr "Подробиці див. у <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>."
+
+#: xml/release-notes.xml:288(para)
+#, fuzzy
+msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+msgstr "Змінено протокол виявлення принтерів у мережі. Рідний метод виявлення мережевих принтерів базується на пошуку служби DNS (DNS-SD, тобто через Avahi). Служба <literal>cups-browsed</literal> із пакунку <literal>cups-filters</literal> може використовуватися для зв'язування старих і нових протоколів. Обидві <literal>cupsd</literal> та <literal>cups-browsed</literal> потребують запуску, щоби \"застарілі\" клієнти виявляли принтери (включаючи LibreOffice та KDE)."
+
+#: xml/release-notes.xml:301(para)
+#, fuzzy
+msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+msgstr "Типова версія протоколу IPP змінена із 1.1 на 2.0. Старіші сервери IPP на кшталт CUPS 1.3.x (наприклад, у SUSE Linux Enteprise 11) відхиляють запити IPP 2.0 із відповіддю \"Bad Request\" (див. <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+
+#: xml/release-notes.xml:307(para)
+#, fuzzy
+msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
+msgstr "Для друку на старих серверах версія протоколу IPP повинна бути вказана явно додаванням '/version=1.1' до решти:"
+
+#: xml/release-notes.xml:314(para)
+msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+msgstr "Параметр <literal>ServerName</literal> у <literal>client.conf</literal> (наприклад, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+
+#: xml/release-notes.xml:322(para)
+msgid "The <literal>CUPS_SERVER</literal> environment variable value."
+msgstr "Значення змінної середовища <literal>CUPS_SERVER</literal>."
+
+#: xml/release-notes.xml:328(para)
+msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
+msgstr "Значення назви сервера із параметром <literal>-h</literal> для командного рядка, наприклад:"
+
+#: xml/release-notes.xml:332(screen)
+#, no-wrap
+msgid "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
+
+#: xml/release-notes.xml:338(para)
+msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
+msgstr "Деякі фільтри друку та серверні програми були переміщені із пакунку <literal>cups</literal> до <literal>cups-filters</literal>."
+
+#: xml/release-notes.xml:346(para)
+msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr "Директиви налаштування cupsd розділені від <literal>cupsd.conf</literal> у <literal>cups-files.conf</literal> (див. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, та <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+
+#: xml/release-notes.xml:355(para)
+#, fuzzy
+msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+msgstr "Банери і тестова сторінка CUPS переміщені від пакунку <literal>cups</literal>  до  пакунку <literal>cups-filters</literal> (див. <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> та <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+
+#: xml/release-notes.xml:368(title)
+msgid "Miscellaneous"
+msgstr "Різне"
+
+#: xml/release-notes.xml:370(title)
+msgid "KDE and Network Authentication"
+msgstr "KDE та мережне розпізнавання"
+
+#: xml/release-notes.xml:371(para)
+msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
+msgstr "При використанні менеджера екрану SDDM у KDE із методом розпізнавання, який забезпечує велику кількість користувачів, SDDM стає непридатним для використання. Крім того, якщо він використовується для автоматичного монтування, то SDDM може блокувати тривалий час спроби під час запуску змонтувати домашні каталоги усіх користувачів."
+
+#: xml/release-notes.xml:379(programlisting)
+#, no-wrap
+msgid ""
+"[Theme]\n"
+"Current=maldives\n"
+"\n"
+"[Users]\n"
+"MaximumUid=1002"
+msgstr ""
+"[Theme]\n"
+"Current=maldives\n"
+"\n"
+"[Users]\n"
+"MaximumUid=1002"
+
+#: xml/release-notes.xml:377(para)
+msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
+msgstr "Виправте <filename>/etc/sddm.conf</filename>, щоби він містив такі записи: <placeholder-1/>"
+
+#: xml/release-notes.xml:385(para)
+msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
+msgstr "Дивіться <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> за подробицями."
+
+#: xml/release-notes.xml:393(title)
+msgid "No Screensaver Support in KDE Plasma"
+msgstr "Немає підтримки зберігачів екрану у KDE Plasma"
+
+#: xml/release-notes.xml:394(para)
+msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
+msgstr "Усталено KDE Plasma не підтримує зберігачів екрану. Якщо вони вам потрібні, то встановіть пакунок <literal>xscreensaver</literal>."
+
+#: xml/release-notes.xml:399(para)
+#, fuzzy
+msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
+msgstr "Установіть <command>xscreensaver</command> для запуску із стільничним сеансом, вибравши <menuchoice><guimenu>K</guimenu><guimenu>Параметри</guimenu><guimenu>Налаштувати стільницю</guimenu></menuchoice>, потім <menuchoice><guimenu>Запуск та вимкнення</guimenu><guimenu>Автозапуск</guimenu></menuchoice>. Клацніть <guimenu>Додати програму</guimenu>, введіть <literal>xscreensaver</literal> і тицніть <guimenu>Гаразд</guimenu>."
+
+#: xml/release-notes.xml:408(para)
+msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
+msgstr "Для налаштування зберігача екрану використовуйте <command>xscreensaver-demo</command>."
+
+#. bnc#809347
+#: xml/release-notes.xml:417(title)
+msgid "More Information and Feedback"
+msgstr "Додаткові відомості та зворотній зв'язок"
+
+#: xml/release-notes.xml:421(para)
+msgid "Read the <filename>README</filename> documents on the medium."
+msgstr "Прочитайте документи <filename>README</filename> на носії."
+
+#: xml/release-notes.xml:426(para)
+msgid "View a detailed changelog information about a particular package from its RPM:"
+msgstr "Переглянути докладний журнал змін конкретного пакунку за допомогою RPM:"
+
+#: xml/release-notes.xml:430(replaceable)
+msgid "FILENAME"
+msgstr "НАЗВАФАЙЛУ"
+
+#: xml/release-notes.xml:430(screen)
+#, no-wrap
+msgid "rpm --changelog -qp <placeholder-1/>.rpm"
+msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
+
+#: xml/release-notes.xml:431(para)
+msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
+msgstr "Замініть <replaceable>НАЗВАФАЙЛУ</replaceable> назвою пакунку RPM."
+
+#: xml/release-notes.xml:436(para)
+msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
+msgstr "Хронологічний журнал усіх змін в оновлених пакунках наведено у файлі <filename>ChangeLog</filename> на верхньому рівні носія."
+
+#: xml/release-notes.xml:442(para)
+msgid "Find more information in the <filename>docu</filename> directory on the medium."
+msgstr "Більше інформації ви знайдете у каталозі <filename>docu</filename> на DVD."
+
+#: xml/release-notes.xml:448(para)
+msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
+msgstr "Додаткова і оновлена документація на сайті <ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink>."
+
+#: xml/release-notes.xml:453(para)
+msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
+msgstr "Останні новини від openSUSE на сайті  <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink>."
+
+#: xml/release-notes.xml:460(para)
+msgid "Copyright © 2015 SUSE LLC"
+msgstr "Авторські права © 2015 SUSE LLC"
+
+#: xml/release-notes.xml:464(para)
+msgid "Thanks for using openSUSE."
+msgstr "Дякуємо за використання openSUSE."
+
+#: xml/release-notes.xml:467(para)
+msgid "The openSUSE Team."
+msgstr "Команда openSUSE."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: xml/release-notes.xml:0(None)
 msgid "translator-credits"
 msgstr "о. Іван Петрущак <fr.ivan@ukrainian-orthodox.org>, 2005, 2006, 2007, 2008, 2009, 2011"
-
-#~ msgid "General"
-#~ msgstr "Загальне"
-
-#~ msgid "Non-Oss Repository"
-#~ msgstr "Сховище Non-Oss"
-
-#~ msgid "After the installation, the non-oss repository is disabled."
-#~ msgstr "Після встановлення сховище non-oss вимикається."
-
-#~ msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
-#~ msgstr "Увімкніть сховище <literal>openSUSE-Leap-42.1-Non-Oss</literal> за допомогою YaST або командного рядка через zypper: <screen>zypper mr -e repo-non-oss</screen>"
-
-#~ msgid "Technical"
-#~ msgstr "Технічне"
-
-#~ msgid "Printing System: Improvements and Incompatible Changes"
-#~ msgstr "Система друку: покращення та несумісні зміни"
-
-#~ msgid "CUPS Version Upgrade to 1.7"
-#~ msgstr "Оновлено версію CUPS до 1.7"
-
-#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
-#~ msgstr "Нова версія CUPS приносить деякі суттєві нововведення, порівняно із 1.5, які можуть вимагати ручного коригування налаштувань."
-
-#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-#~ msgstr "PDF тепер став стандартним форматом завдання на друк, а не PS. Тому традиційним принтерам PostScript тепер потрібний драйвер фільтру для друку."
-
-#~ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-#~ msgstr "Подробиці див. у <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>."
-
-#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-#~ msgstr "Змінено протокол виявлення принтерів у мережі. Рідний метод виявлення мережевих принтерів базується на пошуку служби DNS (DNS-SD, тобто через Avahi). Служба <literal>cups-browsed</literal> із пакунку <literal>cups-filters</literal> може використовуватися для зв'язування старих і нових протоколів. Обидві <literal>cupsd</literal> та <literal>cups-browsed</literal> потребують запуску, щоби \"застарілі\" клієнти виявляли принтери (включаючи LibreOffice та KDE)."
-
-#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-#~ msgstr "Типова версія протоколу IPP змінена із 1.1 на 2.0. Старіші сервери IPP на кшталт CUPS 1.3.x (наприклад, у SUSE Linux Enteprise 11) відхиляють запити IPP 2.0 із відповіддю \"Bad Request\" (див. <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-
-#~ msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either:"
-#~ msgstr "Для друку на старих серверах версія протоколу IPP повинна бути вказана явно додаванням '/version=1.1' до решти:"
-
-#~ msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-#~ msgstr "Параметр <literal>ServerName</literal> у <literal>client.conf</literal> (наприклад, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-
-#~ msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-#~ msgstr "Значення змінної середовища <literal>CUPS_SERVER</literal>."
-
-#~ msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-#~ msgstr "Значення назви сервера із параметром <literal>-h</literal> для командного рядка, наприклад:"
-
-#~ msgid "lpstat -h older.server.example.com/version=1.1 -p"
-#~ msgstr "lpstat -h older.server.example.com/version=1.1 -p"
-
-#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
-#~ msgstr "Деякі фільтри друку та серверні програми були переміщені із пакунку <literal>cups</literal> до <literal>cups-filters</literal>."
-
-#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-#~ msgstr "Директиви налаштування cupsd розділені від <literal>cupsd.conf</literal> у <literal>cups-files.conf</literal> (див. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, та <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-
-#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-#~ msgstr "Банери і тестова сторінка CUPS переміщені від пакунку <literal>cups</literal>  до  пакунку <literal>cups-filters</literal> (див. <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> та <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Різне"
-
-#~ msgid "KDE and Network Authentication"
-#~ msgstr "KDE та мережне розпізнавання"
-
-#~ msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
-#~ msgstr "При використанні менеджера екрану SDDM у KDE із методом розпізнавання, який забезпечує велику кількість користувачів, SDDM стає непридатним для використання. Крім того, якщо він використовується для автоматичного монтування, то SDDM може блокувати тривалий час спроби під час запуску змонтувати домашні каталоги усіх користувачів."
-
-#~ msgid ""
-#~ "[Theme]\n"
-#~ "Current=maldives\n"
-#~ "\n"
-#~ "[Users]\n"
-#~ "MaximumUid=1002"
-#~ msgstr ""
-#~ "[Theme]\n"
-#~ "Current=maldives\n"
-#~ "\n"
-#~ "[Users]\n"
-#~ "MaximumUid=1002"
-
-#~ msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
-#~ msgstr "Виправте <filename>/etc/sddm.conf</filename>, щоби він містив такі записи: <placeholder-1/>"
-
-#~ msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
-#~ msgstr "Дивіться <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> за подробицями."
-
-#~ msgid "No Screensaver Support in KDE Plasma"
-#~ msgstr "Немає підтримки зберігачів екрану у KDE Plasma"
-
-#~ msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
-#~ msgstr "Усталено KDE Plasma не підтримує зберігачів екрану. Якщо вони вам потрібні, то встановіть пакунок <literal>xscreensaver</literal>."
-
-#~ msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, the choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
-#~ msgstr "Установіть <command>xscreensaver</command> для запуску із стільничним сеансом, вибравши <menuchoice><guimenu>K</guimenu><guimenu>Параметри</guimenu><guimenu>Налаштувати стільницю</guimenu></menuchoice>, потім <menuchoice><guimenu>Запуск та вимкнення</guimenu><guimenu>Автозапуск</guimenu></menuchoice>. Клацніть <guimenu>Додати програму</guimenu>, введіть <literal>xscreensaver</literal> і тицніть <guimenu>Гаразд</guimenu>."
-
-#~ msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
-#~ msgstr "Для налаштування зберігача екрану використовуйте <command>xscreensaver-demo</command>."
-
-#~ msgid "More Information and Feedback"
-#~ msgstr "Додаткові відомості та зворотній зв'язок"
-
-#~ msgid "Read the <filename>README</filename> documents on the medium."
-#~ msgstr "Прочитайте документи <filename>README</filename> на носії."
-
-#~ msgid "View a detailed changelog information about a particular package from its RPM:"
-#~ msgstr "Переглянути докладний журнал змін конкретного пакунку за допомогою RPM:"
-
-#~ msgid "FILENAME"
-#~ msgstr "НАЗВАФАЙЛУ"
-
-#~ msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-#~ msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
-
-#~ msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-#~ msgstr "Замініть <replaceable>НАЗВАФАЙЛУ</replaceable> назвою пакунку RPM."
-
-#~ msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
-#~ msgstr "Хронологічний журнал усіх змін в оновлених пакунках наведено у файлі <filename>ChangeLog</filename> на верхньому рівні носія."
-
-#~ msgid "Find more information in the <filename>docu</filename> directory on the medium."
-#~ msgstr "Більше інформації ви знайдете у каталозі <filename>docu</filename> на DVD."
-
-#~ msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
-#~ msgstr "Додаткова і оновлена документація на сайті <ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink>."
-
-#~ msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
-#~ msgstr "Останні новини від openSUSE на сайті  <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink>."
-
-#~ msgid "Copyright © 2015 SUSE LLC"
-#~ msgstr "Авторські права © 2015 SUSE LLC"
-
-#~ msgid "Thanks for using openSUSE."
-#~ msgstr "Дякуємо за використання openSUSE."
-
-#~ msgid "The openSUSE Team."
-#~ msgstr "Команда openSUSE."
 
 #~ msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 #~ msgstr "CUPS &gt;= 1.6 має істотні несумісні зміни порівняно з CUPS до версії 1.5.4. Зокрема, при друці через мережу:"
