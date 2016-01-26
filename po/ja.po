@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2016-01-26 19:16+0100\n"
-"PO-Revision-Date: 2015-12-15 00:02+0200\n"
+"PO-Revision-Date: 2016-01-26 23:32+0200\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/ja/>\n"
+"Language-Team: Japanese <http://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_1/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,9 +53,11 @@ msgid "Minimal System Installation"
 msgstr "最小限のシステムインストールについて"
 
 #: xml/release-notes.xml:102(para)
-#, fuzzy
 msgid "In order to avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
-msgstr "最小インストールのパターンを選択してインストールする際、サイズを肥大化させてしまう様々な推奨パッケージをインストールしないようにするため、不要なパッケージに対して矛盾を設定し、インストールを防ぐためのパターンがインストールされます。このパターンは <literal>patterns-openSUSE-minimal_base-conflicts</literal> という名称で、システムのインストール後に削除することもできます。"
+msgstr ""
+"最小インストールのパターンを選択してインストールした際、サイズを肥大化させてしまう様々な推奨パッケージをインストールしないようにするため、不要なパッケージ"
+"に対して矛盾を設定し、インストールを防ぐためのパターンがインストールされます。このパターンは <literal>patterns-openSUSE-"
+"minimal_base-conflicts</literal> という名称で、システムのインストール後に削除することもできます。"
 
 #: xml/release-notes.xml:109(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
@@ -207,19 +210,28 @@ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.o
 msgstr "詳しくは <ulink url=\"http://ja.opensuse.org/印刷処理\">http://ja.opensuse.org/印刷処理</ulink> をお読みください。"
 
 #: xml/release-notes.xml:288(para)
-#, fuzzy
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-msgstr "ネットワークプリンタの検出プロトコルが変更されました。新しいネイティブなプロトコルは DNS Service discovery (DNS-SD, つまり、 Avahi 経由) をベースにした仕組みになりましたが、 <literal>cups-filters</literal> パッケージで提供される <literal>cups-browsed</literal> サービスを利用することで、従来のプロトコルとの間で橋渡しを行なうことができるようになっています。 \"従来の\" 方法でプリンタを発見したい場合 (LibreOffice や KDE からの印刷を含みます) は、 <literal>cupsd</literal> と <literal>cups-browsed</literal> の両方を動作させる必要があります。"
+msgstr ""
+"ネットワークプリンタの検出プロトコルが変更されました。新しいネイティブなプロトコルは DNS Service discovery (DNS-SD, "
+"つまり、 Avahi 経由) をベースにした仕組みになりましたが、 <literal>cups-filters</literal> "
+"パッケージで提供される <literal>cups-browsed</literal> "
+"サービスを利用することで、従来のプロトコルとの間で橋渡しを行なうことができるようになっています。 \"従来の\" "
+"クライアントからプリンタを発見できるようにしたい場合 (LibreOffice や KDE からの印刷を含みます) は、 "
+"<literal>cupsd</literal> と <literal>cups-browsed</literal> の両方を動作させる必要があります。"
 
 #: xml/release-notes.xml:301(para)
-#, fuzzy
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-msgstr "IPP プロトコルの既定のバージョンは、 1.1 から 2.0 となりました。 CUPS 1.3.x のような古い IPP サーバ (たとえば SUSE Linux Enterprise 11 など) を利用して印刷する場合、 IPP 2.0 リクエストを \"Bad Request\" として拒否してしまいます (詳しくは <ulink url=\"http://www.cups.org/str.php?L4231\"/> をお読みください) 。"
+msgstr ""
+"IPP プロトコルの既定のバージョンは、 1.1 から 2.0 となりました。 CUPS 1.3.x のような古い IPP サーバ (たとえば SUSE "
+"Linux Enterprise 11 など) を利用して印刷する場合、 IPP 2.0 リクエストを <literal>Bad "
+"Request</literal> として拒否してしまいます (詳しくは <ulink url=\""
+"http://www.cups.org/str.php?L4231\"/> をお読みください) 。"
 
 #: xml/release-notes.xml:307(para)
-#, fuzzy
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-msgstr "古いサーバから印刷できるようにするには、 IPP プロトコルのバージョンを明示的に指定する必要があります。下記のいずれかの箇所で、末尾に '/version=1.1' を追加してください:"
+msgstr ""
+"古いサーバから印刷できるようにするには、 IPP プロトコルのバージョンを明示的に指定する必要があります。下記のいずれかの箇所で、末尾に "
+"<literal>/version=1.1</literal> を追加してください:"
 
 #: xml/release-notes.xml:314(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
@@ -247,9 +259,13 @@ msgid "Some configuration directives were split from <literal>cupsd.conf</litera
 msgstr "設定ファイルが <literal>cupsd.conf</literal> と <literal>cups-files.conf</literal> というファイルに分割されています (それぞれ <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> をお読みください) 。"
 
 #: xml/release-notes.xml:355(para)
-#, fuzzy
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr "また、 CUPS のバナーとテストページについても、 <literal>cups</literal> パッケージから <literal>cups-filters</literal> に移動されています (詳しくは <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> および <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink> をお読みください) 。"
+msgstr ""
+"また、 CUPS のバナーとテストページについても、 <literal>cups</literal> パッケージから <literal>cups-"
+"filters</literal> パッケージに移動されています (詳しくは <ulink url=\""
+"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink>"
+" および <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink> をお読みください) 。"
 
 #: xml/release-notes.xml:368(title)
 msgid "Miscellaneous"
@@ -295,9 +311,14 @@ msgid "KDE Plasma does not support screensavers by default. If you prefer to hav
 msgstr "KDE Plasma は既定ではスクリーンセーバに対応していません。スクリーンセーバをお使いになりたい場合は、まず <literal>xscreensaver</literal> パッケージをインストールしてください。"
 
 #: xml/release-notes.xml:399(para)
-#, fuzzy
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
-msgstr "あとはデスクトップセッションで <command>xscreensaver</command> を起動するように設定します。まずは <menuchoice><guimenu>K</guimenu><guimenu>設定</guimenu><guimenu>KDE システム設定</guimenu></menuchoice> を選び、その中から <menuchoice><guimenu>起動と終了</guimenu><guimenu>自動起動</guimenu></menuchoice> を選びます。あとは <guimenu>プログラムを追加</guimenu> を押し、 <literal>xscreensaver</literal> と入力して <guimenu>OK</guimenu> を押します。"
+msgstr ""
+"あとはデスクトップセッションで <command>xscreensaver</command> を起動するように設定します。まずは "
+"<menuchoice><guimenu>K</guimenu><guimenu>設定</guimenu><guimenu>KDE "
+"システム設定</guimenu></menuchoice> を選び、その中から "
+"<menuchoice><guimenu>起動と終了</guimenu><guimenu>自動起動</guimenu></menuchoice> "
+"を選びます。あとは <guimenu>プログラムを追加</guimenu> を押し、 <literal>xscreensaver</literal> "
+"と入力して <guimenu>OK</guimenu> を押します。"
 
 #: xml/release-notes.xml:408(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
