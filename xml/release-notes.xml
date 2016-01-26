@@ -213,26 +213,27 @@
      If you are upgrading from &opensuse; 13.2, you cannot convert the
      to the new layout, but you can reclaim the lost disk space.
     </para>
-     <step>
-      <para>
-       Mount the initial root filesystem:
-      </para>
+    <procedure>
+    <step>
+     <para>
+      Mount the initial root filesystem:
+     </para>
 <screen>mount /dev/<replaceable>&lt;ROOT_FILE_SYSTEM&gt;</replaceable> -o subvolid=5 /mnt</screen>
-     </step>
-     <step>
-      <para>
-       Remove all files below /mnt that are not in a subvolume:
-      </para>
+    </step>
+    <step>
+     <para>
+      Remove all files below /mnt that are not in a subvolume:
+     </para>
 <screen>find /mnt -xdev -delete</screen>
-     </step>
-     <step>
-      <para>
-       Umount the filesystem again:
-      </para>
+    </step>
+    <step>
+     <para>
+      Umount the filesystem again:
+     </para>
 <screen>umount /mnt</screen>
-     </step>
-    </procedure>
-   </section>
+    </step>
+   </procedure>
+  </section>
 
  </section>
 
