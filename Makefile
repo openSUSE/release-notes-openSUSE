@@ -40,6 +40,7 @@ po/LINGUAS: po/*.po po/po-selector
 
 pot: release-notes.pot
 release-notes.pot: xml/release-notes.ent xml/release-notes.xml
+	daps -m xml/release-notes.xml validate
 	xml2po --expand-all-entities -o release-notes.pot xml/release-notes.xml
 
 po: $(PO_FILES)
