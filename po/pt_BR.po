@@ -7,11 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2015-11-09 11:56+0100\n"
+"POT-Creation-Date: 2016-02-17 17:39+0100\n"
 "PO-Revision-Date: 2015-11-12 13:37+0200\n"
 "Last-Translator: Ronan Chagas <ronisbr@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <http://l10n.opensuse.org/projects"
-"/release-notes-opensuse/master/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <http://l10n.opensuse.org/projects/release-notes-opensuse/master/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,275 +30,167 @@ msgid "@VERSION@"
 msgstr "@VERSION@"
 
 #: xml/release-notes.xml:13(productname)
-msgid "openSUSE Leap"
+#, fuzzy
+msgid "openSUSE Tumbleweed"
 msgstr "openSUSE Leap"
 
-#: xml/release-notes.xml:14(productnumber)
-msgid "42.1"
-msgstr "42.1"
-
-#: xml/release-notes.xml:17(para)
-msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
-msgstr "O openSUSE Leap é um sistema operacional livre baseado no Linux para o seu PC, laptop ou servidor. Você pode navegar na internet, gerenciar seus e-mails e fotos, fazer seu trabalho de escritório, reproduzir vídeos ou músicas e divertir-se!"
-
-#. Previous Release Notes
-#: xml/release-notes.xml:51(para)
-msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
-msgstr "Se você atualizar a partir de uma versão antiga para esta versão do openSUSE Leap, veja as notas de lançamento antigas aqui: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
-
-#: xml/release-notes.xml:90(title)
+#: xml/release-notes.xml:96(title)
 msgid "Installation"
 msgstr "Instalação"
 
-#. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
-#: xml/release-notes.xml:104(title)
-msgid "Minimal System Installation"
-msgstr "Instalação do Sistema Básico"
-
-#: xml/release-notes.xml:105(para)
-msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
-msgstr ""
-"Para evitar que alguns pacotes recomendados grandes sejam instalados, o "
-"padrão para instalações mínimas usa um outro padrão que conflita com os "
-"pacotes não desejados. Esse padrão pode ser removido após a instalação do "
-"sistema, ele se chama <literal>patterns-openSUSE-minimal_base-"
-"conflicts</literal>"
-
-#: xml/release-notes.xml:112(para)
-msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
-msgstr ""
-"Note que a instalação mínima não possui nenhum firewall por padrão. Se você "
-"necessitar de um, instale <literal>SuSEfirewall2</literal>"
-
-#: xml/release-notes.xml:120(title)
+#: xml/release-notes.xml:101(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface (interface unificada de firmware extensível)"
 
-#: xml/release-notes.xml:121(para)
+#: xml/release-notes.xml:102(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "Antes de instalar o openSUSE em um sistema que inicia usando o UEFI (Unified Extensible Firmware Interface), você é aconselhado a verificar por qualquer atualização de firmware que o fabricante do hardware recomenda e, se disponível, instalar tal atualização. Um Windows 8 pré-instalado é uma forte indicação que seu sistema inicia usando o UEFI."
 
-#: xml/release-notes.xml:129(para)
+#: xml/release-notes.xml:110(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>Aviso:</emphasis> Alguns firmwares UEFI tem problemas que causam falhas se muitos dados são escritos na área de armazenamento do UEFI. Ninguém realmente sabe, entretanto, o que seria \"muitos dados\". O openSUSE minimiza o risco não escrevendo mais que o mínimo necessário para iniciar o SO. O mínimo significa dizer ao firmware UEFI sobre a localização do carregador de inicialização do openSUSE. Os recursos do Kernel Linux que usam a área de armazenamento UEFI para armazenar informações de falhas e inicializações (<literal>pstore</literal>) foram desabilitados por padrão. Entretanto, é recomendável instalar qualquer atualização de firmware que o fabricante do hardware recomendar."
 
 #. bnc#850056
-#: xml/release-notes.xml:146(title)
+#: xml/release-notes.xml:127(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "Partições UEFI, GPT e MS-DOS"
 
-#: xml/release-notes.xml:147(para)
+#: xml/release-notes.xml:128(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "Junto com a especificação EFI/UEFI um novo estilo de particionamento chegou: GPT (GUID Partition Table - Tabela de Partição GUID). Este novo esquema usa identificadores únicos globais (valores de 128-bit exibidos em 32 dígitos hexadecimais) para identificar os dispositivos e tipos de partições."
 
-#: xml/release-notes.xml:153(para)
+#: xml/release-notes.xml:134(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr "Adicionalmente, a especificação UEFI também permite partições antigas MBR (MS-DOS). Os carregadores de inicialização do Linux (ELILO ou GRUB2) tentam gerar automaticamente um GUID para estas partições antigas e gravá-los no firmware. Tal GUID pode alterar frequentemente, causando uma reescrita no firmware. Uma reescrita consiste em duas operações diferentes: remover a entrada antiga e criar uma nova entrada que substitui a primeira."
 
-#: xml/release-notes.xml:162(para)
+#: xml/release-notes.xml:143(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr "Firmwares modernos têm um coletor de lixo que coleta entradas removidas e libera a memória reservada para entradas antigas. Um problema pode ocorrer quando um firmware problemático não coleta e libera estas entradas, isto pode levar a um sistema não inicializável."
 
-#: xml/release-notes.xml:168(para)
+#: xml/release-notes.xml:149(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr "O conserto é simples: converta a partição antiga MBR para a nova GPT para evitar este problema completamente."
 
-#: xml/release-notes.xml:181(title)
-msgid "System Upgrade"
-msgstr "Atualização do sistema"
-
-#: xml/release-notes.xml:188(title)
+#: xml/release-notes.xml:166(title)
 msgid "General"
 msgstr "Geral"
 
-#: xml/release-notes.xml:191(title)
-msgid "Non-Oss Repository"
-msgstr "Repositório Non-Oss"
-
-#: xml/release-notes.xml:192(para)
-msgid "After the installation the non-oss repository is disabled"
-msgstr "Após a instalação, o repositório non-oss é desabilitado"
-
-#: xml/release-notes.xml:193(para)
-msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
+#: xml/release-notes.xml:169(title)
+msgid "System with LUKS-Encrypted Partition Does Not Boot"
 msgstr ""
-"Habilite o repositório <literal>openSUSE-Leap-42.1-Non-Oss</literal> "
-"utilizando o YaST ou utilizando o zypper através da linha de comando: "
-"<screen>zypper mr -e repo-non-oss</screen>"
 
-#: xml/release-notes.xml:203(title)
+#: xml/release-notes.xml:170(para)
+msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
+msgstr ""
+
+#: xml/release-notes.xml:180(title)
 msgid "Technical"
 msgstr "Técnico"
 
 #. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:208(title)
+#: xml/release-notes.xml:185(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Sistema de Impressão: Melhorias e Alterações Incompatíveis"
 
-#: xml/release-notes.xml:211(emphasis)
+#: xml/release-notes.xml:188(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "Versão do CUPS atualizada para 1.7"
 
-#: xml/release-notes.xml:213(para)
-msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
-msgstr "CUPS &gt;= 1.6 possui importantes alterações incompatíveis quando comparado com versões do CUPS até 1.5.4, em particular relacionadas a impressão através da rede:"
-
-#: xml/release-notes.xml:214(para)
-msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
-msgstr "O versão padrão do protocolo IPP foi atualizada de 1.1 para 2.0. Antigos servidores IPP, como CUPS 1.3.x (por exemplo, no SLE 11), rejeitam requisições IPP 2.0 com \"Bad Request\" (veja <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). Adicionando '/version=1.1' à variável ServerName no arquivo client.conf (por exemplo, ServerName older.server.example.com/version=1.1) ou no valor da variável de ambiente CUPS_SERVER ou adicionando ao nome do servidor na opção '-h' (por exemplo, lpstat -h older.server.example.com/version=1.1 -p), a antiga versão protocolo IPP para servidores antigos será explicitamente utilizada."
-
-#: xml/release-notes.xml:215(para)
-msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
-msgstr "O suporte ao CUPS Browsing não está mais disponível no CUPS, mas o novo pacote cups-filters provê o serviço cups-browsed que contém funcionalidades básicas do CUPS Browsing e Polling. O protocolo nativo no CUPS para descoberta automática de impressoras no cliente é agora o DNS-SD. Inicie o serviço cups-browsed no computador local para receber informações do CUPS Browsing tradicional dos servidores CUPS tradicionais. Para realizar o broadcast na rede da informação do CUPS Browsing tradicional de tal forma que os clientes CUPS remotos tradicionais possam recebê-la, configure a opção \"BrowseLocalProtocols CUPS\" no arquivo <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> e inicie o serviço cups-browsed."
-
-#: xml/release-notes.xml:216(para)
-msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
-msgstr "Alguns filtros e back-ends de impressão foram removidos do CUPS, mas estão presentes no pacote cups-filters. Dessa forma, o pacote cups-filters é usualmente necessário (recomendado pelo RPM). No entanto, este pacote não é estritamente requerido."
-
-#: xml/release-notes.xml:217(para)
-msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+#: xml/release-notes.xml:190(para)
+msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
 msgstr ""
-"As diretivas de configuração do cupsd estão divididas em dois arquivos: "
-"cupsd.conf (que pode ser também modificado por HTTP PUT, por exemplo através "
-"do cupsctl) e cups-files.conf (que pode ser modificado apenas manualmente "
-"pelo administrador) para prover melhor proteção padrão contra má utilização "
-"de privilégios pelos usuários que foram especificamente autorizados pelo "
-"administrador para alterar as configurações do cupsd (veja <ulink url=\""
-"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
-" , CVE-2012-5519 e <ulink url=\""
-"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
-">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
-#: xml/release-notes.xml:226(para)
-msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
-msgstr "Banners e a página de teste do CUPS não são mais suportados desde o CUPS &gt;= 1.6. Os banners e a página de teste do pacote cups-filters devem ser utilizados. Os arquivos de banners do CUPS em <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> e a página de teste do CUPS em <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (que também é um arquivo tipo banner) não são fornecidos mais pelo RPM do cups porque eles não funcionam mais desde o CUPS &gt;= 1.6 (veja <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ), uma vez em que não existe mais um filtro que pode converter esses arquivos de banner. Desde o CUPS &gt;= 1.6, apenas os arquivos de banner e a página de teste no pacote cups-filters funcionam através do workflow do cups-filters PDF. Note que o pacote cups-filters também provê o filtro bannertopdf correspondente."
-
-#: xml/release-notes.xml:227(para)
-msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+#: xml/release-notes.xml:193(para)
+msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
-"Para mais detalhes, veja <ulink url=\""
-"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
-">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 
-#: xml/release-notes.xml:230(emphasis)
-msgid "PDF Now Common Printing Data Format"
-msgstr "PDF é o novo formato de impressão padrão"
-
-#: xml/release-notes.xml:232(para)
-msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
-msgstr "Existe uma tendência para a alteração do PostScript para o PDF como formato padrão dos trabalhos de impressão. Essa alteração é defendida pelo grupo OpenPrinting da Linux Foundation e pelo autor do CUPS."
-
-#: xml/release-notes.xml:233(para)
-msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
-msgstr "Isso significa que os programas usualmente não produzem mais um PostScript como saída padrão para um comando de impressão, mas, ao invés disso, produzem um PDF."
-
-#: xml/release-notes.xml:234(para)
-msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
-msgstr "Como consequência, o processamento padrão de como a saída produzida pelo comando de impressão nos programas é convertida para a \"linguagem\" que uma impressora particular aceita (o que é chamado de \"CUPS filter chain\") tem fundamentalmente sido alterada de um fluxo de trabalho baseado em PostScript para um fluxo de trabalho baseado em PDF."
-
-#: xml/release-notes.xml:235(para)
-msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
-msgstr "Assim sendo, o padrão do CUPS no Linux (utilizando o CUPS mais o pacote cups-filter) é agora o processamento de trabalhos baseados em PDF, fazendo com que todo arquivo de entrada não-PDF seja convertido para PDF primeiro. As opções de gerenciamento de página são aplicadas por um filtro pdftopdf e o Ghostscript é executado com o PDF como entrada."
-
-#: xml/release-notes.xml:236(para)
-msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
-msgstr "Com o PDF sendo o novo formato padrão para os trabalhos de impressão, as impressoras PostScript não podem mais imprimir a saída dos comandos de impressão das aplicações diretamente, de tal forma que um passo de conversão no fluxo de trabalho da impressão é necessário para converter PDF em PostScript. No entanto, também existem impressoras PostScript+PDF que podem imprimir ambos, PostScript e PDF, diretamente."
-
-#: xml/release-notes.xml:237(para)
-msgid "For details, see the section \"Common printing data formats\" in the SUSE wiki article \"Concepts printing\" at <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
+#: xml/release-notes.xml:197(para)
+#, fuzzy
+msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> for details."
 msgstr "Para mais detalhes, veja a seção \"Common printing data formats\" do artigo \"Concepts printing\" no Wiki do SUSE em <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
 
-#: xml/release-notes.xml:242(title)
-msgid "Miscellaneous"
-msgstr "Diversos"
-
-#: xml/release-notes.xml:244(title)
-msgid "KDE and Network Authentication"
-msgstr "KDE e Autenticação por Rede"
-
-#: xml/release-notes.xml:245(para)
-msgid "When using the KDE displaymanager SDDM with an authentication method that provides a high number of users SDDM becomes unusable. Additionally if the automounter is used SDDM may block for long time on startup trying to mount every user's home"
+#: xml/release-notes.xml:203(para)
+msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
-"Quando estiver utilizando um método de autenticação que provê um alto número "
-"de usuários, o gerenciador de login SDDM do KDE ficará inutilizável. "
-"Adicionalmente, se o montador automático é utilizado, então o SDDM poderá "
-"ficar bloqueado por um longo período na inicialização tentanto montar todas "
-"as pastas dos usuários"
 
-#: xml/release-notes.xml:253(programlisting)
-#, no-wrap
-msgid ""
-"[Theme]\n"
-"Current=maldives\n"
-"\n"
-"[Users]\n"
-"MaximumUid=1002"
+#: xml/release-notes.xml:217(para)
+msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)."
 msgstr ""
-"[Theme]↵\n"
-"Current=maldives↵\n"
-"↵\n"
-"[Users]↵\n"
-"MaximumUid=1002"
 
-#: xml/release-notes.xml:251(para)
-msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
+#: xml/release-notes.xml:223(para)
+msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
 msgstr ""
-"Modifique o arquivo <filename>/etc/sddm.conf</filename> para que ele "
-"contenha as seguintes entradas: <placeholder-1/>"
 
-#: xml/release-notes.xml:259(para)
-msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> for details."
+#: xml/release-notes.xml:231(para)
+msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
 msgstr ""
-"Veja <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug "
-"953778</ulink> para maiores detalhes."
+
+#: xml/release-notes.xml:236(para)
+msgid "the <literal>CUPS_SERVER</literal> environment variable value"
+msgstr ""
+
+#: xml/release-notes.xml:240(para)
+msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
+msgstr ""
+
+#: xml/release-notes.xml:249(para)
+msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
+msgstr ""
+
+#: xml/release-notes.xml:255(para)
+#, fuzzy
+msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr "As diretivas de configuração do cupsd estão divididas em dois arquivos: cupsd.conf (que pode ser também modificado por HTTP PUT, por exemplo através do cupsctl) e cups-files.conf (que pode ser modificado apenas manualmente pelo administrador) para prover melhor proteção padrão contra má utilização de privilégios pelos usuários que foram especificamente autorizados pelo administrador para alterar as configurações do cupsd (veja <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 e <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+
+#: xml/release-notes.xml:264(para)
+#, fuzzy
+msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+msgstr "As diretivas de configuração do cupsd estão divididas em dois arquivos: cupsd.conf (que pode ser também modificado por HTTP PUT, por exemplo através do cupsctl) e cups-files.conf (que pode ser modificado apenas manualmente pelo administrador) para prover melhor proteção padrão contra má utilização de privilégios pelos usuários que foram especificamente autorizados pelo administrador para alterar as configurações do cupsd (veja <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 e <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #. bnc#809347
-#: xml/release-notes.xml:269(title)
+#: xml/release-notes.xml:286(title)
 msgid "More Information and Feedback"
 msgstr "Mais informações e comentários"
 
-#: xml/release-notes.xml:273(para)
+#: xml/release-notes.xml:290(para)
 msgid "Read the READMEs on the CDs."
 msgstr "Leia os READMEs nos CDs."
 
-#: xml/release-notes.xml:276(para)
+#: xml/release-notes.xml:293(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "Obtenha informação de changelog (log de alterações) detalhadas sobre um pacote em particular a partir do RPM:"
 
-#: xml/release-notes.xml:277(screen)
+#: xml/release-notes.xml:294(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;NOME_DO_ARQUIVO&gt;.rpm"
 
-#: xml/release-notes.xml:278(para)
+#: xml/release-notes.xml:295(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;NOME_DO_ARQUIVO&gt;. é o nome do RPM."
 
-#: xml/release-notes.xml:281(para)
+#: xml/release-notes.xml:298(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "Verifique o arquivo <filename>ChangeLog</filename> no nível superior do DVD para um log cronológico de todas as alterações feitas para os pacotes atualizados."
 
-#: xml/release-notes.xml:285(para)
-msgid "Find more information in the <filename>docu</filename> directory on the DVD."
-msgstr "Encontre mais informação no diretório <filename>docu</filename> no DVD."
-
-#: xml/release-notes.xml:288(para)
+#: xml/release-notes.xml:302(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> contém documentação adicional ou atualizada."
 
-#: xml/release-notes.xml:293(para)
-msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest product news from openSUSE."
+#: xml/release-notes.xml:307(para)
+#, fuzzy
+msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest news from openSUSE."
 msgstr "Visite <ulink url=\"http://www.opensuse.org\"/> para as notícias mais recentes de produtos do openSUSE."
 
-#: xml/release-notes.xml:298(para)
+#: xml/release-notes.xml:312(para)
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "Direitos autorais © 2015 SUSE LLC"
 
-#: xml/release-notes.xml:300(para)
+#: xml/release-notes.xml:314(para)
 msgid "Thanks for using openSUSE."
 msgstr "Obrigado por usar o openSUSE."
 
-#: xml/release-notes.xml:301(para)
+#: xml/release-notes.xml:315(para)
 msgid "The openSUSE Team."
 msgstr "A equipe do openSUSE."
 
@@ -310,6 +201,103 @@ msgstr ""
 "Luiz Fernando Ranghetti <elchevive@gmail.com>, 2007-2014\n"
 "Ísis Binder <isis.binder@gmail.com>, 2007-2014\n"
 "Ronan Arraes Jardim Chagas <ronisbr@gmail.com>, 2015"
+
+#~ msgid "42.1"
+#~ msgstr "42.1"
+
+#~ msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
+#~ msgstr "O openSUSE Leap é um sistema operacional livre baseado no Linux para o seu PC, laptop ou servidor. Você pode navegar na internet, gerenciar seus e-mails e fotos, fazer seu trabalho de escritório, reproduzir vídeos ou músicas e divertir-se!"
+
+#~ msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+#~ msgstr "Se você atualizar a partir de uma versão antiga para esta versão do openSUSE Leap, veja as notas de lançamento antigas aqui: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+
+#~ msgid "Minimal System Installation"
+#~ msgstr "Instalação do Sistema Básico"
+
+#~ msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
+#~ msgstr "Para evitar que alguns pacotes recomendados grandes sejam instalados, o padrão para instalações mínimas usa um outro padrão que conflita com os pacotes não desejados. Esse padrão pode ser removido após a instalação do sistema, ele se chama <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
+
+#~ msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
+#~ msgstr "Note que a instalação mínima não possui nenhum firewall por padrão. Se você necessitar de um, instale <literal>SuSEfirewall2</literal>"
+
+#~ msgid "System Upgrade"
+#~ msgstr "Atualização do sistema"
+
+#~ msgid "Non-Oss Repository"
+#~ msgstr "Repositório Non-Oss"
+
+#~ msgid "After the installation the non-oss repository is disabled"
+#~ msgstr "Após a instalação, o repositório non-oss é desabilitado"
+
+#~ msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
+#~ msgstr "Habilite o repositório <literal>openSUSE-Leap-42.1-Non-Oss</literal> utilizando o YaST ou utilizando o zypper através da linha de comando: <screen>zypper mr -e repo-non-oss</screen>"
+
+#~ msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
+#~ msgstr "CUPS &gt;= 1.6 possui importantes alterações incompatíveis quando comparado com versões do CUPS até 1.5.4, em particular relacionadas a impressão através da rede:"
+
+#~ msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
+#~ msgstr "O versão padrão do protocolo IPP foi atualizada de 1.1 para 2.0. Antigos servidores IPP, como CUPS 1.3.x (por exemplo, no SLE 11), rejeitam requisições IPP 2.0 com \"Bad Request\" (veja <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). Adicionando '/version=1.1' à variável ServerName no arquivo client.conf (por exemplo, ServerName older.server.example.com/version=1.1) ou no valor da variável de ambiente CUPS_SERVER ou adicionando ao nome do servidor na opção '-h' (por exemplo, lpstat -h older.server.example.com/version=1.1 -p), a antiga versão protocolo IPP para servidores antigos será explicitamente utilizada."
+
+#~ msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
+#~ msgstr "O suporte ao CUPS Browsing não está mais disponível no CUPS, mas o novo pacote cups-filters provê o serviço cups-browsed que contém funcionalidades básicas do CUPS Browsing e Polling. O protocolo nativo no CUPS para descoberta automática de impressoras no cliente é agora o DNS-SD. Inicie o serviço cups-browsed no computador local para receber informações do CUPS Browsing tradicional dos servidores CUPS tradicionais. Para realizar o broadcast na rede da informação do CUPS Browsing tradicional de tal forma que os clientes CUPS remotos tradicionais possam recebê-la, configure a opção \"BrowseLocalProtocols CUPS\" no arquivo <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> e inicie o serviço cups-browsed."
+
+#~ msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
+#~ msgstr "Alguns filtros e back-ends de impressão foram removidos do CUPS, mas estão presentes no pacote cups-filters. Dessa forma, o pacote cups-filters é usualmente necessário (recomendado pelo RPM). No entanto, este pacote não é estritamente requerido."
+
+#~ msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
+#~ msgstr "Banners e a página de teste do CUPS não são mais suportados desde o CUPS &gt;= 1.6. Os banners e a página de teste do pacote cups-filters devem ser utilizados. Os arquivos de banners do CUPS em <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> e a página de teste do CUPS em <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (que também é um arquivo tipo banner) não são fornecidos mais pelo RPM do cups porque eles não funcionam mais desde o CUPS &gt;= 1.6 (veja <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ), uma vez em que não existe mais um filtro que pode converter esses arquivos de banner. Desde o CUPS &gt;= 1.6, apenas os arquivos de banner e a página de teste no pacote cups-filters funcionam através do workflow do cups-filters PDF. Note que o pacote cups-filters também provê o filtro bannertopdf correspondente."
+
+#~ msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+#~ msgstr "Para mais detalhes, veja <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+
+#~ msgid "PDF Now Common Printing Data Format"
+#~ msgstr "PDF é o novo formato de impressão padrão"
+
+#~ msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
+#~ msgstr "Existe uma tendência para a alteração do PostScript para o PDF como formato padrão dos trabalhos de impressão. Essa alteração é defendida pelo grupo OpenPrinting da Linux Foundation e pelo autor do CUPS."
+
+#~ msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
+#~ msgstr "Isso significa que os programas usualmente não produzem mais um PostScript como saída padrão para um comando de impressão, mas, ao invés disso, produzem um PDF."
+
+#~ msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
+#~ msgstr "Como consequência, o processamento padrão de como a saída produzida pelo comando de impressão nos programas é convertida para a \"linguagem\" que uma impressora particular aceita (o que é chamado de \"CUPS filter chain\") tem fundamentalmente sido alterada de um fluxo de trabalho baseado em PostScript para um fluxo de trabalho baseado em PDF."
+
+#~ msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
+#~ msgstr "Assim sendo, o padrão do CUPS no Linux (utilizando o CUPS mais o pacote cups-filter) é agora o processamento de trabalhos baseados em PDF, fazendo com que todo arquivo de entrada não-PDF seja convertido para PDF primeiro. As opções de gerenciamento de página são aplicadas por um filtro pdftopdf e o Ghostscript é executado com o PDF como entrada."
+
+#~ msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
+#~ msgstr "Com o PDF sendo o novo formato padrão para os trabalhos de impressão, as impressoras PostScript não podem mais imprimir a saída dos comandos de impressão das aplicações diretamente, de tal forma que um passo de conversão no fluxo de trabalho da impressão é necessário para converter PDF em PostScript. No entanto, também existem impressoras PostScript+PDF que podem imprimir ambos, PostScript e PDF, diretamente."
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Diversos"
+
+#~ msgid "KDE and Network Authentication"
+#~ msgstr "KDE e Autenticação por Rede"
+
+#~ msgid "When using the KDE displaymanager SDDM with an authentication method that provides a high number of users SDDM becomes unusable. Additionally if the automounter is used SDDM may block for long time on startup trying to mount every user's home"
+#~ msgstr "Quando estiver utilizando um método de autenticação que provê um alto número de usuários, o gerenciador de login SDDM do KDE ficará inutilizável. Adicionalmente, se o montador automático é utilizado, então o SDDM poderá ficar bloqueado por um longo período na inicialização tentanto montar todas as pastas dos usuários"
+
+#~ msgid ""
+#~ "[Theme]\n"
+#~ "Current=maldives\n"
+#~ "\n"
+#~ "[Users]\n"
+#~ "MaximumUid=1002"
+#~ msgstr ""
+#~ "[Theme]↵\n"
+#~ "Current=maldives↵\n"
+#~ "↵\n"
+#~ "[Users]↵\n"
+#~ "MaximumUid=1002"
+
+#~ msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
+#~ msgstr "Modifique o arquivo <filename>/etc/sddm.conf</filename> para que ele contenha as seguintes entradas: <placeholder-1/>"
+
+#~ msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> for details."
+#~ msgstr "Veja <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> para maiores detalhes."
+
+#~ msgid "Find more information in the <filename>docu</filename> directory on the DVD."
+#~ msgstr "Encontre mais informação no diretório <filename>docu</filename> no DVD."
 
 #~ msgid "If you install a new system as <quote>minimal base system</quote>, the installed system will try to maintain this level and often run into dependency conflicts when you try to install more software."
 #~ msgstr "Se você instalar o novo sistema como <quote>sistema mínimo</quote>, o sistema instalado tentará manter este nível e frequentemente encontrará conflitos de dependências quando você tentar instalar mais programas."
