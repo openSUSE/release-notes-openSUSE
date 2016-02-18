@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2016-02-17 17:39+0100\n"
-"PO-Revision-Date: 2016-02-17 22:59+0200\n"
+"PO-Revision-Date: 2016-02-18 11:21+0200\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <http://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/ja/>\n"
@@ -104,49 +104,76 @@ msgstr ""
 #: xml/release-notes.xml:193(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"現在は標準の印刷ジョブ形式が PS ではなく、 PDF になっています。そのため、旧来の PostScript "
+"プリンタで印刷を行なう場合は、新たにフィルタを設定する必要が生じています。"
 
 #: xml/release-notes.xml:197(para)
-#, fuzzy
 msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> for details."
-msgstr "詳しくは SUSE wiki 内の <ulink url=\"http://ja.opensuse.org/印刷処理\">http://ja.opensuse.org/印刷処理</ulink> にある \"一般的な印刷データ形式\" の章をお読みください。"
+msgstr ""
+"詳しくは <ulink url=\"http://ja.opensuse.org/印刷処理\""
+">http://ja.opensuse.org/印刷処理</ulink> をお読みください。"
 
 #: xml/release-notes.xml:203(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"ネットワークプリンタを検出するためのプロトコルが変更されています。ネイティブな方式は、新たに DNS Service discovery (DNS-SD "
+"(Avahi 経由)) をベースにしたものになっています。 <literal>cups-filters</literal> パッケージに含まれる "
+"<literal>cups-browsed</literal> サービスを利用することで、古いプロトコルと新しいプロトコルの橋渡しを行なうことができます。"
+" また、 \"古い形式の\" クライアント (LibreOffice と KDE を含みます) からプリンタを検出する場合についても、 "
+"<literal>cupsd</literal> と <literal>cups-browsed</literal> の両方を動作させる必要があります。"
 
 #: xml/release-notes.xml:217(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)."
 msgstr ""
+"IPP プロトコルの既定のバージョンが、 1.1 から 2.0 になっています。 CUPS 1.3.x (たとえば SUSE Linux "
+"Enteprise 11 など) の古い IPP サーバは、 IPP 2.0 のリクエストを \"Bad Request\" として拒否してしまいます ("
+"詳しくは <ulink url=\"http://www.cups.org/str.php?L4231\""
+">http://www.cups.org/str.php?L4231</ulink> をお読みください) 。"
 
 #: xml/release-notes.xml:223(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
-msgstr ""
+msgstr "古いサーバで印刷できるようにするには、下記のいずれかの箇所に '/version=1.1'  を追加して、バージョンを明示してください:"
 
 #: xml/release-notes.xml:231(para)
 msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
 msgstr ""
+"<literal>client.conf</literal> 内の <literal>ServerName</literal> 設定 (たとえば "
+"<literal>ServerName older.server.example.com/version=1.1</literal> のように)"
 
 #: xml/release-notes.xml:236(para)
 msgid "the <literal>CUPS_SERVER</literal> environment variable value"
-msgstr ""
+msgstr "<literal>CUPS_SERVER</literal> 環境変数の値"
 
 #: xml/release-notes.xml:240(para)
 msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
 msgstr ""
+"コマンドラインツールの場合、 <literal>-h</literal> で指定するサーバ名の値 (たとえば <screen>lpstat -h "
+"older.server.example.com/version=1.1 -p</screen> のように)"
 
 #: xml/release-notes.xml:249(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
 msgstr ""
+"いくつかのフィルタおよびバックエンドが <literal>cups</literal> パッケージから <literal>cups-"
+"filters</literal> パッケージに移動されています"
 
 #: xml/release-notes.xml:255(para)
-#, fuzzy
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "cupsd の設定ディレクティブは 2 つのファイルに分割されています。それぞれ cupsd.conf (cupsctl などを利用することで HTTP PUT プロトコルで編集することができます) と cups-files.conf (root でのみ編集できます) というファイル名です。これは、 root に対してのみ許可されるべき設定を一般ユーザが書き換えてしまうような事故を防ぐためのものです (それぞれ <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> をお読みください) 。"
+msgstr ""
+"いくつかの設定ディレクティブが、 <literal>cupsd.conf</literal> から <literal>cups-"
+"files.conf</literal> に分離されています (それぞれ <ulink url=\""
+"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
+" , CVE-2012-5519, <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> "
+"をお読みください) 。"
 
 #: xml/release-notes.xml:264(para)
-#, fuzzy
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr "cupsd の設定ディレクティブは 2 つのファイルに分割されています。それぞれ cupsd.conf (cupsctl などを利用することで HTTP PUT プロトコルで編集することができます) と cups-files.conf (root でのみ編集できます) というファイル名です。これは、 root に対してのみ許可されるべき設定を一般ユーザが書き換えてしまうような事故を防ぐためのものです (それぞれ <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> をお読みください) 。"
+msgstr ""
+"CUPS のバナーとテストページについては、 <literal>cups</literal> パッケージから <literal>cups-"
+"filters</literal> パッケージに移動されています (詳しくは <ulink url=\""
+"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink>"
+" と <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink> をお読みください) 。"
 
 #. bnc#809347
 #: xml/release-notes.xml:286(title)
@@ -179,9 +206,9 @@ msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or u
 msgstr "それ以外にも、 <ulink url=\"https://activedoc.opensuse.org/\"/> には追加／更新されたドキュメンテーションがあります。"
 
 #: xml/release-notes.xml:307(para)
-#, fuzzy
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest news from openSUSE."
-msgstr "openSUSE からの最新の製品情報を読むには、 <ulink url=\"http://www.opensuse.org\"/> をご覧ください。"
+msgstr ""
+"openSUSE からの最新の製品情報を読むには、 <ulink url=\"http://www.opensuse.org\"/> をご覧ください。"
 
 #: xml/release-notes.xml:312(para)
 msgid "Copyright © 2015 SUSE LLC"
