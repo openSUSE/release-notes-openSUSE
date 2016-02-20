@@ -14,14 +14,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2016-02-17 17:39+0100\n"
-"PO-Revision-Date: 2015-11-20 06:30+0200\n"
+"PO-Revision-Date: 2016-02-20 14:10+0200\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
-"Language-Team: Ukrainian <http://l10n.opensuse.org/projects/release-notes-opensuse/master/uk/>\n"
+"Language-Team: Ukrainian <http://l10n.opensuse.org/projects/release-notes-"
+"opensuse/master/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.3\n"
 
 #: xml/release-notes.xml:10(title)
@@ -33,9 +35,8 @@ msgid "@VERSION@"
 msgstr "@VERSION@"
 
 #: xml/release-notes.xml:13(productname)
-#, fuzzy
 msgid "openSUSE Tumbleweed"
-msgstr "openSUSE Leap"
+msgstr "openSUSE Tumbleweed"
 
 #: xml/release-notes.xml:96(title)
 msgid "Installation"
@@ -80,11 +81,15 @@ msgstr "Загальне"
 
 #: xml/release-notes.xml:169(title)
 msgid "System with LUKS-Encrypted Partition Does Not Boot"
-msgstr ""
+msgstr "Система на кшталт зашифрованого розділу LUKS не завантажується"
 
 #: xml/release-notes.xml:170(para)
 msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 msgstr ""
+"У деяких випадках Plymouth не відображає належним чином запит парольної "
+"фрази. Щоб виправити це, додайте <literal>plymouth.enable=0</literal> до "
+"командного рядка ядра. Див. також <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 
 #: xml/release-notes.xml:180(title)
 msgid "Technical"
@@ -102,15 +107,20 @@ msgstr "Оновлено версію CUPS до 1.7"
 #: xml/release-notes.xml:190(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
 msgstr ""
+"Нова версія CUPS запровадила деякі великі зміни, порівняно із 1.5, що у свою "
+"чершу вимагають ручних змін налаштувань"
 
 #: xml/release-notes.xml:193(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"PDF тепер став стандартним форматом завдання на друк, а не PS. Тому "
+"традиційним принтерам PostScript зараз потрібний драйвер фільтру для друку."
 
 #: xml/release-notes.xml:197(para)
-#, fuzzy
 msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> for details."
-msgstr "Подробиці див. у розділі «Common printing data formats» статті у вікі SUSE «Concepts printing» за адресою <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
+msgstr ""
+"Подробиці див. у статті <ulink url=\"http://en.opensuse.org/"
+"Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>."
 
 #: xml/release-notes.xml:203(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
@@ -130,7 +140,7 @@ msgstr ""
 
 #: xml/release-notes.xml:236(para)
 msgid "the <literal>CUPS_SERVER</literal> environment variable value"
-msgstr ""
+msgstr "значення змінної оточення <literal>CUPS_SERVER</literal>"
 
 #: xml/release-notes.xml:240(para)
 msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
@@ -141,14 +151,24 @@ msgid "Some printing filters and back-ends were moved from the <literal>cups</li
 msgstr ""
 
 #: xml/release-notes.xml:255(para)
-#, fuzzy
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "Директиви налаштування cupsd розділені на два файли: cupsd.conf (також може бути відредагований через HTTP PUT, наприклад, через cupsctl) і cups-files.conf (може бути відредагований тільки вручну від імені root) для кращого захисту від помилкового використання привілеїв звичайними користувачами, яким root окремо дозволив вносити зміни в налаштування cupsd (див. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, та <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr ""
+"Директиви налаштування cupsd розділені від <literal>cupsd.conf</literal> у "
+"<literal>cups-files.conf</literal> (див. <ulink url=\""
+"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
+", CVE-2012-5519, та <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:264(para)
-#, fuzzy
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr "Директиви налаштування cupsd розділені на два файли: cupsd.conf (також може бути відредагований через HTTP PUT, наприклад, через cupsctl) і cups-files.conf (може бути відредагований тільки вручну від імені root) для кращого захисту від помилкового використання привілеїв звичайними користувачами, яким root окремо дозволив вносити зміни в налаштування cupsd (див. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, та <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr ""
+"Банери CUPS і тестова сторінка CUPS переміщені від пакунку "
+"<literal>cups</literal> до пакунку <literal>cups-filters</literal> (див. <"
+"ulink url=\"http://www.cups.org/str.php?L4120\""
+">http://www.cups.org/str.php?L4120</ulink> та <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #. bnc#809347
 #: xml/release-notes.xml:286(title)
@@ -181,9 +201,10 @@ msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or u
 msgstr "Додаткова і оновлена документація на сайті <ulink url=\"https://activedoc.opensuse.org/\"/>."
 
 #: xml/release-notes.xml:307(para)
-#, fuzzy
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest news from openSUSE."
-msgstr "Останні новини від openSUSE на сайті <ulink url=\"http://www.opensuse.org\"/>."
+msgstr ""
+"Останні новини від openSUSE на сайті <ulink url=\"http://www.opensuse.org\""
+"/>."
 
 #: xml/release-notes.xml:312(para)
 msgid "Copyright © 2015 SUSE LLC"
