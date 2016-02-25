@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-02-17 17:39+0100\n"
-"PO-Revision-Date: 2016-02-21 00:21+0200\n"
+"PO-Revision-Date: 2016-02-25 00:06+0200\n"
 "Last-Translator: Ronan Chagas <ronisbr@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://l10n.opensuse.org/projects"
 "/release-notes-opensuse/master/pt_BR/>\n"
@@ -77,7 +77,7 @@ msgstr "Geral"
 
 #: xml/release-notes.xml:169(title)
 msgid "System with LUKS-Encrypted Partition Does Not Boot"
-msgstr ""
+msgstr "Sistemas com Partições Criptografadas com LUKS não Inicializam"
 
 #: xml/release-notes.xml:170(para)
 msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
@@ -109,49 +109,87 @@ msgstr ""
 #: xml/release-notes.xml:193(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"PDF é o novo formato padrão para os trabalhos de impressão em detrimento do "
+"PS. Dessa forma, impressoras tradicionais PostScript agora também precisam "
+"de um filter driver para impressão."
 
 #: xml/release-notes.xml:197(para)
-#, fuzzy
 msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> for details."
-msgstr "Para mais detalhes, veja a seção \"Common printing data formats\" do artigo \"Concepts printing\" no Wiki do SUSE em <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
+msgstr ""
+"Veja <ulink url=\"https://en.opensuse.org/Concepts_printing\""
+">https://en.opensuse.org/Concepts_printing</ulink> para maiores detalhes."
 
 #: xml/release-notes.xml:203(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"O protocolo de descoberta de impressoras através da rede se alterou. O "
+"método nativo para descoberta de impressoras na rede é agora baseado no DNS "
+"Service discovery (DNS-SD, isto é via Avahi). O serviço <literal>cups-"
+"browsed</literal> do pacote <literal>cups-filters</literal> pode ser "
+"utilizado para interconectar os dois protocolos, o novo e o antigo. Ambos "
+"<literal>cupsd</literal> e <literal>cups-browsed</literal> devem ser "
+"executados para fazer com que clientes \"antigos\" encontrem impressoras ("
+"isto inclui o LibreOffice e o KDE)."
 
 #: xml/release-notes.xml:217(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)."
 msgstr ""
+"A versão padrão do protocolo IPP se alterou de 1.1 para 2.0. Servidores IPP "
+"antigos como CUPS 1.3.x (por exemplo no SUSE Linux Enterprise 11) rejeitam "
+"pedidos IPP 2.0 com \"Bad Request\" (veja <ulink url=\""
+"http://www.cups.org/str.php?L4231\""
+">http://www.cups.org/str.php?L4231</ulink>)."
 
 #: xml/release-notes.xml:223(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
 msgstr ""
+"Para ser possível imprimir nesses servidores antigos, a antiga versão do "
+"protocolo IPP deve ser explicitamente especificada anexando '/version=1.1' "
+"em uma das opções a seguir"
 
 #: xml/release-notes.xml:231(para)
 msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
 msgstr ""
+"Na configuração <literal>ServerName</literal> no arquivo "
+"<literal>client.conf</literal> (por exemplo, <literal>ServerName "
+"older.server.example.com/version=1.1</literal>)"
 
 #: xml/release-notes.xml:236(para)
 msgid "the <literal>CUPS_SERVER</literal> environment variable value"
-msgstr ""
+msgstr "No valor da variável de ambiente <literal>CUPS_SERVER</literal>"
 
 #: xml/release-notes.xml:240(para)
 msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
 msgstr ""
+"No valor do nome do servidor na opção <literal>-h</literal> das ferramentas "
+"de linha de comando, por exemplo, <screen>lpstat -h "
+"older.server.example.com/version=1.1 -p</screen>"
 
 #: xml/release-notes.xml:249(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
 msgstr ""
+"Alguns filtros e back-ends de impressão foram movidos do pacote "
+"<literal>cups</literal> para o pacote <literal>cups-filters</literal>"
 
 #: xml/release-notes.xml:255(para)
-#, fuzzy
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "As diretivas de configuração do cupsd estão divididas em dois arquivos: cupsd.conf (que pode ser também modificado por HTTP PUT, por exemplo através do cupsctl) e cups-files.conf (que pode ser modificado apenas manualmente pelo administrador) para prover melhor proteção padrão contra má utilização de privilégios pelos usuários que foram especificamente autorizados pelo administrador para alterar as configurações do cupsd (veja <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 e <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr ""
+"Algumas diretivas de configuração foram movidas do arquivo "
+"<literal>cupsd.conf</literal> para o arquivo <literal>cups-"
+"files.conf</literal> (veja <ulink url=\"http://www.cups.org/str.php?L4223\""
+">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519 e <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:264(para)
-#, fuzzy
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr "As diretivas de configuração do cupsd estão divididas em dois arquivos: cupsd.conf (que pode ser também modificado por HTTP PUT, por exemplo através do cupsctl) e cups-files.conf (que pode ser modificado apenas manualmente pelo administrador) para prover melhor proteção padrão contra má utilização de privilégios pelos usuários que foram especificamente autorizados pelo administrador para alterar as configurações do cupsd (veja <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 e <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr ""
+"Os Banners e a página de teste do CUPS foram movidos do pacote "
+"<literal>cups</literal> para o pacote <literal>cups-filters</literal> (veja <"
+"ulink url=\"http://www.cups.org/str.php?L4120\""
+">http://www.cups.org/str.php?L4120</ulink> e <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #. bnc#809347
 #: xml/release-notes.xml:286(title)
@@ -184,9 +222,10 @@ msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or u
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> contém documentação adicional ou atualizada."
 
 #: xml/release-notes.xml:307(para)
-#, fuzzy
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest news from openSUSE."
-msgstr "Visite <ulink url=\"http://www.opensuse.org\"/> para as notícias mais recentes de produtos do openSUSE."
+msgstr ""
+"Visite <ulink url=\"http://www.opensuse.org\"/> para as notícias mais "
+"recentes de produtos do openSUSE."
 
 #: xml/release-notes.xml:312(para)
 msgid "Copyright © 2015 SUSE LLC"
