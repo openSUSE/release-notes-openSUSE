@@ -3,9 +3,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-01-26 19:16+0100\n"
-"PO-Revision-Date: 2015-12-06 03:30+0200\n"
+"PO-Revision-Date: 2016-03-06 15:01+0200\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) <http://l10n.opensuse.org/projects/release-"
+"notes-opensuse/leap_42_1/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,9 +36,11 @@ msgstr "openSUSE Leap 是一個自由的基於 Linux 的作業系統，可運作
 
 #. Previous Release Notes
 #: xml/release-notes.xml:50(para)
-#, fuzzy
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
-msgstr "如果您從較舊的發行版本升級至 openSUSE Leap，請由此查看之前的發行紀事：<ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>"
+msgstr ""
+"如果您從較舊的發行版本升級至 openSUSE Leap，請由此查看之前的發行紀事：<ulink url=\""
+"http://en.opensuse.org/openSUSE:Release_Notes\""
+">http://en.opensuse.org/openSUSE:Release_Notes</ulink>。"
 
 #: xml/release-notes.xml:87(title)
 msgid "Installation"
@@ -49,9 +52,10 @@ msgid "Minimal System Installation"
 msgstr "最小系統安裝"
 
 #: xml/release-notes.xml:102(para)
-#, fuzzy
 msgid "In order to avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
-msgstr "為避免一些大型的建議套件被安裝，最小安裝樣式 (pattern) 會使用到其他與非預期套件相衝突的樣式。該樣式可以在安裝完成後移除。該樣式為  <literal>patterns-openSUSE-minimal_base-conflicts</literal>。"
+msgstr ""
+"為避免一些大型的建議套件被安裝，最小安裝樣式 (pattern) 會使用到其他與非預期套件相衝突的樣式。該樣式 <literal>patterns-"
+"openSUSE-minimal_base-conflicts</literal> 可以在安裝完成後移除。"
 
 #: xml/release-notes.xml:109(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
@@ -121,46 +125,48 @@ msgstr "請將 <replaceable>enp5s0</replaceable> 代換為您的網路介面名�
 
 #: xml/release-notes.xml:204(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
-msgstr ""
+msgstr "Btrfs: 當系統回復後會遺失磁碟空間"
 
 #: xml/release-notes.xml:205(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr ""
+"openSUSE 13.2 使用的 Btrfs 分割區佈局會使得當第一次系統回復執行後，磁碟空間會被過時且無法存取的內容給永久占用。這個問題已經在 "
+"openSUSE Leap 42.1 解決。然而，這個修正只有針對新安裝的系統才有用。"
 
 #: xml/release-notes.xml:212(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
-msgstr ""
+msgstr "若您是從 openSUSE 13.2 昇級，您無法轉換使用新的佈局，但您可以回收這些失去的磁碟空間 。"
 
 #: xml/release-notes.xml:218(para)
 msgid "Mount the initial root filesystem:"
-msgstr ""
+msgstr "掛載初始 root 檔案系統："
 
 #: xml/release-notes.xml:221(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-msgstr ""
+msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
 #: xml/release-notes.xml:221(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
-msgstr ""
+msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:224(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
-msgstr ""
+msgstr "移除 /mnt 目錄下所有不屬於子卷 (subvolume) 的檔案："
 
 #: xml/release-notes.xml:227(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr ""
+msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:230(para)
 msgid "Umount the filesystem again:"
-msgstr ""
+msgstr "卸載檔案系統："
 
 #: xml/release-notes.xml:233(screen)
 #, no-wrap
 msgid "umount /mnt"
-msgstr ""
+msgstr "umount /mnt"
 
 #: xml/release-notes.xml:241(title)
 msgid "General"
@@ -204,19 +210,23 @@ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.o
 msgstr "請見 <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>) 以了解更多細節。"
 
 #: xml/release-notes.xml:288(para)
-#, fuzzy
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-msgstr "網路印表機探查通訊協定已經改變為基於 DNS Service discovery 協定 (DNS-SD，透過 Avahi 提供)。<literal>cups-filters</literal> 套件提供的 <literal>cups-browsed</literal> 服務可用來橋接舊的與新的通訊協定。<literal>cupsd</literal> 與 <literal>cups-browsed</literal> 需要一起運作才能讓舊的客戶端 (包括 LibreOffice 與 KDE) 能夠發現網路印表機。"
+msgstr ""
+"網路印表機探查通訊協定已經改變為基於 DNS Service discovery 協定 (DNS-SD，透過 Avahi 提供)。<literal"
+">cups-filters</literal> 套件提供的 <literal>cups-browsed</literal> "
+"服務可用來橋接舊的與新的通訊協定。<literal>cupsd</literal> 與 <literal>cups-browsed</literal> "
+"需要一起運作才能讓舊的客戶端 (包括 LibreOffice 與 KDE) 能夠發現網路印表機。"
 
 #: xml/release-notes.xml:301(para)
-#, fuzzy
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-msgstr "PP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 的連線要求，並回傳 \"Bad Request\" (請見 <ulink url=\"http://www.cups.org/str.php?L4231\"/>)。"
+msgstr ""
+"IPP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 "
+"的連線要求，並回傳 <literal>Bad Request</literal> (請見 <ulink url=\""
+"http://www.cups.org/str.php?L4231\"/>)。"
 
 #: xml/release-notes.xml:307(para)
-#, fuzzy
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-msgstr "要能夠使用舊印表機來列印，IPP 通訊協定版本必須要明確指定。將 '/version=1.1' 字串附加在："
+msgstr "要能夠使用舊印表機來列印，IPP 通訊協定版本必須要明確指定。將 <literal>/version=1.1</literal> 字串附加在："
 
 #: xml/release-notes.xml:314(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
@@ -244,9 +254,13 @@ msgid "Some configuration directives were split from <literal>cupsd.conf</litera
 msgstr "一些設定指令已經自 <literal>cupsd.conf</literal> 分離出來，並移到 <literal>cups-files.conf</literal> 設定檔中。請詳見 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> 的說明。"
 
 #: xml/release-notes.xml:355(para)
-#, fuzzy
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr "CUPS 管理及測試頁面從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。詳情請見 <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> 以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>。"
+msgstr ""
+"CUPS 管理及測試頁面從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。"
+"詳情請見 <ulink url=\"http://www.cups.org/str.php?L4120\""
+">http://www.cups.org/str.php?L4120</ulink> 以及 <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>。"
 
 #: xml/release-notes.xml:368(title)
 msgid "Miscellaneous"
@@ -292,9 +306,13 @@ msgid "KDE Plasma does not support screensavers by default. If you prefer to hav
 msgstr "KDE Plasma 預設不支援螢幕保護程式。若您需要螢幕保護程式，請安裝 <literal>xscreensaver</literal> 套件。"
 
 #: xml/release-notes.xml:399(para)
-#, fuzzy
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
-msgstr "選擇 <menuchoice><guimenu>K</guimenu><guimenu>設定</guimenu><guimenu>系統設定</guimenu></menuchoice>，接著選擇 <menuchoice><guimenu>啟動與關閉</guimenu><guimenu>自動啟動</guimenu></menuchoice>。點選 <guimenu>新增程式</guimenu>，輸入 <literal>xscreensaver</literal> 並點擊 <guimenu>OK</guimenu>。"
+msgstr ""
+"要設定 <command>xscreensaver</command> 與桌面環境作業階段一同起動，請選擇 <menuchoice><guimenu>K<"
+"/guimenu><guimenu>設定</guimenu><guimenu>系統設定</guimenu></menuchoice>，接著選擇 "
+"<menuchoice><guimenu>啟動與關閉</guimenu><guimenu>自動啟動</guimenu></menuchoice>。點選 "
+"<guimenu>新增程式</guimenu>，輸入 <literal>xscreensaver</literal> 並點擊 "
+"<guimenu>OK</guimenu>。"
 
 #: xml/release-notes.xml:408(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
