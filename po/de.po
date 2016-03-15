@@ -12,11 +12,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2016-01-26 19:16+0100\n"
+"POT-Creation-Date: 2016-03-15 18:35+0100\n"
 "PO-Revision-Date: 2016-02-17 15:15+0200\n"
 "Last-Translator: Stefan Knorr <sknorr@suse.com>\n"
-"Language-Team: German <http://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap_42_1/de/>\n"
+"Language-Team: German <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,275 +27,244 @@ msgstr ""
 msgid "Release Notes"
 msgstr "Versionshinweise"
 
-#: xml/release-notes.xml:12(releaseinfo)
+#: xml/release-notes.xml:17(releaseinfo)
 msgid "@VERSION@"
 msgstr "@VERSION@"
 
-#: xml/release-notes.xml:13(productname)
+#: xml/release-notes.xml:18(productname)
 msgid "openSUSE Leap"
 msgstr "openSUSE Leap"
 
-#: xml/release-notes.xml:14(productnumber)
+#: xml/release-notes.xml:19(productnumber)
 msgid "42.1"
 msgstr "42.1"
 
-#: xml/release-notes.xml:17(para)
+#: xml/release-notes.xml:22(para)
 msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
 msgstr "openSUSE Leap ist ein freies und Linux-basiertes Betriebssysteme für Ihren PC, Laptop oder Server. Surfen Sie im Internet, verwalten Sie Ihre E-Mails und Fotos, erledigen Sie Büroarbeiten, spielen Sie Videos oder Musik ab und haben Sie eine Menge Spaß!"
 
 #. Previous Release Notes
-#: xml/release-notes.xml:50(para)
+#: xml/release-notes.xml:55(para)
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 msgstr "Wenn Sie von einer älteren Version auf diese Version von openSUSE Leap aktualisieren, sehen Sie sich bitte die Versionshinweise für ältere Versionen hier an: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 
-#: xml/release-notes.xml:87(title)
+#: xml/release-notes.xml:92(title)
 msgid "Installation"
 msgstr "Installation"
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
-#: xml/release-notes.xml:101(title)
+#: xml/release-notes.xml:106(title)
 msgid "Minimal System Installation"
 msgstr "Installation des Basissystem"
 
-#: xml/release-notes.xml:102(para)
+#: xml/release-notes.xml:107(para)
 msgid "In order to avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
-msgstr ""
-"Um zu vermeiden, dass einige große, empfohlene Pakete installiert werden, "
-"nutzt das Pattern für die Minimalinstallation ein weiteres Pattern, welches "
-"Konflikte mit den ungewollten Paketen erzeugt.  Das letztere Pattern, "
-"<literal>patterns-openSUSE-minimal_base-conflicts</literal>, kann nach der "
-"Installation entfernt werden."
+msgstr "Um zu vermeiden, dass einige große, empfohlene Pakete installiert werden, nutzt das Pattern für die Minimalinstallation ein weiteres Pattern, welches Konflikte mit den ungewollten Paketen erzeugt.  Das letztere Pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, kann nach der Installation entfernt werden."
 
-#: xml/release-notes.xml:109(para)
+#: xml/release-notes.xml:114(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr "Die Minimalinstallation beinhaltet keine Firewall. Wenn Sie eine Firewall benötigen, installieren Sie <literal>SuSEfirewall2</literal>."
 
-#: xml/release-notes.xml:117(title)
+#: xml/release-notes.xml:122(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
-#: xml/release-notes.xml:118(para)
+#: xml/release-notes.xml:123(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "Bevor Sie openSUSE auf einem System installieren, welches UEFI (Unified Extensible Firmware Interface) zum Booten verwendet, sollten Sie unbedingt nach empfohlenen Firmwareaktualisierungen Ihres Hardwareherstellers suchen und diese, falls verfügbar, installieren. Ein vorinstalliertes Windows 8 ist ein starkes Indiz, dafür, dass Ihr System UEFI nutzt."
 
-#: xml/release-notes.xml:126(para)
+#: xml/release-notes.xml:131(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>Hintergrund:</emphasis> Einige UEFI-Firmwares haben Fehler, die dazu führen, dass das System dauerhaft nicht mehr startet, wenn zu viele Daten in den UEFI-Speicherbereich geschrieben werden. Niemand weiß allerdings wirklich, wie viel \"zu viel\" ist. openSUSE minimiert das Risiko, indem es nicht mehr Daten schreibt, als für das Starten des Betriebssystems absolut notwendig ist. Die UEFI-Firmware bekommt also nur den Ort gesagt, an dem es den openSUSE-Bootloader findet. Neue Linux-Kernel-Funktionen, welche den UEFI-Speicherbereich nutzen, um Boot- und Absturzinformationen (<literal>pstore</literal>) zu hinterlegen, wurden standardmäßig deaktiviert. Dennoch wird empfohlen, alle Firmwareaktualisierungen zu installieren, die vom Hardwarehersteller empfohlen werden."
 
 #. bnc#850056
-#: xml/release-notes.xml:143(title)
+#: xml/release-notes.xml:148(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT, und MS-DOS-Partitionen"
 
-#: xml/release-notes.xml:144(para)
+#: xml/release-notes.xml:149(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "Zusammen mit der EFI/UEFI-Spezifikation kam eine neue Art der Partitionierung auf: GPT (GUID Partition Table). Dieses neue Schema benutzt global eindeutige Bezeichner (128-Bit-Werte, dargestellt als eine Folge von 32 hexadezimalen Ziffern), um Geräte und Partitionstypen zu identifizieren."
 
-#: xml/release-notes.xml:150(para)
+#: xml/release-notes.xml:155(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr "Zusätzlich erlaubt die UEFI-Spezifikation auch herkömmliche MBR-Partitionen (MS-DOS). Die Linux-Bootloader (ELILO oder GRUB2) versuchen, automatisch eine GUID für diese herkömmlichen Partitionen zu erzeugen, und schreiben sie in die Firmware. So eine GUID-Änderung kann häufig passieren und verursacht ein Überschreiben in der Firmware. Das Überschreiben besteht aus zwei verschiedenen Operationen: Entfernen des alten Eintrags und Erzeugen eines neuen Eintrags, der den ersten ersetzt."
 
-#: xml/release-notes.xml:159(para)
+#: xml/release-notes.xml:164(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr "Moderne Firmware hat einen Garbage Collector (Aufräum-Mechanismus), der den Speicherplatz freigibt, der von alten Einträgen belegt war. Es kommt zu Problemen, wenn eine fehlerhafte Firmware die alten Einträge nicht wegräumt. Das kann dazu führen, dass das System nicht mehr startet."
 
-#: xml/release-notes.xml:165(para)
+#: xml/release-notes.xml:170(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr "Die Lösung ist einfach: Konvertieren Sie die herkömmlichen MBR-Partitionen in neue GPT-Partitionen, um das Problem gänzlich zu vermeiden."
 
-#: xml/release-notes.xml:178(title)
+#: xml/release-notes.xml:183(title)
 msgid "System Upgrade"
 msgstr "System-Aktualisierung"
 
-#: xml/release-notes.xml:181(title)
+#: xml/release-notes.xml:186(title)
 msgid "Network Interface Names"
 msgstr "Namen von Netzwerkschnittstellen"
 
-#: xml/release-notes.xml:182(para)
+#: xml/release-notes.xml:187(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr "Wenn sie einen entfernten Computer von openSUSE 13.2 updaten, stellen Sie sicher, dass dessen Netzwerkinterfaces korrekt benannt sind."
 
-#: xml/release-notes.xml:186(para)
+#: xml/release-notes.xml:191(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr "openSUSE 13.2 benutzte sogenannte vorhersehbare Namen für Netwerkinterfaces (beispielsweise, <literal>enp5s0</literal>). openSUSE Leap 42.1 hingegen benutzt persistente Namen für Netwerkinterfaces (<literal>eth0</literal>). Nach einem Upgrade und dem darauf folgenden Neustart können sich daher die Namen der Netzwerkinterfaces ändern. Um zu vermeiden, dass Interfaces umbenannt werden, können Sie, bevor Sie, bevor Sie das System neu starten, das folgende Kommando auf jedes Ihrer Netwerkinterfaces anwenden:"
 
-#: xml/release-notes.xml:195(replaceable)
+#: xml/release-notes.xml:200(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:195(screen)
+#: xml/release-notes.xml:200(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-msgstr ""
-"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
-"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:197(para)
+#: xml/release-notes.xml:202(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr "Ersetzen Sie <replaceable>enp5s0</replaceable> durch den Namen des gewünschten Netzwerkinterfaces."
 
-#: xml/release-notes.xml:204(title)
+#: xml/release-notes.xml:209(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: Mangel an Festplattenkapazität nach System-Rollbacks"
 
-#: xml/release-notes.xml:205(para)
+#: xml/release-notes.xml:210(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr "openSUSE 13.2 nutzte ein Btrfs-Partitionsschema, das dazu führen konnte, dass, nach dem der erste System-Rollback vollzogen wurde, Festplattenspeicher permanent mit veralteten, unzugänglichen Inhalten gefüllt war. Dieses Problem wurde in openSUSE Leap 42.1 korrigiert. Jedoch kann die Korrektur nur auf neu installierte Systeme angewendet werden."
 
-#: xml/release-notes.xml:212(para)
+#: xml/release-notes.xml:217(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr "Wenn Sie von openSUSE 13.2 upgraden, können Sie nicht zum neuen Layout konvertieren. Allerdings können Sie den verlorenen Speicher wieder zurückgewinnen."
 
-#: xml/release-notes.xml:218(para)
+#: xml/release-notes.xml:223(para)
 msgid "Mount the initial root filesystem:"
 msgstr "Das ursprüngliche root-Dateisystem mounten:"
 
-#: xml/release-notes.xml:221(replaceable)
+#: xml/release-notes.xml:226(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_DATEI_SYSTEM&gt;"
 
-#: xml/release-notes.xml:221(screen)
+#: xml/release-notes.xml:226(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:224(para)
+#: xml/release-notes.xml:229(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Alle Dateien unter /mnt löschen, die in keinem Subvolume sind:"
 
-#: xml/release-notes.xml:227(screen)
+#: xml/release-notes.xml:232(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:230(para)
+#: xml/release-notes.xml:235(para)
 msgid "Umount the filesystem again:"
 msgstr "Das Dateisystem wieder umounten:"
 
-#: xml/release-notes.xml:233(screen)
+#: xml/release-notes.xml:238(screen)
 #, no-wrap
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:241(title)
+#: xml/release-notes.xml:246(title)
 msgid "General"
 msgstr "Allgemeines"
 
-#: xml/release-notes.xml:244(title)
+#: xml/release-notes.xml:249(title)
 msgid "Non-Oss Repository"
 msgstr "Repository Non-Oss"
 
-#: xml/release-notes.xml:245(para)
+#: xml/release-notes.xml:250(para)
 msgid "After the installation, the non-oss repository is disabled."
 msgstr "Nach der Installation wird das Repository Non-Oss deaktiviert."
 
-#: xml/release-notes.xml:248(para)
+#: xml/release-notes.xml:253(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr "Aktivieren Sie das Repository <literal>openSUSE-Leap-42.1-Non-Oss</literal> mit YaST oder auf der Kommandozeile mit Zypper:  <screen>zypper mr -e repo-non-oss</screen>"
 
-#: xml/release-notes.xml:258(title)
+#: xml/release-notes.xml:263(title)
 msgid "Technical"
 msgstr "Technische Aspekte"
 
 #. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:263(title)
+#: xml/release-notes.xml:268(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Drucksystem: Verbesserungen und inkompatible Änderungen"
 
-#: xml/release-notes.xml:266(emphasis)
+#: xml/release-notes.xml:271(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS-Versionsupgrade auf 1.7"
 
-#: xml/release-notes.xml:268(para)
+#: xml/release-notes.xml:273(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgstr "Verglichen mit Version 1.5 beinhaltet die neue CUPS-Version beinhaltet einige größere Änderungen, die manuelle Konfigurationsanpassungen notwendig machen können."
 
-#: xml/release-notes.xml:275(para)
+#: xml/release-notes.xml:280(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr "Statt PostScript ist nun PDF das Standarddateiformat für Druckaufträge. Daher benötigen traditionelle PostScript-Drucker nun einen Filtertreiber, bevor sie drucken können."
 
-#: xml/release-notes.xml:280(para)
+#: xml/release-notes.xml:285(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
 msgstr "Details finden Sie unter <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
 
-#: xml/release-notes.xml:288(para)
+#: xml/release-notes.xml:293(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-msgstr ""
-"Das Erkennungsprotokoll für Netzwerkdrucker hat sich geändert. Die native "
-"Methode, Drucker zu entdecken basiert nun auf DNS Service Discovery (DNS-SD, "
-"also Avahi). Der Dienst <literal>cups-browsed</literal> aus dem Paket "
-"<literal>cups-filters</literal> kann benutzt werden, um zwischen altem und "
-"neuem Protokoll zu überbrücken. Sowohl <literal>cupsd</literal> als auch "
-"<literal>cups-browsed</literal> müssen gestartet sein, damit Software, die "
-"das ältere Protokoll benutzt (zum Beispiel LibreOffice oder KDE), Drucker "
-"finden kann."
+msgstr "Das Erkennungsprotokoll für Netzwerkdrucker hat sich geändert. Die native Methode, Drucker zu entdecken basiert nun auf DNS Service Discovery (DNS-SD, also Avahi). Der Dienst <literal>cups-browsed</literal> aus dem Paket <literal>cups-filters</literal> kann benutzt werden, um zwischen altem und neuem Protokoll zu überbrücken. Sowohl <literal>cupsd</literal> als auch <literal>cups-browsed</literal> müssen gestartet sein, damit Software, die das ältere Protokoll benutzt (zum Beispiel LibreOffice oder KDE), Drucker finden kann."
 
-#: xml/release-notes.xml:301(para)
+#: xml/release-notes.xml:306(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-msgstr ""
-"Die Standardprotokollversion von IPP hat sich von 1.1 auf 2.0 geändert. "
-"Ältere IPP-Server wie CUPS 1.3.x (zum Beispiel in SUSE Linux Enterprise 11) "
-"weisen IPP-2.0-Anfragen mit <literal>Bad Request</literal> zurück (siehe <"
-"ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+msgstr "Die Standardprotokollversion von IPP hat sich von 1.1 auf 2.0 geändert. Ältere IPP-Server wie CUPS 1.3.x (zum Beispiel in SUSE Linux Enterprise 11) weisen IPP-2.0-Anfragen mit <literal>Bad Request</literal> zurück (siehe <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 
-#: xml/release-notes.xml:307(para)
+#: xml/release-notes.xml:312(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-msgstr ""
-"Um von älteren Drucker aus zu drucken, muss die IPP-Protokollversion "
-"explizit spezifiziert werden. Dafür müssen Sie an eine der folgenden "
-"Einstellungen <literal>/version=1.1</literal> anhängen:"
+msgstr "Um von älteren Drucker aus zu drucken, muss die IPP-Protokollversion explizit spezifiziert werden. Dafür müssen Sie an eine der folgenden Einstellungen <literal>/version=1.1</literal> anhängen:"
 
-#: xml/release-notes.xml:314(para)
+#: xml/release-notes.xml:319(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-msgstr ""
-"Die <literal>ServerName</literal>-Einstellungen in "
-"<literal>client.conf</literal> (beispielsweise: <literal>ServerName "
-"alter.server.example.com/version=1.1</literal>)."
+msgstr "Die <literal>ServerName</literal>-Einstellungen in <literal>client.conf</literal> (beispielsweise: <literal>ServerName alter.server.example.com/version=1.1</literal>)."
 
-#: xml/release-notes.xml:322(para)
+#: xml/release-notes.xml:327(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "Die Umgebungsvariable <literal>CUPS_SERVER</literal>."
 
-#: xml/release-notes.xml:328(para)
+#: xml/release-notes.xml:333(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr "Der Wert für Servername des Parameters <literal>-h</literal> in den Kommandozeilenwerkzeugen, beispielsweise:"
 
-#: xml/release-notes.xml:332(screen)
+#: xml/release-notes.xml:337(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h alter.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:338(para)
+#: xml/release-notes.xml:343(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr "Einige Druckfilter und Backends wurden aus dem Paket <literal>cups</literal> entfernt und in das Paket <literal>cups-filters</literal> eingefügt."
 
-#: xml/release-notes.xml:346(para)
+#: xml/release-notes.xml:351(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgstr "Die cupsd-Konfigurationsrichtlinie wurde in 2 Dateien aufgeteilt: <literal>cupsd.conf</literal> und <literal>cups-files.conf</literal> (siehe <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
-#: xml/release-notes.xml:355(para)
+#: xml/release-notes.xml:360(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr ""
-"Die CUPS-Banner und die CUPS-Testseite wurden aus dem Paket "
-"<literal>cups</literal> entfernt und zum Paket <literal>cups-"
-"filters</literal> hinzugefügt (siehe auch <ulink url=\""
-"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink>"
-" und <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
-">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+msgstr "Die CUPS-Banner und die CUPS-Testseite wurden aus dem Paket <literal>cups</literal> entfernt und zum Paket <literal>cups-filters</literal> hinzugefügt (siehe auch <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> und <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
-#: xml/release-notes.xml:368(title)
+#: xml/release-notes.xml:373(title)
 msgid "Miscellaneous"
 msgstr "Verschiedenes"
 
-#: xml/release-notes.xml:370(title)
+#: xml/release-notes.xml:375(title)
 msgid "KDE and Network Authentication"
 msgstr "KDE und Netwerkauthentifizierung"
 
-#: xml/release-notes.xml:371(para)
+#: xml/release-notes.xml:376(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
 msgstr "Wenn Sie den KDE-Login-Manager SDDM mit einem System benutzen, das eine hohe Anzahl an Nutzern vorhält, wird SDDM unbenutzbar. Wenn zudem der Automounter benutzt wird, kann es passieren, dass SDDM versucht, das Home-Verzeichnis jedes einzelnen Nutzers zu mounten. Dies führt dazu, dass SDDM hängt."
 
-#: xml/release-notes.xml:379(programlisting)
+#: xml/release-notes.xml:384(programlisting)
 #, no-wrap
 msgid ""
 "[Theme]\n"
@@ -311,88 +279,81 @@ msgstr ""
 "[Users]\n"
 "MaximumUid=1002"
 
-#: xml/release-notes.xml:377(para)
+#: xml/release-notes.xml:382(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
 msgstr "Bearbeiten Sie die Datei <filename>/etc/sddm.conf</filename>, sodass sie die folgenden Einträge enthält: <placeholder-1/>"
 
-#: xml/release-notes.xml:385(para)
+#: xml/release-notes.xml:390(para)
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
 msgstr "Details finden Sie unter <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink>."
 
-#: xml/release-notes.xml:393(title)
+#: xml/release-notes.xml:398(title)
 msgid "No Screensaver Support in KDE Plasma"
 msgstr "Keine Unterstützung für Bildschirmschoner in KDE Plasma"
 
-#: xml/release-notes.xml:394(para)
+#: xml/release-notes.xml:399(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
 msgstr "Standardmäßig unterstützt KDE Plasma keine Bildschirmschoner. Um einen Bildschirmschoner konfigurieren zu können, installieren Sie das Paket <literal>xscreensaver</literal>."
 
-#: xml/release-notes.xml:399(para)
+#: xml/release-notes.xml:404(para)
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
-msgstr ""
-"Aktivieren Sie <command>xscreensaver</command> für Ihre Sitzung, indem Sie "
-"<menuchoice><guimenu>K</guimenu><guimenu>Einstellungen</guimenu><guimenu>"
-"Desktop konfigurieren</guimenu></menuchoice> auswählen und dann "
-"<menuchoice><guimenu>Starten und "
-"Beenden</guimenu><guimenu>Autostart</guimenu></menuchoice> auswählen. "
-"Klicken Sie <guimenu>Programm hinzufügen</guimenu>, tippen Sie "
-"<literal>xscreensaver</literal> und klicken Sie <guimenu>OK</guimenu>."
+msgstr "Aktivieren Sie <command>xscreensaver</command> für Ihre Sitzung, indem Sie <menuchoice><guimenu>K</guimenu><guimenu>Einstellungen</guimenu><guimenu>Desktop konfigurieren</guimenu></menuchoice> auswählen und dann <menuchoice><guimenu>Starten und Beenden</guimenu><guimenu>Autostart</guimenu></menuchoice> auswählen. Klicken Sie <guimenu>Programm hinzufügen</guimenu>, tippen Sie <literal>xscreensaver</literal> und klicken Sie <guimenu>OK</guimenu>."
 
-#: xml/release-notes.xml:408(para)
+#: xml/release-notes.xml:413(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
 msgstr "Um Ihren Bildschirmschoner zu konfigurieren, benutzen Sie das Programm <command>xscreensaver-demo</command>."
 
 #. bnc#809347
-#: xml/release-notes.xml:417(title)
+#: xml/release-notes.xml:422(title)
 msgid "More Information and Feedback"
 msgstr "Weitere Informationen und Rückmeldungen"
 
-#: xml/release-notes.xml:421(para)
+#: xml/release-notes.xml:426(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Lesen Sie die <filename>README</filename>-Dokumente auf dem Medium."
 
-#: xml/release-notes.xml:426(para)
+#: xml/release-notes.xml:431(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Eine detaillierte Liste der Änderungen an einem bestimmten Paket erhalten Sie aus dem RPM:"
 
-#: xml/release-notes.xml:430(replaceable)
+#: xml/release-notes.xml:435(replaceable)
 msgid "FILENAME"
 msgstr "DATEINAME"
 
-#: xml/release-notes.xml:430(screen)
+#: xml/release-notes.xml:435(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:431(para)
+#: xml/release-notes.xml:436(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Ersetzen Sie <replaceable>DATEINAME</replaceable> durch den Namen des gewünschten RPMs."
 
-#: xml/release-notes.xml:436(para)
+#: xml/release-notes.xml:441(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "In der Datei <filename>ChangeLog</filename> im Wurzelverzeichnis des Mediums finden Sie eine chronologische Liste aller Änderungen, die an den aktualisierten Paketen gemacht wurden."
 
-#: xml/release-notes.xml:442(para)
+#: xml/release-notes.xml:447(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Weitere Information finden Sie im Verzeichnis <filename>docu</filename> auf dem Medium."
 
-#: xml/release-notes.xml:448(para)
+#: xml/release-notes.xml:453(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> enthält zusätzliche oder aktualisierte Dokumentationen."
 
-#: xml/release-notes.xml:453(para)
+#: xml/release-notes.xml:458(para)
 msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
 msgstr "Die neuesten Produktinformationen von openSUSE finden Sie auf <ulink url=\"http://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:460(para)
+#: xml/release-notes.xml:465(para)
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "Copyright © 2015 SUSE LLC"
 
-#: xml/release-notes.xml:464(para)
+#: xml/release-notes.xml:469(para)
 msgid "Thanks for using openSUSE."
 msgstr "Danke, dass Sie openSUSE benutzen."
 
-#: xml/release-notes.xml:467(para)
+#: xml/release-notes.xml:472(para)
 msgid "The openSUSE Team."
 msgstr "Das openSUSE-Team."
 
