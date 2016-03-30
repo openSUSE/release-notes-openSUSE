@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-14 13:22+0100\n"
-"PO-Revision-Date: 2016-03-22 10:53+0200\n"
-"Last-Translator: Vojtech Zeisek <Vojtech.Zeisek@opensuse.org>\n"
+"PO-Revision-Date: 2016-03-30 11:22+0000\n"
+"Last-Translator: Michal Hrusecky <michal.hrusecky@opensuse.org>\n"
 "Language-Team: Czech <http://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/cs/>\n"
 "Language: cs\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.3\n"
+"X-Generator: Weblate 2.5\n"
 
 #: xml/release-notes.xml:10(title)
 msgid "Release Notes"
@@ -139,6 +139,8 @@ msgstr "Jména síťových rozhraní"
 #: xml/release-notes.xml:182(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr ""
+"Pokud aktualizujete vzdálený stroj z openSUSE 13.2, ujistěte se, že síťová "
+"rozhraní jsou pojmenována správně."
 
 #: xml/release-notes.xml:186(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
@@ -146,16 +148,19 @@ msgstr ""
 
 #: xml/release-notes.xml:195(replaceable)
 msgid "enp5s0"
-msgstr ""
+msgstr "enp5s0"
 
 #: xml/release-notes.xml:195(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
+"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
+"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
 #: xml/release-notes.xml:197(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr ""
+"Nahraďte <replaceable>enp5s0</replaceable> jménem vašeho síťového rozhraní."
 
 #: xml/release-notes.xml:204(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
