@@ -1,6 +1,4 @@
 # translation of RELEASE-NOTES.de.po to German
-#
-#
 # Christian Boltz 2009
 # Michael Skiba <trans@michael-skiba.de>, 2007,2008,2009, 2012, 2013.
 # Marko Schugardt <mail.sapex@gmx.de>, 2008,2009.
@@ -15,7 +13,8 @@ msgstr ""
 "POT-Creation-Date: 2016-02-17 17:39+0100\n"
 "PO-Revision-Date: 2016-02-13 09:08+0200\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
-"Language-Team: German <http://l10n.opensuse.org/projects/release-notes-opensuse/master/de/>\n"
+"Language-Team: German <http://l10n.opensuse.org/projects/release-notes-"
+"opensuse/master/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,9 +31,8 @@ msgid "@VERSION@"
 msgstr "@VERSION@"
 
 #: xml/release-notes.xml:13(productname)
-#, fuzzy
 msgid "openSUSE Tumbleweed"
-msgstr "openSUSE Leap"
+msgstr "openSUSE Tumbleweed"
 
 #: xml/release-notes.xml:96(title)
 msgid "Installation"
@@ -46,11 +44,28 @@ msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
 #: xml/release-notes.xml:102(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
-msgstr "Bevor Sie openSUSE auf einem System installieren, welches UEFI (Unified Extensible Firmware Interface) zum Booten verwendet, sollten Sie unbedingt nach empfohlenen Firmwareaktualisierungen Ihres Hardwareherstellers suchen und diese, falls verfügbar, installieren. Ein vorinstalliertes Windows 8 ist ein starkes Indiz, dafür, dass Ihr System UEFI nutzt."
+msgstr ""
+"Bevor Sie openSUSE auf einem System installieren, welches UEFI (Unified "
+"Extensible Firmware Interface) zum Booten verwendet, sollten Sie unbedingt "
+"nach empfohlenen Firmwareaktualisierungen Ihres Hardwareherstellers suchen "
+"und diese, falls verfügbar, installieren. Ein vorinstalliertes Windows 8 ist "
+"ein starkes Indiz, dafür, dass Ihr System UEFI nutzt."
 
 #: xml/release-notes.xml:110(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
-msgstr "<emphasis>Hintergrund:</emphasis> Einige UEFI-Firmwares haben Fehler, die dazu führen, dass das System dauerhaft nicht mehr startet, wenn zu viele Daten in den UEFI-Speicherbereich geschrieben werden. Niemand weiß allerdings wirklich, wie viel \"zu viel\" ist. openSUSE minimiert das Risiko, indem es nicht mehr Daten schreibt, als für das Starten des Betriebssystems absolut notwendig ist. Die UEFI-Firmware bekommt also nur den Ort gesagt, an dem es den openSUSE-Bootloader findet. Neue Linux-Kernel-Funktionen, welche den UEFI-Speicherbereich nutzen, um Boot- und Absturzinformationen (<literal>pstore</literal>) zu hinterlegen, wurden standardmäßig deaktiviert. Dennoch wird empfohlen, alle Firmwareaktualisierungen zu installieren, die vom Hardwarehersteller empfohlen werden."
+msgstr ""
+"<emphasis>Hintergrund:</emphasis> Einige UEFI-Firmwares haben Fehler, die "
+"dazu führen, dass das System dauerhaft nicht mehr startet, wenn zu viele "
+"Daten in den UEFI-Speicherbereich geschrieben werden. Niemand weiß "
+"allerdings wirklich, wie viel \"zu viel\" ist. openSUSE minimiert das "
+"Risiko, indem es nicht mehr Daten schreibt, als für das Starten des "
+"Betriebssystems absolut notwendig ist. Die UEFI-Firmware bekommt also nur "
+"den Ort gesagt, an dem es den openSUSE-Bootloader findet. Neue Linux-Kernel-"
+"Funktionen, welche den UEFI-Speicherbereich nutzen, um Boot- und "
+"Absturzinformationen (<literal>pstore</literal>) zu hinterlegen, wurden "
+"standardmäßig deaktiviert. Dennoch wird empfohlen, alle "
+"Firmwareaktualisierungen zu installieren, die vom Hardwarehersteller "
+"empfohlen werden."
 
 #. bnc#850056
 #: xml/release-notes.xml:127(title)
@@ -59,19 +74,36 @@ msgstr "UEFI, GPT, und MS-DOS-Partitionen"
 
 #: xml/release-notes.xml:128(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
-msgstr "Zusammen mit der EFI/UEFI-Spezifikation kam eine neue Art der Partitionierung auf: GPT (GUID Partition Table). Dieses neue Schema benutzt global eindeutige Bezeichner (128-Bit-Werte, dargestellt als eine Folge von 32 hexadezimalen Ziffern), um Geräte und Partitionstypen zu identifizieren."
+msgstr ""
+"Zusammen mit der EFI/UEFI-Spezifikation kam eine neue Art der "
+"Partitionierung auf: GPT (GUID Partition Table). Dieses neue Schema benutzt "
+"global eindeutige Bezeichner (128-Bit-Werte, dargestellt als eine Folge von "
+"32 hexadezimalen Ziffern), um Geräte und Partitionstypen zu identifizieren."
 
 #: xml/release-notes.xml:134(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
-msgstr "Zusätzlich erlaubt die UEFI-Spezifikation auch herkömmliche MBR-Partitionen (MS-DOS). Die Linux-Bootloader (ELILO oder GRUB2) versuchen, automatisch eine GUID für diese herkömmlichen Partitionen zu erzeugen, und schreiben sie in die Firmware. So eine GUID-Änderung kann häufig passieren und verursacht ein Überschreiben in der Firmware. Das Überschreiben besteht aus zwei verschiedenen Operationen: Entfernen des alten Eintrags und Erzeugen eines neuen Eintrags, der den ersten ersetzt."
+msgstr ""
+"Zusätzlich erlaubt die UEFI-Spezifikation auch herkömmliche MBR-Partitionen "
+"(MS-DOS). Die Linux-Bootloader (ELILO oder GRUB2) versuchen, automatisch "
+"eine GUID für diese herkömmlichen Partitionen zu erzeugen, und schreiben sie "
+"in die Firmware. So eine GUID-Änderung kann häufig passieren und verursacht "
+"ein Überschreiben in der Firmware. Das Überschreiben besteht aus zwei "
+"verschiedenen Operationen: Entfernen des alten Eintrags und Erzeugen eines "
+"neuen Eintrags, der den ersten ersetzt."
 
 #: xml/release-notes.xml:143(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
-msgstr "Moderne Firmware hat einen Garbage Collector (Aufräum-Mechanismus), der den Speicherplatz freigibt, der von alten Einträgen belegt war. Es kommt zu Problemen, wenn eine fehlerhafte Firmware die alten Einträge nicht wegräumt. Das kann dazu führen, dass das System nicht mehr startet."
+msgstr ""
+"Moderne Firmware hat einen Garbage Collector (Aufräum-Mechanismus), der den "
+"Speicherplatz freigibt, der von alten Einträgen belegt war. Es kommt zu "
+"Problemen, wenn eine fehlerhafte Firmware die alten Einträge nicht wegräumt. "
+"Das kann dazu führen, dass das System nicht mehr startet."
 
 #: xml/release-notes.xml:149(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
-msgstr "Die Lösung ist einfach: Konvertieren Sie die herkömmlichen MBR-Partitionen in neue GPT-Partitionen, um das Problem gänzlich zu vermeiden."
+msgstr ""
+"Die Lösung ist einfach: Konvertieren Sie die herkömmlichen MBR-Partitionen "
+"in neue GPT-Partitionen, um das Problem gänzlich zu vermeiden."
 
 #: xml/release-notes.xml:166(title)
 msgid "General"
@@ -79,11 +111,16 @@ msgstr "Allgemeines"
 
 #: xml/release-notes.xml:169(title)
 msgid "System with LUKS-Encrypted Partition Does Not Boot"
-msgstr ""
+msgstr "Systeme mit LUKS-Verschlüsselten Partitionen starten nicht mehr"
 
 #: xml/release-notes.xml:170(para)
 msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 msgstr ""
+"In einigen Fällen kann Plymouth die Eingabeaufforderung zur Passworteingabe "
+"nicht richtig anzeigen. Um dieses Problem zu beheben, geben Sie bitte an der "
+"Kernel Kommandozeile <literal>plymouth.enable=0</literal> ein. Bitte sehen "
+"Sie hierzu auch unter <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/> nach."
 
 #: xml/release-notes.xml:180(title)
 msgid "Technical"
@@ -101,53 +138,98 @@ msgstr "CUPS-Versionsupgrade auf 1.7"
 #: xml/release-notes.xml:190(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
 msgstr ""
+"Die neue CUPS Version enthält einige inkompatible Änderungen im Vergleich "
+"zur Version 1.5 die manuelle Änderungen in der Konfiguration erfordern."
 
 #: xml/release-notes.xml:193(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"Das Standardformat für Druckaufträge ist jetzt PDF und nicht mehr PS. "
+"Entsprechend brauchen traditionelle PostScript Drucker jetzt auch einen "
+"Filter Treiber um zu drucken."
 
 #: xml/release-notes.xml:197(para)
-#, fuzzy
 msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> for details."
-msgstr "Für Details siehe den Abschnitt \"Common printing data formats\" im SUSE Wiki-Artikel \"Concepts printing\" unter <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
+msgstr ""
+"Für Details siehe den Abschnitt \"Common printing data formats\" im SUSE "
+"Wiki-Artikel \"Concepts printing\" unter <ulink url=\"http://en.opensuse.org/"
+"Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
 
 #: xml/release-notes.xml:203(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"Das Protokoll um Drucker im Netzwerk zu finden wurde geändert. Die normale "
+"Methode, um Netzwerkdrucker zu finden, basiert inzwischen auf dem DNS "
+"basiertem Service discovery (DNS-SD, Avahi). Der <literal>cups-"
+"browsed</literal> Dienst aus dem Paket <literal>cups-filters</literal> kann "
+"zwischen altem und neuen Protokoll vermitteln. Beide Dienste: "
+"<literal>cupsd</literal> und <literal>cups-browsed</literal> müssen "
+"gestartet sein, um sowohl alten als auch neuen Clients das finden von "
+"Netzwerkdruckern zu ermöglichen."
 
 #: xml/release-notes.xml:217(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)."
 msgstr ""
+"Die Standardversion des IPP Protokolls wurde von Version 1.1 auf 2.0 "
+"geändert. Ältere IPP Server (wie CUPS 1.3.x in SUSE Linux Enterprise 11 zum "
+"Beispiel) weisen IPP 2.0 Anfragen mit \"Bad Request\" Antworten ab (siehe <"
+"ulink url=\"http://www.cups.org/str.php?L4231\""
+">http://www.cups.org/str.php?L4231</ulink>)."
 
 #: xml/release-notes.xml:223(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
 msgstr ""
+"Um auf älteren Servern zu drucken, muss die IPP Protokollversion explizit "
+"angegeben werden. Dies geschieht, indem die Zeichenfolge '/version=1.1' "
+"entweder "
 
 #: xml/release-notes.xml:231(para)
 msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
 msgstr ""
+"hinter dem <literal>ServerName</literal> in der "
+"<literal>client.conf</literal> (z.B. <literal>ServerName "
+"older.server.example.com/version=1.1</literal>) eingefügt wird, "
 
 #: xml/release-notes.xml:236(para)
 msgid "the <literal>CUPS_SERVER</literal> environment variable value"
 msgstr ""
+"die Umgebungsvariable <literal>CUPS_SERVER</literal> entsprechend erweitert "
+"wird, "
 
 #: xml/release-notes.xml:240(para)
 msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
 msgstr ""
+"oder der Wert des Server Names hinter der Option <literal>-h</literal> in "
+"den Kommandozeilen Tools erweitert wird (z.B. <screen>lpstat -h "
+"older.server.example.com/version=1.1 -p</screen>)."
 
 #: xml/release-notes.xml:249(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
 msgstr ""
+"Einige Druckerfilter und Treiber wurden aus dem <literal>cups</literal> "
+"Paket in das <literal>cups-filters</literal> Paket verschoben."
 
 #: xml/release-notes.xml:255(para)
-#, fuzzy
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "Die cupsd-Konfigurationsrichtlinie wurde in 2 Dateien aufgeteilt: cupsd.conf (kann auch über HTTP PUT, z.B. mit cupsctl verändert werden) und cups-files.conf (kann nur manuell von root verändert werden). Dies bietet besseren Standardschutz vor Rechtsmissbräuchen von normalen Benutzern, die von root das Recht zugewiesen bekommen haben, cupsd-Konfigurationsänderungen durchzuführen (siehe <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, und <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr ""
+"Die cupsd-Konfiguration wurde in 2 Dateien aufgeteilt: cupsd.conf (kann auch "
+"über HTTP PUT, z.B. mit cupsctl verändert werden) und cups-files.conf (kann "
+"nur manuell von root im Dateisystem verändert werden). Dies bietet besseren "
+"Schutz vor Rechtsmissbräuchen von normalen Benutzern, die von root das Recht "
+"zugewiesen bekommen haben, cupsd-Konfigurationsänderungen durchzuführen ("
+"siehe <ulink url=\"http://www.cups.org/str.php?L4223\""
+">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, und <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:264(para)
-#, fuzzy
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr "Die cupsd-Konfigurationsrichtlinie wurde in 2 Dateien aufgeteilt: cupsd.conf (kann auch über HTTP PUT, z.B. mit cupsctl verändert werden) und cups-files.conf (kann nur manuell von root verändert werden). Dies bietet besseren Standardschutz vor Rechtsmissbräuchen von normalen Benutzern, die von root das Recht zugewiesen bekommen haben, cupsd-Konfigurationsänderungen durchzuführen (siehe <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, und <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr ""
+"Die Banner und CUPS Test Seiten wurden aus dem <literal>cups</literal> Paket "
+"in das <literal>cups-filters</literal> Paket verschoben (siehe <ulink url=\""
+"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink>"
+" und <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #. bnc#809347
 #: xml/release-notes.xml:286(title)
@@ -160,7 +242,9 @@ msgstr "Lesen Sie die README-Dateien auf den CDs."
 
 #: xml/release-notes.xml:293(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
-msgstr "Eine detaillierte Liste der Änderungen an einem bestimmten Paket erhalten Sie vom RPM:"
+msgstr ""
+"Eine detaillierte Liste der Änderungen an einem bestimmten Paket erhalten "
+"Sie via RPM:"
 
 #: xml/release-notes.xml:294(screen)
 #, no-wrap
@@ -173,16 +257,22 @@ msgstr "&lt;DATEINAME&gt; ist der Name des RPM."
 
 #: xml/release-notes.xml:298(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
-msgstr "In der Datei <filename>ChangeLog</filename> im Wurzelverzeichnis der DVD finden Sie eine chronologische Liste aller Änderungen, die an den aktualisierten Paketen gemacht wurden."
+msgstr ""
+"In der Datei <filename>ChangeLog</filename> im Wurzelverzeichnis der DVD "
+"finden Sie eine chronologische Liste aller Änderungen, die an den "
+"aktualisierten Paketen gemacht wurden."
 
 #: xml/release-notes.xml:302(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
-msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> enthält zusätzliche oder aktualisierte Dokumentationen."
+msgstr ""
+"<ulink url=\"https://activedoc.opensuse.org/\"/> enthält zusätzliche oder "
+"aktualisierte Dokumentationen."
 
 #: xml/release-notes.xml:307(para)
-#, fuzzy
 msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest news from openSUSE."
-msgstr "Die neuesten Produktinformationen von openSUSE finden Sie auf <ulink url=\"http://www.opensuse.org\"/>."
+msgstr ""
+"Die neuesten Produktinformationen von openSUSE finden Sie auf <ulink url=\""
+"http://www.opensuse.org\"/>."
 
 #: xml/release-notes.xml:312(para)
 msgid "Copyright © 2015 SUSE LLC"
@@ -199,7 +289,11 @@ msgstr "Das openSUSE-Team."
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: xml/release-notes.xml:0(None)
 msgid "translator-credits"
-msgstr "Übersetzer-Credits: Michael Skiba <trans@michael-skiba.de>, 2007-2009; Marko Schugardt <mail.sapex@gmx.de>, 2008-2009; Hermann-Josef Beckers <hj.beckers@web.de>; Christian Boltz <opensuse@cboltz.de>, 2009; Sarah Julia Kriesch <sarah-julia.kriesch@gmx.de>, 2013-2015"
+msgstr ""
+"Übersetzer-Credits: Michael Skiba <trans@michael-skiba.de>, 2007-2009; Marko "
+"Schugardt <mail.sapex@gmx.de>, 2008-2009; Hermann-Josef Beckers "
+"<hj.beckers@web.de>; Christian Boltz <opensuse@cboltz.de>, 2009; Sarah Julia "
+"Kriesch <sarah-julia.kriesch@gmx.de>, 2013-2015"
 
 #~ msgid "42.1"
 #~ msgstr "42.1"
