@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-14 13:22+0100\n"
-"PO-Revision-Date: 2016-04-18 10:56+0100\n"
+"POT-Creation-Date: 2015-11-09 11:56+0100\n"
+"PO-Revision-Date: 2016-04-18 10:58+0100\n"
 "Last-Translator: Vojtěch Zeisek <vojta@trapa.cz>\n"
 "Language-Team: Czech <opensuse-cz@opensuse.org>\n"
 "Language: cs\n"
@@ -64,11 +64,13 @@ msgstr ""
 ">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 
 #: xml/release-notes.xml:87(title)
+#: xml/release-notes.xml:90(title)
 msgid "Installation"
 msgstr "Instalace"
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #: xml/release-notes.xml:101(title)
+#: xml/release-notes.xml:104(title)
 msgid "Minimal System Installation"
 msgstr "Instalace minimálního systému"
 
@@ -87,10 +89,12 @@ msgstr ""
 "jej potřebujete, nainstalujte si <literal>SuSEfirewall2</literal>."
 
 #: xml/release-notes.xml:117(title)
+#: xml/release-notes.xml:120(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
 #: xml/release-notes.xml:118(para)
+#: xml/release-notes.xml:121(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr ""
 "Dříve než nainstalujete openSUSE na váš systém, který je zaváděn pomocí UEFI "
@@ -115,10 +119,12 @@ msgstr ""
 
 #. bnc#850056
 #: xml/release-notes.xml:143(title)
+#: xml/release-notes.xml:146(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT a oddíly MS-DOSu"
 
 #: xml/release-notes.xml:144(para)
+#: xml/release-notes.xml:147(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
 "Společně se specifikací EFI/UEFI se objevil nový styl dělení disků: GPT ("
@@ -127,6 +133,7 @@ msgstr ""
 "hodnoty zobrazené jako 32 šestnáctkových číslic)."
 
 #: xml/release-notes.xml:150(para)
+#: xml/release-notes.xml:153(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
 "Navíc pak specifikace UEFI umožňuje užívání starších oddílů MBR (MS-DOS). "
@@ -137,6 +144,7 @@ msgstr ""
 "původní."
 
 #: xml/release-notes.xml:159(para)
+#: xml/release-notes.xml:162(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
 "Moderní firmware má garbage collector, který sbírá smazané položky a "
@@ -145,12 +153,14 @@ msgstr ""
 "nezaveditelným systémem."
 
 #: xml/release-notes.xml:165(para)
+#: xml/release-notes.xml:168(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr ""
 "Je jednoduché to obejít: abyste se tomuto problému úplně vyhnuli, "
 "zkonvertujte starší oddíly MBR na nové GPT."
 
 #: xml/release-notes.xml:178(title)
+#: xml/release-notes.xml:181(title)
 msgid "System Upgrade"
 msgstr "Aktualizace systému"
 
@@ -262,7 +272,9 @@ msgstr ""
 #~ msgstr "Po instalaci je repozitář s nesvobodným softwarem vypnutý"
 
 #~ msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
-#~ msgstr "Zapněte repozitář <literal>openSUSE-Leap-42.1-Non-Oss</literal> v YaSTu nebo v příkazové řádce pomocí zypperu: <screen>zypper mr -e repo-non-oss</screen>"
+#~ msgstr ""
+#~ "Zapněte repozitář <literal>openSUSE-Leap-42.1-Non-Oss</literal> v YaSTu nebo "
+#~ "v příkazové řádce pomocí zypperu: <screen>zypper mr -e repo-non-oss</screen>"
 
 #~ msgid "Technical"
 #~ msgstr "Technické"
@@ -296,6 +308,7 @@ msgstr ""
 #~ msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
 #~ msgstr "Je-li správce sezení KDE SDDM použit s autentizační metodou poskytující velké množství uživatelů je SDDM nepoužitelné. Je-li navíc použité automatické připojení, SDDM může na dlouhou dobu blokovat start, snažíce se připojit všechny uživatelské adresáře"
 
+#, no-wrap
 #~ msgid ""
 #~ "[Theme]\n"
 #~ "Current=maldives\n"
@@ -310,7 +323,9 @@ msgstr ""
 #~ "MaximumUid=1002"
 
 #~ msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
-#~ msgstr "Upravte soubor <filename>/etc/sddm.conf</filename> aby obsahoval následující položky: <placeholder-1/>"
+#~ msgstr ""
+#~ "Upravte soubor <filename>/etc/sddm.conf</filename> aby obsahoval následující "
+#~ "položky: <placeholder-1/>"
 
 #, fuzzy
 #~ msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
@@ -353,40 +368,94 @@ msgstr ""
 #~ msgstr "Tým openSUSE."
 
 #~ msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
-#~ msgstr "CUPS &gt;= 1.6 obsahuje velké změny narušující kompatibilitu s CUPS po verzi 1.5.4 obzvláště během tisku po síti:"
+#~ msgstr ""
+#~ "CUPS &gt;= 1.6 obsahuje velké změny narušující kompatibilitu s CUPS po verzi "
+#~ "1.5.4 obzvláště během tisku po síti:"
 
 #~ msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
-#~ msgstr "Výchozí verze IPP protokolu vzrostla z 1.1 na 2.0. Starší IPP servery jako CUPS 1.3.x (např. ve SLE 11) odmítají požadavky IPP 2.0 jako tzv \"Bad Requests\" (chybné požadavky, viz <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). Přidáním '/version=1.1' do ServerName v client.conf (např. ServerName starsi.nejaky.server.com/version=1.1) nebo do proměnné prostředí CUPS_SERVER nebo přidáním hodnoty jméno serveru do volby '-h' (např. lpstat -h starsi.nejaky.server.com/version=1.1 -p) IPP protokolu verze pro starší servery musí být explicitně nastavena."
+#~ msgstr ""
+#~ "Výchozí verze IPP protokolu vzrostla z 1.1 na 2.0. Starší IPP servery jako "
+#~ "CUPS 1.3.x (např. ve SLE 11) odmítají požadavky IPP 2.0 jako tzv \"Bad "
+#~ "Requests\" (chybné požadavky, viz <ulink url=\"http://www.cups.org/str.php?"
+#~ "L4231\">http://www.cups.org/str.php?L4231</ulink> ). Přidáním '/version=1.1' "
+#~ "do ServerName v client.conf (např. ServerName "
+#~ "starsi.nejaky.server.com/version=1.1) nebo do proměnné prostředí CUPS_SERVER "
+#~ "nebo přidáním hodnoty jméno serveru do volby '-h' (např. lpstat -h "
+#~ "starsi.nejaky.server.com/version=1.1 -p) IPP protokolu verze pro starší "
+#~ "servery musí být explicitně nastavena."
 
 #~ msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
-#~ msgstr "Procházení CUPS (CUPS Browsing) bylo z CUPSu odstraněno, nicméně nový balíček cups-filters poskytuje cups-browsed, který poskytuje základní funkcionalitu procházení a volby CUPS. Výchozí protokol CUPSu pro automatické klientské nalezení tiskáren je nyní DNS-SD. Spusťte na místním hostiteli tradiční cups-browsed aby jste obdrželi tradiční informaci procházení CUPS od tradičních vzdálených CUPS serverů. Abyste po síti vysílali tradiční informace o procházení CUPS aby to mohli zachytit tradiční CUPS servery, nastavte \"BrowseLocalProtocols CUPS\" v <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> a spusťte cups-browsed."
+#~ msgstr ""
+#~ "Procházení CUPS (CUPS Browsing) bylo z CUPSu odstraněno, nicméně nový "
+#~ "balíček cups-filters poskytuje cups-browsed, který poskytuje základní "
+#~ "funkcionalitu procházení a volby CUPS. Výchozí protokol CUPSu pro "
+#~ "automatické klientské nalezení tiskáren je nyní DNS-SD. Spusťte na místním "
+#~ "hostiteli tradiční cups-browsed aby jste obdrželi tradiční informaci "
+#~ "procházení CUPS od tradičních vzdálených CUPS serverů. Abyste po síti "
+#~ "vysílali tradiční informace o procházení CUPS aby to mohli zachytit tradiční "
+#~ "CUPS servery, nastavte \"BrowseLocalProtocols CUPS\" v <literal moreinfo=\""
+#~ "none\">/etc/cups/cups-browsed.conf</literal> a spusťte cups-browsed."
 
 #~ msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
-#~ msgstr "Některé tiskové filtry a ovladače byly z CUPSu odstraněny, nicméně nový balíček cups-filters je obsahuje. Takže balíček cups-filters je obvykle potřeba (doporučený RPM), ale není striktně vyžadován."
+#~ msgstr ""
+#~ "Některé tiskové filtry a ovladače byly z CUPSu odstraněny, nicméně nový "
+#~ "balíček cups-filters je obsahuje. Takže balíček cups-filters je obvykle "
+#~ "potřeba (doporučený RPM), ale není striktně vyžadován."
 
 #~ msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
-#~ msgstr "CUPS proužky a testovací stránka CUPS nejsou podporovány od verze CUPS &gt;= 1.6. Musí být použity proužky a testovací stránka z cups-filters. Soubor s CUPS proužky <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> a testovací stránka CUPS <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (což je také typ souborů proužků CUPS) již nejsou dostupné v cups RPM, protože již s CUPS &gt;= 1.6 nefungují (viz <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) protože již není k dispozici filtr, který by mohl převést soubory s proužky CUPS. Od CUPS &gt;= 1.6 fungují pouze proužky a testovací stránka v balíčku cups-filters pomocí postupu cups-filters PDF a balíček cups-filters také poskytuje odpovídající filtr bannertopdf."
+#~ msgstr ""
+#~ "CUPS proužky a testovací stránka CUPS nejsou podporovány od verze CUPS &gt;= "
+#~ "1.6. Musí být použity proužky a testovací stránka z cups-filters. Soubor s "
+#~ "CUPS proužky <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> a "
+#~ "testovací stránka CUPS <literal moreinfo=\"none\""
+#~ ">/usr/share/cups/data/testprint</literal> (což je také typ souborů proužků "
+#~ "CUPS) již nejsou dostupné v cups RPM, protože již s CUPS &gt;= 1.6 nefungují "
+#~ "(viz <ulink url=\"http://www.cups.org/str.php?L4120\""
+#~ ">http://www.cups.org/str.php?L4120</ulink> ) protože již není k dispozici "
+#~ "filtr, který by mohl převést soubory s proužky CUPS. Od CUPS &gt;= 1.6 "
+#~ "fungují pouze proužky a testovací stránka v balíčku cups-filters pomocí "
+#~ "postupu cups-filters PDF a balíček cups-filters také poskytuje odpovídající "
+#~ "filtr bannertopdf."
 
 #~ msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
-#~ msgstr "Pro detaily viz <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+#~ msgstr ""
+#~ "Pro detaily viz <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+#~ "735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 
 #~ msgid "PDF Now Common Printing Data Format"
 #~ msgstr "PDF je nyní běžný tiskový datový formát"
 
 #~ msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
-#~ msgstr "Obecně tu je posun od PostScriptu směrem k PDF jako ke standardnímu formátu tiskových úloh. Tato změna je odůvodněna pracovní skupinou OpenPrinting Linux Foundation a autory CUPSu."
+#~ msgstr ""
+#~ "Obecně tu je posun od PostScriptu směrem k PDF jako ke standardnímu formátu "
+#~ "tiskových úloh. Tato změna je odůvodněna pracovní skupinou OpenPrinting "
+#~ "Linux Foundation a autory CUPSu."
 
 #~ msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
-#~ msgstr "To znamená, že aplikace už obvykle nevytváří ve výchozím stavu tiskový výstup v PostScriptu, ale používá místo něj PDF."
+#~ msgstr ""
+#~ "To znamená, že aplikace už obvykle nevytváří ve výchozím stavu tiskový "
+#~ "výstup v PostScriptu, ale používá místo něj PDF."
 
 #~ msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
-#~ msgstr "Důsledkem je, že výchozí postup toho, jak aplikace tisknou výstup je převod do \"jazyka\", který dotyčná tiskárna přijímá (tzv. \"CUPS filter chain\"), se od základů změnil z PostScriptového postupu do PDF postupu."
+#~ msgstr ""
+#~ "Důsledkem je, že výchozí postup toho, jak aplikace tisknou výstup je převod "
+#~ "do \"jazyka\", který dotyčná tiskárna přijímá (tzv. \"CUPS filter chain\"), "
+#~ "se od základů změnil z PostScriptového postupu do PDF postupu."
 
 #~ msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
-#~ msgstr "Podle standardu upstreamu pro CUPS pod Linuxem (používaje balíčky CUPS a cups-filters) je nyní založen na PDF zpracování a převádí nejprve každý ne-PDF vstup do PDF, přičemž možnost nastavení stránky aplikuje filtr pdftopdf a Ghostscript, který je s PDF spuštěný jako vstup."
+#~ msgstr ""
+#~ "Podle standardu upstreamu pro CUPS pod Linuxem (používaje balíčky CUPS a "
+#~ "cups-filters) je nyní založen na PDF zpracování a převádí nejprve každý ne-"
+#~ "PDF vstup do PDF, přičemž možnost nastavení stránky aplikuje filtr pdftopdf "
+#~ "a Ghostscript, který je s PDF spuštěný jako vstup."
 
 #~ msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
-#~ msgstr "S PDF jako standardním formátem tiskových úloh již nemohou tradiční PostScriptové tiskárny tisknout výstupy aplikací přímo, takže je v tiskovém postupu potřeba konverzní krok, který převádí PDF do PostScriptu. Nicméně jsou k dispozici i PosScript+PDF tiskárny, které umí přímo tisknout PostScript i PDF."
+#~ msgstr ""
+#~ "S PDF jako standardním formátem tiskových úloh již nemohou tradiční "
+#~ "PostScriptové tiskárny tisknout výstupy aplikací přímo, takže je v tiskovém "
+#~ "postupu potřeba konverzní krok, který převádí PDF do PostScriptu. Nicméně "
+#~ "jsou k dispozici i PosScript+PDF tiskárny, které umí přímo tisknout "
+#~ "PostScript i PDF."
 
 #~ msgid "Read the READMEs on the CDs."
 #~ msgstr "Přečtěte si README na CD."
