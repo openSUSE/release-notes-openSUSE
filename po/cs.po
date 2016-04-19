@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-09 11:56+0100\n"
-"PO-Revision-Date: 2016-04-18 10:58+0100\n"
+"POT-Creation-Date: 2016-04-19 14:05+0200\n"
+"PO-Revision-Date: 2016-04-19 14:58+0100\n"
 "Last-Translator: Vojtěch Zeisek <vojta@trapa.cz>\n"
 "Language-Team: Czech <opensuse-cz@opensuse.org>\n"
 "Language: cs\n"
@@ -35,18 +35,22 @@ msgid "Release Notes"
 msgstr "Poznámky k vydání"
 
 #: xml/release-notes.xml:12(releaseinfo)
+#: xml/release-notes.xml:17(releaseinfo)
 msgid "@VERSION@"
 msgstr "@VERSION@"
 
 #: xml/release-notes.xml:13(productname)
+#: xml/release-notes.xml:18(productname)
 msgid "openSUSE Leap"
 msgstr "openSUSE Leap"
 
 #: xml/release-notes.xml:14(productnumber)
+#: xml/release-notes.xml:19(productnumber)
 msgid "42.1"
 msgstr "42.1"
 
 #: xml/release-notes.xml:17(para)
+#: xml/release-notes.xml:22(para)
 msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
 msgstr ""
 "openSUSE Leap je svobodný operační systém založený na Linuxu, který je "
@@ -64,12 +68,14 @@ msgstr ""
 
 #: xml/release-notes.xml:90(title)
 #: xml/release-notes.xml:87(title)
+#: xml/release-notes.xml:92(title)
 msgid "Installation"
 msgstr "Instalace"
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #: xml/release-notes.xml:104(title)
 #: xml/release-notes.xml:101(title)
+#: xml/release-notes.xml:106(title)
 msgid "Minimal System Installation"
 msgstr "Instalace minimálního systému"
 
@@ -89,11 +95,13 @@ msgstr ""
 
 #: xml/release-notes.xml:120(title)
 #: xml/release-notes.xml:117(title)
+#: xml/release-notes.xml:122(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
 #: xml/release-notes.xml:121(para)
 #: xml/release-notes.xml:118(para)
+#: xml/release-notes.xml:123(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr ""
 "Dříve než nainstalujete openSUSE na váš systém, který je zaváděn pomocí UEFI "
@@ -119,11 +127,13 @@ msgstr ""
 #. bnc#850056
 #: xml/release-notes.xml:146(title)
 #: xml/release-notes.xml:143(title)
+#: xml/release-notes.xml:148(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT a oddíly MS-DOSu"
 
 #: xml/release-notes.xml:147(para)
 #: xml/release-notes.xml:144(para)
+#: xml/release-notes.xml:149(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
 "Společně se specifikací EFI/UEFI se objevil nový styl dělení disků: GPT ("
@@ -133,6 +143,7 @@ msgstr ""
 
 #: xml/release-notes.xml:153(para)
 #: xml/release-notes.xml:150(para)
+#: xml/release-notes.xml:155(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
 "Navíc pak specifikace UEFI umožňuje užívání starších oddílů MBR (MS-DOS). "
@@ -144,6 +155,7 @@ msgstr ""
 
 #: xml/release-notes.xml:162(para)
 #: xml/release-notes.xml:159(para)
+#: xml/release-notes.xml:164(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
 "Moderní firmware má garbage collector, který sbírá smazané položky a "
@@ -153,6 +165,7 @@ msgstr ""
 
 #: xml/release-notes.xml:168(para)
 #: xml/release-notes.xml:165(para)
+#: xml/release-notes.xml:170(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr ""
 "Je jednoduché to obejít: abyste se tomuto problému úplně vyhnuli, "
@@ -160,14 +173,17 @@ msgstr ""
 
 #: xml/release-notes.xml:181(title)
 #: xml/release-notes.xml:178(title)
+#: xml/release-notes.xml:183(title)
 msgid "System Upgrade"
 msgstr "Aktualizace systému"
 
 #: xml/release-notes.xml:188(title)
+#: xml/release-notes.xml:246(title)
 msgid "General"
 msgstr "Obecné"
 
 #: xml/release-notes.xml:191(title)
+#: xml/release-notes.xml:249(title)
 msgid "Non-Oss Repository"
 msgstr "Repozitář s nesvobodným software"
 
@@ -176,21 +192,25 @@ msgid "After the installation the non-oss repository is disabled"
 msgstr "Po instalaci je repozitář s nesvobodným softwarem vypnutý"
 
 #: xml/release-notes.xml:193(para)
+#: xml/release-notes.xml:253(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
 "Zapněte repozitář <literal>openSUSE-Leap-42.1-Non-Oss</literal> v YaSTu nebo "
 "v příkazové řádce pomocí zypperu: <screen>zypper mr -e repo-non-oss</screen>"
 
 #: xml/release-notes.xml:203(title)
+#: xml/release-notes.xml:263(title)
 msgid "Technical"
 msgstr "Technické"
 
 #. sort_key="None"; non-rn-fate-cats="";
 #: xml/release-notes.xml:208(title)
+#: xml/release-notes.xml:268(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Tiskový Systém: Vylepšení a nekompatibilní změny"
 
 #: xml/release-notes.xml:211(emphasis)
+#: xml/release-notes.xml:271(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "Aktualizace verze CUPS na 1.7"
 
@@ -317,11 +337,13 @@ msgstr ""
 "Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> ."
 
 #: xml/release-notes.xml:242(title)
+#: xml/release-notes.xml:373(title)
 msgid "Miscellaneous"
 msgstr "Různé"
 
 # 59637 AttribValues/label
 #: xml/release-notes.xml:244(title)
+#: xml/release-notes.xml:375(title)
 msgid "KDE and Network Authentication"
 msgstr "KDE a síťová autentizace"
 
@@ -334,6 +356,7 @@ msgstr ""
 "připojit všechny uživatelské adresáře"
 
 #: xml/release-notes.xml:253(programlisting)
+#: xml/release-notes.xml:384(programlisting)
 #, no-wrap
 msgid ""
 "[Theme]\n"
@@ -349,6 +372,7 @@ msgstr ""
 "MaximumUid=1002"
 
 #: xml/release-notes.xml:251(para)
+#: xml/release-notes.xml:382(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
 msgstr ""
 "Upravte soubor <filename>/etc/sddm.conf</filename> aby obsahoval následující "
@@ -362,6 +386,7 @@ msgstr ""
 
 #. bnc#809347
 #: xml/release-notes.xml:269(title)
+#: xml/release-notes.xml:422(title)
 msgid "More Information and Feedback"
 msgstr "Více informací a zpětná vazba"
 
@@ -406,14 +431,17 @@ msgstr ""
 "org\"/>."
 
 #: xml/release-notes.xml:298(para)
+#: xml/release-notes.xml:465(para)
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "Copyright © 2015 SUSE LLC"
 
 #: xml/release-notes.xml:300(para)
+#: xml/release-notes.xml:469(para)
 msgid "Thanks for using openSUSE."
 msgstr "Děkujeme, že používáte openSUSE."
 
 #: xml/release-notes.xml:301(para)
+#: xml/release-notes.xml:472(para)
 msgid "The openSUSE Team."
 msgstr "Tým openSUSE."
 
