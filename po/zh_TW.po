@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2016-03-15 18:35+0100\n"
+"POT-Creation-Date: 2016-04-21 14:25+0200\n"
 "PO-Revision-Date: 2016-03-06 15:01+0200\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/zh_TW/>\n"
@@ -42,219 +42,226 @@ msgstr "如果您從較舊的發行版本升級至 openSUSE Leap，請由此查�
 msgid "Installation"
 msgstr "安裝"
 
+#: xml/release-notes.xml:94(para)
+msgid "This section contains installation-related notes. For detailed upgrade instructions, see the documentation at <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>."
+msgstr ""
+
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
-#: xml/release-notes.xml:106(title)
+#: xml/release-notes.xml:103(title)
 msgid "Minimal System Installation"
 msgstr "最小系統安裝"
 
-#: xml/release-notes.xml:107(para)
+#: xml/release-notes.xml:104(para)
 msgid "In order to avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
 msgstr "為避免一些大型的建議套件被安裝，最小安裝樣式 (pattern) 會使用到其他與非預期套件相衝突的樣式。該樣式 <literal>patterns-openSUSE-minimal_base-conflicts</literal> 可以在安裝完成後移除。"
 
-#: xml/release-notes.xml:114(para)
+#: xml/release-notes.xml:111(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr "請注意最小系統安裝預設不會啟動防火牆。若您需要，請安裝 <literal>SuSEfirewall2</literal>。"
 
-#: xml/release-notes.xml:122(title)
+#: xml/release-notes.xml:119(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;統一可延伸韌體介面"
 
-#: xml/release-notes.xml:123(para)
+#: xml/release-notes.xml:120(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "在安裝 openSUSE 到使用 UEFI (統一可延伸韌體介面) 開機的系統之前，強烈建議您先詢問是否有硬體製造商所建議的韌體更新並加以安裝。若您的系統有預裝 Windows 8，通常就代表您的系統使用 UEFI 開機。"
 
-#: xml/release-notes.xml:131(para)
+#: xml/release-notes.xml:128(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>背景知識：</emphasis> 有些 UEFI 韌體有缺陷，導致當有太多資料被寫入 UEFI 儲存區域時，韌體會發生問題。但是沒人知道究竟寫入多少資料才算「太多」，故 openSUSE 藉由只寫入能夠啟動系統的最少需要的資料量，來降低這個風險。寫入的資料至少要能告訴 UEFI 韌體 openSUSE 啟動程式的位置。官方 Linux 核心提供使用 UEFI 儲存區來寫入開機及當機資訊的功能  (<literal>pstore</literal>)，在此預設被停用。無論如何，建議安裝任何硬體製造商建議的韌體更新。"
 
 #. bnc#850056
-#: xml/release-notes.xml:148(title)
+#: xml/release-notes.xml:145(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI，GPT 與 MS-DOS 磁碟分割區"
 
-#: xml/release-notes.xml:149(para)
+#: xml/release-notes.xml:146(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "在 EFI/UEFI 的規格書中提到一個新的分割磁碟的劃分方式：GPT（GUID Partition Table）。這個新的方式使用 GUID（128位元的值顯示在32個十六進制數字上）來識別裝置及分割區類型。"
 
-#: xml/release-notes.xml:155(para)
+#: xml/release-notes.xml:152(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr "此外，UEFI 規範是允許傳統的 MBR（MS-DOS）分割區。 Linux 引導加載器（ELILO 或 GRUB2）嘗試針對那些傳統的分割區自動產生一個 GUID ，並把它們寫進韌體。像這樣的一個 GUID 可以頻繁變更，導致韌體的重寫入。一次的重寫入包括兩種不同的操作：刪除舊的項目，以及創建一個新的項目以取代第一個項目。"
 
-#: xml/release-notes.xml:164(para)
+#: xml/release-notes.xml:161(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr "現代的韌體都有一個垃圾收集器（garbage collector），可以收集被刪除的進入點（entries），並且釋放原來保留給舊進入點（entries）的記憶體。當故障的韌體不能收集或是釋放這些進入點（entries）時，系統將會出現問題，最終將造成系統無法開機。"
 
-#: xml/release-notes.xml:170(para)
+#: xml/release-notes.xml:167(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr "簡單的替代解決方案是：轉換傳統的 MBR 分割區成為新的 GPT 分割區以完整的避免此問題。"
 
-#: xml/release-notes.xml:183(title)
+#: xml/release-notes.xml:176(title)
 msgid "System Upgrade"
 msgstr "系統升級"
 
-#: xml/release-notes.xml:186(title)
+#: xml/release-notes.xml:177(para)
+msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
+msgstr ""
+
+#: xml/release-notes.xml:184(title)
 msgid "Network Interface Names"
 msgstr "網路介面名稱"
 
-#: xml/release-notes.xml:187(para)
+#: xml/release-notes.xml:185(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr "當您將一台遠端機器從 openSUSE 13.2 昇級時，請確保您的網路介面命名是正確的。"
 
-#: xml/release-notes.xml:191(para)
+#: xml/release-notes.xml:189(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr "openSUSE 13.2 使用可預測的網路介面命名方式 (例如，<literal>enp5s0</literal>)，但 openSUSE Leap 42.1 是使用固定的命名方式 (<literal>eth0</literal>)。當完成昇級並重開機後，網路介面名稱會因此而改變。這可能會造成您無法登入系統。要避免網路介面被改名，在重開機前，為您的每個網路介面執行下列命令："
 
-#: xml/release-notes.xml:200(replaceable)
+#: xml/release-notes.xml:198(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:200(screen)
+#: xml/release-notes.xml:198(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:202(para)
+#: xml/release-notes.xml:200(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr "請將 <replaceable>enp5s0</replaceable> 代換為您的網路介面名稱。"
 
-#: xml/release-notes.xml:209(title)
+#: xml/release-notes.xml:207(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: 當系統回復後會遺失磁碟空間"
 
-#: xml/release-notes.xml:210(para)
+#: xml/release-notes.xml:208(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr "openSUSE 13.2 使用的 Btrfs 分割區佈局會使得當第一次系統回復執行後，磁碟空間會被過時且無法存取的內容給永久占用。這個問題已經在 openSUSE Leap 42.1 解決。然而，這個修正只有針對新安裝的系統才有用。"
 
-#: xml/release-notes.xml:217(para)
+#: xml/release-notes.xml:215(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr "若您是從 openSUSE 13.2 昇級，您無法轉換使用新的佈局，但您可以回收這些失去的磁碟空間 。"
 
-#: xml/release-notes.xml:223(para)
+#: xml/release-notes.xml:221(para)
 msgid "Mount the initial root filesystem:"
 msgstr "掛載初始 root 檔案系統："
 
-#: xml/release-notes.xml:226(replaceable)
+#: xml/release-notes.xml:224(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
-#: xml/release-notes.xml:226(screen)
+#: xml/release-notes.xml:224(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:229(para)
+#: xml/release-notes.xml:227(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "移除 /mnt 目錄下所有不屬於子卷 (subvolume) 的檔案："
 
-#: xml/release-notes.xml:232(screen)
+#: xml/release-notes.xml:230(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:235(para)
+#: xml/release-notes.xml:233(para)
 msgid "Umount the filesystem again:"
 msgstr "卸載檔案系統："
 
-#: xml/release-notes.xml:238(screen)
+#: xml/release-notes.xml:236(screen)
 #, no-wrap
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:246(title)
+#: xml/release-notes.xml:244(title)
 msgid "General"
 msgstr "一般說明"
 
-#: xml/release-notes.xml:249(title)
+#: xml/release-notes.xml:247(title)
 msgid "Non-Oss Repository"
 msgstr "非開源  (Non-Oss) 套件庫"
 
-#: xml/release-notes.xml:250(para)
+#: xml/release-notes.xml:248(para)
 msgid "After the installation, the non-oss repository is disabled."
 msgstr "安裝完成後，非開源套件庫預設是關閉的。"
 
-#: xml/release-notes.xml:253(para)
+#: xml/release-notes.xml:251(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr "可透過 YaST 或是在命令列使用 zypper 來啟用 <literal>openSUSE-Leap-42.1-Non-Oss</literal> 套件庫：<screen>zypper mr -e repo-non-oss</screen>"
 
-#: xml/release-notes.xml:263(title)
+#: xml/release-notes.xml:261(title)
 msgid "Technical"
 msgstr "技術議題"
 
-#. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:268(title)
+#: xml/release-notes.xml:265(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "列印系統：改進以及不相容的變動"
 
-#: xml/release-notes.xml:271(emphasis)
+#: xml/release-notes.xml:268(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS 版本昇級至 1.7"
 
-#: xml/release-notes.xml:273(para)
+#: xml/release-notes.xml:270(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgstr "新版的 CUPS，相較於 1.5 版，導入了一些重大改變，因此需要手動調整設定。"
 
-#: xml/release-notes.xml:280(para)
+#: xml/release-notes.xml:277(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr "PDF 取代 PS 成為標準的列印工作格式。故傳統的 PostScript 印表機現在需要一個過濾器 (filter) 驅動程式才能進行列印。"
 
-#: xml/release-notes.xml:285(para)
+#: xml/release-notes.xml:282(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
 msgstr "請見 <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>) 以了解更多細節。"
 
-#: xml/release-notes.xml:293(para)
+#: xml/release-notes.xml:290(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr "網路印表機探查通訊協定已經改變為基於 DNS Service discovery 協定 (DNS-SD，透過 Avahi 提供)。<literal>cups-filters</literal> 套件提供的 <literal>cups-browsed</literal> 服務可用來橋接舊的與新的通訊協定。<literal>cupsd</literal> 與 <literal>cups-browsed</literal> 需要一起運作才能讓舊的客戶端 (包括 LibreOffice 與 KDE) 能夠發現網路印表機。"
 
-#: xml/release-notes.xml:306(para)
+#: xml/release-notes.xml:303(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr "IPP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 的連線要求，並回傳 <literal>Bad Request</literal> (請見 <ulink url=\"http://www.cups.org/str.php?L4231\"/>)。"
 
-#: xml/release-notes.xml:312(para)
+#: xml/release-notes.xml:309(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr "要能夠使用舊印表機來列印，IPP 通訊協定版本必須要明確指定。將 <literal>/version=1.1</literal> 字串附加在："
 
-#: xml/release-notes.xml:319(para)
+#: xml/release-notes.xml:316(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr "<literal>client.conf</literal> 設定檔中的 <literal>ServerName</literal> 設定 (例如 <literal>ServerName older.server.example.com/version=1.1</literal>)。"
 
-#: xml/release-notes.xml:327(para)
+#: xml/release-notes.xml:324(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "環境變數 <literal>CUPS_SERVER</literal>。"
 
-#: xml/release-notes.xml:333(para)
+#: xml/release-notes.xml:330(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr "在命令列工具中 <literal>-h</literal> 選項所設定的伺服器名稱。例如："
 
-#: xml/release-notes.xml:337(screen)
+#: xml/release-notes.xml:334(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:343(para)
+#: xml/release-notes.xml:340(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr "一些列印過濾器和後端已從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。"
 
-#: xml/release-notes.xml:351(para)
+#: xml/release-notes.xml:348(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgstr "一些設定指令已經自 <literal>cupsd.conf</literal> 分離出來，並移到 <literal>cups-files.conf</literal> 設定檔中。請詳見 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> 的說明。"
 
-#: xml/release-notes.xml:360(para)
+#: xml/release-notes.xml:357(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 msgstr "CUPS 管理及測試頁面從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。詳情請見 <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> 以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>。"
 
-#: xml/release-notes.xml:373(title)
+#: xml/release-notes.xml:370(title)
 msgid "Miscellaneous"
 msgstr "雜項"
 
-#: xml/release-notes.xml:375(title)
+#: xml/release-notes.xml:372(title)
 msgid "KDE and Network Authentication"
 msgstr "KDE 與網路認證"
 
-#: xml/release-notes.xml:376(para)
+#: xml/release-notes.xml:373(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
 msgstr "當使用 KDE 顯示管理員 SDDM 並搭配使用提供大量使用者的登入認證方法時，SDDM 會變得不穩定。如果又加上使用了 automounter 的話，SDDM 可能會在嘗試掛載使用者家目錄時被阻滯一段很長的時間。"
 
-#: xml/release-notes.xml:384(programlisting)
+#: xml/release-notes.xml:381(programlisting)
 #, no-wrap
 msgid ""
 "[Theme]\n"
@@ -269,81 +276,81 @@ msgstr ""
 "[Users]\n"
 "MaximumUid=1002"
 
-#: xml/release-notes.xml:382(para)
+#: xml/release-notes.xml:379(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
 msgstr "修改 <filename>/etc/sddm.conf</filename> 來加入以下欄位：<placeholder-1/>"
 
-#: xml/release-notes.xml:390(para)
+#: xml/release-notes.xml:387(para)
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
 msgstr "請見 <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> 以了解更多細節。"
 
-#: xml/release-notes.xml:398(title)
+#: xml/release-notes.xml:395(title)
 msgid "No Screensaver Support in KDE Plasma"
 msgstr "KDE Plasma 不支援螢幕保護程式"
 
-#: xml/release-notes.xml:399(para)
+#: xml/release-notes.xml:396(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
 msgstr "KDE Plasma 預設不支援螢幕保護程式。若您需要螢幕保護程式，請安裝 <literal>xscreensaver</literal> 套件。"
 
-#: xml/release-notes.xml:404(para)
+#: xml/release-notes.xml:401(para)
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
 msgstr "要設定 <command>xscreensaver</command> 與桌面環境作業階段一同起動，請選擇 <menuchoice><guimenu>K</guimenu><guimenu>設定</guimenu><guimenu>系統設定</guimenu></menuchoice>，接著選擇 <menuchoice><guimenu>啟動與關閉</guimenu><guimenu>自動啟動</guimenu></menuchoice>。點選 <guimenu>新增程式</guimenu>，輸入 <literal>xscreensaver</literal> 並點擊 <guimenu>OK</guimenu>。"
 
-#: xml/release-notes.xml:413(para)
+#: xml/release-notes.xml:410(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
 msgstr "要設定螢幕保護程式，請使用 <command>xscreensaver-demo</command>。"
 
 #. bnc#809347
-#: xml/release-notes.xml:422(title)
+#: xml/release-notes.xml:419(title)
 msgid "More Information and Feedback"
 msgstr "更多資訊與反饋"
 
-#: xml/release-notes.xml:426(para)
+#: xml/release-notes.xml:423(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "請閱讀安裝媒體上的 <filename>README</filename> 文件。"
 
-#: xml/release-notes.xml:431(para)
+#: xml/release-notes.xml:428(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "從 RPM 獲取某個套件詳細的變動歷史資訊："
 
-#: xml/release-notes.xml:435(replaceable)
+#: xml/release-notes.xml:432(replaceable)
 msgid "FILENAME"
 msgstr "FILENAME"
 
-#: xml/release-notes.xml:435(screen)
+#: xml/release-notes.xml:432(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:436(para)
+#: xml/release-notes.xml:433(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "將 <replaceable>FILENAME</replaceable> 代換為 RPM 套件的名稱。"
 
-#: xml/release-notes.xml:441(para)
+#: xml/release-notes.xml:438(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "請查看在安裝媒體最上層目錄下的 <filename>ChangeLog</filename> 檔案以了解所更新套件的變動歷史（按時間先後排序）。"
 
-#: xml/release-notes.xml:447(para)
+#: xml/release-notes.xml:444(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
-#: xml/release-notes.xml:453(para)
+#: xml/release-notes.xml:450(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> 包含了額外或是更新的文件。"
 
-#: xml/release-notes.xml:458(para)
+#: xml/release-notes.xml:455(para)
 msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
 msgstr "請造訪 <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> 以了解 openSUSE 最新的產品訊息。"
 
-#: xml/release-notes.xml:465(para)
+#: xml/release-notes.xml:462(para)
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "版權所有 © 2015 SUSE LLC"
 
-#: xml/release-notes.xml:469(para)
+#: xml/release-notes.xml:466(para)
 msgid "Thanks for using openSUSE."
 msgstr "感謝使用 openSUSE。"
 
-#: xml/release-notes.xml:472(para)
+#: xml/release-notes.xml:469(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE 團隊"
 

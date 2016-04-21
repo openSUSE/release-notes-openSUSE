@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
-"POT-Creation-Date: 2016-03-15 18:35+0100\n"
+"POT-Creation-Date: 2016-04-21 14:25+0200\n"
 "PO-Revision-Date: 2016-02-18 11:20+0200\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/ja/>\n"
@@ -46,219 +46,226 @@ msgstr "openSUSE Leap リリースの旧バージョンからアップグレー�
 msgid "Installation"
 msgstr "インストール"
 
+#: xml/release-notes.xml:94(para)
+msgid "This section contains installation-related notes. For detailed upgrade instructions, see the documentation at <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>."
+msgstr ""
+
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
-#: xml/release-notes.xml:106(title)
+#: xml/release-notes.xml:103(title)
 msgid "Minimal System Installation"
 msgstr "最小限のシステムインストールについて"
 
-#: xml/release-notes.xml:107(para)
+#: xml/release-notes.xml:104(para)
 msgid "In order to avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
 msgstr "最小インストールのパターンを選択してインストールした際、サイズを肥大化させてしまう様々な推奨パッケージをインストールしないようにするため、不要なパッケージに対して矛盾を設定し、インストールを防ぐためのパターンがインストールされます。このパターンは <literal>patterns-openSUSE-minimal_base-conflicts</literal> という名称で、システムのインストール後に削除することもできます。"
 
-#: xml/release-notes.xml:114(para)
+#: xml/release-notes.xml:111(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr "また、最小構成でインストールすると、既定でファイアウオールは無効化されます。必要であれば <literal>SuSEfirewall2</literal> をインストールしてください。"
 
-#: xml/release-notes.xml:122(title)
+#: xml/release-notes.xml:119(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
-#: xml/release-notes.xml:123(para)
+#: xml/release-notes.xml:120(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "UEFI (Unified Extensible Firmware Interface) を利用して起動するシステムに openSUSE をインストールする場合、事前に製造元が推奨するファームウエア更新を必ずチェックし、可能であればインストールしておくことを強くお勧めします。 Windows 8 がプレインストールされているマシンの場合、お使いのシステムが UEFI である可能性が高いものと思われます。"
 
-#: xml/release-notes.xml:131(para)
+#: xml/release-notes.xml:128(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>背景:</emphasis> UEFI のファームウエアによっては、 UEFI のストレージ領域に多くのデータが書き込まれることで、起動に失敗してしまうバグを抱えています。もちろんこれはバグであるため、どれだけ \"多くの\"データを書き込むことで問題を発生させるのかは、誰にもわかりません。 openSUSE では、 OS を起動するのに最低限必要となるデータ (UEFI に対して、 openSUSE のブートローダの場所を示すための情報) しか書き込まないようにすることで、このバグの発生を最小化しています。 Linux カーネルのオリジナル版では、 UEFI のストレージ領域に起動やクラッシュに関する情報を書き込む機能 (<literal>pstore</literal>) がありますが、既定では無効化しています。ただし、バグである都合上、ハードウエアの製造元が推奨するファームウエア更新については、必ずインストールしておくことをお勧めします。"
 
 #. bnc#850056
-#: xml/release-notes.xml:148(title)
+#: xml/release-notes.xml:145(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT, MS-DOS の各パーティションについて"
 
-#: xml/release-notes.xml:149(para)
+#: xml/release-notes.xml:146(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "EFI/UEFI の仕様には、新しい形式のパーティションテーブル GPT (GUID パーティションテーブル) が定義されています。この新しい方式では、ユニークな GUID (識別子; 32 桁の 16 進数で表わされる 128 ビットの値) を利用してデバイスとパーティション種別を識別します。"
 
-#: xml/release-notes.xml:155(para)
+#: xml/release-notes.xml:152(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr "これに加えて、 UEFI の仕様では古い MBR (MS-DOS) 形式のパーティションテーブルにも対応しています。 Linux のブートローダ (ELILO, GRUB2) では、これらの古い形式のパーティションに対して、自動的に GUID を割り当ててファームウエア内に書き込もうとします。この場合、 GUID は頻繁に変更されるものであるため、ファームウエアへの再書き込みも頻繁に発生することになります。この再書き込みには 2 つの操作、具体的には古い項目の削除と、それを置き換える新しい項目の作成を行ないます。"
 
-#: xml/release-notes.xml:164(para)
+#: xml/release-notes.xml:161(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr "新しいファームウエアでは、削除された項目を収集して古い項目用に確保したメモリを解放する、ガーベージコレクタ機能が用意されています。ファームウエアに不具合があると、これらの古い項目を収集できなかったり、メモリを解放しなかったりする場合があり、これにより起動が不可能になる場合があります。"
 
-#: xml/release-notes.xml:170(para)
+#: xml/release-notes.xml:167(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr "このような場合は、古い MBR 形式のパーティションを新しい GPT 形式のパーティションに更新して、問題を回避してください。"
 
-#: xml/release-notes.xml:183(title)
+#: xml/release-notes.xml:176(title)
 msgid "System Upgrade"
 msgstr "システムアップグレード"
 
-#: xml/release-notes.xml:186(title)
+#: xml/release-notes.xml:177(para)
+msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
+msgstr ""
+
+#: xml/release-notes.xml:184(title)
 msgid "Network Interface Names"
 msgstr "ネットワークインターフェイスの命名について"
 
-#: xml/release-notes.xml:187(para)
+#: xml/release-notes.xml:185(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr "ネットワーク上離れたリモートのマシンを openSUSE 13.2 からアップグレードする場合は、ネットワークインターフェイスが想定通りに命名されているかどうかをご確認ください。"
 
-#: xml/release-notes.xml:191(para)
+#: xml/release-notes.xml:189(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr "openSUSE 13.2 では「予測可能な」形態でネットワークインターフェイスの命名を行なっていました (例: <literal>enp5s0</literal>) が、 openSUSE Leap 42.1 では固定のインターフェイス名 (例: <literal>eth0</literal>) を使用するようになっています。そのため、アップグレードして再起動を行なうと、場合によってはネットワークインターフェイスの名前が変わってしまい、これによってシステムにアクセスができなくなってしまうことがあります。インターフェイス名が変わってしまうことを防ぐには、システムを再起動する前に、各ネットワークインターフェイスに対して下記のコマンドを実行します:"
 
-#: xml/release-notes.xml:200(replaceable)
+#: xml/release-notes.xml:198(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:200(screen)
+#: xml/release-notes.xml:198(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:202(para)
+#: xml/release-notes.xml:200(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr "なお、上記の <replaceable>enp5s0</replaceable> を、お使いの環境のネットワークインターフェイス名に置き換えてください。"
 
-#: xml/release-notes.xml:209(title)
+#: xml/release-notes.xml:207(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: システムを巻き戻し (ロールバック) した際のディスク領域の開放漏れについて"
 
-#: xml/release-notes.xml:210(para)
+#: xml/release-notes.xml:208(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr "openSUSE 13.2 で Btrfs のパーティションレイアウトを使用した環境でシステムのロールバック (巻き戻し) を実行すると、ディスク領域内にアクセス不可能な無効領域が生じてしまいます。このレイアウト問題は openSUSE Leap 42.1 で解決されていますが、この修正は新しくインストールしたシステムにのみ適用することができます。"
 
-#: xml/release-notes.xml:217(para)
+#: xml/release-notes.xml:215(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr "openSUSE 13.2 からアップグレードする場合は新しいレイアウトに変換することはできませんが、失われたディスク領域を取り戻す方法があります。"
 
-#: xml/release-notes.xml:223(para)
+#: xml/release-notes.xml:221(para)
 msgid "Mount the initial root filesystem:"
 msgstr "まずはルートファイルシステムをマウントします:"
 
-#: xml/release-notes.xml:226(replaceable)
+#: xml/release-notes.xml:224(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ルートファイルシステム&gt;"
 
-#: xml/release-notes.xml:226(screen)
+#: xml/release-notes.xml:224(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:229(para)
+#: xml/release-notes.xml:227(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "サブボリューム内に存在しない /mnt 以下のファイルを全て削除します:"
 
-#: xml/release-notes.xml:232(screen)
+#: xml/release-notes.xml:230(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:235(para)
+#: xml/release-notes.xml:233(para)
 msgid "Umount the filesystem again:"
 msgstr "再度ファイルシステムのマウントを解除します:"
 
-#: xml/release-notes.xml:238(screen)
+#: xml/release-notes.xml:236(screen)
 #, no-wrap
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:246(title)
+#: xml/release-notes.xml:244(title)
 msgid "General"
 msgstr "全般"
 
-#: xml/release-notes.xml:249(title)
+#: xml/release-notes.xml:247(title)
 msgid "Non-Oss Repository"
 msgstr "非オープンソース (non-oss) リポジトリについて"
 
-#: xml/release-notes.xml:250(para)
+#: xml/release-notes.xml:248(para)
 msgid "After the installation, the non-oss repository is disabled."
 msgstr "システムのインストール直後、 non-oss リポジトリは無効化されて登録されます。"
 
-#: xml/release-notes.xml:253(para)
+#: xml/release-notes.xml:251(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr "必要であれば、 YaST または zypper のコマンドを利用して、 <literal>openSUSE-Leap-42.1-Non-Oss</literal> リポジトリを有効化してください。 zypper の場合は、下記のコマンドを実行します: <screen>zypper mr -e repo-non-oss</screen>"
 
-#: xml/release-notes.xml:263(title)
+#: xml/release-notes.xml:261(title)
 msgid "Technical"
 msgstr "テクニカル"
 
-#. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:268(title)
+#: xml/release-notes.xml:265(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "印刷システム: 改善点と互換性を失う変更について"
 
-#: xml/release-notes.xml:271(emphasis)
+#: xml/release-notes.xml:268(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS バージョン 1.7 へのアップグレードについて"
 
-#: xml/release-notes.xml:273(para)
+#: xml/release-notes.xml:270(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgstr "CUPS のバージョンが新しくなって大幅な変更が加えられたことにより、従来のバージョン 1.5 から移行した場合は、手作業による設定調整が必要となる場合があります。"
 
-#: xml/release-notes.xml:280(para)
+#: xml/release-notes.xml:277(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr "現在は標準の印刷ジョブ形式が PS ではなく、 PDF になっています。そのため、旧来の PostScript プリンタで印刷を行なう場合は、新たにフィルタを設定する必要が生じています。"
 
-#: xml/release-notes.xml:285(para)
+#: xml/release-notes.xml:282(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
 msgstr "詳しくは <ulink url=\"http://ja.opensuse.org/印刷処理\">http://ja.opensuse.org/印刷処理</ulink> をお読みください。"
 
-#: xml/release-notes.xml:293(para)
+#: xml/release-notes.xml:290(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr "ネットワークプリンタの検出プロトコルが変更されました。新しいネイティブなプロトコルは DNS Service discovery (DNS-SD, つまり、 Avahi 経由) をベースにした仕組みになりましたが、 <literal>cups-filters</literal> パッケージで提供される <literal>cups-browsed</literal> サービスを利用することで、従来のプロトコルとの間で橋渡しを行なうことができるようになっています。 \"従来の\" クライアントからプリンタを発見できるようにしたい場合 (LibreOffice や KDE からの印刷を含みます) は、 <literal>cupsd</literal> と <literal>cups-browsed</literal> の両方を動作させる必要があります。"
 
-#: xml/release-notes.xml:306(para)
+#: xml/release-notes.xml:303(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr "IPP プロトコルの既定のバージョンは、 1.1 から 2.0 となりました。 CUPS 1.3.x のような古い IPP サーバ (たとえば SUSE Linux Enterprise 11 など) を利用して印刷する場合、 IPP 2.0 リクエストを <literal>Bad Request</literal> として拒否してしまいます (詳しくは <ulink url=\"http://www.cups.org/str.php?L4231\"/> をお読みください) 。"
 
-#: xml/release-notes.xml:312(para)
+#: xml/release-notes.xml:309(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr "古いサーバから印刷できるようにするには、 IPP プロトコルのバージョンを明示的に指定する必要があります。下記のいずれかの箇所で、末尾に <literal>/version=1.1</literal> を追加してください:"
 
-#: xml/release-notes.xml:319(para)
+#: xml/release-notes.xml:316(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr "<literal>client.conf</literal> 内の <literal>ServerName</literal> 設定 (例: <literal>ServerName older.server.example.com/version=1.1</literal>) 。"
 
-#: xml/release-notes.xml:327(para)
+#: xml/release-notes.xml:324(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "<literal>CUPS_SERVER</literal> 環境変数の値。"
 
-#: xml/release-notes.xml:333(para)
+#: xml/release-notes.xml:330(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr "コマンドラインツールの <literal>-h</literal> オプションで指定するサーバ名の値。たとえば下記のように指定します:"
 
-#: xml/release-notes.xml:337(screen)
+#: xml/release-notes.xml:334(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:343(para)
+#: xml/release-notes.xml:340(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr "いくつかの印刷フィルタやバックエンドは、 <literal>cups</literal> パッケージから <literal>cups-filters</literal> パッケージに移動されています。"
 
-#: xml/release-notes.xml:351(para)
+#: xml/release-notes.xml:348(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgstr "いくつかの設定ディレクティブが、 <literal>cupsd.conf</literal> から <literal>cups-files.conf</literal> に分離されています (それぞれ <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> をお読みください) 。"
 
-#: xml/release-notes.xml:360(para)
+#: xml/release-notes.xml:357(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 msgstr "また、 CUPS のバナーとテストページについても、 <literal>cups</literal> パッケージから <literal>cups-filters</literal> パッケージに移動されています (詳しくは <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> および <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink> をお読みください) 。"
 
-#: xml/release-notes.xml:373(title)
+#: xml/release-notes.xml:370(title)
 msgid "Miscellaneous"
 msgstr "その他"
 
-#: xml/release-notes.xml:375(title)
+#: xml/release-notes.xml:372(title)
 msgid "KDE and Network Authentication"
 msgstr "KDE とネットワーク認証について"
 
-#: xml/release-notes.xml:376(para)
+#: xml/release-notes.xml:373(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
 msgstr "KDE のディスプレイマネージャ SDDM を使用していて、多数のユーザが登録されている認証方式を設定すると、 SDDM が実質的に使用できなくなってしまいます。また、 SDDM で automounter を使用していると、起動時に各ユーザのホームディレクトリをマウントしようとしてしまい、起動に時間を要する結果にもなってしまいます。"
 
-#: xml/release-notes.xml:384(programlisting)
+#: xml/release-notes.xml:381(programlisting)
 #, no-wrap
 msgid ""
 "[Theme]\n"
@@ -273,81 +280,81 @@ msgstr ""
 "[Users]\n"
 "MaximumUid=1002"
 
-#: xml/release-notes.xml:382(para)
+#: xml/release-notes.xml:379(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
 msgstr "<filename>/etc/sddm.conf</filename> ファイルを編集して、下記のような項目を設定してください: <placeholder-1/>"
 
-#: xml/release-notes.xml:390(para)
+#: xml/release-notes.xml:387(para)
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
 msgstr "詳しくは <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> をお読みください。"
 
-#: xml/release-notes.xml:398(title)
+#: xml/release-notes.xml:395(title)
 msgid "No Screensaver Support in KDE Plasma"
 msgstr "KDE Plasma でのスクリーンセーバサポートについて"
 
-#: xml/release-notes.xml:399(para)
+#: xml/release-notes.xml:396(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
 msgstr "KDE Plasma は既定ではスクリーンセーバに対応していません。スクリーンセーバをお使いになりたい場合は、まず <literal>xscreensaver</literal> パッケージをインストールしてください。"
 
-#: xml/release-notes.xml:404(para)
+#: xml/release-notes.xml:401(para)
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
 msgstr "あとはデスクトップセッションで <command>xscreensaver</command> を起動するように設定します。まずは <menuchoice><guimenu>K</guimenu><guimenu>設定</guimenu><guimenu>KDE システム設定</guimenu></menuchoice> を選び、その中から <menuchoice><guimenu>起動と終了</guimenu><guimenu>自動起動</guimenu></menuchoice> を選びます。あとは <guimenu>プログラムを追加</guimenu> を押し、 <literal>xscreensaver</literal> と入力して <guimenu>OK</guimenu> を押します。"
 
-#: xml/release-notes.xml:413(para)
+#: xml/release-notes.xml:410(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
 msgstr "スクリーンセーバを設定したい場合は、 <command>xscreensaver-demo</command> コマンドをお使いください。"
 
 #. bnc#809347
-#: xml/release-notes.xml:422(title)
+#: xml/release-notes.xml:419(title)
 msgid "More Information and Feedback"
 msgstr "さらに詳しい情報とフィードバック"
 
-#: xml/release-notes.xml:426(para)
+#: xml/release-notes.xml:423(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "まずはメディア内の <filename>README</filename> 文書をお読みください。"
 
-#: xml/release-notes.xml:431(para)
+#: xml/release-notes.xml:428(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "また、特定のパッケージに対する詳細な変更点を RPM パッケージから表示するには、下記のコマンドを実行します:"
 
-#: xml/release-notes.xml:435(replaceable)
+#: xml/release-notes.xml:432(replaceable)
 msgid "FILENAME"
 msgstr "ファイル名"
 
-#: xml/release-notes.xml:435(screen)
+#: xml/release-notes.xml:432(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:436(para)
+#: xml/release-notes.xml:433(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "<replaceable>ファイル名</replaceable> の箇所を RPM の名前に置き換えてお使いください。"
 
-#: xml/release-notes.xml:441(para)
+#: xml/release-notes.xml:438(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "また、メディアのルートディレクトリには <filename>ChangeLog</filename> ファイルがあります。ここには、更新されたパッケージに対する全ての変更点が時系列順に並んでいます。"
 
-#: xml/release-notes.xml:447(para)
+#: xml/release-notes.xml:444(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "そのほか、 メディアの <filename>docu</filename> ディレクトリには、さらに詳しい情報があります。"
 
-#: xml/release-notes.xml:453(para)
+#: xml/release-notes.xml:450(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
 msgstr "それ以外にも、 <ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> には追加／更新されたドキュメンテーションがあります。"
 
-#: xml/release-notes.xml:458(para)
+#: xml/release-notes.xml:455(para)
 msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
 msgstr "openSUSE が提供する最新の製品ニュースを読むには、 <ulink url=\"http://www.opensuse.org\"/> をご覧ください。"
 
-#: xml/release-notes.xml:465(para)
+#: xml/release-notes.xml:462(para)
 msgid "Copyright © 2015 SUSE LLC"
 msgstr "Copyright © 2015 SUSE LLC"
 
-#: xml/release-notes.xml:469(para)
+#: xml/release-notes.xml:466(para)
 msgid "Thanks for using openSUSE."
 msgstr "openSUSE をお使いいただき、ありがとうございます。"
 
-#: xml/release-notes.xml:472(para)
+#: xml/release-notes.xml:469(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE チームより。"
 
