@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-17 17:39+0100\n"
-"PO-Revision-Date: 2016-05-23 02:27+0000\n"
+"PO-Revision-Date: 2016-05-25 23:34+0000\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <http://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/sv/>\n"
@@ -60,7 +60,13 @@ msgstr "Med EFI/UEFI specifikationerna kom en ny modell för partitionering: GPT
 
 #: xml/release-notes.xml:134(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
-msgstr "UEFI specifikationerna tillåter också föråldrade MBR (MS-DOS) partitioner. Linux bootladdare (ELILO eller GRUB2) försöker att automatiskt generera ett GUID för dessa föråldrade partitioner och skriva in dem i UEFI-firmwaret. Sådana GUID ändras ofta och måste då omregistreras i firmwaret. En omregistrering består av två operationer: avlägsna det gamla ID:et och skapa ett nytt som ersätter det gamla."
+msgstr ""
+"UEFI specifikationerna tillåter också partitioner av den föråldrade typen "
+"MBR (MS-DOS). Linux bootladdare (ELILO eller GRUB2) försöker att automatiskt "
+"generera ett GUID för partitioner av denna typ och skriva in dem i UEFI-"
+"firmwaret. Sådana GUID ändras ofta och måste då omregistreras i firmwaret. "
+"En omregistrering består av två operationer: avlägsna det gamla ID:et och "
+"skapa ett nytt som ersätter det gamla."
 
 #: xml/release-notes.xml:143(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
@@ -68,7 +74,9 @@ msgstr "Moderna firmware har en soptunnehanterare som registrerar de borttagna I
 
 #: xml/release-notes.xml:149(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
-msgstr "Lösningen är enkel - omvandla de föråldrade MBR-partitionerna till GPT för att undvika detta problem."
+msgstr ""
+"Lösningen är enkel - omvandla MBR-partitionerna till GPT för att undvika "
+"detta problem."
 
 #: xml/release-notes.xml:166(title)
 msgid "General"
@@ -103,7 +111,7 @@ msgstr "CUPS version uppgraderad till 1.7"
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
 msgstr ""
 "Uppdateringen av CUPS från version 1.5 medför ett antal större förändringar "
-"som kan kärva manuella ändringar i konfigurationen"
+"som kan kräva manuella ändringar i konfigurationen"
 
 #: xml/release-notes.xml:193(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
