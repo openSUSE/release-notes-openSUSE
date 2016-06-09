@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-04-21 14:25+0200\n"
-"PO-Revision-Date: 2016-03-31 02:14+0000\n"
-"Last-Translator: gmg gmg <gmg137@live.com>\n"
-"Language-Team: Chinese (China) <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/zh_CN/>\n"
+"PO-Revision-Date: 2016-06-09 08:27+0000\n"
+"Last-Translator: Marguerite Su <i@marguerite.su>\n"
+"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
+"notes-opensuse/leap_42_1/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.5\n"
+"X-Generator: Weblate 2.6\n"
 
 #: xml/release-notes.xml:10(title)
 msgid "Release Notes"
@@ -39,9 +40,11 @@ msgstr "openSUSE Leap 是一个用于您的个人计算机、笔记本电脑或�
 
 #. Previous Release Notes
 #: xml/release-notes.xml:55(para)
-#, fuzzy
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
-msgstr "若您是从某个旧版本升级到本版 openSUSE 的，之前的版本资讯列示于此，供您参考：<ulinkurl=\"http://en.opensuse.org/openSUSE:Release_Notes\" />"
+msgstr ""
+"若您是从某个旧版本升级到本版 openSUSE 的，之前的版本资讯列示于此，供您参考：<ulink url=\""
+"http://en.opensuse.org/openSUSE:Release_Notes\""
+">http://en.opensuse.org/openSUSE:Release_Notes</ulink>。"
 
 #: xml/release-notes.xml:92(title)
 msgid "Installation"
@@ -50,20 +53,23 @@ msgstr "安装"
 #: xml/release-notes.xml:94(para)
 msgid "This section contains installation-related notes. For detailed upgrade instructions, see the documentation at <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>."
 msgstr ""
+"此章节囊括了安装相关的注记。详细升级指引，请参考文档 <ulink url=\"https://doc.opensuse.org/documentatio"
+"n/leap/startup/html/book.opensuse.startup/part.basics.html\"/>。"
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #: xml/release-notes.xml:103(title)
 msgid "Minimal System Installation"
-msgstr "最小系统安装"
+msgstr "最小化系统安装"
 
 #: xml/release-notes.xml:104(para)
-#, fuzzy
 msgid "In order to avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
-msgstr "为避免一些建议的大型套件被安裝，最小安装模式 (pattern) 会使用到其他与非预期套件相冲突的样式。该样式 <literal>patterns-openSUSE-minimal_base-conflicts</literal> 可以在安装完成后移除。"
+msgstr ""
+"为了避免安装上某些体量巨大的推荐软件包,最小化安装模板使用了另一个模板,使其与不想要的软件包冲突。安装后可以移除这个 <literal>patterns-"
+"openSUSE-minimal_base-conflicts</literal> 模板。"
 
 #: xml/release-notes.xml:111(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
-msgstr "请注意最小系统安装预设不会启动防火墙。若您需要，请安装<literal>SuSEfirewall2</literal>。"
+msgstr "请注意最小化安装默认没有防火墙。若需要，请安装 <literal>SuSEfirewall2</literal>。"
 
 #: xml/release-notes.xml:119(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -106,75 +112,83 @@ msgstr "系统升级"
 #: xml/release-notes.xml:177(para)
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 msgstr ""
+"此章节列出了与升级系统有关的注记。详细升级指引请参考文档 <ulink url=\"https://doc.opensuse.org/documentat"
+"ion/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>。"
 
 #: xml/release-notes.xml:184(title)
-#, fuzzy
 msgid "Network Interface Names"
-msgstr "重复的网络接口"
+msgstr "网络接口名称"
 
 #: xml/release-notes.xml:185(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
-msgstr ""
+msgstr "当从 openSUSE 13.2 升级一个远程主机时，请确保您的网络接口命名正确。"
 
 #: xml/release-notes.xml:189(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr ""
+"openSUSE 13.2 使用了所谓的可预测网络接口名 (例如，<literal>enp5s0</literal>)，而 openSUSE Leap "
+"42.1 使用了固定网络接口名 (<literal>eth0</literal>)。因此升级并重启后网络接口名会改变。这会把您关在系统外面。要避免重命名接"
+"口，重新引导系统前请为您的每个网络接口运行以下命令："
 
 #: xml/release-notes.xml:198(replaceable)
 msgid "enp5s0"
-msgstr ""
+msgstr "enp5s0"
 
 #: xml/release-notes.xml:198(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
+"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
+"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
 #: xml/release-notes.xml:200(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
-msgstr ""
+msgstr "请将 <replaceable>enp5s0</replaceable> 替换为您的网络接口名称。"
 
 #: xml/release-notes.xml:207(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
-msgstr ""
+msgstr "Btrfs：系统回滚后磁盘空间泄露"
 
 #: xml/release-notes.xml:208(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr ""
+"openSUSE 13.2 使用了 Btrfs 分区布局，这使得磁盘空间在执行第一次系统回滚后会被过时且无法访问的内容给永久占用。这个布局问题已在 "
+"openSUSE Leap 42.1 中修复了。然而，这个修复只可以应用于新安装的系统。"
 
 #: xml/release-notes.xml:215(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
-msgstr ""
+msgstr "若您是从 openSUSE 13.2 升级的，您无法转换到新布局，但您可以回收这些丢失的磁盘空间。"
 
 #: xml/release-notes.xml:221(para)
 msgid "Mount the initial root filesystem:"
-msgstr ""
+msgstr "挂载初始 root 文件系统："
 
 #: xml/release-notes.xml:224(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-msgstr ""
+msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
 #: xml/release-notes.xml:224(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
-msgstr ""
+msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:227(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
-msgstr ""
+msgstr "移除 /mnt 下全部不属于子卷的文件："
 
 #: xml/release-notes.xml:230(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr ""
+msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:233(para)
 msgid "Umount the filesystem again:"
-msgstr ""
+msgstr "再次卸载文件系统："
 
 #: xml/release-notes.xml:236(screen)
 #, no-wrap
 msgid "umount /mnt"
-msgstr ""
+msgstr "umount /mnt"
 
 #: xml/release-notes.xml:244(title)
 msgid "General"
@@ -182,15 +196,17 @@ msgstr "常规"
 
 #: xml/release-notes.xml:247(title)
 msgid "Non-Oss Repository"
-msgstr ""
+msgstr "非开源软件源"
 
 #: xml/release-notes.xml:248(para)
 msgid "After the installation, the non-oss repository is disabled."
-msgstr ""
+msgstr "安装后非开源软件源是禁用的。"
 
 #: xml/release-notes.xml:251(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
+"请使用 YaST 自行启用 <literal>openSUSE-Leap-42.1-Non-Oss</literal> 软件源，或使用 zypper "
+"在命令行启用：<screen>zypper mr -e repo-non-oss</screen>"
 
 #: xml/release-notes.xml:261(title)
 msgid "Technical"
@@ -198,15 +214,15 @@ msgstr "技术"
 
 #: xml/release-notes.xml:265(title)
 msgid "Printing System: Improvements and Incompatible Changes"
-msgstr ""
+msgstr "打印系统：改进以及不兼容的变动"
 
 #: xml/release-notes.xml:268(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr ""
+msgstr "CUPS 版本升级至 1.7"
 
 #: xml/release-notes.xml:270(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
-msgstr ""
+msgstr "新版 CUPS 与 1.5 版相比引入了一些重要的变化，可能需要手动调整配置。"
 
 #: xml/release-notes.xml:277(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
@@ -262,9 +278,8 @@ msgid "Miscellaneous"
 msgstr "杂项"
 
 #: xml/release-notes.xml:372(title)
-#, fuzzy
 msgid "KDE and Network Authentication"
-msgstr "安装后无网络"
+msgstr "KDE 和网络认证"
 
 #: xml/release-notes.xml:373(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
@@ -279,10 +294,15 @@ msgid ""
 "[Users]\n"
 "MaximumUid=1002"
 msgstr ""
+"[Theme]\n"
+"Current=maldives\n"
+"\n"
+"[Users]\n"
+"MaximumUid=1002"
 
 #: xml/release-notes.xml:379(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
-msgstr ""
+msgstr "修改 <filename>/etc/sddm.conf</filename> 来包含以下项：<placeholder-1/>"
 
 #: xml/release-notes.xml:387(para)
 #, fuzzy
@@ -353,9 +373,8 @@ msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</u
 msgstr "访问 <ulink url=\"http://www.opensuse.org\"/> 获得来自 openSUSE 的最新产品资讯。"
 
 #: xml/release-notes.xml:462(para)
-#, fuzzy
 msgid "Copyright © 2015 SUSE LLC"
-msgstr "版权所有 © 2014 SUSE LLC"
+msgstr "版权所有 © 2015 SUSE LLC"
 
 #: xml/release-notes.xml:466(para)
 msgid "Thanks for using openSUSE."
