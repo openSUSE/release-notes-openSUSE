@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 14:25+0200\n"
-"PO-Revision-Date: 2016-05-23 02:17+0000\n"
+"PO-Revision-Date: 2016-06-09 21:21+0000\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
-"Language-Team: Swedish <http://l10n.opensuse.org/projects/release-notes-"
+"Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -101,7 +101,13 @@ msgstr "Med EFI/UEFI specifikationerna kom en ny modell för partitionering: GPT
 
 #: xml/release-notes.xml:152(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
-msgstr "UEFI specifikationerna tillåter också föråldrade MBR (MS-DOS) partitioner. Linux bootladdare (ELILO eller GRUB2) försöker att automatiskt generera ett GUID för dessa föråldrade partitioner och skriva in dem i UEFI-firmwaret. Sådana GUID ändras ofta och måste då omregistreras i firmwaret. En omregistrering består av två operationer: avlägsna det gamla ID:et och skapa ett nytt som ersätter det gamla."
+msgstr ""
+"UEFI specifikationerna tillåter också partitioner av den föråldrade typen "
+"MBR (MS-DOS). Linux bootladdare (ELILO eller GRUB2) försöker att automatiskt "
+"generera ett GUID för partitioner av denna typ och skriva in dem i UEFI-"
+"firmwaret. Sådana GUID ändras ofta och måste då omregistreras i firmwaret. "
+"En omregistrering består av två operationer: avlägsna det gamla ID:et och "
+"skapa ett nytt som ersätter det gamla."
 
 #: xml/release-notes.xml:161(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
@@ -109,7 +115,9 @@ msgstr "Moderna firmware har en soptunnehanterare som registrerar de borttagna I
 
 #: xml/release-notes.xml:167(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
-msgstr "Lösningen är enkel - omvandla de föråldrade MBR-partitionerna till GPT för att undvika detta problem."
+msgstr ""
+"Lösningen är enkel - omvandla MBR-partitionerna till GPT för att undvika "
+"detta problem."
 
 #: xml/release-notes.xml:176(title)
 msgid "System Upgrade"
@@ -285,7 +293,7 @@ msgstr "Som värde för servernamnet i <literal>-h</literal> växeln i kommandor
 #: xml/release-notes.xml:334(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "lpstat -h tidigare.server.exempel.com/version=1.1 -p"
 
 #: xml/release-notes.xml:340(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
