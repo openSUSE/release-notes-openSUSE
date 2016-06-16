@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-04-21 14:25+0200\n"
-"PO-Revision-Date: 2016-06-09 08:27+0000\n"
+"PO-Revision-Date: 2016-06-16 08:10+0000\n"
 "Last-Translator: Marguerite Su <i@marguerite.su>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap_42_1/zh_CN/>\n"
@@ -80,9 +80,12 @@ msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified E
 msgstr "将 openSUSE 安装到使用 UEFI (统一可扩展固件接口) 引导的计算机上前，特别建议您检查一下硬件制造商推荐的固件更新，并且，如果有的话，安装这样的更新。预装了 Windows 8 是表明您计算机使用 UEFI 引导的一个明显标志。"
 
 #: xml/release-notes.xml:128(para)
-#, fuzzy
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
-msgstr "<emphasis>背景知识：</emphasis> 某些 UEFI 固件有故障，会导致它在太多数据被写入 UEFI 存储区域时崩溃。但是，没有人真正知道多少是\"太多\"。openSUSE 仅会写入引导操作系统必需的超小数据，从而最小化了该风险。\"超小数据\"意思是说仅知会 UEFI 固件 openSUSE 引导加载器的位置。我们默认禁用了上游 Linux 内核的使用 UEFI 存储区域存放引导和崩溃信息 (<literal>pstore</literal>) 的功能。然而还是推荐安装硬件制造商推荐的任何固件更新。"
+msgstr ""
+"<emphasis>背景知识：</emphasis> 某些 UEFI 固件有故障，会导致它在太多数据被写入 UEFI 存储区域时崩溃。但是，"
+"没有人真正知道多少是\"太多\"。openSUSE 仅会写入引导操作系统必需的超小数据，从而最小化了该风险。\"超小数据\"意思是说仅知会 UEFI "
+"固件 openSUSE 引导加载器的位置。我们默认禁用了上游 Linux 内核的使用 UEFI 存储区域存放引导和崩溃信息 "
+"(<literal>pstore</literal>) 的功能。然而还是推荐安装硬件制造商推荐的任何固件更新。"
 
 #. bnc#850056
 #: xml/release-notes.xml:145(title)
@@ -226,52 +229,74 @@ msgstr "新版 CUPS 与 1.5 版相比引入了一些重要的变化，可能需�
 
 #: xml/release-notes.xml:277(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-msgstr ""
+msgstr "PDF 现在取代 PS 成为了标准打印任务格式。故传统的 PostScript 打印机现在也需要一个滤镜驱动才能打印。"
 
 #: xml/release-notes.xml:282(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
 msgstr ""
+"细节参考 <ulink url=\"https://en.opensuse.org/Concepts_printing\""
+">https://en.opensuse.org/Concepts_printing</ulink>。"
 
 #: xml/release-notes.xml:290(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"网络打印机发现协议有所变动，发现网络打印机的原生方法现在基于 DNS 服务发现 (DNS-SD，也就是，通过 Avahi)。来自 <literal"
+">cups-filters</literal> 软件包的 <literal>cups-browsed</literal> "
+"服务可用于桥接新旧协议。<literal>cupsd</literal> 和 <literal>cups-browsed</literal> "
+"都要运行才能使旧的客户端 (包括 LibreOffice 和 KDE) 发现打印机。"
 
 #: xml/release-notes.xml:303(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
+"IPP 协议的默认版本从 1.1 变为 2.0。旧的 IPP 服务器如 CUPS 1.3.x (例如 SUSE Linux Enterprise 11 "
+"中的) 会拒绝 IPP 2.0 请求，返回 <literal>Bad Request</literal> (参考 <ulink url=\""
+"http://www.cups.org/str.php?L4231\"/>)。"
 
 #: xml/release-notes.xml:309(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-msgstr ""
+msgstr "为了能使用旧打印机打印，必须显式指定 IPP 协议版本，通过追加 <literal>/version=1.1</literal> 到："
 
 #: xml/release-notes.xml:316(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"<literal>client.conf</literal> 中的 <literal>ServerName</literal> 设置 "
+"(例如，<literal>ServerName older.server.example.com/version=1.1</literal>)。"
 
 #: xml/release-notes.xml:324(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
+msgstr "<literal>CUPS_SERVER</literal> 环境变量值。"
 
 #: xml/release-notes.xml:330(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-msgstr ""
+msgstr "命令行工具 <literal>-h</literal> 选项设置的服务器名称值，例如："
 
 #: xml/release-notes.xml:334(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr ""
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
 #: xml/release-notes.xml:340(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"一些打印滤镜和后端从 <literal>cups</literal> 软件包移到 <literal>cups-filters</literal> 软件包。"
 
 #: xml/release-notes.xml:348(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgstr ""
+"一些配置命令从 <literal>cupsd.conf</literal> 拆分到 <literal>cups-files.conf</literal> "
+"(参考 <ulink url=\"http://www.cups.org/str.php?L4223\""
+">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, 和 <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)。"
 
 #: xml/release-notes.xml:357(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 msgstr ""
+"CUPS 条幅和测试页从 <literal>cups</literal> 软件包移至 <literal>cups-filters</literal> "
+"软件包 (参考 <ulink url=\"http://www.cups.org/str.php?L4120\""
+">http://www.cups.org/str.php?L4120</ulink> 和 <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)。"
 
 #: xml/release-notes.xml:370(title)
 msgid "Miscellaneous"
@@ -284,6 +309,8 @@ msgstr "KDE 和网络认证"
 #: xml/release-notes.xml:373(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
 msgstr ""
+"当使用 KDE 显示管理器 SDDM 和提供了大量用户的认证方法时，SSDM 会变得不可用。另外，若使用了自动挂载器，SSDM "
+"启动时或许会被阻滞很长时间来尝试挂载每个用户的家目录。"
 
 #: xml/release-notes.xml:381(programlisting)
 #, no-wrap
@@ -305,25 +332,30 @@ msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entri
 msgstr "修改 <filename>/etc/sddm.conf</filename> 来包含以下项：<placeholder-1/>"
 
 #: xml/release-notes.xml:387(para)
-#, fuzzy
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
-msgstr "这个问题和 Intel 驱动的其它问题 (参考 <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) 会被处理并且，可行的话，在一次在线更新中解决掉。"
+msgstr ""
+"细节请参考 <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=953778\""
+">http://bugzilla.opensuse.org/show_bug.cgi?id=953778</ulink>。"
 
 #: xml/release-notes.xml:395(title)
 msgid "No Screensaver Support in KDE Plasma"
-msgstr ""
+msgstr "KDE Plasma 不支持屏保"
 
 #: xml/release-notes.xml:396(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
-msgstr ""
+msgstr "KDE Plasma 默认不支持屏保。若您偏好使用屏保，请安装 <literal>xscreensaver</literal> 软件包。"
 
 #: xml/release-notes.xml:401(para)
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
 msgstr ""
+"要设置 <command>xscreensaver</command> 与桌面会话一同启动，请选择 <menuchoice><guimenu>K</gui"
+"menu><guimenu>设置</guimenu><guimenu>配置桌面</guimenu></menuchoice>，然后选择 <menuchoi"
+"ce><guimenu>开机和关机</guimenu><guimenu>自动启动</guimenu></menuchoice>。点击<guimenu>添加"
+"程序</guimenu>，输入 <literal>xscreensaver</literal> 并点击 <guimenu>好</guimenu>。"
 
 #: xml/release-notes.xml:410(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
-msgstr ""
+msgstr "要配置屏保，请使用 <command>xscreensaver-demo</command>。"
 
 #. bnc#809347
 #: xml/release-notes.xml:419(title)
@@ -332,45 +364,44 @@ msgstr "更多信息和反馈"
 
 #: xml/release-notes.xml:423(para)
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "请阅读安装介质上的 <filename>README</filename> 文档。"
 
 #: xml/release-notes.xml:428(para)
-#, fuzzy
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "从 RPM 中获取关乎某特定软件包的详细修订历史信息："
 
 #: xml/release-notes.xml:432(replaceable)
 msgid "FILENAME"
-msgstr ""
+msgstr "FILENAME"
 
 #: xml/release-notes.xml:432(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-msgstr "rpm --changelog -qp &lt;文件名&gt;.rpm"
+msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #: xml/release-notes.xml:433(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "讲 <replaceable>FILENAME</replaceable> 替换为 RPM 的名称。"
 
 #: xml/release-notes.xml:438(para)
-#, fuzzy
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
-msgstr "查看 DVD 顶级目录中的 <filename>ChangeLog</filename> 日志可获得按时间排列的全部软件包更新历史。"
+msgstr "查看介质顶层目录中的 <filename>ChangeLog</filename> 日志获得按时间排列的全部软件包更新历史。"
 
 #: xml/release-notes.xml:444(para)
-#, fuzzy
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
-msgstr "可于 DVD 上的 <filename>docu</filename> 文件夹获取更多信息。"
+msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息。"
 
 #: xml/release-notes.xml:450(para)
-#, fuzzy
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
-msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> 搜罗了额外的或更新的文档。"
+msgstr ""
+"<ulink url=\"https://activedoc.opensuse.org/\""
+">https://activedoc.opensuse.org/</ulink> 网罗了额外的或更新的文档。"
 
 #: xml/release-notes.xml:455(para)
-#, fuzzy
 msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
-msgstr "访问 <ulink url=\"http://www.opensuse.org\"/> 获得来自 openSUSE 的最新产品资讯。"
+msgstr ""
+"访问 <ulink url=\"http://www.opensuse.org\">https://www.opensuse.org</ulink> "
+"获得来自 openSUSE 的最新产品资讯。"
 
 #: xml/release-notes.xml:462(para)
 msgid "Copyright © 2015 SUSE LLC"
