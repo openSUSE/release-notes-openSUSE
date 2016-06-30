@@ -20,15 +20,16 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 14:25+0200\n"
-"PO-Revision-Date: 2016-04-20 09:32+0000\n"
-"Last-Translator: Vojtech Zeisek <Vojtech.Zeisek@opensuse.org>\n"
-"Language-Team: Czech <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/cs/>\n"
+"PO-Revision-Date: 2016-06-30 16:08+0000\n"
+"Last-Translator: Nela Moudrá <nmoudra@suse.com>\n"
+"Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_1/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.5\n"
+"X-Generator: Weblate 2.6\n"
 
 #: xml/release-notes.xml:10(title)
 msgid "Release Notes"
@@ -62,6 +63,10 @@ msgstr "Instalace"
 #: xml/release-notes.xml:94(para)
 msgid "This section contains installation-related notes. For detailed upgrade instructions, see the documentation at <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>."
 msgstr ""
+"Tato sekce obsahuje poznámky ohledně instalace. Detailní informace ohledně "
+"postupu upgrade najdete v dokumentaci zde <ulink url=\"https://doc.opensuse.o"
+"rg/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\""
+"/>."
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #: xml/release-notes.xml:103(title)
@@ -116,6 +121,9 @@ msgstr "Aktualizace systému"
 #: xml/release-notes.xml:177(para)
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 msgstr ""
+"Tato sekce obsahuje poznámky k upgradování systému. Detailní instrukce jak "
+"postupovat při upgradu najdete zde <ulink url=\"https://doc.opensuse.org/docu"
+"mentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 
 #: xml/release-notes.xml:184(title)
 msgid "Network Interface Names"
@@ -216,10 +224,15 @@ msgstr "Aktualizace verze CUPS na 1.7"
 #: xml/release-notes.xml:270(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgstr ""
+"Nová verze balíčku CUPS přinesla ve srovnání s verzí 1.5 významné změny, "
+"které mohou vyžadovat ruční úpravu konfigurace."
 
 #: xml/release-notes.xml:277(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"PDF je nyní standardním formátem pro tiskové operace místo původního PS. "
+"Proto nyní tradiční PostScript tiskárny vyžadují navíc filtrovací ovladač "
+"pro tisk."
 
 #: xml/release-notes.xml:282(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
@@ -228,45 +241,78 @@ msgstr "Pro detaily vizte <ulink url=\"https://en.opensuse.org/Concepts_printing
 #: xml/release-notes.xml:290(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"Protokol pro vyhledávání tiskáren na síti byl změněn. Základní metoda "
+"vyhledávání síťových tiskáren je nyní založena na službě DNS (DNS-SD - to je "
+"- via Avahi). Služba <literal>cups-browsed</literal> z balíčku  <literal"
+">cups-filters</literal> může být použita pro překlenutí starých a nových "
+"protokolů. Obě služby <literal>cupsd</literal> a <literal>cups-"
+"browsed</literal> musí být spuštěné aby umožnily \"legacy\" klientům "
+"vyhledat tiskárny (včetně LibreOffice and KDE)."
 
 #: xml/release-notes.xml:303(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
+"Defaultní verze protokolu IPP se změnila z 1.1. na 2.0. Starší IPP servery "
+"jako CUPS 1.3.x (např. v SUSE Linux Enterprise 11) odmítají IPP 2.0 "
+"požadavky jako <literal>Bad Request</literal> (viz <ulink url=\""
+"http://www.cups.org/str.php?L4231\"/>)."
 
 #: xml/release-notes.xml:309(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr ""
+"Aby bylo možné tisknout na starých serverech, musí být verze IPP protokolu "
+"explicitně specifikována přidáním <literal>/version=1.1</literal> zde:"
 
 #: xml/release-notes.xml:316(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"Sekce nastavení <literal>ServerName</literal> v souboru "
+"<literal>client.conf</literal> (například <literal>ServerName "
+"older.server.example.com/version=1.1</literal>)."
 
 #: xml/release-notes.xml:324(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
+msgstr "Hodnota environmentální proměnné <literal>CUPS_SERVER</literal>."
 
 #: xml/release-notes.xml:330(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
+"Hodnota možnosti <literal>-h</literal> při použití se jménem serveru v "
+"příkazové řádce - například:"
 
 #: xml/release-notes.xml:334(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr ""
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
 #: xml/release-notes.xml:340(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"Některé tiskové filtry a back-endy byly přesunuty z balíčku "
+"<literal>cups</literal> do balíčku <literal>cups-filters</literal>."
 
 #: xml/release-notes.xml:348(para)
-#, fuzzy
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr "Cupsd konfigurační direktivy jsou rozděleny do dvou souborů: cupsd.conf (mohou být modifikovány také přes HTTP PUT např pomocí cupsctl) a cups-files.conf (může být změněn pouze ručně uživatelem root) k získání lepší výchozí ochrany před zneužitím oprávnění normálními uživateli kteří dostali speciální oprávnění od roota k změnám konfigurace cupsd (viz <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr ""
+"Cupsd konfigurační direktivy jsou rozděleny do dvou souborů: cupsd.conf ("
+"mohou být modifikovány také přes HTTP PUT např pomocí cupsctl) a cups-"
+"files.conf (může být změněn pouze ručně uživatelem root) k získání lepší "
+"výchozí ochrany před zneužitím oprávnění normálními uživateli kteří dostali "
+"speciální oprávnění od roota k změnám konfigurace cupsd (viz <ulink url=\""
+"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
+" , CVE-2012-5519, a <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:357(para)
-#, fuzzy
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr "Cupsd konfigurační direktivy jsou rozděleny do dvou souborů: cupsd.conf (mohou být modifikovány také přes HTTP PUT např pomocí cupsctl) a cups-files.conf (může být změněn pouze ručně uživatelem root) k získání lepší výchozí ochrany před zneužitím oprávnění normálními uživateli kteří dostali speciální oprávnění od roota k změnám konfigurace cupsd (viz <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgstr ""
+"CUPS bannery a CUPS testovací stránka byly přesunuty z balíčku "
+"<literal>cups</literal> do balíčku <literal>cups-filters</literal> (viz <"
+"ulink url=\"http://www.cups.org/str.php?L4120\""
+">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #: xml/release-notes.xml:370(title)
 msgid "Miscellaneous"
@@ -278,9 +324,12 @@ msgid "KDE and Network Authentication"
 msgstr "KDE a síťová autentizace"
 
 #: xml/release-notes.xml:373(para)
-#, fuzzy
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
-msgstr "Je-li správce sezení KDE SDDM použit s autentizační metodou poskytující velké množství uživatelů je SDDM nepoužitelné. Je-li navíc použité automatické připojení, SDDM může na dlouhou dobu blokovat start, snažíce se připojit všechny uživatelské adresáře"
+msgstr ""
+"Je-li správce sezení KDE SDDM použit s autentizační metodou poskytující "
+"velké množství uživatelů je SDDM nepoužitelné. Je-li navíc použité "
+"automatické připojení, SDDM může na dlouhou dobu blokovat start, snažíce se "
+"připojit všechny uživatelské */home adresáře."
 
 #: xml/release-notes.xml:381(programlisting)
 #, no-wrap
@@ -307,19 +356,31 @@ msgstr "Pro detaily viz <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=9
 
 #: xml/release-notes.xml:395(title)
 msgid "No Screensaver Support in KDE Plasma"
-msgstr ""
+msgstr "Chybějící podpora spořiče obrazovky v KDE Plasma"
 
 #: xml/release-notes.xml:396(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
 msgstr ""
+"KDE Plasma v základu nepodporuje spořiče obrazovky. Pokud preferujete spořič "
+"obrazovky používat, nainstalujte si balíček <literal>xscreensaver</literal>."
 
 #: xml/release-notes.xml:401(para)
+#, fuzzy
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
 msgstr ""
+"Nastavte <command>xscreensaver</command> aby se spouštěl v sezení společně "
+"se správcem zobrazení výběrem "
+"<menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>"
+"Configure Desktop</guimenu></menuchoice> a poté zvolte <menuchoice><guimenu>"
+"Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. "
+"Klikněte na <guimenu>Add Program</guimenu>, napište "
+"<literal>xscreensaver</literal> a klikněte <guimenu>OK</guimenu>."
 
 #: xml/release-notes.xml:410(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
 msgstr ""
+"Pro nastavení spořiče obrazovky použijte <command>xscreensaver-"
+"demo</command>."
 
 #. bnc#809347
 #: xml/release-notes.xml:419(title)
@@ -327,13 +388,12 @@ msgid "More Information and Feedback"
 msgstr "Více informací a zpětná vazba"
 
 #: xml/release-notes.xml:423(para)
-#, fuzzy
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr "Další informace najdete na DVD v adresáři <filename>docu</filename>."
+msgstr "Přečtěte si dokument <filename>README</filename> na vašem médiu."
 
 #: xml/release-notes.xml:428(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
-msgstr "Získejte podrobné informace o změnách každého balíčku pomocí RPM:"
+msgstr "Zobrazte si podrobné informace o změnách v každém balíčku z jeho RPM:"
 
 #: xml/release-notes.xml:432(replaceable)
 msgid "FILENAME"
@@ -349,9 +409,11 @@ msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>FILENAME</replaceable> jménem RPM balíčku."
 
 #: xml/release-notes.xml:438(para)
-#, fuzzy
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
-msgstr "Pro časový protokol všech změn provedených na aktualizovaných balíčcích si prohlédněte soubor <filename>ChangeLog</filename> v kořenovém adresáři tohoto DVD."
+msgstr ""
+"Pro časový protokol všech změn provedených na aktualizovaných balíčcích si "
+"prohlédněte soubor <filename>ChangeLog</filename> v kořenovém adresáři "
+"tohoto DVD."
 
 #: xml/release-notes.xml:444(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
