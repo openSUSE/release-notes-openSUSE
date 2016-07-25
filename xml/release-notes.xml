@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
-     "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+<?xml-stylesheet href="urn:x-suse:xslt:profiling:docbook50-profile.xsl"
+                 type="text/xml"
+                 title="Profiling step"?>
+<!DOCTYPE article
 [
  <!ENTITY % myents SYSTEM "release-notes.ent" >
  %myents;
 ]>
 
-<article lang="en" id="rnotes">
+<article xml:lang="en" xml:id="rnotes"
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&rnotes;</title>
- <articleinfo>
-  <?dbsuse-bugtracker
-   url="https://bugzilla.suse.com/enter_bug.cgi"
-   product="openSUSE Distribution"
-   component="Release Notes"
-   assignee="sknorr@suse.com" ?>
+ <info>
   <releaseinfo>&rversion;</releaseinfo>
   <productname>&opensuseleap;</productname>
   <productnumber>&version;</productnumber>
@@ -25,7 +25,16 @@
     photos, do office work, play videos or music and have a lot of fun!
    </para>
   </abstract>
- </articleinfo>
+  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+    <dm:bugtracker>
+      <dm:url>https://bugzilla.suse.com/enter_bug.cgi</dm:url>
+      <dm:product>openSUSE Distribution</dm:product>
+      <dm:component>Release Notes</dm:component>
+      <dm:assignee>sknorr@suse.com</dm:assignee>
+    </dm:bugtracker>
+    <dm:translation>yes</dm:translation>
+  </dm:docmanager>
+ </info>
 
  <!-- split this para on account of bnc#401301 -->
 
@@ -40,7 +49,7 @@
   <para>
   The release notes are under constant development.
   To find out about the latest updates, refer to
-  <ulink url="https://doc.opensuse.org/releasenotes">https://doc.opensuse.org/releasenotes</ulink>.
+  <link xlink:href="https://doc.opensuse.org/releasenotes"/>.
 
   <phrase role="transwarn">We update the English release notes whenever need
   arises.  This means that translations might temporarily be
@@ -55,30 +64,32 @@
  <para>
   If you upgrade from an older version to this &opensuseleap; release, see
   previous release notes listed here:
-  <ulink url="http://en.opensuse.org/openSUSE:Release_Notes">http://en.opensuse.org/openSUSE:Release_Notes</ulink>.
+  <link xlink:href="http://en.opensuse.org/openSUSE:Release_Notes"/>.
  </para>
 
  <!-- beta statement -->
 
- <para os="slprof">
+ <para os="beta">
   This public beta test is part of the &opensuse; project.  Information
-  about the project is available at <ulink url="http://opensuse.org"/>.</para>
+  about the project is available at <link xlink:href="http://opensuse.org"/>.
+ </para>
 
- <para os="slprof">Find information about known bugs for this beta in the
-  &opensuse; wiki at <ulink url="http://en.opensuse.org/Bugs:Most_Annoying_Bugs"/>.
-  Report all bugs you encounter using this prerelease of &opensuse;
-  &version; in the &opensuse; Bugzilla. For more information, see <ulink
-   url="http://en.opensuse.org/Submitting_Bug_Reports"/>.  If you would like to
-  see anything added to the release notes, please file a bug report against the
-  component <quote>Release Notes</quote>.
+ <para os="beta">
+  Find information about known bugs for this beta in the &opensuse; wiki at
+  <link xlink:href="http://en.opensuse.org/Bugs:Most_Annoying_Bugs"/>. Report
+  all bugs you encounter using this prerelease of &opensuse; &version; in the
+  &opensuse; Bugzilla. For more information, see
+  <link xlink:href="http://en.opensuse.org/Submitting_Bug_Reports"/>. If you
+  would like to see anything added to the release notes, please file a bug
+  report against the component <quote>Release Notes</quote>.
  </para>
 
 
  <!--
- <section id="prerelease" role="prerelease">
+ <section xml:id="prerelease" role="prerelease">
   <title>Prerelease Notes</title>
 
-  <section id="code-name">
+  <section xml:id="code-name">
    <title>N/A&mdash;Codename &opensuseleap; &version;</title>
 
   <para>
@@ -88,16 +99,16 @@
  </section>
 -->
 
- <section id="installation">
+ <section xml:id="installation">
   <title>Installation</title>
 
   <para>
     This section contains installation-related notes.
     For detailed upgrade instructions, see the documentation at
-    <ulink url="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html"/>.
+    <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html"/>.
   </para>
 
-  <section id="sec.123.minimalinstall">
+  <section xml:id="sec.123.minimalinstall">
    <!-- https://bugzilla.suse.com/show_bug.cgi?id=947712 -->
    <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
    <title>Minimal System Installation</title>
@@ -109,13 +120,12 @@
     can be removed after installation.
    </para>
    <para>
-    Note that the minimal installation has no firewall by
-    default. If you need one, install
-    <literal>SuSEfirewall2</literal>.
+    Note that the minimal installation has no firewall by default. If you need
+    one, install <literal>SuSEfirewall2</literal>.
    </para>
   </section>
 
-  <section id="sec.123.uefi">
+  <section xml:id="sec.123.uefi">
    <title>UEFI&mdash;Unified Extensible Firmware Interface</title>
    <para>
     Prior to installing &opensuse; on a system that boots using UEFI
@@ -142,7 +152,7 @@
   </section>
 
 
-  <section id="sec.123.uefi-part">
+  <section xml:id="sec.123.uefi-part">
    <!-- bnc#850056 -->
    <title>UEFI, GPT, and MS-DOS Partitions</title>
    <para>
@@ -173,21 +183,21 @@
 
  </section>
 
- <!-- <section id="upgrade">
+ <!-- <section xml:id="upgrade">
   <title>System Upgrade</title>
   <para>
     This section lists notes related to upgrading the system.
     For detailed upgrade instructions, see the documentation at
-    <ulink url="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html"/>.
+    <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html"/>.
   </para>
 
 
  </section> -->
 
- <section id="general">
+ <section xml:id="general">
   <title>General</title>
 
-   <section id="sec.general.nonoss">
+   <section xml:id="sec.general.nonoss">
     <title>Non-Oss Repository</title>
     <para>
      After the installation, the non-oss repository is disabled.
@@ -201,19 +211,19 @@
 
  </section>
 
- <!-- <section id="technical">
+ <!-- <section xml:id="technical">
   <title>Technical</title>
   <para/>
 
 
  </section> -->
 
- <!-- <section id="misc" remap="Misc">
+ <!-- <section xml:id="misc">
   <title>Miscellaneous</title>
 
  </section> -->
 
- <section id="Feedback">
+ <section xml:id="feedback">
   <!-- bnc#809347 -->
   <title>More Information and Feedback</title>
 
@@ -247,12 +257,12 @@
    </listitem>
    <listitem>
     <para>
-     <ulink url="https://activedoc.opensuse.org/">https://activedoc.opensuse.org/</ulink> contains additional
+     <link xlink:href="https://activedoc.opensuse.org/"/> contains additional
      or updated documentation.</para>
    </listitem>
    <listitem>
     <para>
-     Visit <ulink url="https://www.opensuse.org">https://www.opensuse.org</ulink> for the latest product news
+     Visit <link xlink:href="https://www.opensuse.org"/> for the latest product news
      from &opensuse;.
     </para>
    </listitem>
