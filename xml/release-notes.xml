@@ -30,12 +30,12 @@
  <!-- split this para on account of bnc#401301 -->
 
  <!-- during beta testing -->
- <!--
+
  <para>
   This is the initial version of the release notes for the forthcoming
-  <phrase os="slprof">&opensuse; &suse-version;</phrase>.
+  <phrase os="slprof">&opensuse; &version;</phrase>.
  </para>
--->
+
  <!-- final
   <para>
   The release notes are under constant development.
@@ -59,30 +59,30 @@
  </para>
 
  <!-- beta statement -->
- <!--
+
  <para os="slprof">
   This public beta test is part of the &opensuse; project.  Information
   about the project is available at <ulink url="http://opensuse.org"/>.</para>
 
  <para os="slprof">Find information about known bugs for this beta in the
   &opensuse; wiki at <ulink url="http://en.opensuse.org/Bugs:Most_Annoying_Bugs"/>.
-  Please report all bugs you encounter using this prerelease of &opensuse;
-  &suse-version; in the Novell Bugzilla at <ulink
+  Report all bugs you encounter using this prerelease of &opensuse;
+  &version; in the &opensuse; Bugzilla. For more information, see <ulink
    url="http://en.opensuse.org/Submitting_Bug_Reports"/>.  If you would like to
   see anything added to the release notes, please file a bug report against the
-  <quote>Release Notes</quote> component.
+  component <quote>Release Notes</quote>.
  </para>
- -->
+
 
  <!--
  <section id="prerelease" role="prerelease">
   <title>Prerelease Notes</title>
 
   <section id="code-name">
-   <title>N/A&mdash;Codename &opensuse; &suse-version;</title>
+   <title>N/A&mdash;Codename &opensuseleap; &version;</title>
 
   <para>
-   The code name for &opensuse; &suse-version; is N/A.
+   The code name for &opensuse; &version; is N/A.
   </para>
   </section>
  </section>
@@ -102,7 +102,7 @@
    <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
    <title>Minimal System Installation</title>
    <para>
-    In order to avoid some big recommended packages from being
+    To avoid some big recommended packages from being
     installed, the pattern for minimal installations uses another
     pattern that creates conflicts with undesired packages. This pattern,
     <literal>patterns-openSUSE-minimal_base-conflicts</literal>,
@@ -126,16 +126,18 @@
    </para>
 
    <para>
-    <emphasis>Background:</emphasis> Some UEFI firmware has bugs that
-    cause it to break if too much data gets written to the UEFI storage
-    area. Nobody really knows how much "too much" is, though. &opensuse;
-    minimizes the risk by not writing more than the bare minimum
-    required to boot the OS.  The minimum means telling the UEFI
-    firmware about the location of the &opensuse; boot loader.  Upstream
-    Linux kernel features that use the UEFI storage area for storing
-    boot and crash information (<literal>pstore</literal>) have been
-    disabled by default. Nevertheless, it is recommended to install any
-    firmware updates the hardware vendor recommends.
+    <emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it
+    to break if too much data gets written to the UEFI storage area. However,
+    there is no clear data of how much is <quote>too much</quote>.
+   </para>
+   <para>
+    &opensuse; minimizes the risk by not writing more than the bare minimum
+    required to boot the OS. The minimum means telling the UEFI firmware about
+    the location of the &opensuse; boot loader. Upstream Linux kernel features
+    that use the UEFI storage area for storing boot and crash information
+    (<literal>pstore</literal>) have been disabled by default. Nevertheless, it
+    is recommended to install any firmware updates the hardware vendor
+    recommends.
    </para>
   </section>
 
@@ -151,28 +153,27 @@
    </para>
    <para>
     Additionally, the UEFI specification also allows legacy MBR (MS-DOS)
-    partitions. The Linux boot loaders (ELILO or GRUB2) try to
+    partitions. The Linux boot loaders (ELILO or GRUB 2) try to
     automatically generate a GUID for those legacy partitions, and write
     them to the firmware. Such a GUID can change frequently, causing a
-    rewrite in the firmware. A rewrite consist of two different
-    operation: removing the old entry and creating a new entry that
+    rewrite in the firmware. A rewrite consists of two different
+    operations: Removing the old entry and creating a new entry that
     replaces the first one.
    </para>
    <para>
     Modern firmware has a garbage collector that collects deleted
     entries and frees the memory reserved for old entries. A problem
-    arises when faulty firmware does not collect and free those entries;
-    this may end up with a non-bootable system.
+    arises when faulty firmware does not collect and free those entries.
+    This can result in a non-bootable system.
    </para>
    <para>
-    The workaround is simple: convert the legacy MBR partition to the
-    new GPT to avoid this problem completely.
+    To work around this problem, convert the legacy MBR partition to GPT.
    </para>
   </section>
 
  </section>
 
- <section id="upgrade">
+ <!-- <section id="upgrade">
   <title>System Upgrade</title>
   <para>
     This section lists notes related to upgrading the system.
@@ -180,65 +181,8 @@
     <ulink url="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html"/>.
   </para>
 
-   <section id="sec.upgrade.interfacename">
-    <title>Network Interface Names</title>
-    <para>
-     When upgrading a remote machine from &opensuse; 13.2, make sure your
-     network interfaces are named correctly.
-    </para>
-    <para>
-     &opensuse; 13.2 used so-called predictable network interface names (for
-     example, <literal>enp5s0</literal>), whereas &opensuseleap; 42.1 uses persistent
-     interface names (<literal>eth0</literal>). After upgrading and rebooting,
-     the network interface names may therefore change. This could lock you out
-     of the system. To avoid interfaces from being renamed, run the following
-     command for each of your network interfaces before you reboot the system:
-    </para>
 
-<screen>/usr/lib/udev/udev-generate-persistent-rule -v -c <replaceable>enp5s0</replaceable> -n <replaceable>enp5s0</replaceable> -o /etc/udev/rules.d/70-persistent-net.rules</screen>
-
-    <para>
-     Replace <replaceable>enp5s0</replaceable> with the name of your network
-     interface.
-    </para>
-   </section>
-
-   <section id="sec.upgrade.btrfsleak">
-    <title>Btrfs: Disk Space Leak after System Rollbacks</title>
-    <para>
-     &opensuse; 13.2 used a Btrfs partition layout that allowed for disk space
-     to become permanently occupied with stale, inaccessible contents after the
-     first system rollback was executed.
-     This layout issue has been fixed in &opensuseleap; 42.1.
-     However, the fix can only be applied to newly installed systems.
-    </para>
-    <para>
-     If you are upgrading from &opensuse; 13.2, you cannot convert the
-     to the new layout, but you can reclaim the lost disk space.
-    </para>
-    <procedure>
-    <step>
-     <para>
-      Mount the initial root filesystem:
-     </para>
-<screen>mount /dev/<replaceable>&lt;ROOT_FILE_SYSTEM&gt;</replaceable> -o subvolid=5 /mnt</screen>
-    </step>
-    <step>
-     <para>
-      Remove all files below /mnt that are not in a subvolume:
-     </para>
-<screen>find /mnt -xdev -delete</screen>
-    </step>
-    <step>
-     <para>
-      Umount the filesystem again:
-     </para>
-<screen>umount /mnt</screen>
-    </step>
-   </procedure>
-  </section>
-
- </section>
+ </section> -->
 
  <section id="general">
   <title>General</title>
@@ -249,7 +193,7 @@
      After the installation, the non-oss repository is disabled.
     </para>
     <para>
-     Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using
+     Enable the <literal>openSUSE-Leap-42.2-Non-Oss</literal> repository using
      YaST or on the command line using zypper:
      <screen>zypper mr -e repo-non-oss</screen>
     </para>
@@ -257,162 +201,17 @@
 
  </section>
 
- <section id="technical">
+ <!-- <section id="technical">
   <title>Technical</title>
   <para/>
 
-  <section id="fate-314630">
-   <title>Printing System: Improvements and Incompatible Changes</title>
-   <!-- href="https://fate.novell.com/314630" -->
-   <para>
-    <emphasis role="bold">CUPS Version Upgrade to 1.7</emphasis>
-   </para>
-   <para>
-    The new CUPS version introduced some major changes compared to 1.5
-    that may require manual configuration adjustments.
-   </para>
 
-   <itemizedlist>
-    <listitem>
-     <para>
-      PDF is now the standard print job format rather than PS.
-      Therefore traditional PostScript printers now also need a
-      filter driver for printing.
-     </para>
-     <para>
-      See
-      <ulink url="https://en.opensuse.org/Concepts_printing">https://en.opensuse.org/Concepts_printing</ulink>
-      for details.
-     </para>
-    </listitem>
+ </section> -->
 
-    <listitem>
-     <para>
-      The network printer discovery protocol has changed.
-      The native method to discover network printers is now based on DNS Service
-      discovery (DNS-SD, that is, via Avahi).
-      The <literal>cups-browsed</literal> service from the
-      <literal>cups-filters</literal> package can be used to bridge old and new
-      protocols. Both <literal>cupsd</literal> and
-      <literal>cups-browsed</literal> need to run to make "legacy" clients
-      discover printers (that includes LibreOffice and KDE).
-     </para>
-    </listitem>
-
-    <listitem>
-     <para> The IPP protocol default version changed from 1.1
-      to 2.0. Older IPP servers like CUPS 1.3.x (for example in
-      &sle; 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see
-      <ulink url="http://www.cups.org/str.php?L4231"/>).
-     </para>
-
-     <para>
-      To be able to print to old servers, the IPP protocol version must be
-      specified explictly by appending <literal>/version=1.1</literal> to either:
-     </para>
-
-     <itemizedlist>
-      <listitem>
-       <para>
-        The <literal>ServerName</literal> settings in
-        <literal>client.conf</literal> (for example,
-        <literal>ServerName older.server.example.com/version=1.1</literal>).
-       </para>
-      </listitem>
-
-      <listitem>
-       <para>
-        The <literal>CUPS_SERVER</literal> environment variable value.
-       </para>
-      </listitem>
-
-      <listitem>
-       <para>
-        The server name value of the <literal>-h</literal> option of the
-        command line tools, for example:
-       </para>
-        <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>
-      </listitem>
-     </itemizedlist>
-    </listitem>
-
-    <listitem>
-     <para>
-      Some printing filters and back-ends were moved from the
-      <literal>cups</literal> package to the <literal>cups-filters</literal>
-      package.
-     </para>
-    </listitem>
-
-    <listitem>
-     <para> Some configuration directives were split from <literal>cupsd.conf</literal>
-      into <literal>cups-files.conf</literal>
-      (see
-      <ulink url="http://www.cups.org/str.php?L4223">http://www.cups.org/str.php?L4223</ulink>,
-      CVE-2012-5519, and
-      <ulink url="https://bugzilla.opensuse.org/show_bug.cgi?id=789566">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>).
-     </para>
-    </listitem>
-    <listitem>
-     <para>CUPS banners and the CUPS test page were moved from
-      the <literal>cups</literal> package to the
-      <literal>cups-filters</literal> package (see
-      <ulink url="http://www.cups.org/str.php?L4120">http://www.cups.org/str.php?L4120</ulink>
-      and
-      <ulink url="https://bugzilla.opensuse.org/show_bug.cgi?id=735404">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>).
-     </para>
-    </listitem>
-   </itemizedlist>
-  </section>
- </section>
-
- <section id="misc" remap="Misc">
+ <!-- <section id="misc" remap="Misc">
   <title>Miscellaneous</title>
-  <section id="sec.misc.kdenetwork">
-   <title>KDE and Network Authentication</title>
-   <para>
-    When using the KDE display manager SDDM with an authentication
-    method that provides a high number of users, SDDM becomes
-    unusable. Additionally, if the automounter is used, SDDM may
-    block for a long time on startup trying to mount every user's home.
-   </para>
-   <para>
-    Modify <filename>/etc/sddm.conf</filename> to contain the following entries:
-    <programlisting>[Theme]
-Current=maldives
 
-[Users]
-MaximumUid=1002</programlisting>
-   </para>
-   <para>
-    See
-    <ulink url="https://bugzilla.suse.com/show_bug.cgi?id=953778">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink>
-    for details.
-   </para>
-  </section>
-
-  <section id="sec.misc.kdescreensaver">
-   <title>No Screensaver Support in KDE Plasma</title>
-   <para>
-    KDE Plasma does not support screensavers by default.
-    If you prefer to have a screensaver, install the
-    package <literal>xscreensaver</literal>.
-   </para>
-   <para>
-    Set <command>xscreensaver</command> to start with the desktop session by
-    selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu>
-    <guimenu>Configure Desktop</guimenu></menuchoice>, then choose
-    <menuchoice><guimenu>Startup and Shutdown</guimenu>
-    <guimenu>Autostart</guimenu></menuchoice>.
-    Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal>
-    and click <guimenu>OK</guimenu>.
-   </para>
-   <para>
-    To configure the screensaver, use <command>xscreensaver-demo</command>.
-   </para>
-  </section>
-
- </section>
+ </section> -->
 
  <section id="Feedback">
   <!-- bnc#809347 -->
