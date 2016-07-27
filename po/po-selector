@@ -38,9 +38,9 @@ MANDATORY_POT=../release-notes-mandatory.pot
 # output to stdout: percentage of translated strings
 # input: po file name
 function get_po_percentage() {
-	LC_ALL=C msgfmt --statistics -o /dev/null "$1" 2>&1 |
-		grep -v "warning:" |
-		awk 'BEGIN{FS = ","}
+  LC_ALL=C msgfmt --statistics -o /dev/null "$1" 2>&1 |
+    grep -v "warning:" |
+    awk 'BEGIN{FS = ","}
 {
     $1 ~ /.* translated/ && trans = $1 + 0
     all = $1 + $2 + $3
@@ -54,53 +54,53 @@ function get_po_percentage() {
 # output to stdout: age of translation in days
 # input: po file name
 function get_po_age() {
-	rm -f "$1".po-date
-	msgfilter -i $1 sh -c "grep ^PO-Revision-Date: >>"$1".po-date" 2>/dev/null
-	DATE="$(sed 's/PO-Revision-Date://' <$1.po-date)"
-	if test -z "$DATE" ; then
-		echo 0
-	else
-		eval echo $(( ( $CURRENT_date_s - $(if ! date -d "$DATE" +%s ; then echo 0 ; fi) ) / 86440 ))
-	fi
-	rm -f $1.po-date
+  rm -f "$1".po-date
+  msgfilter -i $1 sh -c "grep ^PO-Revision-Date: >>"$1".po-date" 2>/dev/null
+  DATE="$(sed 's/PO-Revision-Date://' <$1.po-date)"
+  if test -z "$DATE" ; then
+    echo 0
+  else
+    eval echo $(( ( $CURRENT_date_s - $(if ! date -d "$DATE" +%s ; then echo 0 ; fi) ) / 86440 ))
+  fi
+  rm -f $1.po-date
 }
 CURRENT_date_s=$(date +%s)
 
 cd `dirname $0`
 
 for PO in *.po ; do
-	echo -n >&2 "$PO: "
-	AGE=$(get_po_age "$PO")
-	echo -n >&2 "age $AGE days, "
-	if test $AGE -gt $NEW_AGE ; then
-		echo -n >&2 "applying rule ${CRITERION//_/ } $AT_LEAST% for old files, "
-		THRESHOLD=$AT_LEAST
-		case $CRITERION in
-		at_least )
-			PERCENTAGE=$(get_po_percentage "$PO")
-		;;
-		mandatory_at_least )
-			PERCENTAGE=$(msgmerge -N -q "$PO" $MANDATORY_POT -o - | get_po_percentage - )
-		;;
-		esac
-	else
-		echo -n >&2 "applying rule ${CRITERION_NEW//_/ } $NEW_AT_LEAST% for new files, "
-		THRESHOLD=$NEW_AT_LEAST
-		case $CRITERION_NEW in
-		at_least )
-			PERCENTAGE=$(get_po_percentage "$PO")
-		;;
-		mandatory_at_least )
-			PERCENTAGE=$(msgmerge -N -q "$PO" $MANDATORY_POT -o - | get_po_percentage - )
-		;;
-		esac
-	fi
-	if test $PERCENTAGE -ge $THRESHOLD ; then
-		echo >&2 "got $PERCENTAGE%, passed."
-		echo -n " $PO" | sed 's/\.po//'
-	else
-		echo >&2 "got $PERCENTAGE%, too weak."
-	fi
+  echo -n >&2 "$PO: "
+  AGE=$(get_po_age "$PO")
+  echo -n >&2 "age $AGE days, "
+  if test $AGE -gt $NEW_AGE ; then
+    echo -n >&2 "applying rule ${CRITERION//_/ } $AT_LEAST% for old files, "
+    THRESHOLD=$AT_LEAST
+    case $CRITERION in
+    at_least )
+      PERCENTAGE=$(get_po_percentage "$PO")
+    ;;
+    mandatory_at_least )
+      PERCENTAGE=$(msgmerge -N -q "$PO" $MANDATORY_POT -o - | get_po_percentage - )
+    ;;
+    esac
+  else
+    echo -n >&2 "applying rule ${CRITERION_NEW//_/ } $NEW_AT_LEAST% for new files, "
+    THRESHOLD=$NEW_AT_LEAST
+    case $CRITERION_NEW in
+    at_least )
+      PERCENTAGE=$(get_po_percentage "$PO")
+    ;;
+    mandatory_at_least )
+      PERCENTAGE=$(msgmerge -N -q "$PO" $MANDATORY_POT -o - | get_po_percentage - )
+    ;;
+    esac
+  fi
+  if test $PERCENTAGE -ge $THRESHOLD ; then
+    echo >&2 "got $PERCENTAGE%, passed."
+    echo -n " $PO" | sed 's/\.po//'
+  else
+    echo >&2 "got $PERCENTAGE%, too weak."
+  fi
 done >LINGUAS
 
 # make sure english is always there
