@@ -16,7 +16,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2016-07-27 15:13+0200\n"
+"POT-Creation-Date: 2016-07-28 16:49+0200\n"
 "PO-Revision-Date: 2015-11-18 22:48+0200\n"
 "Last-Translator: jc sl <trcs@gmx.com>\n"
 "Language-Team: Spanish <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/es/>\n"
@@ -65,163 +65,186 @@ msgstr ""
 msgid "This is the initial version of the release notes for the forthcoming openSUSE 42.2."
 msgstr ""
 
+#: xml/release-notes.xml:47(para)
+msgid "The release notes are under constant development. To find out about the latest updates, see the online version at <link href=\"https://doc.opensuse.org/releasenotes\"/>. The English release notes are updated whenever need arises. Translated language version can be temporarily be incomplete."
+msgstr ""
+
 #. Previous Release Notes
-#: xml/release-notes.xml:63(para)
+#: xml/release-notes.xml:56(para)
 #, fuzzy
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <link href=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>."
 msgstr "Si actualiza desde una versión anterior de openSUSE, lea las notas de las versiones anteriores listadas aquí: <ulink url=\"http://en.opensuse.org/Release_Notes\"/>"
 
 #. beta statement
-#: xml/release-notes.xml:71(para)
-msgid "This public beta test is part of the openSUSE project. Information about the project is available at <link href=\"http://opensuse.org\"/>."
+#: xml/release-notes.xml:64(para)
+msgid "This public beta test is part of the openSUSE project. Information about the project is available at <link href=\"https://www.opensuse.org\"/>."
 msgstr ""
 
-#: xml/release-notes.xml:76(para)
-msgid "Find information about known bugs for this beta in the openSUSE wiki at <link href=\"http://en.opensuse.org/Bugs:Most_Annoying_Bugs\"/>. Report all bugs you encounter using this prerelease of openSUSE 42.2 in the openSUSE Bugzilla. For more information, see <link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/>. If you would like to see anything added to the release notes, please file a bug report against the component <quote>Release Notes</quote>."
+#: xml/release-notes.xml:69(para)
+msgid "Report all bugs you encounter using this prerelease of openSUSE 42.2 in the openSUSE Bugzilla. For more information, see <link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/>. If you would like to see anything added to the release notes, file a bug report against the component <quote>Release Notes</quote>."
 msgstr ""
 
-#: xml/release-notes.xml:102(title)
+#: xml/release-notes.xml:79(title)
 msgid "Installation"
 msgstr "Instalación"
 
-#: xml/release-notes.xml:104(para)
+#: xml/release-notes.xml:81(para)
 msgid "This section contains installation-related notes. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>."
 msgstr ""
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
-#: xml/release-notes.xml:113(title)
+#: xml/release-notes.xml:90(title)
 #, fuzzy
 msgid "Minimal System Installation"
 msgstr "Instalación del sistema base"
 
-#: xml/release-notes.xml:114(para)
+#: xml/release-notes.xml:91(para)
 #, fuzzy
 msgid "To avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
 msgstr "Con el fin de evitar que algunos paquetes grandes recomendados sean instalados, el patrón para instalaciones mínimas usa otro patrón que entra en conflicto con los paquetes no deseados. Ese patrón se puede borrar tras la instalación, se llama <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
 
-#: xml/release-notes.xml:121(para)
+#: xml/release-notes.xml:98(para)
 #, fuzzy
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr "Tenga en cuenta que la instalación mínima no incluye un cortafuegos de forma predeterminada. Si necesita uno, instale <literal>SuSEfirewall2</literal>"
 
-#: xml/release-notes.xml:128(title)
+#: xml/release-notes.xml:105(title)
 #, fuzzy
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI: Interfaz Unificada Extensible del Firmware"
 
-#: xml/release-notes.xml:129(para)
+#: xml/release-notes.xml:106(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "Antes de instalar openSUSE en un sistema que se inicia utilizando UEFI (Interfaz Unificada Extensible del Firmware), se recomienda encarecidamente verificar si hay  actualizaciones del firmware del fabricante, y, de existir, instalar dicha actualización. Un sistema con Windows 8 preinstalado es un fuerte indicador de que su sistema se inicia utilizando UEFI."
 
-#: xml/release-notes.xml:137(para)
+#: xml/release-notes.xml:114(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. However, there is no clear data of how much is <quote>too much</quote>."
 msgstr ""
 
-#: xml/release-notes.xml:142(para)
+#: xml/release-notes.xml:119(para)
 #, fuzzy
 msgid "openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>Más información:</emphasis> Algunos firmware UEFI tienen fallos (bugs) que causan problemas si demasiada información es escrita en el área de almacenamiento UEFI. Nadie sabe realmente cuánto es realmente \"demasiado\". openSUSE minimiza el riesgo al no escribir más que el mínimo necesario requerido para iniciar el sistema. Lo mínimo significa, indicar al firmware UEFI la ubicación del cargador de arranque de openSUSE. El kernel Linux original tiene características que utilizan el área de almacenamiento UEFI para grabar información de inicio e información de fallos (<literal>pstore</literal>), las cuales han sido deshabilitadas. Aún así, se recomienda instalar cualquier actualización de firmware recomendada por el fabricante."
 
 #. bnc#850056
-#: xml/release-notes.xml:156(title)
+#: xml/release-notes.xml:133(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT y particiones MS-DOS"
 
-#: xml/release-notes.xml:157(para)
+#: xml/release-notes.xml:134(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "Junto con la especificación EFI/UEFI, ha llegado un nuevo estilo de particionamiento: GPT (GUID Partition Table). Este nuevo esquema usa identificadores globalmente únicos (valores de 128-bit mostrados como 32 dígitos hexadecimales) para identificar dispositivos y tipos de partición."
 
-#: xml/release-notes.xml:163(para)
+#: xml/release-notes.xml:140(para)
 #, fuzzy
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces the first one."
 msgstr "Además, la especificación UEFI también permite particiones tradicionales MBR (MS-DOS). Los cargadores de arranque de Linux (ELILO o GRUB2) tratan de generar automáticamente un GUID para esas particiones tradicionales y escribirlos al firmware. Tal GUID puede cambiar frecuentemente, causando una escritura en el firmware. Una escritura consta de dos operaciones distintas: quitar la entrada antigua y crear una nueva que reemplaza a la primera."
 
-#: xml/release-notes.xml:172(para)
+#: xml/release-notes.xml:149(para)
 #, fuzzy
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries. This can result in a non-bootable system."
 msgstr "Los firmwares modernos incorporan procesos de mantenimiento que recopilan las entradas eliminadas y liberan la memoria reservada para las entradas anteriores. Si hay errores en el firmware que impidan el recopilamiento y la liberación de entradas, el sistema podría no arrancar."
 
-#: xml/release-notes.xml:178(para)
+#: xml/release-notes.xml:155(para)
 #, fuzzy
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "Es sencillo evitar esta situación: convierta la partición del sistema heredado MBR al nuevo GPT y no incurrirá jamás en este problema."
 
-#: xml/release-notes.xml:197(title)
+# CER: Usamos la misma traducci´on para update y upgrade, y hay que diferenciarlos
+#: xml/release-notes.xml:163(title)
+msgid "System Upgrade"
+msgstr "Actualización del sistema"
+
+#: xml/release-notes.xml:164(para)
+msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
+msgstr ""
+
+#: xml/release-notes.xml:171(title)
+msgid "Removed and replaced packages"
+msgstr ""
+
+#: xml/release-notes.xml:172(para)
+msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
+msgstr ""
+
+#: xml/release-notes.xml:177(para)
+msgid "<literal>ungifsicle</literal>: replaced by <literal>gifsicle</literal>"
+msgstr ""
+
+#: xml/release-notes.xml:178(para)
+msgid "<literal>psi</literal>: replaced by <literal>psi+</literal>"
+msgstr ""
+
+#: xml/release-notes.xml:179(para)
+msgid "<literal>xchat</literal>: replaced by <literal>hexchat</literal>"
+msgstr ""
+
+#: xml/release-notes.xml:186(title)
 msgid "General"
 msgstr "General"
 
-#: xml/release-notes.xml:200(title)
-msgid "Non-Oss Repository"
-msgstr "Repositorio Non-Oss"
-
-#: xml/release-notes.xml:201(para)
-#, fuzzy
-msgid "After the installation, the non-oss repository is disabled."
-msgstr "Después de la instalación se inhabilita el repositorio non-oss"
-
-#: xml/release-notes.xml:204(para)
-#, fuzzy
-msgid "Enable the <literal>openSUSE-Leap-42.2-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
-msgstr "Habilite el repositorio <literal>openSUSE-Leap-42.1-Non-Oss</literal> usando YaST o desde la línea de órdenes usando zypper: <screen>zypper mr -e repo-non-oss</screen>"
+#: xml/release-notes.xml:188(para)
+msgid "This section lists general issues with openSUSE Leap 42.2 that do not match any other category."
+msgstr ""
 
 # CER: no estoy seguro de la traducción de Feedback. Tiene el sentido de comentarios de los usuarios hacia los desarrolladores o la distro.
 #. bnc#809347
-#: xml/release-notes.xml:227(title)
+#: xml/release-notes.xml:221(title)
 msgid "More Information and Feedback"
 msgstr "Mas información y comentarios"
 
-#: xml/release-notes.xml:231(para)
+#: xml/release-notes.xml:225(para)
 #, fuzzy
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Encuentre más información en el directorio <filename>docu</filename> en el DVD."
 
-#: xml/release-notes.xml:236(para)
+#: xml/release-notes.xml:230(para)
 #, fuzzy
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Obtener información detallada de los cambios en un paquete en particular desde el RPM:"
 
-#: xml/release-notes.xml:240(replaceable)
+#: xml/release-notes.xml:234(replaceable)
 msgid "FILENAME"
 msgstr ""
 
-#: xml/release-notes.xml:240(screen)
+#: xml/release-notes.xml:234(screen)
 #, fuzzy, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 
-#: xml/release-notes.xml:241(para)
+#: xml/release-notes.xml:235(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
-#: xml/release-notes.xml:246(para)
+#: xml/release-notes.xml:240(para)
 #, fuzzy
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "Revise el fichero <filename>ChangeLog</filename> en el directorio principal del DVD para obtener una lista cronológica de todos los cambios hechos a los paquetes actualizados."
 
-#: xml/release-notes.xml:252(para)
+#: xml/release-notes.xml:246(para)
 #, fuzzy
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Encuentre más información en el directorio <filename>docu</filename> en el DVD."
 
-#: xml/release-notes.xml:258(para)
+#: xml/release-notes.xml:252(para)
 #, fuzzy
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> contiene información adicional o documentación actualizada."
 
-#: xml/release-notes.xml:263(para)
+#: xml/release-notes.xml:257(para)
 #, fuzzy
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Visite <ulink url=\"http://www.opensuse.org\"/> para tener las últimas noticias de los productos de openSUSE."
 
-#: xml/release-notes.xml:270(para)
+#: xml/release-notes.xml:264(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:274(para)
+#: xml/release-notes.xml:268(para)
 msgid "Thanks for using openSUSE."
 msgstr "Gracias por usar openSUSE."
 
-#: xml/release-notes.xml:277(para)
+#: xml/release-notes.xml:271(para)
 msgid "The openSUSE Team."
 msgstr "El equipo openSUSE."
 
@@ -234,6 +257,17 @@ msgstr ""
 "Carlos Robinson M., 2007-2008, 2013-2014\n"
 "Victorhck 2015"
 
+#~ msgid "Non-Oss Repository"
+#~ msgstr "Repositorio Non-Oss"
+
+#, fuzzy
+#~ msgid "After the installation, the non-oss repository is disabled."
+#~ msgstr "Después de la instalación se inhabilita el repositorio non-oss"
+
+#, fuzzy
+#~ msgid "Enable the <literal>openSUSE-Leap-42.2-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
+#~ msgstr "Habilite el repositorio <literal>openSUSE-Leap-42.1-Non-Oss</literal> usando YaST o desde la línea de órdenes usando zypper: <screen>zypper mr -e repo-non-oss</screen>"
+
 #~ msgid "Copyright © 2015 SUSE LLC"
 #~ msgstr "Copyright © 2015 SUSE LLC"
 
@@ -243,10 +277,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 #~ msgstr "Si actualiza desde una versión anterior a esta versión de openSUSE Leap, lea las notas de las versiones anteriores listadas aquí: <ulink url=\"http://en.opensuse.org/Release_Notes\"/>"
-
-# CER: Usamos la misma traducci´on para update y upgrade, y hay que diferenciarlos
-#~ msgid "System Upgrade"
-#~ msgstr "Actualización del sistema"
 
 #, fuzzy
 #~ msgid "Network Interface Names"
