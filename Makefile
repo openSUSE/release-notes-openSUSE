@@ -105,7 +105,7 @@ single-html: $(SINGLE_HTML_FILES)
 $(SINGLE_HTML_FILES): po/LINGUAS translatedxml
 	lang=$(LANG_COMMAND) ; \
 	$(DAPS_COMMAND) html --single \
-	--stringparam "homepage='http://www.opensuse.com'" \
+	--stringparam "homepage='https://www.opensuse.org'" \
 	PROFCONDITION="general\;$(LIFECYCLE)"
 
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
