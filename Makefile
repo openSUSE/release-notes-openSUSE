@@ -17,6 +17,9 @@ endif
 ifndef STYLEROOT
   STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013-ns
 endif
+ifndef VERSION
+  VERSION := unreleased
+endif
 
 # Allows for DocBook profiling (hiding/showing some text).
 LIFECYCLE_VALID := beta pre maintained unmaintained
@@ -90,7 +93,7 @@ xml/release-notes.%.xml: po/%.po xml/release-notes.ent xml/release-notes.xml
 	  $@
 	sed -i -r -e '/^ *<dm:docmanager.*$$/,/^ *<\/dm:docmanager>.*$$/d' \
 	  $@
-	sed -i -r -e 's_<releaseinfo>[^>]+>_<releaseinfo>@VERSION@</releaseinfo>_' \
+	sed -i -r -e "s_<releaseinfo>[^>]+>_<releaseinfo>$(VERSION)</releaseinfo>_" \
 	  $@
 
 translatedxml: xml/release-notes.ent xml/release-notes.xml $(XML_FILES)
