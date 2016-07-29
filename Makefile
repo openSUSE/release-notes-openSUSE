@@ -72,7 +72,7 @@ release-notes.pot: xml/release-notes.ent xml/release-notes.xml
 po: $(PO_FILES)
 po/%.po: release-notes.pot
 	if [ -r $@ ]; then \
-       msgmerge  --no-wrap --update $@ release-notes.pot; \
+       msgmerge  --previous --no-wrap --update $@ release-notes.pot; \
    else \
        msgen -o $@ release-notes.pot; \
    fi
