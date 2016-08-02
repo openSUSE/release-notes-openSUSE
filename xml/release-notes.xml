@@ -185,6 +185,121 @@
     </itemizedlist>
   </section>
 
+  <!-- FATE#320834 -->
+  <section xml:id="sec.upgrade.cache">
+    <title><filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback</title>
+    <para>
+     <filename>/var/cache</filename> contains a lot of very volatile data, such
+     as the Zypper cache with RPM packages in different versions for each
+     update. As a result of storing data that is mostly redundant but highly
+     volatile, the amount of disk space a snapshot occupies can increase very
+     fast.
+    </para>
+    <para>
+     To solve this, move <filename>/var/cache</filename> to a separate
+     subvolume. On fresh installations of &opensuseleap; &version;, this is
+     done automatically. To convert an existing root file system, perform the
+     following steps:
+    </para>
+    <procedure xml:id="pro.upgrade.cache">
+     <step>
+      <para>
+       Find out the device name (for example,
+       <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of
+       the root file system:
+      </para>
+      <screen><command>df /</command></screen>
+     </step>
+     <step>
+      <para>
+       Identify the parent subvolume of all the other subvolumes. For
+       &opensuse; 13.2 installations, this is a subvolume named
+       <filename>@</filename>. To check if you have a
+       <filename>@</filename> subvolume, use:
+      </para>
+      <screen><command>btrfs subvolume list / | grep '@'</command></screen>
+      <para>
+       If the output of this command is empty, you do not have a subvolume
+       named <filename>@</filename>. In that case, you may be able to proceed
+       with subvolume ID 5 which was used in older versions of &opensuse;.
+      </para>
+     </step>
+     <step>
+      <para>
+       Now mount the requisite subvolume.
+      </para>
+      <itemizedlist>
+       <listitem>
+        <para>
+         If you have a <filename>@</filename> subvolume, mount that subvolume
+         to a temporary mount point:
+        </para>
+        <screen><command>mount &lt;root_device&gt; -o subvol=@ /mnt</command></screen>
+       </listitem>
+       <listitem>
+        <para>
+         If you don't have a <filename>@</filename> subvolume, mount subvolume
+         ID 5 instead:
+        </para>
+        <screen><command>mount &lt;root_device&gt; -o subvolid=5 /mnt</command></screen>
+       </listitem>
+      </itemizedlist>
+     </step>
+     <step>
+      <para>
+       <filename>/mnt/var/cache</filename> can already exist and could be the
+       same directory as <filename>/var/cache</filename>. To avoid data loss,
+       move it:
+      </para>
+      <screen><command>mv /mnt/var/cache /mnt/var/cache.old</command></screen>
+     </step>
+     <step>
+      <para>
+       Create a new subvolume:
+      </para>
+      <screen><command>btrfs subvol create /mnt/var/cache</command></screen>
+     </step>
+     <step>
+      <para>
+       If there is now a directory <filename>/var/cache.old</filename>, move it
+       to the new location:
+      </para>
+      <screen><command>mv /var/cache.old/* /mnt/var/cache</command></screen>
+      <para>
+       If that is not the case, instead do:
+      </para>
+      <screen><command>mv /var/cache/* /mnt/var/cache/</command></screen>
+     </step>
+     <step performance="optional">
+      <para>
+       Optionally, remove <filename>/mnt/var/cache.old</filename>:
+      </para>
+      <screen><command>rm -rf /mnt/var/cache.old</command></screen>
+     </step>
+     <step>
+      <para>
+       Unmount the subvolume from the temporary mount point:
+      </para>
+      <screen><command>umount /mnt</command></screen>
+     </step>
+     <step>
+      <para>
+       Add an entry to <filename>/etc/fstab</filename> for the new
+       <filename>/var/cache</filename> subvolume. Use an existing subvolume as
+       a template to copy from. Make sure to leave the UUID untouched (this is
+       the root file system's UUID) and change the subvolume name and its mount
+       point consistently to <filename>/var/cache</filename>.
+      </para>
+     </step>
+     <step>
+      <para>
+       Mount the new subvolume as specified in /etc/fstab:
+      </para>
+      <screen><command>mount /var/cache</command></screen>
+     </step>
+    </procedure>
+  </section>
+
  </section>
 
  <section xml:id="general">
