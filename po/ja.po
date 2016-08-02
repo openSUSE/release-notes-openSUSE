@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2016-08-02 16:51+0200\n"
-"PO-Revision-Date: 2016-07-29 10:58+0000\n"
+"PO-Revision-Date: 2016-08-02 23:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -165,118 +166,137 @@ msgstr "<literal>xchat</literal>: <literal>hexchat</literal> に置き換えら�
 #: xml/release-notes.xml:180(para)
 msgid "<literal>dropbear</literal>: removed because there are no relevant advantages over <literal>openssh</literal>"
 msgstr ""
+"<literal>dropbear</literal>: <literal>openssh</literal> "
+"と比べて特に大きな違いがなくなってしまったため、削除されました"
 
 #: xml/release-notes.xml:181(para)
 msgid "<literal>cadabra</literal>: the source code no longer builds. The successor <link href=\"http://cadabra.science/\">version 2</link> is not stable yet."
 msgstr "<literal>cadabra</literal>: 構築対象から外されています。後継である <link href=\"http://cadabra.science/\">バージョン 2</link> も、まだ不安定な状態です。"
 
 #: xml/release-notes.xml:184(para)
-#, fuzzy
 #| msgid "<literal>xchat</literal>: replaced by <literal>hexchat</literal>"
 msgid "<literal>hawk</literal>: replaced by <literal>hawk2</literal>"
-msgstr "<literal>xchat</literal>: <literal>hexchat</literal> に置き換えられています"
+msgstr "<literal>hawk</literal>: <literal>hawk2</literal> に置き換えられています"
 
 #: xml/release-notes.xml:190(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
+"スナップショット採取やロールバックのために用意された、独自のサブボリューム内にある <filename>/var/cache</filename> "
+"について"
 
 #: xml/release-notes.xml:191(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
+"<filename>/var/cache</filename> には、それぞれの更新に対応する様々なバージョンの RPM パッケージや、 Zypper の"
+"キャッシュなど、頻繁に書き換えられるデータが多数存在しています。冗長性を確保している環境で、このように頻繁な更新が発生してしまうと、スナップショットのディ"
+"スク領域が容易に肥大化してしまいます。"
 
 #: xml/release-notes.xml:198(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr ""
+"この問題を解決するため、 <filename>/var/cache</filename> を個別のサブボリュームに配置するようにしました。 "
+"openSUSE Leap 42.2 を新規にインストールした場合、この配置は自動的に行なわれます。既存のルートファイルシステムを本件のように変更したい場"
+"合は、下記のような手順を実施してください:"
 
 #: xml/release-notes.xml:206(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
+"まずはルートデバイスに対応するデバイス名 (たとえば<filename>/dev/sda2</filename> や "
+"<filename>/dev/sda3</filename> など) を判断します:"
 
 #: xml/release-notes.xml:211(command)
 msgid "df /"
-msgstr ""
+msgstr "df /"
 
 #: xml/release-notes.xml:214(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
+"次に、他の全てのサブボリュームに対する親サブボリュームを判断します。 openSUSE 13.2 の場合、 <filename>@</filename> "
+"という名前のサブボリュームです。 <filename>@</filename> "
+"という名前のサブボリュームが存在するかどうかを判断するには、下記のようにします:"
 
 #: xml/release-notes.xml:220(command)
 msgid "btrfs subvolume list / | grep '@'"
-msgstr ""
+msgstr "btrfs subvolume list / | grep '@'"
 
 #: xml/release-notes.xml:221(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
+"上記のコマンドを実行しても何も出力されない場合、 <filename>@</filename> "
+"という名前のサブボリュームが存在していないことを表わします。このような場合、古い openSUSE のバージョンで利用されていた、サブボリューム ID "
+"5 を利用することができます。"
 
 #: xml/release-notes.xml:228(para)
 msgid "Now mount the requisite subvolume."
-msgstr ""
+msgstr "次に必要なサブボリュームをマウントします。"
 
 #: xml/release-notes.xml:233(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr ""
+"<filename>@</filename> という名前のサブボリュームが存在している場合は、下記のようにして一時的なマウントポイント内にマウントします:"
 
 #: xml/release-notes.xml:237(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;ルートデバイス&gt; -o subvol=@ /mnt"
 
 #: xml/release-notes.xml:240(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
-msgstr ""
+msgstr "<filename>@</filename> という名前のサブボリュームが無い場合は、代わりにサブボリューム ID 5 をマウントします:"
 
 #: xml/release-notes.xml:244(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;ルートデバイス&gt; -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:249(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
+"ここまでの作業で、 <filename>/var/cache</filename>　ディレクトリが "
+"<filename>/mnt/var/cache</filename> に現われるようになります。 "
+"データを失わないようにするには、まずは下記のようにして移動します:"
 
 #: xml/release-notes.xml:254(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
-msgstr ""
+msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
 #: xml/release-notes.xml:257(para)
 msgid "Create a new subvolume:"
-msgstr ""
+msgstr "次に新しいサブボリュームを作成します:"
 
 #: xml/release-notes.xml:260(command)
 msgid "btrfs subvol create /mnt/var/cache"
-msgstr ""
+msgstr "btrfs subvol create /mnt/var/cache"
 
 #: xml/release-notes.xml:263(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr ""
+"あとは <filename>/var/cache.old</filename> に移動しておいたデータを、新しく作成した場所に移動しなおします:"
 
 #: xml/release-notes.xml:267(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
-msgstr ""
+msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:268(para)
 msgid "If that is not the case, instead do:"
-msgstr ""
+msgstr "そうでない場合は、下記のように実行します:"
 
 #: xml/release-notes.xml:271(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
-msgstr ""
+msgstr "mv /var/cache/* /mnt/var/cache/"
 
 #: xml/release-notes.xml:274(para)
-#, fuzzy
 #| msgid "And update <filename>/etc/resolv.conf</filename>:"
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
-msgstr "最後に <filename>/etc/resolv.conf</filename> を更新します:"
+msgstr "古いディレクトリ <filename>/mnt/var/cache.old</filename> を削除します:"
 
 #: xml/release-notes.xml:277(command)
 msgid "rm -rf /mnt/var/cache.old"
-msgstr ""
+msgstr "rm -rf /mnt/var/cache.old"
 
 #: xml/release-notes.xml:280(para)
 msgid "Unmount the subvolume from the temporary mount point:"
-msgstr ""
+msgstr "一時的なマウントポイントに存在しているサブボリュームのマウントを解除します:"
 
 #: xml/release-notes.xml:283(command)
 msgid "umount /mnt"
@@ -285,14 +305,17 @@ msgstr "umount /mnt"
 #: xml/release-notes.xml:286(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
+"<filename>/etc/fstab</filename> 内に、新しく作成した <filename>/var/cache</filename> "
+"サブボリュームの項目を追加します。既存のサブボリュームの項目を雛型にして追加してください。ただし、 UUID (ルートファイルシステムの UUID) "
+"については変更せず、サブボリュームの名前とマウントポイント (<filename>/var/cache</filename>) のみを変更してください。"
 
 #: xml/release-notes.xml:295(para)
 msgid "Mount the new subvolume as specified in /etc/fstab:"
-msgstr ""
+msgstr "最後に /etc/fstab 内に設定した新しいサブボリュームをマウントします:"
 
 #: xml/release-notes.xml:298(command)
 msgid "mount /var/cache"
-msgstr ""
+msgstr "mount /var/cache"
 
 #: xml/release-notes.xml:306(title)
 msgid "General"
