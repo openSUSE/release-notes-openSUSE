@@ -12,9 +12,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2016-08-02 16:51+0200\n"
-"PO-Revision-Date: 2016-07-31 18:56+0000\n"
-"Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
-"Language-Team: German <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/de/>\n"
+"PO-Revision-Date: 2016-08-02 17:17+0000\n"
+"Last-Translator: Stefan Knorr <sknorr@suse.com>\n"
+"Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,20 +167,23 @@ msgstr "<literal>xchat</literal>: ersetzt durch <literal>hexchat</literal>"
 #: xml/release-notes.xml:180(para)
 msgid "<literal>dropbear</literal>: removed because there are no relevant advantages over <literal>openssh</literal>"
 msgstr ""
+"<literal>dropbear</literal>: entfernt, da es keine relevanten Vorteile "
+"gegenüber <literal>openssh</literal> gibt"
 
 #: xml/release-notes.xml:181(para)
 msgid "<literal>cadabra</literal>: the source code no longer builds. The successor <link href=\"http://cadabra.science/\">version 2</link> is not stable yet."
 msgstr "<literal>cadabra</literal>: der Source-Code wird nicht mehr gebaut. Der Nachfolger <link href=\"http://cadabra.science/\">Version 2</link> ist nicht mehr stabil."
 
 #: xml/release-notes.xml:184(para)
-#, fuzzy
 #| msgid "<literal>xchat</literal>: replaced by <literal>hexchat</literal>"
 msgid "<literal>hawk</literal>: replaced by <literal>hawk2</literal>"
-msgstr "<literal>xchat</literal>: ersetzt durch <literal>hexchat</literal>"
+msgstr "<literal>hawk</literal>: ersetzt durch <literal>hawk2</literal>"
 
 #: xml/release-notes.xml:190(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
+"<filename>/var/cache</filename> auf einem eigenen Subvolume für "
+"Schnappschüsse und Rollback"
 
 #: xml/release-notes.xml:191(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
@@ -218,20 +222,18 @@ msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a
 msgstr ""
 
 #: xml/release-notes.xml:237(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount /dev/&lt;root-geraet/&gt; -o subvol=5@ /mnt"
 
 #: xml/release-notes.xml:240(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
 
 #: xml/release-notes.xml:244(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount /dev/&lt;root-geraet/&gt; -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:249(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
@@ -266,10 +268,9 @@ msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr ""
 
 #: xml/release-notes.xml:274(para)
-#, fuzzy
 #| msgid "And update <filename>/etc/resolv.conf</filename>:"
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
-msgstr "Und aktualisieren Sie <filename>/etc/resolv.conf</filename>:"
+msgstr "Optional können Sie <filename>/mnt/var/cache.old</filename> entfernen:"
 
 #: xml/release-notes.xml:277(command)
 msgid "rm -rf /mnt/var/cache.old"
@@ -323,7 +324,7 @@ msgstr "DATEINAME"
 #: xml/release-notes.xml:354(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-msgstr "rpm --changelog -qp <Platzhalter-1/>.rpm"
+msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #: xml/release-notes.xml:355(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
