@@ -11,9 +11,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-02 16:51+0200\n"
-"PO-Revision-Date: 2016-07-29 17:28+0000\n"
+"PO-Revision-Date: 2016-08-03 08:48+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
-"Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/nl/>\n"
+"Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -165,118 +166,144 @@ msgstr "<literal>xchat</literal>: vervangen door <literal>hexchat</literal>"
 #: xml/release-notes.xml:180(para)
 msgid "<literal>dropbear</literal>: removed because there are no relevant advantages over <literal>openssh</literal>"
 msgstr ""
+"<literal>dropbear</literal>: verwijderd omdat er geen relevante voordelen "
+"zijn boven <literal>openssh</literal>"
 
 #: xml/release-notes.xml:181(para)
 msgid "<literal>cadabra</literal>: the source code no longer builds. The successor <link href=\"http://cadabra.science/\">version 2</link> is not stable yet."
 msgstr "<literal>cadabra</literal>: de broncode bouwt niet meer. De opvolger <link href=\"http://cadabra.science/\">version 2</link> is nog niet stabiel."
 
 #: xml/release-notes.xml:184(para)
-#, fuzzy
 #| msgid "<literal>xchat</literal>: replaced by <literal>hexchat</literal>"
 msgid "<literal>hawk</literal>: replaced by <literal>hawk2</literal>"
-msgstr "<literal>xchat</literal>: vervangen door <literal>hexchat</literal>"
+msgstr "<literal>hawk</literal>: vervangen door <literal>hawk2</literal>"
 
 #: xml/release-notes.xml:190(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
+"<filename>/var/cache</filename> op een eigen subvolume voor snapshots en "
+"rollback"
 
 #: xml/release-notes.xml:191(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
+"<filename>/var/cache</filename> bevat heel wat vluchtige gegevens, zoals de "
+"cache van zypper  met RPM-pakketten in verschillende versies voor elke keer "
+"bijwerken. Als resultaat van opslag van gegevens die meestal overbodig en "
+"zeer vluchtig zijn kan de hoeveelheid schijfruimte die een snapshot bevat "
+"zeer snel toenemen."
 
 #: xml/release-notes.xml:198(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr ""
+"Om dit op te lossen wordt <filename>/var/cache</filename> naar een apart "
+"subvolume verplaatst. Op verse installaties van openSUSE Leap 42.2 wordt dit "
+"automatisch gedaan. Om een bestaand root-bestandssysteem te converteren, "
+"voert u de volgende stappen uit:"
 
 #: xml/release-notes.xml:206(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
+"Zoek uit wat de apparaatnaam is van het root-bestandssysteem (bijvoorbeeld, "
+"<filename>/dev/sda2</filename> of <filename>/dev/sda3</filename>):"
 
 #: xml/release-notes.xml:211(command)
 msgid "df /"
-msgstr ""
+msgstr "df /"
 
 #: xml/release-notes.xml:214(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
+"Bepaal wat het ouder-subvolume is van alle andere subvolumes. Voor openSUSE "
+"13.2 installaties is dit een subvolume genaamd <filename>@</filename>. Om te "
+"controleren of u een <filename>@</filename> subvolume hebt, gebruik:"
 
 #: xml/release-notes.xml:220(command)
 msgid "btrfs subvolume list / | grep '@'"
-msgstr ""
+msgstr "btrfs subvolume list / | grep '@'"
 
 #: xml/release-notes.xml:221(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
+"Als de uitvoer van dit commando leeg is, dan hebt u geen subvolume genaamd "
+"<filename>@</filename>. In dat geval kunt u mogelijk verder gaan met "
+"subvolume ID 5die was gebruikt in oudere versies van openSUSE."
 
 #: xml/release-notes.xml:228(para)
 msgid "Now mount the requisite subvolume."
-msgstr ""
+msgstr "Koppel nu het gevraagde subvolume aan."
 
 #: xml/release-notes.xml:233(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr ""
+"Als u een <filename>@</filename> subvolume hebt, koppel dat subvolume aan "
+"naar een tijdelijk aankoppelpunt:"
 
 #: xml/release-notes.xml:237(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount /dev/<plaatshouder-1/> -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:240(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
+"Als u geen <filename>@</filename> subvolume hebt, koppel subvolume ID 5 in "
+"plaats daarvan aan:"
 
 #: xml/release-notes.xml:244(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount /dev/<plaatshouder-1/> -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:249(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
+"<filename>/mnt/var/cache</filename> kan al bestaan en zou dezelfde map "
+"kunnen zijn als <filename>/var/cache</filename>. Om verlies van gegevens te "
+"voorkomen, verplaats het:"
 
 #: xml/release-notes.xml:254(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
-msgstr ""
+msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
 #: xml/release-notes.xml:257(para)
 msgid "Create a new subvolume:"
-msgstr ""
+msgstr "Maak een nieuw subvolume aan:"
 
 #: xml/release-notes.xml:260(command)
 msgid "btrfs subvol create /mnt/var/cache"
-msgstr ""
+msgstr "btrfs subvol create /mnt/var/cache"
 
 #: xml/release-notes.xml:263(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr ""
+"Als er nu een map <filename>/var/cache.old</filename> is, verplaats het naar "
+"de nieuwe locatie:"
 
 #: xml/release-notes.xml:267(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
-msgstr ""
+msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:268(para)
 msgid "If that is not the case, instead do:"
-msgstr ""
+msgstr "Als dat niet het geval is, die in plaats daarvan:"
 
 #: xml/release-notes.xml:271(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
-msgstr ""
+msgstr "mv /var/cache/* /mnt/var/cache/"
 
 #: xml/release-notes.xml:274(para)
-#, fuzzy
 #| msgid "And update <filename>/etc/resolv.conf</filename>:"
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
-msgstr "En werk <filename>/etc/resolv.conf</filename> bij:"
+msgstr "Verwijder eventueel <filename>/mnt/var/cache.old</filename>:"
 
 #: xml/release-notes.xml:277(command)
 msgid "rm -rf /mnt/var/cache.old"
-msgstr ""
+msgstr "rm -rf /mnt/var/cache.old"
 
 #: xml/release-notes.xml:280(para)
 msgid "Unmount the subvolume from the temporary mount point:"
-msgstr ""
+msgstr "Koppel het subvolume af van het tijdelijke aankoppelpunt:"
 
 #: xml/release-notes.xml:283(command)
 msgid "umount /mnt"
@@ -285,14 +312,19 @@ msgstr "umount /mnt"
 #: xml/release-notes.xml:286(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
+"Voeg een regel toe aan <filename>/etc/fstab</filename> voor het nieuwe "
+"<filename>/var/cache</filename> subvolume. Gebruik een bestaand subvolume "
+"als een sjabloon om te kopiëren. Ga na dat de UUID niet is veranderd (dit is "
+"de UUID van het root-bestandssysteem) en wijzig de naam van het subvolume en "
+"zijn aankoppelpunt consistent met <filename>/var/cache</filename>."
 
 #: xml/release-notes.xml:295(para)
 msgid "Mount the new subvolume as specified in /etc/fstab:"
-msgstr ""
+msgstr "Koppel het nieuwe subvolume aan zoals gespecificeerd in /etc/fstab:"
 
 #: xml/release-notes.xml:298(command)
 msgid "mount /var/cache"
-msgstr ""
+msgstr "mount /var/cache"
 
 #: xml/release-notes.xml:306(title)
 msgid "General"
