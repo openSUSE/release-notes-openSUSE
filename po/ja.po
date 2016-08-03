@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2016-08-02 16:51+0200\n"
-"PO-Revision-Date: 2016-08-02 23:12+0000\n"
+"PO-Revision-Date: 2016-08-03 22:32+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/ja/>\n"
@@ -167,7 +167,7 @@ msgstr "<literal>xchat</literal>: <literal>hexchat</literal> に置き換えら�
 msgid "<literal>dropbear</literal>: removed because there are no relevant advantages over <literal>openssh</literal>"
 msgstr ""
 "<literal>dropbear</literal>: <literal>openssh</literal> "
-"と比べて特に大きな違いがなくなってしまったため、削除されました"
+"と比べて特に大きな違いがなくなってしまったため、削除されています"
 
 #: xml/release-notes.xml:181(para)
 msgid "<literal>cadabra</literal>: the source code no longer builds. The successor <link href=\"http://cadabra.science/\">version 2</link> is not stable yet."
@@ -180,16 +180,14 @@ msgstr "<literal>hawk</literal>: <literal>hawk2</literal> に置き換えられ�
 
 #: xml/release-notes.xml:190(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
-msgstr ""
-"スナップショット採取やロールバックのために用意された、独自のサブボリューム内にある <filename>/var/cache</filename> "
-"について"
+msgstr "<filename>/var/cache</filename> に対する独自のサブボリュームへの移動について"
 
 #: xml/release-notes.xml:191(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
 "<filename>/var/cache</filename> には、それぞれの更新に対応する様々なバージョンの RPM パッケージや、 Zypper の"
-"キャッシュなど、頻繁に書き換えられるデータが多数存在しています。冗長性を確保している環境で、このように頻繁な更新が発生してしまうと、スナップショットのディ"
-"スク領域が容易に肥大化してしまいます。"
+"キャッシュなど、頻繁に書き換えられるデータが多数存在しています。スナップショットのように冗長性を確保している環境下で、このように頻繁な更新が発生してしまう"
+"と、スナップショットのディスク領域が容易に肥大化してしまいます。"
 
 #: xml/release-notes.xml:198(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
@@ -279,7 +277,7 @@ msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:268(para)
 msgid "If that is not the case, instead do:"
-msgstr "そうでない場合は、下記のように実行します:"
+msgstr "もしくは、下記のように実行してもかまいません:"
 
 #: xml/release-notes.xml:271(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
