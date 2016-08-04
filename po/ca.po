@@ -9,9 +9,10 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2016-08-02 16:51+0200\n"
-"PO-Revision-Date: 2016-08-01 08:16+0000\n"
+"PO-Revision-Date: 2016-08-04 13:43+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/ca/>\n"
+"Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -163,118 +164,143 @@ msgstr "<literal>xchat</literal>: reemplaçat per <literal>hexchat</literal>"
 #: xml/release-notes.xml:180(para)
 msgid "<literal>dropbear</literal>: removed because there are no relevant advantages over <literal>openssh</literal>"
 msgstr ""
+"<literal>dropbear</literal>: s'ha eliminat perquè no hi ha avantatges "
+"rellevants sobre <literal>openssh</literal>"
 
 #: xml/release-notes.xml:181(para)
 msgid "<literal>cadabra</literal>: the source code no longer builds. The successor <link href=\"http://cadabra.science/\">version 2</link> is not stable yet."
 msgstr "<literal>cadabra</literal>: el codi font ja no es construeix. El successor <link href=\"http://cadabra.science/\">versió 2</link> encara no és estable."
 
 #: xml/release-notes.xml:184(para)
-#, fuzzy
 #| msgid "<literal>xchat</literal>: replaced by <literal>hexchat</literal>"
 msgid "<literal>hawk</literal>: replaced by <literal>hawk2</literal>"
-msgstr "<literal>xchat</literal>: reemplaçat per <literal>hexchat</literal>"
+msgstr "<literal>hawk</literal>: s'ha reemplaçat per <literal>hawk2</literal>"
 
 #: xml/release-notes.xml:190(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
+"<filename>/var/cache</filename> en un subvolum propi per a instantànies i "
+"retrocessos"
 
 #: xml/release-notes.xml:191(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
+"<filename>/var/cache</filename> conté una gran quantitat de dades molt "
+"volàtils, com ara la memòria cau del Zypper amb paquets RPM en diferents "
+"versions per a cada actualització. Com a resultat d'emmagatzemar dades que "
+"són majoritàriament redundants però altament volàtils, la quantitat d'espai "
+"de disc que ocupa una instantània pot augmentar molt ràpidament."
 
 #: xml/release-notes.xml:198(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr ""
+"Per solucionar-ho, moveu <filename>/var/cache</filename> a un subvolum "
+"separat. En instal·lacions noves d'openSUSE Leap 42.2, això es fa "
+"automàticament. Per convertir un sistema de fitxers d'arrel existent, seguiu "
+"els passos següents:"
 
 #: xml/release-notes.xml:206(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
+"Trobeu el nom del dispositiu (per exemple, <filename>/dev/sda2</filename> o "
+"<filename>/dev/sda3</filename>) del sistema de fitxers d'arrel:"
 
 #: xml/release-notes.xml:211(command)
 msgid "df /"
-msgstr ""
+msgstr "df /"
 
 #: xml/release-notes.xml:214(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
+"Identifqueu el subvolum pare de tots els altres subvolums. Per a instal·"
+"lacions d'openSUSE 13.2, aquest subvolum s'anomena <filename>@</filename>. "
+"Per comprovar si teniu un subvolum <filename>@</filename>, useu el següent:"
 
 #: xml/release-notes.xml:220(command)
 msgid "btrfs subvolume list / | grep '@'"
-msgstr ""
+msgstr "btrfs subvolume list / | grep '@'"
 
 #: xml/release-notes.xml:221(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
+"Si el resultat d'aquesta ordre és buit, no teniu un subvolum anomenat "
+"<filename>@</filename>. En aquest cas, podeu procedir amb el subvolum ID 5, "
+"usat en versions més antigues d'openSUSE."
 
 #: xml/release-notes.xml:228(para)
 msgid "Now mount the requisite subvolume."
-msgstr ""
+msgstr "Ara munteu el subvolum requerit."
 
 #: xml/release-notes.xml:233(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr ""
+"Si teniu un subvolum <filename>@</filename>, munteu-lo en un punt de "
+"muntatge temporal:"
 
 #: xml/release-notes.xml:237(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 
 #: xml/release-notes.xml:240(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
+"Si no teniu un subvolum <filename>@</filename>, munteu el subvolum ID 5:"
 
 #: xml/release-notes.xml:244(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:249(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
+"<filename>/mnt/var/cache</filename> ja pot existir i podria ser el mateix "
+"directori que <filename>/var/cache</filename>. Per evitar pèrdua de dades, "
+"moveu-lo:"
 
 #: xml/release-notes.xml:254(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
-msgstr ""
+msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
 #: xml/release-notes.xml:257(para)
 msgid "Create a new subvolume:"
-msgstr ""
+msgstr "Creeu un subvolum nou:"
 
 #: xml/release-notes.xml:260(command)
 msgid "btrfs subvol create /mnt/var/cache"
-msgstr ""
+msgstr "btrfs subvol create /mnt/var/cache"
 
 #: xml/release-notes.xml:263(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr ""
+"Si ara hi ha un directori <filename>/var/cache.old</filename>, desplaceu-lo "
+"a la ubicació nova:"
 
 #: xml/release-notes.xml:267(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
-msgstr ""
+msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:268(para)
 msgid "If that is not the case, instead do:"
-msgstr ""
+msgstr "Si aquest no és el cas, feu el següent:"
 
 #: xml/release-notes.xml:271(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
-msgstr ""
+msgstr "mv /var/cache/* /mnt/var/cache/"
 
 #: xml/release-notes.xml:274(para)
-#, fuzzy
 #| msgid "And update <filename>/etc/resolv.conf</filename>:"
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
-msgstr "I actualitza <filename>/etc/resolv.conf</filename>:"
+msgstr "Opcionalment, elimineu <filename>/mnt/var/cache.old</filename>:"
 
 #: xml/release-notes.xml:277(command)
 msgid "rm -rf /mnt/var/cache.old"
-msgstr ""
+msgstr "rm -rf /mnt/var/cache.old"
 
 #: xml/release-notes.xml:280(para)
 msgid "Unmount the subvolume from the temporary mount point:"
-msgstr ""
+msgstr "Desmunteu el subvolum del punt de muntatge temporal:"
 
 #: xml/release-notes.xml:283(command)
 msgid "umount /mnt"
@@ -283,14 +309,19 @@ msgstr "umount /mnt"
 #: xml/release-notes.xml:286(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
+"Afegiu una entrada a <filename>/etc/fstab</filename> per al subvolum nou "
+"<filename>/var/cache</filename>. Useu un subvolum existent com a plantilla "
+"des de la qual copiar. Assegureu-vos que en deixeu l'UUID intacte (és l' "
+"UUID del sistema de fitxers d'arrel) i canvieu el nom del subvolum i el seu "
+"punt de muntatge consistentment a <filename>/var/cache</filename>."
 
 #: xml/release-notes.xml:295(para)
 msgid "Mount the new subvolume as specified in /etc/fstab:"
-msgstr ""
+msgstr "Munteu el subvolum nou tal com s'especifica a /etc/fstab:"
 
 #: xml/release-notes.xml:298(command)
 msgid "mount /var/cache"
-msgstr ""
+msgstr "mount /var/cache"
 
 #: xml/release-notes.xml:306(title)
 msgid "General"
