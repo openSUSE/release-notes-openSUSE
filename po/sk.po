@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2016-08-02 16:51+0200\n"
-"PO-Revision-Date: 2016-08-05 18:38+0100\n"
+"PO-Revision-Date: 2016-08-06 13:39+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation-sk@opensuse.org>\n"
 "Language: sk\n"
@@ -142,9 +142,15 @@ msgstr ""
 "veľa dát. Nikto v skutočnosti nevie, koľko je to <quote>príliš veľa</quote>."
 
 #: xml/release-notes.xml:119(para)
-#, fuzzy
 msgid "openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
-msgstr "<emphasis>Pozadie:</emphasis>  Niektoré firmware UEFI obsahujú chyby, ktoré spôsobujú nefunkčnosť, ak je zapísaných do úložného priestoru UEFI príliš veľa dát. Nikto v skutočnosti nevie, koľko je to \"príliš veľa\". openSUSE znižuje riziko tým, že nezapisuje viac než základné minimum potrebné pre štart OS. Toto minimum znamená oznámenie pre firmware UEFI, kde se nachádza správca štartu openSUSE. Upstream funkcie jadra Linuxu, ktoré používajú úložný priestor UEFI pre uloženie informácií o štarte systému a jeho zrútení (<literal>pstore</literal>) boli v predvolenom nastavení zakázané. Predsa len je doporučené nainštalovať akékoľvek aktualizácie pre firmware, ktoré výrobca odporúča."
+msgstr ""
+"openSUSE znižuje riziko tým, že nezapisuje viac než základné minimum "
+"potrebné pre štart OS. Toto minimum znamená oznámenie pre firmware UEFI, kde "
+"se nachádza správca štartu openSUSE. Upstream funkcie jadra Linuxu, ktoré "
+"používajú úložný priestor UEFI pre uloženie informácií o štarte systému a "
+"jeho zrútení (<literal>pstore</literal>) boli v predvolenom nastavení "
+"zakázané. Napriek tomu je doporučené nainštalovať každú aktualizáciu pre "
+"firmware, ktorú výrobca odporúča."
 
 # bnc#850056
 #. bnc#850056
@@ -161,28 +167,39 @@ msgstr ""
 "pre identifikáciu zariadenia a typov oddielov."
 
 #: xml/release-notes.xml:140(para)
-#, fuzzy
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces the first one."
-msgstr "Okrem toho špecifikácia UEFI tiež umožňuje štandardné MBR (MS-DOS) oddiely. Linuxoví správcovia štartu (ELILO alebo GRUB2) skúšajú automaticky generovať GUID pre tieto staršie oddiely a zapísať ich do firmware. Takýto GUID sa môže často meniť, čo spôsobuje prepísanie firmvéru. Prepis sa skladá z dvoch rôznych operácií: odstránenie starého záznamu a vytvorenie nového, ktorý nahradí pôvodný."
+msgstr ""
+"Okrem toho špecifikácia UEFI tiež umožňuje štandardné MBR (MS-DOS) oddiely. "
+"Linuxoví správcovia štartu (ELILO alebo GRUB2) skúšajú automaticky generovať "
+"GUID pre tieto staršie oddiely a zapísať ich do firmware. Takýto GUID sa "
+"môže často meniť, čo spôsobuje prepísanie firmvéru. Prepis sa skladá z dvoch "
+"rôznych operácií: odstránenie starého záznamu a vytvorenie nového, ktorý "
+"nahradí pôvodný."
 
 #: xml/release-notes.xml:149(para)
-#, fuzzy
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries. This can result in a non-bootable system."
-msgstr "Moderný firmware má garbage collector, ktorý zhromažďuje vymazané záznamy a uvoľňuje pamäť vyhradenú pre staré záznamy. Problém nastáva, keď chybný firmware nezhromažďuje a neuvoľňuje záznamy; môže to skončiť s nespustiteľným systémom."
+msgstr ""
+"Moderný firmware má garbage collector, ktorý zhromažďuje vymazané záznamy a "
+"uvoľňuje pamäť vyhradenú pre staré záznamy. Problém nastáva, keď chybný "
+"firmware nezhromažďuje a neuvoľňuje záznamy; môže to skončiť s "
+"nespustiteľným systémom."
 
 #: xml/release-notes.xml:155(para)
-#, fuzzy
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
-msgstr "Riešenie je jednoduché: previesť starší MBR diskový oddiel na nový GPT, aby ste sa tomuto problému vyhli úplne."
+msgstr ""
+"Ak chcete tento problém vyriešiť, zmeňte starší MBR diskový oddiel na GPT."
 
 #: xml/release-notes.xml:163(title)
 msgid "System Upgrade"
 msgstr "Zvýšenie verzie systému"
 
 #: xml/release-notes.xml:164(para)
-#, fuzzy
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
-msgstr "Táto časť obsahuje poznámky týkajúce sa zvýšenia verzie. Podrobné pokyny na zvýšenie verzie nájdete v dokumentácii na <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
+msgstr ""
+"Táto časť obsahuje poznámky týkajúce sa zvýšenia verzie. Podrobné pokyny na "
+"zvýšenie verzie nájdete v dokumentácii na <link href=\"https://doc.opensuse.o"
+"rg/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse."
+"html\"/>."
 
 #: xml/release-notes.xml:171(title)
 msgid "Removed and Replaced Packages"
@@ -213,10 +230,9 @@ msgid "<literal>cadabra</literal>: the source code no longer builds. The success
 msgstr ""
 
 #: xml/release-notes.xml:184(para)
-#, fuzzy
 #| msgid "<literal>xchat</literal>: replaced by <literal>hexchat</literal>"
 msgid "<literal>hawk</literal>: replaced by <literal>hawk2</literal>"
-msgstr "<literal>xchat</literal>: nahradené s <literal>hexchat</literal>"
+msgstr "<literal>hawk</literal>: nahradené s <literal>hawk2</literal>"
 
 #: xml/release-notes.xml:190(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
@@ -259,20 +275,18 @@ msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a
 msgstr ""
 
 #: xml/release-notes.xml:237(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 
 #: xml/release-notes.xml:240(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
 
 #: xml/release-notes.xml:244(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:249(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
@@ -382,14 +396,16 @@ msgstr ""
 "Ďalšie informácie nájdete na médiu v adresári <filename>docu</filename>."
 
 #: xml/release-notes.xml:372(para)
-#, fuzzy
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
-msgstr "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org</ulink> obsahuje dodatočnú alebo aktualizovanú dokumentáciu."
+msgstr ""
+"<link href=\"https://doc.opensuse.org/\"/> obsahuje dodatočnú alebo "
+"aktualizovanú dokumentáciu."
 
 #: xml/release-notes.xml:377(para)
-#, fuzzy
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
-msgstr "Navštívte <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> kvôli najnovším novinkám o produkte z openSUSE."
+msgstr ""
+"Navštívte <link href=\"https://www.opensuse.org\"/> kvôli najnovším novinkám "
+"o produkte z openSUSE."
 
 #: xml/release-notes.xml:384(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
