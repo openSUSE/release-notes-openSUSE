@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2016-08-02 16:51+0200\n"
-"PO-Revision-Date: 2016-08-07 20:23+0100\n"
+"PO-Revision-Date: 2016-08-07 21:10+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation-sk@opensuse.org>\n"
 "Language: sk\n"
@@ -62,7 +62,7 @@ msgstr ""
 "aktualizácie, pozrite si online verziu na <link href=\""
 "https://doc.opensuse.org/releasenotes\"/>. Anglické poznámky k vydaniu sú "
 "aktualizované, kedykoľvek je to potrebné. Preložená jazyková verzia môže byť "
-"dočasne neúplna."
+"dočasne neúplná."
 
 # Previous Release Notes
 #. Previous Release Notes
@@ -232,6 +232,8 @@ msgstr ""
 #: xml/release-notes.xml:181(para)
 msgid "<literal>cadabra</literal>: the source code no longer builds. The successor <link href=\"http://cadabra.science/\">version 2</link> is not stable yet."
 msgstr ""
+"<literal>cadabra</literal>: zdrojový kód sa už nezostavuje. Nástupca <link "
+"href=\"http://cadabra.science/\">version 2</link> ešte nie je stabilný."
 
 #: xml/release-notes.xml:184(para)
 #| msgid "<literal>xchat</literal>: replaced by <literal>hexchat</literal>"
@@ -241,10 +243,17 @@ msgstr "<literal>hawk</literal>: nahradené s <literal>hawk2</literal>"
 #: xml/release-notes.xml:190(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
+"<filename>/var/cache</filename> na vlastnom podzväzku pre snímky a návrat "
+"späť"
 
 #: xml/release-notes.xml:191(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
+"<filename>/var/cache</filename> obsahuje veľké množstvo veľmi premenlivých "
+"dát, ako je napríklad vyrovnávacia pamäť pre Zypper s RPM balíkmi v rôznych "
+"verziách pre každú aktualizáciu. V dôsledku ukladania dát, ktoré sú väčšinou "
+"nadbytočné, ale vysoko premenlivé, môže sa veľmi rýchlo zvýšiť množstvo "
+"miesta na disku, ktoré snímka zaberá."
 
 #: xml/release-notes.xml:198(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
@@ -253,6 +262,8 @@ msgstr ""
 #: xml/release-notes.xml:206(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
+"Zistite názov zariadenia (napríklad <filename>/dev/sda2</filename> alebo "
+"<filename>/dev/sda3</filename>) koreňového súborového systému:"
 
 #: xml/release-notes.xml:211(command)
 msgid "df /"
@@ -295,6 +306,9 @@ msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 #: xml/release-notes.xml:249(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
+"<filename>/mnt/var/cache</filename> môže už existovať a mohol by byť rovnaký "
+"ako adresár <filename>/var/cache</filename>. Ak chcete zabrániť strate dát, "
+"presuňte ho:"
 
 #: xml/release-notes.xml:254(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
@@ -302,7 +316,7 @@ msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
 #: xml/release-notes.xml:257(para)
 msgid "Create a new subvolume:"
-msgstr ""
+msgstr "Vytvorte nový podzväzok:"
 
 #: xml/release-notes.xml:260(command)
 msgid "btrfs subvol create /mnt/var/cache"
@@ -334,7 +348,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 
 #: xml/release-notes.xml:280(para)
 msgid "Unmount the subvolume from the temporary mount point:"
-msgstr ""
+msgstr "Odpojte podzväzok z dočasného bodu pripojenia:"
 
 #: xml/release-notes.xml:283(command)
 msgid "umount /mnt"
@@ -346,7 +360,7 @@ msgstr ""
 
 #: xml/release-notes.xml:295(para)
 msgid "Mount the new subvolume as specified in /etc/fstab:"
-msgstr ""
+msgstr "Pripojte nový podzväzok ako je to uvedené v /etc/fstab:"
 
 #: xml/release-notes.xml:298(command)
 msgid "mount /var/cache"
@@ -359,6 +373,8 @@ msgstr "Všeobecné"
 #: xml/release-notes.xml:308(para)
 msgid "This section lists general issues with openSUSE Leap 42.2 that do not match any other category."
 msgstr ""
+"Táto časť obsahuje všeobecné problémy s openSUSE Leap 42.2, ktoré "
+"nezodpovedajú žiadnej inej kategórii."
 
 # bnc#809347
 #. bnc#809347
