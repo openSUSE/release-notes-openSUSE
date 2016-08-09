@@ -19,4 +19,4 @@ Please note the directories "tools" and "www":
 - xmlcharent
 - xsltproc
 - dejavu-fonts
-- google-opensans-font
+- google-opensans-fonts
