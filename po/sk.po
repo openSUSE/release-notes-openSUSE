@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2016-08-02 16:51+0200\n"
-"PO-Revision-Date: 2016-08-07 21:10+0100\n"
+"PO-Revision-Date: 2016-08-10 19:56+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation-sk@opensuse.org>\n"
 "Language: sk\n"
@@ -258,6 +258,10 @@ msgstr ""
 #: xml/release-notes.xml:198(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr ""
+"Na vyriešenie tohto presuňte <filename>/var/cache</filename> na samostatný "
+"podzväzok. Na novej inštalácii openSUSE Leap 42.2 sa to robí automaticky. Ak "
+"chcete previesť existujúci koreňový súborový systém, vykonajte nasledujúce "
+"kroky:"
 
 #: xml/release-notes.xml:206(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
@@ -272,6 +276,9 @@ msgstr "df /"
 #: xml/release-notes.xml:214(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
+"Identifikujte rodičovský podzväzok všetkých ostatných podzväzkov. Pre "
+"inštalácie openSUSE 13.2 je podzväzok nazvaný <filename>@</filename>. Ak "
+"chcete zistiť, či máte podzväzok <filename>@</filename>, použite:"
 
 #: xml/release-notes.xml:220(command)
 msgid "btrfs subvolume list / | grep '@'"
@@ -280,14 +287,19 @@ msgstr "btrfs subvolume list / | grep '@'"
 #: xml/release-notes.xml:221(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
+"V prípade, že je výstup tohto príkazu prázdny, nemáte podzväzok pomenovaný "
+"<filename>@</filename>. V tom prípade budete môcť pokračovať s podzväzkom ID "
+"5, ktorý bol použitý v starších verziách openSUSE."
 
 #: xml/release-notes.xml:228(para)
 msgid "Now mount the requisite subvolume."
-msgstr ""
+msgstr "Teraz pripojte žiadaný podzväzok."
 
 #: xml/release-notes.xml:233(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr ""
+"Ak máte <filename>@</filename> podzväzok, pripojte tento k dočasnému bodu "
+"pripojenia:"
 
 #: xml/release-notes.xml:237(command)
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
@@ -297,6 +309,8 @@ msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 #: xml/release-notes.xml:240(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
+"Ak nemáte <filename>@</filename> podzväzok, pripojte \tnamiesto toho "
+"podzväzok ID 5:"
 
 #: xml/release-notes.xml:244(command)
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
@@ -325,6 +339,8 @@ msgstr "btrfs subvol create /mnt/var/cache"
 #: xml/release-notes.xml:263(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr ""
+"Ak teraz existuje adresár <filename>/var/cache.old</filename>, presuňte ho "
+"do nového umiestnenia:"
 
 #: xml/release-notes.xml:267(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
@@ -332,7 +348,7 @@ msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:268(para)
 msgid "If that is not the case, instead do:"
-msgstr ""
+msgstr "Ak tomu tak nie je, namiesto toho urobte:"
 
 #: xml/release-notes.xml:271(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
@@ -340,7 +356,7 @@ msgstr "mv /var/cache/* /mnt/var/cache/"
 
 #: xml/release-notes.xml:274(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
-msgstr ""
+msgstr "Prípadne môžete odstrániť <filename>/mnt/var/cache.old</filename>:"
 
 #: xml/release-notes.xml:277(command)
 msgid "rm -rf /mnt/var/cache.old"
@@ -357,6 +373,11 @@ msgstr "umount /mnt"
 #: xml/release-notes.xml:286(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
+"Pridajte záznam do <filename>/etc/fstab</filename> pre nový podzväzok "
+"<filename>/var/cache</filename>. Použite existujúci podzväzok ako šablónu, z "
+"ktorej sa kopíruje. Uistite sa, že ste  nechali UUID nedotknuté (toto je "
+"UUID koreňového súborového systému) a dôsledne zmeňte názov podzväzku a jeho "
+"bod pripojenia na <filename>/var/cache</filename>."
 
 #: xml/release-notes.xml:295(para)
 msgid "Mount the new subvolume as specified in /etc/fstab:"
