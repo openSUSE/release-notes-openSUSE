@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
-"POT-Creation-Date: 2016-08-02 16:51+0200\n"
+"POT-Creation-Date: 2016-08-15 13:46+0200\n"
 "PO-Revision-Date: 2016-04-20 14:10+0000\n"
 "Last-Translator: Giuseppe Gorgoglione <gorgoglione@gmail.com>\n"
 "Language-Team: Italian <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/it/>\n"
@@ -156,208 +156,216 @@ msgstr ""
 msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
 msgstr ""
 
-#: xml/release-notes.xml:177(para)
-msgid "<literal>ungifsicle</literal>: replaced by <literal>gifsicle</literal>"
-msgstr ""
-
 #: xml/release-notes.xml:178(para)
-msgid "<literal>psi</literal>: replaced by <literal>psi+</literal>"
+msgid "<package>cadabra</package>: The source code no longer builds. The successor, <link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
 msgstr ""
 
-#: xml/release-notes.xml:179(para)
-msgid "<literal>xchat</literal>: replaced by <literal>hexchat</literal>"
-msgstr ""
-
-#: xml/release-notes.xml:180(para)
-msgid "<literal>dropbear</literal>: removed because there are no relevant advantages over <literal>openssh</literal>"
-msgstr ""
-
-#: xml/release-notes.xml:181(para)
-msgid "<literal>cadabra</literal>: the source code no longer builds. The successor <link href=\"http://cadabra.science/\">version 2</link> is not stable yet."
-msgstr ""
-
-#: xml/release-notes.xml:184(para)
-msgid "<literal>hawk</literal>: replaced by <literal>hawk2</literal>"
-msgstr ""
-
-#: xml/release-notes.xml:190(title)
-msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
+#: xml/release-notes.xml:185(para)
+msgid "<package>dropbear</package>: Removed because there are no relevant advantages over <package>openssh</package>."
 msgstr ""
 
 #: xml/release-notes.xml:191(para)
-msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
+msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
 msgstr ""
 
-#: xml/release-notes.xml:198(para)
-msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
+#: xml/release-notes.xml:197(para)
+msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr ""
 
-#: xml/release-notes.xml:206(para)
-msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
+#: xml/release-notes.xml:202(para)
+msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr ""
 
-#: xml/release-notes.xml:211(command)
-msgid "df /"
+#: xml/release-notes.xml:207(para)
+msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
 msgstr ""
 
 #: xml/release-notes.xml:214(para)
+msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
+msgstr ""
+
+#: xml/release-notes.xml:220(para)
+msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
+msgstr ""
+
+#: xml/release-notes.xml:229(title)
+msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
+msgstr ""
+
+#: xml/release-notes.xml:230(para)
+msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
+msgstr ""
+
+#: xml/release-notes.xml:237(para)
+msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
+msgstr ""
+
+#: xml/release-notes.xml:245(para)
+msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
+msgstr ""
+
+#: xml/release-notes.xml:250(command)
+msgid "df /"
+msgstr ""
+
+#: xml/release-notes.xml:253(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
 
-#: xml/release-notes.xml:220(command)
+#: xml/release-notes.xml:259(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr ""
 
-#: xml/release-notes.xml:221(para)
+#: xml/release-notes.xml:260(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
 
-#: xml/release-notes.xml:228(para)
+#: xml/release-notes.xml:267(para)
 msgid "Now mount the requisite subvolume."
 msgstr ""
 
-#: xml/release-notes.xml:233(para)
+#: xml/release-notes.xml:272(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr ""
 
-#: xml/release-notes.xml:237(command)
+#: xml/release-notes.xml:276(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr ""
 
-#: xml/release-notes.xml:240(para)
+#: xml/release-notes.xml:279(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
 
-#: xml/release-notes.xml:244(command)
+#: xml/release-notes.xml:283(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr ""
 
-#: xml/release-notes.xml:249(para)
+#: xml/release-notes.xml:288(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
 
-#: xml/release-notes.xml:254(command)
+#: xml/release-notes.xml:293(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr ""
 
-#: xml/release-notes.xml:257(para)
+#: xml/release-notes.xml:296(para)
 msgid "Create a new subvolume:"
 msgstr ""
 
-#: xml/release-notes.xml:260(command)
+#: xml/release-notes.xml:299(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:263(para)
+#: xml/release-notes.xml:302(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr ""
 
-#: xml/release-notes.xml:267(command)
+#: xml/release-notes.xml:306(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:268(para)
+#: xml/release-notes.xml:307(para)
 msgid "If that is not the case, instead do:"
 msgstr ""
 
-#: xml/release-notes.xml:271(command)
+#: xml/release-notes.xml:310(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr ""
 
-#: xml/release-notes.xml:274(para)
+#: xml/release-notes.xml:313(para)
 #, fuzzy
 #| msgid "And update <filename>/etc/resolv.conf</filename>:"
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "E aggiornare <filename>/etc/resolv.conf</filename>:"
 
-#: xml/release-notes.xml:277(command)
+#: xml/release-notes.xml:316(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr ""
 
-#: xml/release-notes.xml:280(para)
+#: xml/release-notes.xml:319(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr ""
 
-#: xml/release-notes.xml:283(command)
+#: xml/release-notes.xml:322(command)
 msgid "umount /mnt"
 msgstr ""
 
-#: xml/release-notes.xml:286(para)
+#: xml/release-notes.xml:325(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
 
-#: xml/release-notes.xml:295(para)
+#: xml/release-notes.xml:334(para)
 msgid "Mount the new subvolume as specified in /etc/fstab:"
 msgstr ""
 
-#: xml/release-notes.xml:298(command)
+#: xml/release-notes.xml:337(command)
 msgid "mount /var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:306(title)
+#: xml/release-notes.xml:345(title)
 msgid "General"
 msgstr "Generale"
 
-#: xml/release-notes.xml:308(para)
+#: xml/release-notes.xml:347(para)
 msgid "This section lists general issues with openSUSE Leap 42.2 that do not match any other category."
 msgstr ""
 
 #. bnc#809347
-#: xml/release-notes.xml:341(title)
+#: xml/release-notes.xml:380(title)
 msgid "More Information and Feedback"
 msgstr "Maggiori informazioni e feedback"
 
-#: xml/release-notes.xml:345(para)
+#: xml/release-notes.xml:384(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 
-#: xml/release-notes.xml:350(para)
+#: xml/release-notes.xml:389(para)
 #, fuzzy
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Si possono ottenere informazioni dettagliate sulle modifiche relative ad un particolare pacchetto dall'RPM:"
 
-#: xml/release-notes.xml:354(replaceable)
+#: xml/release-notes.xml:393(replaceable)
 msgid "FILENAME"
 msgstr ""
 
-#: xml/release-notes.xml:354(screen)
+#: xml/release-notes.xml:393(screen)
 #, fuzzy, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp &lt;NOMEFILE&gt;.rpm"
 
-#: xml/release-notes.xml:355(para)
+#: xml/release-notes.xml:394(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
-#: xml/release-notes.xml:360(para)
+#: xml/release-notes.xml:399(para)
 #, fuzzy
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "Si controlli il file <filename>ChangeLog</filename> presente nel DVD per un log cronologico di tutte le modifiche fatte ai pacchetti aggiornati."
 
-#: xml/release-notes.xml:366(para)
+#: xml/release-notes.xml:405(para)
 #, fuzzy
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Maggiori informazioni sono disponibili nella directory <filename>docu</filename> del DVD."
 
-#: xml/release-notes.xml:372(para)
+#: xml/release-notes.xml:411(para)
 #, fuzzy
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> contiene documentazione aggiuntiva o più aggiornata."
 
-#: xml/release-notes.xml:377(para)
+#: xml/release-notes.xml:416(para)
 #, fuzzy
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Si visiti <ulink url=\"http://www.opensuse.org\"/> per le ultime notizie sui prodotti da openSUSE."
 
-#: xml/release-notes.xml:384(para)
+#: xml/release-notes.xml:423(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:388(para)
+#: xml/release-notes.xml:427(para)
 msgid "Thanks for using openSUSE."
 msgstr "Grazie per usare openSUSE."
 
-#: xml/release-notes.xml:391(para)
+#: xml/release-notes.xml:430(para)
 msgid "The openSUSE Team."
 msgstr "Il team openSUSE."
 
