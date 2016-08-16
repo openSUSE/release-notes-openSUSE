@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2016-08-15 13:46+0200\n"
-"PO-Revision-Date: 2016-08-15 22:45+0000\n"
+"PO-Revision-Date: 2016-08-16 02:05+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/ja/>\n"
@@ -123,15 +123,22 @@ msgstr "EFI/UEFI の仕様には、新しい形式のパーティションテー
 
 #: xml/release-notes.xml:140(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces the first one."
-msgstr "これに加えて、 UEFI の仕様では古い MBR (MS-DOS) 形式のパーティションテーブルにも対応しています。 Linux のブートローダ (ELILO, GRUB 2) では、これらの古い形式のパーティションに対して、自動的に GUID を割り当ててファームウエア内に書き込もうとします。この場合、 GUID は頻繁に変更されるものであるため、ファームウエアへの再書き込みも頻繁に発生することになります。この再書き込みには 2 つの操作、具体的には古い項目の削除と、それを置き換える新しい項目の作成を行ないます。"
+msgstr ""
+"これに加えて、 UEFI の仕様では古い MBR (MS-DOS) 形式のパーティションテーブルにも対応しています。 Linux のブートローダ ("
+"ELILO, GRUB 2) では、これらの古い形式のパーティションに対して、自動的に GUID "
+"を割り当ててファームウエア内に書き込もうとします。この場合、 GUID "
+"は頻繁に変更されるものであるため、ファームウエアへの再書き込みも頻繁に発生することになります。この再書き込みには 2 "
+"つの操作、具体的には古い項目の削除と、それを置き換えるための新しい項目の作成が含まれます。"
 
 #: xml/release-notes.xml:149(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries. This can result in a non-bootable system."
-msgstr "新しいファームウエアでは、削除された項目を収集して古い項目用に確保したメモリを解放する、ガーベージコレクタ機能が用意されています。ファームウエアに不具合があると、これらの古い項目を収集できなかったり、メモリを解放しなかったりする場合があり、これにより起動が不可能になる場合があります。"
+msgstr ""
+"また、新しいファームウエアには、削除された項目を収集して古い項目用に確保したメモリを解放する、ガーベージコレクタ機能が用意されています。ファームウエアに不"
+"具合があると、これらの古い項目を収集できなかったり、メモリを解放しなかったりする場合があり、これにより起動が不可能になる場合があります。"
 
 #: xml/release-notes.xml:155(para)
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
-msgstr "このような場合は、古い MBR 形式のパーティションを GPT 形式のパーティションに更新して、問題を回避してください。"
+msgstr "このような問題が発生した場合は、古い MBR 形式のパーティションを GPT 形式のパーティションに更新して、問題を回避してください。"
 
 #: xml/release-notes.xml:163(title)
 msgid "System Upgrade"
