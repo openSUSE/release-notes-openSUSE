@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2016-08-15 13:46+0200\n"
-"PO-Revision-Date: 2016-08-24 11:00+0000\n"
+"PO-Revision-Date: 2016-08-24 16:44+0000\n"
 "Last-Translator: M. Edwin Zakaria <medwin@opensuse.org>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/id/>\n"
@@ -129,7 +129,6 @@ msgstr ""
 "firewall. Kalau anda membutuhkannya, instal <literal>SuSEfirewall2</literal>"
 
 #: xml/release-notes.xml:105(title)
-#, fuzzy
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI—Unified Extensible Firmware Interface"
 
@@ -170,94 +169,142 @@ msgstr "UEFI, GPT, dan Partisi MS-DOS"
 #: xml/release-notes.xml:134(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
+"Bersamaan dengan spesifikasi EFI/UEFI, cara baru mempartisi juga "
+"dikembangkan bernama: GPT (GUI Partition Table / Tabel Partisi GUI). Skema "
+"baru ini menggunakan identifikasi unik (nilai 128-bit ditampilkan dalam 32 "
+"digit hexadesimal) untuk mengidentifikasi tipe-tipe perangkat dan partisi."
 
 #: xml/release-notes.xml:140(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
+"Sebagai tambahan, spesifikasi UEFI juga memungkinkan partisi cara lama MBR "
+"(MS-DOS). Boot loader Linux (ELILO atau GRUB 2) akan mencoba untuk membuat "
+"secara otomatis sebuah GUID untuk partisi cara lama tersebut, dan "
+"menuliskannya ke dalam firmware. GUID seperti itu akan sering kali berubah, "
+"sehingga mengakibatkan penulisan ulang pada firmware. Penulisan ulang "
+"terdiri dari dua cara yang berbeda: membuang entri lama dan membuar sebuah "
+"entri baru untuk menggantikannya."
 
 #: xml/release-notes.xml:149(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries. This can result in a non-bootable system."
 msgstr ""
+"Firmaware masa kini memiliki pengumpul sampah (garbage collector) yang "
+"mengumpulkan entri-entri yang telah dihapus dan membersihakn memori dari "
+"entri lama tersebut. Masalah timbul ketika firmware yang rusak tidak "
+"mengumpulkan dan membersihkan entri-entri tersebut. Hal ini dapat "
+"mengakibatkan sistem tidak dapat di-boot."
 
 #: xml/release-notes.xml:155(para)
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
-msgstr ""
+msgstr "Untuk memecahkan masalah ini, ubahlah partisi MBR menjadi bentuk GPT."
 
 #: xml/release-notes.xml:163(title)
 msgid "System Upgrade"
-msgstr ""
+msgstr "Pemutakhiran Sistem"
 
 #: xml/release-notes.xml:164(para)
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 msgstr ""
+"Bagian ini berisi daftar catatan yang berhubungan dengan pemutakhiran "
+"sistem. Untuk instruksi pemutakhiran yang lebih detail, lihat dokumentasi "
+"pada <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/bo"
+"ok.opensuse.startup/cha.update.osuse.html\"/>."
 
 #: xml/release-notes.xml:171(title)
 msgid "Removed and Replaced Packages"
-msgstr ""
+msgstr "Membuang dan Mengganti Paket-Paket"
 
 #: xml/release-notes.xml:172(para)
 msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
 msgstr ""
+"Paket-paket berikut telah dikeluarkan atau diganti dibandingkan dengan "
+"openSUSE Leap 42.1:"
 
 #: xml/release-notes.xml:178(para)
 msgid "<package>cadabra</package>: The source code no longer builds. The successor, <link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
 msgstr ""
+"<package>cadabra</package>: Kode sumber sudah tidak dibuat. Penggantinya, <"
+"link href=\"http://cadabra.science/\">Cadabra 2</link> belum begitu stabil."
 
 #: xml/release-notes.xml:185(para)
 msgid "<package>dropbear</package>: Removed because there are no relevant advantages over <package>openssh</package>."
 msgstr ""
+"<package>dropbear</package>: Dikeluarkan karena tidak ada kelebihannya "
+"dibanding <package>openssh</package>."
 
 #: xml/release-notes.xml:191(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
 msgstr ""
+"<package>gnome-system-log</package>: Diganti dengan <package>gnome-"
+"logs</package>."
 
 #: xml/release-notes.xml:197(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
-msgstr ""
+msgstr "<package>hawk</package>: Diganti dengan <package>hawk2</package>."
 
 #: xml/release-notes.xml:202(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
-msgstr ""
+msgstr "<package>psi</package>: Diganti dengan <package>psi+</package>."
 
 #: xml/release-notes.xml:207(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
 msgstr ""
+"<package>python-moin</package>: Dignti dengan <package>moinmoin-"
+"wiki</package>. Murni penamaan ulang, bukan sebuah peningkatan versi - "
+"sebuah penggantian yang nyaris identik."
 
 #: xml/release-notes.xml:214(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr ""
+"<package>ungifsicle</package>: Diganti dengan <package>gifsicle</package>."
 
 #: xml/release-notes.xml:220(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
-msgstr ""
+msgstr "<package>xchat</package>: Diganti dengan <package>hexchat</package>."
 
 #: xml/release-notes.xml:229(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
+"<filename>/var/cache</filename> pada Own Subvolume untuk Snapshots dan "
+"Rollback"
 
 #: xml/release-notes.xml:230(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
+"<filename>var/cache</filename> berisi banyak data yang sangat mudah hilang, "
+"seperti cache Zypper dengan paket-paket RPM dalam berbagai versi untuk "
+"setiap pemutakhiran. Sebagai akibat dari penyimpanan data yang kebanyakan "
+"redundan tetapi mudah hilang itu, jumlah ruang disk yang dipakai oleh sebuah "
+"snapshot dapat meningkat dengan sangat cepat."
 
 #: xml/release-notes.xml:237(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr ""
+"Untuk memecahkan masalah ini, <filename>/var/cache</filename> dipindahkan ke "
+"subvolume yang terpisah. Pada instalasi baru openSUSE Leap 42.2 hal ini "
+"dilakukan secara otomatis. Untuk mengubah sistem berkas root yang sudah ada, "
+"lakukan langkah-langkah sebagai berikut:"
 
 #: xml/release-notes.xml:245(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
+"Pastikan nama device (sebagai contoh, <filename>/daev/sda2</filename> atau "
+"<filename>/dev/sda3</filename>) pada sistem berkas root:"
 
 #: xml/release-notes.xml:250(command)
 msgid "df /"
-msgstr ""
+msgstr "df /"
 
 #: xml/release-notes.xml:253(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
+"Kenali subvolume induk dari semua subvolume yang ada. Untuk instalasi "
+"openSUSE 13.2, nama subvolumenya <filename>@</filename>. Untuk memeriksa "
+"apakah anda memiliki subvolume <filename>@</filename>, gunakan:"
 
 #: xml/release-notes.xml:259(command)
 msgid "btrfs subvolume list / | grep '@'"
-msgstr ""
+msgstr "btrfs subvolume list / | grep '@'"
 
 #: xml/release-notes.xml:260(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
