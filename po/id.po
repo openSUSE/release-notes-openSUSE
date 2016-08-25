@@ -1,15 +1,13 @@
 # @TITLE@
 # Copyright (C) 2006, SUSE Linux GmbH, Nuremberg
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 # This file is distributed under the same license as @PACKAGE@ package. FIRST
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2016-08-15 13:46+0200\n"
-"PO-Revision-Date: 2016-08-24 16:44+0000\n"
+"PO-Revision-Date: 2016-08-25 15:12+0700\n"
 "Last-Translator: M. Edwin Zakaria <medwin@opensuse.org>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/id/>\n"
@@ -18,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.6\n"
+"X-Generator: Poedit 1.8.5\n"
 
 #: xml/release-notes.xml:15(title) xml/release-notes.xml:32(component)
 msgid "Release Notes"
@@ -309,155 +307,186 @@ msgstr "btrfs subvolume list / | grep '@'"
 #: xml/release-notes.xml:260(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
+"Jika hasil dari perintah ini kosong, artinya anda tidak memiliki subvolume "
+"bernama <filename>@</filename>. Jika demikian, anda dapat melanjutkan dengan "
+"subvolume ID 5 yang digunakan pada openSUSE versi sebelumnya."
 
 #: xml/release-notes.xml:267(para)
 msgid "Now mount the requisite subvolume."
-msgstr ""
+msgstr "Sekarang mount subvolume yang diperlukan."
 
 #: xml/release-notes.xml:272(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr ""
+"Jika anda memiliki subvolume <filename>@</filename>, mount subvolume itu ke "
+"titik mount sementara:"
 
 #: xml/release-notes.xml:276(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
-msgstr ""
+msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 
 #: xml/release-notes.xml:279(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
+"Kalau anda tidak memiliki subvolume <filename>@</filename>, mount subvolume "
+"ID 5 sebagai gantinya:"
 
 #: xml/release-notes.xml:283(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
-msgstr ""
+msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:288(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
+"<filename>/mnt/var/cache</filename> bisa saja sudah ada dan mungkin pada "
+"direktori yang sama dengan <filename>/var/cache</filename>. Untuk "
+"menghindari hilangnya data, pindahkan dengan:"
 
 #: xml/release-notes.xml:293(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
-msgstr ""
+msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
 #: xml/release-notes.xml:296(para)
 msgid "Create a new subvolume:"
-msgstr ""
+msgstr "Membuat subvolume baru:"
 
 #: xml/release-notes.xml:299(command)
 msgid "btrfs subvol create /mnt/var/cache"
-msgstr ""
+msgstr "btrfs subvol create /mnt/var/cache"
 
 #: xml/release-notes.xml:302(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr ""
+"Jika kemudian ada sebuah direktori <filename>/var/cache.old</filename>, "
+"pindahkan ke lokasi baru dengan:"
 
 #: xml/release-notes.xml:306(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
-msgstr ""
+msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:307(para)
 msgid "If that is not the case, instead do:"
-msgstr ""
+msgstr "Jika ternyata kasusnya tidak begitu, lakukan:"
 
 #: xml/release-notes.xml:310(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
-msgstr ""
+msgstr "mv /var/cache/* /mnt/var/cache/"
 
 #: xml/release-notes.xml:313(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr ""
+"Anda bisa saja menghapus <filename>/mnt/var/cache.old</filename> sebagai "
+"pilihan, dengan:"
 
 #: xml/release-notes.xml:316(command)
 msgid "rm -rf /mnt/var/cache.old"
-msgstr ""
+msgstr "rm -rf /mnt/var/cache.old"
 
 #: xml/release-notes.xml:319(para)
 msgid "Unmount the subvolume from the temporary mount point:"
-msgstr ""
+msgstr "Lepaskan (unmount) subvolume dari titik mount sementara:"
 
 #: xml/release-notes.xml:322(command)
 msgid "umount /mnt"
-msgstr ""
+msgstr "umount /mnt"
 
 #: xml/release-notes.xml:325(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
+"Tambahkan entri ke <filename>/etc/fstab</filename> untuk subvolume "
+"<filename>/var/cache</filename> yang baru. Gunakan subvolume yang ada "
+"sebagai templat dengan menyalinnya. Pastikan untuk tidak mengubah UUID ("
+"karena itu adalah UUID untuk sistem berkas root) dan gantilah nama subvolume "
+"dan titik mountnya secara konsisten ke <filename>/var/cache</filename>."
 
 #: xml/release-notes.xml:334(para)
 msgid "Mount the new subvolume as specified in /etc/fstab:"
-msgstr ""
+msgstr "Mount subvolume baru sesuai dengan pengaturan di /etc/fstab dengan:"
 
 #: xml/release-notes.xml:337(command)
 msgid "mount /var/cache"
-msgstr ""
+msgstr "mount /var/cache"
 
 #: xml/release-notes.xml:345(title)
-#, fuzzy
 msgid "General"
-msgstr "Meksiko/General"
+msgstr "Umum"
 
 #: xml/release-notes.xml:347(para)
 msgid "This section lists general issues with openSUSE Leap 42.2 that do not match any other category."
 msgstr ""
+"Bagian ini berisi isu-isu umum pada openSUSE Leap 42.2 yang tidak masuk ke "
+"kategori lain"
 
 #. bnc#809347
 #: xml/release-notes.xml:380(title)
-#, fuzzy
 msgid "More Information and Feedback"
-msgstr "Informasi Memori"
+msgstr "Informasi Lebih Lanjut dan Umpan Balik"
 
 #: xml/release-notes.xml:384(para)
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Bacalah dokumen <filename>README</filename>  yang terdapa pada media."
 
 #: xml/release-notes.xml:389(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr ""
+"Perhatikan informasi detail changelog mengenai paket tertentu dari RPMnya:"
 
 #: xml/release-notes.xml:393(replaceable)
 msgid "FILENAME"
-msgstr ""
+msgstr "FILENAME"
 
 #: xml/release-notes.xml:393(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-msgstr ""
+msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #: xml/release-notes.xml:394(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "Ganti <replaceable>FILENAME</replaceable> dengan nama RPM."
 
 #: xml/release-notes.xml:399(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr ""
+"Periksa berkas <filename>ChangeLog</filename> pada level teratas dari media "
+"untuk catatan kronologis semua perubahan yang terjadi pada paket yang "
+"diperbarui."
 
 #: xml/release-notes.xml:405(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr ""
+"Dapatkan informasi lebih banyak pada direktori <filename>docu</filename> "
+"pada media."
 
 #: xml/release-notes.xml:411(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr ""
+"<link href=\"https://doc.opensuse.org/\"/> berisi dokumentasi tambahan atau "
+"sudah diperbarui."
 
 #: xml/release-notes.xml:416(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr ""
+"Kunjungi <link href=\"https://www.opensuse.org\"/> untuk berita produk "
+"terbaru dari openSUSE."
 
 #: xml/release-notes.xml:423(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
-msgstr ""
+msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
 #: xml/release-notes.xml:427(para)
 msgid "Thanks for using openSUSE."
-msgstr ""
+msgstr "Terima kasih telah menggunakan openSUSE."
 
 #: xml/release-notes.xml:430(para)
 msgid "The openSUSE Team."
-msgstr ""
+msgstr "Tim openSUSE."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: xml/release-notes.xml:0(None)
 msgid "translator-credits"
 msgstr ""
+"Penerjemah\n"
+"M. Edwin Zakaria, 2016"
 
 # dialog title for nfs installation
 #, fuzzy
