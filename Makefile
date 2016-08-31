@@ -12,8 +12,8 @@
 
 ifndef LANGS
   LANGS := $(shell cat po/LINGUAS)
-  LANGSEN := $(LANGS) en
 endif
+LANGSEN := $(LANGS) en
 ifndef STYLEROOT
   STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013-ns
 endif
@@ -98,6 +98,8 @@ xml/release-notes.%.xml: po/%.po xml/release-notes.ent xml/release-notes.xml
 
 translatedxml: xml/release-notes.ent xml/release-notes.xml $(XML_FILES)
 	cp xml/release-notes.xml xml/release-notes.en.xml
+	sed -i -r -e "s_<releaseinfo>[^>]+>_<releaseinfo>$(VERSION)</releaseinfo>_" \
+	  xml/release-notes.en.xml
 
 pdf: $(PDF_FILES)
 $(PDF_FILES): po/LINGUAS translatedxml
