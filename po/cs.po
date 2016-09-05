@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 15:09+0200\n"
+"POT-Creation-Date: 2016-09-07 12:38+0200\n"
 "PO-Revision-Date: 2016-08-12 13:03+0000\n"
 "Last-Translator: Tomáš Chvátal <tchvatal@suse.com>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/cs/>\n"
@@ -81,306 +81,338 @@ msgstr "Pokud aktualizujete openSUSE ze starší verze vydání, můžete si poz
 #. beta statement
 #: xml/release-notes.xml:64(para)
 #, fuzzy
-msgid "This public beta test is part of the openSUSE project. Information about the project is available at <link href=\"https://www.opensuse.org\"/>."
+msgid "<phrase condition=\"beta\">This public beta test is part of the openSUSE project.</phrase> Information about the project is available at <link href=\"https://www.opensuse.org\"/>."
 msgstr "Tento veřejný beta test je součástí projektu openSUSE. Informace o projektu jsou dostupné <ulink url=\"http://opensuse.org\"/>."
 
-#: xml/release-notes.xml:69(para)
+#: xml/release-notes.xml:70(para)
 #, fuzzy
 msgid "Report all bugs you encounter using this prerelease of openSUSE 42.2 in the openSUSE Bugzilla. For more information, see <link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/>. If you would like to see anything added to the release notes, file a bug report against the component <quote>Release Notes</quote>."
 msgstr "Informace o chybách tohoto beta vydání naleznete na openSUSE wiki na adrese <ulink url=\"http://en.opensuse.org/Bugs:Most_Annoying_Bugs\"/>. Prosíme, nahlaste všechny chyby, na které při používání tohoto vývojového vydání narazíte openSUSE factory do Novell Bugzilly, viz <ulink url=\"http://en.opensuse.org/Submitting_Bug_Reports\"/>. Pokud byste do poznámek k vydání rádi něco přidali, nahlaste chybu v komponentě poznámky k vydání (<quote>Release Notes</quote>)."
 
-#: xml/release-notes.xml:79(title)
+#: xml/release-notes.xml:80(title)
 msgid "Installation"
 msgstr "Instalace"
 
-#: xml/release-notes.xml:81(para)
+#: xml/release-notes.xml:82(para)
 msgid "This section contains installation-related notes. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>."
 msgstr "Tato sekce obsahuje poznámky ohledně instalace. Detailní informace ohledně postupu upgrade najdete v dokumentaci na <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>"
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
-#: xml/release-notes.xml:90(title)
+#: xml/release-notes.xml:91(title)
 msgid "Minimal System Installation"
 msgstr "Instalace minimálního systému"
 
-#: xml/release-notes.xml:91(para)
+#: xml/release-notes.xml:92(para)
 #, fuzzy
 msgid "To avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
 msgstr "Aby se zabránilo instalaci některých velkých doporučených balíčků, vzor minimální instalace používá jiný vzor kolidující s nechtěnými balíčky. Tento vzor může být po instalace odstraněn, jeho jméno je <literal>patterns-openSUSE-minimal_base-conflicts</literal>."
 
-#: xml/release-notes.xml:98(para)
+#: xml/release-notes.xml:99(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr "Všimněte si, že minimální instalace nemá ve výchozím stavu firewall. Jestli jej potřebujete, nainstalujte si <literal>SuSEfirewall2</literal>."
 
-#: xml/release-notes.xml:105(title)
+#: xml/release-notes.xml:106(title)
 #, fuzzy
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
-#: xml/release-notes.xml:106(para)
+#: xml/release-notes.xml:107(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "Dříve než nainstalujete openSUSE na váš systém, který je zaváděn pomocí UEFI (Unified Extensible Firmware Interface), důrazně doporučujeme zkontrolovat, zda nejsou u výrobce hardwaru k dispozici doporučené aktualizace firmwaru. Pokud jsou k dispozici, nainstalujte je. Předinstalovaný systém Windows 8 je značnou známkou toho, že váš systém UEFI používá."
 
-#: xml/release-notes.xml:114(para)
+#: xml/release-notes.xml:115(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. However, there is no clear data of how much is <quote>too much</quote>."
 msgstr ""
 
-#: xml/release-notes.xml:119(para)
+#: xml/release-notes.xml:120(para)
 #, fuzzy
 msgid "openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>Pozadí:</emphasis>  Některý firmware UEFI obsahuje chyby, které způsobují znefunkčnění je-li zapsáno do úložného prostoru UEFI příliš mnoho dat. Nikdo však ve skutečnosti neví, kolik je to \"příliš mnoho\". openSUSE snižuje riziko tím, že nezapisuje více než pouhé minimum potřebné pro zavedení OS. To minimum znamená sdělení firmwaru UEFI, kde se nachází zavaděč openSUSE. Upstreamové funkce jádra Linuxu, které používají úložný prostor UEFI pro ukládání informací o zavádění systému a jeho pádu (<literal>pstore</literal>) jsou ve výchozím stavu zakázané. Nicméně je však doporučeno nainstalovat veškeré aktualizace firmwaru, které výrobce doporučuje."
 
 #. bnc#850056
-#: xml/release-notes.xml:133(title)
+#: xml/release-notes.xml:134(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT a oddíly MS-DOSu"
 
-#: xml/release-notes.xml:134(para)
+#: xml/release-notes.xml:135(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "Společně se specifikací EFI/UEFI se objevil nový styl dělení disků: GPT (GUID Partition Table). Je to nové schéma, které k identifikaci zařízení a typů diskových oddílů používá globálně unikátní identifikátory (128bitové hodnoty zobrazené jako 32 šestnáctkových číslic)."
 
-#: xml/release-notes.xml:140(para)
+#: xml/release-notes.xml:141(para)
 #, fuzzy
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces the first one."
 msgstr "Navíc pak specifikace UEFI umožňuje užívání starších oddílů MBR (MS-DOS). Zavaděče Linuxu (ELILO nebo GRUB2) zkoušejí automaticky vygenerovat GUID těchto starších oddílů a zapsat je do firmwaru. Takový GUID se může často měnit, což způsobuje přepis firmwaru. Přepis se skládá ze dvou různých operací: odstranění starého záznamu a vytvoření nového, který nahradí ten původní."
 
-#: xml/release-notes.xml:149(para)
+#: xml/release-notes.xml:150(para)
 #, fuzzy
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries. This can result in a non-bootable system."
 msgstr "Moderní firmware má garbage collector, který sbírá smazané položky a uvolňuje paměť, která byla pro ně rezervována. Může se objevit problém, když chybný firmware tyto položky nesbírá a neuvolňuje; to může skončit nezaveditelným systémem."
 
-#: xml/release-notes.xml:155(para)
+#: xml/release-notes.xml:156(para)
 #, fuzzy
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "Je jednoduché to obejít: abyste se tomuto problému úplně vyhnuli, zkonvertujte starší oddíly MBR na nové GPT."
 
-#: xml/release-notes.xml:163(title)
+#: xml/release-notes.xml:164(title)
 msgid "System Upgrade"
 msgstr "Aktualizace systému"
 
-#: xml/release-notes.xml:164(para)
+#: xml/release-notes.xml:165(para)
 #, fuzzy
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 msgstr "Tato sekce obsahuje poznámky k upgradování systému. Detailní instrukce jak postupovat při upgradu najdete zde <ulink url=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 
-#: xml/release-notes.xml:171(title)
+#: xml/release-notes.xml:172(title)
 msgid "Removed and Replaced Packages"
 msgstr ""
 
-#: xml/release-notes.xml:172(para)
+#: xml/release-notes.xml:173(para)
 msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
 msgstr ""
 
-#: xml/release-notes.xml:178(para)
+#: xml/release-notes.xml:179(para)
 msgid "<package>cadabra</package>: The source code no longer builds. The successor, <link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
 msgstr ""
 
-#: xml/release-notes.xml:185(para)
+#: xml/release-notes.xml:186(para)
 msgid "<package>dropbear</package>: Removed because there are no relevant advantages over <package>openssh</package>."
 msgstr ""
 
-#: xml/release-notes.xml:191(para)
+#: xml/release-notes.xml:192(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
 msgstr ""
 
-#: xml/release-notes.xml:197(para)
+#: xml/release-notes.xml:198(para)
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>"
 msgstr ""
 
-#: xml/release-notes.xml:203(para)
+#: xml/release-notes.xml:204(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr ""
 
-#: xml/release-notes.xml:208(para)
+#: xml/release-notes.xml:209(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr ""
 
-#: xml/release-notes.xml:213(para)
+#: xml/release-notes.xml:214(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
 msgstr ""
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:221(para)
 msgid "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr ""
 
-#: xml/release-notes.xml:225(para)
+#: xml/release-notes.xml:226(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr ""
 
-#: xml/release-notes.xml:231(para)
+#: xml/release-notes.xml:232(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr ""
 
-#: xml/release-notes.xml:240(title)
+#: xml/release-notes.xml:241(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
 
-#: xml/release-notes.xml:241(para)
+#: xml/release-notes.xml:242(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
 
-#: xml/release-notes.xml:248(para)
+#: xml/release-notes.xml:249(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr ""
 
-#: xml/release-notes.xml:256(para)
+#: xml/release-notes.xml:257(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
 
-#: xml/release-notes.xml:261(command)
+#: xml/release-notes.xml:262(command)
 msgid "df /"
 msgstr ""
 
-#: xml/release-notes.xml:264(para)
+#: xml/release-notes.xml:265(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
 
-#: xml/release-notes.xml:270(command)
+#: xml/release-notes.xml:271(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr ""
 
-#: xml/release-notes.xml:271(para)
+#: xml/release-notes.xml:272(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
 
-#: xml/release-notes.xml:278(para)
+#: xml/release-notes.xml:279(para)
 msgid "Now mount the requisite subvolume."
 msgstr ""
 
-#: xml/release-notes.xml:283(para)
+#: xml/release-notes.xml:284(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr ""
 
-#: xml/release-notes.xml:287(command)
+#: xml/release-notes.xml:288(command)
 #, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:290(para)
+#: xml/release-notes.xml:291(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
 
-#: xml/release-notes.xml:294(command)
+#: xml/release-notes.xml:295(command)
 #, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:299(para)
+#: xml/release-notes.xml:300(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
 
-#: xml/release-notes.xml:304(command)
+#: xml/release-notes.xml:305(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr ""
 
-#: xml/release-notes.xml:307(para)
+#: xml/release-notes.xml:308(para)
 msgid "Create a new subvolume:"
 msgstr ""
 
-#: xml/release-notes.xml:310(command)
+#: xml/release-notes.xml:311(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:313(para)
+#: xml/release-notes.xml:314(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr ""
 
-#: xml/release-notes.xml:317(command)
+#: xml/release-notes.xml:318(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:318(para)
+#: xml/release-notes.xml:319(para)
 msgid "If that is not the case, instead do:"
 msgstr ""
 
-#: xml/release-notes.xml:321(command)
+#: xml/release-notes.xml:322(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr ""
 
-#: xml/release-notes.xml:324(para)
+#: xml/release-notes.xml:325(para)
 #, fuzzy
 #| msgid "And update <filename>/etc/resolv.conf</filename>:"
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "A aktualizujte <filename>/etc/resolv.conf</filename>:"
 
-#: xml/release-notes.xml:327(command)
+#: xml/release-notes.xml:328(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr ""
 
-#: xml/release-notes.xml:330(para)
+#: xml/release-notes.xml:331(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr ""
 
-#: xml/release-notes.xml:333(command)
+#: xml/release-notes.xml:334(command)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:336(para)
+#: xml/release-notes.xml:337(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
 
-#: xml/release-notes.xml:345(para)
+#: xml/release-notes.xml:346(para)
 msgid "Mount the new subvolume as specified in /etc/fstab:"
 msgstr ""
 
-#: xml/release-notes.xml:348(command)
+#: xml/release-notes.xml:349(command)
 msgid "mount /var/cache"
 msgstr ""
 
+#: xml/release-notes.xml:355(title)
+msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
+msgstr ""
+
+#: xml/release-notes.xml:356(para)
+msgid "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</package>) was installed by default but had a lower priority than the libinput driver (<package>xf86-input-libinput</package>)."
+msgstr ""
+
+#: xml/release-notes.xml:362(para)
+msgid "Starting with Leap 42.2:"
+msgstr ""
+
+#: xml/release-notes.xml:367(para)
+msgid "The Synaptics X driver is no longer installed by default."
+msgstr ""
+
+#: xml/release-notes.xml:372(para)
+msgid "If the Synaptics X driver is installed, it will take precedence for any touchpad devices."
+msgstr ""
+
+#: xml/release-notes.xml:378(para)
+msgid "The Synaptics X driver is no longer supported by GNOME. This means when the driver is installed, Synaptics touchpads can only be configured to the extent that a basic mouse can."
+msgstr ""
+
+#: xml/release-notes.xml:385(para)
+msgid "Unless you are using a Synaptics touchpad and have a large amount of custom configuration for the Synaptics driver, remove the package from your system:"
+msgstr ""
+
+#: xml/release-notes.xml:389(command)
+msgid "sudo zypper rm xf86-input-synaptics"
+msgstr ""
+
 #. bnc#809347
-#: xml/release-notes.xml:391(title)
+#: xml/release-notes.xml:430(title)
 msgid "More Information and Feedback"
 msgstr "Více informací a zpětná vazba"
 
-#: xml/release-notes.xml:395(para)
+#: xml/release-notes.xml:434(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Přečtěte si dokument <filename>README</filename> na vašem médiu."
 
-#: xml/release-notes.xml:400(para)
+#: xml/release-notes.xml:439(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Zobrazte si podrobné informace o změnách v každém balíčku z jeho RPM:"
 
-#: xml/release-notes.xml:404(replaceable)
+#: xml/release-notes.xml:443(replaceable)
 msgid "FILENAME"
 msgstr "FILENAME"
 
-#: xml/release-notes.xml:404(screen)
+#: xml/release-notes.xml:443(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:405(para)
+#: xml/release-notes.xml:444(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>FILENAME</replaceable> jménem RPM balíčku."
 
-#: xml/release-notes.xml:410(para)
+#: xml/release-notes.xml:449(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "Pro časový protokol všech změn provedených na aktualizovaných balíčcích si prohlédněte soubor <filename>ChangeLog</filename> v kořenovém adresáři tohoto DVD."
 
-#: xml/release-notes.xml:416(para)
+#: xml/release-notes.xml:455(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Další informace najdete na médiu v adresáři <filename>docu</filename>."
 
-#: xml/release-notes.xml:422(para)
+#: xml/release-notes.xml:461(para)
 #, fuzzy
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> obsahuje dodatečnou nebo aktualizovanou dokumentaci."
 
-#: xml/release-notes.xml:427(para)
+#: xml/release-notes.xml:466(para)
 #, fuzzy
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Pro poslední novinky o openSUSE navštivte <ulink url=\"http://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:434(para)
+#: xml/release-notes.xml:473(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:438(para)
+#: xml/release-notes.xml:477(para)
 msgid "Thanks for using openSUSE."
 msgstr "Děkujeme, že používáte openSUSE."
 
-#: xml/release-notes.xml:441(para)
+#: xml/release-notes.xml:480(para)
 msgid "The openSUSE Team."
 msgstr "Tým openSUSE."
 

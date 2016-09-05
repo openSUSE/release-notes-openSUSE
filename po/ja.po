@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
-"POT-Creation-Date: 2016-08-31 21:02+0200\n"
+"POT-Creation-Date: 2016-09-07 12:38+0200\n"
 "PO-Revision-Date: 2016-08-16 02:05+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/ja/>\n"
@@ -67,294 +67,328 @@ msgstr "openSUSE Leap の旧バージョンからアップグレードした場�
 
 #. beta statement
 #: xml/release-notes.xml:64(para)
-msgid "This public beta test is part of the openSUSE project. Information about the project is available at <link href=\"https://www.opensuse.org\"/>."
+#, fuzzy
+#| msgid "This public beta test is part of the openSUSE project. Information about the project is available at <link href=\"https://www.opensuse.org\"/>."
+msgid "<phrase condition=\"beta\">This public beta test is part of the openSUSE project.</phrase> Information about the project is available at <link href=\"https://www.opensuse.org\"/>."
 msgstr "これは openSUSE プロジェクトが公開する公開ベータテストです。プロジェクトに関する情報は、 <link href=\"https://www.opensuse.org\"/> をお読みください。"
 
-#: xml/release-notes.xml:69(para)
+#: xml/release-notes.xml:70(para)
 msgid "Report all bugs you encounter using this prerelease of openSUSE 42.2 in the openSUSE Bugzilla. For more information, see <link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/>. If you would like to see anything added to the release notes, file a bug report against the component <quote>Release Notes</quote>."
 msgstr "openSUSE 42.2 のプレリリース版でなんらかのバグに直面した場合は、 openSUSE Bugzilla にご報告ください。詳しくは <link href=\"https://ja.opensuse.org/バグレポート\"/> をお読みください。また、リリースノートに追記すべきとお考えの項目については、 <quote>Release Notes</quote> に対してバグを報告してください。"
 
-#: xml/release-notes.xml:79(title)
+#: xml/release-notes.xml:80(title)
 msgid "Installation"
 msgstr "インストール"
 
-#: xml/release-notes.xml:81(para)
+#: xml/release-notes.xml:82(para)
 msgid "This section contains installation-related notes. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>."
 msgstr ""
 "本章には、インストールに関連する説明が書かれています。アップグレードに関する詳しい手順については、下記で公開されている文書をお読みください:\n"
 "<link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>"
 
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
-#: xml/release-notes.xml:90(title)
+#: xml/release-notes.xml:91(title)
 msgid "Minimal System Installation"
 msgstr "最小限のシステムインストールについて"
 
-#: xml/release-notes.xml:91(para)
+#: xml/release-notes.xml:92(para)
 msgid "To avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
 msgstr "最小インストールのパターンを選択してインストールした際、サイズを肥大化させてしまう様々な推奨パッケージをインストールしないようにするため、不要なパッケージに対して矛盾を設定し、インストールを防ぐためのパターンがインストールされます。このパターンは <literal>patterns-openSUSE-minimal_base-conflicts</literal> という名称で、システムのインストール後に削除することもできます。"
 
-#: xml/release-notes.xml:98(para)
+#: xml/release-notes.xml:99(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr "また、最小構成でインストールすると、既定でファイアウオールは無効化されます。必要であれば <literal>SuSEfirewall2</literal> をインストールしてください。"
 
-#: xml/release-notes.xml:105(title)
+#: xml/release-notes.xml:106(title)
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI—Unified Extensible Firmware Interface"
 
-#: xml/release-notes.xml:106(para)
+#: xml/release-notes.xml:107(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "UEFI (Unified Extensible Firmware Interface) を利用して起動するシステムに openSUSE をインストールする場合、事前に製造元が推奨するファームウエア更新を必ずチェックし、可能であればインストールしておくことを強くお勧めします。 Windows 8 がプレインストールされているマシンの場合、お使いのシステムが UEFI である可能性が高いものと思われます。"
 
-#: xml/release-notes.xml:114(para)
+#: xml/release-notes.xml:115(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. However, there is no clear data of how much is <quote>too much</quote>."
 msgstr "<emphasis>背景</emphasis> UEFI のファームウエアによっては、 UEFI のストレージ領域に多くのデータが書き込まれることで、起動に失敗してしまうバグを抱えています。もちろんこれはバグであるため、どれだけ <quote>多くの</quote> データを書き込むことで問題を発生させるのかは、誰にもわかりません。"
 
-#: xml/release-notes.xml:119(para)
+#: xml/release-notes.xml:120(para)
 msgid "openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "openSUSE では、 OS を起動するのに最低限必要となるデータ (UEFI に対して、 openSUSE のブートローダの場所を示すための情報) しか書き込まないようにすることで、このバグの発生を最小化しています。 Linux カーネルのオリジナル版では、 UEFI のストレージ領域に起動やクラッシュに関する情報を書き込む機能 (<literal>pstore</literal>) がありますが、既定では無効化しています。ただし、バグである都合上、ハードウエアの製造元が推奨するファームウエア更新については、必ずインストールしておくことをお勧めします。"
 
 #. bnc#850056
-#: xml/release-notes.xml:133(title)
+#: xml/release-notes.xml:134(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT, MS-DOS の各パーティションについて"
 
-#: xml/release-notes.xml:134(para)
+#: xml/release-notes.xml:135(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "EFI/UEFI の仕様には、新しい形式のパーティションテーブル GPT (GUID パーティションテーブル) が定義されています。この新しい方式では、ユニークな GUID (識別子; 32 桁の 16 進数で表わされる 128 ビットの値) を利用してデバイスとパーティション種別を識別します。"
 
-#: xml/release-notes.xml:140(para)
+#: xml/release-notes.xml:141(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces the first one."
 msgstr "これに加えて、 UEFI の仕様では古い MBR (MS-DOS) 形式のパーティションテーブルにも対応しています。 Linux のブートローダ (ELILO, GRUB 2) では、これらの古い形式のパーティションに対して、自動的に GUID を割り当ててファームウエア内に書き込もうとします。この場合、 GUID は頻繁に変更されるものであるため、ファームウエアへの再書き込みも頻繁に発生することになります。この再書き込みには 2 つの操作、具体的には古い項目の削除と、それを置き換えるための新しい項目の作成が含まれます。"
 
-#: xml/release-notes.xml:149(para)
+#: xml/release-notes.xml:150(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries. This can result in a non-bootable system."
 msgstr "また、新しいファームウエアには、削除された項目を収集して古い項目用に確保したメモリを解放する、ガーベージコレクタ機能が用意されています。ファームウエアに不具合があると、これらの古い項目を収集できなかったり、メモリを解放しなかったりする場合があり、これにより起動が不可能になる場合があります。"
 
-#: xml/release-notes.xml:155(para)
+#: xml/release-notes.xml:156(para)
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "このような問題が発生した場合は、古い MBR 形式のパーティションを GPT 形式のパーティションに更新して、問題を回避してください。"
 
-#: xml/release-notes.xml:163(title)
+#: xml/release-notes.xml:164(title)
 msgid "System Upgrade"
 msgstr "システムアップグレード"
 
-#: xml/release-notes.xml:164(para)
+#: xml/release-notes.xml:165(para)
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 msgstr ""
 "本章には、アップグレードに関する説明が書かれています。詳しいアップグレード手順については、下記で公開されている文書をお読みください:\n"
 "<link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>"
 
-#: xml/release-notes.xml:171(title)
+#: xml/release-notes.xml:172(title)
 msgid "Removed and Replaced Packages"
 msgstr "削除または置換されたパッケージ"
 
-#: xml/release-notes.xml:172(para)
+#: xml/release-notes.xml:173(para)
 msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
 msgstr "openSUSE Leap 42.1 と比較すると、本バージョンでは下記のパッケージが廃止または置換されています:"
 
-#: xml/release-notes.xml:178(para)
+#: xml/release-notes.xml:179(para)
 msgid "<package>cadabra</package>: The source code no longer builds. The successor, <link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
 msgstr "<package>cadabra</package>: 構築対象から外されています。後継である <link href=\"http://cadabra.science/\">Cadabra 2</link> も、まだ不安定な状態です。"
 
-#: xml/release-notes.xml:185(para)
+#: xml/release-notes.xml:186(para)
 msgid "<package>dropbear</package>: Removed because there are no relevant advantages over <package>openssh</package>."
 msgstr "<package>dropbear</package>: <package>openssh</package> と比べて特に大きな利点がなくなってしまったため、削除されています。"
 
-#: xml/release-notes.xml:191(para)
+#: xml/release-notes.xml:192(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
 msgstr "<package>gnome-system-log</package>: <package>gnome-logs</package> に置き換えられています。"
 
-#: xml/release-notes.xml:197(para)
+#: xml/release-notes.xml:198(para)
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>"
 msgstr "<package>emerillon</package>: <package>gnome-maps</package> に置き換えられています。"
 
-#: xml/release-notes.xml:203(para)
+#: xml/release-notes.xml:204(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: <package>hawk2</package> に置き換えられています。"
 
-#: xml/release-notes.xml:208(para)
+#: xml/release-notes.xml:209(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr "<package>psi</package>: <package>psi+</package> に置き換えられています。"
 
-#: xml/release-notes.xml:213(para)
+#: xml/release-notes.xml:214(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
 msgstr "<package>python-moin</package>: <package>moinmoin-wiki</package> に置き換えられています。こちらは純粋にパッケージ名だけを変更しただけであり、バージョンアップグレードではありません。そのため、その場で置き換えて使用できるはずのものです。"
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:221(para)
 msgid "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr "<package>arista</package>: <package>transmageddon</package> に置き換えられています。"
 
-#: xml/release-notes.xml:225(para)
+#: xml/release-notes.xml:226(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr "<package>ungifsicle</package>: <package>gifsicle</package> に置き換えられています。"
 
-#: xml/release-notes.xml:231(para)
+#: xml/release-notes.xml:232(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr "<package>xchat</package>: <package>hexchat</package> に置き換えられています。"
 
-#: xml/release-notes.xml:240(title)
+#: xml/release-notes.xml:241(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr "<filename>/var/cache</filename> に対する独自のサブボリュームへの移動について"
 
-#: xml/release-notes.xml:241(para)
+#: xml/release-notes.xml:242(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr "<filename>/var/cache</filename> には、それぞれの更新に対応する様々なバージョンの RPM パッケージや、 Zypper のキャッシュなど、頻繁に書き換えられるデータが多数存在しています。スナップショットのように冗長性を確保している環境下で、このように頻繁な更新が発生してしまうと、スナップショットのディスク領域が容易に肥大化してしまいます。"
 
-#: xml/release-notes.xml:248(para)
+#: xml/release-notes.xml:249(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr "この問題を解決するため、 <filename>/var/cache</filename> を個別のサブボリュームに配置するようにしました。 openSUSE Leap 42.2 を新規にインストールした場合、この配置は自動的に行なわれます。既存のルートファイルシステムを本件のように変更したい場合は、下記のような手順を実施してください:"
 
-#: xml/release-notes.xml:256(para)
+#: xml/release-notes.xml:257(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr "まずはルートデバイスに対応するデバイス名 (たとえば<filename>/dev/sda2</filename> や <filename>/dev/sda3</filename> など) を判断します:"
 
-#: xml/release-notes.xml:261(command)
+#: xml/release-notes.xml:262(command)
 msgid "df /"
 msgstr "df /"
 
-#: xml/release-notes.xml:264(para)
+#: xml/release-notes.xml:265(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr "次に、他の全てのサブボリュームに対する親サブボリュームを判断します。 openSUSE 13.2 の場合、 <filename>@</filename> という名前のサブボリュームです。 <filename>@</filename> という名前のサブボリュームが存在するかどうかを判断するには、下記のようにします:"
 
-#: xml/release-notes.xml:270(command)
+#: xml/release-notes.xml:271(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr "btrfs subvolume list / | grep '@'"
 
-#: xml/release-notes.xml:271(para)
+#: xml/release-notes.xml:272(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr "上記のコマンドを実行しても何も出力されない場合、 <filename>@</filename> という名前のサブボリュームが存在していないことを表わします。このような場合、古い openSUSE のバージョンで利用されていた、サブボリューム ID 5 を利用することができます。"
 
-#: xml/release-notes.xml:278(para)
+#: xml/release-notes.xml:279(para)
 msgid "Now mount the requisite subvolume."
 msgstr "次に必要なサブボリュームをマウントします。"
 
-#: xml/release-notes.xml:283(para)
+#: xml/release-notes.xml:284(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr "<filename>@</filename> という名前のサブボリュームが存在している場合は、下記のようにして一時的なマウントポイント内にマウントします:"
 
-#: xml/release-notes.xml:287(command)
+#: xml/release-notes.xml:288(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount &lt;ルートデバイス&gt; -o subvol=@ /mnt"
 
-#: xml/release-notes.xml:290(para)
+#: xml/release-notes.xml:291(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr "<filename>@</filename> という名前のサブボリュームが無い場合は、代わりにサブボリューム ID 5 をマウントします:"
 
-#: xml/release-notes.xml:294(command)
+#: xml/release-notes.xml:295(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount &lt;ルートデバイス&gt; -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:299(para)
+#: xml/release-notes.xml:300(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr "ここまでの作業で、 <filename>/var/cache</filename>　ディレクトリが <filename>/mnt/var/cache</filename> に現われるようになります。 データを失わないようにするには、まずは下記のようにして移動します:"
 
-#: xml/release-notes.xml:304(command)
+#: xml/release-notes.xml:305(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
-#: xml/release-notes.xml:307(para)
+#: xml/release-notes.xml:308(para)
 msgid "Create a new subvolume:"
 msgstr "次に新しいサブボリュームを作成します:"
 
-#: xml/release-notes.xml:310(command)
+#: xml/release-notes.xml:311(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr "btrfs subvol create /mnt/var/cache"
 
-#: xml/release-notes.xml:313(para)
+#: xml/release-notes.xml:314(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr "あとは <filename>/var/cache.old</filename> に移動しておいたデータを、新しく作成した場所に移動しなおします:"
 
-#: xml/release-notes.xml:317(command)
+#: xml/release-notes.xml:318(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr "mv /var/cache.old/* /mnt/var/cache"
 
-#: xml/release-notes.xml:318(para)
+#: xml/release-notes.xml:319(para)
 msgid "If that is not the case, instead do:"
 msgstr "もしくは、下記のように実行してもかまいません:"
 
-#: xml/release-notes.xml:321(command)
+#: xml/release-notes.xml:322(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr "mv /var/cache/* /mnt/var/cache/"
 
-#: xml/release-notes.xml:324(para)
+#: xml/release-notes.xml:325(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "古いディレクトリ <filename>/mnt/var/cache.old</filename> を削除します:"
 
-#: xml/release-notes.xml:327(command)
+#: xml/release-notes.xml:328(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr "rm -rf /mnt/var/cache.old"
 
-#: xml/release-notes.xml:330(para)
+#: xml/release-notes.xml:331(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "一時的なマウントポイントに存在しているサブボリュームのマウントを解除します:"
 
-#: xml/release-notes.xml:333(command)
+#: xml/release-notes.xml:334(command)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:336(para)
+#: xml/release-notes.xml:337(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr "<filename>/etc/fstab</filename> 内に、新しく作成した <filename>/var/cache</filename> サブボリュームの項目を追加します。既存のサブボリュームの項目を雛型にして追加してください。ただし、 UUID (ルートファイルシステムの UUID) については変更せず、サブボリュームの名前とマウントポイント (<filename>/var/cache</filename>) のみを変更してください。"
 
-#: xml/release-notes.xml:345(para)
+#: xml/release-notes.xml:346(para)
 msgid "Mount the new subvolume as specified in /etc/fstab:"
 msgstr "最後に /etc/fstab 内に設定した新しいサブボリュームをマウントします:"
 
-#: xml/release-notes.xml:348(command)
+#: xml/release-notes.xml:349(command)
 msgid "mount /var/cache"
 msgstr "mount /var/cache"
 
+#: xml/release-notes.xml:355(title)
+msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
+msgstr ""
+
+#: xml/release-notes.xml:356(para)
+msgid "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</package>) was installed by default but had a lower priority than the libinput driver (<package>xf86-input-libinput</package>)."
+msgstr ""
+
+#: xml/release-notes.xml:362(para)
+msgid "Starting with Leap 42.2:"
+msgstr ""
+
+#: xml/release-notes.xml:367(para)
+msgid "The Synaptics X driver is no longer installed by default."
+msgstr ""
+
+#: xml/release-notes.xml:372(para)
+msgid "If the Synaptics X driver is installed, it will take precedence for any touchpad devices."
+msgstr ""
+
+#: xml/release-notes.xml:378(para)
+msgid "The Synaptics X driver is no longer supported by GNOME. This means when the driver is installed, Synaptics touchpads can only be configured to the extent that a basic mouse can."
+msgstr ""
+
+#: xml/release-notes.xml:385(para)
+msgid "Unless you are using a Synaptics touchpad and have a large amount of custom configuration for the Synaptics driver, remove the package from your system:"
+msgstr ""
+
+#: xml/release-notes.xml:389(command)
+msgid "sudo zypper rm xf86-input-synaptics"
+msgstr ""
+
 #. bnc#809347
-#: xml/release-notes.xml:391(title)
+#: xml/release-notes.xml:430(title)
 msgid "More Information and Feedback"
 msgstr "さらに詳しい情報とフィードバック"
 
-#: xml/release-notes.xml:395(para)
+#: xml/release-notes.xml:434(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "まずはメディア内の <filename>README</filename> 文書をお読みください。"
 
-#: xml/release-notes.xml:400(para)
+#: xml/release-notes.xml:439(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "また、特定のパッケージに対する詳細な変更点を RPM パッケージから表示するには、下記のコマンドを実行します:"
 
-#: xml/release-notes.xml:404(replaceable)
+#: xml/release-notes.xml:443(replaceable)
 msgid "FILENAME"
 msgstr "ファイル名"
 
-#: xml/release-notes.xml:404(screen)
+#: xml/release-notes.xml:443(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:405(para)
+#: xml/release-notes.xml:444(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "<replaceable>ファイル名</replaceable> の箇所を RPM の名前に置き換えてお使いください。"
 
-#: xml/release-notes.xml:410(para)
+#: xml/release-notes.xml:449(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "また、メディアのルートディレクトリには <filename>ChangeLog</filename> ファイルがあります。ここには、更新されたパッケージに対する全ての変更点が時系列順に並んでいます。"
 
-#: xml/release-notes.xml:416(para)
+#: xml/release-notes.xml:455(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "そのほか、 メディアの <filename>docu</filename> ディレクトリには、さらに詳しい情報があります。"
 
-#: xml/release-notes.xml:422(para)
+#: xml/release-notes.xml:461(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "それ以外にも、 <link href=\"https://doc.opensuse.org/\"/> には追加／更新されたドキュメンテーションがあります。"
 
-#: xml/release-notes.xml:427(para)
+#: xml/release-notes.xml:466(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "openSUSE が提供する最新の製品ニュースを読むには、 <link href=\"https://www.opensuse.org\"/> をご覧ください。"
 
-#: xml/release-notes.xml:434(para)
+#: xml/release-notes.xml:473(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:438(para)
+#: xml/release-notes.xml:477(para)
 msgid "Thanks for using openSUSE."
 msgstr "openSUSE をお使いいただき、ありがとうございます。"
 
-#: xml/release-notes.xml:441(para)
+#: xml/release-notes.xml:480(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE チームより。"
 

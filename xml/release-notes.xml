@@ -61,8 +61,9 @@
 
  <!-- beta statement -->
 
- <para condition="beta">
-  This public beta test is part of the &opensuse; project. Information
+ <para>
+  <phrase condition="beta">This public beta test is part of the &opensuse;
+  project.</phrase> Information
   about the project is available at <link xlink:href="https://www.opensuse.org"/>.
  </para>
 
@@ -348,6 +349,44 @@
       <screen><command>mount /var/cache</command></screen>
      </step>
     </procedure>
+  </section>
+
+  <section xml:id="sec.upgrade.synaptics">
+   <title>Synaptics X Driver Can Degrade Touchpad Experience Under GNOME</title>
+   <para>
+    In Leap 42.1, the Synaptics X driver (package
+    <package>xf86-input-synaptics</package>) was installed by default but had a
+    lower priority than the libinput driver
+    (<package>xf86-input-libinput</package>).
+   </para>
+   <para>
+    Starting with Leap 42.2:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      The Synaptics X driver is no longer installed by default.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      If the Synaptics X driver is installed, it will take precedence for any
+      touchpad devices.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      The Synaptics X driver is no longer supported by GNOME. This means when
+      the driver is installed, Synaptics touchpads can only be configured to
+      the extent that a basic mouse can.
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    Unless you are using a Synaptics touchpad and have a large amount of custom
+    configuration for the Synaptics driver, remove the package from your system:
+   </para>
+   <screen><command>sudo zypper rm xf86-input-synaptics</command></screen>
   </section>
 
  </section>
