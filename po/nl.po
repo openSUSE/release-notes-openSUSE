@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 12:38+0200\n"
+"POT-Creation-Date: 2016-09-09 16:16+0200\n"
 "PO-Revision-Date: 2016-08-30 12:20+0000\n"
 "Last-Translator: Stefan Knorr <sknorr@suse.com>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/nl/>\n"
@@ -294,7 +294,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Koppel het subvolume af van het tijdelijke aankoppelpunt:"
 
-#: xml/release-notes.xml:334(command)
+#: xml/release-notes.xml:334(command) xml/release-notes.xml:451(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -344,57 +344,200 @@ msgstr ""
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr ""
 
+#: xml/release-notes.xml:393(title)
+msgid "Upgrade from 13.2"
+msgstr ""
+
+#: xml/release-notes.xml:394(para)
+msgid "The following notes apply to upgrades from openSUSE 13.2 or older."
+msgstr ""
+
+#: xml/release-notes.xml:399(title)
+msgid "Network Interface Names"
+msgstr "Netwerkinterfacenamen"
+
+#: xml/release-notes.xml:400(para)
+msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
+msgstr "Let er bij het opwaarderen van een machine op afstand van openSUSE 13.2 op dat de netwerkinterfaces de correcte naam hebben."
+
+#: xml/release-notes.xml:404(para)
+msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
+msgstr "openSUSE 13.2 gebruikt zogenaamde voorspelbare netwerkinterfacenamen (bijvoorbeeld <literal>enp5s0</literal>), waar openSUSE Leap 42.1 gebruik maakt van permanente interfacenamen (<literal>eth0</literal>). Na het opwaarderen en opnieuw opstarten is het dus mogelijk dat de netwerkinterfacenamen zijn gewijzigd. Dat kan ertoe leiden dat u niet meer in uw systeem binnen kan. Om dit hernoemen te vermijden kan u, voordat u het systeem herstart, het volgende commando uitvoeren voor elk van de netwerkinterfaces:"
+
+#: xml/release-notes.xml:413(replaceable)
+msgid "enp5s0"
+msgstr "enp5s0"
+
+#: xml/release-notes.xml:413(screen)
+#, no-wrap
+msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+
+#: xml/release-notes.xml:415(para)
+msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
+msgstr "Vervang <replaceable>enp5s0</replaceable> door de naam van uw netwerkinterface."
+
+#: xml/release-notes.xml:422(title)
+msgid "Btrfs: Disk Space Leak after System Rollbacks"
+msgstr "Btrfs: Lek in schijfruimte na terug rollen van systemen"
+
+#: xml/release-notes.xml:423(para)
+msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
+msgstr "openSUSE 13.2 gebruikte een Btrfs partitie-indeling  die toestond dat schijfruimte permanent bezet werd met vastgekoekte, niet toegankelijke inhoud nadat het eerste teruf rollen van het systeem was uitgevoerd. Dit probleem met indeling is gerepareerd in openSUSE Leap 42.1. Deze reparatie kan echter alleen worden toegepast op nieuw geïnstalleerde systemen."
+
+#: xml/release-notes.xml:430(para)
+msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
+msgstr "Als u een upgrade uitvoert vanaf openSUSE 13.2 is het onmogelijk om te converteren naar de nieuwe indeling, maar is het wel mogelijk de verloren ruimte terug aan te spreken."
+
+#: xml/release-notes.xml:436(para)
+msgid "Mount the initial root filesystem:"
+msgstr "Koppel het aanvankelijk root bestandssysteem aan:"
+
+#: xml/release-notes.xml:439(replaceable)
+msgid "&lt;ROOT_FILE_SYSTEM&gt;"
+msgstr "&lt;ROOT_BESTANDSSYSTEEM&gt;"
+
+#: xml/release-notes.xml:439(screen)
+#, fuzzy, no-wrap
+#| msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
+msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount /dev/&lt;root_device&gt; -o subvolid=5 /mnt"
+
+#: xml/release-notes.xml:442(para)
+msgid "Remove all files below /mnt that are not in a subvolume:"
+msgstr "Alle bestanden onder /mnt die zich niet in een subvolume bevinden verwijderen:"
+
+#: xml/release-notes.xml:445(screen)
+#, no-wrap
+msgid "find /mnt -xdev -delete"
+msgstr "find /mnt -xdev -delete"
+
+#: xml/release-notes.xml:448(para)
+msgid "Umount the filesystem again:"
+msgstr "Koppel het bestandssysteem opnieuw af:"
+
+#: xml/release-notes.xml:457(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr "Afdruksysteem: verbeteringen en incompatibele wijzigingen"
+
+#: xml/release-notes.xml:460(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr "CUPS versie-opwaardering naar 1.7"
+
+#: xml/release-notes.xml:462(para)
+#, fuzzy
+#| msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
+msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
+msgstr "De nieuwe versie van CUPS brengt enkele grote veranderingen tegenover 1.5, die handmatige aanpassingen in de configuratie kunnen vereisen."
+
+#: xml/release-notes.xml:469(para)
+msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+msgstr "PDF is nu het standaardformaat voor afdrukken in plaats van PS. PostScript-printers hebben daarom nu ook een filter-driver nodig voor het afdrukken."
+
+#: xml/release-notes.xml:474(para)
+#, fuzzy
+#| msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
+msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</link> for details."
+msgstr "Voor details, zie <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>."
+
+#: xml/release-notes.xml:482(para)
+msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+msgstr "Het netwerkprinter ontdekkingsprotocol is gewijzigd. De standaardmethode voor het ontdekken van netwerkprinters is nu gebaseerd op DNS-dienstontdekking (DNS-SD, dus via Avahi). De <literal>cups-browsed</literal>-dienst van het <literal>cups-filters</literal>-pakket kan gebruikt worden om oude en nieuwe protocollen te verbinden. Zowel <literal>cupsd</literal> als <literal>cups-browsed</literal> moeten worden uitgevoerd om \"verouderde\" cliënten printers te laten ontdekken (dit omvat LibreOffice en KDE)."
+
+#: xml/release-notes.xml:495(para)
+#, fuzzy
+#| msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
+msgstr "De standaardversie van het IPP-protocol is gewijzigd van 1.1 naar 2.0. Oudere IPP-servers zoals CUPS 1.3.x (bijvoorbeeld in SUSE Linux Enterprise 11) weigeren IPP 2.0-verzoeken met <literal>Bad Request</literal> (zie <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+
+#: xml/release-notes.xml:501(para)
+msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
+msgstr "Om af te drukken naar oude servers moet de versie van het IPP-protocol expliciet gespecificeerd worden door <literal>/version=1.1</literal> toe te voegen aan ofwel:"
+
+#: xml/release-notes.xml:508(para)
+msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+msgstr "De <literal>ServerName</literal>-instellingen in <literal>client.conf</literal> (bijvoorbeeld <literal>ServerName oude.server.voorbeeld.be/version=1.1</literal>)."
+
+#: xml/release-notes.xml:516(para)
+msgid "The <literal>CUPS_SERVER</literal> environment variable value."
+msgstr "De <literal>CUPS_SERVER</literal>-omgevingsvariabele."
+
+#: xml/release-notes.xml:522(para)
+msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
+msgstr "De servernaamwaarde van de <literal>-h</literal>-optie van de commandoregelhulpmiddelen, bijvoorbeeld:"
+
+#: xml/release-notes.xml:526(screen)
+#, no-wrap
+msgid "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "lpstat -h oude.server.voorbeeld.be/version=1.1 -p"
+
+#: xml/release-notes.xml:532(para)
+msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
+msgstr "Sommige afdrukfilters en back-ends zijn verplaatst van het <literal>cups</literal>-pakket naar het <literal>cups-filters</literal>-pakket."
+
+#: xml/release-notes.xml:540(para)
+#, fuzzy
+#| msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</link>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</link>)."
+msgstr "Sommige configuratiedirectives van <literal>cupsd.conf</literal> zijn gesplitst in <literal>cups-files.conf</literal> (zie <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519 en <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+
+#: xml/release-notes.xml:549(para)
+#, fuzzy
+#| msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</link> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</link>)."
+msgstr "CUPS-banners en de CUPS-testpagina zijn verplaatst van het <literal>cups</literal>-pakket naar het <literal>cups-filters</literal>-pakket (zie <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> en <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+
 #. bnc#809347
-#: xml/release-notes.xml:430(title)
+#: xml/release-notes.xml:599(title)
 msgid "More Information and Feedback"
 msgstr "Meer informatie en terugkoppeling"
 
-#: xml/release-notes.xml:434(para)
+#: xml/release-notes.xml:603(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Lees de <filename>README</filename>-documenten op het installatiemedium."
 
-#: xml/release-notes.xml:439(para)
+#: xml/release-notes.xml:608(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Bekijk een gedetailleerde log met informatie over wijzigingen over een specifiek pakket uit de RPM:"
 
-#: xml/release-notes.xml:443(replaceable)
+#: xml/release-notes.xml:612(replaceable)
 msgid "FILENAME"
 msgstr "BESTANDSNAAM"
 
-#: xml/release-notes.xml:443(screen)
+#: xml/release-notes.xml:612(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:444(para)
+#: xml/release-notes.xml:613(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Vervang <replaceable>BESTANDSNAAM</replaceable> door de naam van de RPM."
 
-#: xml/release-notes.xml:449(para)
+#: xml/release-notes.xml:618(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "Controleer het bestand <filename>ChangeLog</filename> op het topniveau van het installatiemedium voor een chronologische log van alle wijzigingen gemaakt aan de bijgewerkte pakketten."
 
-#: xml/release-notes.xml:455(para)
+#: xml/release-notes.xml:624(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Meer informatie in de map <filename>docu</filename> op het installatiemedium."
 
-#: xml/release-notes.xml:461(para)
+#: xml/release-notes.xml:630(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<link href=\"https://doc.opensuse.org/\"/> bevat extra of bijgewerkte documentatie."
 
-#: xml/release-notes.xml:466(para)
+#: xml/release-notes.xml:635(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Bezoek <link href=\"https://www.opensuse.org\"/> voor het laatste productnieuws van openSUSE."
 
-#: xml/release-notes.xml:473(para)
+#: xml/release-notes.xml:642(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:477(para)
+#: xml/release-notes.xml:646(para)
 msgid "Thanks for using openSUSE."
 msgstr "Bedankt voor het gebruiken van openSUSE."
 
-#: xml/release-notes.xml:480(para)
+#: xml/release-notes.xml:649(para)
 msgid "The openSUSE Team."
 msgstr "Het team van openSUSE."
 
@@ -440,95 +583,8 @@ msgstr ""
 #~ "Als u opwaardeert van een oudere versie naar deze openSUSE Leap uitgave, bekijk dan hier de vorige uitgavenotities:\n"
 #~ "<ulink url=\"http://nl.opensuse.org/openSUSE:Release_Notes\"/>Alt+1http://nl.opensuse.org/openSUSE:Release_Notes</ulink>Alt+2."
 
-#~ msgid "Network Interface Names"
-#~ msgstr "Netwerkinterfacenamen"
-
-#~ msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
-#~ msgstr "Let er bij het opwaarderen van een machine op afstand van openSUSE 13.2 op dat de netwerkinterfaces de correcte naam hebben."
-
-#~ msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
-#~ msgstr "openSUSE 13.2 gebruikt zogenaamde voorspelbare netwerkinterfacenamen (bijvoorbeeld <literal>enp5s0</literal>), waar openSUSE Leap 42.1 gebruik maakt van permanente interfacenamen (<literal>eth0</literal>). Na het opwaarderen en opnieuw opstarten is het dus mogelijk dat de netwerkinterfacenamen zijn gewijzigd. Dat kan ertoe leiden dat u niet meer in uw systeem binnen kan. Om dit hernoemen te vermijden kan u, voordat u het systeem herstart, het volgende commando uitvoeren voor elk van de netwerkinterfaces:"
-
-#~ msgid "enp5s0"
-#~ msgstr "enp5s0"
-
-#~ msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-#~ msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-
-#~ msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
-#~ msgstr "Vervang <replaceable>enp5s0</replaceable> door de naam van uw netwerkinterface."
-
-#~ msgid "Btrfs: Disk Space Leak after System Rollbacks"
-#~ msgstr "Btrfs: Lek in schijfruimte na terug rollen van systemen"
-
-#~ msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
-#~ msgstr "openSUSE 13.2 gebruikte een Btrfs partitie-indeling  die toestond dat schijfruimte permanent bezet werd met vastgekoekte, niet toegankelijke inhoud nadat het eerste teruf rollen van het systeem was uitgevoerd. Dit probleem met indeling is gerepareerd in openSUSE Leap 42.1. Deze reparatie kan echter alleen worden toegepast op nieuw geïnstalleerde systemen."
-
-#~ msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
-#~ msgstr "Als u een upgrade uitvoert vanaf openSUSE 13.2 is het onmogelijk om te converteren naar de nieuwe indeling, maar is het wel mogelijk de verloren ruimte terug aan te spreken."
-
-#~ msgid "Mount the initial root filesystem:"
-#~ msgstr "Koppel het aanvankelijk root bestandssysteem aan:"
-
-#~ msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-#~ msgstr "&lt;ROOT_BESTANDSSYSTEEM&gt;"
-
-#~ msgid "Remove all files below /mnt that are not in a subvolume:"
-#~ msgstr "Alle bestanden onder /mnt die zich niet in een subvolume bevinden verwijderen:"
-
-#~ msgid "find /mnt -xdev -delete"
-#~ msgstr "find /mnt -xdev -delete"
-
-#~ msgid "Umount the filesystem again:"
-#~ msgstr "Koppel het bestandssysteem opnieuw af:"
-
 #~ msgid "Technical"
 #~ msgstr "Technisch"
-
-#~ msgid "Printing System: Improvements and Incompatible Changes"
-#~ msgstr "Afdruksysteem: verbeteringen en incompatibele wijzigingen"
-
-#~ msgid "CUPS Version Upgrade to 1.7"
-#~ msgstr "CUPS versie-opwaardering naar 1.7"
-
-#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
-#~ msgstr "De nieuwe versie van CUPS brengt enkele grote veranderingen tegenover 1.5, die handmatige aanpassingen in de configuratie kunnen vereisen."
-
-#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-#~ msgstr "PDF is nu het standaardformaat voor afdrukken in plaats van PS. PostScript-printers hebben daarom nu ook een filter-driver nodig voor het afdrukken."
-
-#~ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-#~ msgstr "Voor details, zie <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>."
-
-#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-#~ msgstr "Het netwerkprinter ontdekkingsprotocol is gewijzigd. De standaardmethode voor het ontdekken van netwerkprinters is nu gebaseerd op DNS-dienstontdekking (DNS-SD, dus via Avahi). De <literal>cups-browsed</literal>-dienst van het <literal>cups-filters</literal>-pakket kan gebruikt worden om oude en nieuwe protocollen te verbinden. Zowel <literal>cupsd</literal> als <literal>cups-browsed</literal> moeten worden uitgevoerd om \"verouderde\" cliënten printers te laten ontdekken (dit omvat LibreOffice en KDE)."
-
-#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-#~ msgstr "De standaardversie van het IPP-protocol is gewijzigd van 1.1 naar 2.0. Oudere IPP-servers zoals CUPS 1.3.x (bijvoorbeeld in SUSE Linux Enterprise 11) weigeren IPP 2.0-verzoeken met <literal>Bad Request</literal> (zie <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-
-#~ msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-#~ msgstr "Om af te drukken naar oude servers moet de versie van het IPP-protocol expliciet gespecificeerd worden door <literal>/version=1.1</literal> toe te voegen aan ofwel:"
-
-#~ msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-#~ msgstr "De <literal>ServerName</literal>-instellingen in <literal>client.conf</literal> (bijvoorbeeld <literal>ServerName oude.server.voorbeeld.be/version=1.1</literal>)."
-
-#~ msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-#~ msgstr "De <literal>CUPS_SERVER</literal>-omgevingsvariabele."
-
-#~ msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-#~ msgstr "De servernaamwaarde van de <literal>-h</literal>-optie van de commandoregelhulpmiddelen, bijvoorbeeld:"
-
-#~ msgid "lpstat -h older.server.example.com/version=1.1 -p"
-#~ msgstr "lpstat -h oude.server.voorbeeld.be/version=1.1 -p"
-
-#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
-#~ msgstr "Sommige afdrukfilters en back-ends zijn verplaatst van het <literal>cups</literal>-pakket naar het <literal>cups-filters</literal>-pakket."
-
-#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-#~ msgstr "Sommige configuratiedirectives van <literal>cupsd.conf</literal> zijn gesplitst in <literal>cups-files.conf</literal> (zie <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519 en <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-
-#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-#~ msgstr "CUPS-banners en de CUPS-testpagina zijn verplaatst van het <literal>cups</literal>-pakket naar het <literal>cups-filters</literal>-pakket (zie <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> en <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #~ msgid "Miscellaneous"
 #~ msgstr "Diversen"

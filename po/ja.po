@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
-"POT-Creation-Date: 2016-09-07 12:38+0200\n"
+"POT-Creation-Date: 2016-09-09 16:16+0200\n"
 "PO-Revision-Date: 2016-08-16 02:05+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/ja/>\n"
@@ -290,7 +290,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "一時的なマウントポイントに存在しているサブボリュームのマウントを解除します:"
 
-#: xml/release-notes.xml:334(command)
+#: xml/release-notes.xml:334(command) xml/release-notes.xml:451(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -338,57 +338,200 @@ msgstr ""
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr ""
 
+#: xml/release-notes.xml:393(title)
+msgid "Upgrade from 13.2"
+msgstr ""
+
+#: xml/release-notes.xml:394(para)
+msgid "The following notes apply to upgrades from openSUSE 13.2 or older."
+msgstr ""
+
+#: xml/release-notes.xml:399(title)
+msgid "Network Interface Names"
+msgstr "ネットワークインターフェイスの命名について"
+
+#: xml/release-notes.xml:400(para)
+msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
+msgstr "ネットワーク上離れたリモートのマシンを openSUSE 13.2 からアップグレードする場合は、ネットワークインターフェイスが想定通りに命名されているかどうかをご確認ください。"
+
+#: xml/release-notes.xml:404(para)
+msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
+msgstr "openSUSE 13.2 では「予測可能な」形態でネットワークインターフェイスの命名を行なっていました (例: <literal>enp5s0</literal>) が、 openSUSE Leap 42.1 では固定のインターフェイス名 (例: <literal>eth0</literal>) を使用するようになっています。そのため、アップグレードして再起動を行なうと、場合によってはネットワークインターフェイスの名前が変わってしまい、これによってシステムにアクセスができなくなってしまうことがあります。インターフェイス名が変わってしまうことを防ぐには、システムを再起動する前に、各ネットワークインターフェイスに対して下記のコマンドを実行します:"
+
+#: xml/release-notes.xml:413(replaceable)
+msgid "enp5s0"
+msgstr "enp5s0"
+
+#: xml/release-notes.xml:413(screen)
+#, no-wrap
+msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+
+#: xml/release-notes.xml:415(para)
+msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
+msgstr "なお、上記の <replaceable>enp5s0</replaceable> を、お使いの環境のネットワークインターフェイス名に置き換えてください。"
+
+#: xml/release-notes.xml:422(title)
+msgid "Btrfs: Disk Space Leak after System Rollbacks"
+msgstr "Btrfs: システムを巻き戻し (ロールバック) した際のディスク領域の開放漏れについて"
+
+#: xml/release-notes.xml:423(para)
+msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
+msgstr "openSUSE 13.2 で Btrfs のパーティションレイアウトを使用した環境でシステムのロールバック (巻き戻し) を実行すると、ディスク領域内にアクセス不可能な無効領域が生じてしまいます。このレイアウト問題は openSUSE Leap 42.1 で解決されていますが、この修正は新しくインストールしたシステムにのみ適用することができます。"
+
+#: xml/release-notes.xml:430(para)
+msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
+msgstr "openSUSE 13.2 からアップグレードする場合は新しいレイアウトに変換することはできませんが、失われたディスク領域を取り戻す方法があります。"
+
+#: xml/release-notes.xml:436(para)
+msgid "Mount the initial root filesystem:"
+msgstr "まずはルートファイルシステムをマウントします:"
+
+#: xml/release-notes.xml:439(replaceable)
+msgid "&lt;ROOT_FILE_SYSTEM&gt;"
+msgstr "&lt;ルートファイルシステム&gt;"
+
+#: xml/release-notes.xml:439(screen)
+#, fuzzy, no-wrap
+#| msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
+msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;ルートデバイス&gt; -o subvolid=5 /mnt"
+
+#: xml/release-notes.xml:442(para)
+msgid "Remove all files below /mnt that are not in a subvolume:"
+msgstr "サブボリューム内に存在しない /mnt 以下のファイルを全て削除します:"
+
+#: xml/release-notes.xml:445(screen)
+#, no-wrap
+msgid "find /mnt -xdev -delete"
+msgstr "find /mnt -xdev -delete"
+
+#: xml/release-notes.xml:448(para)
+msgid "Umount the filesystem again:"
+msgstr "再度ファイルシステムのマウントを解除します:"
+
+#: xml/release-notes.xml:457(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr "印刷システム: 改善点と互換性を失う変更について"
+
+#: xml/release-notes.xml:460(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr "CUPS バージョン 1.7 へのアップグレードについて"
+
+#: xml/release-notes.xml:462(para)
+#, fuzzy
+#| msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
+msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
+msgstr "CUPS のバージョンが新しくなって大幅な変更が加えられたことにより、従来のバージョン 1.5 から移行した場合は、手作業による設定調整が必要となる場合があります。"
+
+#: xml/release-notes.xml:469(para)
+msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+msgstr "現在は標準の印刷ジョブ形式が PS ではなく、 PDF になっています。そのため、旧来の PostScript プリンタで印刷を行なう場合は、新たにフィルタを設定する必要が生じています。"
+
+#: xml/release-notes.xml:474(para)
+#, fuzzy
+#| msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
+msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</link> for details."
+msgstr "詳しくは <ulink url=\"http://ja.opensuse.org/印刷処理\">http://ja.opensuse.org/印刷処理</ulink> をお読みください。"
+
+#: xml/release-notes.xml:482(para)
+msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+msgstr "ネットワークプリンタの検出プロトコルが変更されました。新しいネイティブなプロトコルは DNS Service discovery (DNS-SD, つまり、 Avahi 経由) をベースにした仕組みになりましたが、 <literal>cups-filters</literal> パッケージで提供される <literal>cups-browsed</literal> サービスを利用することで、従来のプロトコルとの間で橋渡しを行なうことができるようになっています。 \"従来の\" クライアントからプリンタを発見できるようにしたい場合 (LibreOffice や KDE からの印刷を含みます) は、 <literal>cupsd</literal> と <literal>cups-browsed</literal> の両方を動作させる必要があります。"
+
+#: xml/release-notes.xml:495(para)
+#, fuzzy
+#| msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
+msgstr "IPP プロトコルの既定のバージョンは、 1.1 から 2.0 となりました。 CUPS 1.3.x のような古い IPP サーバ (たとえば SUSE Linux Enterprise 11 など) を利用して印刷する場合、 IPP 2.0 リクエストを <literal>Bad Request</literal> として拒否してしまいます (詳しくは <ulink url=\"http://www.cups.org/str.php?L4231\"/> をお読みください) 。"
+
+#: xml/release-notes.xml:501(para)
+msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
+msgstr "古いサーバから印刷できるようにするには、 IPP プロトコルのバージョンを明示的に指定する必要があります。下記のいずれかの箇所で、末尾に <literal>/version=1.1</literal> を追加してください:"
+
+#: xml/release-notes.xml:508(para)
+msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+msgstr "<literal>client.conf</literal> 内の <literal>ServerName</literal> 設定 (例: <literal>ServerName older.server.example.com/version=1.1</literal>) 。"
+
+#: xml/release-notes.xml:516(para)
+msgid "The <literal>CUPS_SERVER</literal> environment variable value."
+msgstr "<literal>CUPS_SERVER</literal> 環境変数の値。"
+
+#: xml/release-notes.xml:522(para)
+msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
+msgstr "コマンドラインツールの <literal>-h</literal> オプションで指定するサーバ名の値。たとえば下記のように指定します:"
+
+#: xml/release-notes.xml:526(screen)
+#, no-wrap
+msgid "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
+
+#: xml/release-notes.xml:532(para)
+msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
+msgstr "いくつかの印刷フィルタやバックエンドは、 <literal>cups</literal> パッケージから <literal>cups-filters</literal> パッケージに移動されています。"
+
+#: xml/release-notes.xml:540(para)
+#, fuzzy
+#| msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</link>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</link>)."
+msgstr "いくつかの設定ディレクティブが、 <literal>cupsd.conf</literal> から <literal>cups-files.conf</literal> に分離されています (それぞれ <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> をお読みください) 。"
+
+#: xml/release-notes.xml:549(para)
+#, fuzzy
+#| msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</link> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</link>)."
+msgstr "また、 CUPS のバナーとテストページについても、 <literal>cups</literal> パッケージから <literal>cups-filters</literal> パッケージに移動されています (詳しくは <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> および <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink> をお読みください) 。"
+
 #. bnc#809347
-#: xml/release-notes.xml:430(title)
+#: xml/release-notes.xml:599(title)
 msgid "More Information and Feedback"
 msgstr "さらに詳しい情報とフィードバック"
 
-#: xml/release-notes.xml:434(para)
+#: xml/release-notes.xml:603(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "まずはメディア内の <filename>README</filename> 文書をお読みください。"
 
-#: xml/release-notes.xml:439(para)
+#: xml/release-notes.xml:608(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "また、特定のパッケージに対する詳細な変更点を RPM パッケージから表示するには、下記のコマンドを実行します:"
 
-#: xml/release-notes.xml:443(replaceable)
+#: xml/release-notes.xml:612(replaceable)
 msgid "FILENAME"
 msgstr "ファイル名"
 
-#: xml/release-notes.xml:443(screen)
+#: xml/release-notes.xml:612(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:444(para)
+#: xml/release-notes.xml:613(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "<replaceable>ファイル名</replaceable> の箇所を RPM の名前に置き換えてお使いください。"
 
-#: xml/release-notes.xml:449(para)
+#: xml/release-notes.xml:618(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "また、メディアのルートディレクトリには <filename>ChangeLog</filename> ファイルがあります。ここには、更新されたパッケージに対する全ての変更点が時系列順に並んでいます。"
 
-#: xml/release-notes.xml:455(para)
+#: xml/release-notes.xml:624(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "そのほか、 メディアの <filename>docu</filename> ディレクトリには、さらに詳しい情報があります。"
 
-#: xml/release-notes.xml:461(para)
+#: xml/release-notes.xml:630(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "それ以外にも、 <link href=\"https://doc.opensuse.org/\"/> には追加／更新されたドキュメンテーションがあります。"
 
-#: xml/release-notes.xml:466(para)
+#: xml/release-notes.xml:635(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "openSUSE が提供する最新の製品ニュースを読むには、 <link href=\"https://www.opensuse.org\"/> をご覧ください。"
 
-#: xml/release-notes.xml:473(para)
+#: xml/release-notes.xml:642(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:477(para)
+#: xml/release-notes.xml:646(para)
 msgid "Thanks for using openSUSE."
 msgstr "openSUSE をお使いいただき、ありがとうございます。"
 
-#: xml/release-notes.xml:480(para)
+#: xml/release-notes.xml:649(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE チームより。"
 
@@ -434,95 +577,8 @@ msgstr ""
 #~ msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 #~ msgstr "openSUSE Leap リリースの旧バージョンからアップグレードした場合は、下記に示す旧バージョンのリリースノートもあわせてお読みください: <ulink url=\"http://ja.opensuse.org/openSUSE:Release_Notes\">http://ja.opensuse.org/openSUSE:Release_Notes</ulink>"
 
-#~ msgid "Network Interface Names"
-#~ msgstr "ネットワークインターフェイスの命名について"
-
-#~ msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
-#~ msgstr "ネットワーク上離れたリモートのマシンを openSUSE 13.2 からアップグレードする場合は、ネットワークインターフェイスが想定通りに命名されているかどうかをご確認ください。"
-
-#~ msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
-#~ msgstr "openSUSE 13.2 では「予測可能な」形態でネットワークインターフェイスの命名を行なっていました (例: <literal>enp5s0</literal>) が、 openSUSE Leap 42.1 では固定のインターフェイス名 (例: <literal>eth0</literal>) を使用するようになっています。そのため、アップグレードして再起動を行なうと、場合によってはネットワークインターフェイスの名前が変わってしまい、これによってシステムにアクセスができなくなってしまうことがあります。インターフェイス名が変わってしまうことを防ぐには、システムを再起動する前に、各ネットワークインターフェイスに対して下記のコマンドを実行します:"
-
-#~ msgid "enp5s0"
-#~ msgstr "enp5s0"
-
-#~ msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-#~ msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-
-#~ msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
-#~ msgstr "なお、上記の <replaceable>enp5s0</replaceable> を、お使いの環境のネットワークインターフェイス名に置き換えてください。"
-
-#~ msgid "Btrfs: Disk Space Leak after System Rollbacks"
-#~ msgstr "Btrfs: システムを巻き戻し (ロールバック) した際のディスク領域の開放漏れについて"
-
-#~ msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
-#~ msgstr "openSUSE 13.2 で Btrfs のパーティションレイアウトを使用した環境でシステムのロールバック (巻き戻し) を実行すると、ディスク領域内にアクセス不可能な無効領域が生じてしまいます。このレイアウト問題は openSUSE Leap 42.1 で解決されていますが、この修正は新しくインストールしたシステムにのみ適用することができます。"
-
-#~ msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
-#~ msgstr "openSUSE 13.2 からアップグレードする場合は新しいレイアウトに変換することはできませんが、失われたディスク領域を取り戻す方法があります。"
-
-#~ msgid "Mount the initial root filesystem:"
-#~ msgstr "まずはルートファイルシステムをマウントします:"
-
-#~ msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-#~ msgstr "&lt;ルートファイルシステム&gt;"
-
-#~ msgid "Remove all files below /mnt that are not in a subvolume:"
-#~ msgstr "サブボリューム内に存在しない /mnt 以下のファイルを全て削除します:"
-
-#~ msgid "find /mnt -xdev -delete"
-#~ msgstr "find /mnt -xdev -delete"
-
-#~ msgid "Umount the filesystem again:"
-#~ msgstr "再度ファイルシステムのマウントを解除します:"
-
 #~ msgid "Technical"
 #~ msgstr "テクニカル"
-
-#~ msgid "Printing System: Improvements and Incompatible Changes"
-#~ msgstr "印刷システム: 改善点と互換性を失う変更について"
-
-#~ msgid "CUPS Version Upgrade to 1.7"
-#~ msgstr "CUPS バージョン 1.7 へのアップグレードについて"
-
-#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
-#~ msgstr "CUPS のバージョンが新しくなって大幅な変更が加えられたことにより、従来のバージョン 1.5 から移行した場合は、手作業による設定調整が必要となる場合があります。"
-
-#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-#~ msgstr "現在は標準の印刷ジョブ形式が PS ではなく、 PDF になっています。そのため、旧来の PostScript プリンタで印刷を行なう場合は、新たにフィルタを設定する必要が生じています。"
-
-#~ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-#~ msgstr "詳しくは <ulink url=\"http://ja.opensuse.org/印刷処理\">http://ja.opensuse.org/印刷処理</ulink> をお読みください。"
-
-#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-#~ msgstr "ネットワークプリンタの検出プロトコルが変更されました。新しいネイティブなプロトコルは DNS Service discovery (DNS-SD, つまり、 Avahi 経由) をベースにした仕組みになりましたが、 <literal>cups-filters</literal> パッケージで提供される <literal>cups-browsed</literal> サービスを利用することで、従来のプロトコルとの間で橋渡しを行なうことができるようになっています。 \"従来の\" クライアントからプリンタを発見できるようにしたい場合 (LibreOffice や KDE からの印刷を含みます) は、 <literal>cupsd</literal> と <literal>cups-browsed</literal> の両方を動作させる必要があります。"
-
-#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-#~ msgstr "IPP プロトコルの既定のバージョンは、 1.1 から 2.0 となりました。 CUPS 1.3.x のような古い IPP サーバ (たとえば SUSE Linux Enterprise 11 など) を利用して印刷する場合、 IPP 2.0 リクエストを <literal>Bad Request</literal> として拒否してしまいます (詳しくは <ulink url=\"http://www.cups.org/str.php?L4231\"/> をお読みください) 。"
-
-#~ msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-#~ msgstr "古いサーバから印刷できるようにするには、 IPP プロトコルのバージョンを明示的に指定する必要があります。下記のいずれかの箇所で、末尾に <literal>/version=1.1</literal> を追加してください:"
-
-#~ msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-#~ msgstr "<literal>client.conf</literal> 内の <literal>ServerName</literal> 設定 (例: <literal>ServerName older.server.example.com/version=1.1</literal>) 。"
-
-#~ msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-#~ msgstr "<literal>CUPS_SERVER</literal> 環境変数の値。"
-
-#~ msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-#~ msgstr "コマンドラインツールの <literal>-h</literal> オプションで指定するサーバ名の値。たとえば下記のように指定します:"
-
-#~ msgid "lpstat -h older.server.example.com/version=1.1 -p"
-#~ msgstr "lpstat -h older.server.example.com/version=1.1 -p"
-
-#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
-#~ msgstr "いくつかの印刷フィルタやバックエンドは、 <literal>cups</literal> パッケージから <literal>cups-filters</literal> パッケージに移動されています。"
-
-#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-#~ msgstr "いくつかの設定ディレクティブが、 <literal>cupsd.conf</literal> から <literal>cups-files.conf</literal> に分離されています (それぞれ <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519, <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> をお読みください) 。"
-
-#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-#~ msgstr "また、 CUPS のバナーとテストページについても、 <literal>cups</literal> パッケージから <literal>cups-filters</literal> パッケージに移動されています (詳しくは <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> および <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink> をお読みください) 。"
 
 #~ msgid "Miscellaneous"
 #~ msgstr "その他"

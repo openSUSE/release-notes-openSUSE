@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
-"POT-Creation-Date: 2016-09-07 12:38+0200\n"
+"POT-Creation-Date: 2016-09-09 16:16+0200\n"
 "PO-Revision-Date: 2016-08-15 15:16+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/sk/>\n"
@@ -289,7 +289,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Odpojte podzväzok z dočasného bodu pripojenia:"
 
-#: xml/release-notes.xml:334(command)
+#: xml/release-notes.xml:334(command) xml/release-notes.xml:451(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -337,58 +337,201 @@ msgstr ""
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr ""
 
+#: xml/release-notes.xml:393(title)
+msgid "Upgrade from 13.2"
+msgstr ""
+
+#: xml/release-notes.xml:394(para)
+msgid "The following notes apply to upgrades from openSUSE 13.2 or older."
+msgstr ""
+
+#: xml/release-notes.xml:399(title)
+msgid "Network Interface Names"
+msgstr "Názvy sieťových rozhraní"
+
+#: xml/release-notes.xml:400(para)
+msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
+msgstr "Pri zvyšovaní verzie vzdialeného systému z openSUSE 13.2 sa uistite, že vaše sieťové rozhrania sú správne pomenované."
+
+#: xml/release-notes.xml:404(para)
+msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
+msgstr "openSUSE 13.2 používa takzvané predvídateľné názvy sieťových rozhraní (napríklad, <literal>enp5s0</literal>), zatiaľ čo openSUSE Leap 42.1 používa trvalé názvy rozhraní (<literal>eth0</literal>). Po zvýšení vezie a reštarte sa teda názvy sieťových rozhraní môžu zmeniť. Toto by vám mohlo zablokovať prístup k vášmu systému. Na zabránenie zmeny premenovania sieťových rozhraní spustite nasledovný príkaz pre každé sieťové rozhranie predtým, než reštartujete systému:"
+
+#: xml/release-notes.xml:413(replaceable)
+msgid "enp5s0"
+msgstr "enp5s0"
+
+#: xml/release-notes.xml:413(screen)
+#, no-wrap
+msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+
+#: xml/release-notes.xml:415(para)
+msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
+msgstr "Nahraďte <replaceable>enp5s0</replaceable> s názvom vášho sieťového rozhrania."
+
+#: xml/release-notes.xml:422(title)
+msgid "Btrfs: Disk Space Leak after System Rollbacks"
+msgstr "Btrfs: Únik miesta disku po spätných zavedeniach systému"
+
+#: xml/release-notes.xml:423(para)
+msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
+msgstr "openSUSE 13.2 používalo rozloženie oddielov Btrfs, ktoré umožňovalo, aby bolo miesto na disku trvalo obsadené zastaraným, neprístupným obsahom po vykonaní prvého spätného zavedenia systému. Tento problém rozloženia bol vyriešený v openSUSE 42.1 Leap. Avšak, oprava môže byť použitá len na novo inštalovaných systémoch."
+
+#: xml/release-notes.xml:430(para)
+msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
+msgstr "Ak zvyšujete verziu z openSUSE 13.2, nemôžete prejsť na nové rozloženie, ale môžete získať späť stratené miesto na disku."
+
+#: xml/release-notes.xml:436(para)
+msgid "Mount the initial root filesystem:"
+msgstr "Pripojiť počiatočný koreňový súborový systém:"
+
+#: xml/release-notes.xml:439(replaceable)
+msgid "&lt;ROOT_FILE_SYSTEM&gt;"
+msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
+
+#: xml/release-notes.xml:439(screen)
+#, fuzzy, no-wrap
+#| msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
+msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
+
+#: xml/release-notes.xml:442(para)
+msgid "Remove all files below /mnt that are not in a subvolume:"
+msgstr "Odstrániť všetky súbory pod /mnt, ktoré nie sú v podzväzku:"
+
+#: xml/release-notes.xml:445(screen)
+#, no-wrap
+msgid "find /mnt -xdev -delete"
+msgstr "find /mnt -xdev -delete"
+
+#: xml/release-notes.xml:448(para)
+msgid "Umount the filesystem again:"
+msgstr "Znovu odpojiť súborový systém:"
+
+#: xml/release-notes.xml:457(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr "Tlačový systém: Zlepšenia a nekompatibilné zmeny"
+
+#: xml/release-notes.xml:460(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr "CUPS zvýšil verziu na 1.7"
+
+#: xml/release-notes.xml:462(para)
+#, fuzzy
+#| msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
+msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
+msgstr "Nová verzia CUPS predstavila niektoré významné zmeny v porovnaní s 1,5, ktoré môžu vyžadovať manuálne nastavenie konfigurácie."
+
+#: xml/release-notes.xml:469(para)
+msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+msgstr "PDF je dnes štandardný formát tlačové úlohy skôr než PS. Preto tradičné PostScript tlačiarne teraz tiež potrebujú ovládač filtra pre tlač."
+
+#: xml/release-notes.xml:474(para)
+#, fuzzy
+#| msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
+msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</link> for details."
+msgstr "Podrobnosti nájdete na <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>."
+
+#: xml/release-notes.xml:482(para)
+msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+msgstr "Sieťový protokol zistenie tlačiarní sa zmenil. Natívna metóda pre zisťovanie sieťových tlačiarní je teraz založená na  DNS Service discovery (DNS-SD, to znamená, cez Avahi). Služba <literal>cups-browsed</literal> z balíka <literal>cups-filters</literal> sa môže použiť pre premostenie starých a nových protokolov. Je potrebné spustiť oba <literal>cupsd</literal> a <literal>cups-browsed</literal>, aby \"dediční\" klienti zisťovali tlačiarne (čo zahŕňa LibreOffice a KDE)."
+
+#: xml/release-notes.xml:495(para)
+#, fuzzy
+#| msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
+msgstr "Verzia predvoleného IPP protokolu sa zmenila z 1.1 na 2.0. Staršie IPP servery ako CUPS 1.3.x (napríklad v SUSE Linux Enterprise 11) odmietnu IPP 2.0 požiadavky s <literal>Bad Request</literal> (pozrite si <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+
+#: xml/release-notes.xml:501(para)
+msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
+msgstr "Aby bolo možné tlačiť na starých serveroch, musí byť verzia protokolu IPP explicitne špecifikovaná pripojením <literal>/version=1.1</literal> do niektorého:"
+
+#: xml/release-notes.xml:508(para)
+msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+msgstr "The <literal>ServerName</literal> nastavenie in <literal>client.conf</literal> (napríklad, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+
+#: xml/release-notes.xml:516(para)
+msgid "The <literal>CUPS_SERVER</literal> environment variable value."
+msgstr "Hodnota premennej prostredia <literal>CUPS_SERVER</literal>."
+
+#: xml/release-notes.xml:522(para)
+msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
+msgstr "Hodnota názvu servera voľby <literal>-h</literal> nástrojov príkazového riadka, napríklad:"
+
+#: xml/release-notes.xml:526(screen)
+#, no-wrap
+msgid "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
+
+#: xml/release-notes.xml:532(para)
+msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
+msgstr "Niektoré filtre kopírovania a backendy boli presunuté z balíka <literal>cups</literal> do balíka <literal>cups-filters</literal>."
+
+#: xml/release-notes.xml:540(para)
+#, fuzzy
+#| msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</link>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</link>)."
+msgstr "Niektoré konfiguračné direktívy boli oddelené od <literal>cupsd.conf</literal> do <literal>cups-files.conf</literal> (pozrite si <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+
+#: xml/release-notes.xml:549(para)
+#, fuzzy
+#| msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</link> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</link>)."
+msgstr "Oddeľovacie stránky CUPS a testovacia stránka CUPS boli presunuté z balíka <literal>cups</literal> do balíka <literal>cups-filters</literal> (pozrite si <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+
 # bnc#809347
 #. bnc#809347
-#: xml/release-notes.xml:430(title)
+#: xml/release-notes.xml:599(title)
 msgid "More Information and Feedback"
 msgstr "Ďalšie informácie a spätná väzba"
 
-#: xml/release-notes.xml:434(para)
+#: xml/release-notes.xml:603(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Prečítajte si dokumenty <filename>README</filename> na médiu."
 
-#: xml/release-notes.xml:439(para)
+#: xml/release-notes.xml:608(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Získajte podrobné informácie o zmenách konkrétneho balíka z jeho RPM:"
 
-#: xml/release-notes.xml:443(replaceable)
+#: xml/release-notes.xml:612(replaceable)
 msgid "FILENAME"
 msgstr "FILENAME"
 
-#: xml/release-notes.xml:443(screen)
+#: xml/release-notes.xml:612(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:444(para)
+#: xml/release-notes.xml:613(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>FILENAME</replaceable> s názvom RPM."
 
-#: xml/release-notes.xml:449(para)
+#: xml/release-notes.xml:618(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "Chronologický záznam všetkých zmien vykonaných v aktualizovaných balíkoch nájdete v súbore <filename>ChangeLog</filename> v najvyššej adresárovej úrovni média."
 
-#: xml/release-notes.xml:455(para)
+#: xml/release-notes.xml:624(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Ďalšie informácie nájdete na médiu v adresári <filename>docu</filename>."
 
-#: xml/release-notes.xml:461(para)
+#: xml/release-notes.xml:630(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<link href=\"https://doc.opensuse.org/\"/> obsahuje dodatočnú alebo aktualizovanú dokumentáciu."
 
-#: xml/release-notes.xml:466(para)
+#: xml/release-notes.xml:635(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Navštívte <link href=\"https://www.opensuse.org\"/> kvôli najnovším novinkám o produkte z openSUSE."
 
-#: xml/release-notes.xml:473(para)
+#: xml/release-notes.xml:642(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:477(para)
+#: xml/release-notes.xml:646(para)
 msgid "Thanks for using openSUSE."
 msgstr "Ďakujeme, že používate openSUSE."
 
-#: xml/release-notes.xml:480(para)
+#: xml/release-notes.xml:649(para)
 msgid "The openSUSE Team."
 msgstr "Tím openSUSE."
 
@@ -428,95 +571,8 @@ msgstr ""
 #~ msgid "42.1"
 #~ msgstr "42.1"
 
-#~ msgid "Network Interface Names"
-#~ msgstr "Názvy sieťových rozhraní"
-
-#~ msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
-#~ msgstr "Pri zvyšovaní verzie vzdialeného systému z openSUSE 13.2 sa uistite, že vaše sieťové rozhrania sú správne pomenované."
-
-#~ msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
-#~ msgstr "openSUSE 13.2 používa takzvané predvídateľné názvy sieťových rozhraní (napríklad, <literal>enp5s0</literal>), zatiaľ čo openSUSE Leap 42.1 používa trvalé názvy rozhraní (<literal>eth0</literal>). Po zvýšení vezie a reštarte sa teda názvy sieťových rozhraní môžu zmeniť. Toto by vám mohlo zablokovať prístup k vášmu systému. Na zabránenie zmeny premenovania sieťových rozhraní spustite nasledovný príkaz pre každé sieťové rozhranie predtým, než reštartujete systému:"
-
-#~ msgid "enp5s0"
-#~ msgstr "enp5s0"
-
-#~ msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-#~ msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-
-#~ msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
-#~ msgstr "Nahraďte <replaceable>enp5s0</replaceable> s názvom vášho sieťového rozhrania."
-
-#~ msgid "Btrfs: Disk Space Leak after System Rollbacks"
-#~ msgstr "Btrfs: Únik miesta disku po spätných zavedeniach systému"
-
-#~ msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
-#~ msgstr "openSUSE 13.2 používalo rozloženie oddielov Btrfs, ktoré umožňovalo, aby bolo miesto na disku trvalo obsadené zastaraným, neprístupným obsahom po vykonaní prvého spätného zavedenia systému. Tento problém rozloženia bol vyriešený v openSUSE 42.1 Leap. Avšak, oprava môže byť použitá len na novo inštalovaných systémoch."
-
-#~ msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
-#~ msgstr "Ak zvyšujete verziu z openSUSE 13.2, nemôžete prejsť na nové rozloženie, ale môžete získať späť stratené miesto na disku."
-
-#~ msgid "Mount the initial root filesystem:"
-#~ msgstr "Pripojiť počiatočný koreňový súborový systém:"
-
-#~ msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-#~ msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
-
-#~ msgid "Remove all files below /mnt that are not in a subvolume:"
-#~ msgstr "Odstrániť všetky súbory pod /mnt, ktoré nie sú v podzväzku:"
-
-#~ msgid "find /mnt -xdev -delete"
-#~ msgstr "find /mnt -xdev -delete"
-
-#~ msgid "Umount the filesystem again:"
-#~ msgstr "Znovu odpojiť súborový systém:"
-
 #~ msgid "Technical"
 #~ msgstr "Technické"
-
-#~ msgid "Printing System: Improvements and Incompatible Changes"
-#~ msgstr "Tlačový systém: Zlepšenia a nekompatibilné zmeny"
-
-#~ msgid "CUPS Version Upgrade to 1.7"
-#~ msgstr "CUPS zvýšil verziu na 1.7"
-
-#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
-#~ msgstr "Nová verzia CUPS predstavila niektoré významné zmeny v porovnaní s 1,5, ktoré môžu vyžadovať manuálne nastavenie konfigurácie."
-
-#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-#~ msgstr "PDF je dnes štandardný formát tlačové úlohy skôr než PS. Preto tradičné PostScript tlačiarne teraz tiež potrebujú ovládač filtra pre tlač."
-
-#~ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-#~ msgstr "Podrobnosti nájdete na <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>."
-
-#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-#~ msgstr "Sieťový protokol zistenie tlačiarní sa zmenil. Natívna metóda pre zisťovanie sieťových tlačiarní je teraz založená na  DNS Service discovery (DNS-SD, to znamená, cez Avahi). Služba <literal>cups-browsed</literal> z balíka <literal>cups-filters</literal> sa môže použiť pre premostenie starých a nových protokolov. Je potrebné spustiť oba <literal>cupsd</literal> a <literal>cups-browsed</literal>, aby \"dediční\" klienti zisťovali tlačiarne (čo zahŕňa LibreOffice a KDE)."
-
-#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-#~ msgstr "Verzia predvoleného IPP protokolu sa zmenila z 1.1 na 2.0. Staršie IPP servery ako CUPS 1.3.x (napríklad v SUSE Linux Enterprise 11) odmietnu IPP 2.0 požiadavky s <literal>Bad Request</literal> (pozrite si <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-
-#~ msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-#~ msgstr "Aby bolo možné tlačiť na starých serveroch, musí byť verzia protokolu IPP explicitne špecifikovaná pripojením <literal>/version=1.1</literal> do niektorého:"
-
-#~ msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-#~ msgstr "The <literal>ServerName</literal> nastavenie in <literal>client.conf</literal> (napríklad, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-
-#~ msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-#~ msgstr "Hodnota premennej prostredia <literal>CUPS_SERVER</literal>."
-
-#~ msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-#~ msgstr "Hodnota názvu servera voľby <literal>-h</literal> nástrojov príkazového riadka, napríklad:"
-
-#~ msgid "lpstat -h older.server.example.com/version=1.1 -p"
-#~ msgstr "lpstat -h older.server.example.com/version=1.1 -p"
-
-#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
-#~ msgstr "Niektoré filtre kopírovania a backendy boli presunuté z balíka <literal>cups</literal> do balíka <literal>cups-filters</literal>."
-
-#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-#~ msgstr "Niektoré konfiguračné direktívy boli oddelené od <literal>cupsd.conf</literal> do <literal>cups-files.conf</literal> (pozrite si <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-
-#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-#~ msgstr "Oddeľovacie stránky CUPS a testovacia stránka CUPS boli presunuté z balíka <literal>cups</literal> do balíka <literal>cups-filters</literal> (pozrite si <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> a <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #~ msgid "Miscellaneous"
 #~ msgstr "Rôzne"

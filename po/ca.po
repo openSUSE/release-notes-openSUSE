@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2016-09-07 12:38+0200\n"
+"POT-Creation-Date: 2016-09-09 16:16+0200\n"
 "PO-Revision-Date: 2016-08-16 15:41+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/ca/>\n"
@@ -292,7 +292,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Desmunteu el subvolum del punt de muntatge temporal:"
 
-#: xml/release-notes.xml:334(command)
+#: xml/release-notes.xml:334(command) xml/release-notes.xml:451(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -340,57 +340,200 @@ msgstr ""
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr ""
 
+#: xml/release-notes.xml:393(title)
+msgid "Upgrade from 13.2"
+msgstr ""
+
+#: xml/release-notes.xml:394(para)
+msgid "The following notes apply to upgrades from openSUSE 13.2 or older."
+msgstr ""
+
+#: xml/release-notes.xml:399(title)
+msgid "Network Interface Names"
+msgstr "Noms de les interfícies de xarxa"
+
+#: xml/release-notes.xml:400(para)
+msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
+msgstr "Quan actualitzeu una màquina remota des de l'openSUSE 13.2, assegureu-vos que les interfícies de xarxa tenen un nom correcte."
+
+#: xml/release-notes.xml:404(para)
+msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
+msgstr "L'openSUSE 13.2 utilitzava els anomenats noms de xarxa predictibles (per exemple, <literal> enp5s0 </literal>), mentre que l'openSUSE Leap 42.1 utilitza noms d'interfícies persistents (<literal> eth0 </literal>). Després d'actualitzar i reiniciar, els noms d'interfície de xarxa poden, per tant, canviar. Això podria bloquejar el sistema. Per evitar que les interfícies canviïn de nom, executeu l'ordre següent per a cadascuna de les interfícies de xarxa abans de reiniciar el sistema:"
+
+#: xml/release-notes.xml:413(replaceable)
+msgid "enp5s0"
+msgstr "enp5s0"
+
+#: xml/release-notes.xml:413(screen)
+#, no-wrap
+msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+
+#: xml/release-notes.xml:415(para)
+msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
+msgstr "Reemplaceu <replaceable>enp5s0</replaceable> amb el nom de la vostra interfície de xarxa."
+
+#: xml/release-notes.xml:422(title)
+msgid "Btrfs: Disk Space Leak after System Rollbacks"
+msgstr "Btrfs: Fuita d'espai de disc després de tornar a versions anteriors del sistema"
+
+#: xml/release-notes.xml:423(para)
+msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
+msgstr "L'openSUSE 13.2 usava un disseny de partició Btrfs que permetia que l'espai de disc esdevingués ocupat permanentment amb continguts obsolets i inaccessibles després d'executar el primer retorn a una versió anterior del sistema. Aquest problema de disseny s'ha corregit a l'openSUSE Leap 42.1. No obstant això, la correcció només es pot aplicar als sistemes instal·lats de nou."
+
+#: xml/release-notes.xml:430(para)
+msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
+msgstr "Si esteu actualitzant des l'openSUSE 13.2, no podeu passar a la nova disposició, però podeu recuperar l'espai de disc perdut."
+
+#: xml/release-notes.xml:436(para)
+msgid "Mount the initial root filesystem:"
+msgstr "Munteu el sistema de fitxers root inicial:"
+
+#: xml/release-notes.xml:439(replaceable)
+msgid "&lt;ROOT_FILE_SYSTEM&gt;"
+msgstr "&lt;SISTEMA_DE_FITXERS_ROOT&gt;"
+
+#: xml/release-notes.xml:439(screen)
+#, fuzzy, no-wrap
+#| msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
+msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
+
+#: xml/release-notes.xml:442(para)
+msgid "Remove all files below /mnt that are not in a subvolume:"
+msgstr "Elimineu tots els fitxers que hi hagi sota /mnt que no siguin en un subvolum:"
+
+#: xml/release-notes.xml:445(screen)
+#, no-wrap
+msgid "find /mnt -xdev -delete"
+msgstr "find /mnt -xdev -delete"
+
+#: xml/release-notes.xml:448(para)
+msgid "Umount the filesystem again:"
+msgstr "Torneu a desmuntar el sistema de fitxers:"
+
+#: xml/release-notes.xml:457(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr "Sistema d'impressió: millores i canvis incompatibles"
+
+#: xml/release-notes.xml:460(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr "Actualització del CUPS a la versió 1.7"
+
+#: xml/release-notes.xml:462(para)
+#, fuzzy
+#| msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
+msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
+msgstr "La nova versió de CUPS ha introduït canvis importants respecte de la versió 1.5 i pot requerir ajustaments manuals de la configuració."
+
+#: xml/release-notes.xml:469(para)
+msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+msgstr "El PDF és ara el format de tasca d'impressió estàndard en lloc de PS. Per tant, les impressores PostScript tradicionals ara també necessiten un controlador de filtre per a la impressió."
+
+#: xml/release-notes.xml:474(para)
+#, fuzzy
+#| msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
+msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</link> for details."
+msgstr "Per a més detalls, vegeu <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>."
+
+#: xml/release-notes.xml:482(para)
+msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+msgstr "El protocol de detecció d'impressores de xarxa ha canviat. El mètode natiu per descobrir impressores de xarxa es basa ara en el descobriment del servei DNS (DNS-SD, és a dir, per mitjà d'Avahi). El servei <literal>cups-browsed</literal> del paquet <literal> cups-filters</literal> es pot utilitzar per unir protocols antics i nous. És necessari que s'executin tant <literal>cupsd</literal> i <literal>cups-browsed</literal> per fer que clients \"de llegat\" (legacy) descobreixin impressores (això inclou LibreOffice i KDE)."
+
+#: xml/release-notes.xml:495(para)
+#, fuzzy
+#| msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
+msgstr "La versió per defecte del protocol IPP ha canviat de la versió 1.1 a la 2.0. Els servidors IPP més antics, com ara CUPS 1.3.x (per exemple del SUSE Linux Enteprise 11) rebutgen peticions d'IPP 2.0 com a <literal>Bad Request</literal> (vegeu <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+
+#: xml/release-notes.xml:501(para)
+msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
+msgstr "Per poder imprimir amb servidors antics, la versió del protocol IPP s'ha d'especificar explícitament afegint <literal>/version=1.1</literal> a cada un:"
+
+#: xml/release-notes.xml:508(para)
+msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+msgstr "Els paràmetres de <literal>ServerName</literal> a <literal>client.conf</literal> (per exemple, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+
+#: xml/release-notes.xml:516(para)
+msgid "The <literal>CUPS_SERVER</literal> environment variable value."
+msgstr "El valor de la variable d'entorn <literal>SERVIDOR_CUPS</literal>."
+
+#: xml/release-notes.xml:522(para)
+msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
+msgstr "El valor de nom de servidor de l'opció <literal>-h</literal>  de les eines de línia d'ordres, per exemple:"
+
+#: xml/release-notes.xml:526(screen)
+#, no-wrap
+msgid "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "lpstat -h older.server.exemple.com/version=1.1 -p"
+
+#: xml/release-notes.xml:532(para)
+msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
+msgstr "Alguns filtres d'impressió i rerefons s'han traslladat del paquet <literal>cups</literal> al paquet <literal>cups-filters</literal>."
+
+#: xml/release-notes.xml:540(para)
+#, fuzzy
+#| msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</link>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</link>)."
+msgstr "Algunes directives de configuració s'han separat des de <literal>cupsd.conf</literal> a <literal>cups-files.conf</literal> (vegeu <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, i <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+
+#: xml/release-notes.xml:549(para)
+#, fuzzy
+#| msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</link> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</link>)."
+msgstr "El CUPS banners i la pàgina de prova de CUPS s'han traslladat des del paquet <literal>cups</literal> al paquet <literal>cups-filters</literal> (vegeu <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> i <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+
 #. bnc#809347
-#: xml/release-notes.xml:430(title)
+#: xml/release-notes.xml:599(title)
 msgid "More Information and Feedback"
 msgstr "Més informació i informació de retorn"
 
-#: xml/release-notes.xml:434(para)
+#: xml/release-notes.xml:603(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Llegiu els documents <filename>README</filename> del mitjà."
 
-#: xml/release-notes.xml:439(para)
+#: xml/release-notes.xml:608(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Obteniu informació del registre de canvis sobre un paquet concret de l'RPM:"
 
-#: xml/release-notes.xml:443(replaceable)
+#: xml/release-notes.xml:612(replaceable)
 msgid "FILENAME"
 msgstr "NOM_DEL_FITXER"
 
-#: xml/release-notes.xml:443(screen)
+#: xml/release-notes.xml:612(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:444(para)
+#: xml/release-notes.xml:613(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Reemplaceu <replaceable>NOM-DEL-FITXER</replaceable> amb el nom de l'RPM."
 
-#: xml/release-notes.xml:449(para)
+#: xml/release-notes.xml:618(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "Mireu el fitxer <filename>ChangeLog</filename> al primer nivell del mitjà per veure el registre cronològic de tots els canvis fets als paquets actualitzats."
 
-#: xml/release-notes.xml:455(para)
+#: xml/release-notes.xml:624(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Trobeu més informació dins del directori <filename>docu</filename> del mitjà."
 
-#: xml/release-notes.xml:461(para)
+#: xml/release-notes.xml:630(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<link href=\"https://doc.opensuse.org/\"/> conté documentació addicional o actualitzada."
 
-#: xml/release-notes.xml:466(para)
+#: xml/release-notes.xml:635(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Visiteu <link href=\"https://www.opensuse.org\"/> per a les últimes notícies de productes d'openSUSE."
 
-#: xml/release-notes.xml:473(para)
+#: xml/release-notes.xml:642(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:477(para)
+#: xml/release-notes.xml:646(para)
 msgid "Thanks for using openSUSE."
 msgstr "Gràcies per utilitzar openSUSE."
 
-#: xml/release-notes.xml:480(para)
+#: xml/release-notes.xml:649(para)
 msgid "The openSUSE Team."
 msgstr "L'equip d'openSUSE i l'equip de traducció al català: opensusecatala@gmail.com."
 
@@ -430,95 +573,8 @@ msgstr "Equip de traducció al català d'openSUSE: opensusecatala@gmail.com"
 #~ msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 #~ msgstr "Si heu fet una actualització des d'una versió anterior a aquesta edició d'openSUSE Leap, vegeu les notes de la versió anterior llistades aquí: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 
-#~ msgid "Network Interface Names"
-#~ msgstr "Noms de les interfícies de xarxa"
-
-#~ msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
-#~ msgstr "Quan actualitzeu una màquina remota des de l'openSUSE 13.2, assegureu-vos que les interfícies de xarxa tenen un nom correcte."
-
-#~ msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
-#~ msgstr "L'openSUSE 13.2 utilitzava els anomenats noms de xarxa predictibles (per exemple, <literal> enp5s0 </literal>), mentre que l'openSUSE Leap 42.1 utilitza noms d'interfícies persistents (<literal> eth0 </literal>). Després d'actualitzar i reiniciar, els noms d'interfície de xarxa poden, per tant, canviar. Això podria bloquejar el sistema. Per evitar que les interfícies canviïn de nom, executeu l'ordre següent per a cadascuna de les interfícies de xarxa abans de reiniciar el sistema:"
-
-#~ msgid "enp5s0"
-#~ msgstr "enp5s0"
-
-#~ msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-#~ msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-
-#~ msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
-#~ msgstr "Reemplaceu <replaceable>enp5s0</replaceable> amb el nom de la vostra interfície de xarxa."
-
-#~ msgid "Btrfs: Disk Space Leak after System Rollbacks"
-#~ msgstr "Btrfs: Fuita d'espai de disc després de tornar a versions anteriors del sistema"
-
-#~ msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
-#~ msgstr "L'openSUSE 13.2 usava un disseny de partició Btrfs que permetia que l'espai de disc esdevingués ocupat permanentment amb continguts obsolets i inaccessibles després d'executar el primer retorn a una versió anterior del sistema. Aquest problema de disseny s'ha corregit a l'openSUSE Leap 42.1. No obstant això, la correcció només es pot aplicar als sistemes instal·lats de nou."
-
-#~ msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
-#~ msgstr "Si esteu actualitzant des l'openSUSE 13.2, no podeu passar a la nova disposició, però podeu recuperar l'espai de disc perdut."
-
-#~ msgid "Mount the initial root filesystem:"
-#~ msgstr "Munteu el sistema de fitxers root inicial:"
-
-#~ msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-#~ msgstr "&lt;SISTEMA_DE_FITXERS_ROOT&gt;"
-
-#~ msgid "Remove all files below /mnt that are not in a subvolume:"
-#~ msgstr "Elimineu tots els fitxers que hi hagi sota /mnt que no siguin en un subvolum:"
-
-#~ msgid "find /mnt -xdev -delete"
-#~ msgstr "find /mnt -xdev -delete"
-
-#~ msgid "Umount the filesystem again:"
-#~ msgstr "Torneu a desmuntar el sistema de fitxers:"
-
 #~ msgid "Technical"
 #~ msgstr "Tècnic"
-
-#~ msgid "Printing System: Improvements and Incompatible Changes"
-#~ msgstr "Sistema d'impressió: millores i canvis incompatibles"
-
-#~ msgid "CUPS Version Upgrade to 1.7"
-#~ msgstr "Actualització del CUPS a la versió 1.7"
-
-#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
-#~ msgstr "La nova versió de CUPS ha introduït canvis importants respecte de la versió 1.5 i pot requerir ajustaments manuals de la configuració."
-
-#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-#~ msgstr "El PDF és ara el format de tasca d'impressió estàndard en lloc de PS. Per tant, les impressores PostScript tradicionals ara també necessiten un controlador de filtre per a la impressió."
-
-#~ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-#~ msgstr "Per a més detalls, vegeu <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>."
-
-#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-#~ msgstr "El protocol de detecció d'impressores de xarxa ha canviat. El mètode natiu per descobrir impressores de xarxa es basa ara en el descobriment del servei DNS (DNS-SD, és a dir, per mitjà d'Avahi). El servei <literal>cups-browsed</literal> del paquet <literal> cups-filters</literal> es pot utilitzar per unir protocols antics i nous. És necessari que s'executin tant <literal>cupsd</literal> i <literal>cups-browsed</literal> per fer que clients \"de llegat\" (legacy) descobreixin impressores (això inclou LibreOffice i KDE)."
-
-#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-#~ msgstr "La versió per defecte del protocol IPP ha canviat de la versió 1.1 a la 2.0. Els servidors IPP més antics, com ara CUPS 1.3.x (per exemple del SUSE Linux Enteprise 11) rebutgen peticions d'IPP 2.0 com a <literal>Bad Request</literal> (vegeu <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-
-#~ msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-#~ msgstr "Per poder imprimir amb servidors antics, la versió del protocol IPP s'ha d'especificar explícitament afegint <literal>/version=1.1</literal> a cada un:"
-
-#~ msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-#~ msgstr "Els paràmetres de <literal>ServerName</literal> a <literal>client.conf</literal> (per exemple, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-
-#~ msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-#~ msgstr "El valor de la variable d'entorn <literal>SERVIDOR_CUPS</literal>."
-
-#~ msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-#~ msgstr "El valor de nom de servidor de l'opció <literal>-h</literal>  de les eines de línia d'ordres, per exemple:"
-
-#~ msgid "lpstat -h older.server.example.com/version=1.1 -p"
-#~ msgstr "lpstat -h older.server.exemple.com/version=1.1 -p"
-
-#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
-#~ msgstr "Alguns filtres d'impressió i rerefons s'han traslladat del paquet <literal>cups</literal> al paquet <literal>cups-filters</literal>."
-
-#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-#~ msgstr "Algunes directives de configuració s'han separat des de <literal>cupsd.conf</literal> a <literal>cups-files.conf</literal> (vegeu <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, i <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-
-#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-#~ msgstr "El CUPS banners i la pàgina de prova de CUPS s'han traslladat des del paquet <literal>cups</literal> al paquet <literal>cups-filters</literal> (vegeu <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> i <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #~ msgid "Miscellaneous"
 #~ msgstr "Miscel·lània"

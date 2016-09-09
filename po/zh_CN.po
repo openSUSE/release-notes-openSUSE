@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2016-09-07 12:38+0200\n"
+"POT-Creation-Date: 2016-09-09 16:16+0200\n"
 "PO-Revision-Date: 2016-08-12 07:18+0000\n"
 "Last-Translator: Marguerite Su <i@marguerite.su>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/zh_CN/>\n"
@@ -297,7 +297,7 @@ msgstr ""
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr ""
 
-#: xml/release-notes.xml:334(command)
+#: xml/release-notes.xml:334(command) xml/release-notes.xml:451(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -345,59 +345,202 @@ msgstr ""
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr ""
 
+#: xml/release-notes.xml:393(title)
+msgid "Upgrade from 13.2"
+msgstr ""
+
+#: xml/release-notes.xml:394(para)
+msgid "The following notes apply to upgrades from openSUSE 13.2 or older."
+msgstr ""
+
+#: xml/release-notes.xml:399(title)
+msgid "Network Interface Names"
+msgstr "网络接口名称"
+
+#: xml/release-notes.xml:400(para)
+msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
+msgstr "当从 openSUSE 13.2 升级一个远程主机时，请确保您的网络接口命名正确。"
+
+#: xml/release-notes.xml:404(para)
+msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
+msgstr "openSUSE 13.2 使用了所谓的可预测网络接口名 (例如，<literal>enp5s0</literal>)，而 openSUSE Leap 42.1 使用了固定网络接口名 (<literal>eth0</literal>)。因此升级并重启后网络接口名会改变。这会把您关在系统外面。要避免重命名接口，重新引导系统前请为您的每个网络接口运行以下命令："
+
+#: xml/release-notes.xml:413(replaceable)
+msgid "enp5s0"
+msgstr "enp5s0"
+
+#: xml/release-notes.xml:413(screen)
+#, no-wrap
+msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+
+#: xml/release-notes.xml:415(para)
+msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
+msgstr "请将 <replaceable>enp5s0</replaceable> 替换为您的网络接口名称。"
+
+#: xml/release-notes.xml:422(title)
+msgid "Btrfs: Disk Space Leak after System Rollbacks"
+msgstr "Btrfs：系统回滚后磁盘空间泄露"
+
+#: xml/release-notes.xml:423(para)
+msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
+msgstr "openSUSE 13.2 使用了 Btrfs 分区布局，这使得磁盘空间在执行第一次系统回滚后会被过时且无法访问的内容给永久占用。这个布局问题已在 openSUSE Leap 42.1 中修复了。然而，这个修复只可以应用于新安装的系统。"
+
+#: xml/release-notes.xml:430(para)
+msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
+msgstr "若您是从 openSUSE 13.2 升级的，您无法转换到新布局，但您可以回收这些丢失的磁盘空间。"
+
+#: xml/release-notes.xml:436(para)
+msgid "Mount the initial root filesystem:"
+msgstr "挂载初始 root 文件系统："
+
+#: xml/release-notes.xml:439(replaceable)
+msgid "&lt;ROOT_FILE_SYSTEM&gt;"
+msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
+
+#: xml/release-notes.xml:439(screen)
+#, fuzzy, no-wrap
+#| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+
+#: xml/release-notes.xml:442(para)
+msgid "Remove all files below /mnt that are not in a subvolume:"
+msgstr "移除 /mnt 下全部不属于子卷的文件："
+
+#: xml/release-notes.xml:445(screen)
+#, no-wrap
+msgid "find /mnt -xdev -delete"
+msgstr "find /mnt -xdev -delete"
+
+#: xml/release-notes.xml:448(para)
+msgid "Umount the filesystem again:"
+msgstr "再次卸载文件系统："
+
+#: xml/release-notes.xml:457(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr "打印系统：改进以及不兼容的变动"
+
+#: xml/release-notes.xml:460(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr "CUPS 版本升级至 1.7"
+
+#: xml/release-notes.xml:462(para)
+#, fuzzy
+#| msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
+msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
+msgstr "新版 CUPS 与 1.5 版相比引入了一些重要的变化，可能需要手动调整配置。"
+
+#: xml/release-notes.xml:469(para)
+msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+msgstr "PDF 现在取代 PS 成为了标准打印任务格式。故传统的 PostScript 打印机现在也需要一个滤镜驱动才能打印。"
+
+#: xml/release-notes.xml:474(para)
+#, fuzzy
+#| msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
+msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</link> for details."
+msgstr "细节参考 <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>。"
+
+#: xml/release-notes.xml:482(para)
+msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+msgstr "网络打印机发现协议有所变动，发现网络打印机的原生方法现在基于 DNS 服务发现 (DNS-SD，也就是，通过 Avahi)。来自 <literal>cups-filters</literal> 软件包的 <literal>cups-browsed</literal> 服务可用于桥接新旧协议。<literal>cupsd</literal> 和 <literal>cups-browsed</literal> 都要运行才能使旧的客户端 (包括 LibreOffice 和 KDE) 发现打印机。"
+
+#: xml/release-notes.xml:495(para)
+#, fuzzy
+#| msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
+msgstr "IPP 协议的默认版本从 1.1 变为 2.0。旧的 IPP 服务器如 CUPS 1.3.x (例如 SUSE Linux Enterprise 11 中的) 会拒绝 IPP 2.0 请求，返回 <literal>Bad Request</literal> (参考 <ulink url=\"http://www.cups.org/str.php?L4231\"/>)。"
+
+#: xml/release-notes.xml:501(para)
+msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
+msgstr "为了能使用旧打印机打印，必须显式指定 IPP 协议版本，通过追加 <literal>/version=1.1</literal> 到："
+
+#: xml/release-notes.xml:508(para)
+msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+msgstr "<literal>client.conf</literal> 中的 <literal>ServerName</literal> 设置 (例如，<literal>ServerName older.server.example.com/version=1.1</literal>)。"
+
+#: xml/release-notes.xml:516(para)
+msgid "The <literal>CUPS_SERVER</literal> environment variable value."
+msgstr "<literal>CUPS_SERVER</literal> 环境变量值。"
+
+#: xml/release-notes.xml:522(para)
+msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
+msgstr "命令行工具 <literal>-h</literal> 选项设置的服务器名称值，例如："
+
+#: xml/release-notes.xml:526(screen)
+#, no-wrap
+msgid "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
+
+#: xml/release-notes.xml:532(para)
+msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
+msgstr "一些打印滤镜和后端从 <literal>cups</literal> 软件包移到 <literal>cups-filters</literal> 软件包。"
+
+#: xml/release-notes.xml:540(para)
+#, fuzzy
+#| msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</link>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</link>)."
+msgstr "一些配置命令从 <literal>cupsd.conf</literal> 拆分到 <literal>cups-files.conf</literal> (参考 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, 和 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)。"
+
+#: xml/release-notes.xml:549(para)
+#, fuzzy
+#| msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</link> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</link>)."
+msgstr "CUPS 条幅和测试页从 <literal>cups</literal> 软件包移至 <literal>cups-filters</literal> 软件包 (参考 <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> 和 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)。"
+
 #. bnc#809347
-#: xml/release-notes.xml:430(title)
+#: xml/release-notes.xml:599(title)
 msgid "More Information and Feedback"
 msgstr "更多信息和反馈"
 
-#: xml/release-notes.xml:434(para)
+#: xml/release-notes.xml:603(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "请阅读安装介质上的 <filename>README</filename> 文档。"
 
-#: xml/release-notes.xml:439(para)
+#: xml/release-notes.xml:608(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "从 RPM 中获取关乎某特定软件包的详细修订历史信息："
 
-#: xml/release-notes.xml:443(replaceable)
+#: xml/release-notes.xml:612(replaceable)
 msgid "FILENAME"
 msgstr "FILENAME"
 
-#: xml/release-notes.xml:443(screen)
+#: xml/release-notes.xml:612(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:444(para)
+#: xml/release-notes.xml:613(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "讲 <replaceable>FILENAME</replaceable> 替换为 RPM 的名称。"
 
-#: xml/release-notes.xml:449(para)
+#: xml/release-notes.xml:618(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "查看介质顶层目录中的 <filename>ChangeLog</filename> 日志获得按时间排列的全部软件包更新历史。"
 
-#: xml/release-notes.xml:455(para)
+#: xml/release-notes.xml:624(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息。"
 
-#: xml/release-notes.xml:461(para)
+#: xml/release-notes.xml:630(para)
 #, fuzzy
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> 网罗了额外的或更新的文档。"
 
-#: xml/release-notes.xml:466(para)
+#: xml/release-notes.xml:635(para)
 #, fuzzy
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "访问 <ulink url=\"http://www.opensuse.org\">https://www.opensuse.org</ulink> 获得来自 openSUSE 的最新产品资讯。"
 
-#: xml/release-notes.xml:473(para)
+#: xml/release-notes.xml:642(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:477(para)
+#: xml/release-notes.xml:646(para)
 msgid "Thanks for using openSUSE."
 msgstr "感谢使用 openSUSE。"
 
-#: xml/release-notes.xml:480(para)
+#: xml/release-notes.xml:649(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE 团队。"
 
@@ -428,95 +571,8 @@ msgstr "玛格丽特 · 苏 <marguerite@opensuse.org>, 2013"
 #~ msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 #~ msgstr "若您是从某个旧版本升级到本版 openSUSE 的，之前的版本资讯列示于此，供您参考：<ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>。"
 
-#~ msgid "Network Interface Names"
-#~ msgstr "网络接口名称"
-
-#~ msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
-#~ msgstr "当从 openSUSE 13.2 升级一个远程主机时，请确保您的网络接口命名正确。"
-
-#~ msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
-#~ msgstr "openSUSE 13.2 使用了所谓的可预测网络接口名 (例如，<literal>enp5s0</literal>)，而 openSUSE Leap 42.1 使用了固定网络接口名 (<literal>eth0</literal>)。因此升级并重启后网络接口名会改变。这会把您关在系统外面。要避免重命名接口，重新引导系统前请为您的每个网络接口运行以下命令："
-
-#~ msgid "enp5s0"
-#~ msgstr "enp5s0"
-
-#~ msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-#~ msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-
-#~ msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
-#~ msgstr "请将 <replaceable>enp5s0</replaceable> 替换为您的网络接口名称。"
-
-#~ msgid "Btrfs: Disk Space Leak after System Rollbacks"
-#~ msgstr "Btrfs：系统回滚后磁盘空间泄露"
-
-#~ msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
-#~ msgstr "openSUSE 13.2 使用了 Btrfs 分区布局，这使得磁盘空间在执行第一次系统回滚后会被过时且无法访问的内容给永久占用。这个布局问题已在 openSUSE Leap 42.1 中修复了。然而，这个修复只可以应用于新安装的系统。"
-
-#~ msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
-#~ msgstr "若您是从 openSUSE 13.2 升级的，您无法转换到新布局，但您可以回收这些丢失的磁盘空间。"
-
-#~ msgid "Mount the initial root filesystem:"
-#~ msgstr "挂载初始 root 文件系统："
-
-#~ msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-#~ msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
-
-#~ msgid "Remove all files below /mnt that are not in a subvolume:"
-#~ msgstr "移除 /mnt 下全部不属于子卷的文件："
-
-#~ msgid "find /mnt -xdev -delete"
-#~ msgstr "find /mnt -xdev -delete"
-
-#~ msgid "Umount the filesystem again:"
-#~ msgstr "再次卸载文件系统："
-
 #~ msgid "Technical"
 #~ msgstr "技术"
-
-#~ msgid "Printing System: Improvements and Incompatible Changes"
-#~ msgstr "打印系统：改进以及不兼容的变动"
-
-#~ msgid "CUPS Version Upgrade to 1.7"
-#~ msgstr "CUPS 版本升级至 1.7"
-
-#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
-#~ msgstr "新版 CUPS 与 1.5 版相比引入了一些重要的变化，可能需要手动调整配置。"
-
-#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-#~ msgstr "PDF 现在取代 PS 成为了标准打印任务格式。故传统的 PostScript 打印机现在也需要一个滤镜驱动才能打印。"
-
-#~ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-#~ msgstr "细节参考 <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>。"
-
-#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-#~ msgstr "网络打印机发现协议有所变动，发现网络打印机的原生方法现在基于 DNS 服务发现 (DNS-SD，也就是，通过 Avahi)。来自 <literal>cups-filters</literal> 软件包的 <literal>cups-browsed</literal> 服务可用于桥接新旧协议。<literal>cupsd</literal> 和 <literal>cups-browsed</literal> 都要运行才能使旧的客户端 (包括 LibreOffice 和 KDE) 发现打印机。"
-
-#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-#~ msgstr "IPP 协议的默认版本从 1.1 变为 2.0。旧的 IPP 服务器如 CUPS 1.3.x (例如 SUSE Linux Enterprise 11 中的) 会拒绝 IPP 2.0 请求，返回 <literal>Bad Request</literal> (参考 <ulink url=\"http://www.cups.org/str.php?L4231\"/>)。"
-
-#~ msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-#~ msgstr "为了能使用旧打印机打印，必须显式指定 IPP 协议版本，通过追加 <literal>/version=1.1</literal> 到："
-
-#~ msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-#~ msgstr "<literal>client.conf</literal> 中的 <literal>ServerName</literal> 设置 (例如，<literal>ServerName older.server.example.com/version=1.1</literal>)。"
-
-#~ msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-#~ msgstr "<literal>CUPS_SERVER</literal> 环境变量值。"
-
-#~ msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-#~ msgstr "命令行工具 <literal>-h</literal> 选项设置的服务器名称值，例如："
-
-#~ msgid "lpstat -h older.server.example.com/version=1.1 -p"
-#~ msgstr "lpstat -h older.server.example.com/version=1.1 -p"
-
-#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
-#~ msgstr "一些打印滤镜和后端从 <literal>cups</literal> 软件包移到 <literal>cups-filters</literal> 软件包。"
-
-#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-#~ msgstr "一些配置命令从 <literal>cupsd.conf</literal> 拆分到 <literal>cups-files.conf</literal> (参考 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, 和 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)。"
-
-#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-#~ msgstr "CUPS 条幅和测试页从 <literal>cups</literal> 软件包移至 <literal>cups-filters</literal> 软件包 (参考 <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> 和 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)。"
 
 #~ msgid "Miscellaneous"
 #~ msgstr "杂项"

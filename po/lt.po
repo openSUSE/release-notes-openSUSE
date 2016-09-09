@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2016-09-07 12:38+0200\n"
+"POT-Creation-Date: 2016-09-09 16:16+0200\n"
 "PO-Revision-Date: 2015-12-19 19:25+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <http://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_1/lt/>\n"
@@ -296,7 +296,7 @@ msgstr ""
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr ""
 
-#: xml/release-notes.xml:334(command)
+#: xml/release-notes.xml:334(command) xml/release-notes.xml:451(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -346,59 +346,201 @@ msgstr ""
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr ""
 
+#: xml/release-notes.xml:393(title)
+msgid "Upgrade from 13.2"
+msgstr ""
+
+#: xml/release-notes.xml:394(para)
+msgid "The following notes apply to upgrades from openSUSE 13.2 or older."
+msgstr ""
+
+#: xml/release-notes.xml:399(title)
+msgid "Network Interface Names"
+msgstr "Tinklo sąsajų vardai"
+
+#: xml/release-notes.xml:400(para)
+msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
+msgstr "Atnaujindami nuotolinę openSUSE 13.2 sistemą, įsitikinkite, ar tinklo sąsajų vardai yra teisingi."
+
+#: xml/release-notes.xml:404(para)
+msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
+msgstr "openSUSE 13.2 naudojo nuspėjamus tinklo sąsajų vardus (pavyzdžiui, <literal>enp5s0</literal>), o openSUSE Leap 42.1 naudoja pastovius sąsajų vardus (<literal>eth0</literal>). Todėl, atnaujinus arba iš naujo paleidus sistemą, sąsajų vardai gali pasikeisti. Nuotolinė sistema gali tapti nebepasiekiama. Norėdami išvengti sąsajų pervadinimo, prieš paleisdami sistemą iš naujo, kiekvienai tinklo sąsajai įvykdykite įvykdykite komandą:"
+
+#: xml/release-notes.xml:413(replaceable)
+msgid "enp5s0"
+msgstr "enp5s0"
+
+#: xml/release-notes.xml:413(screen)
+#, no-wrap
+msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+
+#: xml/release-notes.xml:415(para)
+msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
+msgstr "Vietoj <replaceable>enp5s0</replaceable> rašykite savo tinklo sąsajos vardą."
+
+#: xml/release-notes.xml:422(title)
+msgid "Btrfs: Disk Space Leak after System Rollbacks"
+msgstr ""
+
+#: xml/release-notes.xml:423(para)
+msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
+msgstr ""
+
+#: xml/release-notes.xml:430(para)
+msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
+msgstr ""
+
+#: xml/release-notes.xml:436(para)
+msgid "Mount the initial root filesystem:"
+msgstr "Programiškai prijunkite pradinę rinkmenų sistemą:"
+
+#: xml/release-notes.xml:439(replaceable)
+msgid "&lt;ROOT_FILE_SYSTEM&gt;"
+msgstr ""
+
+#: xml/release-notes.xml:439(screen)
+#, fuzzy, no-wrap
+#| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+
+#: xml/release-notes.xml:442(para)
+msgid "Remove all files below /mnt that are not in a subvolume:"
+msgstr "Iš /mnt pašalinkite potomiui nepriklausančias rinkmenas:"
+
+#: xml/release-notes.xml:445(screen)
+#, no-wrap
+msgid "find /mnt -xdev -delete"
+msgstr "find /mnt -xdev -delete"
+
+#: xml/release-notes.xml:448(para)
+msgid "Umount the filesystem again:"
+msgstr "Vėl programiškai atjunkite rinkmenų sistemą:"
+
+#: xml/release-notes.xml:457(title)
+msgid "Printing System: Improvements and Incompatible Changes"
+msgstr "Spausdinimo sistema: patobulinimai ir nesuderinami pakeitimai"
+
+#: xml/release-notes.xml:460(emphasis)
+msgid "CUPS Version Upgrade to 1.7"
+msgstr "CUPS versija naujovinta iki 1.7"
+
+#: xml/release-notes.xml:462(para)
+#, fuzzy
+#| msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
+msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
+msgstr "Nauja CUPS versija pastebimai pasikeitė nuo 1.5 versijos, tad gali tekti konfigūraciją šiek tiek pakeisti rankiniu būdu."
+
+#: xml/release-notes.xml:469(para)
+msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+msgstr "Spausdinimo užduočių formatu tapo PDF; anksčiau buvo PS. Tad tradiciniams postskriptiniams spausdintuvams nuo šiol irgi reikės filtro tvarkyklių."
+
+#: xml/release-notes.xml:474(para)
+#, fuzzy
+#| msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
+msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</link> for details."
+msgstr "Daugiau informacijos rasite <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>."
+
+#: xml/release-notes.xml:482(para)
+#, fuzzy
+msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+msgstr "Pasikeitė tinklo spausdintuvų aptikimo protokolas. Gimtasis CUPS protokolas tinklo spausdintuvų aptikimui remiasi DNS paslaugų aptikimu (DNS-SD, pvz., per Avahi). Senąjį ir naująjį protokolą galite susieti naudodami <literal>cups-browsed</literal> paslaugą, kurią pateikia <literal>cups-filters</literal> paketas. Tam, kad senieji klientai (įskaitant LibreOffice ir KDE), reikia, kad vienu metu veiktų ir <literal>cupsd</literal>, ir <literal>cups-browsed</literal>."
+
+#: xml/release-notes.xml:495(para)
+#, fuzzy
+msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
+msgstr "Numatytoji IPP protokolo versija iš 1.1 pakeista į 2.0. Senesni IPP serveriai, pvz., CUPS 1.3.x (naudojami, pvz., SUSE Linux Enteprise 11), atmes IPP 2.0 užklausas pranešdami apie blogos užklausos klaidą (žr. <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
+
+#: xml/release-notes.xml:501(para)
+#, fuzzy
+msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
+msgstr "Tokiu atveju turėtumėte nurodyti, kad į senus serverius būtų kreipiamasi naudojant būtent senesnį IPP protokolą pridedant „/version=1.1“:"
+
+#: xml/release-notes.xml:508(para)
+msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
+msgstr "Arba konfigūracinėje rinkmenoje <literal>client.conf</literal> ties <literal>ServerName</literal> (pvz., <literal>ServerName senesnis.serveris.pavyzdys.lt/version=1.1</literal>)."
+
+#: xml/release-notes.xml:516(para)
+msgid "The <literal>CUPS_SERVER</literal> environment variable value."
+msgstr "Arba <literal>CUPS_SERVER</literal> aplinkos kintamojo reikšmėje."
+
+#: xml/release-notes.xml:522(para)
+msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
+msgstr "Arba prie serverio vardo reikšmės naudojant komandinės eilutės <literal>-h</literal> parinktį, pavyzdžiui:"
+
+#: xml/release-notes.xml:526(screen)
+#, no-wrap
+msgid "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "lpstat -h senesnis.serveris.pavyzdys.lt/version=1.1 -p"
+
+#: xml/release-notes.xml:532(para)
+msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
+msgstr "Kai kurios spausdintuvų tvarkyklės ir sąsajos iš <literal>cups</literal> paketo perkeltos į <literal>cups-filters</literal> paketą."
+
+#: xml/release-notes.xml:540(para)
+#, fuzzy
+msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</link>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</link>)."
+msgstr "Cupsd konfigūracijos direktyvos padalintos dviejose rinkmenose: cupsd.conf (galima modifikuoti per HTTP PUT, pvz., per „cupsctl“) ir cups-files.conf (gali keisti tik root naudotojas rankiniu būdu). Tai leidžia geriau apsisaugoti nuo netinkamo įprastų naudotojų teisių naudojimo, kuriuos root tyčia leisdavo keičiant cupsd konfigūraciją (žr. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 ir <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+
+#: xml/release-notes.xml:549(para)
+#, fuzzy
+msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</link> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</link>)."
+msgstr "Cupsd konfigūracijos direktyvos padalintos dviejose rinkmenose: cupsd.conf (galima modifikuoti per HTTP PUT, pvz., per „cupsctl“) ir cups-files.conf (gali keisti tik root naudotojas rankiniu būdu). Tai leidžia geriau apsisaugoti nuo netinkamo įprastų naudotojų teisių naudojimo, kuriuos root tyčia leisdavo keičiant cupsd konfigūraciją (žr. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 ir <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+
 #. bnc#809347
-#: xml/release-notes.xml:430(title)
+#: xml/release-notes.xml:599(title)
 msgid "More Information and Feedback"
 msgstr "Išsamesnė informacija ir grįžtamasis ryšys"
 
-#: xml/release-notes.xml:434(para)
+#: xml/release-notes.xml:603(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Skaitykite laikmenoje patalpintą <filename>README</filename> dokumentą."
 
-#: xml/release-notes.xml:439(para)
+#: xml/release-notes.xml:608(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Išsami informacija apie paskiro RPM paketo pakeitimus pateikiama įvykdžius:"
 
-#: xml/release-notes.xml:443(replaceable)
+#: xml/release-notes.xml:612(replaceable)
 msgid "FILENAME"
 msgstr "RINKMENA"
 
-#: xml/release-notes.xml:443(screen)
+#: xml/release-notes.xml:612(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:444(para)
+#: xml/release-notes.xml:613(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Vietoj žodžio <replaceable>RINKMENA</replaceable> rašykite tikrąjį RPM paketo pavadinimą."
 
-#: xml/release-notes.xml:449(para)
+#: xml/release-notes.xml:618(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "Norėdami matyti atnaujintų paketų visus pakeitimus laiko bėgyje, laikmenos šakniniame kataloge ieškokite <filename>ChangeLog</filename> rinkmenos."
 
-#: xml/release-notes.xml:455(para)
+#: xml/release-notes.xml:624(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Daugiau informacijos laikmenos <filename>docu</filename> kataloge."
 
-#: xml/release-notes.xml:461(para)
+#: xml/release-notes.xml:630(para)
 #, fuzzy
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> adresu pateikta papildoma ir atnaujinta dokumentacija."
 
-#: xml/release-notes.xml:466(para)
+#: xml/release-notes.xml:635(para)
 #, fuzzy
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Daugiau naujienų apie naujausius openSUSE produktus rasite apsilankę <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink>."
 
-#: xml/release-notes.xml:473(para)
+#: xml/release-notes.xml:642(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:477(para)
+#: xml/release-notes.xml:646(para)
 msgid "Thanks for using openSUSE."
 msgstr "Ačiū, kad pasirinkote openSUSE."
 
-#: xml/release-notes.xml:480(para)
+#: xml/release-notes.xml:649(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE komanda."
 
@@ -430,88 +572,8 @@ msgstr ""
 #~ msgid "42.1"
 #~ msgstr "42.1"
 
-#~ msgid "Network Interface Names"
-#~ msgstr "Tinklo sąsajų vardai"
-
-#~ msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
-#~ msgstr "Atnaujindami nuotolinę openSUSE 13.2 sistemą, įsitikinkite, ar tinklo sąsajų vardai yra teisingi."
-
-#~ msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
-#~ msgstr "openSUSE 13.2 naudojo nuspėjamus tinklo sąsajų vardus (pavyzdžiui, <literal>enp5s0</literal>), o openSUSE Leap 42.1 naudoja pastovius sąsajų vardus (<literal>eth0</literal>). Todėl, atnaujinus arba iš naujo paleidus sistemą, sąsajų vardai gali pasikeisti. Nuotolinė sistema gali tapti nebepasiekiama. Norėdami išvengti sąsajų pervadinimo, prieš paleisdami sistemą iš naujo, kiekvienai tinklo sąsajai įvykdykite įvykdykite komandą:"
-
-#~ msgid "enp5s0"
-#~ msgstr "enp5s0"
-
-#~ msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-#~ msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-
-#~ msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
-#~ msgstr "Vietoj <replaceable>enp5s0</replaceable> rašykite savo tinklo sąsajos vardą."
-
-#~ msgid "Mount the initial root filesystem:"
-#~ msgstr "Programiškai prijunkite pradinę rinkmenų sistemą:"
-
-#~ msgid "Remove all files below /mnt that are not in a subvolume:"
-#~ msgstr "Iš /mnt pašalinkite potomiui nepriklausančias rinkmenas:"
-
-#~ msgid "find /mnt -xdev -delete"
-#~ msgstr "find /mnt -xdev -delete"
-
-#~ msgid "Umount the filesystem again:"
-#~ msgstr "Vėl programiškai atjunkite rinkmenų sistemą:"
-
 #~ msgid "Technical"
 #~ msgstr "Techninė informacija"
-
-#~ msgid "Printing System: Improvements and Incompatible Changes"
-#~ msgstr "Spausdinimo sistema: patobulinimai ir nesuderinami pakeitimai"
-
-#~ msgid "CUPS Version Upgrade to 1.7"
-#~ msgstr "CUPS versija naujovinta iki 1.7"
-
-#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
-#~ msgstr "Nauja CUPS versija pastebimai pasikeitė nuo 1.5 versijos, tad gali tekti konfigūraciją šiek tiek pakeisti rankiniu būdu."
-
-#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-#~ msgstr "Spausdinimo užduočių formatu tapo PDF; anksčiau buvo PS. Tad tradiciniams postskriptiniams spausdintuvams nuo šiol irgi reikės filtro tvarkyklių."
-
-#~ msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-#~ msgstr "Daugiau informacijos rasite <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink>."
-
-#, fuzzy
-#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-#~ msgstr "Pasikeitė tinklo spausdintuvų aptikimo protokolas. Gimtasis CUPS protokolas tinklo spausdintuvų aptikimui remiasi DNS paslaugų aptikimu (DNS-SD, pvz., per Avahi). Senąjį ir naująjį protokolą galite susieti naudodami <literal>cups-browsed</literal> paslaugą, kurią pateikia <literal>cups-filters</literal> paketas. Tam, kad senieji klientai (įskaitant LibreOffice ir KDE), reikia, kad vienu metu veiktų ir <literal>cupsd</literal>, ir <literal>cups-browsed</literal>."
-
-#, fuzzy
-#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-#~ msgstr "Numatytoji IPP protokolo versija iš 1.1 pakeista į 2.0. Senesni IPP serveriai, pvz., CUPS 1.3.x (naudojami, pvz., SUSE Linux Enteprise 11), atmes IPP 2.0 užklausas pranešdami apie blogos užklausos klaidą (žr. <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
-
-#, fuzzy
-#~ msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
-#~ msgstr "Tokiu atveju turėtumėte nurodyti, kad į senus serverius būtų kreipiamasi naudojant būtent senesnį IPP protokolą pridedant „/version=1.1“:"
-
-#~ msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
-#~ msgstr "Arba konfigūracinėje rinkmenoje <literal>client.conf</literal> ties <literal>ServerName</literal> (pvz., <literal>ServerName senesnis.serveris.pavyzdys.lt/version=1.1</literal>)."
-
-#~ msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-#~ msgstr "Arba <literal>CUPS_SERVER</literal> aplinkos kintamojo reikšmėje."
-
-#~ msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
-#~ msgstr "Arba prie serverio vardo reikšmės naudojant komandinės eilutės <literal>-h</literal> parinktį, pavyzdžiui:"
-
-#~ msgid "lpstat -h older.server.example.com/version=1.1 -p"
-#~ msgstr "lpstat -h senesnis.serveris.pavyzdys.lt/version=1.1 -p"
-
-#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
-#~ msgstr "Kai kurios spausdintuvų tvarkyklės ir sąsajos iš <literal>cups</literal> paketo perkeltos į <literal>cups-filters</literal> paketą."
-
-#, fuzzy
-#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-#~ msgstr "Cupsd konfigūracijos direktyvos padalintos dviejose rinkmenose: cupsd.conf (galima modifikuoti per HTTP PUT, pvz., per „cupsctl“) ir cups-files.conf (gali keisti tik root naudotojas rankiniu būdu). Tai leidžia geriau apsisaugoti nuo netinkamo įprastų naudotojų teisių naudojimo, kuriuos root tyčia leisdavo keičiant cupsd konfigūraciją (žr. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 ir <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-
-#, fuzzy
-#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-#~ msgstr "Cupsd konfigūracijos direktyvos padalintos dviejose rinkmenose: cupsd.conf (galima modifikuoti per HTTP PUT, pvz., per „cupsctl“) ir cups-files.conf (gali keisti tik root naudotojas rankiniu būdu). Tai leidžia geriau apsisaugoti nuo netinkamo įprastų naudotojų teisių naudojimo, kuriuos root tyčia leisdavo keičiant cupsd konfigūraciją (žr. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 ir <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #~ msgid "Miscellaneous"
 #~ msgstr "Įvairenybės"
