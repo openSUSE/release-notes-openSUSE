@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.pt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 14:25+0200\n"
-"PO-Revision-Date: 2016-10-09 22:38+0000\n"
+"PO-Revision-Date: 2016-10-10 11:12+0000\n"
 "Last-Translator: Pedro Rosado <pdvrosado@gmail.com>\n"
 "Language-Team: Portuguese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/pt/>\n"
@@ -151,12 +151,11 @@ msgstr ""
 "rede antes de reiniciar o sistema:"
 
 #: xml/release-notes.xml:198(replaceable)
-#, fuzzy
 msgid "enp5s0"
 msgstr "enp5s0"
 
 #: xml/release-notes.xml:198(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
 "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
@@ -170,44 +169,53 @@ msgstr ""
 
 #: xml/release-notes.xml:207(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
-msgstr ""
+msgstr "Btrfs: Fuga de Espaço no disco após Restauros de Sistema"
 
 #: xml/release-notes.xml:208(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr ""
+"openSUSE 13.2 utilizou um plano de partições Btrfs que permitiu ao disco "
+"ficar permanentemente ocupado com conteúdo antigo e inacessível  após o "
+"restauro ter sido efetuado. Este problema derivado do plano de partições foi "
+"resolvido no openSUSE Leap 42.1. No entanto, esta correção é apenas aplicada "
+"a sistemas recém instalados."
 
 #: xml/release-notes.xml:215(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr ""
+"Se está a atualizar a partir do openSUSE 13.2, não pode realizar a conversão "
+"para este novo plano de partições, mas pode recuperar o espaço em disco "
+"perdido."
 
 #: xml/release-notes.xml:221(para)
 msgid "Mount the initial root filesystem:"
-msgstr ""
+msgstr "Monte o sistema de ficheiros root inicial:"
 
 #: xml/release-notes.xml:224(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-msgstr ""
+msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
 #: xml/release-notes.xml:224(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
-msgstr ""
+msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:227(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr ""
+"Remova todos os ficheiros abaixo de /mnt que não se encontrem num sub-volume:"
 
 #: xml/release-notes.xml:230(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr ""
+msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:233(para)
 msgid "Umount the filesystem again:"
-msgstr ""
+msgstr "Desmonte o sistema de ficheiros novamente:"
 
 #: xml/release-notes.xml:236(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -233,11 +241,11 @@ msgstr "Técnica"
 
 #: xml/release-notes.xml:265(title)
 msgid "Printing System: Improvements and Incompatible Changes"
-msgstr ""
+msgstr "Sistema de Impressão: Melhorias e Modificações incompatíveis"
 
 #: xml/release-notes.xml:268(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr ""
+msgstr "CUPS Atualizado para a versão 1.7"
 
 #: xml/release-notes.xml:270(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
@@ -246,6 +254,9 @@ msgstr ""
 #: xml/release-notes.xml:277(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"PDF é agora o standard de formato de impressão ao invés do PS. Como tal, "
+"impressoras tradicionais PostScript passam a precisar de uma driver filtro "
+"para a impressão."
 
 #: xml/release-notes.xml:282(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
@@ -254,6 +265,14 @@ msgstr ""
 #: xml/release-notes.xml:290(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"O protocolo de descoberta de impressoras em rede foi alterado. O método "
+"nativo de descoberta de impressoras em rede é agora baseado no serviço de "
+"descoberta do DNS (DNS-SD, através do Avahi). O serviço <literal>cups-"
+"browsed</literal> do pacote <literal>cups-filters</literal> pode ser usado "
+"para ligar os novos e antigos protocolos. Tanto o <literal>cupsd</literal> "
+"como o <literal>cups-browsed</literal> precisam de ser executados para que "
+"os clientes \"legado\" possam encontrar as impressoras (O que inclui o "
+"LibreOffice e o ambiente de trabalho KDE)."
 
 #: xml/release-notes.xml:303(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
@@ -262,27 +281,36 @@ msgstr ""
 #: xml/release-notes.xml:309(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr ""
+"Para conseguir imprimir através de servidores antigos, a versão do protocolo "
+"IPP tem de ser especificada, acrescentando <literal>/version=1.1</literal>:"
 
 #: xml/release-notes.xml:316(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"<literal>ServerName</literal> cujas definições estão em "
+"<literal>client.conf</literal> (por exemplo: <literal>ServerName "
+"older.server.example.com/version=1.1</literal>)."
 
 #: xml/release-notes.xml:324(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
+msgstr "O valor variável de ambiente <literal>CUPS_SERVER</literal>."
 
 #: xml/release-notes.xml:330(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
+"A opção do valor do nome de servidor <literal>-h</literal> das ferramentas "
+"da linha de comandos, como por exemplo:"
 
 #: xml/release-notes.xml:334(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr ""
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
 #: xml/release-notes.xml:340(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"Alguns filtros de impressão e back-ends foram movidos do pacote "
+"<literal>cups</literal> para o pacote <literal>cups-filters</literal>."
 
 #: xml/release-notes.xml:348(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
@@ -342,36 +370,44 @@ msgstr ""
 #. bnc#809347
 #: xml/release-notes.xml:419(title)
 msgid "More Information and Feedback"
-msgstr ""
+msgstr "Mais Informação e Feedback"
 
 #: xml/release-notes.xml:423(para)
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Leia os documentos <filename>README</filename> no disco de instalação."
 
 #: xml/release-notes.xml:428(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr ""
+"Veja a informação detalhada acerca do registo de alterações de um pacote "
+"especifico a partir do seu RPM:"
 
 #: xml/release-notes.xml:432(replaceable)
 msgid "FILENAME"
-msgstr ""
+msgstr "FILENAME"
 
 #: xml/release-notes.xml:432(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-msgstr ""
+msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #: xml/release-notes.xml:433(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
+"Substitua <replaceable>FILENAME</replaceable> pelo pacote RPM que deseja."
 
 #: xml/release-notes.xml:438(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr ""
+"Consulte o ficheiro <filename>ChangeLog</filename> no topo da hierarquia do "
+"disco de instalação para ter acesso a um registo cronológico de todas as "
+"alterações realizadas aos pacotes atualizados."
 
 #: xml/release-notes.xml:444(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr ""
+"Encontre mais informações no diretório <filename>docu</filename> no disco de "
+"instalação."
 
 #: xml/release-notes.xml:450(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
@@ -388,7 +424,7 @@ msgstr "Copyright © 2008 Novell, Inc."
 
 #: xml/release-notes.xml:466(para)
 msgid "Thanks for using openSUSE."
-msgstr ""
+msgstr "Agradecemos a utlização do openSUSE."
 
 #: xml/release-notes.xml:469(para)
 msgid "The openSUSE Team."
