@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-09-29 14:34+0200\n"
-"PO-Revision-Date: 2016-10-12 17:34+0000\n"
-"Last-Translator: jc sl <trcs@gmx.com>\n"
+"PO-Revision-Date: 2016-10-12 18:59+0000\n"
+"Last-Translator: Juan Francisco Ruiz <juanfco.ruiz@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/es/>\n"
 "Language: es\n"
@@ -302,7 +302,7 @@ msgstr "Desmonte el subvolumen del punto de montaje temporal:"
 
 #: xml/release-notes.xml:337(command) xml/release-notes.xml:457(screen)
 msgid "umount /mnt"
-msgstr "umount /mnt"
+msgstr "<literal>umount /mnt</literal>"
 
 #: xml/release-notes.xml:340(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
@@ -380,19 +380,20 @@ msgstr ""
 
 #: xml/release-notes.xml:419(replaceable)
 msgid "enp5s0"
-msgstr "enp5s0"
+msgstr "<literal>enp5s0</literal>"
 
 #: xml/release-notes.xml:419(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+msgstr ""
+"<literal>/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -"
+"n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules</literal>"
 
 #: xml/release-notes.xml:421(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr "Reemplace <replaceable>enp5s0</replaceable> con el nombre su interfaz de red."
 
 #: xml/release-notes.xml:428(title)
-#, fuzzy
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: pérdida de espacio en disco tras revertir cambios en el sistema"
 
@@ -415,24 +416,23 @@ msgid "Mount the initial root filesystem:"
 msgstr "Monte el sistema incial de archivos raíz:"
 
 #: xml/release-notes.xml:445(replaceable)
-#, fuzzy
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
 #: xml/release-notes.xml:445(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "<literal>mount /dev/<placeholder-1/> -o subvolid=5 /mnt</literal>"
 
 #: xml/release-notes.xml:448(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Eliminar todos los archivos por debajo de /mnt que no están en un subvolumen:"
 
 #: xml/release-notes.xml:451(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr "find /mnt -xdev -delete"
+msgstr "<literal>find /mnt -xdev -delete</literal>"
 
 #: xml/release-notes.xml:454(para)
 msgid "Umount the filesystem again:"
@@ -466,6 +466,14 @@ msgstr "Vea <link href=\"https://en.opensuse.org/Concepts_printing\">https://en.
 #: xml/release-notes.xml:488(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"El protocolo de descubrimiento de impresoras de red ha cambiado. El método "
+"nativo para descubrir impresoras de red está ahora basado en el Servicio DNS "
+"de descubrimiento (DNS-SD, esto es, vía Avahi). El servicio <literal>cups-"
+"browsed</literal> del paquete <literal>cups-filters</literal>puede ser usado "
+"para puentear viejos y nuevos protocolos. Ambos <literal>cupsd</literal> y "
+"<literal>cups-browsed</literal> necesitan ejecutarse para hacer que los "
+"clientes \"heredados\" descubran las impresoras (lo que incluye a "
+"LibreOffice y KDE)."
 
 #: xml/release-notes.xml:501(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
@@ -474,10 +482,16 @@ msgstr ""
 #: xml/release-notes.xml:507(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr ""
+"Para ser capaz de imprimir en los viejos servidores, la versión del "
+"protocolo IPP debe ser especificada explícitamente añadiendo "
+"<literal>version=1.1</literal> a cualquiera:"
 
 #: xml/release-notes.xml:514(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"Las configuraciones <literal>ServerName</literal> en "
+"<literal>client.conf</literal> (por ejemplo: <literal>ServerName "
+"older.server.exampe.com/version=1.1</literal>)."
 
 #: xml/release-notes.xml:522(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
@@ -486,15 +500,19 @@ msgstr "El valor de la variable de entorno <literal>CUPS_SERVER</literal>."
 #: xml/release-notes.xml:528(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
+"El valor del nombre del servidor de la opción <literal>-h</literal> de las "
+"herramientas de línea de comandos, por ejemplo:"
 
 #: xml/release-notes.xml:532(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "<literal>lpstat -h older.server.example.com/version=1.1 -p</literal>"
 
 #: xml/release-notes.xml:538(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"Algunos filtros de impresión y back-ends fueron movidos del paquete "
+"<literal>cups</literal> al paquete <literal>cups-filters</literal>."
 
 #: xml/release-notes.xml:546(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
@@ -525,7 +543,7 @@ msgstr "NOMBRE_DEL_FICHERO"
 #: xml/release-notes.xml:618(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
+msgstr "<literal>rpm --changelog -qp <placeholder-1/>.rpm</literal>"
 
 #: xml/release-notes.xml:619(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
