@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-04-21 14:25+0200\n"
-"PO-Revision-Date: 2016-10-12 17:34+0000\n"
-"Last-Translator: jc sl <trcs@gmx.com>\n"
+"PO-Revision-Date: 2016-10-12 18:59+0000\n"
+"Last-Translator: Juan Francisco Ruiz <juanfco.ruiz@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/es/>\n"
 "Language: es\n"
@@ -168,14 +168,14 @@ msgstr ""
 
 #: xml/release-notes.xml:198(replaceable)
 msgid "enp5s0"
-msgstr "enp5s0"
+msgstr "<literal>enp5s0</literal>"
 
 #: xml/release-notes.xml:198(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
-"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
-"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+"<literal>/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -"
+"n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules</literal>"
 
 #: xml/release-notes.xml:200(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
@@ -183,7 +183,6 @@ msgstr ""
 "Reemplace <replaceable>enp5s0</replaceable> con el nombre su interfaz de red."
 
 #: xml/release-notes.xml:207(title)
-#, fuzzy
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: pérdida de espacio en disco tras revertir cambios en el sistema"
 
@@ -208,14 +207,13 @@ msgid "Mount the initial root filesystem:"
 msgstr "Monte el sistema incial de archivos raíz:"
 
 #: xml/release-notes.xml:224(replaceable)
-#, fuzzy
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
 #: xml/release-notes.xml:224(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "<literal>mount /dev/<placeholder-1/> -o subvolid=5 /mnt</literal>"
 
 #: xml/release-notes.xml:227(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
@@ -223,9 +221,9 @@ msgstr ""
 "Eliminar todos los archivos por debajo de /mnt que no están en un subvolumen:"
 
 #: xml/release-notes.xml:230(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr "find /mnt -xdev -delete"
+msgstr "<literal>find /mnt -xdev -delete</literal>"
 
 #: xml/release-notes.xml:233(para)
 msgid "Umount the filesystem again:"
@@ -234,7 +232,7 @@ msgstr "Desmontar de nuevo el sistema de archivos:"
 #: xml/release-notes.xml:236(screen)
 #, no-wrap
 msgid "umount /mnt"
-msgstr "umount /mnt"
+msgstr "<literal>umount /mnt</literal>"
 
 #: xml/release-notes.xml:244(title)
 msgid "General"
@@ -245,9 +243,8 @@ msgid "Non-Oss Repository"
 msgstr "Repositorio Non-Oss"
 
 #: xml/release-notes.xml:248(para)
-#, fuzzy
 msgid "After the installation, the non-oss repository is disabled."
-msgstr "Después de la instalación se inhabilita el repositorio non-oss"
+msgstr "Después de la instalación se inhabilita el repositorio non-oss."
 
 #: xml/release-notes.xml:251(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
@@ -268,6 +265,8 @@ msgstr "CUPS actualizado a la versión 1.7"
 #: xml/release-notes.xml:270(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgstr ""
+"La nueva versión de CUPS introdujo algunos cambios mayores comparada con la "
+"1.5 que pueden requerir ajustes de configuración manual."
 
 #: xml/release-notes.xml:277(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
@@ -277,25 +276,46 @@ msgstr ""
 "controlador de filtro para imprimir."
 
 #: xml/release-notes.xml:282(para)
-#, fuzzy
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
-msgstr "Para más detalles, vea la sección (en inglés) \"Common printing data formats\" en el artículo de la wiki de SUSE \"Concepts printing\" en <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> ."
+msgstr ""
+"Para más detalles, vea la sección (en inglés) \"Common printing data "
+"formats\" en el artículo de la wiki de SUSE \"Concepts printing\" en <ulink "
+"url=\"http://en.opensuse.org/Concepts_printing\""
+">http://en.opensuse.org/Concepts_printing</ulink> ."
 
 #: xml/release-notes.xml:290(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"El protocolo de descubrimiento de impresoras de red ha cambiado. El método "
+"nativo para descubrir impresoras de red está ahora basado en el Servicio DNS "
+"de descubrimiento (DNS-SD, esto es, vía Avahi). El servicio <literal>cups-"
+"browsed</literal> del paquete <literal>cups-filters</literal>puede ser usado "
+"para puentear viejos y nuevos protocolos. Ambos <literal>cupsd</literal> y "
+"<literal>cups-browsed</literal> necesitan ejecutarse para hacer que los "
+"clientes \"heredados\" descubran las impresoras (lo que incluye a "
+"LibreOffice y KDE)."
 
 #: xml/release-notes.xml:303(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
+"La versión por defecto del protocolo IPP cambió de la 1.1 a la 2.0. Los "
+"servidores IPP más viejos como CUPs 1.3.x (por ejemplo en SUSE Linux "
+"Enterprise 11) no aceptarán las peticiones IPP 2.0 con <literal>Bad "
+"Request</literal> (vea <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 
 #: xml/release-notes.xml:309(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr ""
+"Para ser capaz de imprimir en los viejos servidores, la versión del "
+"protocolo IPP debe ser especificada explícitamente añadiendo "
+"<literal>version=1.1</literal> a cualquiera:"
 
 #: xml/release-notes.xml:316(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"Las configuraciones <literal>ServerName</literal> en "
+"<literal>client.conf</literal> (por ejemplo: <literal>ServerName "
+"older.server.exampe.com/version=1.1</literal>)."
 
 #: xml/release-notes.xml:324(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
@@ -304,15 +324,19 @@ msgstr "El valor de la variable de entorno <literal>CUPS_SERVER</literal>."
 #: xml/release-notes.xml:330(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
+"El valor del nombre del servidor de la opción <literal>-h</literal> de las "
+"herramientas de línea de comandos, por ejemplo:"
 
 #: xml/release-notes.xml:334(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr "lpstat -h older.server.example.com/version=1.1 -p"
+msgstr "<literal>lpstat -h older.server.example.com/version=1.1 -p</literal>"
 
 #: xml/release-notes.xml:340(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"Algunos filtros de impresión y back-ends fueron movidos del paquete "
+"<literal>cups</literal> al paquete <literal>cups-filters</literal>."
 
 #: xml/release-notes.xml:348(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
@@ -333,6 +357,11 @@ msgstr "KDE y la autenticación de red"
 #: xml/release-notes.xml:373(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
 msgstr ""
+"Cuando usa KDE, el gestor de pantalla  SDDM con un método de autenticación "
+"que establece un número alto de usuarios, hace que SDDM se vuelva "
+"inutllizable. Adicionalmente, si es usado el automontador, SDDM puede "
+"bloquear por mucho tiempo el inicio intentando montar cada directorio home "
+"de los usuarios."
 
 #: xml/release-notes.xml:381(programlisting)
 #, no-wrap
@@ -354,17 +383,20 @@ msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entri
 msgstr "Modifique <filename>/etc/sddm.conf</filename> para que contenga las siguientes entradas: <placeholder-1/>"
 
 #: xml/release-notes.xml:387(para)
-#, fuzzy
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
-msgstr "Vea el <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Error 953778</ulink> para más detalles."
+msgstr ""
+"Vea el <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Error "
+"953778</ulink> para más detalles."
 
 #: xml/release-notes.xml:395(title)
 msgid "No Screensaver Support in KDE Plasma"
-msgstr ""
+msgstr "No hay soporte de SalvaPantallas en Plasma de KDE."
 
 #: xml/release-notes.xml:396(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
 msgstr ""
+"Plasma de KDE no soporta salvapantallas por defecto. Si usted prefiere tener "
+"un salvapantallas, instale el paquete <literal>screensaver</literal>."
 
 #: xml/release-notes.xml:401(para)
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
@@ -373,6 +405,7 @@ msgstr ""
 #: xml/release-notes.xml:410(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
 msgstr ""
+"Para configurar el salvapantallas use <command>xscreensaver-demo</command>."
 
 # CER: no estoy seguro de la traducción de Feedback. Tiene el sentido de comentarios de los usuarios hacia los desarrolladores o la distro.
 #. bnc#809347
@@ -399,7 +432,7 @@ msgstr "NOMBRE_DEL_FICHERO"
 #: xml/release-notes.xml:432(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
-msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
+msgstr "<literal>rpm --changelog -qp <placeholder-1/>.rpm</literal>"
 
 #: xml/release-notes.xml:433(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
@@ -419,14 +452,16 @@ msgstr ""
 "DVD."
 
 #: xml/release-notes.xml:450(para)
-#, fuzzy
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
-msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> contiene información adicional o documentación actualizada."
+msgstr ""
+"<ulink url=\"https://activedoc.opensuse.org/\"/> contiene información "
+"adicional o documentación actualizada."
 
 #: xml/release-notes.xml:455(para)
-#, fuzzy
 msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
-msgstr "Visite <ulink url=\"http://www.opensuse.org\"/> para tener las últimas noticias de los productos de openSUSE."
+msgstr ""
+"Visite <ulink url=\"http://www.opensuse.org\"/> para tener las últimas "
+"noticias de los productos de openSUSE."
 
 #: xml/release-notes.xml:462(para)
 msgid "Copyright © 2015 SUSE LLC"
