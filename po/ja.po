@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2016-10-18 17:09+0200\n"
-"PO-Revision-Date: 2016-10-17 22:33+0000\n"
+"PO-Revision-Date: 2016-10-18 22:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,27 +135,43 @@ msgstr "このような問題が発生した場合は、古い MBR 形式のパ�
 
 #: xml/release-notes.xml:162(title)
 msgid "Nouveau 3D/DRI Driver Disabled by Default"
-msgstr ""
+msgstr "既定では Nouveau 3D/DRI ドライバが無効化される問題"
 
 #: xml/release-notes.xml:163(para)
 msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
 msgstr ""
+"現行のマルチスレッド型 KDE アプリケーションを利用する場合、 Nouveau DRI/3D ドライバがうまく動作しないことから、 openSUSE "
+"Leap 42.2 ではこのドライバを実験的なものとして位置づけています。"
 
 #: xml/release-notes.xml:168(para)
 msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
 msgstr ""
+"そのため、このドライバを <package>mesa-dri-nouveau</package> "
+"と呼ばれる個別のパッケージに分離することとし、既定ではインストールされないようになりました。このような事情により、 Nvidia GPU を利用した場合、"
+"ハードウエア 3D レンダリングには対応できなくなっているほか、高速な 2D 操作機能である Glamor に対応する新しい Nvidia CPU で、 "
+"2D のアクセラレーションにも対応できなくなっています。ただし、カーネルモード設定 (KMS) や基本的な 2D 操作のほか、 EXA や Kepler "
+"を介した 2D アクセラレーションや古い世代の GPU には対応しています。 3D 操作はソフトウエアレンダリングとして動作します。"
 
 #: xml/release-notes.xml:177(para)
 msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
 msgstr ""
+"なお、既定の環境のままご利用いただくこともできますが、 Nvidia 社が提供するプロプライエタリ (オープンソースではない) "
+"ドライバをお使いいただくこともできます。プロプライエタリドライバをご利用になる場合は、 <link href=\""
+"http://http.download.nvidia.com/opensuse/leap/42.2/\"/> にあるリポジトリをお使いください。"
 
 #: xml/release-notes.xml:183(para)
 msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
 msgstr ""
+"高速な 2D/3D 操作が必要で、かつプロプライエタリ NVIDIA ドライバをお使いになりたくない場合は、ご自身の責任下で Nouveau "
+"ドライバパッケージをお使いいただくこともできます。"
 
 #: xml/release-notes.xml:188(para)
 msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
 msgstr ""
+"この問題を緩和するための Mesa 向けパッチも用意されていますが、システムをデッドロックさせてしまう問題が判明しています。そのため、パッケージ化されたド"
+"ライバには、このパッチは含まれていません。 KDE をお使いの方で、プログラミングの知識があり、このパッチを有効にしたい方は、 spec ファイル内の <"
+"literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal"
+"> を <literal>1</literal> に変更してドライバを構築し直してください。"
 
 #: xml/release-notes.xml:202(title)
 msgid "System Upgrade"
