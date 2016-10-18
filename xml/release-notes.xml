@@ -158,6 +158,44 @@
    </para>
   </section>
 
+  <section xml:id="sec.123.nouveau">
+   <title>Nouveau 3D/DRI Driver Disabled by Default</title>
+   <para>
+    With &opensuseleap; &version;, the Nouveau DRI/3D driver is considered
+    experimental, because it does not work together with current
+    multi-threaded KDE applications.
+   </para>
+   <para>
+    We decided to move this driver into a separate package called
+    <package>mesa-dri-nouveau</package> which is not installed by default.
+    Therefore, with default settings, there is no hardware 3D rendering
+    support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs
+    that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D
+    are still available, as is 2D acceleration via EXA on Kepler and earlier
+    generation GPUs. 3D operations are supported via software rendering.
+   </para>
+   <para>
+    We recommend either keeping the default settings or switching to Nvidia's
+    proprietary driver. To use the proprietary driver, install it from
+    the repository at
+    <link xlink:href="http://http.download.nvidia.com/opensuse/leap/42.2/"/>.
+   </para>
+   <para>
+    If you need fast 2D/3D support but are not interested in installing the
+    proprietary NVIDIA driver, you can install the Nouveau driver package at
+    your own risk.
+   </para>
+   <para>
+    We have also prepared patches for Mesa which mitigate this issue, but can
+    deadlock the system. Therefore, these patches are not included with the
+    packaged driver. If you are an experienced user running KDE and willing
+    to rebuild the Mesa package with these patches, modify the spec file:
+    Change the <literal>%define</literal>
+    <literal>use_broken_nouveau_locking_patches</literal> to
+    <literal>1</literal>.
+   </para>
+  </section>
+
  </section>
 
  <section xml:id="upgrade">

@@ -11,11 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2016-10-17 19:46+0200\n"
+"POT-Creation-Date: 2016-10-18 17:09+0200\n"
 "PO-Revision-Date: 2016-10-17 17:53+0000\n"
 "Last-Translator: Stefan Knorr <sknorr@suse.com>\n"
-"Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap_42_2/de/>\n"
+"Language-Team: German <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -136,417 +135,427 @@ msgstr "Moderne Firmware hat einen Garbage Collector (Aufräum-Mechanismus), der
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "Konvertieren Sie die herkömmliche MBR-Partition in eine GPT-Partition, um das Problem gänzlich zu vermeiden."
 
-#: xml/release-notes.xml:164(title)
+#: xml/release-notes.xml:162(title)
+#, fuzzy
+#| msgid "CIFS Service Disabled By Default"
+msgid "Nouveau 3D/DRI Driver Disabled by Default"
+msgstr "CIFS-Dienst ist standardmäßig deaktiviert"
+
+#: xml/release-notes.xml:163(para)
+msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
+msgstr ""
+
+#: xml/release-notes.xml:168(para)
+msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
+msgstr ""
+
+#: xml/release-notes.xml:177(para)
+msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
+msgstr ""
+
+#: xml/release-notes.xml:183(para)
+msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
+msgstr ""
+
+#: xml/release-notes.xml:188(para)
+msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
+msgstr ""
+
+#: xml/release-notes.xml:202(title)
 msgid "System Upgrade"
 msgstr "System-Aktualisierung"
 
-#: xml/release-notes.xml:165(para)
+#: xml/release-notes.xml:203(para)
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 msgstr "Dieser Abschnitt listet Hinweise zum Upgrade eines Systems. Für detaillierte Upgrade-Anleitungen lesen Sie bitte die Dokumentation unter <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 
-#: xml/release-notes.xml:172(title)
+#: xml/release-notes.xml:210(title)
 msgid "Upgrading from openSUSE Leap 42.1"
 msgstr "Aktualisierung von openSUSE Leap 42.1"
 
-#: xml/release-notes.xml:175(title)
+#: xml/release-notes.xml:213(title)
 msgid "Removed and Replaced Packages"
 msgstr "Gelöschte und Ausgetauschte Pakete"
 
-#: xml/release-notes.xml:176(para)
+#: xml/release-notes.xml:214(para)
 msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
 msgstr "Die folgenden Pakete wurden gegenüber von openSUSE Leap 42.1 gelöscht oder ersetzt:"
 
-#: xml/release-notes.xml:182(para)
+#: xml/release-notes.xml:220(para)
 msgid "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr "<package>arista</package>: Ersetzt durch <package>transmageddon</package>."
 
-#: xml/release-notes.xml:187(para)
+#: xml/release-notes.xml:225(para)
 msgid "<package>cadabra</package>: The source code no longer builds. The successor, <link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
-msgstr ""
-"<package>cadabra</package>: Der Source-Code kann nicht mehr gebaut werden. "
-"Der Nachfolger <link href=\"http://cadabra.science/\">Cadabra 2</link> ist "
-"noch nicht stabil."
+msgstr "<package>cadabra</package>: Der Source-Code kann nicht mehr gebaut werden. Der Nachfolger <link href=\"http://cadabra.science/\">Cadabra 2</link> ist noch nicht stabil."
 
-#: xml/release-notes.xml:194(para)
+#: xml/release-notes.xml:232(para)
 msgid "<package>dropbear</package>: Removed because there are no relevant advantages over <package>openssh</package>."
 msgstr "<package>dropbear</package>: Entfernt, da es keine relevanten Vorteile gegenüber <package>openssh</package> gibt."
 
-#: xml/release-notes.xml:200(para)
-#| msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>"
+#: xml/release-notes.xml:238(para)
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
-msgstr ""
-"<package>emerillon</package>: Ersetzt durch <package>gnome-maps</package>."
+msgstr "<package>emerillon</package>: Ersetzt durch <package>gnome-maps</package>."
 
-#: xml/release-notes.xml:206(para)
+#: xml/release-notes.xml:244(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
 msgstr "<package>gnome-system-log</package>: Ersetzt durch <package>gnome-logs</package>."
 
-#: xml/release-notes.xml:212(para)
+#: xml/release-notes.xml:250(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: Ersetzt durch <package>hawk2</package>."
 
-#: xml/release-notes.xml:217(para)
+#: xml/release-notes.xml:255(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
-msgstr ""
-"<package>labplot</package>: Labplot wurde durch seine Qt-5-Version ersetzt, "
-"das Paket heißt jetzt <package>labplot-kf5</package>. Wenn Sie eine "
-"openSUSE-42.1-Installation upgraden in der <package>labplot</package> "
-"installiert ist, erhalten sie das neue Paket <package>labplot-kf5</package> "
-"automatisch."
+msgstr "<package>labplot</package>: Labplot wurde durch seine Qt-5-Version ersetzt, das Paket heißt jetzt <package>labplot-kf5</package>. Wenn Sie eine openSUSE-42.1-Installation upgraden in der <package>labplot</package> installiert ist, erhalten sie das neue Paket <package>labplot-kf5</package> automatisch."
 
-#: xml/release-notes.xml:226(para)
+#: xml/release-notes.xml:264(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr "<package>psi</package>: Ersetzt durch <package>psi+</package>."
 
-#: xml/release-notes.xml:231(para)
+#: xml/release-notes.xml:269(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
 msgstr "<package>python-moin</package>: Ersetzt durch <package>moinmoin-wiki</package>. Nur eine Umbenennung, kein Versionsupgrade - ein virtuell identischer Drop-In-Ersatz."
 
-#: xml/release-notes.xml:238(para)
+#: xml/release-notes.xml:276(para)
 msgid "<package>seamonkey</package>: Source code no longer compiles. If you were a Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird instead."
-msgstr ""
-"<package>seamonkey</package>: Der Quellcode buat nicht mehr. Wenn Sie bisher "
-"Seamonkey benutzt haben, können Sie zu Mozilla Firefox und Mozilla "
-"Thunderbird wechseln."
+msgstr "<package>seamonkey</package>: Der Quellcode buat nicht mehr. Wenn Sie bisher Seamonkey benutzt haben, können Sie zu Mozilla Firefox und Mozilla Thunderbird wechseln."
 
-#: xml/release-notes.xml:245(para)
+#: xml/release-notes.xml:283(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr "<package>ungifsicle</package>: Ersetzt durch <package>gifsicle</package>."
 
-#: xml/release-notes.xml:251(para)
+#: xml/release-notes.xml:289(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr "<package>xchat</package>: Ersetzt durch <package>hexchat</package>."
 
-#: xml/release-notes.xml:260(title)
+#: xml/release-notes.xml:298(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr "<filename>/var/cache</filename> auf einem eigenen Subvolume für Schnappschüsse und Rollback"
 
-#: xml/release-notes.xml:261(para)
+#: xml/release-notes.xml:299(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr "<filename>/var/cache</filename> beinhaltet viele sehr sprunghafte Daten, wie z.B. den Zypper-Cache mit RPM-Paketen in unterschiedlichen Versionen für jedes Update. Als Resultat der Datenspeicherung, was meistens redundant, aber sehr sprunghaft ist, kann die Menge an Festplattenplatz, die ein Snapshot belegt, sehr schnell wachsen."
 
-#: xml/release-notes.xml:268(para)
+#: xml/release-notes.xml:306(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr "Um dieses Problem zu beheben verschieben Sie <filename>/var/cache</filename> auf ein separates Subvolume. Bei frischen Installationen von openSUSE Leap 42.2 wird das automatisch gemacht. Für eine Konvertierung des existierenden root-Dateisystems führen Sie folgende Schritte durch:"
 
-#: xml/release-notes.xml:276(para)
+#: xml/release-notes.xml:314(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr "Finden Sie den Geräte-Namen (z.B. <filename>/dev/sda2</filename> oder <filename>/dev/sda3</filename>) des root-Dateisystems heraus:"
 
-#: xml/release-notes.xml:281(command)
+#: xml/release-notes.xml:319(command)
 msgid "df /"
 msgstr "df /"
 
-#: xml/release-notes.xml:284(para)
+#: xml/release-notes.xml:322(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr "Identifizieren Sie das höhere Subvolume aller anderen Subvolumes. Für Installationen auf Basis von openSUSE 13.2 ist das ein Subvolume mit <filename>@</filename> im Namen. Zur Überprüfung, ob Sie ein Subvolume mit <filename>@</filename> haben, verwenden Sie:"
 
-#: xml/release-notes.xml:290(command)
+#: xml/release-notes.xml:328(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr "btrfs subvolume list / | grep '@'"
 
-#: xml/release-notes.xml:291(para)
+#: xml/release-notes.xml:329(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr "Wenn die Ausgabe von diesem Befehl leer ist, haben Sie kein Subvolume mit  <filename>@</filename> im Namen. In diesem Fall können Sie mit der Subvolume-ID 5, die in älteren Versionen von openSUSE verwendet wird, weitermachen."
 
-#: xml/release-notes.xml:298(para)
+#: xml/release-notes.xml:336(para)
 msgid "Now mount the requisite subvolume."
 msgstr "Jetzt mounten Sie das benötigte Subvolume."
 
-#: xml/release-notes.xml:303(para)
+#: xml/release-notes.xml:341(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr "Wenn Sie ein Subvolume mit einem <filename>@</filename> im Namen haben, mounten Sie dieses Subvolume in einen temporären Mountpoint:"
 
-#: xml/release-notes.xml:307(command)
+#: xml/release-notes.xml:345(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount /dev/&lt;root-geraet/&gt; -o subvol=5@ /mnt"
 
-#: xml/release-notes.xml:310(para)
+#: xml/release-notes.xml:348(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr "Wenn Sie kein Subvolume mit einem <filename>@</filename> im Namen haben, mounten Sie stattdessen die Subvolume-ID 5:"
 
-#: xml/release-notes.xml:314(command)
+#: xml/release-notes.xml:352(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount /dev/&lt;root-geraet/&gt; -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:319(para)
+#: xml/release-notes.xml:357(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr "<filename>/mnt/var/cache</filename> kann schon existieren und könnte das gleiche Verzeichnis wie <filename>/var/cache</filename> sein. Um Datenverlust zu vermeiden, verschieben Sie dieses:"
 
-#: xml/release-notes.xml:324(command)
+#: xml/release-notes.xml:362(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
-#: xml/release-notes.xml:327(para)
+#: xml/release-notes.xml:365(para)
 msgid "Create a new subvolume:"
 msgstr "Erstellen Sie ein neues Subvolume:"
 
-#: xml/release-notes.xml:330(command)
+#: xml/release-notes.xml:368(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr "btrfs subvol create /mnt/var/cache"
 
-#: xml/release-notes.xml:333(para)
+#: xml/release-notes.xml:371(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr "Wenn jetzt ein Verzeichnis <filename>/var/cache.old</filename> vorhanden ist, verschieben Sie dieses an den neuen Ort:"
 
-#: xml/release-notes.xml:337(command)
+#: xml/release-notes.xml:375(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr "mv /var/cache.old/* /mnt/var/cache"
 
-#: xml/release-notes.xml:338(para)
+#: xml/release-notes.xml:376(para)
 msgid "If that is not the case, instead do:"
 msgstr "Wenn das nicht der Fall ist, machen Sie stattdessen:"
 
-#: xml/release-notes.xml:341(command)
+#: xml/release-notes.xml:379(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr "mv /var/cache/* /mnt/var/cache/"
 
-#: xml/release-notes.xml:344(para)
+#: xml/release-notes.xml:382(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "Optional können Sie <filename>/mnt/var/cache.old</filename> entfernen:"
 
-#: xml/release-notes.xml:347(command)
+#: xml/release-notes.xml:385(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr "rm -rf /mnt/var/cache.old"
 
-#: xml/release-notes.xml:350(para)
+#: xml/release-notes.xml:388(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Hängen Sie das Subvolume aus dem temporären Mountpoint aus:"
 
-#: xml/release-notes.xml:353(command) xml/release-notes.xml:473(screen)
+#: xml/release-notes.xml:391(command) xml/release-notes.xml:511(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:356(para)
+#: xml/release-notes.xml:394(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr "Fügen Sie einen Eintrag für das neue Subvolume  <filename>/var/cache</filename> in der <filename>/etc/fstab</filename>  hinzu. Verwenden Sie ein schon vorhandenes Subvolume als Template zum kopieren. Gehen Sie sicher, dass die UUID unberührt bleibt (das ist die UUID des root-Dateisystems)  und ändern Sie den Namen vom Subvolume und seinem Mountpoint einheitlich zu <filename>/var/cache</filename>."
 
-#: xml/release-notes.xml:365(para)
-#| msgid "Mount the new subvolume as specified in /etc/fstab:"
+#: xml/release-notes.xml:403(para)
 msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
-msgstr ""
-"Mounten Sie das neue Subvolume, wie in <filename>/etc/fstab</filename> "
-"festgelegt:"
+msgstr "Mounten Sie das neue Subvolume, wie in <filename>/etc/fstab</filename> festgelegt:"
 
-#: xml/release-notes.xml:368(command)
+#: xml/release-notes.xml:406(command)
 msgid "mount /var/cache"
 msgstr "mount /var/cache"
 
-#: xml/release-notes.xml:374(title)
+#: xml/release-notes.xml:412(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr "Der Synaptics X Treiber  kann die Touchpad Experience unter GNOME vermindern"
 
-#: xml/release-notes.xml:375(para)
+#: xml/release-notes.xml:413(para)
 msgid "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</package>) was installed by default but had a lower priority than the libinput driver (<package>xf86-input-libinput</package>)."
 msgstr "In Leap 42.1 wurde der  Synaptics X Treiber (Paket <package>xf86-input-synaptics</package>) standardmäßig installiert, hatte aber eine niedrigere Priorität als der libinput-Treiber (<package>xf86-input-libinput</package>)."
 
-#: xml/release-notes.xml:381(para)
+#: xml/release-notes.xml:419(para)
 msgid "Starting with Leap 42.2:"
 msgstr "Starten mit Leap 42.2:"
 
-#: xml/release-notes.xml:386(para)
+#: xml/release-notes.xml:424(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr "Der Synaptics X Treiber ist nicht mehr standardmäßig installiert."
 
-#: xml/release-notes.xml:391(para)
+#: xml/release-notes.xml:429(para)
 msgid "If the Synaptics X driver is installed, it will take precedence for any touchpad devices."
 msgstr "Wenn der Synaptics X Treiber installiert ist, hat dieser für irgendwelche Touchpad-Geräte Vorrang."
 
-#: xml/release-notes.xml:397(para)
+#: xml/release-notes.xml:435(para)
 msgid "The Synaptics X driver is no longer supported by GNOME. This means when the driver is installed, Synaptics touchpads can only be configured to the extent that a basic mouse can."
 msgstr "Der Synaptics X Treiber wird nicht mehr von GNOME unterstützt. Das bedeutet, wenn der Treiber installiert ist, können Synaptics-Touchpads nur in dem Umfang konfiguriert werden, wie es eine Standard-Maus kann."
 
-#: xml/release-notes.xml:404(para)
+#: xml/release-notes.xml:442(para)
 msgid "Unless you are using a Synaptics touchpad and have a large amount of custom configuration for the Synaptics driver, remove the package from your system:"
 msgstr "Wenn Sie kein Synaptics-Touchpad verwenden und und eine große Summe an benutzerdefinierten Konfigurationen für den Synaptics-Treiber haben, löschen Sie das Paket von Ihrem System:"
 
-#: xml/release-notes.xml:408(command)
+#: xml/release-notes.xml:446(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr "sudo zypper rm xf86-input-synaptics"
 
-#: xml/release-notes.xml:413(title)
+#: xml/release-notes.xml:451(title)
 msgid "Upgrading from openSUSE 13.2"
 msgstr "Aktualisierung von openSUSE 13.2"
 
-#: xml/release-notes.xml:414(para)
+#: xml/release-notes.xml:452(para)
 msgid "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure to also review the information provided in <xref linkend=\"sec.upgrade.421\"/>."
 msgstr "Die folgenden Hinweise gelten für Aktualisierungen von openSUSE 13.2 oder älter. Stellen Sie sicher auch die Informationen, die in <xref linkend=\"sec.upgrade.421\"/> angeboten werden, überprüft zu haben."
 
-#: xml/release-notes.xml:421(title)
+#: xml/release-notes.xml:459(title)
 msgid "Network Interface Names"
 msgstr "Namen von Netzwerkschnittstellen"
 
-#: xml/release-notes.xml:422(para)
+#: xml/release-notes.xml:460(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr "Wenn sie einen entfernten Computer von openSUSE 13.2 updaten, stellen Sie sicher, dass dessen Netzwerkinterfaces korrekt benannt sind."
 
-#: xml/release-notes.xml:426(para)
+#: xml/release-notes.xml:464(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr "openSUSE 13.2 benutzte sogenannte vorhersehbare Namen für Netwerkinterfaces (beispielsweise, <literal>enp5s0</literal>). openSUSE Leap 42.1 hingegen benutzt persistente Namen für Netwerkinterfaces (<literal>eth0</literal>). Nach einem Upgrade und dem darauf folgenden Neustart können sich daher die Namen der Netzwerkinterfaces ändern. Um zu vermeiden, dass Interfaces umbenannt werden, können Sie, bevor Sie, bevor Sie das System neu starten, das folgende Kommando auf jedes Ihrer Netwerkinterfaces anwenden:"
 
-#: xml/release-notes.xml:435(replaceable)
+#: xml/release-notes.xml:473(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:435(screen)
+#: xml/release-notes.xml:473(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:437(para)
+#: xml/release-notes.xml:475(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr "Ersetzen Sie <replaceable>enp5s0</replaceable> durch den Namen des gewünschten Netzwerkinterfaces."
 
-#: xml/release-notes.xml:444(title)
+#: xml/release-notes.xml:482(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: Mangel an Festplattenkapazität nach System-Rollbacks"
 
-#: xml/release-notes.xml:445(para)
+#: xml/release-notes.xml:483(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr "openSUSE 13.2 nutzte ein Btrfs-Partitionsschema, das dazu führen konnte, dass, nach dem der erste System-Rollback vollzogen wurde, Festplattenspeicher permanent mit veralteten, unzugänglichen Inhalten gefüllt war. Dieses Problem wurde in openSUSE Leap 42.1 korrigiert. Jedoch kann die Korrektur nur auf neu installierte Systeme angewendet werden."
 
-#: xml/release-notes.xml:452(para)
+#: xml/release-notes.xml:490(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr "Wenn Sie von openSUSE 13.2 upgraden, können Sie nicht zum neuen Layout konvertieren. Allerdings können Sie den verlorenen Speicher wieder zurückgewinnen."
 
-#: xml/release-notes.xml:458(para)
+#: xml/release-notes.xml:496(para)
 msgid "Mount the initial root filesystem:"
 msgstr "Das ursprüngliche root-Dateisystem mounten:"
 
-#: xml/release-notes.xml:461(replaceable)
+#: xml/release-notes.xml:499(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_DATEI_SYSTEM&gt;"
 
-#: xml/release-notes.xml:461(screen)
+#: xml/release-notes.xml:499(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:464(para)
+#: xml/release-notes.xml:502(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Alle Dateien unter /mnt löschen, die in keinem Subvolume sind:"
 
-#: xml/release-notes.xml:467(screen)
+#: xml/release-notes.xml:505(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:470(para)
+#: xml/release-notes.xml:508(para)
 msgid "Umount the filesystem again:"
 msgstr "Das Dateisystem wieder umounten:"
 
-#: xml/release-notes.xml:479(title)
+#: xml/release-notes.xml:517(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Drucksystem: Verbesserungen und inkompatible Änderungen"
 
-#: xml/release-notes.xml:482(emphasis)
+#: xml/release-notes.xml:520(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS-Versionsupgrade auf 1.7"
 
-#: xml/release-notes.xml:484(para)
+#: xml/release-notes.xml:522(para)
 msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
 msgstr "Verglichen mit CUPS 1.5 in openSUSE 13.2 beinhaltet CUPS 1.7  einige größere Änderungen, die manuelle Konfigurationsanpassungen notwendig machen können."
 
-#: xml/release-notes.xml:491(para)
+#: xml/release-notes.xml:529(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr "Das Standardformat für Druckaufträge ist jetzt PDF und nicht mehr PS. Entsprechend brauchen traditionelle PostScript Drucker jetzt auch einen Filter Treiber um zu drucken."
 
-#: xml/release-notes.xml:496(para)
+#: xml/release-notes.xml:534(para)
 msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr "Details finden Sie unter <link href=\"http://en.opensuse.org/Concepts_printing\"/> ."
 
-#: xml/release-notes.xml:504(para)
+#: xml/release-notes.xml:542(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr "Das Erkennungsprotokoll für Netzwerkdrucker hat sich geändert. Die native Methode, Drucker zu entdecken basiert nun auf DNS Service Discovery (DNS-SD, also Avahi). Der Dienst <literal>cups-browsed</literal> aus dem Paket <literal>cups-filters</literal> kann benutzt werden, um zwischen altem und neuem Protokoll zu überbrücken. Sowohl <literal>cupsd</literal> als auch <literal>cups-browsed</literal> müssen gestartet sein, damit Software, die das ältere Protokoll benutzt (zum Beispiel LibreOffice oder KDE), Drucker finden kann."
 
-#: xml/release-notes.xml:517(para)
+#: xml/release-notes.xml:555(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr "Die Standardprotokollversion von IPP hat sich von 1.1 auf 2.0 geändert. Ältere IPP-Server wie CUPS 1.3.x (zum Beispiel in SUSE Linux Enterprise 11) weisen IPP-2.0-Anfragen mit <literal>Bad Request</literal> zurück (siehe <link href=\"http://www.cups.org/str.php?L4231\"/>)."
 
-#: xml/release-notes.xml:523(para)
+#: xml/release-notes.xml:561(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr "Um von älteren Drucker aus zu drucken, muss die IPP-Protokollversion explizit spezifiziert werden. Dafür müssen Sie an eine der folgenden Einstellungen <literal>/version=1.1</literal> anhängen:"
 
-#: xml/release-notes.xml:530(para)
+#: xml/release-notes.xml:568(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr "Die <literal>ServerName</literal>-Einstellungen in <literal>client.conf</literal> (beispielsweise: <literal>ServerName alter.server.example.com/version=1.1</literal>)."
 
-#: xml/release-notes.xml:538(para)
+#: xml/release-notes.xml:576(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "Die Umgebungsvariable <literal>CUPS_SERVER</literal>."
 
-#: xml/release-notes.xml:544(para)
+#: xml/release-notes.xml:582(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr "Der Wert für Servername des Parameters <literal>-h</literal> in den Kommandozeilenwerkzeugen, beispielsweise:"
 
-#: xml/release-notes.xml:548(screen)
+#: xml/release-notes.xml:586(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h alter.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:554(para)
+#: xml/release-notes.xml:592(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr "Einige Druckfilter und Backends wurden aus dem Paket <literal>cups</literal> entfernt und in das Paket <literal>cups-filters</literal> eingefügt."
 
-#: xml/release-notes.xml:562(para)
+#: xml/release-notes.xml:600(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 msgstr "Die cupsd-Konfiguration wurde in 2 Dateien aufgeteilt: <literal>cupsd.conf</literal> (kann auch über HTTP PUT, z.B. mit cupsctl verändert werden) und <literal>cups-files.conf</literal> (kann nur manuell von root im Dateisystem verändert werden). Dies bietet besseren Schutz vor Rechtsmissbräuchen von normalen Benutzern, die von root das Recht zugewiesen bekommen haben, cupsd-Konfigurationsänderungen durchzuführen (siehe <link href=\"http://www.cups.org/str.php?L4223\"/> , CVE-2012-5519, und <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 
-#: xml/release-notes.xml:571(para)
+#: xml/release-notes.xml:609(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\"/> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 msgstr "Die CUPS-Banner und die CUPS-Testseite wurden aus dem Paket <literal>cups</literal> entfernt und zum Paket <literal>cups-filters</literal> hinzugefügt (siehe auch <link href=\"http://www.cups.org/str.php?L4120\"/> und <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 
 #. bnc#809347
-#: xml/release-notes.xml:621(title)
+#: xml/release-notes.xml:659(title)
 msgid "More Information and Feedback"
 msgstr "Weitere Informationen und Rückmeldungen"
 
-#: xml/release-notes.xml:625(para)
+#: xml/release-notes.xml:663(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Lesen Sie die <filename>README</filename>-Dokumente auf dem Medium."
 
-#: xml/release-notes.xml:630(para)
+#: xml/release-notes.xml:668(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Eine detaillierte Liste der Änderungen an einem bestimmten Paket erhalten Sie aus dem RPM:"
 
-#: xml/release-notes.xml:634(replaceable)
+#: xml/release-notes.xml:672(replaceable)
 msgid "FILENAME"
 msgstr "DATEINAME"
 
-#: xml/release-notes.xml:634(screen)
+#: xml/release-notes.xml:672(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:635(para)
+#: xml/release-notes.xml:673(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Ersetzen Sie <replaceable>DATEINAME</replaceable> durch den Namen des gewünschten RPMs."
 
-#: xml/release-notes.xml:640(para)
+#: xml/release-notes.xml:678(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "In der Datei <filename>ChangeLog</filename> im Wurzelverzeichnis des Mediums finden Sie eine chronologische Liste aller Änderungen, die an den aktualisierten Paketen gemacht wurden."
 
-#: xml/release-notes.xml:646(para)
+#: xml/release-notes.xml:684(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Weitere Information finden Sie im Verzeichnis <filename>docu</filename> auf dem Medium."
 
-#: xml/release-notes.xml:652(para)
+#: xml/release-notes.xml:690(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<link href=\"https://doc.opensuse.org/\"/> enthält zusätzliche oder aktualisierte Dokumentationen."
 
-#: xml/release-notes.xml:657(para)
+#: xml/release-notes.xml:695(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Die neuesten Produktinformationen von openSUSE finden Sie auf <link href=\"http://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:664(para)
+#: xml/release-notes.xml:702(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?>  SUSE LLC"
 
-#: xml/release-notes.xml:668(para)
+#: xml/release-notes.xml:706(para)
 msgid "Thanks for using openSUSE."
 msgstr "Danke, dass Sie openSUSE benutzen."
 
-#: xml/release-notes.xml:671(para)
+#: xml/release-notes.xml:709(para)
 msgid "The openSUSE Team."
 msgstr "Das openSUSE-Team."
 
@@ -1625,9 +1634,6 @@ msgstr "Übersetzer-Credits: Michael Skiba <trans@michael-skiba.de>, 2007-2009; 
 
 #~ msgid "%_topdir %{getenv:HOME}/foo"
 #~ msgstr "%_topdir %{getenv:HOME}/foo"
-
-#~ msgid "CIFS Service Disabled By Default"
-#~ msgstr "CIFS-Dienst ist standardmäßig deaktiviert"
 
 #~ msgid "To enable it, start the YaST System Services (Runlevel) editor and configure the <systemitem>cifs</systemitem> service."
 #~ msgstr "Zur Aktivierung starten Sie den Runlevel-Editor über YaST Systemdienste und konfigurieren den Dienst <systemitem>cifs</systemitem>"
