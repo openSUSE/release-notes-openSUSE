@@ -14,14 +14,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2016-10-18 17:09+0200\n"
-"PO-Revision-Date: 2016-10-02 16:49+0000\n"
+"PO-Revision-Date: 2016-10-18 18:35+0000\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
-"Language-Team: Ukrainian <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/uk/>\n"
+"Language-Team: Ukrainian <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.6\n"
 
 #: xml/release-notes.xml:15(title) xml/release-notes.xml:32(component)
@@ -139,27 +141,49 @@ msgstr "Обхідний шлях дуже простий: конвертуйт�
 
 #: xml/release-notes.xml:162(title)
 msgid "Nouveau 3D/DRI Driver Disabled by Default"
-msgstr ""
+msgstr "Драйвер Nouveau 3D/DRI є вимкненим усталено"
 
 #: xml/release-notes.xml:163(para)
 msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
 msgstr ""
+"У openSUSE Leap 42.2 драйвер Nouveau DRI/3D вважається експериментальним, бо "
+"він не працює разом із поточними багатопотоковими програмами KDE."
 
 #: xml/release-notes.xml:168(para)
 msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
 msgstr ""
+"Ми вирішили перенести цей драйвер в окремий пакет <package>mesa-dri-"
+"nouveau</package>, який усталено не встановлений. Із типовими налаштуваннями "
+"немає апаратної підтримки 3D-вимальовування на будь-якому графічному "
+"процесорі від NVIDIA і не має 2D-прискорення на новішій графіці від NVIDIA, "
+"яка використовує Glamor для швидких 2D операцій. Налаштування в режимі ядра "
+"і основного 2D як і раніше доступні разом із 2D-прискоренням через EXA для "
+"Kepler та старіших поколінь відеокарт. 3D-операції підтримуються через "
+"програмне вимальовування."
 
 #: xml/release-notes.xml:177(para)
 msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
 msgstr ""
+"Ми рекомендуємо зберегти усталені параметри або перемкнути на закритий "
+"драйвер від Nvidia. Для використання такого драйвера встановіть його із "
+"сховища <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
 
 #: xml/release-notes.xml:183(para)
 msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
 msgstr ""
+"Якщо вам потрібна підтримка швидких 2D/3D, але ви не зацікавлені у "
+"встановленні закритого драйвера NVIDIA,  то можете встановити пакунок "
+"драйвера Nouveau на власний ризик."
 
 #: xml/release-notes.xml:188(para)
 msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
 msgstr ""
+"Ми також маємо готові латки для Mesa, які вирішують цю проблему, але можуть "
+"заблокувати систему. Тому ці латки не є частиною пакунку драйверів. Якщо ви "
+"є досвідченим користувачем KDE і готові зібрати пакунок Mesa з цими "
+"виправленнями, змініть файл специфікації: виправте <literal>%define</literal>"
+"<literal>use_broken_nouveau_locking_patches</literal> на "
+"<literal>1</literal>."
 
 #: xml/release-notes.xml:202(title)
 msgid "System Upgrade"
@@ -194,10 +218,10 @@ msgid "<package>dropbear</package>: Removed because there are no relevant advant
 msgstr "<package>dropbear</package>: вилучено, бо не має істотних переваг над <package>openssh</package>."
 
 #: xml/release-notes.xml:238(para)
-#, fuzzy
 #| msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>"
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
-msgstr "<package>emerillon</package>: замінено на <package>gnome-maps</package>"
+msgstr ""
+"<package>emerillon</package>: замінено на <package>gnome-maps</package>."
 
 #: xml/release-notes.xml:244(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
@@ -210,6 +234,10 @@ msgstr "<package>hawk</package>: замінено на <package>hawk2</package>.
 #: xml/release-notes.xml:255(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
 msgstr ""
+"<package>labplot</package>: Labplot замінено на його версію від Qt5, яка "
+"названа <package>labplot-kf5</package>. Якщо ви оновлюєтеся із встановленої "
+"openSUSE Leap 42.1, на якій стоїть <package>labplot</package>, ви "
+"автоматично отримаєте <package>labplot-kf5</package>."
 
 #: xml/release-notes.xml:264(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
@@ -222,6 +250,9 @@ msgstr "<package>python-moin</package>: замінено на <package>moinmoin-
 #: xml/release-notes.xml:276(para)
 msgid "<package>seamonkey</package>: Source code no longer compiles. If you were a Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird instead."
 msgstr ""
+"<package>seamonkey</package>: сирцевий код більше не компілюється. Якщо ви - "
+"попередній користувач Seamonkey, то перейдіть натомість на Mozilla Firefox "
+"та Mozilla Thunderbird."
 
 #: xml/release-notes.xml:283(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
@@ -336,10 +367,9 @@ msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/va
 msgstr "Додайте запис до <filename>/etc/fstab</filename> для нового підтому <filename>/var/cache</filename>. Використовуйте наявний підтом як шаблон для копіювання звідти. Переконайтеся, що ви залишили UUID незміненим (це UUID кореневої файлової системи) та змініть назву підтому та його точки монтування згідно з <filename>/var/cache</filename>."
 
 #: xml/release-notes.xml:403(para)
-#, fuzzy
 #| msgid "Mount the new subvolume as specified in /etc/fstab:"
 msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
-msgstr "Змонтуйте новий підтом, як вказано у /etc/fstab:"
+msgstr "Змонтуйте новий підтом, як вказано у <filename>/etc/fstab</filename>:"
 
 #: xml/release-notes.xml:406(command)
 msgid "mount /var/cache"
