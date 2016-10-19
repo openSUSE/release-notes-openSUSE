@@ -11,9 +11,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-18 17:09+0200\n"
-"PO-Revision-Date: 2016-09-29 16:27+0000\n"
+"PO-Revision-Date: 2016-10-19 10:02+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
-"Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/nl/>\n"
+"Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -135,30 +136,53 @@ msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "Er omheen werken is eenvoudig: converteer de verouderde MBR-partitie naar GPT."
 
 #: xml/release-notes.xml:162(title)
-#, fuzzy
 #| msgid "CIFS Service Disabled By Default"
 msgid "Nouveau 3D/DRI Driver Disabled by Default"
-msgstr "CIFS-service is standaard uitgeschakeld"
+msgstr "Nouveau 3D/DRI stuurprogramma is standaard uitgeschakeld"
 
 #: xml/release-notes.xml:163(para)
 msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
 msgstr ""
+"Met openSUSE Leap 42.2 wordt het Nouveau DRI/3D stuurprogramma beschouwd als "
+"experimenteel, omdat het niet samenwerkt met huiduge multi-threaded KDE "
+"toepassingen."
 
 #: xml/release-notes.xml:168(para)
 msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
 msgstr ""
+"We hebben besloten dit stuurprogramma te verplaatsen naar een apart pakket "
+"genaamd <package>mesa-dri-nouveau</package> dat niet standaard is "
+"geïnstalleerd. Met standaard instellingen is er daarom geen ondersteuning "
+"voor hardware 3D rendering op elke Nvidia GPU en geen 2D versnelling op "
+"nieuwere Nvidia GPU's die Glamor voor snelle 2D bewerkingen gebruiken. "
+"Kernel-modus-instelling en basis 2D zijn nog steeds beschikbaar, evenals 2D "
+"versnelling via EXA oo Kepler en eerdere generatie GPU's. 3D bewerkingen "
+"worden ondersteund via software rendering."
 
 #: xml/release-notes.xml:177(para)
 msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
 msgstr ""
+"We raden aan om ofwel de standaard instellingen te behouden of om te "
+"schakelen naar het niet-open stuurprogramma van Nvidia. Om het niet-open "
+"stuurprogramma te gebruiken, installeert u het uit de opslagruimte op <link "
+"href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
 
 #: xml/release-notes.xml:183(para)
 msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
 msgstr ""
+"Als u snelle 2D/3D ondersteuning nodig hebt, maar geen interesse hebt in het "
+"installeren van het niet-open NVIDIA stuurprogramma, dan kunt u het pakket "
+"met het Nouveau stuurprogramma op eigen risico installeren."
 
 #: xml/release-notes.xml:188(para)
 msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
 msgstr ""
+"We hebben ook patches voor Mesa gemaakt die dit probleem aanpakken, maar "
+"voor een deadlock van het systeem kunnen zorgen. Deze patches zijn daarom "
+"niet ingevoegd in het pakket met het stuurprogramma. Als u een ervaren "
+"gebruiker bent van KDE en het Mesa pakket met deze patches opnieuw wilt "
+"bouwen, wijzig dan het spec-bestand: Change the <literal>%define</literal><li"
+"teral>use_broken_nouveau_locking_patches</literal> naar <literal>1</literal>."
 
 #: xml/release-notes.xml:202(title)
 msgid "System Upgrade"
@@ -193,10 +217,10 @@ msgid "<package>dropbear</package>: Removed because there are no relevant advant
 msgstr "<package>dropbear</package>: verwijderd omdat er geen relevante voordelen zijn boven <package>openssh</package>."
 
 #: xml/release-notes.xml:238(para)
-#, fuzzy
 #| msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>"
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
-msgstr "<package>emerillon</package>: vervangen door <package>gnome-maps</package>"
+msgstr ""
+"<package>emerillon</package>: vervangen door <package>gnome-maps</package>."
 
 #: xml/release-notes.xml:244(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
@@ -209,6 +233,10 @@ msgstr "<package>hawk</package>: vervangen door <package>hawk2</package>."
 #: xml/release-notes.xml:255(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
 msgstr ""
+"<package>labplot</package>: Labplot is vervangen door zijn Qt5 versie, "
+"genaamd <package>labplot-kf5</package>. Als u opwaardeert vanaf een openSUSE "
+"Leap 42.1 installatie waarop <package>labplot</package> is geïnstalleerd, "
+"dan krijgt u het <package>labplot-kf5</package> automatisch."
 
 #: xml/release-notes.xml:264(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
@@ -221,6 +249,9 @@ msgstr "<package>python-moin</package>: vervangen door <package>moinmoin-wiki</p
 #: xml/release-notes.xml:276(para)
 msgid "<package>seamonkey</package>: Source code no longer compiles. If you were a Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird instead."
 msgstr ""
+"<package>seamonkey</package>: de broncode compileert niet langer. Als u "
+"eerder een gebruiker van Seamonkey was, schakel dan in plaats daarvan om "
+"naar Mozilla Firefox en Mozilla Thunderbird."
 
 #: xml/release-notes.xml:283(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
@@ -335,10 +366,11 @@ msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/va
 msgstr "Voeg een regel toe aan <filename>/etc/fstab</filename> voor het nieuwe <filename>/var/cache</filename> subvolume. Gebruik een bestaand subvolume als een sjabloon om te kopiëren. Ga na dat de UUID niet is veranderd (dit is de UUID van het root-bestandssysteem) en wijzig de naam van het subvolume en zijn aankoppelpunt consistent met <filename>/var/cache</filename>."
 
 #: xml/release-notes.xml:403(para)
-#, fuzzy
 #| msgid "Mount the new subvolume as specified in /etc/fstab:"
 msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
-msgstr "Koppel het nieuwe subvolume aan zoals gespecificeerd in /etc/fstab:"
+msgstr ""
+"Koppel het nieuwe subvolume aan zoals gespecificeerd in "
+"<filename>/etc/fstab</filename>:"
 
 #: xml/release-notes.xml:406(command)
 msgid "mount /var/cache"
