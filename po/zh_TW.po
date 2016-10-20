@@ -3,9 +3,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-10-18 17:09+0200\n"
-"PO-Revision-Date: 2016-10-17 14:57+0000\n"
+"PO-Revision-Date: 2016-10-20 16:53+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
+"notes-opensuse/leap_42_2/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -82,18 +83,18 @@ msgid "Minimal System Installation"
 msgstr "最小系統安裝"
 
 #: xml/release-notes.xml:92(para)
-#, fuzzy
 msgid "To avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
-msgstr "為避免一些大型的建議套件被安裝，最小安裝樣式 (pattern) 會使用到其他與非預期套件相衝突的樣式。該樣式 <literal>patterns-openSUSE-minimal_base-conflicts</literal> 可以在安裝完成後移除。"
+msgstr ""
+"為避免一些大型的建議套件被安裝，最小安裝樣式 (pattern) 會使用到其他與非預期套件相衝突的樣式。該樣式 <literal>patterns-"
+"openSUSE-minimal_base-conflicts</literal> 可以在安裝完成後移除。"
 
 #: xml/release-notes.xml:99(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr "請注意最小系統安裝預設不會啟動防火牆。若您需要，請安裝 <literal>SuSEfirewall2</literal>。"
 
 #: xml/release-notes.xml:106(title)
-#, fuzzy
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI&mdash;統一可延伸韌體介面"
+msgstr "UEFI—統一可延伸韌體介面"
 
 #: xml/release-notes.xml:107(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
@@ -117,43 +118,55 @@ msgid "Together with the EFI/UEFI specification, a new style of partitioning arr
 msgstr "在 EFI/UEFI 的規格書中提到一個新的分割磁碟的劃分方式：GPT（GUID Partition Table）。這個新的方式使用 GUID（128位元的值顯示在32個十六進制數字上）來識別裝置及分割區類型。"
 
 #: xml/release-notes.xml:141(para)
-#, fuzzy
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces the first one."
-msgstr "此外，UEFI 規範是允許傳統的 MBR（MS-DOS）分割區。 Linux 引導加載器（ELILO 或 GRUB2）嘗試針對那些傳統的分割區自動產生一個 GUID ，並把它們寫進韌體。像這樣的一個 GUID 可以頻繁變更，導致韌體的重寫入。一次的重寫入包括兩種不同的操作：刪除舊的項目，以及創建一個新的項目以取代第一個項目。"
+msgstr ""
+"此外，UEFI 規範是允許傳統的 MBR（MS-DOS）分割區。 Linux 引導加載器（ELILO 或 GRUB2）"
+"嘗試針對那些傳統的分割區自動產生一個 GUID ，並把它們寫進韌體。像這樣的一個 GUID "
+"可以頻繁變更，導致韌體的重寫入。一次的重寫入包括兩種不同的操作：刪除舊的項目，以及創建一個新的項目以取代第一個項目。"
 
 #: xml/release-notes.xml:150(para)
-#, fuzzy
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries. This can result in a non-bootable system."
-msgstr "現代的韌體都有一個垃圾收集器（garbage collector），可以收集被刪除的進入點（entries），並且釋放原來保留給舊進入點（entries）的記憶體。當故障的韌體不能收集或是釋放這些進入點（entries）時，系統將會出現問題，最終將造成系統無法開機。"
+msgstr ""
+"現代的韌體都有一個垃圾收集器（garbage collector），可以收集被刪除的進入點（entries），並且釋放原來保留給舊進入點（entries）"
+"的記憶體。當故障的韌體不能收集或是釋放這些進入點（entries）時，系統將會出現問題，最終將造成系統無法開機。"
 
 #: xml/release-notes.xml:156(para)
-#, fuzzy
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "簡單的替代解決方案是：轉換傳統的 MBR 分割區成為新的 GPT 分割區以完整的避免此問題。"
 
 #: xml/release-notes.xml:162(title)
 msgid "Nouveau 3D/DRI Driver Disabled by Default"
-msgstr ""
+msgstr "Nouveau 3D/DRI 驅動程式預設將會停用"
 
 #: xml/release-notes.xml:163(para)
 msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
 msgstr ""
+"由於 Nouveau DRI/3D 還無法與多執行緒的 KDE 應用程式正常運作，故在 openSUSE Leap 42.2 下仍屬於實驗性質。"
 
 #: xml/release-notes.xml:168(para)
 msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
 msgstr ""
+"我們決定將驅動程式移入獨立的套件 <package>mesa-dri-nouveau</package>，且預設將不會安裝。故在預設設定下，對於任何 "
+"Nvidia GPU 將不會有 3D 繪圖硬體加速支援，且對於使用 Glamor 的新型 Nvidia GPU 也不會有 2D 加速支援。Kernel "
+"Mode Setting 與基本的 2D 支援仍可使用，就像過去在 Kepler 與前幾代 GPU 那樣透過 EXA 來支援 2D 加速。3D "
+"繪圖操作由軟體進行。"
 
 #: xml/release-notes.xml:177(para)
 msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
 msgstr ""
+"我們建議使用預設的設定或是切換使用 Nvidia 的專屬驅動程式。要使用專屬驅動程式，請自套件庫 <link href=\""
+"http://http.download.nvidia.com/opensuse/leap/42.2/\"/> 安裝。"
 
 #: xml/release-notes.xml:183(para)
 msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
-msgstr ""
+msgstr "若您需要 2D/3D 加速支援，但不想安裝 Nvidia 專屬驅動程式，您可以安裝 Nouveau 驅動程式套件，然而請自負風險。"
 
 #: xml/release-notes.xml:188(para)
 msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
 msgstr ""
+"我們也準備了 Mesa 修補程式來減輕這個問題，但會造成系統陷入死結 (deadlock)。是故該修補程式並未包含進驅動程式套件中。若您是使用 KDE "
+"的資深使用者，且願意使用該修補程式來重新編譯 Mesa 套件，請修改 spec 檔案，將 <literal>%define</literal><liter"
+"al>use_broken_nouveau_locking_patches</literal> 改成 <literal>1</literal>。"
 
 #: xml/release-notes.xml:202(title)
 msgid "System Upgrade"
@@ -177,7 +190,7 @@ msgstr "下列的套件是已被移除或已被置換自從 openSUSE Leap 42.1�
 
 #: xml/release-notes.xml:220(para)
 msgid "<package>arista</package>: Replaced by <package>transmageddon</package>."
-msgstr ""
+msgstr "<package>arista</package>：已被 <package>transmageddon</package> 取代。"
 
 #: xml/release-notes.xml:225(para)
 msgid "<package>cadabra</package>: The source code no longer builds. The successor, <link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
@@ -189,35 +202,43 @@ msgstr "<package>dropbear</package>：相較於 <package>openssh</package>，安
 
 #: xml/release-notes.xml:238(para)
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
-msgstr ""
+msgstr "<package>emerillon</package>：已被 <package>gnome-maps</package> 取代。"
 
 #: xml/release-notes.xml:244(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
 msgstr ""
+"<package>gnome-system-log</package>：已被 <package>gnome-logs</package> 取代。"
 
 #: xml/release-notes.xml:250(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
-msgstr ""
+msgstr "<package>hawk</package>：已被 <package>hawk2</package> 取代。"
 
 #: xml/release-notes.xml:255(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
 msgstr ""
+"<package>labplot</package>：Labplot 已被其 Qt5 版本的 <package>labplot-kf5</package>"
+" 取代。若您是從 openSUSE Leap 42.1 升級且原來安裝有 <package>labplot</package> 套件，系統會自動改用 "
+"<package>labplot-kf5</package>。"
 
 #: xml/release-notes.xml:264(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
-msgstr ""
+msgstr "<package>psi</package>：已被 <package>psi+</package> 取代。"
 
 #: xml/release-notes.xml:269(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
 msgstr ""
+"<package>python-moin</package>：已被 <package>moinmoin-wiki</package> "
+"取代。只有單純的套件重新命名，並無版本升級 － 幾乎是相同的替代套件。"
 
 #: xml/release-notes.xml:276(para)
 msgid "<package>seamonkey</package>: Source code no longer compiles. If you were a Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird instead."
 msgstr ""
+"<package>seamonkey</package>：原始碼已無法編譯。若您之前是 Seamonkey 的使用者，請轉用 Mozilla "
+"Firefox 與 Mozilla Thunderbird。"
 
 #: xml/release-notes.xml:283(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
-msgstr ""
+msgstr "<package>ungifsicle</package>：已被 <package>gifsicle</package> 取代。"
 
 #: xml/release-notes.xml:289(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
