@@ -6,11 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
-"POT-Creation-Date: 2016-10-18 17:09+0200\n"
+"POT-Creation-Date: 2016-10-21 10:53+0200\n"
 "PO-Revision-Date: 2016-10-18 22:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap_42_2/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -133,443 +132,403 @@ msgstr "また、新しいファームウエアには、削除された項目を
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "このような問題が発生した場合は、古い MBR 形式のパーティションを GPT 形式のパーティションに更新して、問題を回避してください。"
 
-#: xml/release-notes.xml:162(title)
-msgid "Nouveau 3D/DRI Driver Disabled by Default"
-msgstr "既定では Nouveau 3D/DRI ドライバが無効化される問題"
-
-#: xml/release-notes.xml:163(para)
-msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
-msgstr ""
-"現行のマルチスレッド型 KDE アプリケーションを利用する場合、 Nouveau DRI/3D ドライバがうまく動作しないことから、 openSUSE "
-"Leap 42.2 ではこのドライバを実験的なものとして位置づけています。"
-
-#: xml/release-notes.xml:168(para)
-msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
-msgstr ""
-"そのため、このドライバを <package>mesa-dri-nouveau</package> "
-"と呼ばれる個別のパッケージに分離することとし、既定ではインストールされないようになりました。このような事情により、 Nvidia GPU を利用した場合、"
-"ハードウエア 3D レンダリングには対応できなくなっているほか、高速な 2D 操作機能である Glamor に対応する新しい Nvidia CPU で、 "
-"2D のアクセラレーションにも対応できなくなっています。ただし、カーネルモード設定 (KMS) や基本的な 2D 操作のほか、 EXA や Kepler "
-"を介した 2D アクセラレーションや古い世代の GPU には対応しています。 3D 操作はソフトウエアレンダリングとして動作します。"
-
-#: xml/release-notes.xml:177(para)
-msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
-msgstr ""
-"なお、既定の環境のままご利用いただくこともできますが、 Nvidia 社が提供するプロプライエタリ (オープンソースではない) "
-"ドライバをお使いいただくこともできます。プロプライエタリドライバをご利用になる場合は、 <link href=\""
-"http://http.download.nvidia.com/opensuse/leap/42.2/\"/> にあるリポジトリをお使いください。"
-
-#: xml/release-notes.xml:183(para)
-msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
-msgstr ""
-"高速な 2D/3D 操作が必要で、かつプロプライエタリ NVIDIA ドライバをお使いになりたくない場合は、ご自身の責任下で Nouveau "
-"ドライバパッケージをお使いいただくこともできます。"
-
-#: xml/release-notes.xml:188(para)
-msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
-msgstr ""
-"この問題を緩和するための Mesa 向けパッチも用意されていますが、システムをデッドロックさせてしまう問題が判明しています。そのため、パッケージ化されたド"
-"ライバには、このパッチは含まれていません。 KDE をお使いの方で、プログラミングの知識があり、このパッチを有効にしたい方は、 spec ファイル内の <"
-"literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal"
-"> を <literal>1</literal> に変更してドライバを構築し直してください。"
-
-#: xml/release-notes.xml:202(title)
+#: xml/release-notes.xml:196(title)
 msgid "System Upgrade"
 msgstr "システムアップグレード"
 
-#: xml/release-notes.xml:203(para)
+#: xml/release-notes.xml:197(para)
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 msgstr ""
 "本章には、アップグレードに関する説明が書かれています。詳しいアップグレード手順については、下記で公開されている文書をお読みください:\n"
 "<link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>"
 
-#: xml/release-notes.xml:210(title)
+#: xml/release-notes.xml:204(title)
 msgid "Upgrading from openSUSE Leap 42.1"
 msgstr "openSUSE Leap 42.1 からのアップグレード"
 
-#: xml/release-notes.xml:213(title)
+#: xml/release-notes.xml:207(title)
 msgid "Removed and Replaced Packages"
 msgstr "削除または置換されたパッケージ"
 
-#: xml/release-notes.xml:214(para)
+#: xml/release-notes.xml:208(para)
 msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
 msgstr "openSUSE Leap 42.1 と比較すると、本バージョンでは下記のパッケージが廃止または置換されています:"
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:214(para)
 msgid "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr "<package>arista</package>: <package>transmageddon</package> に置き換えられています。"
 
-#: xml/release-notes.xml:225(para)
+#: xml/release-notes.xml:219(para)
 msgid "<package>cadabra</package>: The source code no longer builds. The successor, <link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
 msgstr "<package>cadabra</package>: 構築対象から外されています。後継である <link href=\"http://cadabra.science/\">Cadabra 2</link> も、まだ不安定な状態です。"
 
-#: xml/release-notes.xml:232(para)
+#: xml/release-notes.xml:226(para)
 msgid "<package>dropbear</package>: Removed because there are no relevant advantages over <package>openssh</package>."
 msgstr "<package>dropbear</package>: <package>openssh</package> と比べて特に大きな利点がなくなってしまったため、削除されています。"
 
-#: xml/release-notes.xml:238(para)
+#: xml/release-notes.xml:232(para)
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
 msgstr "<package>emerillon</package>: <package>gnome-maps</package> に置き換えられています。"
 
-#: xml/release-notes.xml:244(para)
+#: xml/release-notes.xml:238(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
 msgstr "<package>gnome-system-log</package>: <package>gnome-logs</package> に置き換えられています。"
 
-#: xml/release-notes.xml:250(para)
+#: xml/release-notes.xml:244(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: <package>hawk2</package> に置き換えられています。"
 
-#: xml/release-notes.xml:255(para)
+#: xml/release-notes.xml:249(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
 msgstr "<package>labplot</package>: labplot は Qt5 版に置き換えられ、 <package>labplot-kf5</package> という名称になっています。 openSUSE Leap 42.1 で <package>labplot</package> をインストールしている環境から更新する場合は、 <package>labplot-kf5</package> が自動的にインストールされます。"
 
-#: xml/release-notes.xml:264(para)
+#: xml/release-notes.xml:258(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr "<package>psi</package>: <package>psi+</package> に置き換えられています。"
 
-#: xml/release-notes.xml:269(para)
+#: xml/release-notes.xml:263(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
 msgstr "<package>python-moin</package>: <package>moinmoin-wiki</package> に置き換えられています。こちらは純粋にパッケージ名だけを変更しただけであり、バージョンアップグレードではありません。そのため、その場で置き換えて使用できるはずのものです。"
 
-#: xml/release-notes.xml:276(para)
+#: xml/release-notes.xml:270(para)
 msgid "<package>seamonkey</package>: Source code no longer compiles. If you were a Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird instead."
 msgstr "<package>seamonkey</package>: 公開されているソースコードではコンパイルできなくなってしまいました。以前より Seamonkey をお使いの方は、 Mozilla Firefox および Mozilla Thunderbird に移行することをお勧めします。"
 
-#: xml/release-notes.xml:283(para)
+#: xml/release-notes.xml:277(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr "<package>ungifsicle</package>: <package>gifsicle</package> に置き換えられています。"
 
-#: xml/release-notes.xml:289(para)
+#: xml/release-notes.xml:283(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr "<package>xchat</package>: <package>hexchat</package> に置き換えられています。"
 
-#: xml/release-notes.xml:298(title)
+#: xml/release-notes.xml:292(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr "<filename>/var/cache</filename> に対する独自のサブボリュームへの移動について"
 
-#: xml/release-notes.xml:299(para)
+#: xml/release-notes.xml:293(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr "<filename>/var/cache</filename> には、それぞれの更新に対応する様々なバージョンの RPM パッケージや、 Zypper のキャッシュなど、頻繁に書き換えられるデータが多数存在しています。スナップショットのように冗長性を確保している環境下で、このように頻繁な更新が発生してしまうと、スナップショットのディスク領域が容易に肥大化してしまいます。"
 
-#: xml/release-notes.xml:306(para)
+#: xml/release-notes.xml:300(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr "この問題を解決するため、 <filename>/var/cache</filename> を個別のサブボリュームに配置するようにしました。 openSUSE Leap 42.2 を新規にインストールした場合、この配置は自動的に行なわれます。既存のルートファイルシステムを本件のように変更したい場合は、下記のような手順を実施してください:"
 
-#: xml/release-notes.xml:314(para)
+#: xml/release-notes.xml:308(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr "まずはルートデバイスに対応するデバイス名 (たとえば<filename>/dev/sda2</filename> や <filename>/dev/sda3</filename> など) を判断します:"
 
-#: xml/release-notes.xml:319(command)
+#: xml/release-notes.xml:313(command)
 msgid "df /"
 msgstr "df /"
 
-#: xml/release-notes.xml:322(para)
+#: xml/release-notes.xml:316(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr "次に、他の全てのサブボリュームに対する親サブボリュームを判断します。 openSUSE 13.2 の場合、 <filename>@</filename> という名前のサブボリュームです。 <filename>@</filename> という名前のサブボリュームが存在するかどうかを判断するには、下記のようにします:"
 
-#: xml/release-notes.xml:328(command)
+#: xml/release-notes.xml:322(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr "btrfs subvolume list / | grep '@'"
 
-#: xml/release-notes.xml:329(para)
+#: xml/release-notes.xml:323(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr "上記のコマンドを実行しても何も出力されない場合、 <filename>@</filename> という名前のサブボリュームが存在していないことを表わします。このような場合、古い openSUSE のバージョンで利用されていた、サブボリューム ID 5 を利用することができます。"
 
-#: xml/release-notes.xml:336(para)
+#: xml/release-notes.xml:330(para)
 msgid "Now mount the requisite subvolume."
 msgstr "次に必要なサブボリュームをマウントします。"
 
-#: xml/release-notes.xml:341(para)
+#: xml/release-notes.xml:335(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr "<filename>@</filename> という名前のサブボリュームが存在している場合は、下記のようにして一時的なマウントポイント内にマウントします:"
 
-#: xml/release-notes.xml:345(command)
+#: xml/release-notes.xml:339(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount &lt;ルートデバイス&gt; -o subvol=@ /mnt"
 
-#: xml/release-notes.xml:348(para)
+#: xml/release-notes.xml:342(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr "<filename>@</filename> という名前のサブボリュームが無い場合は、代わりにサブボリューム ID 5 をマウントします:"
 
-#: xml/release-notes.xml:352(command)
+#: xml/release-notes.xml:346(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount &lt;ルートデバイス&gt; -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:357(para)
+#: xml/release-notes.xml:351(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr "ここまでの作業で、 <filename>/var/cache</filename>　ディレクトリが <filename>/mnt/var/cache</filename> に現われるようになります。 データを失わないようにするには、まずは下記のようにして移動します:"
 
-#: xml/release-notes.xml:362(command)
+#: xml/release-notes.xml:356(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
-#: xml/release-notes.xml:365(para)
+#: xml/release-notes.xml:359(para)
 msgid "Create a new subvolume:"
 msgstr "次に新しいサブボリュームを作成します:"
 
-#: xml/release-notes.xml:368(command)
+#: xml/release-notes.xml:362(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr "btrfs subvol create /mnt/var/cache"
 
-#: xml/release-notes.xml:371(para)
+#: xml/release-notes.xml:365(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr "あとは <filename>/var/cache.old</filename> に移動しておいたデータを、新しく作成した場所に移動しなおします:"
 
-#: xml/release-notes.xml:375(command)
+#: xml/release-notes.xml:369(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr "mv /var/cache.old/* /mnt/var/cache"
 
-#: xml/release-notes.xml:376(para)
+#: xml/release-notes.xml:370(para)
 msgid "If that is not the case, instead do:"
 msgstr "もしくは、下記のように実行してもかまいません:"
 
-#: xml/release-notes.xml:379(command)
+#: xml/release-notes.xml:373(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr "mv /var/cache/* /mnt/var/cache/"
 
-#: xml/release-notes.xml:382(para)
+#: xml/release-notes.xml:376(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "古いディレクトリ <filename>/mnt/var/cache.old</filename> を削除します:"
 
-#: xml/release-notes.xml:385(command)
+#: xml/release-notes.xml:379(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr "rm -rf /mnt/var/cache.old"
 
-#: xml/release-notes.xml:388(para)
+#: xml/release-notes.xml:382(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "一時的なマウントポイントに存在しているサブボリュームのマウントを解除します:"
 
-#: xml/release-notes.xml:391(command) xml/release-notes.xml:511(screen)
+#: xml/release-notes.xml:385(command) xml/release-notes.xml:505(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:394(para)
+#: xml/release-notes.xml:388(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr "<filename>/etc/fstab</filename> 内に、新しく作成した <filename>/var/cache</filename> サブボリュームの項目を追加します。既存のサブボリュームの項目を雛型にして追加してください。ただし、 UUID (ルートファイルシステムの UUID) については変更せず、サブボリュームの名前とマウントポイント (<filename>/var/cache</filename>) のみを変更してください。"
 
-#: xml/release-notes.xml:403(para)
+#: xml/release-notes.xml:397(para)
 msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
 msgstr "最後に <filename>/etc/fstab</filename> 内に設定した新しいサブボリュームをマウントします:"
 
-#: xml/release-notes.xml:406(command)
+#: xml/release-notes.xml:400(command)
 msgid "mount /var/cache"
 msgstr "mount /var/cache"
 
-#: xml/release-notes.xml:412(title)
+#: xml/release-notes.xml:406(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr "GNOME で利用している場合、 Synaptics X ドライバがタッチパッドの操作性を悪化させてしまう"
 
-#: xml/release-notes.xml:413(para)
+#: xml/release-notes.xml:407(para)
 msgid "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</package>) was installed by default but had a lower priority than the libinput driver (<package>xf86-input-libinput</package>)."
 msgstr "Leap 42.1 では、 Synaptics X ドライバ (パッケージ <package>xf86-input-synaptics</package>) が既定でインストールされますが、 libinput のドライバ (パッケージ <package>xf86-input-libinput</package>) より低い優先度に設定されてしまっています。"
 
-#: xml/release-notes.xml:419(para)
+#: xml/release-notes.xml:413(para)
 msgid "Starting with Leap 42.2:"
 msgstr "Leap 42.2 およびそれ以降:"
 
-#: xml/release-notes.xml:424(para)
+#: xml/release-notes.xml:418(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr "Synaptics X ドライバは既定ではインストールされなくなっています。"
 
-#: xml/release-notes.xml:429(para)
+#: xml/release-notes.xml:423(para)
 msgid "If the Synaptics X driver is installed, it will take precedence for any touchpad devices."
 msgstr "Synaptics X ドライバがインストールされている場合は、任意の他のタッチパッドデバイスより優先して動作します。"
 
-#: xml/release-notes.xml:435(para)
+#: xml/release-notes.xml:429(para)
 msgid "The Synaptics X driver is no longer supported by GNOME. This means when the driver is installed, Synaptics touchpads can only be configured to the extent that a basic mouse can."
 msgstr "GNOME 環境では Synaptics X ドライバはサポートされなくなりました。言い換えると、Synaptics タッチパッドを利用しても、基本的なマウス機能の範囲のみを設定することができます。"
 
-#: xml/release-notes.xml:442(para)
+#: xml/release-notes.xml:436(para)
 msgid "Unless you are using a Synaptics touchpad and have a large amount of custom configuration for the Synaptics driver, remove the package from your system:"
 msgstr "Synaptics タッチパッドをご利用の場合で、 Synaptics ドライバに固有の設定を多数実施している場合を除き、システムからパッケージを削除してください:"
 
-#: xml/release-notes.xml:446(command)
+#: xml/release-notes.xml:440(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr "sudo zypper rm xf86-input-synaptics"
 
-#: xml/release-notes.xml:451(title)
+#: xml/release-notes.xml:445(title)
 msgid "Upgrading from openSUSE 13.2"
 msgstr "openSUSE 13.2 からのアップグレード"
 
-#: xml/release-notes.xml:452(para)
+#: xml/release-notes.xml:446(para)
 msgid "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure to also review the information provided in <xref linkend=\"sec.upgrade.421\"/>."
 msgstr "openSUSE 13.2 もしくはそれ以前のバージョンからのアップグレードの場合、下記のリリースノートをお読みください。それ以外にも、 <xref linkend=\"sec.upgrade.421\"/> で提供されている情報もあわせてご覧になることをお勧めします。"
 
-#: xml/release-notes.xml:459(title)
+#: xml/release-notes.xml:453(title)
 msgid "Network Interface Names"
 msgstr "ネットワークインターフェイスの命名について"
 
-#: xml/release-notes.xml:460(para)
+#: xml/release-notes.xml:454(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr "ネットワーク上離れたリモートのマシンを openSUSE 13.2 からアップグレードする場合は、ネットワークインターフェイスが想定通りに命名されているかどうかをご確認ください。"
 
-#: xml/release-notes.xml:464(para)
+#: xml/release-notes.xml:458(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr "openSUSE 13.2 では「予測可能な」形態でネットワークインターフェイスの命名を行なっていました (例: <literal>enp5s0</literal>) が、 openSUSE Leap 42.1 では固定のインターフェイス名 (例: <literal>eth0</literal>) を使用するようになっています。そのため、アップグレードして再起動を行なうと、場合によってはネットワークインターフェイスの名前が変わってしまい、これによってシステムにアクセスができなくなってしまうことがあります。インターフェイス名が変わってしまうことを防ぐには、システムを再起動する前に、各ネットワークインターフェイスに対して下記のコマンドを実行します:"
 
-#: xml/release-notes.xml:473(replaceable)
+#: xml/release-notes.xml:467(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:473(screen)
+#: xml/release-notes.xml:467(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:475(para)
+#: xml/release-notes.xml:469(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr "なお、上記の <replaceable>enp5s0</replaceable> を、お使いの環境のネットワークインターフェイス名に置き換えてください。"
 
-#: xml/release-notes.xml:482(title)
+#: xml/release-notes.xml:476(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: システムを巻き戻し (ロールバック) した際のディスク領域の開放漏れについて"
 
-#: xml/release-notes.xml:483(para)
+#: xml/release-notes.xml:477(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr "openSUSE 13.2 で Btrfs のパーティションレイアウトを使用した環境でシステムのロールバック (巻き戻し) を実行すると、ディスク領域内にアクセス不可能な無効領域が生じてしまいます。このレイアウト問題は openSUSE Leap 42.1 で解決されていますが、この修正は新しくインストールしたシステムにのみ適用することができます。"
 
-#: xml/release-notes.xml:490(para)
+#: xml/release-notes.xml:484(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr "openSUSE 13.2 からアップグレードする場合は新しいレイアウトに変換することはできませんが、失われたディスク領域を取り戻す方法があります。"
 
-#: xml/release-notes.xml:496(para)
+#: xml/release-notes.xml:490(para)
 msgid "Mount the initial root filesystem:"
 msgstr "まずはルートファイルシステムをマウントします:"
 
-#: xml/release-notes.xml:499(replaceable)
+#: xml/release-notes.xml:493(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ルートファイルシステム&gt;"
 
-#: xml/release-notes.xml:499(screen)
+#: xml/release-notes.xml:493(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:502(para)
+#: xml/release-notes.xml:496(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "サブボリューム内に存在しない /mnt 以下のファイルを全て削除します:"
 
-#: xml/release-notes.xml:505(screen)
+#: xml/release-notes.xml:499(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:508(para)
+#: xml/release-notes.xml:502(para)
 msgid "Umount the filesystem again:"
 msgstr "再度ファイルシステムのマウントを解除します:"
 
-#: xml/release-notes.xml:517(title)
+#: xml/release-notes.xml:511(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "印刷システム: 改善点と互換性を失う変更について"
 
-#: xml/release-notes.xml:520(emphasis)
+#: xml/release-notes.xml:514(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS バージョン 1.7 へのアップグレードについて"
 
-#: xml/release-notes.xml:522(para)
+#: xml/release-notes.xml:516(para)
 msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
 msgstr "openSUSE 13.2 における CUPS 1.5 と比べると、 CUPS 1.7 では大幅な変更が加えられたことにより、手作業による設定調整が必要となる場合があります。"
 
-#: xml/release-notes.xml:529(para)
+#: xml/release-notes.xml:523(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr "現在は標準の印刷ジョブ形式が PS ではなく、 PDF になっています。そのため、旧来の PostScript プリンタで印刷を行なう場合は、新たにフィルタを設定する必要が生じています。"
 
-#: xml/release-notes.xml:534(para)
+#: xml/release-notes.xml:528(para)
 msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr "詳しくは <link href=\"http://ja.opensuse.org/印刷処理\"/> をお読みください。"
 
-#: xml/release-notes.xml:542(para)
+#: xml/release-notes.xml:536(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr "ネットワークプリンタの検出プロトコルが変更されました。新しいネイティブなプロトコルは DNS Service discovery (DNS-SD, つまり、 Avahi 経由) をベースにした仕組みになりましたが、 <literal>cups-filters</literal> パッケージで提供される <literal>cups-browsed</literal> サービスを利用することで、従来のプロトコルとの間で橋渡しを行なうことができるようになっています。 \"従来の\" クライアントからプリンタを発見できるようにしたい場合 (LibreOffice や KDE からの印刷を含みます) は、 <literal>cupsd</literal> と <literal>cups-browsed</literal> の両方を動作させる必要があります。"
 
-#: xml/release-notes.xml:555(para)
+#: xml/release-notes.xml:549(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr "IPP プロトコルの既定のバージョンは、 1.1 から 2.0 となりました。 CUPS 1.3.x のような古い IPP サーバ (たとえば SUSE Linux Enterprise 11 など) を利用して印刷する場合、 IPP 2.0 リクエストを <literal>Bad Request</literal> として拒否してしまいます (詳しくは <link href=\"http://www.cups.org/str.php?L4231\"/> をお読みください) 。"
 
-#: xml/release-notes.xml:561(para)
+#: xml/release-notes.xml:555(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr "古いサーバから印刷できるようにするには、 IPP プロトコルのバージョンを明示的に指定する必要があります。下記のいずれかの箇所で、末尾に <literal>/version=1.1</literal> を追加してください:"
 
-#: xml/release-notes.xml:568(para)
+#: xml/release-notes.xml:562(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr "<literal>client.conf</literal> 内の <literal>ServerName</literal> 設定 (例: <literal>ServerName older.server.example.com/version=1.1</literal>) 。"
 
-#: xml/release-notes.xml:576(para)
+#: xml/release-notes.xml:570(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "<literal>CUPS_SERVER</literal> 環境変数の値。"
 
-#: xml/release-notes.xml:582(para)
+#: xml/release-notes.xml:576(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr "コマンドラインツールの <literal>-h</literal> オプションで指定するサーバ名の値。たとえば下記のように指定します:"
 
-#: xml/release-notes.xml:586(screen)
+#: xml/release-notes.xml:580(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:592(para)
+#: xml/release-notes.xml:586(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr "いくつかの印刷フィルタやバックエンドは、 <literal>cups</literal> パッケージから <literal>cups-filters</literal> パッケージに移動されています。"
 
-#: xml/release-notes.xml:600(para)
+#: xml/release-notes.xml:594(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 msgstr "いくつかの設定ディレクティブが、 <literal>cupsd.conf</literal> から <literal>cups-files.conf</literal> に分離されています (それぞれ <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/> をお読みください) 。"
 
-#: xml/release-notes.xml:609(para)
+#: xml/release-notes.xml:603(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\"/> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 msgstr "また、 CUPS のバナーとテストページについても、 <literal>cups</literal> パッケージから <literal>cups-filters</literal> パッケージに移動されています (詳しくは <link href=\"http://www.cups.org/str.php?L4120\"/> および <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/> をお読みください) 。"
 
 #. bnc#809347
-#: xml/release-notes.xml:659(title)
+#: xml/release-notes.xml:653(title)
 msgid "More Information and Feedback"
 msgstr "さらに詳しい情報とフィードバック"
 
-#: xml/release-notes.xml:663(para)
+#: xml/release-notes.xml:657(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "まずはメディア内の <filename>README</filename> 文書をお読みください。"
 
-#: xml/release-notes.xml:668(para)
+#: xml/release-notes.xml:662(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "また、特定のパッケージに対する詳細な変更点を RPM パッケージから表示するには、下記のコマンドを実行します:"
 
-#: xml/release-notes.xml:672(replaceable)
+#: xml/release-notes.xml:666(replaceable)
 msgid "FILENAME"
 msgstr "ファイル名"
 
-#: xml/release-notes.xml:672(screen)
+#: xml/release-notes.xml:666(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:673(para)
+#: xml/release-notes.xml:667(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "<replaceable>ファイル名</replaceable> の箇所を RPM の名前に置き換えてお使いください。"
 
-#: xml/release-notes.xml:678(para)
+#: xml/release-notes.xml:672(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "また、メディアのルートディレクトリには <filename>ChangeLog</filename> ファイルがあります。ここには、更新されたパッケージに対する全ての変更点が時系列順に並んでいます。"
 
-#: xml/release-notes.xml:684(para)
+#: xml/release-notes.xml:678(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "そのほか、 メディアの <filename>docu</filename> ディレクトリには、さらに詳しい情報があります。"
 
-#: xml/release-notes.xml:690(para)
+#: xml/release-notes.xml:684(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "それ以外にも、 <link href=\"https://doc.opensuse.org/\"/> には追加／更新されたドキュメンテーションがあります。"
 
-#: xml/release-notes.xml:695(para)
+#: xml/release-notes.xml:689(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "openSUSE が提供する最新の製品ニュースを読むには、 <link href=\"https://www.opensuse.org\"/> をご覧ください。"
 
-#: xml/release-notes.xml:702(para)
+#: xml/release-notes.xml:696(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:706(para)
+#: xml/release-notes.xml:700(para)
 msgid "Thanks for using openSUSE."
 msgstr "openSUSE をお使いいただき、ありがとうございます。"
 
-#: xml/release-notes.xml:709(para)
+#: xml/release-notes.xml:703(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE チームより。"
 
@@ -583,6 +542,24 @@ msgstr ""
 "Takuo KITAME <kitame@debian.org>\n"
 "日本GNOMEユーザー会 http://www.gnome.gr.jp\n"
 "Yasuhiko Kamata <belphegor@belbel.or.jp>"
+
+#~ msgid "Nouveau 3D/DRI Driver Disabled by Default"
+#~ msgstr "既定では Nouveau 3D/DRI ドライバが無効化される問題"
+
+#~ msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
+#~ msgstr "現行のマルチスレッド型 KDE アプリケーションを利用する場合、 Nouveau DRI/3D ドライバがうまく動作しないことから、 openSUSE Leap 42.2 ではこのドライバを実験的なものとして位置づけています。"
+
+#~ msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
+#~ msgstr "そのため、このドライバを <package>mesa-dri-nouveau</package> と呼ばれる個別のパッケージに分離することとし、既定ではインストールされないようになりました。このような事情により、 Nvidia GPU を利用した場合、ハードウエア 3D レンダリングには対応できなくなっているほか、高速な 2D 操作機能である Glamor に対応する新しい Nvidia CPU で、 2D のアクセラレーションにも対応できなくなっています。ただし、カーネルモード設定 (KMS) や基本的な 2D 操作のほか、 EXA や Kepler を介した 2D アクセラレーションや古い世代の GPU には対応しています。 3D 操作はソフトウエアレンダリングとして動作します。"
+
+#~ msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
+#~ msgstr "なお、既定の環境のままご利用いただくこともできますが、 Nvidia 社が提供するプロプライエタリ (オープンソースではない) ドライバをお使いいただくこともできます。プロプライエタリドライバをご利用になる場合は、 <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/> にあるリポジトリをお使いください。"
+
+#~ msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
+#~ msgstr "高速な 2D/3D 操作が必要で、かつプロプライエタリ NVIDIA ドライバをお使いになりたくない場合は、ご自身の責任下で Nouveau ドライバパッケージをお使いいただくこともできます。"
+
+#~ msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
+#~ msgstr "この問題を緩和するための Mesa 向けパッチも用意されていますが、システムをデッドロックさせてしまう問題が判明しています。そのため、パッケージ化されたドライバには、このパッチは含まれていません。 KDE をお使いの方で、プログラミングの知識があり、このパッチを有効にしたい方は、 spec ファイル内の <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> を <literal>1</literal> に変更してドライバを構築し直してください。"
 
 #~ msgid "General"
 #~ msgstr "全般"

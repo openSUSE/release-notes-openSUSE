@@ -6,17 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2016-10-18 17:09+0200\n"
+"POT-Creation-Date: 2016-10-21 10:53+0200\n"
 "PO-Revision-Date: 2016-10-18 17:40+0000\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
-"Language-Team: Lithuanian <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap_42_2/lt/>\n"
+"Language-Team: Lithuanian <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.6\n"
 
 #: xml/release-notes.xml:15(title) xml/release-notes.xml:32(component)
@@ -105,11 +103,7 @@ msgstr "Prieš diegdami openSUSE į sistemą, kuriai paleisti reikalinga UEFI (a
 
 #: xml/release-notes.xml:115(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. However, there is no clear data of how much is <quote>too much</quote>."
-msgstr ""
-"<emphasis>Papildomi paaiškinimai:</emphasis> UEFI programinėje aparatinėje "
-"įrangoje („firmware“) kai kuriais atvejais gali būti klaidų, kurios gali "
-"sutrikdyti sistemą, bet tik tada, jei į UEFI atmintį įrašoma per daug "
-"duomenų. Niekas nežino, kiek būtų jau <quote>per daug</quote>."
+msgstr "<emphasis>Papildomi paaiškinimai:</emphasis> UEFI programinėje aparatinėje įrangoje („firmware“) kai kuriais atvejais gali būti klaidų, kurios gali sutrikdyti sistemą, bet tik tada, jei į UEFI atmintį įrašoma per daug duomenų. Niekas nežino, kiek būtų jau <quote>per daug</quote>."
 
 #: xml/release-notes.xml:120(para)
 msgid "openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
@@ -136,476 +130,401 @@ msgstr "Šiuolaikinė programinė aparatinė įranga stengiasi surinkti „šiuk
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "Problemą išspręsite senąjį MBR skaidinį konvertavę į GPT."
 
-#: xml/release-notes.xml:162(title)
-#| msgid "CIFS Service Disabled By Default"
-msgid "Nouveau 3D/DRI Driver Disabled by Default"
-msgstr "Numatytuoju atveju Nouveau 3D/DRI tvarkyklės išjungtos"
-
-#: xml/release-notes.xml:163(para)
-msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
-msgstr ""
-"Nouveau DRI/3D tvarkyklės laikomos nepakankamai stabiliomis, kad būtų "
-"naudojamos openSUSE Leap 42.2 sistemoje: šios tvarkyklės neveikia su "
-"šiuolaikinėmis KDE programomis, kurių veiksmai vienu metu atliekamai "
-"keliomis gijomis."
-
-#: xml/release-notes.xml:168(para)
-msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
-msgstr ""
-"Nuspręsta šias tvarkykles perkelti į atskirą paketą <package>mesa-dri-"
-"nouveau</package>, kuris numatytuoju atveju nediegiamas. Todėl, naudojant "
-"numatytąsias nuostatas, negalėsite pasinaudoti aparatiniu 3D spartinimu su "
-"jokiu Nvidia grafiniai procesoriumi, taip pat negalėsite pasinaudoti 2D "
-"spartinimu naujesniuose Nvidia grafiniuose procesoriuose, kurie greitoms 2D "
-"operacijoms naudoja Glamor. Tačiau vis tiek veiks Branduolio veiksenos "
-"nuostatos (angl. Kernel Mode Setting) ir pamatinis 2D spartinimas, nes bent "
-"jau Kepler ir ankstesniuose grafiniuose procesoriuose 2D spartinimą "
-"užtikrina EXA. 3D operacijos palaikomos programiniu spartinimu."
-
-#: xml/release-notes.xml:177(para)
-msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
-msgstr ""
-"Siūloma arba naudoti numatytąsias nuostatas, arba įsidiegti nuosavybines "
-"Nvidia vaizdo plokštės tvarkykles. Norėdami naudoti nuosavybines tvarkykles, "
-"įsidiekite jas iš <link href=\""
-"http://http.download.nvidia.com/opensuse/leap/42.2/\"/> saugyklos."
-
-#: xml/release-notes.xml:183(para)
-msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
-msgstr ""
-"Jei norite 2D/3D spartinimo, bet nenorite diegti nuosavybinių NVIDIA "
-"tvarkyklių, tuomet suprasdami galimą riziką galite eksperimentuoti "
-"įsidiegdami Nouveau tvarkyklių paketą."
-
-#: xml/release-notes.xml:188(para)
-msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
-msgstr ""
-
-#: xml/release-notes.xml:202(title)
+#: xml/release-notes.xml:196(title)
 msgid "System Upgrade"
 msgstr "Sistemos naujovinimas"
 
-#: xml/release-notes.xml:203(para)
+#: xml/release-notes.xml:197(para)
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 msgstr "Šioje dalyje pateikiamos pastabos apie sistemos naujovinimą. Naujovinimas išsamiai aprašytas <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 
-#: xml/release-notes.xml:210(title)
+#: xml/release-notes.xml:204(title)
 msgid "Upgrading from openSUSE Leap 42.1"
 msgstr "Naujovinimas iš openSUSE Leap 42.1"
 
-#: xml/release-notes.xml:213(title)
+#: xml/release-notes.xml:207(title)
 msgid "Removed and Replaced Packages"
 msgstr "Pašalintieji ir pakeistieji paketai"
 
-#: xml/release-notes.xml:214(para)
+#: xml/release-notes.xml:208(para)
 msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
 msgstr "Naujovinant iš openSUSE Leap 42.1, pašalinami arba pakeičiami paketai:"
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:214(para)
 msgid "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr "<package>arista</package>: jį pakeičia <package>transmageddon</package>."
 
-#: xml/release-notes.xml:225(para)
+#: xml/release-notes.xml:219(para)
 msgid "<package>cadabra</package>: The source code no longer builds. The successor, <link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
 msgstr "<package>cadabra</package>: nebepavyksta sukompiliuoti. Naujesnė <link href=\"http://cadabra.science/\">Cadabra 2</link> versija dar nėra stabili."
 
-#: xml/release-notes.xml:232(para)
+#: xml/release-notes.xml:226(para)
 msgid "<package>dropbear</package>: Removed because there are no relevant advantages over <package>openssh</package>."
 msgstr "<package>dropbear</package>: pašalintas, nes neturi pranašumų lyginant su <package>openssh</package>."
 
-#: xml/release-notes.xml:238(para)
-#| msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>"
+#: xml/release-notes.xml:232(para)
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
-msgstr ""
-"<package>emerillon</package>: jį pakeičia <package>gnome-maps</package>."
+msgstr "<package>emerillon</package>: jį pakeičia <package>gnome-maps</package>."
 
-#: xml/release-notes.xml:244(para)
+#: xml/release-notes.xml:238(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
 msgstr "<package>gnome-system-log</package>: jį pakeičia <package>gnome-logs</package>."
 
-#: xml/release-notes.xml:250(para)
+#: xml/release-notes.xml:244(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: jį pakeičia <package>hawk2</package>."
 
-#: xml/release-notes.xml:255(para)
+#: xml/release-notes.xml:249(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
-msgstr ""
-"<package>labplot</package>: jį pakeičia paketo Qt5 versija, vadinama <package"
-">labplot-kf5</package>. Jei naujovinate openSUSE Leap 42.1 sistemą, kurioje "
-"įdiegtas <package>labplot</package> paketas, tuomet <package>labplot-"
-"kf5</package> įdiegsimas automatiškai."
+msgstr "<package>labplot</package>: jį pakeičia paketo Qt5 versija, vadinama <package>labplot-kf5</package>. Jei naujovinate openSUSE Leap 42.1 sistemą, kurioje įdiegtas <package>labplot</package> paketas, tuomet <package>labplot-kf5</package> įdiegsimas automatiškai."
 
-#: xml/release-notes.xml:264(para)
+#: xml/release-notes.xml:258(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr "<package>psi</package>: jį pakeičia <package>psi+</package>."
 
-#: xml/release-notes.xml:269(para)
+#: xml/release-notes.xml:263(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
 msgstr "<package>python-moin</package>: jį pakeičia <package>moinmoin-wiki</package>. Jis tik pervadintas, jo versija nepasikeitė – praktiškai liko toks pat."
 
-#: xml/release-notes.xml:276(para)
+#: xml/release-notes.xml:270(para)
 msgid "<package>seamonkey</package>: Source code no longer compiles. If you were a Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird instead."
-msgstr ""
-"<package>seamonkey</package>: programa nebesusikompiliuoja. Jei anksčiau "
-"naudojote Seamonkey, siūlome pereiti prie Mozilla Firefox ir Mozilla "
-"Thunderbird."
+msgstr "<package>seamonkey</package>: programa nebesusikompiliuoja. Jei anksčiau naudojote Seamonkey, siūlome pereiti prie Mozilla Firefox ir Mozilla Thunderbird."
 
-#: xml/release-notes.xml:283(para)
+#: xml/release-notes.xml:277(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr "<package>ungifsicle</package>: jį pakeičia <package>gifsicle</package>."
 
-#: xml/release-notes.xml:289(para)
+#: xml/release-notes.xml:283(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr "<package>xchat</package>: jį pakeičia <package>hexchat</package>."
 
-#: xml/release-notes.xml:298(title)
+#: xml/release-notes.xml:292(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
 
-#: xml/release-notes.xml:299(para)
+#: xml/release-notes.xml:293(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
 
-#: xml/release-notes.xml:306(para)
+#: xml/release-notes.xml:300(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
-msgstr ""
-"Norėdami išspręsti šią problemą, <filename>/var/cache</filename> perkelkite "
-"į atskirą potomį. Naujai diegiamose openSUSE Leap 42.2 sistemose toks "
-"potomis sukuriamas automatiškai. Norėdami konvertuoti esamą šakninę riknmenų "
-"sistemą:"
+msgstr "Norėdami išspręsti šią problemą, <filename>/var/cache</filename> perkelkite į atskirą potomį. Naujai diegiamose openSUSE Leap 42.2 sistemose toks potomis sukuriamas automatiškai. Norėdami konvertuoti esamą šakninę riknmenų sistemą:"
 
-#: xml/release-notes.xml:314(para)
+#: xml/release-notes.xml:308(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
-msgstr ""
-"Išsiaiškinkite šakninės rinkmenų sistemos įrenginio vardą (pvz., gali būti "
-"<filename>/dev/sda2</filename> ar <filename>/dev/sda3</filename>):"
+msgstr "Išsiaiškinkite šakninės rinkmenų sistemos įrenginio vardą (pvz., gali būti <filename>/dev/sda2</filename> ar <filename>/dev/sda3</filename>):"
 
-#: xml/release-notes.xml:319(command)
+#: xml/release-notes.xml:313(command)
 msgid "df /"
 msgstr "df /"
 
-#: xml/release-notes.xml:322(para)
+#: xml/release-notes.xml:316(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
-msgstr ""
-"Išsiaiškinkite visiems kitiems potomiams viršesnį potomį. Tarkim openSUSE "
-"13.2 sistemoje, toks potomis vadinamas <filename>@</filename>. Norėdami "
-"patikrinti, ar yra <filename>@</filename> potomis, įwvykdykite:"
+msgstr "Išsiaiškinkite visiems kitiems potomiams viršesnį potomį. Tarkim openSUSE 13.2 sistemoje, toks potomis vadinamas <filename>@</filename>. Norėdami patikrinti, ar yra <filename>@</filename> potomis, įwvykdykite:"
 
-#: xml/release-notes.xml:328(command)
+#: xml/release-notes.xml:322(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr "btrfs subvolume list / | grep '@'"
 
-#: xml/release-notes.xml:329(para)
+#: xml/release-notes.xml:323(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
-msgstr ""
-"Jei komandos išvestis tuščia, reiškia, kad neturite <filename>@</filename> "
-"potomio. Tuomet galite tęsti naudodami potomį su ID 5, kuris šitaip žymėtas "
-"senesnėse openSUSE sistemose."
+msgstr "Jei komandos išvestis tuščia, reiškia, kad neturite <filename>@</filename> potomio. Tuomet galite tęsti naudodami potomį su ID 5, kuris šitaip žymėtas senesnėse openSUSE sistemose."
 
-#: xml/release-notes.xml:336(para)
+#: xml/release-notes.xml:330(para)
 msgid "Now mount the requisite subvolume."
 msgstr "Dabar prijunkite reikiamą potomį."
 
-#: xml/release-notes.xml:341(para)
+#: xml/release-notes.xml:335(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
-msgstr ""
-"Jei turite <filename>@</filename> potomį, prijunkite jį laikinoje vietoje:"
+msgstr "Jei turite <filename>@</filename> potomį, prijunkite jį laikinoje vietoje:"
 
-#: xml/release-notes.xml:345(command)
+#: xml/release-notes.xml:339(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 
-#: xml/release-notes.xml:348(para)
+#: xml/release-notes.xml:342(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
-msgstr ""
-"Jei neturi <filename>@</filename> potomio, tuomet prijunkite potomį su ID 5:"
+msgstr "Jei neturi <filename>@</filename> potomio, tuomet prijunkite potomį su ID 5:"
 
-#: xml/release-notes.xml:352(command)
+#: xml/release-notes.xml:346(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:357(para)
+#: xml/release-notes.xml:351(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
-msgstr ""
-"<filename>/mnt/var/cache</filename> gali jau būti ir tai gali būti tas pats "
-"katalogas kaip ir <filename>/var/cache</filename>. Jei nenorite prarasti "
-"duomenų, perkelkite jį:"
+msgstr "<filename>/mnt/var/cache</filename> gali jau būti ir tai gali būti tas pats katalogas kaip ir <filename>/var/cache</filename>. Jei nenorite prarasti duomenų, perkelkite jį:"
 
-#: xml/release-notes.xml:362(command)
+#: xml/release-notes.xml:356(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
-#: xml/release-notes.xml:365(para)
+#: xml/release-notes.xml:359(para)
 msgid "Create a new subvolume:"
 msgstr "Sukurkite naują potomį:"
 
-#: xml/release-notes.xml:368(command)
+#: xml/release-notes.xml:362(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr "btrfs subvol create /mnt/var/cache"
 
-#: xml/release-notes.xml:371(para)
+#: xml/release-notes.xml:365(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
-msgstr ""
-"Jei dabar matote <filename>/var/cache.old</filename> katalogą, perkelkite jį "
-"į naują vietą:"
+msgstr "Jei dabar matote <filename>/var/cache.old</filename> katalogą, perkelkite jį į naują vietą:"
 
-#: xml/release-notes.xml:375(command)
+#: xml/release-notes.xml:369(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr "mv /var/cache.old/* /mnt/var/cache"
 
-#: xml/release-notes.xml:376(para)
+#: xml/release-notes.xml:370(para)
 msgid "If that is not the case, instead do:"
 msgstr "Priešingu atveju:"
 
-#: xml/release-notes.xml:379(command)
+#: xml/release-notes.xml:373(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr "mv /var/cache/* /mnt/var/cache/"
 
-#: xml/release-notes.xml:382(para)
+#: xml/release-notes.xml:376(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
-msgstr ""
-"Jei norite (bet nebūtinai), galite pašalinti "
-"<filename>/mnt/var/cache.old</filename>:"
+msgstr "Jei norite (bet nebūtinai), galite pašalinti <filename>/mnt/var/cache.old</filename>:"
 
-#: xml/release-notes.xml:385(command)
+#: xml/release-notes.xml:379(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr "rm -rf /mnt/var/cache.old"
 
-#: xml/release-notes.xml:388(para)
+#: xml/release-notes.xml:382(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Atjunkite potomį:"
 
-#: xml/release-notes.xml:391(command) xml/release-notes.xml:511(screen)
+#: xml/release-notes.xml:385(command) xml/release-notes.xml:505(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:394(para)
+#: xml/release-notes.xml:388(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
 
-#: xml/release-notes.xml:403(para)
+#: xml/release-notes.xml:397(para)
 msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
 msgstr ""
 
-#: xml/release-notes.xml:406(command)
+#: xml/release-notes.xml:400(command)
 msgid "mount /var/cache"
 msgstr "mount /var/cache"
 
-#: xml/release-notes.xml:412(title)
+#: xml/release-notes.xml:406(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr ""
 
-#: xml/release-notes.xml:413(para)
+#: xml/release-notes.xml:407(para)
 msgid "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</package>) was installed by default but had a lower priority than the libinput driver (<package>xf86-input-libinput</package>)."
 msgstr ""
 
-#: xml/release-notes.xml:419(para)
+#: xml/release-notes.xml:413(para)
 msgid "Starting with Leap 42.2:"
 msgstr "Nuo Leap 42.2:"
 
-#: xml/release-notes.xml:424(para)
+#: xml/release-notes.xml:418(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr "Synaptics tvarkyklės nebediegiamos numatytuoju atveju."
 
-#: xml/release-notes.xml:429(para)
+#: xml/release-notes.xml:423(para)
 msgid "If the Synaptics X driver is installed, it will take precedence for any touchpad devices."
 msgstr ""
 
-#: xml/release-notes.xml:435(para)
+#: xml/release-notes.xml:429(para)
 msgid "The Synaptics X driver is no longer supported by GNOME. This means when the driver is installed, Synaptics touchpads can only be configured to the extent that a basic mouse can."
 msgstr ""
 
-#: xml/release-notes.xml:442(para)
+#: xml/release-notes.xml:436(para)
 msgid "Unless you are using a Synaptics touchpad and have a large amount of custom configuration for the Synaptics driver, remove the package from your system:"
 msgstr ""
 
-#: xml/release-notes.xml:446(command)
+#: xml/release-notes.xml:440(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr "sudo zypper rm xf86-input-synaptics"
 
-#: xml/release-notes.xml:451(title)
+#: xml/release-notes.xml:445(title)
 msgid "Upgrading from openSUSE 13.2"
 msgstr "Naujovinimas iš openSUSE 13.2"
 
-#: xml/release-notes.xml:452(para)
+#: xml/release-notes.xml:446(para)
 msgid "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure to also review the information provided in <xref linkend=\"sec.upgrade.421\"/>."
 msgstr ""
 
-#: xml/release-notes.xml:459(title)
+#: xml/release-notes.xml:453(title)
 msgid "Network Interface Names"
 msgstr "Tinklo sąsajų vardai"
 
-#: xml/release-notes.xml:460(para)
+#: xml/release-notes.xml:454(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr "Atnaujindami nuotolinę openSUSE 13.2 sistemą, įsitikinkite, ar tinklo sąsajų vardai yra teisingi."
 
-#: xml/release-notes.xml:464(para)
+#: xml/release-notes.xml:458(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr "openSUSE 13.2 naudojo nuspėjamus tinklo sąsajų vardus (pavyzdžiui, <literal>enp5s0</literal>), o openSUSE Leap 42.1 naudoja pastovius sąsajų vardus (<literal>eth0</literal>). Todėl, atnaujinus arba iš naujo paleidus sistemą, sąsajų vardai gali pasikeisti. Nuotolinė sistema gali tapti nebepasiekiama. Norėdami išvengti sąsajų pervadinimo, prieš paleisdami sistemą iš naujo, kiekvienai tinklo sąsajai įvykdykite įvykdykite komandą:"
 
-#: xml/release-notes.xml:473(replaceable)
+#: xml/release-notes.xml:467(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:473(screen)
+#: xml/release-notes.xml:467(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:475(para)
+#: xml/release-notes.xml:469(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr "Vietoj <replaceable>enp5s0</replaceable> rašykite savo tinklo sąsajos vardą."
 
-#: xml/release-notes.xml:482(title)
+#: xml/release-notes.xml:476(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr ""
 
-#: xml/release-notes.xml:483(para)
+#: xml/release-notes.xml:477(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr "openSUSE 13.2 naudojo tokį išdėstymą Btrfs skaidinyje, kuris leido neprieinamam turiniui ilgam laikui užimti disko vietą po to, kai grąžinama ankstesnė momentinė kopija. Ši išdėsdymo klaida ištaisyta openSUSE Leap 42.1 sistemoje, tačiau pataisa veiks tik naujai įdiegtose sistemose."
 
-#: xml/release-notes.xml:490(para)
+#: xml/release-notes.xml:484(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr ""
 
-#: xml/release-notes.xml:496(para)
+#: xml/release-notes.xml:490(para)
 msgid "Mount the initial root filesystem:"
 msgstr "Programiškai prijunkite pradinę rinkmenų sistemą:"
 
-#: xml/release-notes.xml:499(replaceable)
+#: xml/release-notes.xml:493(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr ""
 
-#: xml/release-notes.xml:499(screen)
+#: xml/release-notes.xml:493(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:502(para)
+#: xml/release-notes.xml:496(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Iš /mnt pašalinkite potomiui nepriklausančias rinkmenas:"
 
-#: xml/release-notes.xml:505(screen)
+#: xml/release-notes.xml:499(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:508(para)
+#: xml/release-notes.xml:502(para)
 msgid "Umount the filesystem again:"
 msgstr "Vėl programiškai atjunkite rinkmenų sistemą:"
 
-#: xml/release-notes.xml:517(title)
+#: xml/release-notes.xml:511(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Spausdinimo sistema: patobulinimai ir nesuderinami pakeitimai"
 
-#: xml/release-notes.xml:520(emphasis)
+#: xml/release-notes.xml:514(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS versija naujovinta iki 1.7"
 
-#: xml/release-notes.xml:522(para)
+#: xml/release-notes.xml:516(para)
 msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
 msgstr "CUPS 1.7 versija pastebimai pasikeitė nuo openSUSE 13.2 sistemoje buvusios CUPS 1.5 versijos, tad gali tekti konfigūraciją šiek tiek pakeisti rankiniu būdu."
 
-#: xml/release-notes.xml:529(para)
+#: xml/release-notes.xml:523(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr "Spausdinimo užduočių formatu tapo PDF; anksčiau buvo PS. Tad tradiciniams postskriptiniams spausdintuvams nuo šiol irgi reikės filtro tvarkyklių."
 
-#: xml/release-notes.xml:534(para)
+#: xml/release-notes.xml:528(para)
 msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr "Daugiau informacijos rasite <link href=\"https://en.opensuse.org/Concepts_printing\"/>."
 
-#: xml/release-notes.xml:542(para)
+#: xml/release-notes.xml:536(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr "Pasikeitė tinklo spausdintuvų aptikimo protokolas. Gimtasis protokolas tinklo spausdintuvų aptikimui dabar remiasi DNS paslaugų aptikimu (DNS-SD, t. y., per Avahi). Senąjį ir naująjį protokolą galite susieti naudodami <literal>cups-browsed</literal> paslaugą, kurią pateikia <literal>cups-filters</literal> paketas. Tam, kad senieji klientai (įskaitant LibreOffice ir KDE) aptiktų spausdintuvus, reikia, kad vienu metu veiktų ir <literal>cupsd</literal>, ir <literal>cups-browsed</literal>."
 
-#: xml/release-notes.xml:555(para)
+#: xml/release-notes.xml:549(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr "Numatytoji IPP protokolo versija iš 1.1 pakeista į 2.0. Senesni IPP serveriai, pvz., CUPS 1.3.x (naudojami, pvz., SUSE Linux Enteprise 11), atmes IPP 2.0 užklausas pranešdami apie blogos užklausos (<literal>Bad Request</literal>) klaidą (žr. <link href=\"http://www.cups.org/str.php?L4231\"/>)."
 
-#: xml/release-notes.xml:561(para)
+#: xml/release-notes.xml:555(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr "Tokiu atveju turėtumėte nurodyti, kad į senus serverius būtų kreipiamasi naudojant būtent senesnį IPP protokolą pridedant <literal>/version=1.1</literal>:"
 
-#: xml/release-notes.xml:568(para)
+#: xml/release-notes.xml:562(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr "Arba konfigūracinėje rinkmenoje <literal>client.conf</literal> ties <literal>ServerName</literal> (pvz., <literal>ServerName senesnis.serveris.pavyzdys.lt/version=1.1</literal>)."
 
-#: xml/release-notes.xml:576(para)
+#: xml/release-notes.xml:570(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "Arba <literal>CUPS_SERVER</literal> aplinkos kintamojo reikšmėje."
 
-#: xml/release-notes.xml:582(para)
+#: xml/release-notes.xml:576(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr "Arba prie serverio vardo reikšmės naudojant komandinės eilutės <literal>-h</literal> parinktį, pavyzdžiui:"
 
-#: xml/release-notes.xml:586(screen)
+#: xml/release-notes.xml:580(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h senesnis.serveris.pavyzdys.lt/version=1.1 -p"
 
-#: xml/release-notes.xml:592(para)
+#: xml/release-notes.xml:586(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr "Kai kurios spausdintuvų tvarkyklės ir sąsajos iš <literal>cups</literal> paketo perkeltos į <literal>cups-filters</literal> paketą."
 
-#: xml/release-notes.xml:600(para)
+#: xml/release-notes.xml:594(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 msgstr "Dalis Cupsd konfigūracijos direktyvų iš <literal>cupsd.conf</literal> perkelta į <literal>cups-files.conf</literal> (žr. <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519 ir <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 
-#: xml/release-notes.xml:609(para)
+#: xml/release-notes.xml:603(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\"/> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 msgstr "CUPS antraštės ir bandomieji puslapiai perkelti iš <literal>cups</literal> paketo į <literal>cups-filters</literal> paketą (žr. <link href=\"http://www.cups.org/str.php?L4120\"/> ir <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 
 #. bnc#809347
-#: xml/release-notes.xml:659(title)
+#: xml/release-notes.xml:653(title)
 msgid "More Information and Feedback"
 msgstr "Išsamesnė informacija ir grįžtamasis ryšys"
 
-#: xml/release-notes.xml:663(para)
+#: xml/release-notes.xml:657(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Skaitykite laikmenoje patalpintą <filename>README</filename> dokumentą."
 
-#: xml/release-notes.xml:668(para)
+#: xml/release-notes.xml:662(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Išsami informacija apie paskiro RPM paketo pakeitimus pateikiama įvykdžius:"
 
-#: xml/release-notes.xml:672(replaceable)
+#: xml/release-notes.xml:666(replaceable)
 msgid "FILENAME"
 msgstr "RINKMENA"
 
-#: xml/release-notes.xml:672(screen)
+#: xml/release-notes.xml:666(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:673(para)
+#: xml/release-notes.xml:667(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Vietoj žodžio <replaceable>RINKMENA</replaceable> rašykite tikrąjį RPM paketo pavadinimą."
 
-#: xml/release-notes.xml:678(para)
+#: xml/release-notes.xml:672(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "Norėdami matyti atnaujintų paketų visus pakeitimus laiko bėgyje, laikmenos šakniniame kataloge ieškokite <filename>ChangeLog</filename> rinkmenos."
 
-#: xml/release-notes.xml:684(para)
+#: xml/release-notes.xml:678(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "Daugiau informacijos laikmenos <filename>docu</filename> kataloge."
 
-#: xml/release-notes.xml:690(para)
+#: xml/release-notes.xml:684(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<link href=\"https://doc.opensuse.org/\"/> adresu pateikta papildoma ir atnaujinta dokumentacija."
 
-#: xml/release-notes.xml:695(para)
+#: xml/release-notes.xml:689(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "Daugiau naujienų apie naujausius openSUSE produktus rasite apsilankę <link href=\"https://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:702(para)
+#: xml/release-notes.xml:696(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Autorinės teisės © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:706(para)
+#: xml/release-notes.xml:700(para)
 msgid "Thanks for using openSUSE."
 msgstr "Ačiū, kad pasirinkote openSUSE."
 
-#: xml/release-notes.xml:709(para)
+#: xml/release-notes.xml:703(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE komanda."
 
@@ -617,6 +536,22 @@ msgstr ""
 "Linas Spraunius, 2004. \n"
 "Andrius Štikonas <stikonas@gmail.com>, 2006, 2008. \n"
 "Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2009, 2010, 2013, 2015."
+
+#~| msgid "CIFS Service Disabled By Default"
+#~ msgid "Nouveau 3D/DRI Driver Disabled by Default"
+#~ msgstr "Numatytuoju atveju Nouveau 3D/DRI tvarkyklės išjungtos"
+
+#~ msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
+#~ msgstr "Nouveau DRI/3D tvarkyklės laikomos nepakankamai stabiliomis, kad būtų naudojamos openSUSE Leap 42.2 sistemoje: šios tvarkyklės neveikia su šiuolaikinėmis KDE programomis, kurių veiksmai vienu metu atliekamai keliomis gijomis."
+
+#~ msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
+#~ msgstr "Nuspręsta šias tvarkykles perkelti į atskirą paketą <package>mesa-dri-nouveau</package>, kuris numatytuoju atveju nediegiamas. Todėl, naudojant numatytąsias nuostatas, negalėsite pasinaudoti aparatiniu 3D spartinimu su jokiu Nvidia grafiniai procesoriumi, taip pat negalėsite pasinaudoti 2D spartinimu naujesniuose Nvidia grafiniuose procesoriuose, kurie greitoms 2D operacijoms naudoja Glamor. Tačiau vis tiek veiks Branduolio veiksenos nuostatos (angl. Kernel Mode Setting) ir pamatinis 2D spartinimas, nes bent jau Kepler ir ankstesniuose grafiniuose procesoriuose 2D spartinimą užtikrina EXA. 3D operacijos palaikomos programiniu spartinimu."
+
+#~ msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
+#~ msgstr "Siūloma arba naudoti numatytąsias nuostatas, arba įsidiegti nuosavybines Nvidia vaizdo plokštės tvarkykles. Norėdami naudoti nuosavybines tvarkykles, įsidiekite jas iš <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/> saugyklos."
+
+#~ msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
+#~ msgstr "Jei norite 2D/3D spartinimo, bet nenorite diegti nuosavybinių NVIDIA tvarkyklių, tuomet suprasdami galimą riziką galite eksperimentuoti įsidiegdami Nouveau tvarkyklių paketą."
 
 #~ msgid "General"
 #~ msgstr "Bendrybės"

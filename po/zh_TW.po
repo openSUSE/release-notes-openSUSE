@@ -2,11 +2,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2016-10-18 17:09+0200\n"
+"POT-Creation-Date: 2016-10-21 10:53+0200\n"
 "PO-Revision-Date: 2016-10-20 16:53+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
-"notes-opensuse/leap_42_2/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,9 +83,7 @@ msgstr "最小系統安裝"
 
 #: xml/release-notes.xml:92(para)
 msgid "To avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
-msgstr ""
-"為避免一些大型的建議套件被安裝，最小安裝樣式 (pattern) 會使用到其他與非預期套件相衝突的樣式。該樣式 <literal>patterns-"
-"openSUSE-minimal_base-conflicts</literal> 可以在安裝完成後移除。"
+msgstr "為避免一些大型的建議套件被安裝，最小安裝樣式 (pattern) 會使用到其他與非預期套件相衝突的樣式。該樣式 <literal>patterns-openSUSE-minimal_base-conflicts</literal> 可以在安裝完成後移除。"
 
 #: xml/release-notes.xml:99(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
@@ -119,477 +116,430 @@ msgstr "在 EFI/UEFI 的規格書中提到一個新的分割磁碟的劃分方�
 
 #: xml/release-notes.xml:141(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces the first one."
-msgstr ""
-"此外，UEFI 規範是允許傳統的 MBR（MS-DOS）分割區。 Linux 引導加載器（ELILO 或 GRUB2）"
-"嘗試針對那些傳統的分割區自動產生一個 GUID ，並把它們寫進韌體。像這樣的一個 GUID "
-"可以頻繁變更，導致韌體的重寫入。一次的重寫入包括兩種不同的操作：刪除舊的項目，以及創建一個新的項目以取代第一個項目。"
+msgstr "此外，UEFI 規範是允許傳統的 MBR（MS-DOS）分割區。 Linux 引導加載器（ELILO 或 GRUB2）嘗試針對那些傳統的分割區自動產生一個 GUID ，並把它們寫進韌體。像這樣的一個 GUID 可以頻繁變更，導致韌體的重寫入。一次的重寫入包括兩種不同的操作：刪除舊的項目，以及創建一個新的項目以取代第一個項目。"
 
 #: xml/release-notes.xml:150(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries. This can result in a non-bootable system."
-msgstr ""
-"現代的韌體都有一個垃圾收集器（garbage collector），可以收集被刪除的進入點（entries），並且釋放原來保留給舊進入點（entries）"
-"的記憶體。當故障的韌體不能收集或是釋放這些進入點（entries）時，系統將會出現問題，最終將造成系統無法開機。"
+msgstr "現代的韌體都有一個垃圾收集器（garbage collector），可以收集被刪除的進入點（entries），並且釋放原來保留給舊進入點（entries）的記憶體。當故障的韌體不能收集或是釋放這些進入點（entries）時，系統將會出現問題，最終將造成系統無法開機。"
 
 #: xml/release-notes.xml:156(para)
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "簡單的替代解決方案是：轉換傳統的 MBR 分割區成為新的 GPT 分割區以完整的避免此問題。"
 
-#: xml/release-notes.xml:162(title)
-msgid "Nouveau 3D/DRI Driver Disabled by Default"
-msgstr "Nouveau 3D/DRI 驅動程式預設將會停用"
-
-#: xml/release-notes.xml:163(para)
-msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
-msgstr ""
-"由於 Nouveau DRI/3D 還無法與多執行緒的 KDE 應用程式正常運作，故在 openSUSE Leap 42.2 下仍屬於實驗性質。"
-
-#: xml/release-notes.xml:168(para)
-msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
-msgstr ""
-"我們決定將驅動程式移入獨立的套件 <package>mesa-dri-nouveau</package>，且預設將不會安裝。故在預設設定下，對於任何 "
-"Nvidia GPU 將不會有 3D 繪圖硬體加速支援，且對於使用 Glamor 的新型 Nvidia GPU 也不會有 2D 加速支援。Kernel "
-"Mode Setting 與基本的 2D 支援仍可使用，就像過去在 Kepler 與前幾代 GPU 那樣透過 EXA 來支援 2D 加速。3D "
-"繪圖操作由軟體進行。"
-
-#: xml/release-notes.xml:177(para)
-msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
-msgstr ""
-"我們建議使用預設的設定或是切換使用 Nvidia 的專屬驅動程式。要使用專屬驅動程式，請自套件庫 <link href=\""
-"http://http.download.nvidia.com/opensuse/leap/42.2/\"/> 安裝。"
-
-#: xml/release-notes.xml:183(para)
-msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
-msgstr "若您需要 2D/3D 加速支援，但不想安裝 Nvidia 專屬驅動程式，您可以安裝 Nouveau 驅動程式套件，然而請自負風險。"
-
-#: xml/release-notes.xml:188(para)
-msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
-msgstr ""
-"我們也準備了 Mesa 修補程式來減輕這個問題，但會造成系統陷入死結 (deadlock)。是故該修補程式並未包含進驅動程式套件中。若您是使用 KDE "
-"的資深使用者，且願意使用該修補程式來重新編譯 Mesa 套件，請修改 spec 檔案，將 <literal>%define</literal><liter"
-"al>use_broken_nouveau_locking_patches</literal> 改成 <literal>1</literal>。"
-
-#: xml/release-notes.xml:202(title)
+#: xml/release-notes.xml:196(title)
 msgid "System Upgrade"
 msgstr "系統升級"
 
-#: xml/release-notes.xml:203(para)
+#: xml/release-notes.xml:197(para)
 msgid "This section lists notes related to upgrading the system. For detailed upgrade instructions, see the documentation at <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/>."
 msgstr "這個小節列出了與系統升級有關的注意事項。欲了解詳細的升級步驟，請見 <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html\"/> 的文件說明。"
 
-#: xml/release-notes.xml:210(title)
+#: xml/release-notes.xml:204(title)
 msgid "Upgrading from openSUSE Leap 42.1"
 msgstr "從 openSUSE Leap 42.1 升級"
 
-#: xml/release-notes.xml:213(title)
+#: xml/release-notes.xml:207(title)
 msgid "Removed and Replaced Packages"
 msgstr "已移除以及已置換的套件"
 
-#: xml/release-notes.xml:214(para)
+#: xml/release-notes.xml:208(para)
 msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
 msgstr "下列的套件是已被移除或已被置換自從 openSUSE Leap 42.1："
 
-#: xml/release-notes.xml:220(para)
+#: xml/release-notes.xml:214(para)
 msgid "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr "<package>arista</package>：已被 <package>transmageddon</package> 取代。"
 
-#: xml/release-notes.xml:225(para)
+#: xml/release-notes.xml:219(para)
 msgid "<package>cadabra</package>: The source code no longer builds. The successor, <link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
 msgstr "<package>cadabra</package>：該原始碼已無法編譯。其後繼者 <link href=\"http://cadabra.science/\">Cadabra 2</link> 仍不夠穩定。"
 
-#: xml/release-notes.xml:232(para)
+#: xml/release-notes.xml:226(para)
 msgid "<package>dropbear</package>: Removed because there are no relevant advantages over <package>openssh</package>."
 msgstr "<package>dropbear</package>：相較於 <package>openssh</package>，安裝該套件並無明顯的好處，故移除該套件。"
 
-#: xml/release-notes.xml:238(para)
+#: xml/release-notes.xml:232(para)
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
 msgstr "<package>emerillon</package>：已被 <package>gnome-maps</package> 取代。"
 
-#: xml/release-notes.xml:244(para)
+#: xml/release-notes.xml:238(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
-msgstr ""
-"<package>gnome-system-log</package>：已被 <package>gnome-logs</package> 取代。"
+msgstr "<package>gnome-system-log</package>：已被 <package>gnome-logs</package> 取代。"
 
-#: xml/release-notes.xml:250(para)
+#: xml/release-notes.xml:244(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>：已被 <package>hawk2</package> 取代。"
 
-#: xml/release-notes.xml:255(para)
+#: xml/release-notes.xml:249(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
-msgstr ""
-"<package>labplot</package>：Labplot 已被其 Qt5 版本的 <package>labplot-kf5</package>"
-" 取代。若您是從 openSUSE Leap 42.1 升級且原來安裝有 <package>labplot</package> 套件，系統會自動改用 "
-"<package>labplot-kf5</package>。"
+msgstr "<package>labplot</package>：Labplot 已被其 Qt5 版本的 <package>labplot-kf5</package> 取代。若您是從 openSUSE Leap 42.1 升級且原來安裝有 <package>labplot</package> 套件，系統會自動改用 <package>labplot-kf5</package>。"
 
-#: xml/release-notes.xml:264(para)
+#: xml/release-notes.xml:258(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr "<package>psi</package>：已被 <package>psi+</package> 取代。"
 
-#: xml/release-notes.xml:269(para)
+#: xml/release-notes.xml:263(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
-msgstr ""
-"<package>python-moin</package>：已被 <package>moinmoin-wiki</package> "
-"取代。只有單純的套件重新命名，並無版本升級 － 幾乎是相同的替代套件。"
+msgstr "<package>python-moin</package>：已被 <package>moinmoin-wiki</package> 取代。只有單純的套件重新命名，並無版本升級 － 幾乎是相同的替代套件。"
 
-#: xml/release-notes.xml:276(para)
+#: xml/release-notes.xml:270(para)
 msgid "<package>seamonkey</package>: Source code no longer compiles. If you were a Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird instead."
-msgstr ""
-"<package>seamonkey</package>：原始碼已無法編譯。若您之前是 Seamonkey 的使用者，請轉用 Mozilla "
-"Firefox 與 Mozilla Thunderbird。"
+msgstr "<package>seamonkey</package>：原始碼已無法編譯。若您之前是 Seamonkey 的使用者，請轉用 Mozilla Firefox 與 Mozilla Thunderbird。"
 
-#: xml/release-notes.xml:283(para)
+#: xml/release-notes.xml:277(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr "<package>ungifsicle</package>：已被 <package>gifsicle</package> 取代。"
 
-#: xml/release-notes.xml:289(para)
+#: xml/release-notes.xml:283(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr ""
 
-#: xml/release-notes.xml:298(title)
+#: xml/release-notes.xml:292(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
 
-#: xml/release-notes.xml:299(para)
+#: xml/release-notes.xml:293(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
 
-#: xml/release-notes.xml:306(para)
+#: xml/release-notes.xml:300(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr ""
 
-#: xml/release-notes.xml:314(para)
+#: xml/release-notes.xml:308(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
 
-#: xml/release-notes.xml:319(command)
+#: xml/release-notes.xml:313(command)
 msgid "df /"
 msgstr ""
 
-#: xml/release-notes.xml:322(para)
+#: xml/release-notes.xml:316(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
 
-#: xml/release-notes.xml:328(command)
+#: xml/release-notes.xml:322(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr ""
 
-#: xml/release-notes.xml:329(para)
+#: xml/release-notes.xml:323(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
 
-#: xml/release-notes.xml:336(para)
+#: xml/release-notes.xml:330(para)
 msgid "Now mount the requisite subvolume."
 msgstr ""
 
-#: xml/release-notes.xml:341(para)
+#: xml/release-notes.xml:335(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr ""
 
-#: xml/release-notes.xml:345(command)
+#: xml/release-notes.xml:339(command)
 #, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:348(para)
+#: xml/release-notes.xml:342(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
 
-#: xml/release-notes.xml:352(command)
+#: xml/release-notes.xml:346(command)
 #, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:357(para)
+#: xml/release-notes.xml:351(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
 
-#: xml/release-notes.xml:362(command)
+#: xml/release-notes.xml:356(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr ""
 
-#: xml/release-notes.xml:365(para)
+#: xml/release-notes.xml:359(para)
 msgid "Create a new subvolume:"
 msgstr ""
 
-#: xml/release-notes.xml:368(command)
+#: xml/release-notes.xml:362(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:371(para)
+#: xml/release-notes.xml:365(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr ""
 
-#: xml/release-notes.xml:375(command)
+#: xml/release-notes.xml:369(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:376(para)
+#: xml/release-notes.xml:370(para)
 msgid "If that is not the case, instead do:"
 msgstr ""
 
-#: xml/release-notes.xml:379(command)
+#: xml/release-notes.xml:373(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr ""
 
-#: xml/release-notes.xml:382(para)
+#: xml/release-notes.xml:376(para)
 #, fuzzy
 #| msgid "And update <filename>/etc/resolv.conf</filename>:"
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "並且更新 <filename>/etc/resolv.conf</filename>："
 
-#: xml/release-notes.xml:385(command)
+#: xml/release-notes.xml:379(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr ""
 
-#: xml/release-notes.xml:388(para)
+#: xml/release-notes.xml:382(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr ""
 
-#: xml/release-notes.xml:391(command) xml/release-notes.xml:511(screen)
+#: xml/release-notes.xml:385(command) xml/release-notes.xml:505(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:394(para)
+#: xml/release-notes.xml:388(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
 
-#: xml/release-notes.xml:403(para)
+#: xml/release-notes.xml:397(para)
 #, fuzzy
 #| msgid "Add <literal>0 0</literal> to the end of each new cifs mount line in <filename>/etc/fstab</filename>."
 msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
 msgstr "增加 <literal>0 0</literal> 到 <filename>/etc/fstab</filename> 中每個新增的 cifs 掛載點設定行的後面。"
 
-#: xml/release-notes.xml:406(command)
+#: xml/release-notes.xml:400(command)
 msgid "mount /var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:412(title)
+#: xml/release-notes.xml:406(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr ""
 
-#: xml/release-notes.xml:413(para)
+#: xml/release-notes.xml:407(para)
 msgid "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</package>) was installed by default but had a lower priority than the libinput driver (<package>xf86-input-libinput</package>)."
 msgstr ""
 
-#: xml/release-notes.xml:419(para)
+#: xml/release-notes.xml:413(para)
 msgid "Starting with Leap 42.2:"
 msgstr ""
 
-#: xml/release-notes.xml:424(para)
+#: xml/release-notes.xml:418(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr ""
 
-#: xml/release-notes.xml:429(para)
+#: xml/release-notes.xml:423(para)
 msgid "If the Synaptics X driver is installed, it will take precedence for any touchpad devices."
 msgstr ""
 
-#: xml/release-notes.xml:435(para)
+#: xml/release-notes.xml:429(para)
 msgid "The Synaptics X driver is no longer supported by GNOME. This means when the driver is installed, Synaptics touchpads can only be configured to the extent that a basic mouse can."
 msgstr ""
 
-#: xml/release-notes.xml:442(para)
+#: xml/release-notes.xml:436(para)
 msgid "Unless you are using a Synaptics touchpad and have a large amount of custom configuration for the Synaptics driver, remove the package from your system:"
 msgstr ""
 
-#: xml/release-notes.xml:446(command)
+#: xml/release-notes.xml:440(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr ""
 
-#: xml/release-notes.xml:451(title)
+#: xml/release-notes.xml:445(title)
 msgid "Upgrading from openSUSE 13.2"
 msgstr ""
 
-#: xml/release-notes.xml:452(para)
+#: xml/release-notes.xml:446(para)
 msgid "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure to also review the information provided in <xref linkend=\"sec.upgrade.421\"/>."
 msgstr ""
 
-#: xml/release-notes.xml:459(title)
+#: xml/release-notes.xml:453(title)
 msgid "Network Interface Names"
 msgstr "網路介面名稱"
 
-#: xml/release-notes.xml:460(para)
+#: xml/release-notes.xml:454(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr "當您將一台遠端機器從 openSUSE 13.2 昇級時，請確保您的網路介面命名是正確的。"
 
-#: xml/release-notes.xml:464(para)
+#: xml/release-notes.xml:458(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr "openSUSE 13.2 使用可預測的網路介面命名方式 (例如，<literal>enp5s0</literal>)，但 openSUSE Leap 42.1 是使用固定的命名方式 (<literal>eth0</literal>)。當完成昇級並重開機後，網路介面名稱會因此而改變。這可能會造成您無法登入系統。要避免網路介面被改名，在重開機前，為您的每個網路介面執行下列命令："
 
-#: xml/release-notes.xml:473(replaceable)
+#: xml/release-notes.xml:467(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:473(screen)
+#: xml/release-notes.xml:467(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:475(para)
+#: xml/release-notes.xml:469(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr "請將 <replaceable>enp5s0</replaceable> 代換為您的網路介面名稱。"
 
-#: xml/release-notes.xml:482(title)
+#: xml/release-notes.xml:476(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: 當系統回復後會遺失磁碟空間"
 
-#: xml/release-notes.xml:483(para)
+#: xml/release-notes.xml:477(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr "openSUSE 13.2 使用的 Btrfs 分割區佈局會使得當第一次系統回復執行後，磁碟空間會被過時且無法存取的內容給永久占用。這個問題已經在 openSUSE Leap 42.1 解決。然而，這個修正只有針對新安裝的系統才有用。"
 
-#: xml/release-notes.xml:490(para)
+#: xml/release-notes.xml:484(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr "若您是從 openSUSE 13.2 昇級，您無法轉換使用新的佈局，但您可以回收這些失去的磁碟空間 。"
 
-#: xml/release-notes.xml:496(para)
+#: xml/release-notes.xml:490(para)
 msgid "Mount the initial root filesystem:"
 msgstr "掛載初始 root 檔案系統："
 
-#: xml/release-notes.xml:499(replaceable)
+#: xml/release-notes.xml:493(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
-#: xml/release-notes.xml:499(screen)
+#: xml/release-notes.xml:493(screen)
 #, fuzzy, no-wrap
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:502(para)
+#: xml/release-notes.xml:496(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "移除 /mnt 目錄下所有不屬於子卷 (subvolume) 的檔案："
 
-#: xml/release-notes.xml:505(screen)
+#: xml/release-notes.xml:499(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:508(para)
+#: xml/release-notes.xml:502(para)
 msgid "Umount the filesystem again:"
 msgstr "卸載檔案系統："
 
-#: xml/release-notes.xml:517(title)
+#: xml/release-notes.xml:511(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "列印系統：改進以及不相容的變動"
 
-#: xml/release-notes.xml:520(emphasis)
+#: xml/release-notes.xml:514(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS 版本昇級至 1.7"
 
-#: xml/release-notes.xml:522(para)
+#: xml/release-notes.xml:516(para)
 #, fuzzy
 #| msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
 msgstr "新版的 CUPS，相較於 1.5 版，導入了一些重大改變，因此需要手動調整設定。"
 
-#: xml/release-notes.xml:529(para)
+#: xml/release-notes.xml:523(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr "PDF 取代 PS 成為標準的列印工作格式。故傳統的 PostScript 印表機現在需要一個過濾器 (filter) 驅動程式才能進行列印。"
 
-#: xml/release-notes.xml:534(para)
+#: xml/release-notes.xml:528(para)
 #, fuzzy
 #| msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</link> for details."
 msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr "請見 <link href=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</link>) 以了解更多細節。"
 
-#: xml/release-notes.xml:542(para)
+#: xml/release-notes.xml:536(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr "網路印表機探查通訊協定已經改變為基於 DNS Service discovery 協定 (DNS-SD，透過 Avahi 提供)。<literal>cups-filters</literal> 套件提供的 <literal>cups-browsed</literal> 服務可用來橋接舊的與新的通訊協定。<literal>cupsd</literal> 與 <literal>cups-browsed</literal> 需要一起運作才能讓舊的客戶端 (包括 LibreOffice 與 KDE) 能夠發現網路印表機。"
 
-#: xml/release-notes.xml:555(para)
+#: xml/release-notes.xml:549(para)
 #, fuzzy
 #| msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr "IPP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 的連線要求，並回傳 <literal>Bad Request</literal> (請見 <ulink url=\"http://www.cups.org/str.php?L4231\"/>)。"
 
-#: xml/release-notes.xml:561(para)
+#: xml/release-notes.xml:555(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr "要能夠使用舊印表機來列印，IPP 通訊協定版本必須要明確指定。將 <literal>/version=1.1</literal> 字串附加在："
 
-#: xml/release-notes.xml:568(para)
+#: xml/release-notes.xml:562(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr "<literal>client.conf</literal> 設定檔中的 <literal>ServerName</literal> 設定 (例如 <literal>ServerName older.server.example.com/version=1.1</literal>)。"
 
-#: xml/release-notes.xml:576(para)
+#: xml/release-notes.xml:570(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "環境變數 <literal>CUPS_SERVER</literal>。"
 
-#: xml/release-notes.xml:582(para)
+#: xml/release-notes.xml:576(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr "在命令列工具中 <literal>-h</literal> 選項所設定的伺服器名稱。例如："
 
-#: xml/release-notes.xml:586(screen)
+#: xml/release-notes.xml:580(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:592(para)
+#: xml/release-notes.xml:586(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr "一些列印過濾器和後端已從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。"
 
-#: xml/release-notes.xml:600(para)
+#: xml/release-notes.xml:594(para)
 #, fuzzy
 #| msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 msgstr "一些設定指令已經自 <literal>cupsd.conf</literal> 分離出來，並移到 <literal>cups-files.conf</literal> 設定檔中。請詳見 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> 的說明。"
 
-#: xml/release-notes.xml:609(para)
+#: xml/release-notes.xml:603(para)
 #, fuzzy
 #| msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\"/> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 msgstr "CUPS 管理及測試頁面從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。詳情請見 <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> 以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>。"
 
 #. bnc#809347
-#: xml/release-notes.xml:659(title)
+#: xml/release-notes.xml:653(title)
 msgid "More Information and Feedback"
 msgstr "更多資訊與反饋"
 
-#: xml/release-notes.xml:663(para)
+#: xml/release-notes.xml:657(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "請閱讀安裝媒體上的 <filename>README</filename> 文件。"
 
-#: xml/release-notes.xml:668(para)
+#: xml/release-notes.xml:662(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "從 RPM 獲取某個套件詳細的變動歷史資訊："
 
-#: xml/release-notes.xml:672(replaceable)
+#: xml/release-notes.xml:666(replaceable)
 msgid "FILENAME"
 msgstr "FILENAME"
 
-#: xml/release-notes.xml:672(screen)
+#: xml/release-notes.xml:666(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:673(para)
+#: xml/release-notes.xml:667(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "將 <replaceable>FILENAME</replaceable> 代換為 RPM 套件的名稱。"
 
-#: xml/release-notes.xml:678(para)
+#: xml/release-notes.xml:672(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "請查看在安裝媒體最上層目錄下的 <filename>ChangeLog</filename> 檔案以了解所更新套件的變動歷史（按時間先後排序）。"
 
-#: xml/release-notes.xml:684(para)
+#: xml/release-notes.xml:678(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
-#: xml/release-notes.xml:690(para)
+#: xml/release-notes.xml:684(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<link href=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</link> 包含了額外或是更新的文件。"
 
-#: xml/release-notes.xml:695(para)
+#: xml/release-notes.xml:689(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "請造訪 <link href=\"https://www.opensuse.org\">https://www.opensuse.org</link> 以了解 openSUSE 最新的產品訊息。"
 
-#: xml/release-notes.xml:702(para)
+#: xml/release-notes.xml:696(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:706(para)
+#: xml/release-notes.xml:700(para)
 msgid "Thanks for using openSUSE."
 msgstr "感謝使用 openSUSE。"
 
-#: xml/release-notes.xml:709(para)
+#: xml/release-notes.xml:703(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE 團隊"
 
@@ -602,6 +552,24 @@ msgstr ""
 "Joe Man <trmetal@yahoo.com.hk>, 2001\n"
 "Ray Chen <swyear@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012\n"
 "Ramax Lo <ramaxlo@gmail.com>, 2013, 2014, 2015"
+
+#~ msgid "Nouveau 3D/DRI Driver Disabled by Default"
+#~ msgstr "Nouveau 3D/DRI 驅動程式預設將會停用"
+
+#~ msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
+#~ msgstr "由於 Nouveau DRI/3D 還無法與多執行緒的 KDE 應用程式正常運作，故在 openSUSE Leap 42.2 下仍屬於實驗性質。"
+
+#~ msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
+#~ msgstr "我們決定將驅動程式移入獨立的套件 <package>mesa-dri-nouveau</package>，且預設將不會安裝。故在預設設定下，對於任何 Nvidia GPU 將不會有 3D 繪圖硬體加速支援，且對於使用 Glamor 的新型 Nvidia GPU 也不會有 2D 加速支援。Kernel Mode Setting 與基本的 2D 支援仍可使用，就像過去在 Kepler 與前幾代 GPU 那樣透過 EXA 來支援 2D 加速。3D 繪圖操作由軟體進行。"
+
+#~ msgid "We recommend either keeping the default settings or switching to Nvidia's proprietary driver. To use the proprietary driver, install it from the repository at <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/>."
+#~ msgstr "我們建議使用預設的設定或是切換使用 Nvidia 的專屬驅動程式。要使用專屬驅動程式，請自套件庫 <link href=\"http://http.download.nvidia.com/opensuse/leap/42.2/\"/> 安裝。"
+
+#~ msgid "If you need fast 2D/3D support but are not interested in installing the proprietary NVIDIA driver, you can install the Nouveau driver package at your own risk."
+#~ msgstr "若您需要 2D/3D 加速支援，但不想安裝 Nvidia 專屬驅動程式，您可以安裝 Nouveau 驅動程式套件，然而請自負風險。"
+
+#~ msgid "We have also prepared patches for Mesa which mitigate this issue, but can deadlock the system. Therefore, these patches are not included with the packaged driver. If you are an experienced user running KDE and willing to rebuild the Mesa package with these patches, modify the spec file: Change the <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> to <literal>1</literal>."
+#~ msgstr "我們也準備了 Mesa 修補程式來減輕這個問題，但會造成系統陷入死結 (deadlock)。是故該修補程式並未包含進驅動程式套件中。若您是使用 KDE 的資深使用者，且願意使用該修補程式來重新編譯 Mesa 套件，請修改 spec 檔案，將 <literal>%define</literal><literal>use_broken_nouveau_locking_patches</literal> 改成 <literal>1</literal>。"
 
 #~ msgid "General"
 #~ msgstr "一般說明"
