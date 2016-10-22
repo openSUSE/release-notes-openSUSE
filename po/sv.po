@@ -10,9 +10,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-21 10:53+0200\n"
-"PO-Revision-Date: 2016-10-18 15:28+0000\n"
-"Last-Translator: Fredrik Persson <fpersson.se@gmail.com>\n"
-"Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/sv/>\n"
+"PO-Revision-Date: 2016-10-22 13:07+0000\n"
+"Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
+"Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,10 +167,9 @@ msgid "<package>dropbear</package>: Removed because there are no relevant advant
 msgstr "<package>dropbear</package>: Borttaget eftersom den inte finns några relevanta fördelar jämfört med <package>openssh</package>."
 
 #: xml/release-notes.xml:232(para)
-#, fuzzy
 #| msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>"
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
-msgstr "<package>emerillon</package>: Ersatt av <package>gnome-maps</package>"
+msgstr "<package>emerillon</package>: Ersatt av <package>gnome-maps</package>."
 
 #: xml/release-notes.xml:238(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
@@ -182,6 +182,10 @@ msgstr "<package>hawk</package>: Ersatt av <package>hawk2</package>."
 #: xml/release-notes.xml:249(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
 msgstr ""
+"<package>labplot</package>: Labplot har blivit ersatt av Qt5 versionen "
+"<package>labplot-kf5</package>. Om du uppgraderar från openSUSE Leap 42.1 "
+"och har installerat <package>labplot</package> kommer du att ta emot <package"
+">labplot-kf5</package> automatiskt."
 
 #: xml/release-notes.xml:258(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
@@ -194,6 +198,8 @@ msgstr "<package>python-moin</package>: Ersatt av <package>moinmoin-wiki</packag
 #: xml/release-notes.xml:270(para)
 msgid "<package>seamonkey</package>: Source code no longer compiles. If you were a Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird instead."
 msgstr ""
+"<package>seamonkey</package>: Källkoden kompilerar inte längre. Använder du "
+"Seamonkey sedan tidigare, byt till Mozilla Firefox and Mozilla Thunderbird."
 
 #: xml/release-notes.xml:277(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
@@ -206,18 +212,30 @@ msgstr "<package>xchat</package>: Ersatt av <package>hexchat</package>."
 #: xml/release-notes.xml:292(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr ""
+"<filename>/var/cache</filename> är på egen subvolym för Snapshots and "
+"Rollback"
 
 #: xml/release-notes.xml:293(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
+"<filename>/var/cache</filename> innehåller mycket kortlagrad data, såsom "
+"Zyppers cache med RPM paket i olika versioner vid varje uppdatering. Att "
+"spara data som till största delen är redundant och tillfällig leder till att "
+"diskutrymmet för avbilder (snapshots) växer mycket fort."
 
 #: xml/release-notes.xml:300(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr ""
+"För att lösa detta, flytta <filename>/var/cache</filename> till en separat "
+"undervolym. Vid en nyinstallation av openSUSE Leap42.2 görs detta "
+"automatiskt. För att konvertera ett existerade filsystem, utför följande "
+"steg:"
 
 #: xml/release-notes.xml:308(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
+"Leta reda på enhetsnamnet där root-filsystemet befinner sig (exempelvis "
+"<filename>/dev/sda2</filename> eller <filename>/dev/sda3</filename>:"
 
 #: xml/release-notes.xml:313(command)
 msgid "df /"
@@ -226,10 +244,13 @@ msgstr "df /"
 #: xml/release-notes.xml:316(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
+"Identifiera undervolymernas moderundervolym. För openSUSE 13.2 "
+"installationer, kallas denna moderundervolym <filename>@</filename>. För att "
+"kontrollera att den existerar <filename>@</filename> skriv in:"
 
 #: xml/release-notes.xml:322(command)
 msgid "btrfs subvolume list / | grep '@'"
-msgstr ""
+msgstr "btrfs subvolume list / | grep '@'"
 
 #: xml/release-notes.xml:323(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
