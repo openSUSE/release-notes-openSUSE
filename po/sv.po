@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-21 10:53+0200\n"
-"PO-Revision-Date: 2016-10-22 13:07+0000\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"PO-Revision-Date: 2016-10-22 13:23+0000\n"
+"Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/sv/>\n"
 "Language: sv\n"
@@ -244,25 +244,31 @@ msgstr "df /"
 #: xml/release-notes.xml:316(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
-"Identifiera undervolymernas moderundervolym. För openSUSE 13.2 "
-"installationer, kallas denna moderundervolym <filename>@</filename>. För att "
-"kontrollera att den existerar <filename>@</filename> skriv in:"
+"Identifiera undervolymernas moderundervolym. På openSUSE 13.2 "
+"installationer, kallas denna undervolym <filename>@</filename>. För att "
+"kontrollera om det existerar en undervolym med namnet <filename>@</filename> "
+"skriv in:"
 
 #: xml/release-notes.xml:322(command)
 msgid "btrfs subvolume list / | grep '@'"
-msgstr "btrfs subvolume list / | grep '@'\n"
+msgstr "btrfs subvolume list / | grep '@'"
 
 #: xml/release-notes.xml:323(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
+"I fall detta inte ger något svar, har du ingen undervolym som heter "
+"<filename>@</filename>. I så fall kan du försöka med undervolym ID 5 som "
+"används i äldre versioner av openSUSE."
 
 #: xml/release-notes.xml:330(para)
 msgid "Now mount the requisite subvolume."
-msgstr ""
+msgstr "Montera nu den efterfrågade delvolymen."
 
 #: xml/release-notes.xml:335(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr ""
+"Heter undervolymen <filename>@</filename>, montera den på en tillfällig "
+"plats med:"
 
 #: xml/release-notes.xml:339(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
@@ -271,6 +277,8 @@ msgstr "mount &lt; 1root_device&gt; 2 -o subvol=@ /mnt"
 #: xml/release-notes.xml:342(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr ""
+"Om du inte har någon undervolym som heter <filename>@</filename>, montera "
+"den med ID 5 i stället:"
 
 #: xml/release-notes.xml:346(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
@@ -279,6 +287,9 @@ msgstr "mount &lt; 1root_device&gt; 2 -o subvolid=5 /mnt"
 #: xml/release-notes.xml:351(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
+"<filename>/mnt/var/cache</filename> kan redan existera och kan vara samma "
+"katalog som <filename>/var/cache</filename>. För att undvika förlust av "
+"data, flytta den:"
 
 #: xml/release-notes.xml:356(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
@@ -286,7 +297,7 @@ msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
 #: xml/release-notes.xml:359(para)
 msgid "Create a new subvolume:"
-msgstr ""
+msgstr "Skapa en ny undervolym:"
 
 #: xml/release-notes.xml:362(command)
 msgid "btrfs subvol create /mnt/var/cache"
@@ -295,6 +306,8 @@ msgstr "btrfs subvol create /mnt/var/cache"
 #: xml/release-notes.xml:365(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr ""
+"Finns det en katalog som heter <filename>/var/cache.old</filename>, flytta "
+"den till den nya platsen:"
 
 #: xml/release-notes.xml:369(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
@@ -302,7 +315,7 @@ msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:370(para)
 msgid "If that is not the case, instead do:"
-msgstr ""
+msgstr "Om inte, gör så här i stället:"
 
 #: xml/release-notes.xml:373(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
@@ -310,7 +323,7 @@ msgstr "mv /var/cache/* /mnt/var/cache/"
 
 #: xml/release-notes.xml:376(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
-msgstr ""
+msgstr "Alternativt, ta bort <filename>/mnt/var/cache.old</filename>:"
 
 #: xml/release-notes.xml:379(command)
 msgid "rm -rf /mnt/var/cache.old"
@@ -318,7 +331,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 
 #: xml/release-notes.xml:382(para)
 msgid "Unmount the subvolume from the temporary mount point:"
-msgstr ""
+msgstr "Avmontera undervolymen från den temporära monteringspunkten:"
 
 #: xml/release-notes.xml:385(command) xml/release-notes.xml:505(screen)
 msgid "umount /mnt"
@@ -495,16 +508,22 @@ msgid "Some printing filters and back-ends were moved from the <literal>cups</li
 msgstr "Några printerfilter och \"back-ends\" är flyttade från paketet <literal>cups</literal> till <literal>cups-filters</literal>."
 
 #: xml/release-notes.xml:594(para)
-#, fuzzy
 #| msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</link>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</link>)."
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
-msgstr "Några konfigurationsalternativ är flyttade från <literal>cupsd.conf</literal> till <literal>cups-files.conf</literal> (se <link href=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</link>, CVE-2012-5519, och <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</link>)."
+msgstr ""
+"Några konfigurationsalternativ är flyttade från <literal>cupsd.conf</literal>"
+" till <literal>cups-files.conf</literal> (se <link href=\""
+"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, och <link href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 
 #: xml/release-notes.xml:603(para)
-#, fuzzy
 #| msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</link> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</link>)."
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\"/> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
-msgstr "CUPS banners och CUPS testsidan är flyttade från <literal>cups</literal> paketet till <literal>cups-filters</literal> (se <link href=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</link> och <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</link>)."
+msgstr ""
+"CUPS banners och CUPS testsidan är flyttade från <literal>cups</literal> "
+"paketet till <literal>cups-filters</literal> (se <link href=\""
+"http://www.cups.org/str.php?L4120\"/> och <link href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 
 #. bnc#809347
 #: xml/release-notes.xml:653(title)
