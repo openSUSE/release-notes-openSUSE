@@ -3,9 +3,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-10-21 10:53+0200\n"
-"PO-Revision-Date: 2016-10-20 16:53+0000\n"
+"PO-Revision-Date: 2016-10-23 15:29+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
+"notes-opensuse/leap_42_2/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -192,109 +193,118 @@ msgstr "<package>ungifsicle</package>：已被 <package>gifsicle</package> 取�
 
 #: xml/release-notes.xml:283(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
-msgstr ""
+msgstr "<package>xchat</package>：已被 <package>hexchat</package> 取代。"
 
 #: xml/release-notes.xml:292(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
-msgstr ""
+msgstr "<filename>/var/cache</filename> 將在獨立的子卷 (subvolume) 中進行快照及回復"
 
 #: xml/release-notes.xml:293(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
+"<filename>/var/cache</filename> 包含了許多非常暫存性的資料，例如在每次升級時暫存不同版本 RPM 套件的 Zypper "
+"快取。於是為了要儲存這個大部分是重復且暫存性質的資料，快照所要佔用的磁碟空間會非常快速地增加。"
 
 #: xml/release-notes.xml:300(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr ""
+"要解決這個問題，我們將 <filename>/var/cache</filename> 移到一個獨立的子卷。在一個乾淨安裝的 openSUSE Leap "
+"42.2 系統上，系統會自動處理。若要轉換現有的 root 檔案系統，請執行下列步驟："
 
 #: xml/release-notes.xml:308(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
+"找出 root 檔案系統的裝置名稱 (例如 <filename>/dev/sda2</filename> 或是 "
+"<filename>/dev/sda3</filename>)："
 
 #: xml/release-notes.xml:313(command)
 msgid "df /"
-msgstr ""
+msgstr "df /"
 
 #: xml/release-notes.xml:316(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr ""
+"找出所有子卷的父子卷。若是安裝 openSUSE 13.2，該子卷名稱為 <filename>@</filename>。要檢查是否您有一個 "
+"<filename>@</filename> 子卷，使用以下指令："
 
 #: xml/release-notes.xml:322(command)
 msgid "btrfs subvolume list / | grep '@'"
-msgstr ""
+msgstr "btrfs subvolume list / | grep '@'"
 
 #: xml/release-notes.xml:323(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
+"若該指令未輸出任何訊息，表示您沒有名稱為 <filename>@</filename> 的子卷。在這個情況下，您可以使用 ID 為 5 的子卷。"
+"這是過去舊版本的 openSUSE 所使用的子卷。"
 
 #: xml/release-notes.xml:330(para)
 msgid "Now mount the requisite subvolume."
-msgstr ""
+msgstr "現在就來掛載需要的子卷。"
 
 #: xml/release-notes.xml:335(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
-msgstr ""
+msgstr "若您有 <filename>@</filename> 子卷，掛載該子卷到一個暫時的掛載點："
 
 #: xml/release-notes.xml:339(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 
 #: xml/release-notes.xml:342(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
-msgstr ""
+msgstr "若您沒有 <filename>@</filename> 子卷，請改掛載 ID 為 5 的子卷："
 
 #: xml/release-notes.xml:346(command)
-#, fuzzy
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
-msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
+msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:351(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
+"<filename>/mnt/var/cache</filename> 可能已經存在且與 <filename>/var/cache</filename> "
+"指向相同的目錄。要避免資料遺失，請移動它："
 
 #: xml/release-notes.xml:356(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
-msgstr ""
+msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
 #: xml/release-notes.xml:359(para)
 msgid "Create a new subvolume:"
-msgstr ""
+msgstr "產生一個新的子卷："
 
 #: xml/release-notes.xml:362(command)
 msgid "btrfs subvol create /mnt/var/cache"
-msgstr ""
+msgstr "btrfs subvol create /mnt/var/cache"
 
 #: xml/release-notes.xml:365(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
-msgstr ""
+msgstr "若之前有移動舊資料到 <filename>/var/cache.old</filename>，將它移到新的位置："
 
 #: xml/release-notes.xml:369(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
-msgstr ""
+msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:370(para)
 msgid "If that is not the case, instead do:"
-msgstr ""
+msgstr "若不是，則執行："
 
 #: xml/release-notes.xml:373(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
-msgstr ""
+msgstr "mv /var/cache/* /mnt/var/cache/"
 
 #: xml/release-notes.xml:376(para)
-#, fuzzy
 #| msgid "And update <filename>/etc/resolv.conf</filename>:"
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
-msgstr "並且更新 <filename>/etc/resolv.conf</filename>："
+msgstr "作為可選擇的步驟，將 <filename>/mnt/var/cache.old</filename> 移除："
 
 #: xml/release-notes.xml:379(command)
 msgid "rm -rf /mnt/var/cache.old"
-msgstr ""
+msgstr "rm -rf /mnt/var/cache.old"
 
 #: xml/release-notes.xml:382(para)
 msgid "Unmount the subvolume from the temporary mount point:"
-msgstr ""
+msgstr "自暫時的掛載點卸載該子卷："
 
 #: xml/release-notes.xml:385(command) xml/release-notes.xml:505(screen)
 msgid "umount /mnt"
