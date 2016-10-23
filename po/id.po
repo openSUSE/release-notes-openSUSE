@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Indonesian (release-notes-openSUSE)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-25 03:15-0500\n"
-"PO-Revision-Date: 2016-10-06 15:54+0000\n"
-"Last-Translator: Panji Yudha <akangstress12@gmail.com>\n"
+"PO-Revision-Date: 2016-10-23 16:52+0000\n"
+"Last-Translator: M. Edwin Zakaria <medwin@opensuse.org>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/id/>\n"
 "Language: id\n"
@@ -130,66 +130,87 @@ msgstr ""
 
 #: xml/release-notes.xml:184(title)
 msgid "Network Interface Names"
-msgstr ""
+msgstr "Nama Antarmuka Jaringan"
 
 #: xml/release-notes.xml:185(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr ""
+"Ketika melakukan peningkatan versi terhadap mesin jarak jauh dari openSUSE "
+"13.2, pastikan antarmuka jaringan Anda dinamakan dengan tepat."
 
 #: xml/release-notes.xml:189(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr ""
+"openSUSE 13.2 menggunakan apa yang disebut nama antarmuka jaringan yang "
+"terprediksi (sebagai contoh, <literal>enp5s0</literal>), sedangkan openSUSE "
+"Leap 42.1 menggunakan nama antarmuka tetap (<literal>eth0</literal>). "
+"Setelah pengingkatan versi dan menyalakan ulang, nama antarmuka jaringan "
+"dapat berubah. Hal ini dapat mengunci anda keluar dari sistem. Untuk "
+"menghindari antarmuka dari dinamai ulang, jalankan perintah berikut untuk "
+"setiap antarmuka jaringan sebelum Anda menyalakan ulang sistem:"
 
 #: xml/release-notes.xml:198(replaceable)
 msgid "enp5s0"
-msgstr ""
+msgstr "enp5s0"
 
 #: xml/release-notes.xml:198(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
+"/usr/lib/udev/udev-generate-persistent-rule -v "
+"-c<placeholder-1/>-n<placeholder-2/> -o /etc/udev/rules.d/70-persistent-"
+"net.rules"
 
 #: xml/release-notes.xml:200(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr ""
+"Ganti <replaceable>enp5s0</replaceable> dengan nama antarmuka jaringan Anda."
 
 #: xml/release-notes.xml:207(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
-msgstr ""
+msgstr "Btrfs: Kebocoran Ruang Penyimpan setelah Rollbacks Sistem"
 
 #: xml/release-notes.xml:208(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr ""
+"openSUSE 13.2 menggunakan sebuah tata letak partisi Btrfs yang memungkinkan "
+"ruang diska digunakan secara permanen oleh konten rusak yang tidak dapat "
+"diakses setelah rollback sistem pertama dieksekusi.. Tata letak ini telah "
+"diperbaiki di openSUSE Leap 42.1. Walaupun demikian, perbaikan hanya dapat "
+"diterapkan ke sistem yang baru dipasang."
 
 #: xml/release-notes.xml:215(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr ""
+"Jika Anda meningkatkan versi dari openSUSE 13.2, Anda tidak dapat "
+"mengkonversi ke tata letak baru, tetapi Anda dapat memperoleh kembali ruang "
+"penyimpanan yang hilang."
 
 #: xml/release-notes.xml:221(para)
 msgid "Mount the initial root filesystem:"
-msgstr ""
+msgstr "Tautkan sistem berkas root awal:"
 
 #: xml/release-notes.xml:224(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-msgstr ""
+msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
 #: xml/release-notes.xml:224(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
-msgstr ""
+msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:227(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
-msgstr ""
+msgstr "Buang semua berkas di bawah /mnt yang tidak berada di dalam subvolume:"
 
 #: xml/release-notes.xml:230(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr ""
+msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:233(para)
 msgid "Umount the filesystem again:"
-msgstr ""
+msgstr "Lepas/umount sistem berkas lagi:"
 
 #: xml/release-notes.xml:236(screen)
 #: xml/release-notes.xml:322(command)
@@ -220,11 +241,11 @@ msgstr ""
 
 #: xml/release-notes.xml:265(title)
 msgid "Printing System: Improvements and Incompatible Changes"
-msgstr ""
+msgstr "Sistem Cetak: Perbaikan dan Perubahan tidak Kompatibel"
 
 #: xml/release-notes.xml:268(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr ""
+msgstr "Versi CUPS ditingkatkan ke 1.7"
 
 #: xml/release-notes.xml:270(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
@@ -233,6 +254,9 @@ msgstr ""
 #: xml/release-notes.xml:277(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
+"PDF saat ini merupakan format baku pencetakan tidak lagi PS. Karenanya mesin "
+"cetak PostScript tradisional sekarang juga membutuhkan sebuah filter "
+"penggerak/driver untuk mencetak."
 
 #: xml/release-notes.xml:282(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
@@ -241,6 +265,13 @@ msgstr ""
 #: xml/release-notes.xml:290(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"Protokol penemuan mesin cetak jaringan telah diubah. Cara asli untuk "
+"menemukan mesin cetak jaringan sekarang berdasarkan penemuan layanan DNS "
+"(DNS-SD, itulah, melalui Avahi). Layanan <literal>cups-browsed</literal> "
+"dari paket <literal>cups-filter</literal> dapat digunakan untuk menjembatani "
+"protokol lama dan baru. <literal>cupsd</literal> dan <literal>cups-"
+"browsed</literal> keduanya harus berjalan agar membuat klien \"lama/legacy\" "
+"menemukan mesin cetak (termasuk LibreOffice dan KDE)."
 
 #: xml/release-notes.xml:303(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
@@ -249,23 +280,30 @@ msgstr ""
 #: xml/release-notes.xml:309(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr ""
+"Agar dapat mencetak ke server lama, versi protokol IPP harus disebutkan "
+"secara jelas dengan menambahkan<literal>/version=1.1</literal> ke:"
 
 #: xml/release-notes.xml:316(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"Pengaturan <literal>ServerName</literal> dalam <literal>client.conf</literal>"
+" (sebagai contoh, <literal>ServerName "
+"older.server.example.com/version=1.1</literal>)."
 
 #: xml/release-notes.xml:324(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
+msgstr "Nilai variabel lingkungan <literal>CUPS_SERVER</literal>."
 
 #: xml/release-notes.xml:330(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
+"Nilai nama server dari pilihan <literal>-h</literal> pada perkakas baris "
+"perintah, sebagai contoh:"
 
 #: xml/release-notes.xml:334(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr ""
+msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
 #: xml/release-notes.xml:340(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
