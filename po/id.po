@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Indonesian (release-notes-openSUSE)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-25 03:15-0500\n"
-"PO-Revision-Date: 2016-10-23 22:22+0000\n"
+"PO-Revision-Date: 2016-10-24 22:21+0000\n"
 "Last-Translator: M. Edwin Zakaria <medwin@opensuse.org>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/id/>\n"
@@ -48,6 +48,9 @@ msgstr ""
 #: xml/release-notes.xml:51(para)
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
 msgstr ""
+"Jika anda melakukan peningkatan dari versi yang lama ke versi openSUSE Leap "
+"ini, lihatlah catatan rilis sebelumnya di <link href=\""
+"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
 
 #: xml/release-notes.xml:90(title)
 #: xml/release-notes.xml:79(title)
@@ -64,10 +67,16 @@ msgstr "Instalasi Sistem Minimal"
 #: xml/release-notes.xml:105(para)
 msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
 msgstr ""
+"Dalam rangka menghindari  beberapa paket rekomendasi besar dipasang pola "
+"instalasi minimal menggunakan pola lain yang konflik dengan paket yang tidak "
+"diinginkan. Pola tersebut dapat dibuang setelah instalasi, pola tersebut "
+"bernama <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
 
 #: xml/release-notes.xml:112(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
 msgstr ""
+"Perlu dicatat bahwa instalasi minimal secara default tidak mengaktifkan "
+"firewall. Kalau anda membutuhkannya, instal <literal>SuSEfirewall2</literal>"
 
 #: xml/release-notes.xml:120(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -88,6 +97,17 @@ msgstr ""
 #: xml/release-notes.xml:129(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr ""
+"<emphasis>Background:</emphasis> Beberapa firmware UEFI mengandung bug yang "
+"dapat menyebabkan kerusakan UEFI boot jika terlalu banyak data yang "
+"dituliskan ke dalam area penyimpanan UEFI. Walaupun demikian, tidak ada "
+"seorangpun yang mengetahui secara jelas seberapa banyak \"terlalu banyak\" "
+"itu. openSUSE meminimalkan resiko dengan tidak menulis lebih dari kebutuhan "
+"minimum yang dibutuhkan untuk mem-boot sistem operasi. Minimum di sini "
+"maksudnya memberitahukan ke UEFI firmware lokasi dari boot loader openSUSE. "
+"Kernel Linux hulu yang menggunakan area penyimpanan UEFI untuk menyimpan "
+"informasi boot dan kegagalan (<literal>pstore</literal>) secara default di "
+"non-aktifkan. Bagaimanapun juga sangat direkomendasikan untuk memperbarui "
+"firmware sesuai yang dianjurkan oleh vendor perangkat keras."
 
 # bnc#850056
 #. bnc#850056
@@ -108,14 +128,28 @@ msgstr ""
 #: xml/release-notes.xml:153(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
+"Sebagai tambahan, spesifikasi UEFI juga memungkinkan partisi cara lama MBR "
+"(MS-DOS). Boot loader Linux (ELILO atau GRUB 2) akan mencoba untuk membuat "
+"secara otomatis sebuah GUID untuk partisi cara lama tersebut, dan "
+"menuliskannya ke dalam firmware. GUID seperti itu akan sering kali berubah, "
+"sehingga mengakibatkan penulisan ulang pada firmware. Penulisan ulang "
+"terdiri dari dua cara yang berbeda: membuang entri lama dan membuat sebuah "
+"entri baru untuk menggantikannya."
 
 #: xml/release-notes.xml:162(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
+"Firmaware masa kini memiliki pengumpul sampah (garbage collector) yang "
+"mengumpulkan entri-entri yang telah dihapus dan membersihakn memori dari "
+"entri lama tersebut. Masalah timbul ketika firmware yang rusak tidak "
+"mengumpulkan dan membersihkan entri-entri tersebut. Hal ini dapat "
+"mengakibatkan sistem tidak dapat di-boot."
 
 #: xml/release-notes.xml:168(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr ""
+"Pemecahannya sederhana: ubah partisi lama MBR menjadi bentuk baru GPT untuk "
+"menghindari masalah ini secara lengkap."
 
 #: xml/release-notes.xml:181(title)
 #: xml/release-notes.xml:163(title)
@@ -129,19 +163,22 @@ msgstr "Umum"
 
 #: xml/release-notes.xml:191(title)
 msgid "Non-Oss Repository"
-msgstr ""
+msgstr "Repositori Non-Oss"
 
 #: xml/release-notes.xml:192(para)
 msgid "After the installation the non-oss repository is disabled"
-msgstr ""
+msgstr "Setelah pemasangan non-oss repository tidak diaktiffkan"
 
 #: xml/release-notes.xml:193(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
+"Aktifkan repositori <literal>openSUSE-Leap-42.1-Non-Oss</literal> "
+"menggunakan YaST atau pada baris perintah menggunakan zypper: <screen>zypper "
+"mr -e repo-non-oss</screen>"
 
 #: xml/release-notes.xml:203(title)
 msgid "Technical"
-msgstr ""
+msgstr "Teknikal"
 
 #. sort_key="None"; non-rn-fate-cats="";
 #: xml/release-notes.xml:208(title)
@@ -155,6 +192,8 @@ msgstr "Versi CUPS ditingkatkan ke 1.7"
 #: xml/release-notes.xml:213(para)
 msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 msgstr ""
+"CUPS &gt; =1.6 memiliki perubahan yang tidak kompatibel dibanding dengan "
+"CUPS sampai dengan versi 1.5.4 khususnya ketika mencetak melalui network:"
 
 #: xml/release-notes.xml:214(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
