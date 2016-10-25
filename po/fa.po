@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-09-16 15:19+0200\n"
-"PO-Revision-Date: 2016-10-25 08:40+0000\n"
+"PO-Revision-Date: 2016-10-25 20:09+0000\n"
 "Last-Translator: hayyan rostami <hayyan71@yahoo.com>\n"
 "Language-Team: Persian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/fa/>\n"
@@ -44,9 +44,17 @@ msgstr ""
 "عامل Windows 8 از پیش نصب شده نشانگر سیستمی است که از بوت UEFI استفاده میکند."
 
 #: xml/release-notes.xml:110(para)
-#, fuzzy
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
-msgstr "<emphasis> پیش زمینه: </emphasis> ب"
+msgstr ""
+"<emphasis> پیش زمینه: </emphasis> برخی فریم ور های UEFI دارای باگی هستند که "
+"در صورت آنکه اطلاعات زیادی بر روی مکان ذخیره سازی UEFI نوشته شود، بشکند. "
+"البته کسی واقعا نمیداند \"چقدر\" است. openSUSE با نوشتن حداقل میزان کافی "
+"برای بوت سیستم عامل ریسک را به حداقل میرساند. حداقل به این معناست که به فریم "
+"ور UEFI در ارتباط با مکان بوت لودر openSUSEگفته شود . نسخه های جدیدتر هسته ی "
+"لینوکس دارای این ویژگی که از مکان ذخیره سازی UEFI برای ذخیره ی بوت و اطلاعات "
+"توقف ناگهانی  (<literal>pstore</literal>) استفاده شود را غیرفعال کرده اند. "
+"با این وجود، توصیه میشود که به روزرسانی های فریم ور سخت افزاری که فروشنده ی "
+"آن پیشنهاد میکند را نصب کنید."
 
 #. bnc#850056
 #: xml/release-notes.xml:127(title)
@@ -56,14 +64,28 @@ msgstr "پارتیشن های UEFI،GPT و MS-DOS"
 #: xml/release-notes.xml:128(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
+"به همراه مشخصات EFI/UEFI، یک شیوه ی جدید پارتیشن بندی آمده است: GPT (جدول "
+"پارتیشن بندی GUID). این شمای جدید از شناسه های منحصر به فرد (مقادیر 128-بیت "
+"در 32 رقم هگزدسیمال نمایش داده میشوند) برای شناسایی دستگاهها و انواع پارتیشن "
+"استفاده میکند."
 
 #: xml/release-notes.xml:134(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
+"به علاوه، UEFI همچنین پارتیشن بندی MBR موروثی (MS-DOS) را مجاز میکند. بوت "
+"لودر های لینوکس (ELILO یا GRUB2) سعی میکنند به صورت اتوماتیک یک GUID برای ان "
+"پارتیشن های موروثی تولید کنند و آنها را در فریم ور بنویسند. این GUID میتواند "
+"بارها تغییر کند، که باعث نوشته شدن مجدد در فریمور میشود. نوشتار مجدد شامل دو "
+"عملیات مختلف است: حذف ورودی های قدیمی و ساخت ورودی های جدید که جایگزین ورودی "
+"اول میشود."
 
 #: xml/release-notes.xml:143(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
+"فریم ور های امروزی دارای قسمت جمع آور داده ناخواسته هستند که ورودی های حذف "
+"شده را جمع آوری کرده و حافظه ی رزرو شده برای ورودی حای قدیمی را آزاد میکند. "
+"در زمانی که فریم ور معیوب آن ورودی ها را جمع آوری و آزاد نمیکند، یک مشکل رخ "
+"میدهد; این ممکن است باعث شود سیستم غیر قابل بوت شود."
 
 #: xml/release-notes.xml:149(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
@@ -82,6 +104,10 @@ msgstr "سیستم با پارتیشن رمزنگاری شده ی LUKS بوت ن
 #: xml/release-notes.xml:170(para)
 msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 msgstr ""
+"در برخی موارد، Plymouth اعلان رمز عبور را به درستی نمایش نمیدهد. برای رفع "
+"این مشکل، <literal>plymouth.enable=0</literal> را به خط فرمان هسته اضافه "
+"کنید. همچنین <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"966255\"/> را مطالعه کنید."
 
 #: xml/release-notes.xml:180(title)
 msgid "Technical"
@@ -111,42 +137,77 @@ msgstr ""
 #: xml/release-notes.xml:197(para)
 msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> for details."
 msgstr ""
+"برای اطلاعات بیشتر <ulink url=\"http://en.opensuse.org/Concepts_printing\""
+">http://en.opensuse.org/Concepts_printing</ulink> را مطالعه کنید."
 
 #: xml/release-notes.xml:203(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"پروتکل کاوش چاپگر شبکه تغییر کرده است. روش بومی برای یافتن پرینتر های شبکه "
+"هم اکنون بر پایه ی کاوش سرویس دی ان اس (DNS-SD, مثلا از طریق Avahi) است. "
+"سرویس <literal>cups-browse</literal> از بسته ی <literal>cups-"
+"filters</literal> می تواند برای رابط بین پروتکل های جدید و قدیمی استفاده "
+"شود. هم <literal>cupsd</literal> و <literal>cups-browsed</literal> نیاز به "
+"راه اندازی دارند تا سرویس گیرنده های \"legacy\" قادر به یافتن پرینتر ها "
+"باشند (از جمله لیبره آفیس و KDE)."
 
 #: xml/release-notes.xml:217(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)."
 msgstr ""
+"نسخه ی پیش فرض پروتکل IPP از 1.1 به 2.0 تغییر کرده است. سرور های قدیمی تر "
+"IPP مانند CUPS 1.3.x (برای مثال در SUSE Linux Enteprise 11) درخواستهای IPP "
+"2.0 را با \"Bad Request\" بازگشت میدهند. ( <ulink url=\""
+"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>"
+" را ببینید)."
 
 #: xml/release-notes.xml:223(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
 msgstr ""
+"برای اینکه بتوان به سرور های قدیمی تر چاپ کرد، نسخه ی پروتکل IPP باید با "
+"افزودن '/version=1.1' به هردو صریحا مشخص شود"
 
 #: xml/release-notes.xml:231(para)
 msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
 msgstr ""
+"تنظیمات <literal>ServerName</literal> در <literal>client.conf</literal> ( به "
+"عنوان مثال، <literal>ServerName "
+"older.server.example.com/version=1.1</literal>)"
 
 #: xml/release-notes.xml:236(para)
 msgid "the <literal>CUPS_SERVER</literal> environment variable value"
-msgstr ""
+msgstr "مقادیر متغیر های محیطی <literal>CUPS_SERVER</literal>"
 
 #: xml/release-notes.xml:240(para)
 msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
 msgstr ""
+"مقدار سرور در اختیار <literal>-h</literal> در ابزارهای فرمان متنی مانند "
+"<screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
 
 #: xml/release-notes.xml:249(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
 msgstr ""
+"برخی پالایش های چاپ و back-end ها از بسته ی <literal>cups</literal> به بسته "
+"ی <literal>cups-filters</literal> جا به جا شده اند"
 
 #: xml/release-notes.xml:255(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgstr ""
+"برخی رهنمود های پیکربندی از <literal>cupsd.conf</literal> در <literal>cups-"
+"files.conf</literal> تقسیم شده اند. ( <ulink url=\""
+"http://www.cups.org/str.php?L4223\""
+">http://www.cups.org/str.php?L4223</ulink>، CVE-2012-5519 ، و <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:264(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 msgstr ""
+"علامت های CUPS و صفحه ی آزمایشی CUPS از بسته ی <literal>cups</literal> بسته "
+"ی <literal>cups-filters</literal> جا به جا شده اند. (<ulink url=\""
+"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink>"
+" و <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404 </ulink> را مطالعه "
+"کنید)."
 
 #. bnc#809347
 #: xml/release-notes.xml:286(title)
@@ -173,6 +234,8 @@ msgstr "&lt;FILENAME&gt;. نام فایل است."
 #: xml/release-notes.xml:298(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr ""
+"پرونده ی <filename>ChangeLog</filename> در بالاترین مسیر DVD برای بررسی "
+"گزارش تمامی تغییرات اعمال شده در بسته های به روز شده را مطالعه کنید."
 
 #: xml/release-notes.xml:302(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
@@ -201,4 +264,4 @@ msgstr "تیم openSUSE."
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: xml/release-notes.xml:0(None)
 msgid "translator-credits"
-msgstr ""
+msgstr "تیم ترجمه ی فارسی اوپن سوزا - 1395"
