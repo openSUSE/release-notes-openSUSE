@@ -13,14 +13,16 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-21 10:53+0200\n"
-"PO-Revision-Date: 2016-09-26 20:29+0000\n"
-"Last-Translator: Mariusz Fik <fisiu@opensuse.org>\n"
-"Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/pl/>\n"
+"PO-Revision-Date: 2016-10-25 20:15+0000\n"
+"Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
+"Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.6\n"
 
 #: xml/release-notes.xml:15(title) xml/release-notes.xml:32(component)
@@ -30,7 +32,7 @@ msgstr "Informacje o bieżącej wersji"
 
 #: xml/release-notes.xml:17(releaseinfo)
 msgid "@VERSION@"
-msgstr ""
+msgstr "@VERSION@"
 
 #: xml/release-notes.xml:18(productname)
 msgid "openSUSE Leap"
@@ -41,8 +43,13 @@ msgid "42.2"
 msgstr "42.2"
 
 #: xml/release-notes.xml:22(para)
+#, fuzzy
 msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
 msgstr ""
+"openSUSE Leap to otwarty bazujący na Linuxie system operacyjny na twojego PC-"
+"ta, laptop lub serwer. Możesz serfować po sieci , zarządzać pocztą e-mail "
+"oraz zdjęciami, wykonywać pracę biurową, grać w gry wideo, odtwarzać muzykę  "
+"i mieć mnóstwo zabawy!"
 
 #: xml/release-notes.xml:30(url)
 msgid "https://bugzilla.suse.com/enter_bug.cgi"
@@ -97,12 +104,20 @@ msgid "Minimal System Installation"
 msgstr "Instalacja"
 
 #: xml/release-notes.xml:92(para)
+#, fuzzy
 msgid "To avoid some big recommended packages from being installed, the pattern for minimal installations uses another pattern that creates conflicts with undesired packages. This pattern, <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed after installation."
 msgstr ""
+"Aby uniknąć instalacji niektórych dużych paczek, wzorzec (pattern) "
+"minimalnej instalacji wykorzystuje inny wzorzec, który tworzy konflikt z "
+"niechcianymi paczkami. Ten wzorzec, <literal>patterns-openSUSE-minimal_base-"
+"conflicts</literal>, może być usunięty po zakończeniu instalacji."
 
 #: xml/release-notes.xml:99(para)
+#, fuzzy
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr ""
+"Zauważ że minimalna instalacji nie zawiera domyślnie firewalla. Jeżeli jest "
+"on wymagany, zainstaluj <literal>SuSEfirewall2</literal>."
 
 #: xml/release-notes.xml:106(title)
 #, fuzzy
@@ -115,8 +130,12 @@ msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified E
 msgstr "Przed zainstalowaniem openSUSE na komputerze wykorzystującym interfejs UEFI (Unified Extensible Firmware Interface) bezwzględnie zaleca się sprawdzenie dostępności aktualizacji firmware rekomendowanych przez producenta sprzętu oraz ich zainstalowanie. Preinstalowany system Windows 8 może wskazywać, że dany komputer wykorzystuje UEFI."
 
 #: xml/release-notes.xml:115(para)
+#, fuzzy
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. However, there is no clear data of how much is <quote>too much</quote>."
 msgstr ""
+"<emphasis>Wyjaśnienie:</emphasis> Zdarza się, że firmware interfejsu UEFI "
+"zawiera błędy, które powodują niepoprawne działanie, gdy zbyt duża ilość "
+"danych jest zapisywana w buforze UEFI. Nie wiadomo jak dużo to \"za dużo\"."
 
 #: xml/release-notes.xml:120(para)
 #, fuzzy
@@ -125,12 +144,18 @@ msgstr "<emphasis>Wyjaśnienie:</emphasis> Zdarza się, że firmware interfejsu 
 
 #. bnc#850056
 #: xml/release-notes.xml:134(title)
+#, fuzzy
 msgid "UEFI, GPT, and MS-DOS Partitions"
-msgstr ""
+msgstr "UEFI, GPT oraz partycje MS_DOS"
 
 #: xml/release-notes.xml:135(para)
+#, fuzzy
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
+"Wraz z specyfikacją EFI/UEFI, powstał nowy styl partycjonowania: GPT(GUID "
+"Partition Table). Ten nowy schemat wykorzystuje globalnie unikalne "
+"identyfikatory(128-bitowe wartości wyświetlane w formie 32 cyfr "
+"szesnastkowych) do identyfikacji urządzeń oraz typów partycji."
 
 #: xml/release-notes.xml:141(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces the first one."
