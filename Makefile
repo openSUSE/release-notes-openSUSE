@@ -81,20 +81,24 @@ po/%.po: release-notes.pot
 # those using sed. However, that is more like a last resort here. What we really
 # need is a docbook5 mode for xml2po. Issues are:
 # * need to use xml:lang (instead of lang)
-# * need to use link xlink:href (link href)
-# * need to handle dm: tags (preferrably just ignore them)
-# last sed is just to fix translations of @VERSION@ (would be nice to exclude
-# that too, though)
+# * need to use link xlink:href (link href, occasionally also ulink url and
+#   mixtures because of old translations)
+# * need to handle dm: tags (right they are just removed)
+# Finally:
+# * fix translations of @VERSION@ (would be nice to exclude that too, though)
+# * Remove trailing spaces in the translated files (because they are ugly and
+#   unpredictable)
 xml/release-notes.%.xml: po/%.po xml/release-notes.ent xml/release-notes.xml
 	xml2po --expand-all-entities -p $< -o $@ xml/release-notes.xml;
-	sed -i -r -e 's_(<article [^>]*)xml:lang="en"_\1_' \
+	sed -i -r \
+	  -e 's_(<article [^>]*)xml:lang="en"_\1_' \
 	  -e 's_(<article [^>]*)lang=_\1xml:lang=_' \
-	  -e 's_<(ulink url|link href)=_<link xlink:href=_g' \
-	  $@
-	sed -i -r -e '/^ *<dm:docmanager.*$$/,/^ *<\/dm:docmanager>.*$$/d' \
-	  $@
-	sed -i -r -e "s_<releaseinfo>[^>]+>_<releaseinfo>$(VERSION)</releaseinfo>_" \
-	  $@
+	  -e 's_<(ulink|link) (xlink:)?(href|url)=_<link xlink:href=_g' \
+	  -e '/^ *<dm:docmanager.*$$/,/^ *<\/dm:docmanager>.*$$/d' \
+	  -e "s_<releaseinfo>[^>]+>_<releaseinfo>$(VERSION)</releaseinfo>_" \
+	  -e 's_\s+$$__' \
+	  $@;
+	  daps -m $@ validate
 
 translatedxml: xml/release-notes.ent xml/release-notes.xml $(XML_FILES)
 	cp xml/release-notes.xml xml/release-notes.en.xml
