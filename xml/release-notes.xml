@@ -158,37 +158,35 @@
    </para>
   </section>
 
-  <!-- Commented away for the moment - final solution is not completely clear
-  yet. bsc#1005323 -->
-  <!--<section xml:id="sec.123.nouveau">
+  <!-- bsc#1005323 -->
+  <section xml:id="sec.123.nouveau">
    <title>Nouveau 3D/DRI Driver Disabled by Default</title>
    <para>
-    With &opensuseleap; &version;, the Nouveau DRI/3D driver is considered
-    experimental. Among other issues, some KDE applications no longer start
-    when this driver is in use. For more information, see the bug report at
-    <link xlink:href="https://bugs.freedesktop.org/show_bug.cgi?id=91632"/>.
+    With &opensuseleap; &version;, the Nouveau Mesa/DRI driver for 2D/3D
+    rendering is considered experimental. Note that this does not affect the
+    support statuses of the Nouveau kernel/KMS driver or the Nouveau
+    X.org/DDX driver for 2D rendering.
    </para>
    <para>
-    We decided to move this driver into a separate package called
-    <package>mesa-dri-nouveau</package> which is not installed by default.
-    Therefore, with default settings, there is no hardware 3D acceleration
+    When the Nouveau Mesa/DRI driver is in use, some third-party Qt
+    applications may no longer start. This driver is now packaged separately,
+    as <package>Mesa-dri-nouveau</package>. This means, when necessary, it
+    can be removed without removing all of Mesa.
+   </para>
+   <para>
+    When this package is not installed, there is no hardware 3D acceleration
     support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs
     that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D
-    are still available, as is 2D acceleration via EXA on Kepler and earlier
-    generation GPUs. 3D operations are supported via software rendering.
+    are still available, as is 2D acceleration via EXA on GPUs from the
+    Nvidia GPU generation code-named Kepler (introduced in 2012) and earlier.
+    3D operations are supported via software rendering.
    </para>
    <para>
-    We recommend either keeping the default settings or switching to Nvidia's
-    proprietary driver. To use the proprietary driver, install it from
-    the community repository available in the YaST
-    <guimenu>Software Repositories</guimenu> module.
+    For more information, see the bug reports at
+    <link xlink:href="https://bugs.freedesktop.org/show_bug.cgi?id=91632"/>
+    and <link xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=1005323"/>.
    </para>
-   <para>
-    If you need fast 2D/3D support but are not interested in installing the
-    proprietary Nvidia driver, you can install the Nouveau driver package at
-    your own risk.
-   </para>
-  </section>-->
+  </section>
 
  </section>
 
