@@ -15,9 +15,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-27 16:01+0200\n"
-"PO-Revision-Date: 2016-08-24 09:35+0000\n"
-"Last-Translator: Nick Mantas <nmantas.archery@gmail.com>\n"
-"Language-Team: Greek <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/el/>\n"
+"PO-Revision-Date: 2016-10-27 18:03+0000\n"
+"Last-Translator: alexandros Vennos <alexandros.venn@gmail.com>\n"
+"Language-Team: Greek <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_42_2/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -179,11 +180,11 @@ msgstr ""
 
 #: xml/release-notes.xml:202(title)
 msgid "Upgrading from openSUSE Leap 42.1"
-msgstr ""
+msgstr "Αναβάθμιση απο openSUSE Leap 42.1"
 
 #: xml/release-notes.xml:205(title)
 msgid "Removed and Replaced Packages"
-msgstr ""
+msgstr "Διαγραφή και Αντικατάσταση Πακέτων"
 
 #: xml/release-notes.xml:206(para)
 msgid "The following packages have been removed or replaced compared to openSUSE Leap 42.1:"
@@ -204,18 +205,24 @@ msgstr ""
 #: xml/release-notes.xml:230(para)
 msgid "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
 msgstr ""
+"<package>emerillon</package>: Αντικαταστάθηκε από <package>gnome-"
+"maps</package>."
 
 #: xml/release-notes.xml:236(para)
 msgid "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</package>."
 msgstr ""
+"<package>gnome-system-log</package>: Αντικαταστάθηκε από <package>gnome-"
+"logs</package>."
 
 #: xml/release-notes.xml:242(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
-msgstr ""
+msgstr "<package>hawk</package>: Αντικαταστάθηκε από <package>hawk2</package>."
 
 #: xml/release-notes.xml:247(para)
 msgid "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
 msgstr ""
+"<package>ksnapshot</package>: Αντικαταστάθηκε από "
+"<package>spectacle</package>."
 
 #: xml/release-notes.xml:253(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
@@ -223,7 +230,7 @@ msgstr ""
 
 #: xml/release-notes.xml:262(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
-msgstr ""
+msgstr "<package>psi</package>: Αντικαταστάθηκε από <package>psi+</package>."
 
 #: xml/release-notes.xml:267(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
@@ -236,10 +243,13 @@ msgstr ""
 #: xml/release-notes.xml:281(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr ""
+"<package>ungifsicle</package>: Αντικαταστάθηκε από "
+"<package>gifsicle</package>."
 
 #: xml/release-notes.xml:287(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr ""
+"<package>xchat</package>: Αντικαταστάθηκε από <package>hexchat</package>."
 
 #: xml/release-notes.xml:296(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
@@ -259,7 +269,7 @@ msgstr ""
 
 #: xml/release-notes.xml:317(command)
 msgid "df /"
-msgstr ""
+msgstr "df /"
 
 #: xml/release-notes.xml:320(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
@@ -267,7 +277,7 @@ msgstr ""
 
 #: xml/release-notes.xml:326(command)
 msgid "btrfs subvolume list / | grep '@'"
-msgstr ""
+msgstr "btrfs subvolume list / | grep '@'"
 
 #: xml/release-notes.xml:327(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
@@ -315,7 +325,7 @@ msgstr ""
 
 #: xml/release-notes.xml:373(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
-msgstr ""
+msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:374(para)
 msgid "If that is not the case, instead do:"
@@ -340,8 +350,9 @@ msgid "Unmount the subvolume from the temporary mount point:"
 msgstr ""
 
 #: xml/release-notes.xml:389(command) xml/release-notes.xml:509(screen)
+#, fuzzy
 msgid "umount /mnt"
-msgstr ""
+msgstr "umount /mnt"
 
 #: xml/release-notes.xml:392(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
@@ -354,8 +365,9 @@ msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
 msgstr "Συνδέστε την υποκατάτμηση όπως διευκρινίζεται στο /etc/fstab:"
 
 #: xml/release-notes.xml:404(command)
+#, fuzzy
 msgid "mount /var/cache"
-msgstr ""
+msgstr "mount /var/cache"
 
 #: xml/release-notes.xml:410(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
@@ -366,8 +378,9 @@ msgid "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synapti
 msgstr ""
 
 #: xml/release-notes.xml:417(para)
+#, fuzzy
 msgid "Starting with Leap 42.2:"
-msgstr ""
+msgstr "Ξεκινώντας με το Leap 42.2:"
 
 #: xml/release-notes.xml:422(para)
 #, fuzzy
@@ -388,12 +401,14 @@ msgid "Unless you are using a Synaptics touchpad and have a large amount of cust
 msgstr ""
 
 #: xml/release-notes.xml:444(command)
+#, fuzzy
 msgid "sudo zypper rm xf86-input-synaptics"
-msgstr ""
+msgstr "sudo zypper rm xf86-input-synaptics"
 
 #: xml/release-notes.xml:449(title)
+#, fuzzy
 msgid "Upgrading from openSUSE 13.2"
-msgstr ""
+msgstr "Αναβάθμιση από openSUSE 13.2"
 
 #: xml/release-notes.xml:450(para)
 msgid "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure to also review the information provided in <xref linkend=\"sec.upgrade.421\"/>."
@@ -413,8 +428,9 @@ msgid "openSUSE 13.2 used so-called predictable network interface names (for exa
 msgstr ""
 
 #: xml/release-notes.xml:471(replaceable)
+#, fuzzy
 msgid "enp5s0"
-msgstr ""
+msgstr "enp5s0"
 
 #: xml/release-notes.xml:471(screen)
 #, no-wrap
@@ -457,9 +473,9 @@ msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr ""
 
 #: xml/release-notes.xml:503(screen)
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr ""
+msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:506(para)
 msgid "Umount the filesystem again:"
@@ -590,7 +606,8 @@ msgstr ""
 "Κώστας Μπουκουβάλας quantis@hellug.gr, 2007\n"
 "Ευστάθιος Ιωσηφίδης iosifidis@opensuse.org 2011, 2012, 2013\n"
 "Κώστας Κουδάρας warlordfff@opensuse.org 2011\n"
-"Νίκος Μαντάς nmantas@aol.com 2015"
+"Νίκος Μαντάς nmantas@aol.com 2015\n"
+"Αλέξανδρος Βέννος alexandros.venn@gmail.com 2015"
 
 #~ msgid "General"
 #~ msgstr "Γενικά"
