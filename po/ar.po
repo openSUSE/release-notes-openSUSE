@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2016-10-27 14:26+0200\n"
+"POT-Creation-Date: 2016-10-27 16:01+0200\n"
 "PO-Revision-Date: 2016-10-27 07:52+0000\n"
 "Last-Translator: mohammad alhargan <malham1@gmail.com>\n"
 "Language-Team: Arabic <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/ar/>\n"
@@ -203,358 +203,364 @@ msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: استبدلت <package>hawk2</package>."
 
 #: xml/release-notes.xml:247(para)
+#, fuzzy
+#| msgid "<package>psi</package>: Replaced by <package>psi+</package>."
+msgid "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
+msgstr "<package>psi</package>: استبدل <package>psi+</package>."
+
+#: xml/release-notes.xml:253(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
 msgstr "<package>labplot</package>: تم استبدال Labplot إلى إصدار Qt5 المسمى <package>labplot-kf5</package>. إذا كنت ترقي من أوبن سوزي Leap 42.1 مثبت على<package>labplot</package> ستتلقى <package>labplot-kf5</package> تلقائياً."
 
-#: xml/release-notes.xml:256(para)
+#: xml/release-notes.xml:262(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr "<package>psi</package>: استبدل <package>psi+</package>."
 
-#: xml/release-notes.xml:261(para)
+#: xml/release-notes.xml:267(para)
 msgid "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</package>. Purely a rename, not a version upgrade - a virtually identical drop-in replacement."
 msgstr "<package>python-moin</package>: استبدلت <package>moinmoin-wiki</package>. إعادة تسمية فقط، وليس ترقية نسخة - وهو مطابق تقريبا للنسخة السابقة."
 
-#: xml/release-notes.xml:268(para)
+#: xml/release-notes.xml:274(para)
 msgid "<package>seamonkey</package>: Source code no longer compiles. If you were a Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird instead."
 msgstr "<package>seamonkey</package>: الشفرة المصدر لم يتم تجميعها. إذا كنت تستخدم Seamonkey سابقا، حول إلى موزيلا فايرفوكس وموزيلا ثندربيرد بدلا من ذلك."
 
-#: xml/release-notes.xml:275(para)
+#: xml/release-notes.xml:281(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr "<package>ungifsicle</package>: استبدلت <package>gifsicle</package>."
 
-#: xml/release-notes.xml:281(para)
+#: xml/release-notes.xml:287(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr "<package>xchat</package>: استبدلت <package>hexchat</package>."
 
-#: xml/release-notes.xml:290(title)
+#: xml/release-notes.xml:296(title)
 msgid "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback"
 msgstr "<filename>/var/cache</filename> على وحدة تخزين الفرعية الخاصة بلقطة والاستعادة"
 
-#: xml/release-notes.xml:291(para)
+#: xml/release-notes.xml:297(para)
 msgid "<filename>/var/cache</filename> contains a lot of very volatile data, such as the Zypper cache with RPM packages in different versions for each update. As a result of storing data that is mostly redundant but highly volatile, the amount of disk space a snapshot occupies can increase very fast."
 msgstr "<filename>/var/cache</filename> يحتوي على الكثير من البيانات متقلبة جدا، مثل ذاكرة التخزين المؤقت Zypper وحزم RPM في إصدارات مختلفة لكل تحديث. ونتيجة لتخزين البيانات التي هي في معظمها زائدة عن الحاجة ولكن متقلبة للغاية، ستستهلك لقطة مساحة القرص بشكل سريع جدا."
 
-#: xml/release-notes.xml:298(para)
+#: xml/release-notes.xml:304(para)
 msgid "To solve this, move <filename>/var/cache</filename> to a separate subvolume. On fresh installations of openSUSE Leap 42.2, this is done automatically. To convert an existing root file system, perform the following steps:"
 msgstr "لحل هذه المشكلة، حول <filename>/var/cache</filename> ‘لى حجم فرعي مفصول لتثبيتجديد من أوبن سوزي Leap 42.2, وهذا لا يتم تلقائياً. لتحويل نظام الملفات الجذر الموجودة، قم بالخطوات التالية:"
 
-#: xml/release-notes.xml:306(para)
+#: xml/release-notes.xml:312(para)
 msgid "Find out the device name (for example, <filename>/dev/sda2</filename> or <filename>/dev/sda3</filename>) of the root file system:"
 msgstr "أعثر على اسم الجهاز (كمثال, <filename>/dev/sda2</filename> أو <filename>/dev/sda3</filename>) لملفات المستخدم الجذر:"
 
-#: xml/release-notes.xml:311(command)
+#: xml/release-notes.xml:317(command)
 msgid "df /"
 msgstr ""
 
-#: xml/release-notes.xml:314(para)
+#: xml/release-notes.xml:320(para)
 msgid "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 installations, this is a subvolume named <filename>@</filename>. To check if you have a <filename>@</filename> subvolume, use:"
 msgstr "تحديد الحجم الفرعية الأم لكافة وحدات التخزين الفرعية الأخرى. لأوبن سوزي 13.2، هذا هو اسم الحجم الفرعي<filename>@</filename>. لتتأكد من أنك تستخدم <filename>@</filename> حجم فرعي، استخدم:"
 
-#: xml/release-notes.xml:320(command)
+#: xml/release-notes.xml:326(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr "قائمة الحجم الفرعي btrfs / | grep '@'"
 
-#: xml/release-notes.xml:321(para)
+#: xml/release-notes.xml:327(para)
 msgid "If the output of this command is empty, you do not have a subvolume named <filename>@</filename>. In that case, you may be able to proceed with subvolume ID 5 which was used in older versions of openSUSE."
 msgstr "إذا كانت مخرجات هذا الأمر فارغة، فليس لديك حجم فرعي مسمى <filename>@</filename>. في هذه الحالة، قد تكون قادراً على المضي قدما استخدام الحجم الفرعي ID 5 الذي تم استخدامه في الإصدارات القديمة من أوبن سوزي."
 
-#: xml/release-notes.xml:328(para)
+#: xml/release-notes.xml:334(para)
 msgid "Now mount the requisite subvolume."
 msgstr "الآن توصيل الحجم الفرعي المطلوب."
 
-#: xml/release-notes.xml:333(para)
+#: xml/release-notes.xml:339(para)
 msgid "If you have a <filename>@</filename> subvolume, mount that subvolume to a temporary mount point:"
 msgstr "إذا كان لديك حجم فرعي <filename>@</filename>وصل الحجم الفرعي كنقطة توصيل مؤقتة:"
 
-#: xml/release-notes.xml:337(command)
+#: xml/release-notes.xml:343(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "توصيل &lt;root_device&gt; -o subvol=@ /mnt"
 
-#: xml/release-notes.xml:340(para)
+#: xml/release-notes.xml:346(para)
 msgid "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 instead:"
 msgstr "إذا كنت لا تملك الحجم الفرعي <filename>@</filename>  وصل الحجم الفرعي ID 5 بدلاً منه:"
 
-#: xml/release-notes.xml:344(command)
+#: xml/release-notes.xml:350(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "وصل &lt;root_device&gt; -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:349(para)
+#: xml/release-notes.xml:355(para)
 msgid "<filename>/mnt/var/cache</filename> can already exist and could be the same directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr "<filename>/mnt/var/cache</filename>يمكن أن توجد بالفعل ويمكن أن يكون نفس المجلد <filename>/var/cache</filename>. لتجنب فقدان البيانات، حركه:"
 
-#: xml/release-notes.xml:354(command)
+#: xml/release-notes.xml:360(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
-#: xml/release-notes.xml:357(para)
+#: xml/release-notes.xml:363(para)
 msgid "Create a new subvolume:"
 msgstr "إنشاء حجم فرعي جديد:"
 
-#: xml/release-notes.xml:360(command)
+#: xml/release-notes.xml:366(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:363(para)
+#: xml/release-notes.xml:369(para)
 msgid "If there is now a directory <filename>/var/cache.old</filename>, move it to the new location:"
 msgstr "إذا لم يكن هناك مجلد <filename>/var/cache.old</filename>, أنقله إلى موقع جديد:"
 
-#: xml/release-notes.xml:367(command)
+#: xml/release-notes.xml:373(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr ""
 
-#: xml/release-notes.xml:368(para)
+#: xml/release-notes.xml:374(para)
 msgid "If that is not the case, instead do:"
 msgstr "إذا كان هذا ليس هو الحال، القيام بدلا من لك:"
 
-#: xml/release-notes.xml:371(command)
+#: xml/release-notes.xml:377(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr ""
 
-#: xml/release-notes.xml:374(para)
+#: xml/release-notes.xml:380(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "أختياريا، أزل <filename>/mnt/var/cache.old</filename>:"
 
-#: xml/release-notes.xml:377(command)
+#: xml/release-notes.xml:383(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr ""
 
-#: xml/release-notes.xml:380(para)
+#: xml/release-notes.xml:386(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "إلغاء وصل الحجم الفرعي من وجهة التوصيل المؤقتة:"
 
-#: xml/release-notes.xml:383(command) xml/release-notes.xml:503(screen)
+#: xml/release-notes.xml:389(command) xml/release-notes.xml:509(screen)
 msgid "umount /mnt"
 msgstr "إلغاء توصيل /mnt"
 
-#: xml/release-notes.xml:386(para)
+#: xml/release-notes.xml:392(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr "إضافة إدخال إلى <filename>/etc/fstab</filename> للحجم الفرعي <filename>/var/cache</filename> الجديد. استخدم الحجم الفرعي الموجود كقالب لنسخ منه. تأكد من ترك UUID بدون تغيير (UUID نظام الملفات الجذر) وغيير اسم الحجم الفرعي ونقطة التوصيلها إلى <filename>/var/cache</filename>."
 
-#: xml/release-notes.xml:395(para)
+#: xml/release-notes.xml:401(para)
 msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
 msgstr "وصل الحجم الفرعي الجديد على النحو المحدد في  <filename>/etc/fstab</filename>:"
 
-#: xml/release-notes.xml:398(command)
+#: xml/release-notes.xml:404(command)
 msgid "mount /var/cache"
 msgstr "وصل /var/cache"
 
-#: xml/release-notes.xml:404(title)
+#: xml/release-notes.xml:410(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr "سواقة Synaptics X  يمكن أن تؤثر على تجربة استخدام لوحة اللمس تحت جنوم"
 
-#: xml/release-notes.xml:405(para)
+#: xml/release-notes.xml:411(para)
 msgid "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</package>) was installed by default but had a lower priority than the libinput driver (<package>xf86-input-libinput</package>)."
 msgstr "في Leap 42.1, سواقة Synaptics X (حزمة <package>xf86-input-synaptics</package>) تم تثبيت افتراضيا ولكن كان لها أولوية أقل من سواقة libinput (<package>xf86-input-libinput</package>)."
 
-#: xml/release-notes.xml:411(para)
+#: xml/release-notes.xml:417(para)
 msgid "Starting with Leap 42.2:"
 msgstr "الإقلاع مع Leap 42.2:"
 
-#: xml/release-notes.xml:416(para)
+#: xml/release-notes.xml:422(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr "سواقة Synaptics X لم تعد محددة إفتراضياً."
 
-#: xml/release-notes.xml:421(para)
+#: xml/release-notes.xml:427(para)
 msgid "If the Synaptics X driver is installed, it will take precedence for any touchpad devices."
 msgstr "إذا تم تثبيت بسواقة  Synaptics X، ستأخذ الأسبقية لسواقة لوحة اللمس."
 
-#: xml/release-notes.xml:427(para)
+#: xml/release-notes.xml:433(para)
 msgid "The Synaptics X driver is no longer supported by GNOME. This means when the driver is installed, Synaptics touchpads can only be configured to the extent that a basic mouse can."
 msgstr "سواقة Synaptics X لم تعد معتمدة من جنوم. هذا يعني عندما يتم تثبيت سواقة تشغيل، لوحة لمس Synaptics ستعمل فقط إلى الحد الذي علبة الفأرة الأساسي."
 
-#: xml/release-notes.xml:434(para)
+#: xml/release-notes.xml:440(para)
 msgid "Unless you are using a Synaptics touchpad and have a large amount of custom configuration for the Synaptics driver, remove the package from your system:"
 msgstr "فقط إذا كنت تستخدم لوحة لمس Synaptics تحتوي على كمية كبيرة من الإعدادات المخصصة، أزال الحزمة من النظام:"
 
-#: xml/release-notes.xml:438(command)
+#: xml/release-notes.xml:444(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr ""
 
-#: xml/release-notes.xml:443(title)
+#: xml/release-notes.xml:449(title)
 msgid "Upgrading from openSUSE 13.2"
 msgstr "الترقية من أوبن سوزي 13.2"
 
-#: xml/release-notes.xml:444(para)
+#: xml/release-notes.xml:450(para)
 msgid "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure to also review the information provided in <xref linkend=\"sec.upgrade.421\"/>."
 msgstr "تنطبق الملاحظات التالية على الترقية من أوبن سوزي 13.2 أو أقدم. تأكد أيضا من استعراض المعلومات المقدمة في <xref linkend=\"sec.upgrade.421\"/>."
 
-#: xml/release-notes.xml:451(title)
+#: xml/release-notes.xml:457(title)
 msgid "Network Interface Names"
 msgstr "أسماء واجة شبكة الاتصال"
 
-#: xml/release-notes.xml:452(para)
+#: xml/release-notes.xml:458(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr "عند ترقية النظام من أوبن سوزي 13.2 عن بعد، تأكد من تسمية واجهات الشبكة بشكل صحيح."
 
-#: xml/release-notes.xml:456(para)
+#: xml/release-notes.xml:462(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr "أوبن سوزي 13.2 استخدم ما يُعرف بالتنبؤ بأسماء واجهة الشبكة (على سبيل المثال, <literal>enp5s0</literal>), في حين أوبن سوزي Leap 42.1  تستخدم أسماء واجهة الثابتة (<literal>eth0</literal>). بعد الترقية وإعادة التشغيل، قد تتغير أسماء واجهة الشبكة. وهذا يمكن أن يمنعك من دخول للنظام. لتجنب تغيير أسماء واجهات الشبكة، قم بتشغيل الأمر التالي لكل من واجهات الشبكة قبل إعادة تشغيل النظام:"
 
-#: xml/release-notes.xml:465(replaceable)
+#: xml/release-notes.xml:471(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:465(screen)
+#: xml/release-notes.xml:471(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:467(para)
+#: xml/release-notes.xml:473(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr "استبدال <replaceable>enp5s0</replaceable> باسم واجهة الشبكة."
 
-#: xml/release-notes.xml:474(title)
+#: xml/release-notes.xml:480(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: مساحة القرص تقلصت بعد استعادة النظام"
 
-#: xml/release-notes.xml:475(para)
+#: xml/release-notes.xml:481(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr "أوبن سوزي 13.2 استخدم Btrfs قسم التخطيط الذي يسمح باستغلال مساحة القرص بشكل دائم مع الملفات القديمة، هذه الملفات لا يمكن الوصول إليها بعد التراجع عن نظام الأول. تم إصلاح هذه المشكلة في أوبن سوزي 42.1. ومع ذلك، يمكن تطبيق الإصلاح فقط على الأنظمة المثبتة حديثا."
 
-#: xml/release-notes.xml:482(para)
+#: xml/release-notes.xml:488(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
 msgstr "إذا كنت تقوم بالترقية من أوبن سوزي 13.2، لا يمكنك التحويل إلى التصميم الجديد، ولكن يمكنك استعادة مساحة القرص المفقود."
 
-#: xml/release-notes.xml:488(para)
+#: xml/release-notes.xml:494(para)
 msgid "Mount the initial root filesystem:"
 msgstr "توصيل نظام ملفات الجذر الأولية:"
 
-#: xml/release-notes.xml:491(replaceable)
+#: xml/release-notes.xml:497(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
-#: xml/release-notes.xml:491(screen)
+#: xml/release-notes.xml:497(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "توصيل /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:494(para)
+#: xml/release-notes.xml:500(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "إزالة كافة الملفات أدناه  /mnt التي ليست في الحجم الفرعي:"
 
-#: xml/release-notes.xml:497(screen)
+#: xml/release-notes.xml:503(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "ايجاد /mnt -xdev -delete"
 
-#: xml/release-notes.xml:500(para)
+#: xml/release-notes.xml:506(para)
 msgid "Umount the filesystem again:"
 msgstr "الغاء توصيل نظام الملفات مرة أخرى:"
 
-#: xml/release-notes.xml:509(title)
+#: xml/release-notes.xml:515(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "نظام الطباعة: التحسينات والتغييرات غير متوافقة"
 
-#: xml/release-notes.xml:512(emphasis)
+#: xml/release-notes.xml:518(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "ترقية CUPS إلى الإصدار 1.7"
 
-#: xml/release-notes.xml:514(para)
+#: xml/release-notes.xml:520(para)
 msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
 msgstr "مقارنة CUPS 1.5 في أوبن سوزي 13.2 CUPS 1.7 هناك بعض التغييرات الرئيسية التي قد تتطلب تعديل الإعدادات يدوياً."
 
-#: xml/release-notes.xml:521(para)
+#: xml/release-notes.xml:527(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr "صيغة PDF هي الآن صيغة الطباعة القياسية بدلا من PS. لذلك طابعات بوستسكريبت التقليدية بحاجة إلى تعريف جديد للطباعة."
 
-#: xml/release-notes.xml:526(para)
+#: xml/release-notes.xml:532(para)
 msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr "أنظر<link href=\"https://en.opensuse.org/Concepts_printing\"/> للتفاصيل."
 
-#: xml/release-notes.xml:534(para)
+#: xml/release-notes.xml:540(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr "تم تغيير بروتوكول اكتشاف طابعة الشبكة. تعتمد طريقة اكتشاف طابعات الشبكة الآن على اكتشاف خدمة نظام أسماء النطاقات (DNS-SD, ie via Avahi). خدمة تصفح <literal>cups-browsed</literal> عبر <literal>cups-filters</literal> يمكن استخدام الحزم لإعداد بروتكول الربط بين. كلاً من <literal>cupsd</literal> و<literal>cups-browsed</literal> يجب أن يتم تشغيلها لتعمل على اكتشاف عميل \"legacy\" للطابعات (بما في ذلك ليبر أوفيس وكدي)."
 
-#: xml/release-notes.xml:547(para)
+#: xml/release-notes.xml:553(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
 "تم تغيير الإصدار الافتراضي للبروتوكول 1.1  إلى 2.0. IPP القديم مثلCUPS 1.3.x  (في سوزي Enteprise 11) \n"
 "ترفض برسالة  <literal> 1طلب غير صالح</literal> 2 (انظر<link href=\"http://www.cups.org/str.php?L4231\"/>)."
 
-#: xml/release-notes.xml:553(para)
+#: xml/release-notes.xml:559(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr "لتكون قادر على الطباعة للخوادم القديمة يجب تحديد إصدار بروتوكول IPP على اللاحقة  <literal> 1/version=1.1</literal> 2 وإلا:"
 
-#: xml/release-notes.xml:560(para)
+#: xml/release-notes.xml:566(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr "<literal>ServerName</literal> مُعد على <literal>client.conf</literal> (كمثال, <literal>اسم الخادم older.server.example.com/version=1.1</literal>)."
 
-#: xml/release-notes.xml:568(para)
+#: xml/release-notes.xml:574(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "قيمة متغير البيئة <literal> 1CUPS_SERVER</literal> 2"
 
-#: xml/release-notes.xml:574(para)
+#: xml/release-notes.xml:580(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr "قيمة اسم الخادم  <literal> 1-h</literal> 2  خيار أدوات سطر الأوامر، على سبيل المثال:"
 
-#: xml/release-notes.xml:578(screen)
+#: xml/release-notes.xml:584(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:584(para)
+#: xml/release-notes.xml:590(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr "تم نقل بعض مرشحات الطباعة من <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 
-#: xml/release-notes.xml:592(para)
+#: xml/release-notes.xml:598(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 msgstr "تم تقسيم بعض إعدادات التوجيه من <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, و <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 
-#: xml/release-notes.xml:601(para)
+#: xml/release-notes.xml:607(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\"/> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 msgstr "صفحة اختبار الطباعة نقلت من حزم <literal>cups</literal> إلى حزم <literal>cups-filters</literal> انظر(see <link href=\"http://www.cups.org/str.php?L4120\"/> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 
 #. bnc#809347
-#: xml/release-notes.xml:651(title)
+#: xml/release-notes.xml:657(title)
 msgid "More Information and Feedback"
 msgstr "مزيد من المعلومات والعتليقات"
 
-#: xml/release-notes.xml:655(para)
+#: xml/release-notes.xml:661(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "اقرء <filename>ملف المساعدة</filename> على الوسيط."
 
-#: xml/release-notes.xml:660(para)
+#: xml/release-notes.xml:666(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "مشاهدة معلومات مفصلة بالتغييرات حول مجموعة محددة من الحزم:"
 
-#: xml/release-notes.xml:664(replaceable)
+#: xml/release-notes.xml:670(replaceable)
 msgid "FILENAME"
 msgstr "اسم الملف"
 
-#: xml/release-notes.xml:664(screen)
+#: xml/release-notes.xml:670(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:665(para)
+#: xml/release-notes.xml:671(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "غير <replaceable>اسم الملف</replaceable> باسم الحزمة."
 
-#: xml/release-notes.xml:670(para)
+#: xml/release-notes.xml:676(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr "تحقق من ملف <filename>سجل التغيير</filename> في المستوى الأعلى لوسيط التثبيت يعرض السجل الزمني لكافة التغييرات التي تم إجراؤها على الحزم المُحدثة."
 
-#: xml/release-notes.xml:676(para)
+#: xml/release-notes.xml:682(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr "العثور على مزيد من المعلومات في المجلد <filename>وثائق</filename> على وسيط التثبيت."
 
-#: xml/release-notes.xml:682(para)
+#: xml/release-notes.xml:688(para)
 msgid "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated documentation."
 msgstr "<link href=\"https://activedoc.opensuse.org/\"/> يحتوي على وثائق إضافية أو تحديث."
 
-#: xml/release-notes.xml:687(para)
+#: xml/release-notes.xml:693(para)
 msgid "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news from openSUSE."
 msgstr "قم بزيارة <link href=\"https://www.opensuse.org\"/> للحصول على آخر أخبار أوبن سوزي."
 
-#: xml/release-notes.xml:694(para)
+#: xml/release-notes.xml:700(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "حقوق النسخ © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:698(para)
+#: xml/release-notes.xml:704(para)
 msgid "Thanks for using openSUSE."
 msgstr "شكرا لاستخدام أوبن سوزي."
 
-#: xml/release-notes.xml:701(para)
+#: xml/release-notes.xml:707(para)
 msgid "The openSUSE Team."
 msgstr "فريق أوبن سوزي."
 
