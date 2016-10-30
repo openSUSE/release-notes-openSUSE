@@ -3,9 +3,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-10-27 16:01+0200\n"
-"PO-Revision-Date: 2016-10-23 15:29+0000\n"
+"PO-Revision-Date: 2016-10-30 09:42+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
+"notes-opensuse/leap_42_2/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -133,22 +134,29 @@ msgstr "Nouveau 3D/DRI 驅動程式預設將會停用"
 #: xml/release-notes.xml:164(para)
 msgid "With openSUSE Leap 42.2, the Nouveau Mesa/DRI driver for 2D/3D rendering is considered experimental. Note that this does not affect the support statuses of the Nouveau kernel/KMS driver or the Nouveau X.org/DDX driver for 2D rendering."
 msgstr ""
+"Nouveau Mesa/DRI 驅動程式的 2D/3D 繪圖支援在 openSUSE Leap 42.2 下屬於實驗性質。但請注意這並不會影響 "
+"Nouveau kernel/KMS 驅動程式或是 Nouveau X.org/DDX 2D 繪圖的支援狀態。"
 
 #: xml/release-notes.xml:170(para)
 msgid "When the Nouveau Mesa/DRI driver is in use, some third-party Qt applications may no longer start. This driver is now packaged separately, as <package>Mesa-dri-nouveau</package>. This means, when necessary, it can be removed without removing all of Mesa."
 msgstr ""
+"當使用 Nouveau Mesa/DRI 驅動程式時，一些第三方的 Qt 應用程式可能將無法啟動。該驅動程式目前是獨立打包為 <package>Mesa-"
+"dri-nouveau</package> 套件。這表示若有需要，它可以被單獨移除而不需移除整個 Mesa。"
 
 #: xml/release-notes.xml:176(para)
-#, fuzzy
 #| msgid "We decided to move this driver into a separate package called <package>mesa-dri-nouveau</package> which is not installed by default. Therefore, with default settings, there is no hardware 3D rendering support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on Kepler and earlier generation GPUs. 3D operations are supported via software rendering."
 msgid "When this package is not installed, there is no hardware 3D acceleration support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still available, as is 2D acceleration via EXA on GPUs from the Nvidia GPU generation code-named Kepler (introduced in 2012) and earlier. 3D operations are supported via software rendering."
-msgstr "我們決定將驅動程式移入獨立的套件 <package>mesa-dri-nouveau</package>，且預設將不會安裝。故在預設設定下，對於任何 Nvidia GPU 將不會有 3D 繪圖硬體加速支援，且對於使用 Glamor 的新型 Nvidia GPU 也不會有 2D 加速支援。Kernel Mode Setting 與基本的 2D 支援仍可使用，就像過去在 Kepler 與前幾代 GPU 那樣透過 EXA 來支援 2D 加速。3D 繪圖操作由軟體進行。"
+msgstr ""
+"當未安裝該套件時，對於任何 Nvidia GPU 將不會有 3D 繪圖硬體加速支援，且對於使用 Glamor 的新型 Nvidia GPU 也不會有 "
+"2D 加速支援。Kernel Mode Setting 與基本的 2D 支援仍可使用，就像過去在 Kepler (2012 年發布) 與前幾代 GPU "
+"那樣透過 EXA 來支援 2D 加速。3D 繪圖操作由軟體進行。"
 
 #: xml/release-notes.xml:184(para)
-#, fuzzy
 #| msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
 msgid "For more information, see the bug reports at <link href=\"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://bugzilla.suse.com/show_bug.cgi?id=1005323\"/>."
-msgstr "請見 <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">Bug 953778</ulink> 以了解更多細節。"
+msgstr ""
+"請見錯誤報告 <link href=\"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> 與 "
+"<link href=\"https://bugzilla.suse.com/show_bug.cgi?id=1005323\"/> 以了解更多細節。"
 
 #: xml/release-notes.xml:194(title)
 msgid "System Upgrade"
@@ -195,10 +203,9 @@ msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>：已被 <package>hawk2</package> 取代。"
 
 #: xml/release-notes.xml:247(para)
-#, fuzzy
 #| msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgid "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
-msgstr "<package>psi</package>：已被 <package>psi+</package> 取代。"
+msgstr "<package>ksnapshot</package>：已被 <package>spectacle</package> 取代。"
 
 #: xml/release-notes.xml:253(para)
 msgid "<package>labplot</package>: Labplot has been replaced by its Qt5 version, called <package>labplot-kf5</package>. If you are updating from an openSUSE Leap 42.1 installation on which <package>labplot</package> is installed, you will receive the <package>labplot-kf5</package> automatically."
@@ -327,56 +334,63 @@ msgstr "umount /mnt"
 #: xml/release-notes.xml:392(para)
 msgid "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/cache</filename> subvolume. Use an existing subvolume as a template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
+"在 <filename>/etc/fstab</filename> 中替 <filename>/var/cache</filename> "
+"子卷加入新項目。您可以拿現有的子卷設定當模版來複製。請確保不要動到 UUID 的內容 (因為這是 root 檔案系統的 UUID)，"
+"並修改子卷的名稱與掛載點來和 <filename>/var/cache</filename> 的設定一致。"
 
 #: xml/release-notes.xml:401(para)
-#, fuzzy
 #| msgid "Add <literal>0 0</literal> to the end of each new cifs mount line in <filename>/etc/fstab</filename>."
 msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
-msgstr "增加 <literal>0 0</literal> 到 <filename>/etc/fstab</filename> 中每個新增的 cifs 掛載點設定行的後面。"
+msgstr "掛載在 <filename>/etc/fstab</filename> 中設定的新子卷："
 
 #: xml/release-notes.xml:404(command)
 msgid "mount /var/cache"
-msgstr ""
+msgstr "mount /var/cache"
 
 #: xml/release-notes.xml:410(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
-msgstr ""
+msgstr "Synaptics X 驅動程式在 GNOME 環境下可能會降低觸控板使用經驗"
 
 #: xml/release-notes.xml:411(para)
 msgid "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</package>) was installed by default but had a lower priority than the libinput driver (<package>xf86-input-libinput</package>)."
 msgstr ""
+"在 Leap 42.1，Synaptics X 驅動程式 (<package>xf86-input-synaptics</package> 套件) "
+"預設會被安裝，但是其優先權小於 libinput 驅動程式 (<package>xf86-input-libinput</package>)。"
 
 #: xml/release-notes.xml:417(para)
 msgid "Starting with Leap 42.2:"
-msgstr ""
+msgstr "自 Leap 42.2 開始："
 
 #: xml/release-notes.xml:422(para)
 msgid "The Synaptics X driver is no longer installed by default."
-msgstr ""
+msgstr "Synaptics X 驅動程式預設將不會被安裝。"
 
 #: xml/release-notes.xml:427(para)
 msgid "If the Synaptics X driver is installed, it will take precedence for any touchpad devices."
-msgstr ""
+msgstr "一旦安裝 Synaptics X 驅動程式，它將會優先被使用來驅動任何觸控板裝置。"
 
 #: xml/release-notes.xml:433(para)
 msgid "The Synaptics X driver is no longer supported by GNOME. This means when the driver is installed, Synaptics touchpads can only be configured to the extent that a basic mouse can."
 msgstr ""
+"GNOME 環境不再支援 Synaptics X 驅動程式。這意謂著當安裝該驅動程式後，將只能設定 Synaptics 觸控板來做基本的滑鼠操作。"
 
 #: xml/release-notes.xml:440(para)
 msgid "Unless you are using a Synaptics touchpad and have a large amount of custom configuration for the Synaptics driver, remove the package from your system:"
-msgstr ""
+msgstr "除非您正在使用 Synaptics 觸控板且大量使用了 Synaptics 驅動程式才支援的客製化設定，否則請自您的系統移除該套件："
 
 #: xml/release-notes.xml:444(command)
 msgid "sudo zypper rm xf86-input-synaptics"
-msgstr ""
+msgstr "sudo zypper rm xf86-input-synaptics"
 
 #: xml/release-notes.xml:449(title)
 msgid "Upgrading from openSUSE 13.2"
-msgstr ""
+msgstr "自 openSUSE 13.2 升級"
 
 #: xml/release-notes.xml:450(para)
 msgid "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure to also review the information provided in <xref linkend=\"sec.upgrade.421\"/>."
 msgstr ""
+"以下的注意事項適用於從 openSUSE 13.2 或更早版本升級的使用者。請確保您也閱讀了 <xref linkend=\"sec.upgrade."
+"421\"/> 所提供的資訊。"
 
 #: xml/release-notes.xml:457(title)
 msgid "Network Interface Names"
@@ -424,7 +438,7 @@ msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
 #: xml/release-notes.xml:497(screen)
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
@@ -451,30 +465,30 @@ msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS 版本昇級至 1.7"
 
 #: xml/release-notes.xml:520(para)
-#, fuzzy
 #| msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgid "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes that may require manual configuration adjustments."
-msgstr "新版的 CUPS，相較於 1.5 版，導入了一些重大改變，因此需要手動調整設定。"
+msgstr "相較於 openSUSE 13.2 使用的 CUPS 1.5 版，CUPS 1.7 版導入了一些重大改變，因此需要手動調整設定。"
 
 #: xml/release-notes.xml:527(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr "PDF 取代 PS 成為標準的列印工作格式。故傳統的 PostScript 印表機現在需要一個過濾器 (filter) 驅動程式才能進行列印。"
 
 #: xml/release-notes.xml:532(para)
-#, fuzzy
 #| msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</link> for details."
 msgid "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
-msgstr "請見 <link href=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</link>) 以了解更多細節。"
+msgstr "請見 <link href=\"https://en.opensuse.org/Concepts_printing\"/> 以了解更多細節。"
 
 #: xml/release-notes.xml:540(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr "網路印表機探查通訊協定已經改變為基於 DNS Service discovery 協定 (DNS-SD，透過 Avahi 提供)。<literal>cups-filters</literal> 套件提供的 <literal>cups-browsed</literal> 服務可用來橋接舊的與新的通訊協定。<literal>cupsd</literal> 與 <literal>cups-browsed</literal> 需要一起運作才能讓舊的客戶端 (包括 LibreOffice 與 KDE) 能夠發現網路印表機。"
 
 #: xml/release-notes.xml:553(para)
-#, fuzzy
 #| msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
-msgstr "IPP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 的連線要求，並回傳 <literal>Bad Request</literal> (請見 <ulink url=\"http://www.cups.org/str.php?L4231\"/>)。"
+msgstr ""
+"IPP 通訊協定預設版本自 1.1 升級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 "
+"的連線要求，並回傳 <literal>Bad Request</literal> (請見 <link href=\""
+"http://www.cups.org/str.php?L4231\"/>)。"
 
 #: xml/release-notes.xml:559(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
@@ -502,16 +516,21 @@ msgid "Some printing filters and back-ends were moved from the <literal>cups</li
 msgstr "一些列印過濾器和後端已從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。"
 
 #: xml/release-notes.xml:598(para)
-#, fuzzy
 #| msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
-msgstr "一些設定指令已經自 <literal>cupsd.conf</literal> 分離出來，並移到 <literal>cups-files.conf</literal> 設定檔中。請詳見 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> 的說明。"
+msgstr ""
+"一些設定指令已經自 <literal>cupsd.conf</literal> 分離出來，並移到 <literal>cups-"
+"files.conf</literal> 設定檔中。請詳見 <link href=\"http://www.cups.org/str.php?"
+"L4223\"/>、CVE-2012-5519，以及 <link href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/> 的說明。"
 
 #: xml/release-notes.xml:607(para)
-#, fuzzy
 #| msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <link href=\"http://www.cups.org/str.php?L4120\"/> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
-msgstr "CUPS 管理及測試頁面從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。詳情請見 <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> 以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>。"
+msgstr ""
+"CUPS 管理及測試頁面從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件。"
+"詳情請見 <link href=\"http://www.cups.org/str.php?L4120\"/> 以及 <link href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>。"
 
 #. bnc#809347
 #: xml/release-notes.xml:657(title)
@@ -557,7 +576,7 @@ msgstr "請造訪 <link href=\"https://www.opensuse.org\">https://www.opensuse.o
 
 #: xml/release-notes.xml:700(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
-msgstr ""
+msgstr "版權所有 © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
 #: xml/release-notes.xml:704(para)
 msgid "Thanks for using openSUSE."
@@ -575,7 +594,7 @@ msgstr ""
 "Craig Jeffares <cjeffares@novell.com>, 2004\n"
 "Joe Man <trmetal@yahoo.com.hk>, 2001\n"
 "Ray Chen <swyear@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012\n"
-"Ramax Lo <ramaxlo@gmail.com>, 2013, 2014, 2015"
+"Ramax Lo <ramaxlo@gmail.com>, 2013, 2014, 2015, 2016"
 
 #~ msgid "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered experimental, because it does not work together with current multi-threaded KDE applications."
 #~ msgstr "由於 Nouveau DRI/3D 還無法與多執行緒的 KDE 應用程式正常運作，故在 openSUSE Leap 42.2 下仍屬於實驗性質。"
