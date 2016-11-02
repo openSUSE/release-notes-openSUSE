@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2016-11-02 10:22+0100\n"
-"PO-Revision-Date: 2016-11-02 12:35+0000\n"
+"PO-Revision-Date: 2016-11-02 16:38+0000\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/lt/>\n"
@@ -586,11 +586,16 @@ msgid ""
 "UUID) and change the subvolume name and its mount point consistently to "
 "<filename>/var/cache</filename>."
 msgstr ""
+"<filename>/etc/fstab</filename> rinkmenoje įtraukite įrašą apie naują "
+"<filename>/var/cache</filename> potomį. Konfigūraciją galite nukopijuoti nuo "
+"kito potomio. Nekeiskite UUID (tai šakninės rinkmenų sistemos UUID), tačiau "
+"pakeiskite potomio vardą ir prijungimo vietą į "
+"<filename>/var/cache</filename>."
 
 #: xml/release-notes.xml:401(para)
 msgid ""
 "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
-msgstr ""
+msgstr "Prijunkite naują potomį pagal <filename>/etc/fstab</filename>:"
 
 #: xml/release-notes.xml:404(command)
 msgid "mount /var/cache"
@@ -599,6 +604,8 @@ msgstr "mount /var/cache"
 #: xml/release-notes.xml:410(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr ""
+"Synaptics X tvarkyklė gali neveikti sklandžiai naudojant jutiklinį kilimėlį "
+"GNOME aplinkoje"
 
 #: xml/release-notes.xml:411(para)
 msgid ""
@@ -606,6 +613,9 @@ msgid ""
 "package>) was installed by default but had a lower priority than the "
 "libinput driver (<package>xf86-input-libinput</package>)."
 msgstr ""
+"Numatytuoju atveju Leap 42.1 sistemoje buvo įdiegta Synaptics X tvarkyklė "
+"(<package>xf86-input-synaptics</package> paketas), tačiau mažesniu "
+"prioritetu libinput tvarkyklė (<package>xf86-input-libinput</package>)."
 
 #: xml/release-notes.xml:417(para)
 msgid "Starting with Leap 42.2:"
@@ -620,6 +630,7 @@ msgid ""
 "If the Synaptics X driver is installed, it will take precedence for any "
 "touchpad devices."
 msgstr ""
+"Kai įdiegta Synaptics X tvarkyklė, ji perima jutiklinių kilimėlių valdymą."
 
 #: xml/release-notes.xml:433(para)
 msgid ""
@@ -627,12 +638,17 @@ msgid ""
 "driver is installed, Synaptics touchpads can only be configured to the "
 "extent that a basic mouse can."
 msgstr ""
+"Tačiau GNOME nebepalaiko Synaptics X tvarkyklės. Tad jei ši tvarkyklė "
+"įdiegta, Synaptics jutiklinius kilimėlius galite konfigūruoti tik kaip "
+"paprastą pelę."
 
 #: xml/release-notes.xml:440(para)
 msgid ""
 "Unless you are using a Synaptics touchpad and have a large amount of custom "
 "configuration for the Synaptics driver, remove the package from your system:"
 msgstr ""
+"Jei nenaudojate Synaptics jutiklinio kilimėlio ir nenaudojate nuosavos "
+"sudėtingos Synaptics tvarkyklės konfigūracijos, tuomet pašalinkite paketą:"
 
 #: xml/release-notes.xml:444(command)
 msgid "sudo zypper rm xf86-input-synaptics"
@@ -648,6 +664,9 @@ msgid ""
 "to also review the information provided in <xref linkend=\"sec.upgrade.421\"/"
 ">."
 msgstr ""
+"Toliau pateikiamos pastabos naujovinantiems openSUSE 13.2 ar senesnę "
+"sistemą. Be kita ko peržiūrėkite informaciją, pateiktą ties <xref linkend=\""
+"sec.upgrade.421\"/>."
 
 #: xml/release-notes.xml:457(title)
 msgid "Network Interface Names"
@@ -696,7 +715,7 @@ msgstr ""
 
 #: xml/release-notes.xml:480(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
-msgstr ""
+msgstr "Btrfs: prarasta disko vieta po momentinės kopijos grąžinimo"
 
 #: xml/release-notes.xml:481(para)
 msgid ""
@@ -716,6 +735,9 @@ msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
 msgstr ""
+"Jei naujovinate openSUSE 13.2 sistemą, negalėsite konvertuoti rinkmenų "
+"sistemos į naująjį išdėstymą, tačiau galėsite susigrąžinti prarastą disko "
+"vietą."
 
 #: xml/release-notes.xml:494(para)
 msgid "Mount the initial root filesystem:"
@@ -723,7 +745,7 @@ msgstr "Programiškai prijunkite pradinę rinkmenų sistemą:"
 
 #: xml/release-notes.xml:497(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-msgstr ""
+msgstr "&lt;ŠAKNINĖ_RINKMENŲ_SISTEMA&gt;"
 
 #: xml/release-notes.xml:497(screen)
 #, no-wrap
@@ -765,7 +787,7 @@ msgid ""
 "PDF is now the standard print job format rather than PS. Therefore "
 "traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
-"Spausdinimo užduočių formatu tapo PDF; anksčiau buvo PS. Tad tradiciniams "
+"Spausdinimo užduočių formatu tapo PDF, o anksčiau buvo PS. Tad tradiciniams "
 "postskriptiniams spausdintuvams nuo šiol irgi reikės filtro tvarkyklių."
 
 #: xml/release-notes.xml:532(para)
