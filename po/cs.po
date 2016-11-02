@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-02 10:22+0100\n"
-"PO-Revision-Date: 2016-10-19 20:12+0000\n"
+"PO-Revision-Date: 2016-11-02 20:01+0000\n"
 "Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/cs/>\n"
@@ -272,6 +272,10 @@ msgid ""
 "of the Nouveau kernel/KMS driver or the Nouveau X.org/DDX driver for 2D "
 "rendering."
 msgstr ""
+"V openSUSE Leap 42.2 je ovladač Nouveau Mesa/DRI pro 2D/3D vykreslování "
+"považován za experimentální. Můžete si však všimnout, že toto se netýká "
+"stavu podpory jaderného/KMS Nouveau ovladače ani ovladače Nouveau X.org/DDX "
+"pro 2D vykreslování."
 
 #: xml/release-notes.xml:170(para)
 msgid ""
@@ -280,9 +284,12 @@ msgid ""
 "<package>Mesa-dri-nouveau</package>. This means, when necessary, it can be "
 "removed without removing all of Mesa."
 msgstr ""
+"Když se používá ovladač Nouveau Mesa/DRI, některé Qt aplikace třetí strany "
+"nemusí být nadále spustitelné. Tento ovladač je v současnosti balíčkován "
+"zvlášť jako <package>Mesa-dri-nouveau</package>. To znamená, že když je "
+"potřeba, nemůže být odstraněn bez odebrání všech Mesa balíčků."
 
 #: xml/release-notes.xml:176(para)
-#, fuzzy
 #| msgid ""
 #| "We decided to move this driver into a separate package called "
 #| "<package>mesa-dri-nouveau</package> which is not installed by default. "
@@ -299,18 +306,15 @@ msgid ""
 "generation code-named Kepler (introduced in 2012) and earlier. 3D operations "
 "are supported via software rendering."
 msgstr ""
-"Rozhodli jsme se přesunout tento ovladač do zvláštního balíčku nazvaného "
-"<package>mesa-dri-nouveau</package>, který není ve výchozím stavu "
-"nainstalován. Tudíž ve výchozím nastavení není zapnuta podpora 3D "
+"Když není tento balíček nainstalován, pak není zapnuta podpora 3D "
 "vykreslování na žádném grafickém procesoru Nvidia a žádná 2D akcelerace na "
 "novějších grafických procesorech Nvidia, které pro rychlé 2D operace "
 "používají Glamour. Nastavení režimu jádra (KMS) a základní 2D operace jsou "
-"nadále k dispozici, stejně jako je 2D akcelerace pomocí EXA na generaci "
-"Kepler a dřívějších grafických procesorech. 3D operace jsou podporovány díky "
-"softwarovému vykreslování."
+"nadále k dispozici, stejně jako je 2D akcelerace pomocí EXA na grafických "
+"procesorech Nvidia generace pojmenované Kepler (uvedena v roce 2012) a "
+"dřívějších. 3D operace jsou podporovány díky softwarovému vykreslování."
 
 #: xml/release-notes.xml:184(para)
-#, fuzzy
 #| msgid ""
 #| "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 #| "id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
@@ -319,8 +323,9 @@ msgid ""
 "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://bugzilla."
 "suse.com/show_bug.cgi?id=1005323\"/>."
 msgstr ""
-"Pro detaily viz <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+"Pro více podrobností viz hlášení chyb na <link href=\""
+"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> a <link href=\""
+"https://bugzilla.suse.com/show_bug.cgi?id=1005323\"/>."
 
 #: xml/release-notes.xml:194(title)
 msgid "System Upgrade"
@@ -391,10 +396,9 @@ msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: Nahrazen <package>hawk2</package>."
 
 #: xml/release-notes.xml:247(para)
-#, fuzzy
 #| msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgid "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
-msgstr "<package>psi</package>: Nahrazen <package>psi+</package>."
+msgstr "<package>ksnapshot</package>: Nahrazen <package>spectacle</package>."
 
 #: xml/release-notes.xml:253(para)
 msgid ""
@@ -746,7 +750,6 @@ msgstr ""
 "instalovaných systémů."
 
 #: xml/release-notes.xml:488(para)
-#, fuzzy
 #| msgid ""
 #| "If you are upgrading from openSUSE 13.2, you cannot convert the to the "
 #| "new layout, but you can reclaim the lost disk space."
@@ -754,8 +757,8 @@ msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
 msgstr ""
-"Pokud aktualizujete z openSUSE 13.2, nemůžete přejít na nové rozdělení ale "
-"můžete získat zpět ztracené místo."
+"Pokud aktualizujete z openSUSE 13.2, nemůžete souborový systém převést na "
+"nové rozdělení, ale můžete získat zpět ztracené místo."
 
 #: xml/release-notes.xml:494(para)
 msgid "Mount the initial root filesystem:"
