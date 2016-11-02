@@ -160,26 +160,27 @@
 
   <!-- bsc#1005323 -->
   <section xml:id="sec.123.nouveau">
-   <title>Nouveau 3D/DRI Driver Disabled by Default</title>
+   <title>Nouveau 3D/DRI Driver crashes KDE</title>
    <para>
     With &opensuseleap; &version;, the Nouveau Mesa/DRI driver for 2D/3D
-    rendering is considered experimental. Note that this does not affect the
-    support statuses of the Nouveau kernel/KMS driver or the Nouveau
-    X.org/DDX driver for 2D rendering.
+    rendering is considered experimental. The Nouveau kernel/KMS
+    driver and the Nouveau X.org/DDX driver for 2D rendering are
+    still considered to be ok.
    </para>
    <para>
-    When the Nouveau Mesa/DRI driver is in use, some third-party Qt
-    applications may no longer start. This driver is now packaged separately,
-    as <package>Mesa-dri-nouveau</package>. This means, when necessary, it
-    can be removed without removing all of Mesa.
+    When the Nouveau Mesa/DRI driver is in use some applications, especially KDE
+    and Qt ones, may crash. The driver is now in a separate package
+    <package>Mesa-dri-nouveau</package>, which can be removed in case or
+    problems.
    </para>
    <para>
-    When this package is not installed, there is no hardware 3D acceleration
-    support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs
-    that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D
-    are still available, as is 2D acceleration via EXA on GPUs from the
-    Nvidia GPU generation code-named Kepler (introduced in 2012) and earlier.
-    3D operations are supported via software rendering.
+    Without the driver here is no hardware 3D acceleration support
+    on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs
+    that use Glamor for fast 2D operations. Kernel Mode Setting and
+    basic 2D are still available, as is 2D acceleration via EXA on
+    GPUs from the Nvidia GPU generation code-named Kepler
+    (introduced in 2012) and earlier. 3D operations are supported
+    via software rendering.
    </para>
    <para>
     For more information, see the bug reports at
