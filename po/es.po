@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-11-02 10:22+0100\n"
-"PO-Revision-Date: 2016-10-26 17:16+0000\n"
+"PO-Revision-Date: 2016-11-03 21:56+0000\n"
 "Last-Translator: jc sl <trcs@gmx.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/es/>\n"
@@ -264,7 +264,7 @@ msgstr "Para solucionar este problema, convierta el disco MBR en GPT."
 
 #: xml/release-notes.xml:163(title)
 msgid "Nouveau 3D/DRI Driver Disabled by Default"
-msgstr ""
+msgstr "El 3D/DRI del controlador nouveau está desactivado por defecto"
 
 #: xml/release-notes.xml:164(para)
 msgid ""
@@ -273,6 +273,10 @@ msgid ""
 "of the Nouveau kernel/KMS driver or the Nouveau X.org/DDX driver for 2D "
 "rendering."
 msgstr ""
+"En openSUSE Leap 42.2, el controlador Mesa/DRI de Nouveau para la "
+"representación 2D/3D se considera experimental. Nótese que esto no afecta al "
+"estado del soporte del controlador del kernel/KMS de Nouveau ni al "
+"controlador X.org/DDX de Nouveau para la representación 2D."
 
 #: xml/release-notes.xml:170(para)
 msgid ""
@@ -281,6 +285,11 @@ msgid ""
 "<package>Mesa-dri-nouveau</package>. This means, when necessary, it can be "
 "removed without removing all of Mesa."
 msgstr ""
+"Cuando el controlador Mesa/DRI de nouveau está en uso, puede que algunas "
+"aplicaciones Qt de terceros no se inicien. Este controlador se empaqueta "
+"ahora por separado, como <package>Mesa-dri-nouveau</package>. Esto significa "
+"que, cuando sea necesario, se puede eliminar sin tener que eliminar Mesa al "
+"completo."
 
 #: xml/release-notes.xml:176(para)
 msgid ""
@@ -291,9 +300,15 @@ msgid ""
 "generation code-named Kepler (introduced in 2012) and earlier. 3D operations "
 "are supported via software rendering."
 msgstr ""
+"Cuando este paquete no está instalado, no hay aceleración 3D por hardware en "
+"ninguna GPU de Nvidia ni aceleración 2D en las GPU nuevas de Nvidia que usan "
+"Glamor para operaciones 2D rápidas. Aún están disponibles Kernel Mode "
+"Setting y un 2D básico, como también lo está la aceleración 2D mediante EXA "
+"en las GPU de Nvidia de la generación con nombre clave Kepler (presentada en "
+"2012) y anteriores. Las operaciones 3D tienen soporte por medio de la "
+"representación por software."
 
 #: xml/release-notes.xml:184(para)
-#, fuzzy
 #| msgid ""
 #| "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 #| "id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
@@ -302,8 +317,9 @@ msgid ""
 "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://bugzilla."
 "suse.com/show_bug.cgi?id=1005323\"/>."
 msgstr ""
-"Para más detalles, vea <ulink url=\"https://bugzilla.opensuse.org/show_bug."
-"cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+"Para obtener más información, vea los reportes de fallos en <link href=\""
+"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> y <link href=\""
+"https://bugzilla.suse.com/show_bug.cgi?id=1005323\"/>."
 
 # CER: Usamos la misma traducci´on para update y upgrade, y hay que diferenciarlos
 #: xml/release-notes.xml:194(title)
@@ -379,10 +395,10 @@ msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: reemplazado por <package>hawk2</package>."
 
 #: xml/release-notes.xml:247(para)
-#, fuzzy
 #| msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgid "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
-msgstr "<package>psi</package>: reemplazado por <package>psi+</package>."
+msgstr ""
+"<package>ksnapshot</package>: Reemplazado por <package>spectacle</package>."
 
 #: xml/release-notes.xml:253(para)
 msgid ""
@@ -742,7 +758,6 @@ msgstr ""
 "sistema."
 
 #: xml/release-notes.xml:488(para)
-#, fuzzy
 #| msgid ""
 #| "If you are upgrading from openSUSE 13.2, you cannot convert the to the "
 #| "new layout, but you can reclaim the lost disk space."
@@ -750,8 +765,8 @@ msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
 msgstr ""
-"Si está actualizando desde openSUSE 13.2, no puede convertirlo al nuevo "
-"esquema de particionado, pero puede recuperar el espacio de disco perdido."
+"Si está actualizando desde openSUSE 13.2, no puede convertir el sistema de "
+"archivos al nuevo esquema, pero puede recuperar el espacio de disco perdido."
 
 #: xml/release-notes.xml:494(para)
 msgid "Mount the initial root filesystem:"
