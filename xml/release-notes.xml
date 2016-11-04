@@ -618,13 +618,40 @@
  </section>
  </section>
 
-<!-- <section xml:id="general">
+<section xml:id="general">
   <title>General</title>
 
   <para>
     This section lists general issues with &opensuseleap;
     &version; that do not match any other category.
-  </para> -->
+  </para>
+
+  <section xml:id="sec.general.kdepim">
+      <title>KDE Software for Personal Information Management (KDE PIM)</title>
+      <para>
+          &opensuseleap; &version; ships two versions of the KDE PIM
+          (kontact, kmail, etc.) suite: the first is the legacy 4.x
+          version and the second is the one based on KDE Frameworks 5.
+          The former is no longer supported by upstream KDE, but it was
+          kept to not distrupt user workflows.
+      </para>
+      <para>
+          The two versions of KDE PIM are not co-installable. Some software, such as
+          <package>knode</package> requires specifically the legacy 4.x
+          version and will be uninstalled if any package from KDE PIM 5.x
+          (for example <package>kmail5</package> will be installed.
+      </para>
+      <para>
+          It is important to note that KDE PIM 4.x is marked as
+          deprecated, and will be removed in the next version of &opensuseleap;
+      </para>
+      <para>
+          Users are encouraged to switch to the newer 5.x version, keeping
+          in mind that not all settings are migrated at this time (see
+          <link xlink:href="http://bugzilla.opensuse.org/show_bug.cgi?id=1001872"/>)
+      </para>
+
+  </section>
 
   <!-- <section xml:id="sec.general.nonoss">
     <title>Non-Oss Repository</title>
