@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
-"POT-Creation-Date: 2016-11-02 10:22+0100\n"
+"POT-Creation-Date: 2016-11-04 09:21+0100\n"
 "PO-Revision-Date: 2016-11-02 16:49+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation-sk@opensuse.org>\n"
@@ -68,10 +68,10 @@ msgid ""
 "arises. Translated language version can temporarily be incomplete."
 msgstr ""
 "Poznámky k vydaniu sú pod neustálym vývojom. Ak chcete zistiť najnovšie "
-"aktualizácie, pozrite si online verziu na <link href=\""
-"https://doc.opensuse.org/release-notes\"/>. Anglické poznámky k vydaniu sú "
-"aktualizované, kedykoľvek je to potrebné. Preložená jazyková verzia môže byť "
-"dočasne neúplná."
+"aktualizácie, pozrite si online verziu na <link href=\"https://doc.opensuse."
+"org/release-notes\"/>. Anglické poznámky k vydaniu sú aktualizované, "
+"kedykoľvek je to potrebné. Preložená jazyková verzia môže byť dočasne "
+"neúplná."
 
 # Previous Release Notes
 #. Previous Release Notes
@@ -82,8 +82,8 @@ msgid ""
 "openSUSE:Release_Notes\"/>."
 msgstr ""
 "Ak povyšujete zo staršej verzie na toto vydanie openSUSE Leap, pozrite si "
-"predchádzajúce poznámky k vydaniu, ktoré sú uvedené tu: <link href=\""
-"http://en.opensuse.org/openSUSE:Release_Notes\"/>."
+"predchádzajúce poznámky k vydaniu, ktoré sú uvedené tu: <link href=\"http://"
+"en.opensuse.org/openSUSE:Release_Notes\"/>."
 
 #. beta statement
 #: xml/release-notes.xml:64(para)
@@ -93,8 +93,8 @@ msgid ""
 "\"https://www.opensuse.org\"/>."
 msgstr ""
 "<phrase condition=\"beta\">Tento verejný beta test je súčasťou projektu "
-"openSUSE.</phrase>Informácie o projekte sú k dostupné na <link href=\""
-"https://www.opensuse.org\"/>."
+"openSUSE.</phrase>Informácie o projekte sú k dostupné na <link href="
+"\"https://www.opensuse.org\"/>."
 
 #: xml/release-notes.xml:70(para)
 msgid ""
@@ -121,9 +121,9 @@ msgid ""
 "documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/>."
 msgstr ""
 "Táto časť obsahuje poznámky týkajúce sa inštalácie. Podrobné pokyny na "
-"zvýšenie verzie nájdete v dokumentácii na <link href=\"https://doc.opensuse.o"
-"rg/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\""
-"/>."
+"zvýšenie verzie nájdete v dokumentácii na <link href=\"https://doc.opensuse."
+"org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html\"/"
+">."
 
 # https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
@@ -210,8 +210,8 @@ msgid ""
 "identifiers (128-bit values displayed in 32 hexadecimal digits) to identify "
 "devices and partition types."
 msgstr ""
-"Spolu so špecifikáciou UEFI/EFI prišiel nový štýl rozdelenia diskov: GPT ("
-"GUID Partition Table). Táto nová schéma používa globálne jedinečné "
+"Spolu so špecifikáciou UEFI/EFI prišiel nový štýl rozdelenia diskov: GPT "
+"(GUID Partition Table). Táto nová schéma používa globálne jedinečné "
 "identifikátory (128-bitové hodnoty zobrazené ako 32 hexadecimálnych číslic) "
 "pre identifikáciu zariadenia a typov oddielov."
 
@@ -249,15 +249,22 @@ msgstr ""
 "Ak chcete tento problém vyriešiť, zmeňte starší MBR diskový oddiel na GPT."
 
 #: xml/release-notes.xml:163(title)
-msgid "Nouveau 3D/DRI Driver Disabled by Default"
+#, fuzzy
+#| msgid "Nouveau 3D/DRI Driver Disabled by Default"
+msgid "Nouveau 3D/DRI Driver May Crash KDE Applications"
 msgstr "Ovládač Nouveau 3D/DRI je v predvolenom nastavení zakázaný"
 
 #: xml/release-notes.xml:164(para)
+#, fuzzy
+#| msgid ""
+#| "With openSUSE Leap 42.2, the Nouveau Mesa/DRI driver for 2D/3D rendering "
+#| "is considered experimental. Note that this does not affect the support "
+#| "statuses of the Nouveau kernel/KMS driver or the Nouveau X.org/DDX driver "
+#| "for 2D rendering."
 msgid ""
 "With openSUSE Leap 42.2, the Nouveau Mesa/DRI driver for 2D/3D rendering is "
-"considered experimental. Note that this does not affect the support statuses "
-"of the Nouveau kernel/KMS driver or the Nouveau X.org/DDX driver for 2D "
-"rendering."
+"considered experimental. The Nouveau kernel/KMS driver and the Nouveau X.org/"
+"DDX driver for 2D rendering are still considered stable."
 msgstr ""
 "Pre openSUSE Leap 42.2 sa ovládač Nouveau Mesa/DRI pre 2D/3D vykresľovanie "
 "považuje za experimentálny. Treba upozorniť, že to nemá vplyv na význam "
@@ -265,23 +272,37 @@ msgstr ""
 "vykresľovanie."
 
 #: xml/release-notes.xml:170(para)
+#, fuzzy
+#| msgid ""
+#| "When the Nouveau Mesa/DRI driver is in use, some third-party Qt "
+#| "applications may no longer start. This driver is now packaged separately, "
+#| "as <package>Mesa-dri-nouveau</package>. This means, when necessary, it "
+#| "can be removed without removing all of Mesa."
 msgid ""
-"When the Nouveau Mesa/DRI driver is in use, some third-party Qt applications "
-"may no longer start. This driver is now packaged separately, as "
-"<package>Mesa-dri-nouveau</package>. This means, when necessary, it can be "
-"removed without removing all of Mesa."
+"When the Nouveau Mesa/DRI driver is in use, some applications may crash, "
+"especially KDE and Qt applications. The driver is now in a separate package "
+"called <package>Mesa-dri-nouveau</package>, which can be removed in case of "
+"problems."
 msgstr ""
 "Keď sa ovládač Nouveau Mesa/DRI používa, niektoré Qt aplikácie tretej strany "
-"sa už nemusia spustiť. Tento ovládač je teraz v samostatnom balíku <package"
-">Mesa-dri-nouveau</package>. To znamená, že, ak je to potrebné, môže byť "
-"odstránený bez odstránenia celého Mesa."
+"sa už nemusia spustiť. Tento ovládač je teraz v samostatnom balíku "
+"<package>Mesa-dri-nouveau</package>. To znamená, že, ak je to potrebné, môže "
+"byť odstránený bez odstránenia celého Mesa."
 
 #: xml/release-notes.xml:176(para)
+#, fuzzy
+#| msgid ""
+#| "When this package is not installed, there is no hardware 3D acceleration "
+#| "support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs "
+#| "that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D "
+#| "are still available, as is 2D acceleration via EXA on GPUs from the "
+#| "Nvidia GPU generation code-named Kepler (introduced in 2012) and earlier. "
+#| "3D operations are supported via software rendering."
 msgid ""
-"When this package is not installed, there is no hardware 3D acceleration "
-"support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that "
-"use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are "
-"still available, as is 2D acceleration via EXA on GPUs from the Nvidia GPU "
+"Without this driver installed, there is no hardware 3D acceleration support "
+"on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use "
+"Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still "
+"available, as is 2D acceleration via EXA on GPUs from the Nvidia GPU "
 "generation code-named Kepler (introduced in 2012) and earlier. 3D operations "
 "are supported via software rendering."
 msgstr ""
@@ -293,21 +314,21 @@ msgstr ""
 "2012) a skoršie. 3D operácie sú podporované prostredníctvom softvérového "
 "vykresľovania."
 
-#: xml/release-notes.xml:184(para)
+#: xml/release-notes.xml:185(para)
 msgid ""
 "For more information, see the bug reports at <link href=\"https://bugs."
 "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://bugzilla."
 "suse.com/show_bug.cgi?id=1005323\"/>."
 msgstr ""
-"Podrobnosti nájdete v správe o chybe na <link href=\""
-"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> a <link href=\""
-"https://bugzilla.suse.com/show_bug.cgi?id=1005323\"/>."
+"Podrobnosti nájdete v správe o chybe na <link href=\"https://bugs."
+"freedesktop.org/show_bug.cgi?id=91632\"/> a <link href=\"https://bugzilla."
+"suse.com/show_bug.cgi?id=1005323\"/>."
 
-#: xml/release-notes.xml:194(title)
+#: xml/release-notes.xml:195(title)
 msgid "System Upgrade"
 msgstr "Zvýšenie verzie systému"
 
-#: xml/release-notes.xml:195(para)
+#: xml/release-notes.xml:196(para)
 msgid ""
 "This section lists notes related to upgrading the system. For detailed "
 "upgrade instructions, see the documentation at <link href=\"https://doc."
@@ -315,19 +336,19 @@ msgid ""
 "update.osuse.html\"/>."
 msgstr ""
 "Táto časť obsahuje poznámky týkajúce sa zvýšenia verzie. Podrobné pokyny na "
-"zvýšenie verzie nájdete v dokumentácii na <link href=\"https://doc.opensuse.o"
-"rg/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse."
+"zvýšenie verzie nájdete v dokumentácii na <link href=\"https://doc.opensuse."
+"org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse."
 "html\"/>."
 
-#: xml/release-notes.xml:202(title)
+#: xml/release-notes.xml:203(title)
 msgid "Upgrading from openSUSE Leap 42.1"
 msgstr "Zvýšenie verzie systému z openSUSE Leap 42.1"
 
-#: xml/release-notes.xml:205(title)
+#: xml/release-notes.xml:206(title)
 msgid "Removed and Replaced Packages"
 msgstr "Odstránené a nahradené balíky"
 
-#: xml/release-notes.xml:206(para)
+#: xml/release-notes.xml:207(para)
 msgid ""
 "The following packages have been removed or replaced compared to openSUSE "
 "Leap 42.1:"
@@ -335,13 +356,13 @@ msgstr ""
 "Nasledujúce balíky boli odstránené alebo nahradené v porovnaní s openSUSE "
 "Leap 42.1:"
 
-#: xml/release-notes.xml:212(para)
+#: xml/release-notes.xml:213(para)
 msgid ""
 "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr ""
 "<package>arista</package>: Nahradené s <package>transmageddon</package>."
 
-#: xml/release-notes.xml:217(para)
+#: xml/release-notes.xml:218(para)
 msgid ""
 "<package>cadabra</package>: The source code no longer builds. The successor, "
 "<link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
@@ -349,7 +370,7 @@ msgstr ""
 "<package>cadabra</package>: Zdrojový kód sa už nezostavuje. Nástupca,  <link "
 "href=\"http://cadabra.science/\">Cadabra 2</link> ešte nie je stabilný."
 
-#: xml/release-notes.xml:224(para)
+#: xml/release-notes.xml:225(para)
 msgid ""
 "<package>dropbear</package>: Removed because there are no relevant "
 "advantages over <package>openssh</package>."
@@ -357,29 +378,30 @@ msgstr ""
 "<package>dropbear</package>: Odstránené, pretože neexistujú žiadne významné "
 "výhody oproti <package>openssh</package>."
 
-#: xml/release-notes.xml:230(para)
+#: xml/release-notes.xml:231(para)
 msgid ""
 "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
 msgstr ""
 "<package>emerillon</package>: Nahradené s <package>gnome-maps</package>."
 
-#: xml/release-notes.xml:236(para)
+#: xml/release-notes.xml:237(para)
 msgid ""
 "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</"
 "package>."
 msgstr ""
-"<package>gnome-system-log</package>: Nahradené s <package>gnome-"
-"logs</package>."
+"<package>gnome-system-log</package>: Nahradené s <package>gnome-logs</"
+"package>."
 
-#: xml/release-notes.xml:242(para)
+#: xml/release-notes.xml:243(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: Nahradené s <package>hawk2</package>."
 
-#: xml/release-notes.xml:247(para)
+#: xml/release-notes.xml:248(para)
 msgid "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
-msgstr "<package>ksnapshot</package>: Nahradené s <package>spectacle</package>."
+msgstr ""
+"<package>ksnapshot</package>: Nahradené s <package>spectacle</package>."
 
-#: xml/release-notes.xml:253(para)
+#: xml/release-notes.xml:254(para)
 msgid ""
 "<package>labplot</package>: Labplot has been replaced by its Qt5 version, "
 "called <package>labplot-kf5</package>. If you are updating from an openSUSE "
@@ -391,20 +413,21 @@ msgstr ""
 "inštalácie openSUSE Leap 42.1, na ktorej je <package>labplot</package> "
 "nainštalovaná, dostanete <package>labplot-kf5</package> automaticky."
 
-#: xml/release-notes.xml:262(para)
+#: xml/release-notes.xml:263(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr "<package>psi</package>: Nahradené s <package>psi+</package>."
 
-#: xml/release-notes.xml:267(para)
+#: xml/release-notes.xml:268(para)
 msgid ""
 "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</"
 "package>. Purely a rename, not a version upgrade - a virtually identical "
 "drop-in replacement."
 msgstr ""
-"<package>python-moin</package>: Nahradené s <package>moinmoin-wiki</package>"
-". Len premenovanie, nie zvýšenie verzie - prakticky totožná rýchla náhrada."
+"<package>python-moin</package>: Nahradené s <package>moinmoin-wiki</"
+"package>. Len premenovanie, nie zvýšenie verzie - prakticky totožná rýchla "
+"náhrada."
 
-#: xml/release-notes.xml:274(para)
+#: xml/release-notes.xml:275(para)
 msgid ""
 "<package>seamonkey</package>: Source code no longer compiles. If you were a "
 "Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird "
@@ -414,15 +437,16 @@ msgstr ""
 "predtým používateľ Seamonkey, prejdite radšej na Mozilla Firefox a Mozilla "
 "Thunderbird."
 
-#: xml/release-notes.xml:281(para)
+#: xml/release-notes.xml:282(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
-msgstr "<package>ungifsicle</package>: Nahradené s <package>gifsicle</package>."
+msgstr ""
+"<package>ungifsicle</package>: Nahradené s <package>gifsicle</package>."
 
-#: xml/release-notes.xml:287(para)
+#: xml/release-notes.xml:288(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr "<package>xchat</package>: Nahradené s <package>hexchat</package>."
 
-#: xml/release-notes.xml:296(title)
+#: xml/release-notes.xml:297(title)
 msgid ""
 "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and "
 "Rollback"
@@ -430,7 +454,7 @@ msgstr ""
 "<filename>/var/cache</filename> na vlastnom podzväzku pre snímky a návrat "
 "späť"
 
-#: xml/release-notes.xml:297(para)
+#: xml/release-notes.xml:298(para)
 msgid ""
 "<filename>/var/cache</filename> contains a lot of very volatile data, such "
 "as the Zypper cache with RPM packages in different versions for each update. "
@@ -443,7 +467,7 @@ msgstr ""
 "nadbytočné, ale vysoko premenlivé, môže sa veľmi rýchlo zvýšiť množstvo "
 "miesta na disku, ktoré snímka zaberá."
 
-#: xml/release-notes.xml:304(para)
+#: xml/release-notes.xml:305(para)
 msgid ""
 "To solve this, move <filename>/var/cache</filename> to a separate subvolume. "
 "On fresh installations of openSUSE Leap 42.2, this is done automatically. To "
@@ -454,7 +478,7 @@ msgstr ""
 "chcete previesť existujúci koreňový súborový systém, vykonajte nasledujúce "
 "kroky:"
 
-#: xml/release-notes.xml:312(para)
+#: xml/release-notes.xml:313(para)
 msgid ""
 "Find out the device name (for example, <filename>/dev/sda2</filename> or "
 "<filename>/dev/sda3</filename>) of the root file system:"
@@ -462,11 +486,11 @@ msgstr ""
 "Zistite názov zariadenia (napríklad <filename>/dev/sda2</filename> alebo "
 "<filename>/dev/sda3</filename>) koreňového súborového systému:"
 
-#: xml/release-notes.xml:317(command)
+#: xml/release-notes.xml:318(command)
 msgid "df /"
 msgstr "df /"
 
-#: xml/release-notes.xml:320(para)
+#: xml/release-notes.xml:321(para)
 msgid ""
 "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 "
 "installations, this is a subvolume named <filename>@</filename>. To check if "
@@ -476,11 +500,11 @@ msgstr ""
 "inštalácie openSUSE 13.2 je podzväzok nazvaný <filename>@</filename>. Ak "
 "chcete zistiť, či máte podzväzok <filename>@</filename>, použite:"
 
-#: xml/release-notes.xml:326(command)
+#: xml/release-notes.xml:327(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr "btrfs subvolume list / | grep '@'"
 
-#: xml/release-notes.xml:327(para)
+#: xml/release-notes.xml:328(para)
 msgid ""
 "If the output of this command is empty, you do not have a subvolume named "
 "<filename>@</filename>. In that case, you may be able to proceed with "
@@ -490,11 +514,11 @@ msgstr ""
 "<filename>@</filename>. V tom prípade budete môcť pokračovať s podzväzkom ID "
 "5, ktorý bol použitý v starších verziách openSUSE."
 
-#: xml/release-notes.xml:334(para)
+#: xml/release-notes.xml:335(para)
 msgid "Now mount the requisite subvolume."
 msgstr "Teraz pripojte žiadaný podzväzok."
 
-#: xml/release-notes.xml:339(para)
+#: xml/release-notes.xml:340(para)
 msgid ""
 "If you have a <filename>@</filename> subvolume, mount that subvolume to a "
 "temporary mount point:"
@@ -502,11 +526,11 @@ msgstr ""
 "Ak máte <filename>@</filename> podzväzok, pripojte tento k dočasnému bodu "
 "pripojenia:"
 
-#: xml/release-notes.xml:343(command)
+#: xml/release-notes.xml:344(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 
-#: xml/release-notes.xml:346(para)
+#: xml/release-notes.xml:347(para)
 msgid ""
 "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 "
 "instead:"
@@ -514,11 +538,11 @@ msgstr ""
 "Ak nemáte <filename>@</filename> podzväzok, pripojte \tnamiesto toho "
 "podzväzok ID 5:"
 
-#: xml/release-notes.xml:350(command)
+#: xml/release-notes.xml:351(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:355(para)
+#: xml/release-notes.xml:356(para)
 msgid ""
 "<filename>/mnt/var/cache</filename> can already exist and could be the same "
 "directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
@@ -527,19 +551,19 @@ msgstr ""
 "ako adresár <filename>/var/cache</filename>. Ak chcete zabrániť strate dát, "
 "presuňte ho:"
 
-#: xml/release-notes.xml:360(command)
+#: xml/release-notes.xml:361(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
-#: xml/release-notes.xml:363(para)
+#: xml/release-notes.xml:364(para)
 msgid "Create a new subvolume:"
 msgstr "Vytvorte nový podzväzok:"
 
-#: xml/release-notes.xml:366(command)
+#: xml/release-notes.xml:367(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr "btrfs subvol create /mnt/var/cache"
 
-#: xml/release-notes.xml:369(para)
+#: xml/release-notes.xml:370(para)
 msgid ""
 "If there is now a directory <filename>/var/cache.old</filename>, move it to "
 "the new location:"
@@ -547,35 +571,35 @@ msgstr ""
 "Ak teraz existuje adresár <filename>/var/cache.old</filename>, presuňte ho "
 "do nového umiestnenia:"
 
-#: xml/release-notes.xml:373(command)
+#: xml/release-notes.xml:374(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr "mv /var/cache.old/* /mnt/var/cache"
 
-#: xml/release-notes.xml:374(para)
+#: xml/release-notes.xml:375(para)
 msgid "If that is not the case, instead do:"
 msgstr "Ak tomu tak nie je, namiesto toho urobte:"
 
-#: xml/release-notes.xml:377(command)
+#: xml/release-notes.xml:378(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr "mv /var/cache/* /mnt/var/cache/"
 
-#: xml/release-notes.xml:380(para)
+#: xml/release-notes.xml:381(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "Prípadne môžete odstrániť <filename>/mnt/var/cache.old</filename>:"
 
-#: xml/release-notes.xml:383(command)
+#: xml/release-notes.xml:384(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr "rm -rf /mnt/var/cache.old"
 
-#: xml/release-notes.xml:386(para)
+#: xml/release-notes.xml:387(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Odpojte podzväzok z dočasného bodu pripojenia:"
 
-#: xml/release-notes.xml:389(command) xml/release-notes.xml:509(screen)
+#: xml/release-notes.xml:390(command) xml/release-notes.xml:510(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:392(para)
+#: xml/release-notes.xml:393(para)
 msgid ""
 "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/"
 "cache</filename> subvolume. Use an existing subvolume as a template to copy "
@@ -589,39 +613,39 @@ msgstr ""
 "UUID koreňového súborového systému) a dôsledne zmeňte názov podzväzku a jeho "
 "bod pripojenia na <filename>/var/cache</filename>."
 
-#: xml/release-notes.xml:401(para)
+#: xml/release-notes.xml:402(para)
 msgid ""
 "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
 msgstr ""
 "Pripojte nový podzväzok ako je to uvedené v <filename>/etc/fstab</filename>:"
 
-#: xml/release-notes.xml:404(command)
+#: xml/release-notes.xml:405(command)
 msgid "mount /var/cache"
 msgstr "mount /var/cache"
 
-#: xml/release-notes.xml:410(title)
+#: xml/release-notes.xml:411(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr "Ovládač Synaptics X môže zhoršiť dojem použitia touchpadu pod GNOME"
 
-#: xml/release-notes.xml:411(para)
+#: xml/release-notes.xml:412(para)
 msgid ""
 "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</"
 "package>) was installed by default but had a lower priority than the "
 "libinput driver (<package>xf86-input-libinput</package>)."
 msgstr ""
-"V Leap 42.1 bol ovládač Synaptics X (balík <package>xf86-input-"
-"synaptics</package>)  nainštalovaný v predvolenom nastavení, ale mal nižšiu "
-"prioritu ako ovládač libinput (<package>xf86-input-libinput</package>)."
+"V Leap 42.1 bol ovládač Synaptics X (balík <package>xf86-input-synaptics</"
+"package>)  nainštalovaný v predvolenom nastavení, ale mal nižšiu prioritu "
+"ako ovládač libinput (<package>xf86-input-libinput</package>)."
 
-#: xml/release-notes.xml:417(para)
+#: xml/release-notes.xml:418(para)
 msgid "Starting with Leap 42.2:"
 msgstr "Začína od Leap 42.2:"
 
-#: xml/release-notes.xml:422(para)
+#: xml/release-notes.xml:423(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr "Ovládač Synaptics X už nie je nainštalovaný v predvolenom nastavení."
 
-#: xml/release-notes.xml:427(para)
+#: xml/release-notes.xml:428(para)
 msgid ""
 "If the Synaptics X driver is installed, it will take precedence for any "
 "touchpad devices."
@@ -629,7 +653,7 @@ msgstr ""
 "Keď je nainštalovaný ovládač Synaptics X, bude mať prednosť pre všetky "
 "touchpad zariadenia."
 
-#: xml/release-notes.xml:433(para)
+#: xml/release-notes.xml:434(para)
 msgid ""
 "The Synaptics X driver is no longer supported by GNOME. This means when the "
 "driver is installed, Synaptics touchpads can only be configured to the "
@@ -639,7 +663,7 @@ msgstr ""
 "ovládač nainštalovaný, touchpady Synaptics je možné konfigurovať iba do tej "
 "miery, ako dá základná myš."
 
-#: xml/release-notes.xml:440(para)
+#: xml/release-notes.xml:441(para)
 msgid ""
 "Unless you are using a Synaptics touchpad and have a large amount of custom "
 "configuration for the Synaptics driver, remove the package from your system:"
@@ -647,15 +671,15 @@ msgstr ""
 "Ak nepoužívate Synaptics touchpad a máte veľké množstvo vlastnej "
 "konfigurácie pre ovládač Synaptics, odstráňte balík z vášho systému:"
 
-#: xml/release-notes.xml:444(command)
+#: xml/release-notes.xml:445(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr "sudo zypper rm xf86-input-synaptics"
 
-#: xml/release-notes.xml:449(title)
+#: xml/release-notes.xml:450(title)
 msgid "Upgrading from openSUSE 13.2"
 msgstr "Zvýšenie verzie systému z openSUSE 13.2"
 
-#: xml/release-notes.xml:450(para)
+#: xml/release-notes.xml:451(para)
 msgid ""
 "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure "
 "to also review the information provided in <xref linkend=\"sec.upgrade.421\"/"
@@ -665,11 +689,11 @@ msgstr ""
 "alebo staršie. Uistite sa, že si tiež skontrolovali informácie v <xref "
 "linkend=\"sec.upgrade.421\"/>."
 
-#: xml/release-notes.xml:457(title)
+#: xml/release-notes.xml:458(title)
 msgid "Network Interface Names"
 msgstr "Názvy sieťových rozhraní"
 
-#: xml/release-notes.xml:458(para)
+#: xml/release-notes.xml:459(para)
 msgid ""
 "When upgrading a remote machine from openSUSE 13.2, make sure your network "
 "interfaces are named correctly."
@@ -677,7 +701,7 @@ msgstr ""
 "Pri zvyšovaní verzie vzdialeného systému z openSUSE 13.2 sa uistite, že vaše "
 "sieťové rozhrania sú správne pomenované."
 
-#: xml/release-notes.xml:462(para)
+#: xml/release-notes.xml:463(para)
 msgid ""
 "openSUSE 13.2 used so-called predictable network interface names (for "
 "example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses "
@@ -687,26 +711,24 @@ msgid ""
 "following command for each of your network interfaces before you reboot the "
 "system:"
 msgstr ""
-"openSUSE 13.2 používa takzvané predvídateľné názvy sieťových rozhraní ("
-"napríklad, <literal>enp5s0</literal>), zatiaľ čo openSUSE Leap 42.1 používa "
+"openSUSE 13.2 používa takzvané predvídateľné názvy sieťových rozhraní "
+"(napríklad, <literal>enp5s0</literal>), zatiaľ čo openSUSE Leap 42.1 používa "
 "trvalé názvy rozhraní (<literal>eth0</literal>). Po zvýšení vezie a reštarte "
 "sa teda názvy sieťových rozhraní môžu zmeniť. Toto by vám mohlo zablokovať "
 "prístup k vášmu systému. Na zabránenie zmeny premenovania sieťových rozhraní "
 "spustite nasledovný príkaz pre každé sieťové rozhranie predtým, než "
 "reštartujete systému:"
 
-#: xml/release-notes.xml:471(replaceable)
+#: xml/release-notes.xml:472(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:471(screen)
+#: xml/release-notes.xml:472(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
-msgstr ""
-"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
-"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
+msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:473(para)
+#: xml/release-notes.xml:474(para)
 msgid ""
 "Replace <replaceable>enp5s0</replaceable> with the name of your network "
 "interface."
@@ -714,11 +736,11 @@ msgstr ""
 "Nahraďte <replaceable>enp5s0</replaceable> s názvom vášho sieťového "
 "rozhrania."
 
-#: xml/release-notes.xml:480(title)
+#: xml/release-notes.xml:481(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: Únik miesta disku po spätných zavedeniach systému"
 
-#: xml/release-notes.xml:481(para)
+#: xml/release-notes.xml:482(para)
 msgid ""
 "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to "
 "become permanently occupied with stale, inaccessible contents after the "
@@ -732,10 +754,7 @@ msgstr ""
 "vyriešený v openSUSE 42.1 Leap. Avšak, oprava môže byť použitá len na novo "
 "inštalovaných systémoch."
 
-#: xml/release-notes.xml:488(para)
-#| msgid ""
-#| "If you are upgrading from openSUSE 13.2, you cannot convert the to the "
-#| "new layout, but you can reclaim the lost disk space."
+#: xml/release-notes.xml:489(para)
 msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
@@ -743,41 +762,41 @@ msgstr ""
 "Ak zvyšujete verziu z openSUSE 13.2, nemôžete konvertovať súborový systém na "
 "nové rozloženie, ale môžete získať späť stratené miesto na disku."
 
-#: xml/release-notes.xml:494(para)
+#: xml/release-notes.xml:495(para)
 msgid "Mount the initial root filesystem:"
 msgstr "Pripojiť počiatočný koreňový súborový systém:"
 
-#: xml/release-notes.xml:497(replaceable)
+#: xml/release-notes.xml:498(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
-#: xml/release-notes.xml:497(screen)
+#: xml/release-notes.xml:498(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:500(para)
+#: xml/release-notes.xml:501(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Odstrániť všetky súbory pod /mnt, ktoré nie sú v podzväzku:"
 
-#: xml/release-notes.xml:503(screen)
+#: xml/release-notes.xml:504(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:506(para)
+#: xml/release-notes.xml:507(para)
 msgid "Umount the filesystem again:"
 msgstr "Znovu odpojiť súborový systém:"
 
-#: xml/release-notes.xml:515(title)
+#: xml/release-notes.xml:516(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Tlačový systém: Zlepšenia a nekompatibilné zmeny"
 
-#: xml/release-notes.xml:518(emphasis)
+#: xml/release-notes.xml:519(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS zvýšil verziu na 1.7"
 
-#: xml/release-notes.xml:520(para)
+#: xml/release-notes.xml:521(para)
 msgid ""
 "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes "
 "that may require manual configuration adjustments."
@@ -785,7 +804,7 @@ msgstr ""
 "Nová verzia CUPS 1.7 predstavila niektoré významné zmeny v porovnaní s CUPS "
 "1.5 v openSUSE 13.2, ktoré môžu vyžadovať manuálne nastavenie konfigurácie."
 
-#: xml/release-notes.xml:527(para)
+#: xml/release-notes.xml:528(para)
 msgid ""
 "PDF is now the standard print job format rather than PS. Therefore "
 "traditional PostScript printers now also need a filter driver for printing."
@@ -793,14 +812,14 @@ msgstr ""
 "PDF je dnes štandardný formát tlačové úlohy skôr než PS. Preto tradičné "
 "PostScript tlačiarne teraz tiež potrebujú ovládač filtra pre tlač."
 
-#: xml/release-notes.xml:532(para)
+#: xml/release-notes.xml:533(para)
 msgid ""
 "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr ""
-"Podrobnosti nájdete na <link href=\"https://en.opensuse.org/"
-"Concepts_printing\"/>."
+"Podrobnosti nájdete na <link href=\"https://en.opensuse.org/Concepts_printing"
+"\"/>."
 
-#: xml/release-notes.xml:540(para)
+#: xml/release-notes.xml:541(para)
 msgid ""
 "The network printer discovery protocol has changed. The native method to "
 "discover network printers is now based on DNS Service discovery (DNS-SD, "
@@ -812,13 +831,13 @@ msgid ""
 msgstr ""
 "Sieťový protokol zistenie tlačiarní sa zmenil. Natívna metóda pre zisťovanie "
 "sieťových tlačiarní je teraz založená na  DNS Service discovery (DNS-SD, to "
-"znamená, cez Avahi). Služba <literal>cups-browsed</literal> z balíka <literal"
-">cups-filters</literal> sa môže použiť pre premostenie starých a nových "
-"protokolov. Je potrebné spustiť oba <literal>cupsd</literal> a <literal>cups-"
-"browsed</literal>, aby \"dediční\" klienti zisťovali tlačiarne (čo zahŕňa "
-"LibreOffice a KDE)."
+"znamená, cez Avahi). Služba <literal>cups-browsed</literal> z balíka "
+"<literal>cups-filters</literal> sa môže použiť pre premostenie starých a "
+"nových protokolov. Je potrebné spustiť oba <literal>cupsd</literal> a "
+"<literal>cups-browsed</literal>, aby \"dediční\" klienti zisťovali tlačiarne "
+"(čo zahŕňa LibreOffice a KDE)."
 
-#: xml/release-notes.xml:553(para)
+#: xml/release-notes.xml:554(para)
 msgid ""
 "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers "
 "like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 "
@@ -827,10 +846,10 @@ msgid ""
 msgstr ""
 "Verzia predvoleného IPP protokolu sa zmenila z 1.1 na 2.0. Staršie IPP "
 "servery ako CUPS 1.3.x (napríklad v SUSE Linux Enterprise 11) odmietnu IPP "
-"2.0 požiadavky s <literal>Bad Request</literal> (pozrite si <link href=\""
-"http://www.cups.org/str.php?L4231\"/>)."
+"2.0 požiadavky s <literal>Bad Request</literal> (pozrite si <link href="
+"\"http://www.cups.org/str.php?L4231\"/>)."
 
-#: xml/release-notes.xml:559(para)
+#: xml/release-notes.xml:560(para)
 msgid ""
 "To be able to print to old servers, the IPP protocol version must be "
 "specified explictly by appending <literal>/version=1.1</literal> to either:"
@@ -839,21 +858,21 @@ msgstr ""
 "explicitne špecifikovaná pripojením <literal>/version=1.1</literal> do "
 "niektorého:"
 
-#: xml/release-notes.xml:566(para)
+#: xml/release-notes.xml:567(para)
 msgid ""
 "The <literal>ServerName</literal> settings in <literal>client.conf</literal> "
 "(for example, <literal>ServerName older.server.example.com/version=1.1</"
 "literal>)."
 msgstr ""
-"The <literal>ServerName</literal> nastavenie in "
-"<literal>client.conf</literal> (napríklad, <literal>ServerName "
-"older.server.example.com/version=1.1</literal>)."
+"The <literal>ServerName</literal> nastavenie in <literal>client.conf</"
+"literal> (napríklad, <literal>ServerName older.server.example.com/"
+"version=1.1</literal>)."
 
-#: xml/release-notes.xml:574(para)
+#: xml/release-notes.xml:575(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "Hodnota premennej prostredia <literal>CUPS_SERVER</literal>."
 
-#: xml/release-notes.xml:580(para)
+#: xml/release-notes.xml:581(para)
 msgid ""
 "The server name value of the <literal>-h</literal> option of the command "
 "line tools, for example:"
@@ -861,12 +880,12 @@ msgstr ""
 "Hodnota názvu servera voľby <literal>-h</literal> nástrojov príkazového "
 "riadka, napríklad:"
 
-#: xml/release-notes.xml:584(screen)
+#: xml/release-notes.xml:585(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:590(para)
+#: xml/release-notes.xml:591(para)
 msgid ""
 "Some printing filters and back-ends were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package."
@@ -874,19 +893,19 @@ msgstr ""
 "Niektoré filtre kopírovania a backendy boli presunuté z balíka "
 "<literal>cups</literal> do balíka <literal>cups-filters</literal>."
 
-#: xml/release-notes.xml:598(para)
+#: xml/release-notes.xml:599(para)
 msgid ""
 "Some configuration directives were split from <literal>cupsd.conf</literal> "
 "into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups."
 "org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=789566\"/>)."
 msgstr ""
-"Niektoré konfiguračné direktívy boli oddelené od "
-"<literal>cupsd.conf</literal> do <literal>cups-files.conf</literal> (pozrite "
-"si <link href=\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, a <"
-"link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
+"Niektoré konfiguračné direktívy boli oddelené od <literal>cupsd.conf</"
+"literal> do <literal>cups-files.conf</literal> (pozrite si <link href="
+"\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, a <link href="
+"\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 
-#: xml/release-notes.xml:607(para)
+#: xml/release-notes.xml:608(para)
 msgid ""
 "CUPS banners and the CUPS test page were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package (see <link "
@@ -895,39 +914,96 @@ msgid ""
 msgstr ""
 "CUPS banners a testovacia stránka CUPS boli presunuté z balíka "
 "<literal>cups</literal> do balíka <literal>cups-filters</literal> (pozrite "
-"si <link href=\"http://www.cups.org/str.php?L4120\"/> a <link href=\""
-"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
+"si <link href=\"http://www.cups.org/str.php?L4120\"/> a <link href=\"https://"
+"bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
+
+#: xml/release-notes.xml:623(title)
+msgid "General"
+msgstr "Všeobecné"
+
+#: xml/release-notes.xml:625(para)
+msgid ""
+"This section lists general issues with openSUSE Leap 42.2 that do not match "
+"any other category."
+msgstr ""
+"Táto časť obsahuje všeobecné problémy s openSUSE Leap 42.2, ktoré "
+"nezodpovedajú žiadnej inej kategórii."
+
+#: xml/release-notes.xml:631(title)
+msgid "KDE Software for Personal Information Management (KDE PIM)"
+msgstr ""
+
+#: xml/release-notes.xml:632(para)
+msgid ""
+"openSUSE Leap 42.2 ships two versions of the KDE PIM (Kontact, KMail, etc.) "
+"suite:"
+msgstr ""
+
+#: xml/release-notes.xml:638(para)
+msgid "The legacy 4.x version"
+msgstr ""
+
+#: xml/release-notes.xml:643(para)
+msgid "The version based on KDE Frameworks 5"
+msgstr ""
+
+#: xml/release-notes.xml:648(para)
+msgid ""
+"KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid "
+"disrupting user workflows."
+msgstr ""
+
+#: xml/release-notes.xml:652(para)
+msgid ""
+"The two versions of KDE PIM are not co-installable. Some software, such as "
+"KNode (package <package>knode</package>) require the legacy 4.x version and "
+"will be uninstalled when installing any package from KDE PIM 5.x (for "
+"example, the package <package>kmail5</package>)."
+msgstr ""
+
+#: xml/release-notes.xml:658(para)
+msgid ""
+"KDE PIM 4.x will be removed in the next version of openSUSE Leap. Therefore, "
+"you are encouraged to switch to the newer 5.x version."
+msgstr ""
+
+#: xml/release-notes.xml:662(para)
+msgid ""
+"However, not all settings are migrated from the older version at this time. "
+"For more information, see the bug report at <link href=\"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=1001872\"/>)."
+msgstr ""
 
 # bnc#809347
 #. bnc#809347
-#: xml/release-notes.xml:657(title)
+#: xml/release-notes.xml:697(title)
 msgid "More Information and Feedback"
 msgstr "Ďalšie informácie a spätná väzba"
 
-#: xml/release-notes.xml:661(para)
+#: xml/release-notes.xml:701(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Prečítajte si dokumenty <filename>README</filename> na médiu."
 
-#: xml/release-notes.xml:666(para)
+#: xml/release-notes.xml:706(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Získajte podrobné informácie o zmenách konkrétneho balíka z jeho RPM:"
 
-#: xml/release-notes.xml:670(replaceable)
+#: xml/release-notes.xml:710(replaceable)
 msgid "FILENAME"
 msgstr "FILENAME"
 
-#: xml/release-notes.xml:670(screen)
+#: xml/release-notes.xml:710(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:671(para)
+#: xml/release-notes.xml:711(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>FILENAME</replaceable> s názvom RPM."
 
-#: xml/release-notes.xml:676(para)
+#: xml/release-notes.xml:716(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -936,14 +1012,14 @@ msgstr ""
 "nájdete v súbore <filename>ChangeLog</filename> v najvyššej adresárovej "
 "úrovni média."
 
-#: xml/release-notes.xml:682(para)
+#: xml/release-notes.xml:722(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
 "Ďalšie informácie nájdete na médiu v adresári <filename>docu</filename>."
 
-#: xml/release-notes.xml:688(para)
+#: xml/release-notes.xml:728(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -951,7 +1027,7 @@ msgstr ""
 "<link href=\"https://doc.opensuse.org/\"/> obsahuje dodatočnú alebo "
 "aktualizovanú dokumentáciu."
 
-#: xml/release-notes.xml:693(para)
+#: xml/release-notes.xml:733(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -959,15 +1035,15 @@ msgstr ""
 "Navštívte <link href=\"https://www.opensuse.org\"/> kvôli najnovším novinkám "
 "o produkte z openSUSE."
 
-#: xml/release-notes.xml:700(para)
+#: xml/release-notes.xml:740(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:704(para)
+#: xml/release-notes.xml:744(para)
 msgid "Thanks for using openSUSE."
 msgstr "Ďakujeme, že používate openSUSE."
 
-#: xml/release-notes.xml:707(para)
+#: xml/release-notes.xml:747(para)
 msgid "The openSUSE Team."
 msgstr "Tím openSUSE."
 
@@ -1023,16 +1099,6 @@ msgstr ""
 #~ "zostaviť balík Mesa s týmito opravami, upravte súbor spec: Zmeňte "
 #~ "<literal>%define</literal><literal>use_broken_nouveau_locking_patches</"
 #~ "literal> na <literal>1</literal>."
-
-#~ msgid "General"
-#~ msgstr "Všeobecné"
-
-#~ msgid ""
-#~ "This section lists general issues with openSUSE Leap 42.2 that do not "
-#~ "match any other category."
-#~ msgstr ""
-#~ "Táto časť obsahuje všeobecné problémy s openSUSE Leap 42.2, ktoré "
-#~ "nezodpovedajú žiadnej inej kategórii."
 
 #~ msgid "<literal>psi</literal>: replaced by <literal>psi+</literal>"
 #~ msgstr "<literal>psi</literal>: nahradené s <literal>psi+</literal>"

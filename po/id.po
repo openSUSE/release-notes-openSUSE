@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Indonesian (release-notes-openSUSE)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 10:22+0100\n"
+"POT-Creation-Date: 2016-11-04 09:21+0100\n"
 "PO-Revision-Date: 2016-11-02 10:45+0000\n"
 "Last-Translator: M. Edwin Zakaria <medwin@opensuse.org>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/release-notes-"
@@ -257,15 +257,22 @@ msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "Untuk memecahkan masalah ini, ubahlah partisi MBR menjadi bentuk GPT."
 
 #: xml/release-notes.xml:163(title)
-msgid "Nouveau 3D/DRI Driver Disabled by Default"
+#, fuzzy
+#| msgid "Nouveau 3D/DRI Driver Disabled by Default"
+msgid "Nouveau 3D/DRI Driver May Crash KDE Applications"
 msgstr "Driver Nouveau 3D/DRI secara bawaan tidak diaktifkan"
 
 #: xml/release-notes.xml:164(para)
+#, fuzzy
+#| msgid ""
+#| "With openSUSE Leap 42.2, the Nouveau Mesa/DRI driver for 2D/3D rendering "
+#| "is considered experimental. Note that this does not affect the support "
+#| "statuses of the Nouveau kernel/KMS driver or the Nouveau X.org/DDX driver "
+#| "for 2D rendering."
 msgid ""
 "With openSUSE Leap 42.2, the Nouveau Mesa/DRI driver for 2D/3D rendering is "
-"considered experimental. Note that this does not affect the support statuses "
-"of the Nouveau kernel/KMS driver or the Nouveau X.org/DDX driver for 2D "
-"rendering."
+"considered experimental. The Nouveau kernel/KMS driver and the Nouveau X.org/"
+"DDX driver for 2D rendering are still considered stable."
 msgstr ""
 "Pada openSUSE Leap 42.2, driver Nouveau Mesa/DRI untuk sesuaian/rendering "
 "2D/3D harus dianggap sebagai uji coba.Catat bahwa hal ini tidak berpengaruh "
@@ -273,11 +280,17 @@ msgstr ""
 "untuk sesuaian 2D."
 
 #: xml/release-notes.xml:170(para)
+#, fuzzy
+#| msgid ""
+#| "When the Nouveau Mesa/DRI driver is in use, some third-party Qt "
+#| "applications may no longer start. This driver is now packaged separately, "
+#| "as <package>Mesa-dri-nouveau</package>. This means, when necessary, it "
+#| "can be removed without removing all of Mesa."
 msgid ""
-"When the Nouveau Mesa/DRI driver is in use, some third-party Qt applications "
-"may no longer start. This driver is now packaged separately, as "
-"<package>Mesa-dri-nouveau</package>. This means, when necessary, it can be "
-"removed without removing all of Mesa."
+"When the Nouveau Mesa/DRI driver is in use, some applications may crash, "
+"especially KDE and Qt applications. The driver is now in a separate package "
+"called <package>Mesa-dri-nouveau</package>, which can be removed in case of "
+"problems."
 msgstr ""
 "Ketika driver Nouveau Mesa/DRI digunakan, beberapa aplikasi Qt pihak ketiga "
 "mungkin tidak lagi berjalan. Driver ini sekarang dipaketkan terpisah, "
@@ -285,11 +298,19 @@ msgstr ""
 "dapat saja dihapus tanpa menghapus keseluruhan Mesa."
 
 #: xml/release-notes.xml:176(para)
+#, fuzzy
+#| msgid ""
+#| "When this package is not installed, there is no hardware 3D acceleration "
+#| "support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs "
+#| "that use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D "
+#| "are still available, as is 2D acceleration via EXA on GPUs from the "
+#| "Nvidia GPU generation code-named Kepler (introduced in 2012) and earlier. "
+#| "3D operations are supported via software rendering."
 msgid ""
-"When this package is not installed, there is no hardware 3D acceleration "
-"support on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that "
-"use Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are "
-"still available, as is 2D acceleration via EXA on GPUs from the Nvidia GPU "
+"Without this driver installed, there is no hardware 3D acceleration support "
+"on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs that use "
+"Glamor for fast 2D operations. Kernel Mode Setting and basic 2D are still "
+"available, as is 2D acceleration via EXA on GPUs from the Nvidia GPU "
 "generation code-named Kepler (introduced in 2012) and earlier. 3D operations "
 "are supported via software rendering."
 msgstr ""
@@ -300,7 +321,7 @@ msgstr ""
 "generasi GPU Nvidia dengan kode-nama Kepler (diperkenalkan pada 2012) dan "
 "yang terdahulu. Operasi 3D didukung melalui sesuaian perangkat lunak."
 
-#: xml/release-notes.xml:184(para)
+#: xml/release-notes.xml:185(para)
 msgid ""
 "For more information, see the bug reports at <link href=\"https://bugs."
 "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://bugzilla."
@@ -310,11 +331,11 @@ msgstr ""
 "bugs.freedesktop.org/show_bug.cgi?id=91632\"/> dan <link href=\"https://"
 "bugzilla.suse.com/show_bug.cgi?id=1005323\"/>."
 
-#: xml/release-notes.xml:194(title)
+#: xml/release-notes.xml:195(title)
 msgid "System Upgrade"
 msgstr "Pemutakhiran Sistem"
 
-#: xml/release-notes.xml:195(para)
+#: xml/release-notes.xml:196(para)
 msgid ""
 "This section lists notes related to upgrading the system. For detailed "
 "upgrade instructions, see the documentation at <link href=\"https://doc."
@@ -326,15 +347,15 @@ msgstr ""
 "pada <link href=\"https://doc.opensuse.org/documentation/leap/startup/html/"
 "book.opensuse.startup/cha.update.osuse.html\"/>."
 
-#: xml/release-notes.xml:202(title)
+#: xml/release-notes.xml:203(title)
 msgid "Upgrading from openSUSE Leap 42.1"
 msgstr "Melakukan upgrade dari openSUSE Leap 42.1"
 
-#: xml/release-notes.xml:205(title)
+#: xml/release-notes.xml:206(title)
 msgid "Removed and Replaced Packages"
 msgstr "Membuang dan Mengganti Paket-Paket"
 
-#: xml/release-notes.xml:206(para)
+#: xml/release-notes.xml:207(para)
 msgid ""
 "The following packages have been removed or replaced compared to openSUSE "
 "Leap 42.1:"
@@ -342,13 +363,13 @@ msgstr ""
 "Paket-paket berikut telah dikeluarkan atau diganti dibandingkan dengan "
 "openSUSE Leap 42.1:"
 
-#: xml/release-notes.xml:212(para)
+#: xml/release-notes.xml:213(para)
 msgid ""
 "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr ""
 "<package>arista</package>: Diganti dengan <package>transmageddon</package>."
 
-#: xml/release-notes.xml:217(para)
+#: xml/release-notes.xml:218(para)
 msgid ""
 "<package>cadabra</package>: The source code no longer builds. The successor, "
 "<link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
@@ -356,7 +377,7 @@ msgstr ""
 "<package>cadabra</package>: Kode sumber sudah tidak dibuat. Penggantinya, "
 "<link href=\"http://cadabra.science/\">Cadabra 2</link> belum begitu stabil."
 
-#: xml/release-notes.xml:224(para)
+#: xml/release-notes.xml:225(para)
 msgid ""
 "<package>dropbear</package>: Removed because there are no relevant "
 "advantages over <package>openssh</package>."
@@ -364,13 +385,13 @@ msgstr ""
 "<package>dropbear</package>: Dikeluarkan karena tidak ada kelebihannya "
 "dibanding <package>openssh</package>."
 
-#: xml/release-notes.xml:230(para)
+#: xml/release-notes.xml:231(para)
 msgid ""
 "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
 msgstr ""
 "<package>emerillon</package>: Diganti dengan <package>gnome-maps</package>."
 
-#: xml/release-notes.xml:236(para)
+#: xml/release-notes.xml:237(para)
 msgid ""
 "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</"
 "package>."
@@ -378,16 +399,16 @@ msgstr ""
 "<package>gnome-system-log</package>: Diganti dengan <package>gnome-logs</"
 "package>."
 
-#: xml/release-notes.xml:242(para)
+#: xml/release-notes.xml:243(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: Diganti dengan <package>hawk2</package>."
 
-#: xml/release-notes.xml:247(para)
+#: xml/release-notes.xml:248(para)
 msgid "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
 msgstr ""
 "<package>ksnapshot</package>: Diganti dengan <package>spectacle</package>."
 
-#: xml/release-notes.xml:253(para)
+#: xml/release-notes.xml:254(para)
 msgid ""
 "<package>labplot</package>: Labplot has been replaced by its Qt5 version, "
 "called <package>labplot-kf5</package>. If you are updating from an openSUSE "
@@ -399,11 +420,11 @@ msgstr ""
 "dari instalasi openSUSE Leap 42.1 di mana <package>labplot</package> "
 "dipasang, Anda secara otomatis akan menerima <package>labplot-kf5</package>."
 
-#: xml/release-notes.xml:262(para)
+#: xml/release-notes.xml:263(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr "<package>psi</package>: Diganti dengan <package>psi+</package>."
 
-#: xml/release-notes.xml:267(para)
+#: xml/release-notes.xml:268(para)
 msgid ""
 "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</"
 "package>. Purely a rename, not a version upgrade - a virtually identical "
@@ -413,7 +434,7 @@ msgstr ""
 "package>. Murni penamaan ulang, bukan sebuah peningkatan versi - sebuah "
 "penggantian yang nyaris identik."
 
-#: xml/release-notes.xml:274(para)
+#: xml/release-notes.xml:275(para)
 msgid ""
 "<package>seamonkey</package>: Source code no longer compiles. If you were a "
 "Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird "
@@ -423,16 +444,16 @@ msgstr ""
 "sebelumnya Anda adalah pengguna Seamonkey, beralihlah ke Mozilla Firefox dan "
 "Mozilla Thunderbird."
 
-#: xml/release-notes.xml:281(para)
+#: xml/release-notes.xml:282(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr ""
 "<package>ungifsicle</package>: Diganti dengan <package>gifsicle</package>."
 
-#: xml/release-notes.xml:287(para)
+#: xml/release-notes.xml:288(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr "<package>xchat</package>: Diganti dengan <package>hexchat</package>."
 
-#: xml/release-notes.xml:296(title)
+#: xml/release-notes.xml:297(title)
 msgid ""
 "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and "
 "Rollback"
@@ -440,7 +461,7 @@ msgstr ""
 "<filename>/var/cache</filename> pada Own Subvolume untuk Snapshots dan "
 "Rollback"
 
-#: xml/release-notes.xml:297(para)
+#: xml/release-notes.xml:298(para)
 msgid ""
 "<filename>/var/cache</filename> contains a lot of very volatile data, such "
 "as the Zypper cache with RPM packages in different versions for each update. "
@@ -453,7 +474,7 @@ msgstr ""
 "redundan tetapi mudah hilang itu, jumlah ruang disk yang dipakai oleh sebuah "
 "snapshot dapat meningkat dengan sangat cepat."
 
-#: xml/release-notes.xml:304(para)
+#: xml/release-notes.xml:305(para)
 msgid ""
 "To solve this, move <filename>/var/cache</filename> to a separate subvolume. "
 "On fresh installations of openSUSE Leap 42.2, this is done automatically. To "
@@ -464,7 +485,7 @@ msgstr ""
 "dilakukan secara otomatis. Untuk mengubah sistem berkas root yang sudah ada, "
 "lakukan langkah-langkah sebagai berikut:"
 
-#: xml/release-notes.xml:312(para)
+#: xml/release-notes.xml:313(para)
 msgid ""
 "Find out the device name (for example, <filename>/dev/sda2</filename> or "
 "<filename>/dev/sda3</filename>) of the root file system:"
@@ -472,11 +493,11 @@ msgstr ""
 "Pastikan nama device (sebagai contoh, <filename>/daev/sda2</filename> atau "
 "<filename>/dev/sda3</filename>) pada sistem berkas root:"
 
-#: xml/release-notes.xml:317(command)
+#: xml/release-notes.xml:318(command)
 msgid "df /"
 msgstr "df /"
 
-#: xml/release-notes.xml:320(para)
+#: xml/release-notes.xml:321(para)
 msgid ""
 "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 "
 "installations, this is a subvolume named <filename>@</filename>. To check if "
@@ -486,11 +507,11 @@ msgstr ""
 "openSUSE 13.2, nama subvolumenya <filename>@</filename>. Untuk memeriksa "
 "apakah anda memiliki subvolume <filename>@</filename>, gunakan:"
 
-#: xml/release-notes.xml:326(command)
+#: xml/release-notes.xml:327(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr "btrfs subvolume list / | grep '@'"
 
-#: xml/release-notes.xml:327(para)
+#: xml/release-notes.xml:328(para)
 msgid ""
 "If the output of this command is empty, you do not have a subvolume named "
 "<filename>@</filename>. In that case, you may be able to proceed with "
@@ -500,11 +521,11 @@ msgstr ""
 "bernama <filename>@</filename>. Jika demikian, anda dapat melanjutkan dengan "
 "subvolume ID 5 yang digunakan pada openSUSE versi sebelumnya."
 
-#: xml/release-notes.xml:334(para)
+#: xml/release-notes.xml:335(para)
 msgid "Now mount the requisite subvolume."
 msgstr "Sekarang mount subvolume yang diperlukan."
 
-#: xml/release-notes.xml:339(para)
+#: xml/release-notes.xml:340(para)
 msgid ""
 "If you have a <filename>@</filename> subvolume, mount that subvolume to a "
 "temporary mount point:"
@@ -512,11 +533,11 @@ msgstr ""
 "Jika anda memiliki subvolume <filename>@</filename>, mount subvolume itu ke "
 "titik mount sementara:"
 
-#: xml/release-notes.xml:343(command)
+#: xml/release-notes.xml:344(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 
-#: xml/release-notes.xml:346(para)
+#: xml/release-notes.xml:347(para)
 msgid ""
 "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 "
 "instead:"
@@ -524,11 +545,11 @@ msgstr ""
 "Kalau anda tidak memiliki subvolume <filename>@</filename>, mount subvolume "
 "ID 5 sebagai gantinya:"
 
-#: xml/release-notes.xml:350(command)
+#: xml/release-notes.xml:351(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:355(para)
+#: xml/release-notes.xml:356(para)
 msgid ""
 "<filename>/mnt/var/cache</filename> can already exist and could be the same "
 "directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
@@ -537,19 +558,19 @@ msgstr ""
 "direktori yang sama dengan <filename>/var/cache</filename>. Untuk "
 "menghindari hilangnya data, pindahkan dengan:"
 
-#: xml/release-notes.xml:360(command)
+#: xml/release-notes.xml:361(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
-#: xml/release-notes.xml:363(para)
+#: xml/release-notes.xml:364(para)
 msgid "Create a new subvolume:"
 msgstr "Membuat subvolume baru:"
 
-#: xml/release-notes.xml:366(command)
+#: xml/release-notes.xml:367(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr "btrfs subvol create /mnt/var/cache"
 
-#: xml/release-notes.xml:369(para)
+#: xml/release-notes.xml:370(para)
 msgid ""
 "If there is now a directory <filename>/var/cache.old</filename>, move it to "
 "the new location:"
@@ -557,37 +578,37 @@ msgstr ""
 "Jika kemudian ada sebuah direktori <filename>/var/cache.old</filename>, "
 "pindahkan ke lokasi baru dengan:"
 
-#: xml/release-notes.xml:373(command)
+#: xml/release-notes.xml:374(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr "mv /var/cache.old/* /mnt/var/cache"
 
-#: xml/release-notes.xml:374(para)
+#: xml/release-notes.xml:375(para)
 msgid "If that is not the case, instead do:"
 msgstr "Jika ternyata kasusnya tidak begitu, lakukan:"
 
-#: xml/release-notes.xml:377(command)
+#: xml/release-notes.xml:378(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr "mv /var/cache/* /mnt/var/cache/"
 
-#: xml/release-notes.xml:380(para)
+#: xml/release-notes.xml:381(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr ""
 "Anda bisa saja menghapus <filename>/mnt/var/cache.old</filename> sebagai "
 "pilihan, dengan:"
 
-#: xml/release-notes.xml:383(command)
+#: xml/release-notes.xml:384(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr "rm -rf /mnt/var/cache.old"
 
-#: xml/release-notes.xml:386(para)
+#: xml/release-notes.xml:387(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Lepaskan (unmount) subvolume dari titik mount sementara:"
 
-#: xml/release-notes.xml:389(command) xml/release-notes.xml:509(screen)
+#: xml/release-notes.xml:390(command) xml/release-notes.xml:510(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:392(para)
+#: xml/release-notes.xml:393(para)
 msgid ""
 "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/"
 "cache</filename> subvolume. Use an existing subvolume as a template to copy "
@@ -602,24 +623,24 @@ msgstr ""
 "subvolume dan titik mountnya secara konsisten ke <filename>/var/cache</"
 "filename>."
 
-#: xml/release-notes.xml:401(para)
+#: xml/release-notes.xml:402(para)
 msgid ""
 "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
 msgstr ""
 "Tautkan subvolume baru sesuai dengan pengaturan di <filename>/etc/fstab</"
 "filename>:"
 
-#: xml/release-notes.xml:404(command)
+#: xml/release-notes.xml:405(command)
 msgid "mount /var/cache"
 msgstr "mount /var/cache"
 
-#: xml/release-notes.xml:410(title)
+#: xml/release-notes.xml:411(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr ""
 "Penggerak/driver X Synaptics Dapat Menurunkan fungsi bantalan sentuh "
 "(touchpad) pada GNOME"
 
-#: xml/release-notes.xml:411(para)
+#: xml/release-notes.xml:412(para)
 msgid ""
 "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</"
 "package>) was installed by default but had a lower priority than the "
@@ -630,15 +651,15 @@ msgstr ""
 "lebih rendah dibanding penggerak/driver libinput (<package>xf86-input-"
 "libinput</package>)."
 
-#: xml/release-notes.xml:417(para)
+#: xml/release-notes.xml:418(para)
 msgid "Starting with Leap 42.2:"
 msgstr "Dimulai pada Leap 42.2:"
 
-#: xml/release-notes.xml:422(para)
+#: xml/release-notes.xml:423(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr "Driver X Synaptics tidak lagi dipasang secara bawaan/default."
 
-#: xml/release-notes.xml:427(para)
+#: xml/release-notes.xml:428(para)
 msgid ""
 "If the Synaptics X driver is installed, it will take precedence for any "
 "touchpad devices."
@@ -646,7 +667,7 @@ msgstr ""
 "Jika driver X Synaptics di-instal, akan menjadi prioritas untuk semua "
 "perangkat touchpad."
 
-#: xml/release-notes.xml:433(para)
+#: xml/release-notes.xml:434(para)
 msgid ""
 "The Synaptics X driver is no longer supported by GNOME. This means when the "
 "driver is installed, Synaptics touchpads can only be configured to the "
@@ -656,7 +677,7 @@ msgstr ""
 "ketika driver dipasang, bantalan sentuh (touchpads) Synaptics hanya dapat "
 "dikonfigurasi seperti halnya sebuah tetikus dasar."
 
-#: xml/release-notes.xml:440(para)
+#: xml/release-notes.xml:441(para)
 msgid ""
 "Unless you are using a Synaptics touchpad and have a large amount of custom "
 "configuration for the Synaptics driver, remove the package from your system:"
@@ -665,15 +686,15 @@ msgstr ""
 "memiliki konfigurasi khusus untuk penggerak/driver Synaptics, buanglah paket "
 "tersebut dari sistem Anda:"
 
-#: xml/release-notes.xml:444(command)
+#: xml/release-notes.xml:445(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr "sudo zypper rm xf86-input-synaptics"
 
-#: xml/release-notes.xml:449(title)
+#: xml/release-notes.xml:450(title)
 msgid "Upgrading from openSUSE 13.2"
 msgstr "Meningkatkan versi dari openSUSE 13.2"
 
-#: xml/release-notes.xml:450(para)
+#: xml/release-notes.xml:451(para)
 msgid ""
 "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure "
 "to also review the information provided in <xref linkend=\"sec.upgrade.421\"/"
@@ -683,11 +704,11 @@ msgstr ""
 "yang lebih tua. Pastikan untuk juga melihat informasi yang tersedia pada "
 "<xref linkend=\"sec.upgrade.421\"/>."
 
-#: xml/release-notes.xml:457(title)
+#: xml/release-notes.xml:458(title)
 msgid "Network Interface Names"
 msgstr "Nama Antarmuka Jaringan"
 
-#: xml/release-notes.xml:458(para)
+#: xml/release-notes.xml:459(para)
 msgid ""
 "When upgrading a remote machine from openSUSE 13.2, make sure your network "
 "interfaces are named correctly."
@@ -695,7 +716,7 @@ msgstr ""
 "Ketika melakukan peningkatan versi terhadap mesin jarak jauh dari openSUSE "
 "13.2, pastikan antarmuka jaringan Anda dinamakan dengan tepat."
 
-#: xml/release-notes.xml:462(para)
+#: xml/release-notes.xml:463(para)
 msgid ""
 "openSUSE 13.2 used so-called predictable network interface names (for "
 "example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses "
@@ -713,27 +734,27 @@ msgstr ""
 "menghindari antarmuka dari dinamai ulang, jalankan perintah berikut untuk "
 "setiap antarmuka jaringan sebelum Anda menyalakan ulang sistem:"
 
-#: xml/release-notes.xml:471(replaceable)
+#: xml/release-notes.xml:472(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:471(screen)
+#: xml/release-notes.xml:472(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c<placeholder-1/>-n<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:473(para)
+#: xml/release-notes.xml:474(para)
 msgid ""
 "Replace <replaceable>enp5s0</replaceable> with the name of your network "
 "interface."
 msgstr ""
 "Ganti <replaceable>enp5s0</replaceable> dengan nama antarmuka jaringan Anda."
 
-#: xml/release-notes.xml:480(title)
+#: xml/release-notes.xml:481(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: Kebocoran Ruang Penyimpan setelah Rollbacks Sistem"
 
-#: xml/release-notes.xml:481(para)
+#: xml/release-notes.xml:482(para)
 msgid ""
 "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to "
 "become permanently occupied with stale, inaccessible contents after the "
@@ -747,10 +768,7 @@ msgstr ""
 "diperbaiki di openSUSE Leap 42.1. Walaupun demikian, perbaikan hanya dapat "
 "diterapkan ke sistem yang baru dipasang."
 
-#: xml/release-notes.xml:488(para)
-#| msgid ""
-#| "If you are upgrading from openSUSE 13.2, you cannot convert the to the "
-#| "new layout, but you can reclaim the lost disk space."
+#: xml/release-notes.xml:489(para)
 msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
@@ -759,42 +777,42 @@ msgstr ""
 "mengkonversi sistem berkas ke tata letak baru, tetapi Anda dapat memperoleh "
 "kembali ruang penyimpanan yang hilang."
 
-#: xml/release-notes.xml:494(para)
+#: xml/release-notes.xml:495(para)
 msgid "Mount the initial root filesystem:"
 msgstr "Tautkan sistem berkas root awal:"
 
-#: xml/release-notes.xml:497(replaceable)
+#: xml/release-notes.xml:498(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
-#: xml/release-notes.xml:497(screen)
+#: xml/release-notes.xml:498(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:500(para)
+#: xml/release-notes.xml:501(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Buang semua berkas di bawah /mnt yang tidak berada di dalam subvolume:"
 
-#: xml/release-notes.xml:503(screen)
+#: xml/release-notes.xml:504(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:506(para)
+#: xml/release-notes.xml:507(para)
 msgid "Umount the filesystem again:"
 msgstr "Lepas/umount sistem berkas lagi:"
 
 # sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:515(title)
+#: xml/release-notes.xml:516(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Sistem Cetak: Perbaikan dan Perubahan tidak Kompatibel"
 
-#: xml/release-notes.xml:518(emphasis)
+#: xml/release-notes.xml:519(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "Versi CUPS ditingkatkan ke 1.7"
 
-#: xml/release-notes.xml:520(para)
+#: xml/release-notes.xml:521(para)
 msgid ""
 "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes "
 "that may require manual configuration adjustments."
@@ -803,7 +821,7 @@ msgstr ""
 "beberapa perubahan besar yang mungkin membutuhkan penyesuaian konfigurasi "
 "manual."
 
-#: xml/release-notes.xml:527(para)
+#: xml/release-notes.xml:528(para)
 msgid ""
 "PDF is now the standard print job format rather than PS. Therefore "
 "traditional PostScript printers now also need a filter driver for printing."
@@ -812,14 +830,14 @@ msgstr ""
 "cetak PostScript tradisional sekarang juga membutuhkan sebuah filter "
 "penggerak/driver untuk mencetak."
 
-#: xml/release-notes.xml:532(para)
+#: xml/release-notes.xml:533(para)
 msgid ""
 "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr ""
 "Lihat <link href=\"https://en.opensuse.org/Concepts_printing\"/> untuk lebih "
 "jelasnya."
 
-#: xml/release-notes.xml:540(para)
+#: xml/release-notes.xml:541(para)
 msgid ""
 "The network printer discovery protocol has changed. The native method to "
 "discover network printers is now based on DNS Service discovery (DNS-SD, "
@@ -837,7 +855,7 @@ msgstr ""
 "literal> keduanya harus berjalan agar membuat klien \"lama/legacy\" "
 "menemukan mesin cetak (termasuk LibreOffice dan KDE)."
 
-#: xml/release-notes.xml:553(para)
+#: xml/release-notes.xml:554(para)
 msgid ""
 "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers "
 "like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 "
@@ -849,7 +867,7 @@ msgstr ""
 "permintaan IPP 2.0 dengan <literal>Bad Request</literal> (lihat <link href="
 "\"http://www.cups.org/str.php?L4231\"/>)."
 
-#: xml/release-notes.xml:559(para)
+#: xml/release-notes.xml:560(para)
 msgid ""
 "To be able to print to old servers, the IPP protocol version must be "
 "specified explictly by appending <literal>/version=1.1</literal> to either:"
@@ -857,7 +875,7 @@ msgstr ""
 "Agar dapat mencetak ke server lama, versi protokol IPP harus disebutkan "
 "secara jelas dengan menambahkan<literal>/version=1.1</literal> ke:"
 
-#: xml/release-notes.xml:566(para)
+#: xml/release-notes.xml:567(para)
 msgid ""
 "The <literal>ServerName</literal> settings in <literal>client.conf</literal> "
 "(for example, <literal>ServerName older.server.example.com/version=1.1</"
@@ -867,11 +885,11 @@ msgstr ""
 "literal> (sebagai contoh, <literal>ServerName older.server.example.com/"
 "version=1.1</literal>)."
 
-#: xml/release-notes.xml:574(para)
+#: xml/release-notes.xml:575(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "Nilai variabel lingkungan <literal>CUPS_SERVER</literal>."
 
-#: xml/release-notes.xml:580(para)
+#: xml/release-notes.xml:581(para)
 msgid ""
 "The server name value of the <literal>-h</literal> option of the command "
 "line tools, for example:"
@@ -879,12 +897,12 @@ msgstr ""
 "Nilai nama server dari pilihan <literal>-h</literal> pada perkakas baris "
 "perintah, sebagai contoh:"
 
-#: xml/release-notes.xml:584(screen)
+#: xml/release-notes.xml:585(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:590(para)
+#: xml/release-notes.xml:591(para)
 msgid ""
 "Some printing filters and back-ends were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package."
@@ -892,7 +910,7 @@ msgstr ""
 "Beberapa filter dan back-ends pencetakan telah dipindah dari paket "
 "<literal>cups</literal> ke paket <literal>cups-filter</literal>."
 
-#: xml/release-notes.xml:598(para)
+#: xml/release-notes.xml:599(para)
 msgid ""
 "Some configuration directives were split from <literal>cupsd.conf</literal> "
 "into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups."
@@ -904,7 +922,7 @@ msgstr ""
 "www.cups.org/str.php?L4223\"/>, CVE-201205519, dan <link href=\"https://"
 "bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 
-#: xml/release-notes.xml:607(para)
+#: xml/release-notes.xml:608(para)
 msgid ""
 "CUPS banners and the CUPS test page were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package (see <link "
@@ -916,37 +934,94 @@ msgstr ""
 "www.cups.org/str.php?L4120\"/> dan <link href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=735404\"/>."
 
+#: xml/release-notes.xml:623(title)
+msgid "General"
+msgstr "Umum"
+
+#: xml/release-notes.xml:625(para)
+msgid ""
+"This section lists general issues with openSUSE Leap 42.2 that do not match "
+"any other category."
+msgstr ""
+"Bagian ini berisi isu-isu umum pada openSUSE Leap 42.2 yang tidak masuk ke "
+"kategori lain."
+
+#: xml/release-notes.xml:631(title)
+msgid "KDE Software for Personal Information Management (KDE PIM)"
+msgstr ""
+
+#: xml/release-notes.xml:632(para)
+msgid ""
+"openSUSE Leap 42.2 ships two versions of the KDE PIM (Kontact, KMail, etc.) "
+"suite:"
+msgstr ""
+
+#: xml/release-notes.xml:638(para)
+msgid "The legacy 4.x version"
+msgstr ""
+
+#: xml/release-notes.xml:643(para)
+msgid "The version based on KDE Frameworks 5"
+msgstr ""
+
+#: xml/release-notes.xml:648(para)
+msgid ""
+"KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid "
+"disrupting user workflows."
+msgstr ""
+
+#: xml/release-notes.xml:652(para)
+msgid ""
+"The two versions of KDE PIM are not co-installable. Some software, such as "
+"KNode (package <package>knode</package>) require the legacy 4.x version and "
+"will be uninstalled when installing any package from KDE PIM 5.x (for "
+"example, the package <package>kmail5</package>)."
+msgstr ""
+
+#: xml/release-notes.xml:658(para)
+msgid ""
+"KDE PIM 4.x will be removed in the next version of openSUSE Leap. Therefore, "
+"you are encouraged to switch to the newer 5.x version."
+msgstr ""
+
+#: xml/release-notes.xml:662(para)
+msgid ""
+"However, not all settings are migrated from the older version at this time. "
+"For more information, see the bug report at <link href=\"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=1001872\"/>)."
+msgstr ""
+
 # bnc#809347
 #. bnc#809347
-#: xml/release-notes.xml:657(title)
+#: xml/release-notes.xml:697(title)
 msgid "More Information and Feedback"
 msgstr "Informasi Lebih Lanjut dan Umpan Balik"
 
-#: xml/release-notes.xml:661(para)
+#: xml/release-notes.xml:701(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Bacalah dokumen <filename>README</filename>  yang terdapa pada media."
 
-#: xml/release-notes.xml:666(para)
+#: xml/release-notes.xml:706(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
 "Perhatikan informasi detail changelog mengenai paket tertentu dari RPMnya:"
 
-#: xml/release-notes.xml:670(replaceable)
+#: xml/release-notes.xml:710(replaceable)
 msgid "FILENAME"
 msgstr "FILENAME"
 
-#: xml/release-notes.xml:670(screen)
+#: xml/release-notes.xml:710(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:671(para)
+#: xml/release-notes.xml:711(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Ganti <replaceable>FILENAME</replaceable> dengan nama RPM."
 
-#: xml/release-notes.xml:676(para)
+#: xml/release-notes.xml:716(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -955,7 +1030,7 @@ msgstr ""
 "untuk catatan kronologis semua perubahan yang terjadi pada paket yang "
 "diperbarui."
 
-#: xml/release-notes.xml:682(para)
+#: xml/release-notes.xml:722(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -963,7 +1038,7 @@ msgstr ""
 "Dapatkan informasi lebih banyak pada direktori <filename>docu</filename> "
 "pada media."
 
-#: xml/release-notes.xml:688(para)
+#: xml/release-notes.xml:728(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -971,7 +1046,7 @@ msgstr ""
 "<link href=\"https://doc.opensuse.org/\"/> berisi dokumentasi tambahan atau "
 "sudah diperbarui."
 
-#: xml/release-notes.xml:693(para)
+#: xml/release-notes.xml:733(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -979,15 +1054,15 @@ msgstr ""
 "Kunjungi <link href=\"https://www.opensuse.org\"/> untuk berita produk "
 "terbaru dari openSUSE."
 
-#: xml/release-notes.xml:700(para)
+#: xml/release-notes.xml:740(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:704(para)
+#: xml/release-notes.xml:744(para)
 msgid "Thanks for using openSUSE."
 msgstr "Terima kasih telah menggunakan openSUSE."
 
-#: xml/release-notes.xml:707(para)
+#: xml/release-notes.xml:747(para)
 msgid "The openSUSE Team."
 msgstr "Tim openSUSE."
 
@@ -998,16 +1073,6 @@ msgid "translator-credits"
 msgstr ""
 "Penerjemah\n"
 "M. Edwin Zakaria <medwin@opensuse.org>, 2016"
-
-#~ msgid "General"
-#~ msgstr "Umum"
-
-#~ msgid ""
-#~ "This section lists general issues with openSUSE Leap 42.2 that do not "
-#~ "match any other category."
-#~ msgstr ""
-#~ "Bagian ini berisi isu-isu umum pada openSUSE Leap 42.2 yang tidak masuk "
-#~ "ke kategori lain."
 
 # dialog title for nfs installation
 #~ msgid "KDE and Network Authentication"
