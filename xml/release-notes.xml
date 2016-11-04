@@ -160,21 +160,21 @@
 
   <!-- bsc#1005323 -->
   <section xml:id="sec.123.nouveau">
-   <title>Nouveau 3D/DRI Driver crashes KDE</title>
+   <title>Nouveau 3D/DRI Driver May Crash KDE Applications</title>
    <para>
     With &opensuseleap; &version;, the Nouveau Mesa/DRI driver for 2D/3D
     rendering is considered experimental. The Nouveau kernel/KMS
     driver and the Nouveau X.org/DDX driver for 2D rendering are
-    still considered to be ok.
+    still considered stable.
    </para>
    <para>
-    When the Nouveau Mesa/DRI driver is in use some applications, especially KDE
-    and Qt ones, may crash. The driver is now in a separate package
-    <package>Mesa-dri-nouveau</package>, which can be removed in case or
-    problems.
+    When the Nouveau Mesa/DRI driver is in use, some applications may crash,
+    especially KDE and Qt applications. The driver is now in a separate
+    package called <package>Mesa-dri-nouveau</package>, which can be removed
+    in case of problems.
    </para>
    <para>
-    Without the driver here is no hardware 3D acceleration support
+    Without this driver installed, there is no hardware 3D acceleration support
     on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs
     that use Glamor for fast 2D operations. Kernel Mode Setting and
     basic 2D are still available, as is 2D acceleration via EXA on
