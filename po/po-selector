@@ -28,7 +28,9 @@ CRITERION_NEW=at_least
 AT_LEAST=60
 
 # Anything based on BASELANG is excluded from the AT_LEAST check
-BASELANG='en'
+# FIXME: Decide whether to remove this entirely, enabling this partially caused
+# bsc#1008192
+#BASELANG='en'
 
 # Number of strings that must be translated in files edited in last n days to qualify. Only for at_least.
 # value in percents
@@ -101,9 +103,11 @@ for PO in *.po ; do
   if test $PERCENTAGE -ge $THRESHOLD ; then
     echo >&2 "got $PERCENTAGE%. [passed]"
     echo -n " $PO" | sed 's/\.po//'
-  elif test $(echo "$PO" | grep "^$BASELANG[-_]"); then
-    echo >&2 "got $PERCENTAGE%, but language is special. [passed]"
-    echo -n " $PO" | sed 's/\.po//'
+  # FIXME: Decide whether to remove this entirely, enabling this partially caused
+  # bsc#1008192
+  #elif test $(echo "$PO" | grep "^$BASELANG[-_]"); then
+  #  echo >&2 "got $PERCENTAGE%, but language is special. [passed]"
+  #  echo -n " $PO" | sed 's/\.po//'
   else
     echo >&2 "got $PERCENTAGE%. [failed]"
   fi
