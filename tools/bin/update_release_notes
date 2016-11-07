@@ -85,9 +85,9 @@ get_package_from_obs() {
         $DO_ECHO curl -s -S $VERBOSE -o "$localdir/$arch"/${packagename}.rpm  "${server}/build/$url/$arch/_repository/${packagename}"
         FILETYPE=$(file --brief --mime "$localdir/$arch"/${packagename}.rpm)
         FOUND='no'
-        case "$FILETYPE" in 
+        case "$FILETYPE" in
             *application/x-rpm*)
-                LOG "$localdir/$arch/${packagename}.rpm is a valid RPM - going forward" 
+                LOG "$localdir/$arch/${packagename}.rpm is a valid RPM - going forward"
                 FOUND='yes'
             ;;
             *text/plain*)
@@ -102,13 +102,13 @@ get_package_from_obs() {
          esac
          if [ "$FOUND" == "no" ]; then
              LOG "Did not found the wanted RPM at $url - trying different repos now"
-             case "$url" in 
+             case "$url" in
                  *:Update/standard)
                      url=${url/:Update/}
                  ;;
              esac
              get_package_from_obs "$server" "$localdir" "$url" "$packagename" "$arch" $attempt
-         fi               
+         fi
     done
 }
 
