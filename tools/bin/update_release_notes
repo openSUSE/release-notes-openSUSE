@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2013-2014, SUSE Linux Products GmbH
-# Copyright (C) 2015, SUSE Linux GmbH
+# Copyright (C) 2015-2016, SUSE Linux GmbH
 # Author: Lars Vogdt
 #
 # All rights reserved.
@@ -152,6 +152,7 @@ output_package() {
     for i in en en_US en_GB; do
 	if [ -f "$DESTINATION/RELEASE-NOTES.$i.html" ]; then
 	    REL_SOURCE="$DESTINATION/RELEASE-NOTES.$i.html"
+	    break
 	fi
     done
     if [ -n "$REL_SOURCE" ]; then
@@ -247,7 +248,7 @@ while read line; do
             DISTVERSION=$(echo ${DISTVERSION/obs:\/\//} | sed "s|:|:/|g")
             DISTURL=$(echo ${DISTVERSION/obs:\/\//})
             ISBS="yes"
-            INSTANCE="https://build.opensuse.org"
+            INSTANCE="https://build.opensuse.org/public"
             get_package_from_obs "$INSTANCE" "${OBSDIR}/${DISTVERSION}" "$DISTURL" "$RELEASENOTES_NAME" "$PRODUKT_ARCHS"
         ;;
 	*)
