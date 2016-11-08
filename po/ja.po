@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
-"POT-Creation-Date: 2016-11-08 11:36+0100\n"
+"POT-Creation-Date: 2016-11-08 13:46+0100\n"
 "PO-Revision-Date: 2016-11-08 10:57+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
@@ -119,10 +119,10 @@ msgid ""
 "information, see <link href=\"http://en.opensuse.org/Submitting_Bug_Reports"
 "\"/>."
 msgstr ""
-"本リリースに対してバグを報告する際は、 openSUSE の提供する Bugzilla をお使いください。詳しくは\n"
-"<link href=\""
-"https://ja.opensuse.org/%E3%83%90%E3%82%B0%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%"
-"88\"/> をお読みください。"
+"本リリースに対してバグを報告する際は、 openSUSE の提供する Bugzilla をお使い"
+"ください。詳しくは\n"
+"<link href=\"https://ja.opensuse.org/%E3%83%90%E3%82%B0%E3%83%AC%E3%83%9D"
+"%E3%83%BC%E3%83%88\"/> をお読みください。"
 
 #: xml/release-notes.xml:85(title)
 msgid "Installation"
@@ -1005,16 +1005,59 @@ msgstr ""
 "できません。詳しくは <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1001872\"/> に書かれているバグ報告をお読みください。"
 
+#: xml/release-notes.xml:675(title)
+msgid "No Screen Lock When Using GNOME Shell But Not GDM"
+msgstr ""
+
+#: xml/release-notes.xml:676(para)
+msgid ""
+"When using GNOME Shell together with a login manager other than GDM, such as "
+"SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
+"users without logging out is not possible."
+msgstr ""
+
+#: xml/release-notes.xml:681(para)
+msgid ""
+"To be able to lock the screen from GNOME Shell, enable GDM as your login "
+"manager:"
+msgstr ""
+
+#: xml/release-notes.xml:687(para)
+msgid "Make sure that the package <package>gdm</package> is installed."
+msgstr ""
+
+#: xml/release-notes.xml:692(para)
+msgid ""
+"Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
+"guimenu></menuchoice>."
+msgstr ""
+
+#: xml/release-notes.xml:698(para)
+msgid ""
+"Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
+"guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
+msgstr ""
+
+#: xml/release-notes.xml:705(para)
+msgid ""
+"In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
+"guimenu>."
+msgstr ""
+
+#: xml/release-notes.xml:711(para)
+msgid "Reboot."
+msgstr ""
+
 #. bnc#809347
-#: xml/release-notes.xml:702(title)
+#: xml/release-notes.xml:746(title)
 msgid "More Information and Feedback"
 msgstr "さらに詳しい情報とフィードバック"
 
-#: xml/release-notes.xml:706(para)
+#: xml/release-notes.xml:750(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "まずはメディア内の <filename>README</filename> 文書をお読みください。"
 
-#: xml/release-notes.xml:711(para)
+#: xml/release-notes.xml:755(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1022,22 +1065,22 @@ msgstr ""
 "また、特定のパッケージに対する詳細な変更点を RPM パッケージから表示するには、"
 "下記のコマンドを実行します:"
 
-#: xml/release-notes.xml:715(replaceable)
+#: xml/release-notes.xml:759(replaceable)
 msgid "FILENAME"
 msgstr "ファイル名"
 
-#: xml/release-notes.xml:715(screen)
+#: xml/release-notes.xml:759(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:716(para)
+#: xml/release-notes.xml:760(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "<replaceable>ファイル名</replaceable> の箇所を RPM の名前に置き換えてお使いく"
 "ださい。"
 
-#: xml/release-notes.xml:721(para)
+#: xml/release-notes.xml:765(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1046,7 +1089,7 @@ msgstr ""
 "ルがあります。ここには、更新されたパッケージに対する全ての変更点が時系列順に"
 "並んでいます。"
 
-#: xml/release-notes.xml:727(para)
+#: xml/release-notes.xml:771(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1054,7 +1097,7 @@ msgstr ""
 "そのほか、 メディアの <filename>docu</filename> ディレクトリには、さらに詳し"
 "い情報があります。"
 
-#: xml/release-notes.xml:733(para)
+#: xml/release-notes.xml:777(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -1062,7 +1105,7 @@ msgstr ""
 "それ以外にも、 <link href=\"https://doc.opensuse.org/\"/> には追加／更新され"
 "たドキュメンテーションがあります。"
 
-#: xml/release-notes.xml:738(para)
+#: xml/release-notes.xml:782(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -1070,15 +1113,15 @@ msgstr ""
 "openSUSE が提供する最新の製品ニュースを読むには、 <link href=\"https://www."
 "opensuse.org\"/> をご覧ください。"
 
-#: xml/release-notes.xml:745(para)
+#: xml/release-notes.xml:789(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:749(para)
+#: xml/release-notes.xml:793(para)
 msgid "Thanks for using openSUSE."
 msgstr "openSUSE をお使いいただき、ありがとうございます。"
 
-#: xml/release-notes.xml:752(para)
+#: xml/release-notes.xml:796(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE チームより。"
 
