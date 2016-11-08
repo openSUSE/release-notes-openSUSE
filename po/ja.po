@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2016-11-08 13:46+0100\n"
-"PO-Revision-Date: 2016-11-08 10:57+0000\n"
+"PO-Revision-Date: 2016-11-08 22:36+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/ja/>\n"
@@ -1007,7 +1007,7 @@ msgstr ""
 
 #: xml/release-notes.xml:675(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
-msgstr ""
+msgstr "GDM 以外を利用した場合に GNOME Shell でスクリーンロックができない問題について"
 
 #: xml/release-notes.xml:676(para)
 msgid ""
@@ -1015,38 +1015,46 @@ msgid ""
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
 "users without logging out is not possible."
 msgstr ""
+"SDDM や LightDM など、 GDM 以外のログインマネージャを利用してログインし、 GNOME Shell を利用した場合、画面をブランクにした"
+"りロックしたりすることができなくなってしまいます。また、ログアウトせずにユーザを切り替える機能も、動作しなくなってしまいます。"
 
 #: xml/release-notes.xml:681(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
-msgstr ""
+msgstr "GNOME Shell で画面をロックできるようにするには、下記のようにしてログインマネージャを GDM に切り替えます:"
 
 #: xml/release-notes.xml:687(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
-msgstr ""
+msgstr "まずは <package>gdm</package> パッケージがインストールされていることを確認します。"
 
 #: xml/release-notes.xml:692(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
 msgstr ""
+"次に YaST を開いて、 <menuchoice><guimenu>/etc/sysconfig "
+"マネージャ</guimenu></menuchoice> を開きます。"
 
 #: xml/release-notes.xml:698(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 msgstr ""
+"<menuchoice><guimenu>Desktop</guimenu><guimenu>Display "
+"manager</guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice> を選択します。"
 
 #: xml/release-notes.xml:705(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
 msgstr ""
+"表示されたテキストボックスに <literal>gdm</literal> と入力します。保存を行なうため、 <guimenu>OK</guimenu> "
+"を押します。"
 
 #: xml/release-notes.xml:711(para)
 msgid "Reboot."
-msgstr ""
+msgstr "最後にシステムを再起動してください。"
 
 #. bnc#809347
 #: xml/release-notes.xml:746(title)
