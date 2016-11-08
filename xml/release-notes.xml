@@ -671,6 +671,50 @@
       </para>
   </section>
 
+  <section xml:id="sec.general.gdm">
+   <title>No Screen Lock When Using GNOME Shell But Not GDM</title>
+   <para>
+    When using GNOME Shell together with a login manager other than GDM, such
+    as SDDM or LightDM, the screen will not blank or lock. Additionally,
+    switching users without logging out is not possible.
+   </para>
+   <para>
+    To be able to lock the screen from GNOME Shell, enable GDM as your login
+    manager:
+   </para>
+   <procedure>
+    <step>
+     <para>
+      Make sure that the package <package>gdm</package> is installed.
+     </para>
+    </step>
+    <step>
+     <para>
+      Open &yast; and from it, open
+      <menuchoice><guimenu>/etc/sysconfig Manager</guimenu></menuchoice>.
+     </para>
+    </step>
+    <step>
+     <para>
+      Navigate to
+      <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</guimenu>
+      <guimenu>DISPLAYMANAGER</guimenu></menuchoice>.
+     </para>
+    </step>
+    <step>
+     <para>
+      In the text box, specify <literal>gdm</literal>. To save, click
+      <guimenu>OK</guimenu>.
+     </para>
+    </step>
+    <step>
+     <para>
+      Reboot.
+     </para>
+    </step>
+   </procedure>
+  </section>
+
   <!-- <section xml:id="sec.general.nonoss">
     <title>Non-Oss Repository</title>
     <para>
