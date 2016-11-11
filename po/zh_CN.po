@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-11-08 13:46+0100\n"
-"PO-Revision-Date: 2016-11-11 23:01+0200\n"
+"PO-Revision-Date: 2016-11-12 00:04+0200\n"
 "Last-Translator: Qin Qin <qinyi123@outlook.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-notes-opensuse/leap_42_2/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -175,25 +175,22 @@ msgstr ""
 "备和分区类型。"
 
 #: xml/release-notes.xml:146(para)
-#, fuzzy
 msgid ""
 "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB 2) try to "
 "automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a "
 "rewrite in the firmware. A rewrite consists of two different operations: Removing the old entry and creating a new entry that replaces "
 "the first one."
 msgstr ""
-"另外，UEFI 规范也允许传统的 MBR（MS-DOS）分区。Linux 引导加载器（ELILO 或 GRUB2）会尝试为这些传统分区自动生成一个 GUID，并将它们写入到固件"
-"中。这样的 GUID 可频繁变化，导致重写固件。重写由两个不同操作组成：移除旧项和创建替代前一个项的新项。"
+"另外，UEFI 规范也允许传统的 MBR（MS-DOS）分区。Linux 引导加载器（ELILO 或 GRUB 2）会尝试为这些传统分区自动生成一个 GUID，并将它们写入到固"
+"件中。这样的 GUID 可频繁变化，导致重写固件。重写由两个不同操作组成：移除旧项和创建替代前一个项的新项。"
 
 #: xml/release-notes.xml:155(para)
-#, fuzzy
 msgid ""
 "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises "
 "when faulty firmware does not collect and free those entries. This can result in a non-bootable system."
-msgstr "现代固件有一个垃圾收集器可搜集删除的项并释放为旧项预留的内存。当问题固件不搜集并释放这些项时就会导致问题; 这可能导致系统无法引导。"
+msgstr "现代固件有一个垃圾收集器可搜集删除的项并释放为旧项预留的内存。当问题固件不搜集并释放这些项时就会导致问题。这可能导致系统无法引导。"
 
 #: xml/release-notes.xml:161(para)
-#, fuzzy
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "规避方法很简单：将传统的 MBR 分区转换成新的 GPT 分区来彻底避免此问题。"
 
@@ -446,12 +443,12 @@ msgid ""
 "template to copy from. Make sure to leave the UUID untouched (this is the root file system's UUID) and change the subvolume name and its "
 "mount point consistently to <filename>/var/cache</filename>."
 msgstr ""
+"在 <filename>/etc/fstab</filename> 中为新的 <filename>/var/cache</filename> 子卷添加一项。使用已存在的子卷作为模板复制。请确保不要改动 "
+"UUID (这是根文件系统的 UUID)，并依照 <filename>/var/cache</filename> 修改子卷的名字和挂载点。"
 
 #: xml/release-notes.xml:407(para)
-#, fuzzy
-#| msgid "Add <literal>0 0</literal> to the end of each new cifs mount line in <filename>/etc/fstab</filename>."
 msgid "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
-msgstr "在 <filename>/etc/fstab</filename> 中添加 <literal>0 0</literal> 到每行新 cifs 挂载的末尾。"
+msgstr "挂载 <filename>/etc/fstab</filename> 中指定的新子卷："
 
 #: xml/release-notes.xml:410(command)
 msgid "mount /var/cache"
@@ -459,51 +456,53 @@ msgstr "mount /var/cache"
 
 #: xml/release-notes.xml:416(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
-msgstr ""
+msgstr "Synaptics 触摸板 X 驱动在 GNOME 的触控体验可能下降"
 
 #: xml/release-notes.xml:417(para)
 msgid ""
 "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</package>) was installed by default but had a lower priority "
 "than the libinput driver (<package>xf86-input-libinput</package>)."
 msgstr ""
+"在 Leap 42.1 中，Synaptics 触摸板的 X 驱动 (软件包 <package>xf86-input-synaptics</package>) 默认安装，但是优先级比 libinput 驱动 "
+"(<package>xf86-input-libinput</package>) 低。"
 
 #: xml/release-notes.xml:423(para)
 msgid "Starting with Leap 42.2:"
-msgstr ""
+msgstr "从 Leap 42.2 开始："
 
 #: xml/release-notes.xml:428(para)
 msgid "The Synaptics X driver is no longer installed by default."
-msgstr ""
+msgstr "Synaptics 触摸板的 X 驱动将不再默认安装。"
 
 #: xml/release-notes.xml:433(para)
 msgid "If the Synaptics X driver is installed, it will take precedence for any touchpad devices."
-msgstr ""
+msgstr "如果 Synaptics 触摸板的 X 驱动被安装了，它将取得所有触摸板设备的优先权。"
 
 #: xml/release-notes.xml:439(para)
 msgid ""
 "The Synaptics X driver is no longer supported by GNOME. This means when the driver is installed, Synaptics touchpads can only be "
 "configured to the extent that a basic mouse can."
-msgstr ""
+msgstr "GNOME 不再支持 Synaptics 触摸板的 X 驱动。这意味着，如果您安装了这个驱动，Synaptics 触摸板可能只会被配置成基本鼠标的程度。"
 
 #: xml/release-notes.xml:446(para)
 msgid ""
 "Unless you are using a Synaptics touchpad and have a large amount of custom configuration for the Synaptics driver, remove the package "
 "from your system:"
-msgstr ""
+msgstr "除非您您使用 Synaptics 触摸板且有大量自定义配置，否则请移除此软件包："
 
 #: xml/release-notes.xml:450(command)
 msgid "sudo zypper rm xf86-input-synaptics"
-msgstr ""
+msgstr "sudo zypper rm xf86-input-synaptics"
 
 #: xml/release-notes.xml:455(title)
 msgid "Upgrading from openSUSE 13.2"
-msgstr ""
+msgstr "从 openSUSE 13.2 升级"
 
 #: xml/release-notes.xml:456(para)
 msgid ""
 "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure to also review the information provided in <xref linkend="
 "\"sec.upgrade.421\"/>."
-msgstr ""
+msgstr "以下注记适用于从 openSUSE 13.2 或者更早的版本升级。请确保同时也阅读 <xref linkend=\"sec.upgrade.421\"/> 提供的信息。"
 
 #: xml/release-notes.xml:463(title)
 msgid "Network Interface Names"
@@ -614,16 +613,12 @@ msgstr ""
 "运行才能使旧的客户端 (包括 LibreOffice 和 KDE) 发现打印机。"
 
 #: xml/release-notes.xml:559(para)
-#, fuzzy
-#| msgid ""
-#| "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) "
-#| "reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgid ""
 "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) "
 "reject IPP 2.0 requests with <literal>Bad Request</literal> (see <link href=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
 "IPP 协议的默认版本从 1.1 变为 2.0。旧的 IPP 服务器如 CUPS 1.3.x (例如 SUSE Linux Enterprise 11 中的) 会拒绝 IPP 2.0 请求，返回 "
-"<literal>Bad Request</literal> (参考 <ulink url=\"http://www.cups.org/str.php?L4231\"/>)。"
+"<literal>Bad Request</literal> (参考 <link href=\"http://www.cups.org/str.php?L4231\"/>)。"
 
 #: xml/release-notes.xml:565(para)
 msgid ""
@@ -658,11 +653,6 @@ msgid ""
 msgstr "一些打印滤镜和后端从 <literal>cups</literal> 软件包移到 <literal>cups-filters</literal> 软件包。"
 
 #: xml/release-notes.xml:604(para)
-#, fuzzy
-#| msgid ""
-#| "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url="
-#| "\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgid ""
 "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <link href="
 "\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
@@ -672,18 +662,12 @@ msgstr ""
 "id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)。"
 
 #: xml/release-notes.xml:613(para)
-#, fuzzy
-#| msgid ""
-#| "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package "
-#| "(see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 msgid ""
 "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package "
 "(see <link href=\"http://www.cups.org/str.php?L4120\"/> and <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 msgstr ""
-"CUPS 条幅和测试页从 <literal>cups</literal> 软件包移至 <literal>cups-filters</literal> 软件包 (参考 <ulink url=\"http://www.cups.org/str."
-"php?L4120\">http://www.cups.org/str.php?L4120</ulink> 和 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://"
-"bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)。"
+"CUPS 条幅和测试页从 <literal>cups</literal> 软件包移至 <literal>cups-filters</literal> 软件包 (参考 <link href=\"http://www.cups.org/str."
+"php?L4120\"/> 和 <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)。"
 
 #: xml/release-notes.xml:628(title)
 msgid "General"
