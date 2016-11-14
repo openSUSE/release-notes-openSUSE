@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-14 13:14+0100\n"
+"POT-Creation-Date: 2016-11-14 13:28+0100\n"
 "PO-Revision-Date: 2016-11-13 12:21+0000\n"
 "Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
@@ -528,7 +528,7 @@ msgstr ""
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr ""
 
-#: xml/release-notes.xml:400(command) xml/release-notes.xml:520(screen)
+#: xml/release-notes.xml:400(command) xml/release-notes.xml:534(screen)
 msgid "umount /mnt"
 msgstr ""
 
@@ -604,27 +604,46 @@ msgid "sudo zypper rm xf86-input-synaptics"
 msgstr ""
 
 #: xml/release-notes.xml:460(title)
-msgid "Upgrading from openSUSE 13.2"
+msgid ""
+"AArch64: Page Size Has Been Changed From openSUSE Leap 42.1 to openSUSE Leap "
+"42.2"
 msgstr ""
 
 #: xml/release-notes.xml:461(para)
+msgid ""
+"In openSUSE Leap 42.1, the default page size on AArch64 platforms was 64 kB. "
+"With openSUSE Leap 42.2, the page size has been changed to 4 kB. This "
+"renders old Swap and Btrfs file systems unusable."
+msgstr ""
+
+#: xml/release-notes.xml:466(para)
+msgid ""
+"If you are currently on openSUSE Leap 42.1 on AArch64, consider a fresh "
+"installation of openSUSE Leap 42.2 instead of upgrading."
+msgstr ""
+
+#: xml/release-notes.xml:474(title)
+msgid "Upgrading from openSUSE 13.2"
+msgstr ""
+
+#: xml/release-notes.xml:475(para)
 msgid ""
 "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure "
 "to also review the information provided in <xref linkend=\"sec.upgrade.421\"/"
 ">."
 msgstr ""
 
-#: xml/release-notes.xml:468(title)
+#: xml/release-notes.xml:482(title)
 msgid "Network Interface Names"
 msgstr ""
 
-#: xml/release-notes.xml:469(para)
+#: xml/release-notes.xml:483(para)
 msgid ""
 "When upgrading a remote machine from openSUSE 13.2, make sure your network "
 "interfaces are named correctly."
 msgstr ""
 
-#: xml/release-notes.xml:473(para)
+#: xml/release-notes.xml:487(para)
 msgid ""
 "openSUSE 13.2 used so-called predictable network interface names (for "
 "example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses "
@@ -635,26 +654,26 @@ msgid ""
 "system:"
 msgstr ""
 
-#: xml/release-notes.xml:482(replaceable)
+#: xml/release-notes.xml:496(replaceable)
 msgid "enp5s0"
 msgstr ""
 
-#: xml/release-notes.xml:482(screen)
+#: xml/release-notes.xml:496(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
 
-#: xml/release-notes.xml:484(para)
+#: xml/release-notes.xml:498(para)
 msgid ""
 "Replace <replaceable>enp5s0</replaceable> with the name of your network "
 "interface."
 msgstr ""
 
-#: xml/release-notes.xml:491(title)
+#: xml/release-notes.xml:505(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr ""
 
-#: xml/release-notes.xml:492(para)
+#: xml/release-notes.xml:506(para)
 msgid ""
 "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to "
 "become permanently occupied with stale, inaccessible contents after the "
@@ -663,64 +682,64 @@ msgid ""
 "systems."
 msgstr ""
 
-#: xml/release-notes.xml:499(para)
+#: xml/release-notes.xml:513(para)
 msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
 msgstr ""
 
-#: xml/release-notes.xml:505(para)
+#: xml/release-notes.xml:519(para)
 msgid "Mount the initial root filesystem:"
 msgstr ""
 
-#: xml/release-notes.xml:508(replaceable)
+#: xml/release-notes.xml:522(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr ""
 
-#: xml/release-notes.xml:508(screen)
+#: xml/release-notes.xml:522(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr ""
 
-#: xml/release-notes.xml:511(para)
+#: xml/release-notes.xml:525(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr ""
 
-#: xml/release-notes.xml:514(screen)
+#: xml/release-notes.xml:528(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr ""
 
-#: xml/release-notes.xml:517(para)
+#: xml/release-notes.xml:531(para)
 msgid "Umount the filesystem again:"
 msgstr ""
 
-#: xml/release-notes.xml:526(title)
+#: xml/release-notes.xml:540(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr ""
 
-#: xml/release-notes.xml:529(emphasis)
+#: xml/release-notes.xml:543(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr ""
 
-#: xml/release-notes.xml:531(para)
+#: xml/release-notes.xml:545(para)
 msgid ""
 "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes "
 "that may require manual configuration adjustments."
 msgstr ""
 
-#: xml/release-notes.xml:538(para)
+#: xml/release-notes.xml:552(para)
 msgid ""
 "PDF is now the standard print job format rather than PS. Therefore "
 "traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
 
-#: xml/release-notes.xml:543(para)
+#: xml/release-notes.xml:557(para)
 msgid ""
 "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr ""
 
-#: xml/release-notes.xml:551(para)
+#: xml/release-notes.xml:565(para)
 msgid ""
 "The network printer discovery protocol has changed. The native method to "
 "discover network printers is now based on DNS Service discovery (DNS-SD, "
@@ -731,7 +750,7 @@ msgid ""
 "LibreOffice and KDE)."
 msgstr ""
 
-#: xml/release-notes.xml:564(para)
+#: xml/release-notes.xml:578(para)
 msgid ""
 "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers "
 "like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 "
@@ -739,41 +758,41 @@ msgid ""
 "cups.org/str.php?L4231\"/>)."
 msgstr ""
 
-#: xml/release-notes.xml:570(para)
+#: xml/release-notes.xml:584(para)
 msgid ""
 "To be able to print to old servers, the IPP protocol version must be "
 "specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr ""
 
-#: xml/release-notes.xml:577(para)
+#: xml/release-notes.xml:591(para)
 msgid ""
 "The <literal>ServerName</literal> settings in <literal>client.conf</literal> "
 "(for example, <literal>ServerName older.server.example.com/version=1.1</"
 "literal>)."
 msgstr ""
 
-#: xml/release-notes.xml:585(para)
+#: xml/release-notes.xml:599(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr ""
 
-#: xml/release-notes.xml:591(para)
+#: xml/release-notes.xml:605(para)
 msgid ""
 "The server name value of the <literal>-h</literal> option of the command "
 "line tools, for example:"
 msgstr ""
 
-#: xml/release-notes.xml:595(screen)
+#: xml/release-notes.xml:609(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr ""
 
-#: xml/release-notes.xml:601(para)
+#: xml/release-notes.xml:615(para)
 msgid ""
 "Some printing filters and back-ends were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
 
-#: xml/release-notes.xml:609(para)
+#: xml/release-notes.xml:623(para)
 msgid ""
 "Some configuration directives were split from <literal>cupsd.conf</literal> "
 "into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups."
@@ -781,7 +800,7 @@ msgid ""
 "opensuse.org/show_bug.cgi?id=789566\"/>)."
 msgstr ""
 
-#: xml/release-notes.xml:618(para)
+#: xml/release-notes.xml:632(para)
 msgid ""
 "CUPS banners and the CUPS test page were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package (see <link "
@@ -789,41 +808,41 @@ msgid ""
 "bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 msgstr ""
 
-#: xml/release-notes.xml:633(title)
+#: xml/release-notes.xml:647(title)
 msgid "General"
 msgstr "Informacje ogólne"
 
-#: xml/release-notes.xml:635(para)
+#: xml/release-notes.xml:649(para)
 msgid ""
 "This section lists general issues with openSUSE Leap 42.2 that do not match "
 "any other category."
 msgstr ""
 
-#: xml/release-notes.xml:641(title)
+#: xml/release-notes.xml:655(title)
 msgid "KDE Software for Personal Information Management (KDE PIM)"
 msgstr ""
 
-#: xml/release-notes.xml:642(para)
+#: xml/release-notes.xml:656(para)
 msgid ""
 "openSUSE Leap 42.2 ships two versions of the KDE PIM (Kontact, KMail, etc.) "
 "suite:"
 msgstr ""
 
-#: xml/release-notes.xml:648(para)
+#: xml/release-notes.xml:662(para)
 msgid "The legacy 4.x version"
 msgstr ""
 
-#: xml/release-notes.xml:653(para)
+#: xml/release-notes.xml:667(para)
 msgid "The version based on KDE Frameworks 5"
 msgstr ""
 
-#: xml/release-notes.xml:658(para)
+#: xml/release-notes.xml:672(para)
 msgid ""
 "KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid "
 "disrupting user workflows."
 msgstr ""
 
-#: xml/release-notes.xml:662(para)
+#: xml/release-notes.xml:676(para)
 msgid ""
 "The two versions of KDE PIM are not co-installable. Some software, such as "
 "KNode (package <package>knode</package>) require the legacy 4.x version and "
@@ -831,47 +850,47 @@ msgid ""
 "example, the package <package>kmail5</package>)."
 msgstr ""
 
-#: xml/release-notes.xml:668(para)
+#: xml/release-notes.xml:682(para)
 msgid ""
 "KDE PIM 4.x will be removed in the next version of openSUSE Leap. Therefore, "
 "you are encouraged to switch to the newer 5.x version."
 msgstr ""
 
-#: xml/release-notes.xml:672(para)
+#: xml/release-notes.xml:686(para)
 msgid ""
 "However, not all settings are migrated from the older version at this time. "
 "For more information, see the bug report at <link href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=1001872\"/>)."
 msgstr ""
 
-#: xml/release-notes.xml:680(title)
+#: xml/release-notes.xml:694(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr ""
 
-#: xml/release-notes.xml:681(para)
+#: xml/release-notes.xml:695(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
 "users without logging out is not possible."
 msgstr ""
 
-#: xml/release-notes.xml:686(para)
+#: xml/release-notes.xml:700(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
 msgstr ""
 
-#: xml/release-notes.xml:692(para)
+#: xml/release-notes.xml:706(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr ""
 
-#: xml/release-notes.xml:697(para)
+#: xml/release-notes.xml:711(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
 msgstr ""
 
-#: xml/release-notes.xml:703(para)
+#: xml/release-notes.xml:717(para)
 #, fuzzy
 #| msgid ""
 #| "Start gnome-tweak-tool (<menuchoice><guimenu>'Activities'</"
@@ -883,51 +902,51 @@ msgstr ""
 "Uruchomienie gnome-tweak-tool (<menuchoice><guimenu>'Działania'</"
 "guimenu><guimenu>'ustawienia zaawansowane'</guimenu></menuchoice>)."
 
-#: xml/release-notes.xml:710(para)
+#: xml/release-notes.xml:724(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
 msgstr ""
 
-#: xml/release-notes.xml:716(para)
+#: xml/release-notes.xml:730(para)
 msgid "Reboot."
 msgstr ""
 
 #. bnc#809347
-#: xml/release-notes.xml:751(title)
+#: xml/release-notes.xml:765(title)
 msgid "More Information and Feedback"
 msgstr ""
 
-#: xml/release-notes.xml:755(para)
+#: xml/release-notes.xml:769(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 
-#: xml/release-notes.xml:760(para)
+#: xml/release-notes.xml:774(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
 
-#: xml/release-notes.xml:764(replaceable)
+#: xml/release-notes.xml:778(replaceable)
 msgid "FILENAME"
 msgstr ""
 
-#: xml/release-notes.xml:764(screen)
+#: xml/release-notes.xml:778(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr ""
 
-#: xml/release-notes.xml:765(para)
+#: xml/release-notes.xml:779(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
-#: xml/release-notes.xml:770(para)
+#: xml/release-notes.xml:784(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
 
-#: xml/release-notes.xml:776(para)
+#: xml/release-notes.xml:790(para)
 #, fuzzy
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
@@ -935,27 +954,27 @@ msgid ""
 msgstr ""
 "Informacje o strefach czasowych w pliku <filename>/etc/adjtime</filename>"
 
-#: xml/release-notes.xml:782(para)
+#: xml/release-notes.xml:796(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
 msgstr ""
 
-#: xml/release-notes.xml:787(para)
+#: xml/release-notes.xml:801(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
 msgstr ""
 
-#: xml/release-notes.xml:794(para)
+#: xml/release-notes.xml:808(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:798(para)
+#: xml/release-notes.xml:812(para)
 msgid "Thanks for using openSUSE."
 msgstr ""
 
-#: xml/release-notes.xml:801(para)
+#: xml/release-notes.xml:815(para)
 msgid "The openSUSE Team."
 msgstr ""
 
