@@ -717,6 +717,23 @@
       </para>
   </section>
 
+  <!-- boo#1009275 -->
+  <section xml:id="sec.general.dolphin-permission">
+   <title>Dolphin Does Not Set Extended Permission Bits</title>
+   <para>
+    The version of the KDE file manager Dolphin that is shipped with
+    &opensuseleap; &version; cannot set
+    <quote>Extended Permission</quote> bits (GID,
+    <quote>Sticky</quote>). Additionally, closing the Dolphin permissions
+    dialog by clicking <guimenu>OK</guimenu> clears existing extended
+    permissions bits.
+   </para>
+   <para>
+    To avoid such issues, edit permissions with Konqueror (GUI) or
+    <command>chmod</command> (command line) only.
+   </para>
+  </section>
+
   <section xml:id="sec.general.gdm">
    <title>No Screen Lock When Using GNOME Shell But Not GDM</title>
    <para>
