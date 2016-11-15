@@ -8,7 +8,7 @@
 # * When creating output:   $ make linguas; make all
 # * To clean up:            $ make clean
 
-.PHONY: clean po pot pdf txt single-html yast-html translatedxml profile
+.PHONY: clean po pot pdf text single-html yast-html translatedxml profile
 
 ifndef LANGS
   LANGS := $(shell cat po/LINGUAS)
@@ -29,6 +29,7 @@ endif
 ifneq "$(LIFECYCLE)" "$(filter $(LIFECYCLE),$(LIFECYCLE_VALID))"
   override LIFECYCLE := maintained
 endif
+
 
 # Update all PO files
 PO_FILES := $(wildcard po/*.po)
@@ -57,7 +58,7 @@ XSLTPROC_COMMAND = xsltproc \
 --stringparam show.comments 0 \
 --xinclude --nonet
 
-all: single-html yast-html pdf txt
+all: single-html yast-html pdf text
 
 linguas: po/LINGUAS
 
@@ -130,7 +131,7 @@ $(YAST_PROFILED_FILES): po/LINGUAS translatedxml
 	$(DAPS_COMMAND) profile \
 	PROFCONDITION="general\;$(LIFECYCLE)"
 
-txt: $(TXT_FILES)
+text: $(TXT_FILES)
 $(TXT_FILES): po/LINGUAS translatedxml
 	lang=$(LANG_COMMAND) ; \
 	LANG=$${lang} $(DAPS_COMMAND) text \
