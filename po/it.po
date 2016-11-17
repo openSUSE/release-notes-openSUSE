@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2016-04-21 14:25+0200\n"
-"PO-Revision-Date: 2016-11-16 15:39+0000\n"
+"PO-Revision-Date: 2016-11-17 13:44+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/it/>\n"
@@ -46,9 +46,12 @@ msgstr ""
 
 #. Previous Release Notes
 #: xml/release-notes.xml:55(para)
-#, fuzzy
 msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
-msgstr "Se si aggiorna da una versione vecchia a questo rilascio di openSUSE, conviene leggere le note di rilascio precedenti qui: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
+msgstr ""
+"Se si aggiorna da una versione vecchia a questo rilascio di openSUSE Leap, "
+"conviene leggere le note di rilascio precedenti qui: <ulink url=\""
+"http://en.opensuse.org/openSUSE:Release_Notes\""
+">http://en.opensuse.org/openSUSE:Release_Notes</ulink>."
 
 #: xml/release-notes.xml:92(title)
 msgid "Installation"
@@ -156,11 +159,16 @@ msgstr ""
 
 #: xml/release-notes.xml:207(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
-msgstr ""
+msgstr "Btrfs: Perdita di spazio disco dopo il ripristino del sistema"
 
 #: xml/release-notes.xml:208(para)
 msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr ""
+"openSUSE 13.2 usava una configurazione di partizioni Btrfs che faceva sì che "
+"dopo l'esecuzione del primo ripristino del sistema lo spazio disco venisse "
+"permanentemente occupato da contenuti deteriorati e inaccessibili. Questo "
+"problema di configurazione è stato risolto in openSUSE Leap 42.1. Tuttavia, "
+"la soluzione può essere applicata solo a sistemi installati da zero."
 
 #: xml/release-notes.xml:215(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
@@ -168,34 +176,34 @@ msgstr ""
 
 #: xml/release-notes.xml:221(para)
 msgid "Mount the initial root filesystem:"
-msgstr ""
+msgstr "Montare il filesystem radice iniziale:"
 
 #: xml/release-notes.xml:224(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-msgstr ""
+msgstr "&lt;FILE_SYSTEM_RADICE&gt;"
 
 #: xml/release-notes.xml:224(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
-msgstr ""
+msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:227(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
-msgstr ""
+msgstr "Rimuovere tutti i file sotto /mnt che non sono in un sottovolume:"
 
 #: xml/release-notes.xml:230(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr ""
+msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:233(para)
 msgid "Umount the filesystem again:"
-msgstr ""
+msgstr "Smontare nuovamente il filesystem:"
 
 #: xml/release-notes.xml:236(screen)
 #, no-wrap
 msgid "umount /mnt"
-msgstr ""
+msgstr "umount /mnt"
 
 #: xml/release-notes.xml:244(title)
 msgid "General"
@@ -243,6 +251,14 @@ msgstr "Vedi <ulink url=\"https://en.opensuse.org/Concepts_printing\"> https://e
 #: xml/release-notes.xml:290(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"Il protocollo per la rilevazione delle stampanti di rete è cambiato. Il "
+"metodo nativo per rilevare le stampanti di rete è ora basato su DNS Service "
+"discovery (DNS-SD, cioè attraverso Avahi). Il servizio <literal>cups-"
+"browsed</literal> del pacchetto <literal>cups-filters</literal> può essere "
+"usato come ponte tra vecchio e nuovo protocollo. Sia <literal>cupsd</literal>"
+" che <literal>cups-browsed</literal> devono essere in esecuzione per "
+"consentire ai client \"obsoleti\" di rilevare le stampanti (includendo "
+"LibreOffice e KDE)."
 
 #: xml/release-notes.xml:303(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
@@ -251,27 +267,37 @@ msgstr ""
 #: xml/release-notes.xml:309(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr ""
+"Per poter stampare su server vecchi, la versione del protocollo IPP deve "
+"essere specificata esplicitamente aggiungendo <literal>/version=1.1</literal>"
+" a ciascuno dei seguenti:"
 
 #: xml/release-notes.xml:316(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
+"L'impostazione <literal>ServerName</literal> in "
+"<literal>client.conf</literal> (per esempio, <literal>ServerName "
+"esempio.vecchio.server.com/version=1.1</literal>)."
 
 #: xml/release-notes.xml:324(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
-msgstr ""
+msgstr "Il valore della variabile d'ambiente <literal>CUPS_SERVER</literal>."
 
 #: xml/release-notes.xml:330(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
+"Il valore del nome del server indicato con l'opzione <literal>-h</literal> "
+"degli strumenti da linea di comando, per esempio:"
 
 #: xml/release-notes.xml:334(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
-msgstr ""
+msgstr "lpstat -h esempio.vecchio.server.com/version=1.1 -p"
 
 #: xml/release-notes.xml:340(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
+"Alcuni filtri di stampa e back-end sono stati spostati dal pacchetto "
+"<literal>cups</literal> al pacchetto <literal>cups-filters</literal>."
 
 #: xml/release-notes.xml:348(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
