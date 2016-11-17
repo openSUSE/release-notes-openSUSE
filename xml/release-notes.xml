@@ -203,19 +203,35 @@
     </para>
    </section>
 
+   <!-- boo#953985, boo#1010575 -->
    <section id="sec.upgrade.btrfsleak">
     <title>Btrfs: Disk Space Leak after System Rollbacks</title>
     <para>
-     &opensuse; 13.2 used a Btrfs partition layout that allowed for disk space
-     to become permanently occupied with stale, inaccessible contents after the
-     first system rollback was executed.
-     This layout issue has been fixed in &opensuseleap; 42.1.
+     By default, &opensuse; 13.2 used a Btrfs partition layout that allowed
+     for disk space to become permanently occupied with stale, inaccessible
+     contents after the first system rollback was executed.
+     This layout issue was fixed in &opensuseleap; 42.1.
      However, the fix can only be applied to newly installed systems.
     </para>
     <para>
-     If you are upgrading from &opensuse; 13.2, you cannot convert the
-     to the new layout, but you can reclaim the lost disk space.
+     If you are upgrading from &opensuse; 13.2, you cannot convert the file
+     system to the new layout, but you can reclaim the lost disk space.
     </para>
+    <warning>
+     <title>Data Loss with Non-Standard Settings or No Rollbacks</title>
+     <para>
+      The following procedure will only work properly on installations set up
+      using the default proposal created by the &opensuse; 13.2 installer.
+     </para>
+     <para>
+      Additionally, you must have previously made a system rollback.
+     </para>
+     <para>
+      If you have set up your Btrfs file system with a non-standard configuration
+      or have not previously made a system rollback, executing the following
+      procedure can incur data loss.
+     </para>
+    </warning>
     <procedure>
     <step>
      <para>
