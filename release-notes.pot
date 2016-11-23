@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-09-16 15:06+0200\n"
+"POT-Creation-Date: 2016-11-23 19:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,222 +121,238 @@ msgstr ""
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr ""
 
-#: xml/release-notes.xml:207(title)
+#: xml/release-notes.xml:208(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr ""
 
-#: xml/release-notes.xml:208(para)
-msgid "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue has been fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
+#: xml/release-notes.xml:209(para)
+msgid "By default, openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue was fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr ""
 
-#: xml/release-notes.xml:215(para)
-msgid "If you are upgrading from openSUSE 13.2, you cannot convert the to the new layout, but you can reclaim the lost disk space."
+#: xml/release-notes.xml:216(para)
+msgid "If you are upgrading from openSUSE 13.2, you cannot convert the file system to the new layout, but you can reclaim the lost disk space."
 msgstr ""
 
-#: xml/release-notes.xml:221(para)
+#: xml/release-notes.xml:221(title)
+msgid "Data Loss with Non-Standard Settings or No Rollbacks"
+msgstr ""
+
+#: xml/release-notes.xml:222(para)
+msgid "The following procedure will only work properly on installations set up using the default proposal created by the openSUSE 13.2 installer."
+msgstr ""
+
+#: xml/release-notes.xml:226(para)
+msgid "Additionally, you must have previously made a system rollback."
+msgstr ""
+
+#: xml/release-notes.xml:229(para)
+msgid "If you have set up your Btrfs file system with a non-standard configuration or have not previously made a system rollback, executing the following procedure can incur data loss."
+msgstr ""
+
+#: xml/release-notes.xml:237(para)
 msgid "Mount the initial root filesystem:"
 msgstr ""
 
-#: xml/release-notes.xml:224(replaceable)
+#: xml/release-notes.xml:240(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr ""
 
-#: xml/release-notes.xml:224(screen)
+#: xml/release-notes.xml:240(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr ""
 
-#: xml/release-notes.xml:227(para)
+#: xml/release-notes.xml:243(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr ""
 
-#: xml/release-notes.xml:230(screen)
+#: xml/release-notes.xml:246(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr ""
 
-#: xml/release-notes.xml:233(para)
+#: xml/release-notes.xml:249(para)
 msgid "Umount the filesystem again:"
 msgstr ""
 
-#: xml/release-notes.xml:236(screen)
+#: xml/release-notes.xml:252(screen)
 #, no-wrap
 msgid "umount /mnt"
 msgstr ""
 
-#: xml/release-notes.xml:244(title)
+#: xml/release-notes.xml:260(title)
 msgid "General"
 msgstr ""
 
-#: xml/release-notes.xml:247(title)
+#: xml/release-notes.xml:263(title)
 msgid "Non-Oss Repository"
 msgstr ""
 
-#: xml/release-notes.xml:248(para)
+#: xml/release-notes.xml:264(para)
 msgid "After the installation, the non-oss repository is disabled."
 msgstr ""
 
-#: xml/release-notes.xml:251(para)
+#: xml/release-notes.xml:267(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
 
-#: xml/release-notes.xml:261(title)
+#: xml/release-notes.xml:277(title)
 msgid "Technical"
 msgstr ""
 
-#: xml/release-notes.xml:265(title)
+#: xml/release-notes.xml:281(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr ""
 
-#: xml/release-notes.xml:268(emphasis)
+#: xml/release-notes.xml:284(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr ""
 
-#: xml/release-notes.xml:270(para)
+#: xml/release-notes.xml:286(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments."
 msgstr ""
 
-#: xml/release-notes.xml:277(para)
+#: xml/release-notes.xml:293(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
 
-#: xml/release-notes.xml:282(para)
+#: xml/release-notes.xml:298(para)
 msgid "See <ulink url=\"https://en.opensuse.org/Concepts_printing\">https://en.opensuse.org/Concepts_printing</ulink> for details."
 msgstr ""
 
-#: xml/release-notes.xml:290(para)
+#: xml/release-notes.xml:306(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
 
-#: xml/release-notes.xml:303(para)
+#: xml/release-notes.xml:319(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see <ulink url=\"http://www.cups.org/str.php?L4231\"/>)."
 msgstr ""
 
-#: xml/release-notes.xml:309(para)
+#: xml/release-notes.xml:325(para)
 msgid "To be able to print to old servers, the IPP protocol version must be specified explictly by appending <literal>/version=1.1</literal> to either:"
 msgstr ""
 
-#: xml/release-notes.xml:316(para)
+#: xml/release-notes.xml:332(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
 
-#: xml/release-notes.xml:324(para)
+#: xml/release-notes.xml:340(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr ""
 
-#: xml/release-notes.xml:330(para)
+#: xml/release-notes.xml:346(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
 
-#: xml/release-notes.xml:334(screen)
+#: xml/release-notes.xml:350(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr ""
 
-#: xml/release-notes.xml:340(para)
+#: xml/release-notes.xml:356(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
 
-#: xml/release-notes.xml:348(para)
+#: xml/release-notes.xml:364(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgstr ""
 
-#: xml/release-notes.xml:357(para)
+#: xml/release-notes.xml:373(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 msgstr ""
 
-#: xml/release-notes.xml:370(title)
+#: xml/release-notes.xml:386(title)
 msgid "Miscellaneous"
 msgstr ""
 
-#: xml/release-notes.xml:372(title)
+#: xml/release-notes.xml:388(title)
 msgid "KDE and Network Authentication"
 msgstr ""
 
-#: xml/release-notes.xml:373(para)
+#: xml/release-notes.xml:389(para)
 msgid "When using the KDE display manager SDDM with an authentication method that provides a high number of users, SDDM becomes unusable. Additionally, if the automounter is used, SDDM may block for a long time on startup trying to mount every user's home."
 msgstr ""
 
-#: xml/release-notes.xml:381(programlisting)
+#: xml/release-notes.xml:397(programlisting)
 #, no-wrap
 msgid "[Theme]\nCurrent=maldives\n\n[Users]\nMaximumUid=1002"
 msgstr ""
 
-#: xml/release-notes.xml:379(para)
+#: xml/release-notes.xml:395(para)
 msgid "Modify <filename>/etc/sddm.conf</filename> to contain the following entries: <placeholder-1/>"
 msgstr ""
 
-#: xml/release-notes.xml:387(para)
+#: xml/release-notes.xml:403(para)
 msgid "See <ulink url=\"https://bugzilla.suse.com/show_bug.cgi?id=953778\">https://bugzilla.suse.com/show_bug.cgi?id=953778</ulink> for details."
 msgstr ""
 
-#: xml/release-notes.xml:395(title)
+#: xml/release-notes.xml:411(title)
 msgid "No Screensaver Support in KDE Plasma"
 msgstr ""
 
-#: xml/release-notes.xml:396(para)
+#: xml/release-notes.xml:412(para)
 msgid "KDE Plasma does not support screensavers by default. If you prefer to have a screensaver, install the package <literal>xscreensaver</literal>."
 msgstr ""
 
-#: xml/release-notes.xml:401(para)
+#: xml/release-notes.xml:417(para)
 msgid "Set <command>xscreensaver</command> to start with the desktop session by selecting <menuchoice><guimenu>K</guimenu><guimenu>Settings</guimenu><guimenu>Configure Desktop</guimenu></menuchoice>, then choose <menuchoice><guimenu>Startup and Shutdown</guimenu><guimenu>Autostart</guimenu></menuchoice>. Click <guimenu>Add Program</guimenu>, type <literal>xscreensaver</literal> and click <guimenu>OK</guimenu>."
 msgstr ""
 
-#: xml/release-notes.xml:410(para)
+#: xml/release-notes.xml:426(para)
 msgid "To configure the screensaver, use <command>xscreensaver-demo</command>."
 msgstr ""
 
 #. bnc#809347
-#: xml/release-notes.xml:419(title)
+#: xml/release-notes.xml:435(title)
 msgid "More Information and Feedback"
 msgstr ""
 
-#: xml/release-notes.xml:423(para)
+#: xml/release-notes.xml:439(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 
-#: xml/release-notes.xml:428(para)
+#: xml/release-notes.xml:444(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr ""
 
-#: xml/release-notes.xml:432(replaceable)
+#: xml/release-notes.xml:448(replaceable)
 msgid "FILENAME"
 msgstr ""
 
-#: xml/release-notes.xml:432(screen)
+#: xml/release-notes.xml:448(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr ""
 
-#: xml/release-notes.xml:433(para)
+#: xml/release-notes.xml:449(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
-#: xml/release-notes.xml:438(para)
+#: xml/release-notes.xml:454(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr ""
 
-#: xml/release-notes.xml:444(para)
+#: xml/release-notes.xml:460(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr ""
 
-#: xml/release-notes.xml:450(para)
+#: xml/release-notes.xml:466(para)
 msgid "<ulink url=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse.org/</ulink> contains additional or updated documentation."
 msgstr ""
 
-#: xml/release-notes.xml:455(para)
+#: xml/release-notes.xml:471(para)
 msgid "Visit <ulink url=\"https://www.opensuse.org\">https://www.opensuse.org</ulink> for the latest product news from openSUSE."
 msgstr ""
 
-#: xml/release-notes.xml:462(para)
+#: xml/release-notes.xml:478(para)
 msgid "Copyright © 2015 SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:466(para)
+#: xml/release-notes.xml:482(para)
 msgid "Thanks for using openSUSE."
 msgstr ""
 
-#: xml/release-notes.xml:469(para)
+#: xml/release-notes.xml:485(para)
 msgid "The openSUSE Team."
 msgstr ""
 
