@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
-"POT-Creation-Date: 2016-11-14 15:18+0100\n"
+"POT-Creation-Date: 2016-11-23 20:02+0100\n"
 "PO-Revision-Date: 2016-11-14 17:30+0000\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/release-notes-"
@@ -22,8 +22,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.6\n"
 
 #: xml/release-notes.xml:15(title) xml/release-notes.xml:32(component)
@@ -431,9 +431,9 @@ msgstr ""
 "автоматично отримаєте <package>labplot-kf5</package>."
 
 #: xml/release-notes.xml:279(para)
-#| msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgid "<package>nodejs</package>: Renamed to <package>nodejs4</package>."
-msgstr "<package>nodejs</package>: перейменовано на <package>nodejs4</package>."
+msgstr ""
+"<package>nodejs</package>: перейменовано на <package>nodejs4</package>."
 
 #: xml/release-notes.xml:284(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
@@ -615,7 +615,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Розмонтуйте підтом з тимчасової точки монтування:"
 
-#: xml/release-notes.xml:411(command) xml/release-notes.xml:545(screen)
+#: xml/release-notes.xml:411(command) xml/release-notes.xml:561(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -784,15 +784,22 @@ msgstr ""
 "Замініть <replaceable>enp5s0</replaceable> назвою вашого мережного "
 "інтерфейсу."
 
-#: xml/release-notes.xml:516(title)
+#: xml/release-notes.xml:517(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: втрата дискового простору після системних відкочень"
 
-#: xml/release-notes.xml:517(para)
+#: xml/release-notes.xml:518(para)
+#, fuzzy
+#| msgid ""
+#| "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space "
+#| "to become permanently occupied with stale, inaccessible contents after "
+#| "the first system rollback was executed. This layout issue has been fixed "
+#| "in openSUSE Leap 42.1. However, the fix can only be applied to newly "
+#| "installed systems."
 msgid ""
-"openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to "
-"become permanently occupied with stale, inaccessible contents after the "
-"first system rollback was executed. This layout issue has been fixed in "
+"By default, openSUSE 13.2 used a Btrfs partition layout that allowed for "
+"disk space to become permanently occupied with stale, inaccessible contents "
+"after the first system rollback was executed. This layout issue was fixed in "
 "openSUSE Leap 42.1. However, the fix can only be applied to newly installed "
 "systems."
 msgstr ""
@@ -802,7 +809,7 @@ msgstr ""
 "виправлена у openSUSE Leap 42.1. Однак виправлення може застосовуватися "
 "тільки для наново встановлених систем."
 
-#: xml/release-notes.xml:524(para)
+#: xml/release-notes.xml:525(para)
 msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
@@ -811,41 +818,62 @@ msgstr ""
 "систему у нову розмітку, але натомість можете повернути втрачений дисковий "
 "простір."
 
-#: xml/release-notes.xml:530(para)
+#: xml/release-notes.xml:530(title)
+msgid "Data Loss with Non-Standard Settings or No Rollbacks"
+msgstr ""
+
+#: xml/release-notes.xml:531(para)
+msgid ""
+"The following procedure will only work properly on installations set up "
+"using the default proposal created by the openSUSE 13.2 installer."
+msgstr ""
+
+#: xml/release-notes.xml:535(para)
+msgid "Additionally, you must have previously made a system rollback."
+msgstr ""
+
+#: xml/release-notes.xml:538(para)
+msgid ""
+"If you have set up your Btrfs file system with a non-standard configuration "
+"or have not previously made a system rollback, executing the following "
+"procedure can incur data loss."
+msgstr ""
+
+#: xml/release-notes.xml:546(para)
 msgid "Mount the initial root filesystem:"
 msgstr "Змонтуйте початкову кореневу файлову систему:"
 
-#: xml/release-notes.xml:533(replaceable)
+#: xml/release-notes.xml:549(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
-#: xml/release-notes.xml:533(screen)
+#: xml/release-notes.xml:549(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:536(para)
+#: xml/release-notes.xml:552(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Вилучіть усі файли нижче /mnt, які не містяться у підтомі:"
 
-#: xml/release-notes.xml:539(screen)
+#: xml/release-notes.xml:555(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:542(para)
+#: xml/release-notes.xml:558(para)
 msgid "Umount the filesystem again:"
 msgstr "Демонтуйте знову файлову систему:"
 
-#: xml/release-notes.xml:551(title)
+#: xml/release-notes.xml:567(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Система друку: покращення та несумісні зміни"
 
-#: xml/release-notes.xml:554(emphasis)
+#: xml/release-notes.xml:570(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "Оновлено версію CUPS до 1.7"
 
-#: xml/release-notes.xml:556(para)
+#: xml/release-notes.xml:572(para)
 msgid ""
 "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes "
 "that may require manual configuration adjustments."
@@ -853,7 +881,7 @@ msgstr ""
 "Порівняно із CUPS1.5 у openSUSE 13.2 CUPS 1.7 приносить деякі суттєві "
 "нововведення, що можуть вимагати ручного коригування налаштувань."
 
-#: xml/release-notes.xml:563(para)
+#: xml/release-notes.xml:579(para)
 msgid ""
 "PDF is now the standard print job format rather than PS. Therefore "
 "traditional PostScript printers now also need a filter driver for printing."
@@ -861,13 +889,13 @@ msgstr ""
 "PDF тепер став стандартним форматом завдання на друк, а не PS. Тому "
 "традиційним принтерам PostScript зараз потрібний драйвер фільтру для друку."
 
-#: xml/release-notes.xml:568(para)
+#: xml/release-notes.xml:584(para)
 msgid ""
 "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr ""
 "Подробиці див. у <link href=\"https://en.opensuse.org/Concepts_printing\"/>."
 
-#: xml/release-notes.xml:576(para)
+#: xml/release-notes.xml:592(para)
 msgid ""
 "The network printer discovery protocol has changed. The native method to "
 "discover network printers is now based on DNS Service discovery (DNS-SD, "
@@ -885,7 +913,7 @@ msgstr ""
 "literal> потребують запуску, щоби \"застарілі\" клієнти виявляли принтери "
 "(включаючи LibreOffice та KDE)."
 
-#: xml/release-notes.xml:589(para)
+#: xml/release-notes.xml:605(para)
 msgid ""
 "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers "
 "like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 "
@@ -897,7 +925,7 @@ msgstr ""
 "IPP 2.0 із відповіддю <literal>Bad Request</literal> (див. <link href="
 "\"http://www.cups.org/str.php?L4231\"/>)."
 
-#: xml/release-notes.xml:595(para)
+#: xml/release-notes.xml:611(para)
 msgid ""
 "To be able to print to old servers, the IPP protocol version must be "
 "specified explictly by appending <literal>/version=1.1</literal> to either:"
@@ -905,7 +933,7 @@ msgstr ""
 "Для друку на старих серверах версія протоколу IPP повинна бути вказана явно "
 "додаванням <literal>/version=1.1</literal> до решти:"
 
-#: xml/release-notes.xml:602(para)
+#: xml/release-notes.xml:618(para)
 msgid ""
 "The <literal>ServerName</literal> settings in <literal>client.conf</literal> "
 "(for example, <literal>ServerName older.server.example.com/version=1.1</"
@@ -915,11 +943,11 @@ msgstr ""
 "(наприклад, <literal>ServerName older.server.example.com/version=1.1</"
 "literal>)."
 
-#: xml/release-notes.xml:610(para)
+#: xml/release-notes.xml:626(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "Значення змінної середовища <literal>CUPS_SERVER</literal>."
 
-#: xml/release-notes.xml:616(para)
+#: xml/release-notes.xml:632(para)
 msgid ""
 "The server name value of the <literal>-h</literal> option of the command "
 "line tools, for example:"
@@ -927,12 +955,12 @@ msgstr ""
 "Значення назви сервера із параметром <literal>-h</literal> для командного "
 "рядка, наприклад:"
 
-#: xml/release-notes.xml:620(screen)
+#: xml/release-notes.xml:636(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:626(para)
+#: xml/release-notes.xml:642(para)
 msgid ""
 "Some printing filters and back-ends were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package."
@@ -940,7 +968,7 @@ msgstr ""
 "Деякі фільтри друку та серверні програми були переміщені із пакунку "
 "<literal>cups</literal> до <literal>cups-filters</literal>."
 
-#: xml/release-notes.xml:634(para)
+#: xml/release-notes.xml:650(para)
 msgid ""
 "Some configuration directives were split from <literal>cupsd.conf</literal> "
 "into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups."
@@ -952,7 +980,7 @@ msgstr ""
 "php?L4223\">CVE-2012-5519, та <link href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=789566\">)."
 
-#: xml/release-notes.xml:643(para)
+#: xml/release-notes.xml:659(para)
 msgid ""
 "CUPS banners and the CUPS test page were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package (see <link "
@@ -964,11 +992,11 @@ msgstr ""
 "\"http://www.cups.org/str.php?L4120\"> та <link href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=735404\">)."
 
-#: xml/release-notes.xml:658(title)
+#: xml/release-notes.xml:674(title)
 msgid "General"
 msgstr "Загальне"
 
-#: xml/release-notes.xml:660(para)
+#: xml/release-notes.xml:676(para)
 msgid ""
 "This section lists general issues with openSUSE Leap 42.2 that do not match "
 "any other category."
@@ -976,26 +1004,26 @@ msgstr ""
 "Цей розділ перераховує загальні негаразди з openSUSE Leap 42.2, які не "
 "збігаються із жодною іншою категорією."
 
-#: xml/release-notes.xml:666(title)
+#: xml/release-notes.xml:682(title)
 msgid "KDE Software for Personal Information Management (KDE PIM)"
 msgstr "ПЗ KDE для управління персональною інформацією (KDE PIM)"
 
-#: xml/release-notes.xml:667(para)
+#: xml/release-notes.xml:683(para)
 msgid ""
 "openSUSE Leap 42.2 ships two versions of the KDE PIM (Kontact, KMail, etc.) "
 "suite:"
 msgstr ""
 "openSUSE Leap 42.2 пропонує дві версії набору KDE PIM (Kontact, KMail, тощо):"
 
-#: xml/release-notes.xml:673(para)
+#: xml/release-notes.xml:689(para)
 msgid "The legacy 4.x version"
 msgstr "Старіша версія 4.x"
 
-#: xml/release-notes.xml:678(para)
+#: xml/release-notes.xml:694(para)
 msgid "The version based on KDE Frameworks 5"
 msgstr "Версія на основі KDE Frameworks 5"
 
-#: xml/release-notes.xml:683(para)
+#: xml/release-notes.xml:699(para)
 msgid ""
 "KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid "
 "disrupting user workflows."
@@ -1003,7 +1031,7 @@ msgstr ""
 "KDE PIM 4.x більше не підтримується поточним KDE, але зберігається заради "
 "уникнення неполадок у роботі користувачів."
 
-#: xml/release-notes.xml:687(para)
+#: xml/release-notes.xml:703(para)
 msgid ""
 "The two versions of KDE PIM are not co-installable. Some software, such as "
 "KNode (package <package>knode</package>) require the legacy 4.x version and "
@@ -1015,7 +1043,7 @@ msgstr ""
 "X і будуть видаленні при встановленні будь-якого пакунку для KDE PIM 5.x "
 "(наприклад, пакунок <package>kmail5</package>)."
 
-#: xml/release-notes.xml:693(para)
+#: xml/release-notes.xml:709(para)
 msgid ""
 "KDE PIM 4.x will be removed in the next version of openSUSE Leap. Therefore, "
 "you are encouraged to switch to the newer 5.x version."
@@ -1023,7 +1051,7 @@ msgstr ""
 "KDE PIM 4.x буде вилучений у наступній версії openSUSE Leap. Тому "
 "рекомендуємо переходити на новішу 5.x версію."
 
-#: xml/release-notes.xml:697(para)
+#: xml/release-notes.xml:713(para)
 msgid ""
 "However, not all settings are migrated from the older version at this time. "
 "For more information, see the bug report at <link href=\"https://bugzilla."
@@ -1033,11 +1061,11 @@ msgstr ""
 "Докладнішу інформацію можна знайти у звіті про помилку на <link href="
 "\"https://bugzilla.opensuse.org/show_bug.cgi?id=1001872\"/>)."
 
-#: xml/release-notes.xml:705(title)
+#: xml/release-notes.xml:721(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "Не працює блокування екрану при використанні GNOME Shell без GDM"
 
-#: xml/release-notes.xml:706(para)
+#: xml/release-notes.xml:722(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1047,7 +1075,7 @@ msgstr ""
 "наприклад, SDDM або LightDM, не можна заблокувати екран. Крім того, "
 "неможливо змінити користувача без виходу."
 
-#: xml/release-notes.xml:711(para)
+#: xml/release-notes.xml:727(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -1055,11 +1083,11 @@ msgstr ""
 "Щоб мати можливість блокувати екран з GNOME Shell, встановіть GDM в якості "
 "менеджера входу:"
 
-#: xml/release-notes.xml:717(para)
+#: xml/release-notes.xml:733(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "Переконайтеся, що пакет <package>gdm</package> встановлений."
 
-#: xml/release-notes.xml:722(para)
+#: xml/release-notes.xml:738(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -1067,7 +1095,7 @@ msgstr ""
 "Відкрийте YaST і в ньому модуль <menuchoice><guimenu>Редактор /etc/"
 "sysconfig</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:728(para)
+#: xml/release-notes.xml:744(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -1076,7 +1104,7 @@ msgstr ""
 "guimenu><guimenu>Менеджер дисплею</guimenu><guimenu>DISPLAYMANAGER</"
 "guimenu></menuchoice>."
 
-#: xml/release-notes.xml:735(para)
+#: xml/release-notes.xml:751(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -1084,40 +1112,40 @@ msgstr ""
 "У текстовому полі вкажіть <literal>gdm</literal>. Щоб зберегти зміни, "
 "натисніть <guimenu>Гаразд</guimenu>."
 
-#: xml/release-notes.xml:741(para)
+#: xml/release-notes.xml:757(para)
 msgid "Reboot."
 msgstr "Перезавантажити."
 
 #. bnc#809347
-#: xml/release-notes.xml:776(title)
+#: xml/release-notes.xml:792(title)
 msgid "More Information and Feedback"
 msgstr "Додаткові відомості та зворотній зв'язок"
 
-#: xml/release-notes.xml:780(para)
+#: xml/release-notes.xml:796(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Прочитайте документи <filename>README</filename> на носії."
 
-#: xml/release-notes.xml:785(para)
+#: xml/release-notes.xml:801(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
 "Переглянути докладний журнал змін конкретного пакунку за допомогою RPM:"
 
-#: xml/release-notes.xml:789(replaceable)
+#: xml/release-notes.xml:805(replaceable)
 msgid "FILENAME"
 msgstr "НАЗВАФАЙЛУ"
 
-#: xml/release-notes.xml:789(screen)
+#: xml/release-notes.xml:805(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:790(para)
+#: xml/release-notes.xml:806(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Замініть <replaceable>НАЗВАФАЙЛУ</replaceable> назвою пакунку RPM."
 
-#: xml/release-notes.xml:795(para)
+#: xml/release-notes.xml:811(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1125,14 +1153,14 @@ msgstr ""
 "Хронологічний журнал усіх змін в оновлених пакунках наведено у файлі "
 "<filename>ChangeLog</filename> на верхньому рівні носія."
 
-#: xml/release-notes.xml:801(para)
+#: xml/release-notes.xml:817(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
 "Більше інформації ви знайдете у каталозі <filename>docu</filename> на DVD."
 
-#: xml/release-notes.xml:807(para)
+#: xml/release-notes.xml:823(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -1140,7 +1168,7 @@ msgstr ""
 "Додаткова і оновлена документація на сайті <link href=\"https://doc.opensuse."
 "org/\"/>."
 
-#: xml/release-notes.xml:812(para)
+#: xml/release-notes.xml:828(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -1148,15 +1176,15 @@ msgstr ""
 "Останні новини від openSUSE на сайті <link href=\"https://www.opensuse.org\"/"
 ">."
 
-#: xml/release-notes.xml:819(para)
+#: xml/release-notes.xml:835(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:823(para)
+#: xml/release-notes.xml:839(para)
 msgid "Thanks for using openSUSE."
 msgstr "Дякуємо за використання openSUSE."
 
-#: xml/release-notes.xml:826(para)
+#: xml/release-notes.xml:842(para)
 msgid "The openSUSE Team."
 msgstr "Команда openSUSE."
 

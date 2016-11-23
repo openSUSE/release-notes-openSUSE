@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-14 15:18+0100\n"
+"POT-Creation-Date: 2016-11-23 20:02+0100\n"
 "PO-Revision-Date: 2016-11-12 16:33+0000\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-"
@@ -598,7 +598,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Avmontera undervolymen från den temporära monteringspunkten:"
 
-#: xml/release-notes.xml:411(command) xml/release-notes.xml:545(screen)
+#: xml/release-notes.xml:411(command) xml/release-notes.xml:561(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -758,15 +758,22 @@ msgid ""
 msgstr ""
 "Ersätt <replaceable>enp5s0</replaceable> med namnet på ditt nätverkskort."
 
-#: xml/release-notes.xml:516(title)
+#: xml/release-notes.xml:517(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: Disk Space Leak efter systemåterställning"
 
-#: xml/release-notes.xml:517(para)
+#: xml/release-notes.xml:518(para)
+#, fuzzy
+#| msgid ""
+#| "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space "
+#| "to become permanently occupied with stale, inaccessible contents after "
+#| "the first system rollback was executed. This layout issue has been fixed "
+#| "in openSUSE Leap 42.1. However, the fix can only be applied to newly "
+#| "installed systems."
 msgid ""
-"openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to "
-"become permanently occupied with stale, inaccessible contents after the "
-"first system rollback was executed. This layout issue has been fixed in "
+"By default, openSUSE 13.2 used a Btrfs partition layout that allowed for "
+"disk space to become permanently occupied with stale, inaccessible contents "
+"after the first system rollback was executed. This layout issue was fixed in "
 "openSUSE Leap 42.1. However, the fix can only be applied to newly installed "
 "systems."
 msgstr ""
@@ -776,7 +783,7 @@ msgstr ""
 "åtgärdats från och med openSUSE Leap 42.1, men programfixen kan bara "
 "appliceras på nyinstallerade system."
 
-#: xml/release-notes.xml:524(para)
+#: xml/release-notes.xml:525(para)
 msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
@@ -784,41 +791,62 @@ msgstr ""
 "Om du uppdaterar från openSUSE 13.2 kan du inte konvertera filsystemet till "
 "den nya layouten, men du kan återfå det förlorade diskutrymmet."
 
-#: xml/release-notes.xml:530(para)
+#: xml/release-notes.xml:530(title)
+msgid "Data Loss with Non-Standard Settings or No Rollbacks"
+msgstr ""
+
+#: xml/release-notes.xml:531(para)
+msgid ""
+"The following procedure will only work properly on installations set up "
+"using the default proposal created by the openSUSE 13.2 installer."
+msgstr ""
+
+#: xml/release-notes.xml:535(para)
+msgid "Additionally, you must have previously made a system rollback."
+msgstr ""
+
+#: xml/release-notes.xml:538(para)
+msgid ""
+"If you have set up your Btrfs file system with a non-standard configuration "
+"or have not previously made a system rollback, executing the following "
+"procedure can incur data loss."
+msgstr ""
+
+#: xml/release-notes.xml:546(para)
 msgid "Mount the initial root filesystem:"
 msgstr "Montera det initiala root-filsystemet:"
 
-#: xml/release-notes.xml:533(replaceable)
+#: xml/release-notes.xml:549(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
-#: xml/release-notes.xml:533(screen)
+#: xml/release-notes.xml:549(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> 1 -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:536(para)
+#: xml/release-notes.xml:552(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Ta bort alla filer under /mnt som inte är i undervolymen:"
 
-#: xml/release-notes.xml:539(screen)
+#: xml/release-notes.xml:555(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:542(para)
+#: xml/release-notes.xml:558(para)
 msgid "Umount the filesystem again:"
 msgstr "Avmontera filsystemet igen:"
 
-#: xml/release-notes.xml:551(title)
+#: xml/release-notes.xml:567(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Utskrifter: Förbättringar och förändringar"
 
-#: xml/release-notes.xml:554(emphasis)
+#: xml/release-notes.xml:570(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS version uppgraderad till 1.7"
 
-#: xml/release-notes.xml:556(para)
+#: xml/release-notes.xml:572(para)
 msgid ""
 "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes "
 "that may require manual configuration adjustments."
@@ -827,7 +855,7 @@ msgstr ""
 "några större förändringar som kan kräva manuella justeringar i "
 "konfigurationen."
 
-#: xml/release-notes.xml:563(para)
+#: xml/release-notes.xml:579(para)
 msgid ""
 "PDF is now the standard print job format rather than PS. Therefore "
 "traditional PostScript printers now also need a filter driver for printing."
@@ -835,14 +863,14 @@ msgstr ""
 "PDF är nu standardformat på utskrifter i stället för PS som tidigare. Därför "
 "behöver PostScript-printrar nu en filterdrivrutin för att kunna skriva ut."
 
-#: xml/release-notes.xml:568(para)
+#: xml/release-notes.xml:584(para)
 msgid ""
 "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr ""
 "Se <link href=\"https://en.opensuse.org/Concepts_printing\"/> för mer "
 "information."
 
-#: xml/release-notes.xml:576(para)
+#: xml/release-notes.xml:592(para)
 msgid ""
 "The network printer discovery protocol has changed. The native method to "
 "discover network printers is now based on DNS Service discovery (DNS-SD, "
@@ -860,7 +888,7 @@ msgstr ""
 "<literal>cups-browsed</literal> behöver köra för att \"föråldrade\" klienter "
 "skall kunna hitta skrivare (så även LibreOffice och KDE)."
 
-#: xml/release-notes.xml:589(para)
+#: xml/release-notes.xml:605(para)
 msgid ""
 "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers "
 "like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 "
@@ -872,7 +900,7 @@ msgstr ""
 "IPP 2.0 förfrågningar med <literal>Bad Request</literal> (se <link href="
 "\"http://www.cups.org/str.php?L4231\"/>)."
 
-#: xml/release-notes.xml:595(para)
+#: xml/release-notes.xml:611(para)
 msgid ""
 "To be able to print to old servers, the IPP protocol version must be "
 "specified explictly by appending <literal>/version=1.1</literal> to either:"
@@ -881,7 +909,7 @@ msgstr ""
 "specificeras med genom tillägget <literal>/version=1.1</literal> i något av "
 "följde alternativ:"
 
-#: xml/release-notes.xml:602(para)
+#: xml/release-notes.xml:618(para)
 msgid ""
 "The <literal>ServerName</literal> settings in <literal>client.conf</literal> "
 "(for example, <literal>ServerName older.server.example.com/version=1.1</"
@@ -890,11 +918,11 @@ msgstr ""
 "<literal>ServerName</literal> inställningen i <literal>client.conf</literal> "
 "(t.ex. <literal>ServerName older.server.example.com/version=1.1</literal>)."
 
-#: xml/release-notes.xml:610(para)
+#: xml/release-notes.xml:626(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "Värdet för miljövariabeln <literal>CUPS_SERVER</literal>."
 
-#: xml/release-notes.xml:616(para)
+#: xml/release-notes.xml:632(para)
 msgid ""
 "The server name value of the <literal>-h</literal> option of the command "
 "line tools, for example:"
@@ -902,12 +930,12 @@ msgstr ""
 "Som värde för servernamnet i <literal>-h</literal> växeln i "
 "kommandoradverktyget t.ex:"
 
-#: xml/release-notes.xml:620(screen)
+#: xml/release-notes.xml:636(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h tidigare.server.exempel.com/version=1.1 -p"
 
-#: xml/release-notes.xml:626(para)
+#: xml/release-notes.xml:642(para)
 msgid ""
 "Some printing filters and back-ends were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package."
@@ -915,7 +943,7 @@ msgstr ""
 "Några printerfilter och \"back-ends\" är flyttade från paketet "
 "<literal>cups</literal> till <literal>cups-filters</literal>."
 
-#: xml/release-notes.xml:634(para)
+#: xml/release-notes.xml:650(para)
 msgid ""
 "Some configuration directives were split from <literal>cupsd.conf</literal> "
 "into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups."
@@ -927,7 +955,7 @@ msgstr ""
 "cups.org/str.php?L4223\"/>, CVE-2012-5519, och <link href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=789566\"/>)."
 
-#: xml/release-notes.xml:643(para)
+#: xml/release-notes.xml:659(para)
 msgid ""
 "CUPS banners and the CUPS test page were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package (see <link "
@@ -939,11 +967,11 @@ msgstr ""
 "cups.org/str.php?L4120\"/> och <link href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=735404\"/>)."
 
-#: xml/release-notes.xml:658(title)
+#: xml/release-notes.xml:674(title)
 msgid "General"
 msgstr "Allmänt"
 
-#: xml/release-notes.xml:660(para)
+#: xml/release-notes.xml:676(para)
 msgid ""
 "This section lists general issues with openSUSE Leap 42.2 that do not match "
 "any other category."
@@ -951,11 +979,11 @@ msgstr ""
 "Denna sektion lista generella problem i openSUSE Leap 42.2 som inte passar "
 "in i någon annan kategori."
 
-#: xml/release-notes.xml:666(title)
+#: xml/release-notes.xml:682(title)
 msgid "KDE Software for Personal Information Management (KDE PIM)"
 msgstr "KDE-mjukvara för Personal Information Management (KDE PIM)"
 
-#: xml/release-notes.xml:667(para)
+#: xml/release-notes.xml:683(para)
 msgid ""
 "openSUSE Leap 42.2 ships two versions of the KDE PIM (Kontact, KMail, etc.) "
 "suite:"
@@ -963,15 +991,15 @@ msgstr ""
 "openSUSE Leap 42.2 kommer med två versioner av KDE PIM-sviten (Kontact, "
 "KMail, etc.) :"
 
-#: xml/release-notes.xml:673(para)
+#: xml/release-notes.xml:689(para)
 msgid "The legacy 4.x version"
 msgstr "Den tidigare 4.x versionen"
 
-#: xml/release-notes.xml:678(para)
+#: xml/release-notes.xml:694(para)
 msgid "The version based on KDE Frameworks 5"
 msgstr "Versionen baserad på KDE Frameworks 5"
 
-#: xml/release-notes.xml:683(para)
+#: xml/release-notes.xml:699(para)
 msgid ""
 "KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid "
 "disrupting user workflows."
@@ -979,7 +1007,7 @@ msgstr ""
 "KDE PIM 4.x underhålls inte längre officiellt av KDE, men behålls för att "
 "inte avbryta användarnas arbetsflöde."
 
-#: xml/release-notes.xml:687(para)
+#: xml/release-notes.xml:703(para)
 msgid ""
 "The two versions of KDE PIM are not co-installable. Some software, such as "
 "KNode (package <package>knode</package>) require the legacy 4.x version and "
@@ -991,7 +1019,7 @@ msgstr ""
 "tidigare 4.x versionen och kommer att avinstalleras om något paket från KDE "
 "PIM 5.x installeras (exempelvis paketet <package>kmail5</package>)."
 
-#: xml/release-notes.xml:693(para)
+#: xml/release-notes.xml:709(para)
 msgid ""
 "KDE PIM 4.x will be removed in the next version of openSUSE Leap. Therefore, "
 "you are encouraged to switch to the newer 5.x version."
@@ -999,7 +1027,7 @@ msgstr ""
 "KDE PIM 4.x kommer att avlägsnas i nästa version av openSUSE Leap. Därför "
 "vill vi uppmuntra dig att byta till den nyare 5.x versionen redan nu."
 
-#: xml/release-notes.xml:697(para)
+#: xml/release-notes.xml:713(para)
 msgid ""
 "However, not all settings are migrated from the older version at this time. "
 "For more information, see the bug report at <link href=\"https://bugzilla."
@@ -1009,11 +1037,11 @@ msgstr ""
 "mer information, se buggrapport på <link href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=1001872\"/>."
 
-#: xml/release-notes.xml:705(title)
+#: xml/release-notes.xml:721(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "Ingen skärmlåsning vid användande av GNOME Shell men utan GDM"
 
-#: xml/release-notes.xml:706(para)
+#: xml/release-notes.xml:722(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1023,18 +1051,18 @@ msgstr ""
 "SDDM eller LightDM), kommer skärmen inte att döljas eller låsas. Dessutom "
 "går det inte att byta användare utan att först logga ut."
 
-#: xml/release-notes.xml:711(para)
+#: xml/release-notes.xml:727(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
 msgstr ""
 "För att kunna låsa skärmen från GNOME Shell, välj GDM som din loginhanterare:"
 
-#: xml/release-notes.xml:717(para)
+#: xml/release-notes.xml:733(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "Förvissa dig om att paketet <package>gdm</package> är installerat."
 
-#: xml/release-notes.xml:722(para)
+#: xml/release-notes.xml:738(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -1042,7 +1070,7 @@ msgstr ""
 "Öppna YaST och därifrån <menuchoice><guimenu>/etc/sysconfig editor</"
 "guimenu></menuchoice>."
 
-#: xml/release-notes.xml:728(para)
+#: xml/release-notes.xml:744(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -1051,7 +1079,7 @@ msgstr ""
 "guimenu><guimenu>Display manager</guimenu><guimenu>DISPLAYMANAGER</guimenu></"
 "menuchoice>."
 
-#: xml/release-notes.xml:735(para)
+#: xml/release-notes.xml:751(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -1059,20 +1087,20 @@ msgstr ""
 "I textrutan, skriv in <literal>gdm</literal>. Klicka på <guimenu>OK</"
 "guimenu> för att spara."
 
-#: xml/release-notes.xml:741(para)
+#: xml/release-notes.xml:757(para)
 msgid "Reboot."
 msgstr "Starta om."
 
 #. bnc#809347
-#: xml/release-notes.xml:776(title)
+#: xml/release-notes.xml:792(title)
 msgid "More Information and Feedback"
 msgstr "Mer information och feedback"
 
-#: xml/release-notes.xml:780(para)
+#: xml/release-notes.xml:796(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Läs <filename>README</filename> filen på installationsmediet."
 
-#: xml/release-notes.xml:785(para)
+#: xml/release-notes.xml:801(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1080,20 +1108,20 @@ msgstr ""
 "Visa en detaljerad logg över ändringarna i ett specifikt paket med kommandot "
 "RPM:"
 
-#: xml/release-notes.xml:789(replaceable)
+#: xml/release-notes.xml:805(replaceable)
 msgid "FILENAME"
 msgstr "FILNAMN"
 
-#: xml/release-notes.xml:789(screen)
+#: xml/release-notes.xml:805(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:790(para)
+#: xml/release-notes.xml:806(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Ersätt <replaceable>FILENAME</replaceable> med namnet på RPM paketet."
 
-#: xml/release-notes.xml:795(para)
+#: xml/release-notes.xml:811(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1102,7 +1130,7 @@ msgstr ""
 "i filen <filename>ChangeLog</filename> som du hittar i rotkatalogen på "
 "installationsmediet."
 
-#: xml/release-notes.xml:801(para)
+#: xml/release-notes.xml:817(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1110,7 +1138,7 @@ msgstr ""
 "För mer information leta i <filename>docu</filename> katalogen på "
 "installationsmediet."
 
-#: xml/release-notes.xml:807(para)
+#: xml/release-notes.xml:823(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -1118,7 +1146,7 @@ msgstr ""
 "Kompletterande och uppdaterad dokumentation hittar du här: <link href="
 "\"https://doc.opensuse.org/\"/>."
 
-#: xml/release-notes.xml:812(para)
+#: xml/release-notes.xml:828(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -1126,15 +1154,15 @@ msgstr ""
 "De senaste nyheterna från openSUSE hittar du på: <link href=\"https://www."
 "opensuse.org\"/>."
 
-#: xml/release-notes.xml:819(para)
+#: xml/release-notes.xml:835(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> 1 SUSE LLC"
 
-#: xml/release-notes.xml:823(para)
+#: xml/release-notes.xml:839(para)
 msgid "Thanks for using openSUSE."
 msgstr "Tack för att du använder openSUSE."
 
-#: xml/release-notes.xml:826(para)
+#: xml/release-notes.xml:842(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE-teamet."
 

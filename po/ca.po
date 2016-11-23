@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2016-11-14 15:18+0100\n"
+"POT-Creation-Date: 2016-11-23 20:02+0100\n"
 "PO-Revision-Date: 2016-11-14 19:50+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
@@ -613,7 +613,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Desmunteu el subvolum del punt de muntatge temporal:"
 
-#: xml/release-notes.xml:411(command) xml/release-notes.xml:545(screen)
+#: xml/release-notes.xml:411(command) xml/release-notes.xml:561(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -702,7 +702,8 @@ msgstr "sudo zypper rm xf86-input-synaptics"
 msgid ""
 "AArch64: Page Size Has Been Changed From openSUSE Leap 42.1 to openSUSE Leap "
 "42.2"
-msgstr "AArch64: la mida de la pàgina ha canviat de l'openSUSE Leap 42.1 a "
+msgstr ""
+"AArch64: la mida de la pàgina ha canviat de l'openSUSE Leap 42.1 a "
 "l'openSUSE Leap 42.2"
 
 #: xml/release-notes.xml:472(para)
@@ -710,16 +711,18 @@ msgid ""
 "In openSUSE Leap 42.1, the default page size on AArch64 platforms was 64 kB. "
 "With openSUSE Leap 42.2, the page size has been changed to 4 kB. This "
 "renders old Swap and Btrfs file systems unusable."
-msgstr "A l'openSUSE Leap 42.1, la mida per defecte de la pàgina en plataformes "
-"AArch64 era de 64 kB. A l'openSUSE Leap 42.2, la mida de la pàgina ha canviat "
-"a 4 kB. Això fa que l'espai d'intercanvi i el sistema de fitxers Btrfs antics "
-"no siguin usables."
+msgstr ""
+"A l'openSUSE Leap 42.1, la mida per defecte de la pàgina en plataformes "
+"AArch64 era de 64 kB. A l'openSUSE Leap 42.2, la mida de la pàgina ha "
+"canviat a 4 kB. Això fa que l'espai d'intercanvi i el sistema de fitxers "
+"Btrfs antics no siguin usables."
 
 #: xml/release-notes.xml:477(para)
 msgid ""
 "If you are currently on openSUSE Leap 42.1 on AArch64, consider a fresh "
 "installation of openSUSE Leap 42.2 instead of upgrading."
-msgstr "Si ara feu servir l'openSUSE Leap 42.1 en AArch64, considereu fer una "
+msgstr ""
+"Si ara feu servir l'openSUSE Leap 42.1 en AArch64, considereu fer una "
 "instal·lació nova de l'openSUSE Leap 42.2 en comptes d'actualitzar-lo."
 
 #: xml/release-notes.xml:485(title)
@@ -783,17 +786,24 @@ msgstr ""
 "Reemplaceu <replaceable>enp5s0</replaceable> amb el nom de la vostra "
 "interfície de xarxa."
 
-#: xml/release-notes.xml:516(title)
+#: xml/release-notes.xml:517(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr ""
 "Btrfs: Fuita d'espai de disc després de tornar a versions anteriors del "
 "sistema"
 
-#: xml/release-notes.xml:517(para)
+#: xml/release-notes.xml:518(para)
+#, fuzzy
+#| msgid ""
+#| "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space "
+#| "to become permanently occupied with stale, inaccessible contents after "
+#| "the first system rollback was executed. This layout issue has been fixed "
+#| "in openSUSE Leap 42.1. However, the fix can only be applied to newly "
+#| "installed systems."
 msgid ""
-"openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to "
-"become permanently occupied with stale, inaccessible contents after the "
-"first system rollback was executed. This layout issue has been fixed in "
+"By default, openSUSE 13.2 used a Btrfs partition layout that allowed for "
+"disk space to become permanently occupied with stale, inaccessible contents "
+"after the first system rollback was executed. This layout issue was fixed in "
 "openSUSE Leap 42.1. However, the fix can only be applied to newly installed "
 "systems."
 msgstr ""
@@ -804,7 +814,7 @@ msgstr ""
 "obstant això, la correcció només es pot aplicar als sistemes instal·lats de "
 "nou."
 
-#: xml/release-notes.xml:524(para)
+#: xml/release-notes.xml:525(para)
 msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
@@ -812,42 +822,63 @@ msgstr ""
 "Si actualitzeu des l'openSUSE 13.2, no podeu convertir el sistema de fitxers "
 "a la nova disposició, però podeu recuperar l'espai de disc perdut."
 
-#: xml/release-notes.xml:530(para)
+#: xml/release-notes.xml:530(title)
+msgid "Data Loss with Non-Standard Settings or No Rollbacks"
+msgstr ""
+
+#: xml/release-notes.xml:531(para)
+msgid ""
+"The following procedure will only work properly on installations set up "
+"using the default proposal created by the openSUSE 13.2 installer."
+msgstr ""
+
+#: xml/release-notes.xml:535(para)
+msgid "Additionally, you must have previously made a system rollback."
+msgstr ""
+
+#: xml/release-notes.xml:538(para)
+msgid ""
+"If you have set up your Btrfs file system with a non-standard configuration "
+"or have not previously made a system rollback, executing the following "
+"procedure can incur data loss."
+msgstr ""
+
+#: xml/release-notes.xml:546(para)
 msgid "Mount the initial root filesystem:"
 msgstr "Munteu el sistema de fitxers root inicial:"
 
-#: xml/release-notes.xml:533(replaceable)
+#: xml/release-notes.xml:549(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;SISTEMA_DE_FITXERS_ROOT&gt;"
 
-#: xml/release-notes.xml:533(screen)
+#: xml/release-notes.xml:549(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:536(para)
+#: xml/release-notes.xml:552(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr ""
 "Elimineu tots els fitxers que hi hagi sota /mnt que no siguin en un subvolum:"
 
-#: xml/release-notes.xml:539(screen)
+#: xml/release-notes.xml:555(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:542(para)
+#: xml/release-notes.xml:558(para)
 msgid "Umount the filesystem again:"
 msgstr "Torneu a desmuntar el sistema de fitxers:"
 
-#: xml/release-notes.xml:551(title)
+#: xml/release-notes.xml:567(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Sistema d'impressió: millores i canvis incompatibles"
 
-#: xml/release-notes.xml:554(emphasis)
+#: xml/release-notes.xml:570(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "Actualització del CUPS a la versió 1.7"
 
-#: xml/release-notes.xml:556(para)
+#: xml/release-notes.xml:572(para)
 msgid ""
 "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes "
 "that may require manual configuration adjustments."
@@ -855,7 +886,7 @@ msgstr ""
 "Comparat amb el CUPS 1.5, a l'openSUSE 13.2 el CUPS 1.7 ha introduït canvis "
 "importants que poden requerir ajustaments manuals de la configuració."
 
-#: xml/release-notes.xml:563(para)
+#: xml/release-notes.xml:579(para)
 msgid ""
 "PDF is now the standard print job format rather than PS. Therefore "
 "traditional PostScript printers now also need a filter driver for printing."
@@ -864,14 +895,14 @@ msgstr ""
 "tant, les impressores PostScript tradicionals ara també necessiten un "
 "controlador de filtre per a la impressió."
 
-#: xml/release-notes.xml:568(para)
+#: xml/release-notes.xml:584(para)
 msgid ""
 "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr ""
 "Vegeu <link href=\"https://en.opensuse.org/Concepts_printing\"/> per a més "
 "detalls."
 
-#: xml/release-notes.xml:576(para)
+#: xml/release-notes.xml:592(para)
 msgid ""
 "The network printer discovery protocol has changed. The native method to "
 "discover network printers is now based on DNS Service discovery (DNS-SD, "
@@ -890,7 +921,7 @@ msgstr ""
 "clients \"de llegat\" (legacy) descobreixin impressores (això inclou "
 "LibreOffice i KDE)."
 
-#: xml/release-notes.xml:589(para)
+#: xml/release-notes.xml:605(para)
 msgid ""
 "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers "
 "like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 "
@@ -902,7 +933,7 @@ msgstr ""
 "Enteprise 11) rebutgen peticions d'IPP 2.0 com a <literal>Bad Request</"
 "literal> (vegeu <link href=\"http://www.cups.org/str.php?L4231\"/>)."
 
-#: xml/release-notes.xml:595(para)
+#: xml/release-notes.xml:611(para)
 msgid ""
 "To be able to print to old servers, the IPP protocol version must be "
 "specified explictly by appending <literal>/version=1.1</literal> to either:"
@@ -911,7 +942,7 @@ msgstr ""
 "d'especificar explícitament afegint <literal>/version=1.1</literal> a cada "
 "un:"
 
-#: xml/release-notes.xml:602(para)
+#: xml/release-notes.xml:618(para)
 msgid ""
 "The <literal>ServerName</literal> settings in <literal>client.conf</literal> "
 "(for example, <literal>ServerName older.server.example.com/version=1.1</"
@@ -921,11 +952,11 @@ msgstr ""
 "literal> (per exemple, <literal>ServerName older.server.example.com/"
 "version=1.1</literal>)."
 
-#: xml/release-notes.xml:610(para)
+#: xml/release-notes.xml:626(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "El valor de la variable d'entorn <literal>SERVIDOR_CUPS</literal>."
 
-#: xml/release-notes.xml:616(para)
+#: xml/release-notes.xml:632(para)
 msgid ""
 "The server name value of the <literal>-h</literal> option of the command "
 "line tools, for example:"
@@ -933,12 +964,12 @@ msgstr ""
 "El valor de nom de servidor de l'opció <literal>-h</literal>  de les eines "
 "de línia d'ordres, per exemple:"
 
-#: xml/release-notes.xml:620(screen)
+#: xml/release-notes.xml:636(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.exemple.com/version=1.1 -p"
 
-#: xml/release-notes.xml:626(para)
+#: xml/release-notes.xml:642(para)
 msgid ""
 "Some printing filters and back-ends were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package."
@@ -946,7 +977,7 @@ msgstr ""
 "Alguns filtres d'impressió i rerefons s'han traslladat del paquet "
 "<literal>cups</literal> al paquet <literal>cups-filters</literal>."
 
-#: xml/release-notes.xml:634(para)
+#: xml/release-notes.xml:650(para)
 msgid ""
 "Some configuration directives were split from <literal>cupsd.conf</literal> "
 "into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups."
@@ -958,7 +989,7 @@ msgstr ""
 "cups.org/str.php?L4223\"/>, CVE-2012-5519, i <link href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=789566\"/>)."
 
-#: xml/release-notes.xml:643(para)
+#: xml/release-notes.xml:659(para)
 msgid ""
 "CUPS banners and the CUPS test page were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package (see <link "
@@ -970,11 +1001,11 @@ msgstr ""
 "<link href=\"http://www.cups.org/str.php?L4120\"/> i <link href=\"https://"
 "bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 
-#: xml/release-notes.xml:658(title)
+#: xml/release-notes.xml:674(title)
 msgid "General"
 msgstr "General"
 
-#: xml/release-notes.xml:660(para)
+#: xml/release-notes.xml:676(para)
 msgid ""
 "This section lists general issues with openSUSE Leap 42.2 that do not match "
 "any other category."
@@ -982,11 +1013,11 @@ msgstr ""
 "Aquesta secció llista aspectes generals de l'openSUSE Leap 42.2 que no "
 "coincideixen amb cap altra categoria."
 
-#: xml/release-notes.xml:666(title)
+#: xml/release-notes.xml:682(title)
 msgid "KDE Software for Personal Information Management (KDE PIM)"
 msgstr "Programari del KDE per a gestió d'informació personal (KDE PIM)"
 
-#: xml/release-notes.xml:667(para)
+#: xml/release-notes.xml:683(para)
 msgid ""
 "openSUSE Leap 42.2 ships two versions of the KDE PIM (Kontact, KMail, etc.) "
 "suite:"
@@ -994,15 +1025,15 @@ msgstr ""
 "L'openSUSE Leap 42.2 té dues versions del conjunt KDE PIM (Kontact, KMail, "
 "etc.):"
 
-#: xml/release-notes.xml:673(para)
+#: xml/release-notes.xml:689(para)
 msgid "The legacy 4.x version"
 msgstr "La versió de llegat 4.x"
 
-#: xml/release-notes.xml:678(para)
+#: xml/release-notes.xml:694(para)
 msgid "The version based on KDE Frameworks 5"
 msgstr "La versió basada en KDE Frameworks 5"
 
-#: xml/release-notes.xml:683(para)
+#: xml/release-notes.xml:699(para)
 msgid ""
 "KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid "
 "disrupting user workflows."
@@ -1010,7 +1041,7 @@ msgstr ""
 "El KDE PIM 4.x ja no té suport dels desenvolupadors de KDE, però s'ha "
 "mantingut per evitar pertorbar els fluxos de treball dels usuaris."
 
-#: xml/release-notes.xml:687(para)
+#: xml/release-notes.xml:703(para)
 msgid ""
 "The two versions of KDE PIM are not co-installable. Some software, such as "
 "KNode (package <package>knode</package>) require the legacy 4.x version and "
@@ -1022,7 +1053,7 @@ msgstr ""
 "versió de llegat 4.x i es desinstal·larà quan s'instal·li qualsevol paquet "
 "del KDE PIM 5.x (per exemple, el paquet <package>kmail5</package>)."
 
-#: xml/release-notes.xml:693(para)
+#: xml/release-notes.xml:709(para)
 msgid ""
 "KDE PIM 4.x will be removed in the next version of openSUSE Leap. Therefore, "
 "you are encouraged to switch to the newer 5.x version."
@@ -1030,7 +1061,7 @@ msgstr ""
 "El KDE PIM 4.x s'eliminarà a la propera versió de l'openSUSE Leap. Per això, "
 "us animem a canviar a la versió nova 5.x."
 
-#: xml/release-notes.xml:697(para)
+#: xml/release-notes.xml:713(para)
 msgid ""
 "However, not all settings are migrated from the older version at this time. "
 "For more information, see the bug report at <link href=\"https://bugzilla."
@@ -1040,11 +1071,11 @@ msgstr ""
 "aquests moments. Per a més informació, vegeu-ne l'informe d'error a <link "
 "href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1001872\"/>)."
 
-#: xml/release-notes.xml:705(title)
+#: xml/release-notes.xml:721(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "No hi ha bloqueig de pantalla quan s'usa el GNOME Shell sense el GDM"
 
-#: xml/release-notes.xml:706(para)
+#: xml/release-notes.xml:722(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1054,7 +1085,7 @@ msgstr ""
 "el GDM, com ara l'SDDM o el LightDM, la pantalla no s'apagarà ni es "
 "bloquejarà. A més, canviar els usuaris sense sortir no és possible."
 
-#: xml/release-notes.xml:711(para)
+#: xml/release-notes.xml:727(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -1062,11 +1093,11 @@ msgstr ""
 "Per poder bloquejar la pantalla des del GNOME Shell, habiliteu el GDM com a "
 "gestor d'entrada:"
 
-#: xml/release-notes.xml:717(para)
+#: xml/release-notes.xml:733(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "Assegureu-vos que el paquet <package>gdm</package> estigui instal·lat."
 
-#: xml/release-notes.xml:722(para)
+#: xml/release-notes.xml:738(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -1074,7 +1105,7 @@ msgstr ""
 "Obriu el YaST i des d'allí, obriu el gestor del fitxer <menuchoice><guimenu>/"
 "etc/sysconfig</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:728(para)
+#: xml/release-notes.xml:744(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -1082,7 +1113,7 @@ msgstr ""
 "Navegueu per <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:735(para)
+#: xml/release-notes.xml:751(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -1090,41 +1121,41 @@ msgstr ""
 "A la casella de text, especifiqueu-hi <literal>gdm</literal>. Per desar-ho, "
 "cliqueu a <guimenu>D'acord</guimenu>."
 
-#: xml/release-notes.xml:741(para)
+#: xml/release-notes.xml:757(para)
 msgid "Reboot."
 msgstr "Reinicieu."
 
 #. bnc#809347
-#: xml/release-notes.xml:776(title)
+#: xml/release-notes.xml:792(title)
 msgid "More Information and Feedback"
 msgstr "Més informació i informació de retorn"
 
-#: xml/release-notes.xml:780(para)
+#: xml/release-notes.xml:796(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Llegiu els documents <filename>README</filename> del mitjà."
 
-#: xml/release-notes.xml:785(para)
+#: xml/release-notes.xml:801(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
 "Obteniu informació del registre de canvis sobre un paquet concret de l'RPM:"
 
-#: xml/release-notes.xml:789(replaceable)
+#: xml/release-notes.xml:805(replaceable)
 msgid "FILENAME"
 msgstr "NOM_DEL_FITXER"
 
-#: xml/release-notes.xml:789(screen)
+#: xml/release-notes.xml:805(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:790(para)
+#: xml/release-notes.xml:806(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Reemplaceu <replaceable>NOM-DEL-FITXER</replaceable> amb el nom de l'RPM."
 
-#: xml/release-notes.xml:795(para)
+#: xml/release-notes.xml:811(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1133,14 +1164,14 @@ msgstr ""
 "per veure el registre cronològic de tots els canvis fets als paquets "
 "actualitzats."
 
-#: xml/release-notes.xml:801(para)
+#: xml/release-notes.xml:817(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
 "Trobeu més informació dins del directori <filename>docu</filename> del mitjà."
 
-#: xml/release-notes.xml:807(para)
+#: xml/release-notes.xml:823(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -1148,7 +1179,7 @@ msgstr ""
 "<link href=\"https://doc.opensuse.org/\"/> conté documentació addicional o "
 "actualitzada."
 
-#: xml/release-notes.xml:812(para)
+#: xml/release-notes.xml:828(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -1156,15 +1187,15 @@ msgstr ""
 "Visiteu <link href=\"https://www.opensuse.org\"/> per a les últimes notícies "
 "de productes d'openSUSE."
 
-#: xml/release-notes.xml:819(para)
+#: xml/release-notes.xml:835(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:823(para)
+#: xml/release-notes.xml:839(para)
 msgid "Thanks for using openSUSE."
 msgstr "Gràcies per usar openSUSE."
 
-#: xml/release-notes.xml:826(para)
+#: xml/release-notes.xml:842(para)
 msgid "The openSUSE Team."
 msgstr ""
 "L'equip d'openSUSE i l'equip de traducció al català: opensusecatala@gmail."
