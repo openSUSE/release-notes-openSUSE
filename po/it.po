@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2015-11-09 11:56+0100\n"
-"PO-Revision-Date: 2016-11-18 09:17+0000\n"
+"PO-Revision-Date: 2016-11-23 14:01+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/it/>\n"
@@ -128,9 +128,9 @@ msgstr "Dopo l'installazione il repository non-oss è disabilitato"
 #: xml/release-notes.xml:193(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
-"Abilita il repositorio <literal> openSUSE-Leap-42.1-Non-Oss</literal>  "
-"usando YaST o con la riga di comando usando zypper: <screen> zypper mr -e "
-"repo-non-oss</screen>"
+"Abilita il repository <literal>openSUSE-Leap-42.1-Non-Oss</literal>  usando "
+"YaST o con la riga di comando usando zypper: <screen>zypper mr -e repo-non-"
+"oss</screen>"
 
 #: xml/release-notes.xml:203(title)
 msgid "Technical"
@@ -148,51 +148,119 @@ msgstr "La versione CUPS si aggiorna alla 1.7"
 #: xml/release-notes.xml:213(para)
 msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 msgstr ""
+"CUPS &gt;= 1.6 ha introdotto alcune sostanziali modifiche incompatibili con "
+"CUPS fino alla versione 1.5.4, in particolare per la stampa via rete:"
 
 #: xml/release-notes.xml:214(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
 msgstr ""
+"La versione predefinita del protocollo IPP è cambiata da 1.1 a 2.0. Server "
+"IPP più vecchi come CUPS 1.3.x (presente ad esempio in SLE 11) rigettano le "
+"richieste IPP 2.0 con \"Bad Request\" (si veda <ulink url=\""
+"http://www.cups.org/str.php?L4231\""
+">http://www.cups.org/str.php?L4231</ulink>). L'uso della vecchia versione "
+"del protocollo IPP per i vecchi server deve essere specificato "
+"esplicitamente aggiungendo '/version=1.1' alla voce ServerName in "
+"client.conf (per esempio, ServerName esempio.vecchio.server.com/version=1.1) "
+"o al valore della variabile d'ambiente CUPS_SERVER oppure aggiungendolo al "
+"valore del nome del server indicato con l'opzione '-h' (per esempio, lpstat -"
+"h esempio.vecchio.server.com/version=1.1 -p."
 
 #: xml/release-notes.xml:215(para)
 msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
 msgstr ""
+"La ricerca in rete di CUPS è stata tolta da CUPS ma il nuovo pacchetto cups-"
+"filter fornisce cups-browsed che a sua volta fornisce le funzionalità base "
+"di CUPS per la ricerca e l'interrogazione della rete. In CUPS il protocollo "
+"nativo per il rilevamento automatico delle stampanti lato client è ora DNS-"
+"SD. Bisogna avviare cups-browsed sull'host locale per ricevere le "
+"tradizionali informazioni sulla ricerca di CUPS da parte di server CUPS "
+"tradizionali. Per diffondere le informazioni tradizionali per la ricerca di "
+"CUPS sulla rete in modo che client remoti di CUPS possano riceverle, "
+"impostare \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\""
+">/etc/cups/cups-browsed.conf</literal> e avviare cups-browsed."
 
 #: xml/release-notes.xml:216(para)
 msgid "Some printing filters and back-ends are dropped in CUPS but the new package cups-filters provides them. So cups-filters is usually needed (recommended by RPM) but cups-filters is not strictly required."
 msgstr ""
+"Alcuni filtri di stampa e back-end sono stati eliminati da CUPS ma il nuovo "
+"pacchetto cups-filters li fornisce. Cosicché solitamente si ha bisogno di "
+"cup-filters  (raccomandato da RPM) ma cups-filter non è strettamente "
+"necessario."
 
 #: xml/release-notes.xml:217(para)
 msgid "The cupsd configuration directives are split into two files: cupsd.conf (can also be modified via HTTP PUT e.g. via cupsctl) and cups-files.conf (can only be modified manually by root) to have better default protection against misuse of privileges by normal users who have been specifically allowed by root to do cupsd configuration changes (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 msgstr ""
+"Le direttive di configurazione di cupsd sono state divise in due file: "
+"cupsd.conf (che può anche essere modificato tramite HTTP PUT, per esempio "
+"tramite cupsctl) e cups-files.conf (che può essere solo modificato "
+"manualmente da root), in modo da avere fin da principio una maggiore "
+"protezione contro il cattivo uso dei propri privilegi da parte di utenti "
+"normali a cui è stato specificamente consentito da root di apportare "
+"modifiche alla configurazione di cupsd (si veda <ulink url=\""
+"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
+", CVE-2012-5519 e <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
 #: xml/release-notes.xml:226(para)
 msgid "CUPS banners and the CUPS test page are no longer supported since CUPS &gt;= 1.6. The banners and the test page from cups-filters must be used. The CUPS banner files in <literal moreinfo=\"none\">/usr/share/cups/banners/</literal> and the CUPS testpage <literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (which is also a CUPS banner file type) are no longer provided in the cups RPM because they do no longer work since CUPS &gt;= 1.6 (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ) because there is no longer a filter that can convert the CUPS banner files. Since CUPS &gt;= 1.6 only the banner files and testpage in the cups-filters package work via the cups-filters PDF workflow and the cups-filters package also provides the matching bannertopdf filter."
 msgstr ""
+"I banner e la pagina di test di CUPS non sono più supportati a partire da "
+"CUPS &gt;= 1.6. Devono essere utilizzati i banner e la pagina di test "
+"presenti in cups-filters. I file dei banner di CUPS in <literal moreinfo=\""
+"none\">/usr/share/cups/banners/</literal> e la pagina di test di CUPS <"
+"literal moreinfo=\"none\">/usr/share/cups/data/testprint</literal> (che tra "
+"l'altro è anche file di banner di CUPS) non sono più forniti nell'RPM cups "
+"perché non funzionano più a partire da CUPS &gt;= 1.6 (si veda <ulink url=\""
+"http://www.cups.org/str.php?L4120\""
+">http://www.cups.org/str.php?L4120</ulink>) perché non è più presente un "
+"filtro che possa convertire i file di banner di CUPS. A partire da CUPS &gt;="
+" 1.6 funzionano solo i file di banner e la pagina di test presenti nel "
+"pacchetto cups-filters tramite il flusso di lavoro per PDF di cups-filters e "
+"il pacchetto cups-filters fornisce anche il filtro corrispondente "
+"bannertopdf."
 
 #: xml/release-notes.xml:227(para)
-#, fuzzy
 msgid "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
-msgstr "Questo e altri problemi con il driver Intel (si veda <ulink url=\"http://bugzilla.opensuse.org/show_bug.cgi?id=901506\">http://bugzilla.opensuse.org/show_bug.cgi?id=901506</ulink>) verranno considerati e, se possibile, risolti con un aggiornamento in linea."
+msgstr ""
+"Per i dettagli, fare riferimento a <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
+">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 
 #: xml/release-notes.xml:230(emphasis)
 msgid "PDF Now Common Printing Data Format"
-msgstr ""
+msgstr "PDF è ora il formato dati standard per la stampa"
 
 #: xml/release-notes.xml:232(para)
 msgid "There is a general move away from PostScript to PDF as the standard print job format. This change is advocated by the OpenPrinting workgroup of the Linux Foundation and the CUPS author."
 msgstr ""
+"È in corso una tendenza generale a passare da PostScript a PDF come formato "
+"standard dei lavori d stampa. Questo cambiamento è perorato dal gruppo di "
+"lavoro OpenPrinting della Linux Foundation, nonché dall'autore di CUPS."
 
 #: xml/release-notes.xml:233(para)
 msgid "This means that application programs usually no longer produce PostScript output by default when printing but instead PDF."
 msgstr ""
+"Ciò significa che i programmi applicativi solitamente non producono più "
+"PostScript come output predefinito, bensì PDF."
 
 #: xml/release-notes.xml:234(para)
 msgid "As a consequence the default processing how application programs printing output is converted into the \"language\" that the particular printer accepts (the so called \"CUPS filter chain\") has fundamentally changed from a PostScript-centric workflow to a PDF-centric workflow."
 msgstr ""
+"Di conseguenza, l'elaborazione predefinita con cui l'output di stampa dei "
+"programmi applicativi è convertito nel \"linguaggio\" che una particolare "
+"stampante accetta (la cosiddetta \"catena dei filtri di CUPS\") è "
+"fondamentalmente passata da un flusso di lavoro PostScript-centrico ad uno "
+"PDF-centrico."
 
 #: xml/release-notes.xml:235(para)
+#, fuzzy
 msgid "Accordingly the upstream standard for CUPS under Linux (using CUPS plus the cups-filters package) is now PDF-based job processing, letting every non-PDF input be converted to PDF first, page management options being applied by a pdftopdf filter and Ghostscript being called with PDF as input."
 msgstr ""
+"Pertanto, lo standard per CUPS sotto Linux (con l'utilizzo di CUPS più il "
+"pacchetto cups-filters) voluto dagli sviluppatori è ora l'elaborazione dei "
+"lavori basata su PDF, facendo sì che qualsiasi input non-PDF sia prima "
+"convertito in PDF"
 
 #: xml/release-notes.xml:236(para)
 msgid "With PDF as the standard print job format traditional PostScript printers can no longer print application's printing output directly so that a conversion step in the printing workflow is required that converts PDF into PostScript. But there are also PostScript+PDF printers that can print both PostScript and PDF directly."
