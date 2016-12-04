@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-23 20:02+0100\n"
-"PO-Revision-Date: 2016-12-04 15:17+0000\n"
+"PO-Revision-Date: 2016-12-04 21:14+0000\n"
 "Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/pl/>\n"
@@ -272,6 +272,12 @@ msgid ""
 "rewrite consists of two different operations: Removing the old entry and "
 "creating a new entry that replaces the first one."
 msgstr ""
+"Dodatkowo, specyfikacja UEFI partycje MRB (MS-DOS) są kompatybilne wstecz. "
+"Program rozruchowy LINUX (ELILO lub GRUB2) próbuje automatycznie wygenerować "
+"GUID dla tych partycji i zapisuje je w firmwarze. Takie GUID mogą się często "
+"zmieniać, wywołując nadpisanie w firmwarze. Na nadpisanie składają się dwie "
+"operacje: Usunięcie starego wpisu oraz stworzenie nowego który zastępuje "
+"pierwszy."
 
 #: xml/release-notes.xml:166(para)
 msgid ""
@@ -280,16 +286,19 @@ msgid ""
 "firmware does not collect and free those entries. This can result in a non-"
 "bootable system."
 msgstr ""
+"Nowoczesny firmware posiada kolektor śmieci który zbiera usunięte wpisy i "
+"uwalnia pamięć zarezerwowaną dla starego wpisu.Problem powstaje gdy wadliwy "
+"firmware nie zbiera i uwalnia tych wpisów. Może to doprowadzić do problemów "
+"z uruchomieniem systemu."
 
 #: xml/release-notes.xml:172(para)
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
-msgstr ""
+msgstr "W celu ominięcia problemu, przekształć stare partycje MRB na GPT."
 
 #: xml/release-notes.xml:179(title)
-#, fuzzy
 #| msgid "CIFS Service Disabled By Default"
 msgid "Nouveau 3D/DRI Driver May Crash KDE Applications"
-msgstr "Usługa CIFS domyślnie wyłączona"
+msgstr "Sterowniki Noveau 3D/DRI mogą doprowadzić do błędów aplikacji KDE"
 
 #: xml/release-notes.xml:180(para)
 msgid ""
@@ -297,6 +306,9 @@ msgid ""
 "considered experimental. The Nouveau kernel/KMS driver and the Nouveau X.org/"
 "DDX driver for 2D rendering are still considered stable."
 msgstr ""
+"W openSUSE Leap 42.2, sterowniki Noveau Mesa/DRI są uznane za "
+"eksperymentalne w renderowaniu 2D/3D. Sterowniki Noveau kernel/KMS oraz "
+"Noveau X.org/DDX do renderowania 2D są nadal uznawane za stabilne."
 
 #: xml/release-notes.xml:186(para)
 msgid ""
@@ -305,6 +317,10 @@ msgid ""
 "called <package>Mesa-dri-nouveau</package>, which can be removed in case of "
 "problems."
 msgstr ""
+"Kiedy sterownik Noveau Mesa/DRI jest używany, niektóre aplikacje mogą "
+"przestać działać, zwłaszcza KDE oraz aplikacje oparte o framework QT. "
+"Sterownik w chwili obecnej jest oddzielną paczką o nazwie<package>Mesa-dri-"
+"nouveau</package>, która może być odinstalowana w razie problemów."
 
 #: xml/release-notes.xml:192(para)
 msgid ""
@@ -315,6 +331,12 @@ msgid ""
 "generation code-named Kepler (introduced in 2012) and earlier. 3D operations "
 "are supported via software rendering."
 msgstr ""
+"Bez zainstalowanego sterownika akceleracja 3D na GPU Nvidii oraz akceleracja "
+"2D na nowszych GPU Nvidii ,które korzystają z Glamour do szybkich operacji "
+"2D, nie będzie działać. Kernel Mode Setting oraz podstawowe 2D są nadal "
+"dostępne, jak również akceleracja 2D poprzez EXA na GPU Nvidii z kodem "
+"generacji Kepler (zaprojektowanym w 2012) oraz wcześniejszych. Operacje 3D "
+"są wspierane poprzez rendering programowy."
 
 #: xml/release-notes.xml:201(para)
 msgid ""
@@ -322,6 +344,9 @@ msgid ""
 "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=1005323\"/>."
 msgstr ""
+"W celu uzyskania dodatkowych informacji, sprawdź zgłoszenie błędu <link href="
+"\"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> oraz <link href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/>."
 
 #: xml/release-notes.xml:211(title)
 msgid "System Upgrade"
@@ -334,56 +359,72 @@ msgid ""
 "opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha."
 "update.osuse.html\"/>."
 msgstr ""
+"Ta sekcja zawiera notatki związane z aktualizacją systemu. Dokładniejsze "
+"instrukcje znajdują się w dokumentacji na <link href=\"https://doc.opensuse.o"
+"rg/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse."
+"html\"/>."
 
 #: xml/release-notes.xml:219(title)
 msgid "Upgrading from openSUSE Leap 42.1"
-msgstr ""
+msgstr "Aktualizacja z openSUSE Leap 42.1"
 
 #: xml/release-notes.xml:222(title)
 msgid "Removed and Replaced Packages"
-msgstr ""
+msgstr "Usunięte i zastąpione paczki"
 
 #: xml/release-notes.xml:223(para)
 msgid ""
 "The following packages have been removed or replaced compared to openSUSE "
 "Leap 42.1:"
 msgstr ""
+"Następujące paczki zostały usunięte lub zastąpione w porównaniu z openSUSE "
+"Leap 42.1:"
 
 #: xml/release-notes.xml:229(para)
 msgid ""
 "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr ""
+"<package>arista</package>: Zastąpiono przez <package>transmageddon</package>."
 
 #: xml/release-notes.xml:234(para)
 msgid ""
 "<package>cadabra</package>: The source code no longer builds. The successor, "
 "<link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
 msgstr ""
+"<package>cadabra</package>: Kod źródłowy już się nie kompiluje. Następca, <"
+"link href=\"http://cadabra.science/\">Cadabra 2</link> nie jest jeszcze "
+"stabilny."
 
 #: xml/release-notes.xml:241(para)
 msgid ""
 "<package>dropbear</package>: Removed because there are no relevant "
 "advantages over <package>openssh</package>."
 msgstr ""
+"<package>dropbear</package>: Usunięty nie ma znaczących zalet względem "
+"<package>openssh</package>."
 
 #: xml/release-notes.xml:247(para)
 msgid ""
 "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
 msgstr ""
+"<package>emerillon</package>: Zastąpiony przez <package>gnome-maps</package>."
 
 #: xml/release-notes.xml:253(para)
 msgid ""
 "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</"
 "package>."
 msgstr ""
+"<package>gnome-system-log</package>: Zastąpiony przez <package>gnome-"
+"logs</package>."
 
 #: xml/release-notes.xml:259(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
-msgstr ""
+msgstr "<package>hawk</package>: Zastąpiony przez <package>hawk2</package>."
 
 #: xml/release-notes.xml:264(para)
 msgid "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
 msgstr ""
+"<package>ksnapshot</package>: Zastąpiony przez <package>spectacle</package>."
 
 #: xml/release-notes.xml:270(para)
 msgid ""
@@ -392,14 +433,19 @@ msgid ""
 "Leap 42.1 installation on which <package>labplot</package> is installed, you "
 "will receive the <package>labplot-kf5</package> automatically."
 msgstr ""
+"<package>labplot</package>: Labplot został zastąpiony przez jego wersję w "
+"Qt5, o nazwie<package>labplot-kf5</package>. Jeżeli aktualizujesz z "
+"instalacji openSUSE Leap 42.1 w której <package>labplot</package> jest "
+"zainstalowany, <package>labplot-kf5</package>zostanie automatycznie "
+"zaktualizowany."
 
 #: xml/release-notes.xml:279(para)
 msgid "<package>nodejs</package>: Renamed to <package>nodejs4</package>."
-msgstr ""
+msgstr "<package>nodejs</package>:Zmienił nazwę na <package>nodejs4</package>."
 
 #: xml/release-notes.xml:284(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
-msgstr ""
+msgstr "<package>psi</package>:Zastąpiony przez <package>psi+</package>."
 
 #: xml/release-notes.xml:289(para)
 msgid ""
@@ -407,6 +453,8 @@ msgid ""
 "package>. Purely a rename, not a version upgrade - a virtually identical "
 "drop-in replacement."
 msgstr ""
+"<package>python-moin</package>: Zastąpiony Przez <package>moinoin-"
+"wiki</package>. Zwykła zmiana nazwy, nie aktuaizacja wersji."
 
 #: xml/release-notes.xml:296(para)
 msgid ""
