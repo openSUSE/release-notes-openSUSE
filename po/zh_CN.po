@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2016-11-23 20:02+0100\n"
-"PO-Revision-Date: 2016-11-19 10:56+0000\n"
-"Last-Translator: houninghui <houninghuimail@gmail.com>\n"
+"PO-Revision-Date: 2016-12-04 04:54+0000\n"
+"Last-Translator: Marguerite Su <i@marguerite.su>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap_42_2/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -195,9 +195,8 @@ msgstr ""
 "而还是推荐安装硬件制造商推荐的任何固件更新。"
 
 #: xml/release-notes.xml:138(title)
-#, fuzzy
 msgid "Installer Crashes When Set to Mount by Label by Default"
-msgstr "当设置默认挂载选项为\"Label\"时安装程序崩溃"
+msgstr "当默认以磁盘标签方式挂载时，安装程序会崩溃"
 
 #: xml/release-notes.xml:139(para)
 msgid ""
@@ -206,6 +205,8 @@ msgid ""
 "use another option for installation. If needed, switch back to <guimenu>By "
 "Label</guimenu> on the running system."
 msgstr ""
+"在分区时，若默认挂载方式设为 <guimenu>标签</guimenu>，安装器将汇报错误并崩溃。退而求其次，安装时请使用其它选项。若需要，"
+"可在安装后切回 <guimenu>标签</guimenu> 方式。"
 
 #. bnc#850056
 #: xml/release-notes.xml:150(title)
@@ -631,7 +632,7 @@ msgstr "sudo zypper rm xf86-input-synaptics"
 msgid ""
 "AArch64: Page Size Has Been Changed From openSUSE Leap 42.1 to openSUSE Leap "
 "42.2"
-msgstr ""
+msgstr "AArch64: 从 openSUSE Leap 42.1 升级到 openSUSE Leap 42.2 后分页大小发生了变化"
 
 #: xml/release-notes.xml:472(para)
 msgid ""
@@ -639,12 +640,15 @@ msgid ""
 "With openSUSE Leap 42.2, the page size has been changed to 4 kB. This "
 "renders old Swap and Btrfs file systems unusable."
 msgstr ""
+"在 openSUSE Leap 42.1 中，AArch64 平台的默认分页大小是 64 kB。在 openSUSE Leap 42.2 中，"
+"该分页大小变为了 4 kB。这会造成旧的 Swap 和 Btrfs 文件系统不稳定。"
 
 #: xml/release-notes.xml:477(para)
 msgid ""
 "If you are currently on openSUSE Leap 42.1 on AArch64, consider a fresh "
 "installation of openSUSE Leap 42.2 instead of upgrading."
 msgstr ""
+"若您目前正在 AArch64 平台上使用 openSUSE Leap 42.1，请考虑全新安装 openSUSE Leap 42.2 而非升级。"
 
 #: xml/release-notes.xml:485(title)
 msgid "Upgrading from openSUSE 13.2"
@@ -704,7 +708,6 @@ msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs：系统回滚后磁盘空间泄露"
 
 #: xml/release-notes.xml:518(para)
-#, fuzzy
 #| msgid ""
 #| "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space "
 #| "to become permanently occupied with stale, inaccessible contents after "
@@ -718,9 +721,8 @@ msgid ""
 "openSUSE Leap 42.1. However, the fix can only be applied to newly installed "
 "systems."
 msgstr ""
-"openSUSE 13.2 使用了 Btrfs 分区布局，这使得磁盘空间在执行第一次系统回滚后会被"
-"过时且无法访问的内容给永久占用。这个布局问题已在 openSUSE Leap 42.1 中修复"
-"了。然而，这个修复只可以应用于新安装的系统。"
+"openSUSE 13.2 默认使用了 Btrfs 分区布局，这使得磁盘空间在执行第一次系统回滚后会被过时且无法访问的内容给永久占用。这个布局问题已在 "
+"openSUSE Leap 42.1 中修复了。然而，这个修复只可以用于新安装的系统。"
 
 #: xml/release-notes.xml:525(para)
 msgid ""
@@ -732,24 +734,24 @@ msgstr ""
 
 #: xml/release-notes.xml:530(title)
 msgid "Data Loss with Non-Standard Settings or No Rollbacks"
-msgstr ""
+msgstr "非标准或无回滚设置会导致数据丢失"
 
 #: xml/release-notes.xml:531(para)
 msgid ""
 "The following procedure will only work properly on installations set up "
 "using the default proposal created by the openSUSE 13.2 installer."
-msgstr ""
+msgstr "以下工流程仅适用于使用 openSUSE 13.2 安装器创建的默认提案进行的安装。"
 
 #: xml/release-notes.xml:535(para)
 msgid "Additionally, you must have previously made a system rollback."
-msgstr ""
+msgstr "另外，您之前必须已经进行过一次系统回滚。"
 
 #: xml/release-notes.xml:538(para)
 msgid ""
 "If you have set up your Btrfs file system with a non-standard configuration "
 "or have not previously made a system rollback, executing the following "
 "procedure can incur data loss."
-msgstr ""
+msgstr "若您使用非标准设置设置了您的 Btrfs 文件系统或之前未进行回滚，执行以下流程会导致数据丢失。"
 
 #: xml/release-notes.xml:546(para)
 msgid "Mount the initial root filesystem:"
