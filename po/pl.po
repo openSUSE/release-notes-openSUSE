@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-23 20:02+0100\n"
-"PO-Revision-Date: 2016-12-04 21:14+0000\n"
+"PO-Revision-Date: 2016-12-05 19:19+0000\n"
 "Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/pl/>\n"
@@ -462,20 +462,26 @@ msgid ""
 "Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird "
 "instead."
 msgstr ""
+"<package>seamonkey</package>: Kod źródłowy się nie kompiluje. Jeżeli byłeś "
+"użytkownikiem Seamonkey, skorzystj z Mozilla Firefox oraz Mozilla "
+"Thunderbird w zamian."
 
 #: xml/release-notes.xml:303(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr ""
+"<package>ungifsicle</package>: Zastąpione przez <package>gifsicle</package>."
 
 #: xml/release-notes.xml:309(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
-msgstr ""
+msgstr "<package>xchat</package>: Zastąpiony przez <package>hexchat</package>."
 
 #: xml/release-notes.xml:318(title)
 msgid ""
 "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and "
 "Rollback"
 msgstr ""
+"<filename>/var/cache/</filename> na własnym pod-wolumenie do migawek i "
+"przywracania plików"
 
 #: xml/release-notes.xml:319(para)
 msgid ""
@@ -484,6 +490,11 @@ msgid ""
 "As a result of storing data that is mostly redundant but highly volatile, "
 "the amount of disk space a snapshot occupies can increase very fast."
 msgstr ""
+"<filename>/var/cache</filename> zawiera wiele ulotnych danych, jak na "
+"przykład pamięć podręczna Zyppera z paczkami RPM w różnych wersjach dla "
+"każdej aktualizacji. W rezultacie przechowywania danych które są zazwyczaj "
+"zbędne oraz ulotne, obszar zajmowany przez migawki na dysku może szybko "
+"wzrosnąć."
 
 #: xml/release-notes.xml:326(para)
 msgid ""
@@ -491,16 +502,22 @@ msgid ""
 "On fresh installations of openSUSE Leap 42.2, this is done automatically. To "
 "convert an existing root file system, perform the following steps:"
 msgstr ""
+"Aby temu zapobiec, przesuń <filename>/var/cache</filename> do oddzielnego "
+"pod-wolumenu. Na świeżej instalacji openSUSE Leap 42.2, jest to wykonywane "
+"automatycznie. Aby przekształcić istniejący system plików root, wykonaj "
+"następujące kroki:"
 
 #: xml/release-notes.xml:334(para)
 msgid ""
 "Find out the device name (for example, <filename>/dev/sda2</filename> or "
 "<filename>/dev/sda3</filename>) of the root file system:"
 msgstr ""
+"Znajdź nazwę urządzenia(na przykład <filename>/dev/sda2</filename> lub "
+"<filename>/dev/sda3</filename>)  systemu plików root:"
 
 #: xml/release-notes.xml:339(command)
 msgid "df /"
-msgstr ""
+msgstr "df /"
 
 #: xml/release-notes.xml:342(para)
 msgid ""
@@ -508,10 +525,13 @@ msgid ""
 "installations, this is a subvolume named <filename>@</filename>. To check if "
 "you have a <filename>@</filename> subvolume, use:"
 msgstr ""
+"Zidentyfikuj nadrzędny pod-wolumen wszystkich pozostałych pod-wolumenów. W "
+"instalacjach openSUSE 13.2, tan pod-wolumen nazywa się <filename>@</filename>"
+". Aby sprawdzić czy masz pod-wolumen <filename>@</filename>, użyj:"
 
 #: xml/release-notes.xml:348(command)
 msgid "btrfs subvolume list / | grep '@'"
-msgstr ""
+msgstr "btrfs subvolume list / | grep '@'"
 
 #: xml/release-notes.xml:349(para)
 msgid ""
@@ -519,82 +539,94 @@ msgid ""
 "<filename>@</filename>. In that case, you may be able to proceed with "
 "subvolume ID 5 which was used in older versions of openSUSE."
 msgstr ""
+"Jeżeli wynik tego polecenia jest pusty, nie posiadasz pod-wolumenu o nazwie "
+"<filename>@</filename>. W takim przypadku możesz spróbować kontynuować z pod-"
+"wolumenem o ID 5, który był wykorzystywany w starszych wersjach openSUSE."
 
 #: xml/release-notes.xml:356(para)
 msgid "Now mount the requisite subvolume."
-msgstr ""
+msgstr "Teraz zamontuj wymagany pod-wolumen."
 
 #: xml/release-notes.xml:361(para)
 msgid ""
 "If you have a <filename>@</filename> subvolume, mount that subvolume to a "
 "temporary mount point:"
 msgstr ""
+"Jeżeli posiadasz <filename>@</filename> pod-wolumen, zamontuj ten sub-"
+"wolumen do tymczasowego punktu montowania:"
 
 #: xml/release-notes.xml:365(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
-msgstr ""
+msgstr "mount &lt; 1root_device&gt; 2 -o subvol=@ /mnt"
 
 #: xml/release-notes.xml:368(para)
 msgid ""
 "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 "
 "instead:"
 msgstr ""
+"Jeżeli nie posiadasz pod-wolumenu <filename>@</filename>, zamontuj pod-"
+"wolumen o ID 5 w zamian:"
 
 #: xml/release-notes.xml:372(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
-msgstr ""
+msgstr "mount &lt; 1root_device&gt; 2 -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:377(para)
 msgid ""
 "<filename>/mnt/var/cache</filename> can already exist and could be the same "
 "directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
 msgstr ""
+"<filename>/mnt/var/cache</filename>może już istnieć oraz może być tą samą "
+"lokacją co <filename>/var/cache</filename>. Aby uniknąć utraty danych, "
+"przenieś ją:"
 
 #: xml/release-notes.xml:382(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
-msgstr ""
+msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
 #: xml/release-notes.xml:385(para)
 msgid "Create a new subvolume:"
-msgstr ""
+msgstr "stwórz nowy pod-wolumen:"
 
 #: xml/release-notes.xml:388(command)
 msgid "btrfs subvol create /mnt/var/cache"
-msgstr ""
+msgstr "btrfs subvol create /mnt/var/cache"
 
 #: xml/release-notes.xml:391(para)
 msgid ""
 "If there is now a directory <filename>/var/cache.old</filename>, move it to "
 "the new location:"
 msgstr ""
+"Jeśli masz lokację <filename>/var/cache.old</filename>, przenieś ja do nowej "
+"lokacji:"
 
 #: xml/release-notes.xml:395(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
-msgstr ""
+msgstr "mv /var/cache.old/* /mnt/var/cache"
 
 #: xml/release-notes.xml:396(para)
 msgid "If that is not the case, instead do:"
-msgstr ""
+msgstr "Jeżeli tak nie jest, to zrób:"
 
 #: xml/release-notes.xml:399(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
-msgstr ""
+msgstr "mv /var/cache/* /mnt/var/cache/"
 
 #: xml/release-notes.xml:402(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
-msgstr ""
+msgstr "Opcjonalne usuń <filename>/mnt/var/cache.old</filename>:"
 
 #: xml/release-notes.xml:405(command)
 msgid "rm -rf /mnt/var/cache.old"
-msgstr ""
+msgstr "rm -rf /mnt/var/cache.old"
 
 #: xml/release-notes.xml:408(para)
 msgid "Unmount the subvolume from the temporary mount point:"
-msgstr ""
+msgstr "Od montuj pod-wolumen z tymczasowego punktu montowania:"
 
 #: xml/release-notes.xml:411(command) xml/release-notes.xml:561(screen)
 msgid "umount /mnt"
-msgstr ""
+msgstr "umount /mnt"
 
 #: xml/release-notes.xml:414(para)
 msgid ""
