@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-23 20:02+0100\n"
+"POT-Creation-Date: 2016-12-07 11:44+0100\n"
 "PO-Revision-Date: 2016-11-23 22:06+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
@@ -223,9 +223,15 @@ msgstr ""
 "Installatieprogramma crasht bij instellen van standaard aankoppelen met label"
 
 #: xml/release-notes.xml:139(para)
+#, fuzzy
+#| msgid ""
+#| "When setting the default mount value to <guimenu>By Label</guimenu> "
+#| "during partitioning, the installer will report an error and crash. As a "
+#| "workaround use another option for installation. If needed, switch back to "
+#| "<guimenu>By Label</guimenu> on the running system."
 msgid ""
 "When setting the default mount value to <guimenu>By Label</guimenu> during "
-"partitioning, the installer will report an error and crash. As a workaround "
+"partitioning, the installer will report an error and crash. As a workaround, "
 "use another option for installation. If needed, switch back to <guimenu>By "
 "Label</guimenu> on the running system."
 msgstr ""
@@ -795,12 +801,6 @@ msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: Lek in schijfruimte na terug rollen van systemen"
 
 #: xml/release-notes.xml:518(para)
-#| msgid ""
-#| "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space "
-#| "to become permanently occupied with stale, inaccessible contents after "
-#| "the first system rollback was executed. This layout issue has been fixed "
-#| "in openSUSE Leap 42.1. However, the fix can only be applied to newly "
-#| "installed systems."
 msgid ""
 "By default, openSUSE 13.2 used a Btrfs partition layout that allowed for "
 "disk space to become permanently occupied with stale, inaccessible contents "
@@ -839,7 +839,8 @@ msgstr ""
 
 #: xml/release-notes.xml:535(para)
 msgid "Additionally, you must have previously made a system rollback."
-msgstr "Bovendien moet u eerder een terug rollen van het systeem hebben gedaan."
+msgstr ""
+"Bovendien moet u eerder een terug rollen van het systeem hebben gedaan."
 
 #: xml/release-notes.xml:538(para)
 msgid ""
@@ -1078,11 +1079,29 @@ msgstr ""
 "Voor meer informatie, zie het bugrapport op <link href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=1001872\"/>)."
 
-#: xml/release-notes.xml:721(title)
+#: xml/release-notes.xml:722(title)
+msgid "Dolphin Does Not Set Extended Permission Bits"
+msgstr ""
+
+#: xml/release-notes.xml:723(para)
+msgid ""
+"The version of the KDE file manager Dolphin that is shipped with openSUSE "
+"Leap 42.2 cannot set <quote>Extended Permission</quote> bits (GID, "
+"<quote>Sticky</quote>). Additionally, closing the Dolphin permissions dialog "
+"by clicking <guimenu>OK</guimenu> clears existing extended permissions bits."
+msgstr ""
+
+#: xml/release-notes.xml:731(para)
+msgid ""
+"To avoid such issues, edit permissions with Konqueror (GUI) or "
+"<command>chmod</command> (command line) only."
+msgstr ""
+
+#: xml/release-notes.xml:738(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "Geen schermvergrendeling bij gebruik van GNOME-shell maar geen GDM"
 
-#: xml/release-notes.xml:722(para)
+#: xml/release-notes.xml:739(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1092,7 +1111,7 @@ msgstr ""
 "GDM, zoals SDDM of LightDM, zal het scherm niet leeg worden of vergrendelen. "
 "Ook is wisselen van gebruiker zonder afmelden niet mogelijk."
 
-#: xml/release-notes.xml:727(para)
+#: xml/release-notes.xml:744(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -1100,11 +1119,11 @@ msgstr ""
 "Om het scherm van de GNOME-shell te vergrendelen, schakel GDM in als uw "
 "login-manager:"
 
-#: xml/release-notes.xml:733(para)
+#: xml/release-notes.xml:750(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "Ga na dat het pakket <package>gdm</package> is geïnstalleerd."
 
-#: xml/release-notes.xml:738(para)
+#: xml/release-notes.xml:755(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -1112,7 +1131,7 @@ msgstr ""
 "Open YaST en van daaruit, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
 
-#: xml/release-notes.xml:744(para)
+#: xml/release-notes.xml:761(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -1120,7 +1139,7 @@ msgstr ""
 "Navigeer naar <menuchoice><guimenu>Desktop</guimenu><guimenu>Display "
 "manager</guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:751(para)
+#: xml/release-notes.xml:768(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -1128,21 +1147,21 @@ msgstr ""
 "In het tekstvak, voer in <literal>gdm</literal>. Om op te slaan, klik op "
 "<guimenu>OK</guimenu>."
 
-#: xml/release-notes.xml:757(para)
+#: xml/release-notes.xml:774(para)
 msgid "Reboot."
 msgstr "Opnieuw opstarten."
 
 #. bnc#809347
-#: xml/release-notes.xml:792(title)
+#: xml/release-notes.xml:809(title)
 msgid "More Information and Feedback"
 msgstr "Meer informatie en terugkoppeling"
 
-#: xml/release-notes.xml:796(para)
+#: xml/release-notes.xml:813(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 "Lees de <filename>README</filename>-documenten op het installatiemedium."
 
-#: xml/release-notes.xml:801(para)
+#: xml/release-notes.xml:818(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1150,21 +1169,21 @@ msgstr ""
 "Bekijk een gedetailleerde log met informatie over wijzigingen over een "
 "specifiek pakket uit de RPM:"
 
-#: xml/release-notes.xml:805(replaceable)
+#: xml/release-notes.xml:822(replaceable)
 msgid "FILENAME"
 msgstr "BESTANDSNAAM"
 
-#: xml/release-notes.xml:805(screen)
+#: xml/release-notes.xml:822(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:806(para)
+#: xml/release-notes.xml:823(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Vervang <replaceable>BESTANDSNAAM</replaceable> door de naam van de RPM."
 
-#: xml/release-notes.xml:811(para)
+#: xml/release-notes.xml:828(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1173,14 +1192,14 @@ msgstr ""
 "het installatiemedium voor een chronologische log van alle wijzigingen "
 "gemaakt aan de bijgewerkte pakketten."
 
-#: xml/release-notes.xml:817(para)
+#: xml/release-notes.xml:834(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
 "Meer informatie in de map <filename>docu</filename> op het installatiemedium."
 
-#: xml/release-notes.xml:823(para)
+#: xml/release-notes.xml:840(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -1188,7 +1207,7 @@ msgstr ""
 "<link href=\"https://doc.opensuse.org/\"/> bevat extra of bijgewerkte "
 "documentatie."
 
-#: xml/release-notes.xml:828(para)
+#: xml/release-notes.xml:845(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -1196,15 +1215,15 @@ msgstr ""
 "Bezoek <link href=\"https://www.opensuse.org\"/> voor het laatste "
 "productnieuws van openSUSE."
 
-#: xml/release-notes.xml:835(para)
+#: xml/release-notes.xml:852(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:839(para)
+#: xml/release-notes.xml:856(para)
 msgid "Thanks for using openSUSE."
 msgstr "Bedankt voor het gebruiken van openSUSE."
 
-#: xml/release-notes.xml:842(para)
+#: xml/release-notes.xml:859(para)
 msgid "The openSUSE Team."
 msgstr "Het team van openSUSE."
 

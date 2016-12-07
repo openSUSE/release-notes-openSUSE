@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2016-11-23 20:02+0100\n"
+"POT-Creation-Date: 2016-12-07 11:44+0100\n"
 "PO-Revision-Date: 2016-11-16 09:46+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
@@ -191,9 +191,15 @@ msgid "Installer Crashes When Set to Mount by Label by Default"
 msgstr "在預設以磁碟標籤 (Label) 掛載的情況下，安裝程式會崩潰"
 
 #: xml/release-notes.xml:139(para)
+#, fuzzy
+#| msgid ""
+#| "When setting the default mount value to <guimenu>By Label</guimenu> "
+#| "during partitioning, the installer will report an error and crash. As a "
+#| "workaround use another option for installation. If needed, switch back to "
+#| "<guimenu>By Label</guimenu> on the running system."
 msgid ""
 "When setting the default mount value to <guimenu>By Label</guimenu> during "
-"partitioning, the installer will report an error and crash. As a workaround "
+"partitioning, the installer will report an error and crash. As a workaround, "
 "use another option for installation. If needed, switch back to <guimenu>By "
 "Label</guimenu> on the running system."
 msgstr ""
@@ -973,11 +979,29 @@ msgstr ""
 "然而，並非所有的設定都會從舊版本轉移。要了解更多資訊，詳見 <link href="
 "\"https://bugzilla.opensuse.org/show_bug.cgi?id=1001872\"/> 的錯誤報告。"
 
-#: xml/release-notes.xml:721(title)
+#: xml/release-notes.xml:722(title)
+msgid "Dolphin Does Not Set Extended Permission Bits"
+msgstr ""
+
+#: xml/release-notes.xml:723(para)
+msgid ""
+"The version of the KDE file manager Dolphin that is shipped with openSUSE "
+"Leap 42.2 cannot set <quote>Extended Permission</quote> bits (GID, "
+"<quote>Sticky</quote>). Additionally, closing the Dolphin permissions dialog "
+"by clicking <guimenu>OK</guimenu> clears existing extended permissions bits."
+msgstr ""
+
+#: xml/release-notes.xml:731(para)
+msgid ""
+"To avoid such issues, edit permissions with Konqueror (GUI) or "
+"<command>chmod</command> (command line) only."
+msgstr ""
+
+#: xml/release-notes.xml:738(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "當使用 GNOME Shell 但未使用 GDM 時，螢幕鎖定不會作用"
 
-#: xml/release-notes.xml:722(para)
+#: xml/release-notes.xml:739(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -986,17 +1010,17 @@ msgstr ""
 "當 GNOME Shell 和其他非 GDM 的登入管理員一同使用時 (如 SDDM 或 LightDM)，螢幕"
 "不會變黑或鎖定。另外，也無法在未登出的情況下切換使用者。"
 
-#: xml/release-notes.xml:727(para)
+#: xml/release-notes.xml:744(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
 msgstr "要能夠在 GNOME Shell 下鎖定螢幕，請啟用 GDM 作為您的登入管理員："
 
-#: xml/release-notes.xml:733(para)
+#: xml/release-notes.xml:750(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "請確認已安裝 <package>gdm</package> 套件。"
 
-#: xml/release-notes.xml:738(para)
+#: xml/release-notes.xml:755(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -1004,7 +1028,7 @@ msgstr ""
 "開啟 YaST，並在其中啟動 <menuchoice><guimenu>/etc/sysconfig 編輯器</"
 "guimenu></menuchoice>。"
 
-#: xml/release-notes.xml:744(para)
+#: xml/release-notes.xml:761(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -1012,7 +1036,7 @@ msgstr ""
 "移動到 <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>。"
 
-#: xml/release-notes.xml:751(para)
+#: xml/release-notes.xml:768(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -1020,39 +1044,39 @@ msgstr ""
 "在文字方塊中，指定 <literal>gdm</literal>。若要儲存設定，請點擊 <guimenu>確定"
 "</guimenu> 按鈕。"
 
-#: xml/release-notes.xml:757(para)
+#: xml/release-notes.xml:774(para)
 msgid "Reboot."
 msgstr "重新啟動系統。"
 
 #. bnc#809347
-#: xml/release-notes.xml:792(title)
+#: xml/release-notes.xml:809(title)
 msgid "More Information and Feedback"
 msgstr "更多資訊與反饋"
 
-#: xml/release-notes.xml:796(para)
+#: xml/release-notes.xml:813(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "請閱讀安裝媒體上的 <filename>README</filename> 文件。"
 
-#: xml/release-notes.xml:801(para)
+#: xml/release-notes.xml:818(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "從 RPM 獲取某個套件詳細的變動歷史資訊："
 
-#: xml/release-notes.xml:805(replaceable)
+#: xml/release-notes.xml:822(replaceable)
 msgid "FILENAME"
 msgstr "FILENAME"
 
-#: xml/release-notes.xml:805(screen)
+#: xml/release-notes.xml:822(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:806(para)
+#: xml/release-notes.xml:823(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "將 <replaceable>FILENAME</replaceable> 代換為 RPM 套件的名稱。"
 
-#: xml/release-notes.xml:811(para)
+#: xml/release-notes.xml:828(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1060,13 +1084,13 @@ msgstr ""
 "請查看在安裝媒體最上層目錄下的 <filename>ChangeLog</filename> 檔案以了解所更"
 "新套件的變動歷史（按時間先後排序）。"
 
-#: xml/release-notes.xml:817(para)
+#: xml/release-notes.xml:834(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
-#: xml/release-notes.xml:823(para)
+#: xml/release-notes.xml:840(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -1074,7 +1098,7 @@ msgstr ""
 "<link href=\"https://activedoc.opensuse.org/\">https://activedoc.opensuse."
 "org/</link> 包含了額外或是更新的文件。"
 
-#: xml/release-notes.xml:828(para)
+#: xml/release-notes.xml:845(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -1082,15 +1106,15 @@ msgstr ""
 "請造訪 <link href=\"https://www.opensuse.org\">https://www.opensuse.org</"
 "link> 以了解 openSUSE 最新的產品訊息。"
 
-#: xml/release-notes.xml:835(para)
+#: xml/release-notes.xml:852(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "版權所有 © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:839(para)
+#: xml/release-notes.xml:856(para)
 msgid "Thanks for using openSUSE."
 msgstr "感謝使用 openSUSE。"
 
-#: xml/release-notes.xml:842(para)
+#: xml/release-notes.xml:859(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE 團隊"
 

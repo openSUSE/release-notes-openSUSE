@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
-"POT-Creation-Date: 2016-11-23 20:02+0100\n"
+"POT-Creation-Date: 2016-12-07 11:44+0100\n"
 "PO-Revision-Date: 2016-11-23 19:28+0000\n"
 "Last-Translator: Benoît Monin <benoit.monin@gmx.fr>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
@@ -217,9 +217,15 @@ msgid "Installer Crashes When Set to Mount by Label by Default"
 msgstr "Plantage de l'installeur avec le montage par label par défaut"
 
 #: xml/release-notes.xml:139(para)
+#, fuzzy
+#| msgid ""
+#| "When setting the default mount value to <guimenu>By Label</guimenu> "
+#| "during partitioning, the installer will report an error and crash. As a "
+#| "workaround use another option for installation. If needed, switch back to "
+#| "<guimenu>By Label</guimenu> on the running system."
 msgid ""
 "When setting the default mount value to <guimenu>By Label</guimenu> during "
-"partitioning, the installer will report an error and crash. As a workaround "
+"partitioning, the installer will report an error and crash. As a workaround, "
 "use another option for installation. If needed, switch back to <guimenu>By "
 "Label</guimenu> on the running system."
 msgstr ""
@@ -789,12 +795,6 @@ msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs : fuite d'espace disque après des restaurations du système"
 
 #: xml/release-notes.xml:518(para)
-#| msgid ""
-#| "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space "
-#| "to become permanently occupied with stale, inaccessible contents after "
-#| "the first system rollback was executed. This layout issue has been fixed "
-#| "in openSUSE Leap 42.1. However, the fix can only be applied to newly "
-#| "installed systems."
 msgid ""
 "By default, openSUSE 13.2 used a Btrfs partition layout that allowed for "
 "disk space to become permanently occupied with stale, inaccessible contents "
@@ -1077,11 +1077,29 @@ msgstr ""
 "version actuellement. Pour plus d'informations, consultez le rapport de bug "
 "<link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1001872\"/>."
 
-#: xml/release-notes.xml:721(title)
+#: xml/release-notes.xml:722(title)
+msgid "Dolphin Does Not Set Extended Permission Bits"
+msgstr ""
+
+#: xml/release-notes.xml:723(para)
+msgid ""
+"The version of the KDE file manager Dolphin that is shipped with openSUSE "
+"Leap 42.2 cannot set <quote>Extended Permission</quote> bits (GID, "
+"<quote>Sticky</quote>). Additionally, closing the Dolphin permissions dialog "
+"by clicking <guimenu>OK</guimenu> clears existing extended permissions bits."
+msgstr ""
+
+#: xml/release-notes.xml:731(para)
+msgid ""
+"To avoid such issues, edit permissions with Konqueror (GUI) or "
+"<command>chmod</command> (command line) only."
+msgstr ""
+
+#: xml/release-notes.xml:738(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "Pas de verrouillage d'écran en utilisant GNOME Shell sans GDM"
 
-#: xml/release-notes.xml:722(para)
+#: xml/release-notes.xml:739(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1092,7 +1110,7 @@ msgstr ""
 "verrouillera. De plus, changer d'utilisateur sans se déconnecter n'est pas "
 "possible."
 
-#: xml/release-notes.xml:727(para)
+#: xml/release-notes.xml:744(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -1100,11 +1118,11 @@ msgstr ""
 "Pour pouvoir verrouiller l'écran depuis GNOME Shell, activez GDM en tant que "
 "gestionnaire de connexion :"
 
-#: xml/release-notes.xml:733(para)
+#: xml/release-notes.xml:750(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "Assurez vous que le paquet <package>gdm</package> est installé."
 
-#: xml/release-notes.xml:738(para)
+#: xml/release-notes.xml:755(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -1112,7 +1130,7 @@ msgstr ""
 "Lancez YaST et de là, ouvrez <menuchoice><guimenu>Éditeur de fichiers /etc/"
 "sysconfig</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:744(para)
+#: xml/release-notes.xml:761(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -1120,7 +1138,7 @@ msgstr ""
 "Naviguez vers <menuchoice><guimenu>Desktop</guimenu><guimenu>Display "
 "manager</guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:751(para)
+#: xml/release-notes.xml:768(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -1128,21 +1146,21 @@ msgstr ""
 "Dans le champ de saisie, spécifiez <literal>gdm</literal>. Pour sauvegarder, "
 "cliquez sur <guimenu>OK</guimenu>."
 
-#: xml/release-notes.xml:757(para)
+#: xml/release-notes.xml:774(para)
 msgid "Reboot."
 msgstr "Redémarrez."
 
 #. bnc#809347
-#: xml/release-notes.xml:792(title)
+#: xml/release-notes.xml:809(title)
 msgid "More Information and Feedback"
 msgstr "Plus d'informations et de retours"
 
-#: xml/release-notes.xml:796(para)
+#: xml/release-notes.xml:813(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 "Lisez les documents <filename>README</filename> sur le médium d'installation."
 
-#: xml/release-notes.xml:801(para)
+#: xml/release-notes.xml:818(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1150,20 +1168,20 @@ msgstr ""
 "Obtenir les informations détaillées du journal de modifications (changelog) "
 "à propos d'un paquet particulier à partir du RPM :"
 
-#: xml/release-notes.xml:805(replaceable)
+#: xml/release-notes.xml:822(replaceable)
 msgid "FILENAME"
 msgstr "NOM"
 
-#: xml/release-notes.xml:805(screen)
+#: xml/release-notes.xml:822(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:806(para)
+#: xml/release-notes.xml:823(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Remplacez <replaceable>NOM</replaceable> avec le nom du RPM."
 
-#: xml/release-notes.xml:811(para)
+#: xml/release-notes.xml:828(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1172,7 +1190,7 @@ msgstr ""
 "d'installation pour un historique chronologique de toutes les modifications "
 "apportées aux paquets mis à jour."
 
-#: xml/release-notes.xml:817(para)
+#: xml/release-notes.xml:834(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1180,7 +1198,7 @@ msgstr ""
 "Retrouvez plus d'informations dans le dossier <filename>docu</filename> sur "
 "le médium d'installation."
 
-#: xml/release-notes.xml:823(para)
+#: xml/release-notes.xml:840(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -1188,7 +1206,7 @@ msgstr ""
 "<link href=\"https://doc.opensuse.org/\"/> contient de la documentation "
 "supplémentaire ou mise à jour."
 
-#: xml/release-notes.xml:828(para)
+#: xml/release-notes.xml:845(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -1196,15 +1214,15 @@ msgstr ""
 "Rendez-vous sur <link href=\"https://www.opensuse.org\"/> pour les dernières "
 "informations sur les produits openSUSE."
 
-#: xml/release-notes.xml:835(para)
+#: xml/release-notes.xml:852(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:839(para)
+#: xml/release-notes.xml:856(para)
 msgid "Thanks for using openSUSE."
 msgstr "Merci d'utiliser openSUSE."
 
-#: xml/release-notes.xml:842(para)
+#: xml/release-notes.xml:859(para)
 msgid "The openSUSE Team."
 msgstr "L'équipe openSUSE."
 
