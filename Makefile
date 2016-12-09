@@ -17,6 +17,9 @@ LANGSEN := $(LANGS) en
 ifndef STYLEROOT
   STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013-ns
 endif
+ifndef SCHEMA
+  SCHEMA := file:///usr/share/xml/docbook/schema/rng/5.1/docbookxi.rnc
+endif
 ifndef VERSION
   VERSION := unreleased
 endif
@@ -46,7 +49,8 @@ DIRS := $(foreach l, $(LANGSEN), build/release-notes.$(l)/yast-html/)
 # Gets the language code: release-notes.en.xml => en
 LANG_COMMAND = `echo $@ | awk -F '.' '{gsub("/.*","",$$2); print($$2)}'`
 LANG_COMMAND_PROFILE = `echo $@ | awk -F '.' '{gsub("/.*","",$$3); print($$3)}'`
-DAPS_COMMAND = daps -vv -m xml/release-notes.$${lang}.xml --styleroot $(STYLEROOT)
+DAPS_COMMAND_BASIC = daps -vv --styleroot $(STYLEROOT) --schema=$(SCHEMA)
+DAPS_COMMAND = $(DAPS_COMMAND_BASIC) -m xml/release-notes.$${lang}.xml
 
 XSLTPROC_COMMAND = xsltproc \
 --stringparam generate.toc "book toc" \
@@ -66,16 +70,16 @@ po/LINGUAS: po/*.po po/po-selector
 	po/po-selector
 
 pot: release-notes.pot
-release-notes.pot: xml/release-notes.ent xml/release-notes.xml
-	daps -vv -m xml/release-notes.xml validate
-	xml2po --expand-all-entities -o release-notes.pot xml/release-notes.xml
+release-notes.pot: xml/release-notes.xml xml/release-notes.ent
+	$(DAPS_COMMAND_BASIC) -m $< validate
+	xml2po --expand-all-entities -o $@ $<
 
 po: $(PO_FILES)
 po/%.po: release-notes.pot
 	if [ -r $@ ]; then \
-       msgmerge  --previous --update $@ release-notes.pot; \
+       msgmerge  --previous --update $@ $<; \
    else \
-       msgen -o $@ release-notes.pot; \
+       msgen -o $@ $<; \
    fi
 
 # FIXME: Unfortunately, xml2po has some issues with namespaces. We can avoid
@@ -99,10 +103,10 @@ xml/release-notes.%.xml: po/%.po xml/release-notes.ent xml/release-notes.xml
 	  -e "s_<releaseinfo>[^>]+>_<releaseinfo>$(VERSION)</releaseinfo>_" \
 	  -e 's_\s+$$__' \
 	  $@;
-	  daps -m $@ validate
+	$(DAPS_COMMAND_BASIC) -m $@ validate
 
-translatedxml: xml/release-notes.ent xml/release-notes.xml $(XML_FILES)
-	cp xml/release-notes.xml xml/release-notes.en.xml
+translatedxml: xml/release-notes.xml xml/release-notes.ent $(XML_FILES)
+	cp $< xml/release-notes.en.xml
 	sed -i -r -e "s_<releaseinfo>[^>]+>_<releaseinfo>$(VERSION)</releaseinfo>_" \
 	  xml/release-notes.en.xml
 
@@ -121,7 +125,6 @@ $(SINGLE_HTML_FILES): po/LINGUAS translatedxml
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
 $(YAST_HTML_FILES): po/LINGUAS $(YAST_PROFILED_FILES)
 	lang=$(LANG_COMMAND) ; \
-	$(XSLTPROC_COMMAND) /usr/share/daps/daps-xslt/relnotes/yast.xsl build/.profiled/general_$(LIFECYCLE)/release-notes.$${lang}.xml > $@
 
 # xsltproc by itself does not support profiling, so we need to do this
 # beforehand for YaST HTML
