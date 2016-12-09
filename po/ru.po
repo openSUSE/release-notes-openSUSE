@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2016-12-07 11:44+0100\n"
-"PO-Revision-Date: 2016-11-14 13:35+0000\n"
+"PO-Revision-Date: 2016-12-09 14:41+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/ru/>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.6\n"
 
 #: xml/release-notes.xml:15(title) xml/release-notes.xml:32(component)
@@ -215,7 +215,7 @@ msgstr ""
 
 #: xml/release-notes.xml:138(title)
 msgid "Installer Crashes When Set to Mount by Label by Default"
-msgstr ""
+msgstr "Падение установщика при настройке монтирования по меткам"
 
 #: xml/release-notes.xml:139(para)
 msgid ""
@@ -224,6 +224,11 @@ msgid ""
 "use another option for installation. If needed, switch back to <guimenu>By "
 "Label</guimenu> on the running system."
 msgstr ""
+"При настройке метода монтирования по умолчанию <guimenu>По метке</guimenu> "
+"при разметке, установщик сообщит об ошибке и аварийно завершит работу. Чтобы "
+"обойти эту проблему, используйте другие варианты во время установки. При "
+"необходимости, перейдите обратно на вариант <guimenu>По метке</guimenu> в "
+"рабочей системе."
 
 #. bnc#850056
 #: xml/release-notes.xml:150(title)
@@ -769,7 +774,6 @@ msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: Утечка дискового пространства после отката системы"
 
 #: xml/release-notes.xml:518(para)
-#, fuzzy
 #| msgid ""
 #| "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space "
 #| "to become permanently occupied with stale, inaccessible contents after "
@@ -794,22 +798,24 @@ msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
 msgstr ""
-"Если вы обновляетесь с openSUSE 13.2, вы не можете перейти на новую разметку "
-"файловой системы, но можете получить обратно пространство на диске."
+"Если вы обновляетесь с openSUSE 13.2, вы не можете перейти на новую "
+"раскладку, но можете получить обратно пространство на диске."
 
 #: xml/release-notes.xml:530(title)
 msgid "Data Loss with Non-Standard Settings or No Rollbacks"
-msgstr ""
+msgstr "Потеря данных с нестандартными настройками или без откатов"
 
 #: xml/release-notes.xml:531(para)
 msgid ""
 "The following procedure will only work properly on installations set up "
 "using the default proposal created by the openSUSE 13.2 installer."
 msgstr ""
+"Данная процедура корректно работает только на установках, использующих "
+"предложение установщика openSUSE 13.2 по умолчанию."
 
 #: xml/release-notes.xml:535(para)
 msgid "Additionally, you must have previously made a system rollback."
-msgstr ""
+msgstr "Кроме того, вам необходимо предварительно выполнить откат системы."
 
 #: xml/release-notes.xml:538(para)
 msgid ""
@@ -817,6 +823,9 @@ msgid ""
 "or have not previously made a system rollback, executing the following "
 "procedure can incur data loss."
 msgstr ""
+"Если вы указали нестандартные настройки для своей файловой системы Btrfs или "
+"не выполняли откат системы, выполнение данной процедуры может привести к "
+"потере данных."
 
 #: xml/release-notes.xml:546(para)
 msgid "Mount the initial root filesystem:"
@@ -1045,7 +1054,7 @@ msgstr ""
 
 #: xml/release-notes.xml:722(title)
 msgid "Dolphin Does Not Set Extended Permission Bits"
-msgstr ""
+msgstr "Dolphin не сохраняет биты расширенных прав доступа"
 
 #: xml/release-notes.xml:723(para)
 msgid ""
@@ -1054,12 +1063,18 @@ msgid ""
 "<quote>Sticky</quote>). Additionally, closing the Dolphin permissions dialog "
 "by clicking <guimenu>OK</guimenu> clears existing extended permissions bits."
 msgstr ""
+"Версия файлового менеджера для KDE Dolphin, поставляемая в openSUSE Leap "
+"42.2, не может сохранять биты <quote>Extended Permission</quote> (GID, "
+"<quote>Sticky</quote>). Более того, при закрытии диалога разрешений Dolphin "
+"нажатием кнопки <guimenu>OK</guimenu> сбрасывает уже установленные биты."
 
 #: xml/release-notes.xml:731(para)
 msgid ""
 "To avoid such issues, edit permissions with Konqueror (GUI) or "
 "<command>chmod</command> (command line) only."
 msgstr ""
+"Во избежание подобных проблем, правьте разрешения в Konqueror (GUI) или "
+"командой <command>chmod</command>."
 
 #: xml/release-notes.xml:738(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
