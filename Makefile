@@ -125,6 +125,7 @@ $(SINGLE_HTML_FILES): po/LINGUAS translatedxml
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
 $(YAST_HTML_FILES): po/LINGUAS $(YAST_PROFILED_FILES)
 	lang=$(LANG_COMMAND) ; \
+	  $(XSLTPROC_COMMAND) /usr/share/daps/daps-xslt/relnotes/yast.xsl build/.profiled/general_$(LIFECYCLE)/release-notes.$${lang}.xml > $@
 
 # xsltproc by itself does not support profiling, so we need to do this
 # beforehand for YaST HTML
