@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
-"POT-Creation-Date: 2016-12-07 11:44+0100\n"
+"POT-Creation-Date: 2016-12-12 11:26+0100\n"
 "PO-Revision-Date: 2016-12-07 22:34+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
@@ -219,20 +219,16 @@ msgstr ""
 "してしまう問題について"
 
 #: xml/release-notes.xml:139(para)
-#| msgid ""
-#| "When setting the default mount value to <guimenu>By Label</guimenu> "
-#| "during partitioning, the installer will report an error and crash. As a "
-#| "workaround use another option for installation. If needed, switch back to "
-#| "<guimenu>By Label</guimenu> on the running system."
 msgid ""
 "When setting the default mount value to <guimenu>By Label</guimenu> during "
 "partitioning, the installer will report an error and crash. As a workaround, "
 "use another option for installation. If needed, switch back to <guimenu>By "
 "Label</guimenu> on the running system."
 msgstr ""
-"パーティション設定で既定のマウント方法を <guimenu>ラベル</guimenu> "
-"に設定した場合、インストーラはエラーを報告してクラッシュしてしまいます。そのため、インストール時にはそれ以外の選択で進めるものとし、インストール完了後に "
-"<guimenu>ラベル</guimenu> に切り替えて回避してください。"
+"パーティション設定で既定のマウント方法を <guimenu>ラベル</guimenu> に設定した"
+"場合、インストーラはエラーを報告してクラッシュしてしまいます。そのため、イン"
+"ストール時にはそれ以外の選択で進めるものとし、インストール完了後に <guimenu>"
+"ラベル</guimenu> に切り替えて回避してください。"
 
 #. bnc#850056
 #: xml/release-notes.xml:150(title)
@@ -459,34 +455,24 @@ msgstr ""
 "のです。"
 
 #: xml/release-notes.xml:296(para)
-msgid ""
-"<package>seamonkey</package>: Source code no longer compiles. If you were a "
-"Seamonkey user previously, switch to Mozilla Firefox and Mozilla Thunderbird "
-"instead."
-msgstr ""
-"<package>seamonkey</package>: 公開されているソースコードではコンパイルできな"
-"くなってしまいました。以前より Seamonkey をお使いの方は、 Mozilla Firefox お"
-"よび Mozilla Thunderbird に移行することをお勧めします。"
-
-#: xml/release-notes.xml:303(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr ""
 "<package>ungifsicle</package>: <package>gifsicle</package> に置き換えられてい"
 "ます。"
 
-#: xml/release-notes.xml:309(para)
+#: xml/release-notes.xml:302(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr ""
 "<package>xchat</package>: <package>hexchat</package> に置き換えられています。"
 
-#: xml/release-notes.xml:318(title)
+#: xml/release-notes.xml:311(title)
 msgid ""
 "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and "
 "Rollback"
 msgstr ""
 "<filename>/var/cache</filename> に対する独自のサブボリュームへの移動について"
 
-#: xml/release-notes.xml:319(para)
+#: xml/release-notes.xml:312(para)
 msgid ""
 "<filename>/var/cache</filename> contains a lot of very volatile data, such "
 "as the Zypper cache with RPM packages in different versions for each update. "
@@ -499,7 +485,7 @@ msgstr ""
 "のように頻繁な更新が発生してしまうと、スナップショットのディスク領域が容易に"
 "肥大化してしまいます。"
 
-#: xml/release-notes.xml:326(para)
+#: xml/release-notes.xml:319(para)
 msgid ""
 "To solve this, move <filename>/var/cache</filename> to a separate subvolume. "
 "On fresh installations of openSUSE Leap 42.2, this is done automatically. To "
@@ -510,7 +496,7 @@ msgstr ""
 "合、この配置は自動的に行なわれます。既存のルートファイルシステムを本件のよう"
 "に変更したい場合は、下記のような手順を実施してください:"
 
-#: xml/release-notes.xml:334(para)
+#: xml/release-notes.xml:327(para)
 msgid ""
 "Find out the device name (for example, <filename>/dev/sda2</filename> or "
 "<filename>/dev/sda3</filename>) of the root file system:"
@@ -518,11 +504,11 @@ msgstr ""
 "まずはルートデバイスに対応するデバイス名 (たとえば<filename>/dev/sda2</"
 "filename> や <filename>/dev/sda3</filename> など) を判断します:"
 
-#: xml/release-notes.xml:339(command)
+#: xml/release-notes.xml:332(command)
 msgid "df /"
 msgstr "df /"
 
-#: xml/release-notes.xml:342(para)
+#: xml/release-notes.xml:335(para)
 msgid ""
 "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 "
 "installations, this is a subvolume named <filename>@</filename>. To check if "
@@ -533,11 +519,11 @@ msgstr ""
 "す。 <filename>@</filename> という名前のサブボリュームが存在するかどうかを判"
 "断するには、下記のようにします:"
 
-#: xml/release-notes.xml:348(command)
+#: xml/release-notes.xml:341(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr "btrfs subvolume list / | grep '@'"
 
-#: xml/release-notes.xml:349(para)
+#: xml/release-notes.xml:342(para)
 msgid ""
 "If the output of this command is empty, you do not have a subvolume named "
 "<filename>@</filename>. In that case, you may be able to proceed with "
@@ -548,11 +534,11 @@ msgstr ""
 "openSUSE のバージョンで利用されていた、サブボリューム ID 5 を利用することがで"
 "きます。"
 
-#: xml/release-notes.xml:356(para)
+#: xml/release-notes.xml:349(para)
 msgid "Now mount the requisite subvolume."
 msgstr "次に必要なサブボリュームをマウントします。"
 
-#: xml/release-notes.xml:361(para)
+#: xml/release-notes.xml:354(para)
 msgid ""
 "If you have a <filename>@</filename> subvolume, mount that subvolume to a "
 "temporary mount point:"
@@ -560,11 +546,11 @@ msgstr ""
 "<filename>@</filename> という名前のサブボリュームが存在している場合は、下記の"
 "ようにして一時的なマウントポイント内にマウントします:"
 
-#: xml/release-notes.xml:365(command)
+#: xml/release-notes.xml:358(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount &lt;ルートデバイス&gt; -o subvol=@ /mnt"
 
-#: xml/release-notes.xml:368(para)
+#: xml/release-notes.xml:361(para)
 msgid ""
 "If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 "
 "instead:"
@@ -572,11 +558,11 @@ msgstr ""
 "<filename>@</filename> という名前のサブボリュームが無い場合は、代わりにサブボ"
 "リューム ID 5 をマウントします:"
 
-#: xml/release-notes.xml:372(command)
+#: xml/release-notes.xml:365(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount &lt;ルートデバイス&gt; -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:377(para)
+#: xml/release-notes.xml:370(para)
 msgid ""
 "<filename>/mnt/var/cache</filename> can already exist and could be the same "
 "directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
@@ -585,19 +571,19 @@ msgstr ""
 "<filename>/mnt/var/cache</filename> に現われるようになります。 データを失わな"
 "いようにするには、まずは下記のようにして移動します:"
 
-#: xml/release-notes.xml:382(command)
+#: xml/release-notes.xml:375(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
-#: xml/release-notes.xml:385(para)
+#: xml/release-notes.xml:378(para)
 msgid "Create a new subvolume:"
 msgstr "次に新しいサブボリュームを作成します:"
 
-#: xml/release-notes.xml:388(command)
+#: xml/release-notes.xml:381(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr "btrfs subvol create /mnt/var/cache"
 
-#: xml/release-notes.xml:391(para)
+#: xml/release-notes.xml:384(para)
 msgid ""
 "If there is now a directory <filename>/var/cache.old</filename>, move it to "
 "the new location:"
@@ -605,36 +591,36 @@ msgstr ""
 "あとは <filename>/var/cache.old</filename> に移動しておいたデータを、新しく作"
 "成した場所に移動しなおします:"
 
-#: xml/release-notes.xml:395(command)
+#: xml/release-notes.xml:388(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr "mv /var/cache.old/* /mnt/var/cache"
 
-#: xml/release-notes.xml:396(para)
+#: xml/release-notes.xml:389(para)
 msgid "If that is not the case, instead do:"
 msgstr "もしくは、下記のように実行してもかまいません:"
 
-#: xml/release-notes.xml:399(command)
+#: xml/release-notes.xml:392(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr "mv /var/cache/* /mnt/var/cache/"
 
-#: xml/release-notes.xml:402(para)
+#: xml/release-notes.xml:395(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "古いディレクトリ <filename>/mnt/var/cache.old</filename> を削除します:"
 
-#: xml/release-notes.xml:405(command)
+#: xml/release-notes.xml:398(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr "rm -rf /mnt/var/cache.old"
 
-#: xml/release-notes.xml:408(para)
+#: xml/release-notes.xml:401(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr ""
 "一時的なマウントポイントに存在しているサブボリュームのマウントを解除します:"
 
-#: xml/release-notes.xml:411(command) xml/release-notes.xml:561(screen)
+#: xml/release-notes.xml:404(command) xml/release-notes.xml:554(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:414(para)
+#: xml/release-notes.xml:407(para)
 msgid ""
 "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/"
 "cache</filename> subvolume. Use an existing subvolume as a template to copy "
@@ -648,24 +634,24 @@ msgstr ""
 "ては変更せず、サブボリュームの名前とマウントポイント (<filename>/var/cache</"
 "filename>) のみを変更してください。"
 
-#: xml/release-notes.xml:423(para)
+#: xml/release-notes.xml:416(para)
 msgid ""
 "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
 msgstr ""
 "最後に <filename>/etc/fstab</filename> 内に設定した新しいサブボリュームをマウ"
 "ントします:"
 
-#: xml/release-notes.xml:426(command)
+#: xml/release-notes.xml:419(command)
 msgid "mount /var/cache"
 msgstr "mount /var/cache"
 
-#: xml/release-notes.xml:432(title)
+#: xml/release-notes.xml:425(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr ""
 "GNOME で利用している場合、 Synaptics X ドライバがタッチパッドの操作性を悪化さ"
 "せてしまう"
 
-#: xml/release-notes.xml:433(para)
+#: xml/release-notes.xml:426(para)
 msgid ""
 "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</"
 "package>) was installed by default but had a lower priority than the "
@@ -676,15 +662,15 @@ msgstr ""
 "(パッケージ <package>xf86-input-libinput</package>) より低い優先度に設定され"
 "てしまっています。"
 
-#: xml/release-notes.xml:439(para)
+#: xml/release-notes.xml:432(para)
 msgid "Starting with Leap 42.2:"
 msgstr "Leap 42.2 およびそれ以降:"
 
-#: xml/release-notes.xml:444(para)
+#: xml/release-notes.xml:437(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr "Synaptics X ドライバは既定ではインストールされなくなっています。"
 
-#: xml/release-notes.xml:449(para)
+#: xml/release-notes.xml:442(para)
 msgid ""
 "If the Synaptics X driver is installed, it will take precedence for any "
 "touchpad devices."
@@ -692,7 +678,7 @@ msgstr ""
 "Synaptics X ドライバがインストールされている場合は、任意の他のタッチパッドデ"
 "バイスより優先して動作します。"
 
-#: xml/release-notes.xml:455(para)
+#: xml/release-notes.xml:448(para)
 msgid ""
 "The Synaptics X driver is no longer supported by GNOME. This means when the "
 "driver is installed, Synaptics touchpads can only be configured to the "
@@ -702,7 +688,7 @@ msgstr ""
 "と、Synaptics タッチパッドを利用しても、基本的なマウス機能の範囲のみを設定す"
 "ることができます。"
 
-#: xml/release-notes.xml:462(para)
+#: xml/release-notes.xml:455(para)
 msgid ""
 "Unless you are using a Synaptics touchpad and have a large amount of custom "
 "configuration for the Synaptics driver, remove the package from your system:"
@@ -710,11 +696,11 @@ msgstr ""
 "Synaptics タッチパッドをご利用の場合で、 Synaptics ドライバに固有の設定を多数"
 "実施している場合を除き、システムからパッケージを削除してください:"
 
-#: xml/release-notes.xml:466(command)
+#: xml/release-notes.xml:459(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr "sudo zypper rm xf86-input-synaptics"
 
-#: xml/release-notes.xml:471(title)
+#: xml/release-notes.xml:464(title)
 msgid ""
 "AArch64: Page Size Has Been Changed From openSUSE Leap 42.1 to openSUSE Leap "
 "42.2"
@@ -722,7 +708,7 @@ msgstr ""
 "AArch64: openSUSE Leap 42.1 から openSUSE Leap 42.2 への移行によって、ページ"
 "サイズが変更される問題について"
 
-#: xml/release-notes.xml:472(para)
+#: xml/release-notes.xml:465(para)
 msgid ""
 "In openSUSE Leap 42.1, the default page size on AArch64 platforms was 64 kB. "
 "With openSUSE Leap 42.2, the page size has been changed to 4 kB. This "
@@ -733,7 +719,7 @@ msgstr ""
 "れています。これにより、従来のバージョンで利用していたスワップ領域と btrfs "
 "ファイルシステムが利用できなくなってしまいます。"
 
-#: xml/release-notes.xml:477(para)
+#: xml/release-notes.xml:470(para)
 msgid ""
 "If you are currently on openSUSE Leap 42.1 on AArch64, consider a fresh "
 "installation of openSUSE Leap 42.2 instead of upgrading."
@@ -741,11 +727,11 @@ msgstr ""
 "AArch64 で openSUSE Leap 42.1 をご利用の場合は、 openSUSE Leap 42.2 をアップ"
 "グレードではなく新規インストールでお使いいただくことをお勧めします。"
 
-#: xml/release-notes.xml:485(title)
+#: xml/release-notes.xml:478(title)
 msgid "Upgrading from openSUSE 13.2"
 msgstr "openSUSE 13.2 からのアップグレード"
 
-#: xml/release-notes.xml:486(para)
+#: xml/release-notes.xml:479(para)
 msgid ""
 "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure "
 "to also review the information provided in <xref linkend=\"sec.upgrade.421\"/"
@@ -755,11 +741,11 @@ msgstr ""
 "リリースノートをお読みください。それ以外にも、 <xref linkend=\"sec."
 "upgrade.421\"/> で提供されている情報もあわせてご覧になることをお勧めします。"
 
-#: xml/release-notes.xml:493(title)
+#: xml/release-notes.xml:486(title)
 msgid "Network Interface Names"
 msgstr "ネットワークインターフェイスの命名について"
 
-#: xml/release-notes.xml:494(para)
+#: xml/release-notes.xml:487(para)
 msgid ""
 "When upgrading a remote machine from openSUSE 13.2, make sure your network "
 "interfaces are named correctly."
@@ -768,7 +754,7 @@ msgstr ""
 "合は、ネットワークインターフェイスが想定通りに命名されているかどうかをご確認"
 "ください。"
 
-#: xml/release-notes.xml:498(para)
+#: xml/release-notes.xml:491(para)
 msgid ""
 "openSUSE 13.2 used so-called predictable network interface names (for "
 "example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses "
@@ -787,16 +773,16 @@ msgstr ""
 "ぐには、システムを再起動する前に、各ネットワークインターフェイスに対して下記"
 "のコマンドを実行します:"
 
-#: xml/release-notes.xml:507(replaceable)
+#: xml/release-notes.xml:500(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:507(screen)
+#: xml/release-notes.xml:500(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:509(para)
+#: xml/release-notes.xml:502(para)
 msgid ""
 "Replace <replaceable>enp5s0</replaceable> with the name of your network "
 "interface."
@@ -804,13 +790,13 @@ msgstr ""
 "なお、上記の <replaceable>enp5s0</replaceable> を、お使いの環境のネットワーク"
 "インターフェイス名に置き換えてください。"
 
-#: xml/release-notes.xml:517(title)
+#: xml/release-notes.xml:510(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr ""
 "Btrfs: システムを巻き戻し (ロールバック) した際のディスク領域の開放漏れについ"
 "て"
 
-#: xml/release-notes.xml:518(para)
+#: xml/release-notes.xml:511(para)
 msgid ""
 "By default, openSUSE 13.2 used a Btrfs partition layout that allowed for "
 "disk space to become permanently occupied with stale, inaccessible contents "
@@ -824,7 +810,7 @@ msgstr ""
 "42.1 で解決されていますが、この修正は新しくインストールしたシステムにのみ適用"
 "することができます。"
 
-#: xml/release-notes.xml:525(para)
+#: xml/release-notes.xml:518(para)
 msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
@@ -832,11 +818,11 @@ msgstr ""
 "openSUSE 13.2 からアップグレードする場合、ファイルシステムを新しいレイアウト"
 "に変換することはできませんが、失われたディスク領域を取り戻す方法があります。"
 
-#: xml/release-notes.xml:530(title)
+#: xml/release-notes.xml:523(title)
 msgid "Data Loss with Non-Standard Settings or No Rollbacks"
 msgstr "非標準の設定やロールバックを行なわない場合のデータ損失について"
 
-#: xml/release-notes.xml:531(para)
+#: xml/release-notes.xml:524(para)
 msgid ""
 "The following procedure will only work properly on installations set up "
 "using the default proposal created by the openSUSE 13.2 installer."
@@ -844,12 +830,12 @@ msgstr ""
 "下記の手順は、 openSUSE 13.2 のインストーラが作成する既定の提案に従い、システ"
 "ムをセットアップした場合にのみ正しく動作します。"
 
-#: xml/release-notes.xml:535(para)
+#: xml/release-notes.xml:528(para)
 msgid "Additionally, you must have previously made a system rollback."
 msgstr ""
 "上記に加えて、あらかじめシステムのロールバックを実施しなければなりません。"
 
-#: xml/release-notes.xml:538(para)
+#: xml/release-notes.xml:531(para)
 msgid ""
 "If you have set up your Btrfs file system with a non-standard configuration "
 "or have not previously made a system rollback, executing the following "
@@ -858,41 +844,41 @@ msgstr ""
 "btrfs を標準以外の設定で作成した場合や、これまでにシステムのロールバックを作"
 "成していない場合、下記の手順を実施するとデータの損失が発生します。"
 
-#: xml/release-notes.xml:546(para)
+#: xml/release-notes.xml:539(para)
 msgid "Mount the initial root filesystem:"
 msgstr "まずはルートファイルシステムをマウントします:"
 
-#: xml/release-notes.xml:549(replaceable)
+#: xml/release-notes.xml:542(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ルートファイルシステム&gt;"
 
-#: xml/release-notes.xml:549(screen)
+#: xml/release-notes.xml:542(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:552(para)
+#: xml/release-notes.xml:545(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "サブボリューム内に存在しない /mnt 以下のファイルを全て削除します:"
 
-#: xml/release-notes.xml:555(screen)
+#: xml/release-notes.xml:548(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:558(para)
+#: xml/release-notes.xml:551(para)
 msgid "Umount the filesystem again:"
 msgstr "再度ファイルシステムのマウントを解除します:"
 
-#: xml/release-notes.xml:567(title)
+#: xml/release-notes.xml:560(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "印刷システム: 改善点と互換性を失う変更について"
 
-#: xml/release-notes.xml:570(emphasis)
+#: xml/release-notes.xml:563(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS バージョン 1.7 へのアップグレードについて"
 
-#: xml/release-notes.xml:572(para)
+#: xml/release-notes.xml:565(para)
 msgid ""
 "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes "
 "that may require manual configuration adjustments."
@@ -900,7 +886,7 @@ msgstr ""
 "openSUSE 13.2 における CUPS 1.5 と比べると、 CUPS 1.7 では大幅な変更が加えら"
 "れたことにより、手作業による設定調整が必要となる場合があります。"
 
-#: xml/release-notes.xml:579(para)
+#: xml/release-notes.xml:572(para)
 msgid ""
 "PDF is now the standard print job format rather than PS. Therefore "
 "traditional PostScript printers now also need a filter driver for printing."
@@ -909,13 +895,13 @@ msgstr ""
 "の PostScript プリンタで印刷を行なう場合は、新たにフィルタを設定する必要が生"
 "じています。"
 
-#: xml/release-notes.xml:584(para)
+#: xml/release-notes.xml:577(para)
 msgid ""
 "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr ""
 "詳しくは <link href=\"http://ja.opensuse.org/印刷処理\"/> をお読みください。"
 
-#: xml/release-notes.xml:592(para)
+#: xml/release-notes.xml:585(para)
 msgid ""
 "The network printer discovery protocol has changed. The native method to "
 "discover network printers is now based on DNS Service discovery (DNS-SD, "
@@ -934,7 +920,7 @@ msgstr ""
 "ます) は、 <literal>cupsd</literal> と <literal>cups-browsed</literal> の両方"
 "を動作させる必要があります。"
 
-#: xml/release-notes.xml:605(para)
+#: xml/release-notes.xml:598(para)
 msgid ""
 "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers "
 "like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 "
@@ -947,7 +933,7 @@ msgstr ""
 "てしまいます (詳しくは <link href=\"http://www.cups.org/str.php?L4231\"/> を"
 "お読みください) 。"
 
-#: xml/release-notes.xml:611(para)
+#: xml/release-notes.xml:604(para)
 msgid ""
 "To be able to print to old servers, the IPP protocol version must be "
 "specified explictly by appending <literal>/version=1.1</literal> to either:"
@@ -956,7 +942,7 @@ msgstr ""
 "指定する必要があります。下記のいずれかの箇所で、末尾に <literal>/"
 "version=1.1</literal> を追加してください:"
 
-#: xml/release-notes.xml:618(para)
+#: xml/release-notes.xml:611(para)
 msgid ""
 "The <literal>ServerName</literal> settings in <literal>client.conf</literal> "
 "(for example, <literal>ServerName older.server.example.com/version=1.1</"
@@ -965,11 +951,11 @@ msgstr ""
 "<literal>client.conf</literal> 内の <literal>ServerName</literal> 設定 (例: "
 "<literal>ServerName older.server.example.com/version=1.1</literal>) 。"
 
-#: xml/release-notes.xml:626(para)
+#: xml/release-notes.xml:619(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "<literal>CUPS_SERVER</literal> 環境変数の値。"
 
-#: xml/release-notes.xml:632(para)
+#: xml/release-notes.xml:625(para)
 msgid ""
 "The server name value of the <literal>-h</literal> option of the command "
 "line tools, for example:"
@@ -977,12 +963,12 @@ msgstr ""
 "コマンドラインツールの <literal>-h</literal> オプションで指定するサーバ名の"
 "値。たとえば下記のように指定します:"
 
-#: xml/release-notes.xml:636(screen)
+#: xml/release-notes.xml:629(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 
-#: xml/release-notes.xml:642(para)
+#: xml/release-notes.xml:635(para)
 msgid ""
 "Some printing filters and back-ends were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package."
@@ -990,7 +976,7 @@ msgstr ""
 "いくつかの印刷フィルタやバックエンドは、 <literal>cups</literal> パッケージか"
 "ら <literal>cups-filters</literal> パッケージに移動されています。"
 
-#: xml/release-notes.xml:650(para)
+#: xml/release-notes.xml:643(para)
 msgid ""
 "Some configuration directives were split from <literal>cupsd.conf</literal> "
 "into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups."
@@ -1002,7 +988,7 @@ msgstr ""
 "\"http://www.cups.org/str.php?L4223\"/>, CVE-2012-5519, <link href=\"https://"
 "bugzilla.opensuse.org/show_bug.cgi?id=789566\"/> をお読みください) 。"
 
-#: xml/release-notes.xml:659(para)
+#: xml/release-notes.xml:652(para)
 msgid ""
 "CUPS banners and the CUPS test page were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package (see <link "
@@ -1015,11 +1001,11 @@ msgstr ""
 "\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/> をお読みくださ"
 "い) 。"
 
-#: xml/release-notes.xml:674(title)
+#: xml/release-notes.xml:667(title)
 msgid "General"
 msgstr "全般"
 
-#: xml/release-notes.xml:676(para)
+#: xml/release-notes.xml:669(para)
 msgid ""
 "This section lists general issues with openSUSE Leap 42.2 that do not match "
 "any other category."
@@ -1027,11 +1013,11 @@ msgstr ""
 "本章では、他の分類に属さない openSUSE Leap 42.2 関連の一般的な問題を説明して"
 "います。"
 
-#: xml/release-notes.xml:682(title)
+#: xml/release-notes.xml:675(title)
 msgid "KDE Software for Personal Information Management (KDE PIM)"
 msgstr "個人情報管理 (PIM) 用の KDE ソフトウエアについて"
 
-#: xml/release-notes.xml:683(para)
+#: xml/release-notes.xml:676(para)
 msgid ""
 "openSUSE Leap 42.2 ships two versions of the KDE PIM (Kontact, KMail, etc.) "
 "suite:"
@@ -1039,15 +1025,15 @@ msgstr ""
 "openSUSE Leap 42.2 では、 2 種類の PIM (Kontact, KMail など) スイートを提供し"
 "ています:"
 
-#: xml/release-notes.xml:689(para)
+#: xml/release-notes.xml:682(para)
 msgid "The legacy 4.x version"
 msgstr "以前より提供されている 4.x バージョン"
 
-#: xml/release-notes.xml:694(para)
+#: xml/release-notes.xml:687(para)
 msgid "The version based on KDE Frameworks 5"
 msgstr "KDE フレームワーク 5 をベースにしたバージョン"
 
-#: xml/release-notes.xml:699(para)
+#: xml/release-notes.xml:692(para)
 msgid ""
 "KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid "
 "disrupting user workflows."
@@ -1055,7 +1041,7 @@ msgstr ""
 "KDE PIM 4.x は提供元である KDE プロジェクトでは既にサポートが提供されていませ"
 "んが、 openSUSE ではユーザの混乱を防ぐために従来どおり提供されています。"
 
-#: xml/release-notes.xml:703(para)
+#: xml/release-notes.xml:696(para)
 msgid ""
 "The two versions of KDE PIM are not co-installable. Some software, such as "
 "KNode (package <package>knode</package>) require the legacy 4.x version and "
@@ -1068,7 +1054,7 @@ msgstr ""
 "め、 KDE PIM 5.x (たとえば <package>kmail5</package> パッケージなど) をインス"
 "トールすると、これらもアンインストールされてしまいます。"
 
-#: xml/release-notes.xml:709(para)
+#: xml/release-notes.xml:702(para)
 msgid ""
 "KDE PIM 4.x will be removed in the next version of openSUSE Leap. Therefore, "
 "you are encouraged to switch to the newer 5.x version."
@@ -1076,7 +1062,7 @@ msgstr ""
 "KDE PIM 4.x は次期バージョンの openSUSE Leap で削除される予定です。そのため、"
 "新しい 5.x バージョンに移行することをお勧めします。"
 
-#: xml/release-notes.xml:713(para)
+#: xml/release-notes.xml:706(para)
 msgid ""
 "However, not all settings are migrated from the older version at this time. "
 "For more information, see the bug report at <link href=\"https://bugzilla."
@@ -1086,36 +1072,37 @@ msgstr ""
 "できません。詳しくは <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1001872\"/> に書かれているバグ報告をお読みください。"
 
-#: xml/release-notes.xml:722(title)
+#: xml/release-notes.xml:715(title)
 msgid "Dolphin Does Not Set Extended Permission Bits"
 msgstr "Dolphin が拡張パーミッションビットを設定しない問題について"
 
-#: xml/release-notes.xml:723(para)
+#: xml/release-notes.xml:716(para)
 msgid ""
 "The version of the KDE file manager Dolphin that is shipped with openSUSE "
 "Leap 42.2 cannot set <quote>Extended Permission</quote> bits (GID, "
 "<quote>Sticky</quote>). Additionally, closing the Dolphin permissions dialog "
 "by clicking <guimenu>OK</guimenu> clears existing extended permissions bits."
 msgstr ""
-"openSUSE Leap 42.2 に同梱されているバージョンの KDE ファイルマネージャ Dolphin では、 "
-"<quote>拡張パーミッション</quote> (GID, <quote>スティッキー</quote> ビット) を設定することができません。また、 "
-"Dolphin のパーミッションダイアログで<guimenu>OK</guimenu> "
-"を押して閉じると、既存の拡張パーミッションビットを消去してしまいます。"
+"openSUSE Leap 42.2 に同梱されているバージョンの KDE ファイルマネージャ "
+"Dolphin では、 <quote>拡張パーミッション</quote> (GID, <quote>スティッキー</"
+"quote> ビット) を設定することができません。また、 Dolphin のパーミッションダ"
+"イアログで<guimenu>OK</guimenu> を押して閉じると、既存の拡張パーミッション"
+"ビットを消去してしまいます。"
 
-#: xml/release-notes.xml:731(para)
+#: xml/release-notes.xml:724(para)
 msgid ""
 "To avoid such issues, edit permissions with Konqueror (GUI) or "
 "<command>chmod</command> (command line) only."
 msgstr ""
-"このような問題を回避するには、 Konqueror (GUI) もしくは <command>chmod</command> (コマンドライン) "
-"のみをお使いのうえ、必要な作業を行なってください。"
+"このような問題を回避するには、 Konqueror (GUI) もしくは <command>chmod</"
+"command> (コマンドライン) のみをお使いのうえ、必要な作業を行なってください。"
 
-#: xml/release-notes.xml:738(title)
+#: xml/release-notes.xml:731(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr ""
 "GDM 以外を利用した場合に GNOME Shell でスクリーンロックができない問題について"
 
-#: xml/release-notes.xml:739(para)
+#: xml/release-notes.xml:732(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1126,7 +1113,7 @@ msgstr ""
 "なくなってしまいます。また、ログアウトせずにユーザを切り替える機能も、動作し"
 "なくなってしまいます。"
 
-#: xml/release-notes.xml:744(para)
+#: xml/release-notes.xml:737(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -1134,13 +1121,13 @@ msgstr ""
 "GNOME Shell で画面をロックできるようにするには、下記のようにしてログインマ"
 "ネージャを GDM に切り替えます:"
 
-#: xml/release-notes.xml:750(para)
+#: xml/release-notes.xml:743(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr ""
 "まずは <package>gdm</package> パッケージがインストールされていることを確認し"
 "ます。"
 
-#: xml/release-notes.xml:755(para)
+#: xml/release-notes.xml:748(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -1148,7 +1135,7 @@ msgstr ""
 "次に YaST を開いて、 <menuchoice><guimenu>/etc/sysconfig エディタ</guimenu></"
 "menuchoice> を開きます。"
 
-#: xml/release-notes.xml:761(para)
+#: xml/release-notes.xml:754(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -1156,7 +1143,7 @@ msgstr ""
 "<menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice> を選択します。"
 
-#: xml/release-notes.xml:768(para)
+#: xml/release-notes.xml:761(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -1164,20 +1151,20 @@ msgstr ""
 "表示されたテキストボックスに <literal>gdm</literal> と入力します。保存を行な"
 "うため、 <guimenu>OK</guimenu> を押します。"
 
-#: xml/release-notes.xml:774(para)
+#: xml/release-notes.xml:767(para)
 msgid "Reboot."
 msgstr "最後にシステムを再起動してください。"
 
 #. bnc#809347
-#: xml/release-notes.xml:809(title)
+#: xml/release-notes.xml:802(title)
 msgid "More Information and Feedback"
 msgstr "さらに詳しい情報とフィードバック"
 
-#: xml/release-notes.xml:813(para)
+#: xml/release-notes.xml:806(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "まずはメディア内の <filename>README</filename> 文書をお読みください。"
 
-#: xml/release-notes.xml:818(para)
+#: xml/release-notes.xml:811(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1185,22 +1172,22 @@ msgstr ""
 "また、特定のパッケージに対する詳細な変更点を RPM パッケージから表示するには、"
 "下記のコマンドを実行します:"
 
-#: xml/release-notes.xml:822(replaceable)
+#: xml/release-notes.xml:815(replaceable)
 msgid "FILENAME"
 msgstr "ファイル名"
 
-#: xml/release-notes.xml:822(screen)
+#: xml/release-notes.xml:815(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:823(para)
+#: xml/release-notes.xml:816(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "<replaceable>ファイル名</replaceable> の箇所を RPM の名前に置き換えてお使いく"
 "ださい。"
 
-#: xml/release-notes.xml:828(para)
+#: xml/release-notes.xml:821(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1209,7 +1196,7 @@ msgstr ""
 "ルがあります。ここには、更新されたパッケージに対する全ての変更点が時系列順に"
 "並んでいます。"
 
-#: xml/release-notes.xml:834(para)
+#: xml/release-notes.xml:827(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1217,7 +1204,7 @@ msgstr ""
 "そのほか、 メディアの <filename>docu</filename> ディレクトリには、さらに詳し"
 "い情報があります。"
 
-#: xml/release-notes.xml:840(para)
+#: xml/release-notes.xml:833(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -1225,7 +1212,7 @@ msgstr ""
 "それ以外にも、 <link href=\"https://doc.opensuse.org/\"/> には追加／更新され"
 "たドキュメンテーションがあります。"
 
-#: xml/release-notes.xml:845(para)
+#: xml/release-notes.xml:838(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -1233,15 +1220,15 @@ msgstr ""
 "openSUSE が提供する最新の製品ニュースを読むには、 <link href=\"https://www."
 "opensuse.org\"/> をご覧ください。"
 
-#: xml/release-notes.xml:852(para)
+#: xml/release-notes.xml:845(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:856(para)
+#: xml/release-notes.xml:849(para)
 msgid "Thanks for using openSUSE."
 msgstr "openSUSE をお使いいただき、ありがとうございます。"
 
-#: xml/release-notes.xml:859(para)
+#: xml/release-notes.xml:852(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE チームより。"
 
@@ -1255,6 +1242,15 @@ msgstr ""
 "Takuo KITAME <kitame@debian.org>\n"
 "日本GNOMEユーザー会 http://www.gnome.gr.jp\n"
 "Yasuhiko Kamata <belphegor@belbel.or.jp>"
+
+#~ msgid ""
+#~ "<package>seamonkey</package>: Source code no longer compiles. If you were "
+#~ "a Seamonkey user previously, switch to Mozilla Firefox and Mozilla "
+#~ "Thunderbird instead."
+#~ msgstr ""
+#~ "<package>seamonkey</package>: 公開されているソースコードではコンパイルでき"
+#~ "なくなってしまいました。以前より Seamonkey をお使いの方は、 Mozilla "
+#~ "Firefox および Mozilla Thunderbird に移行することをお勧めします。"
 
 #~ msgid ""
 #~ "With openSUSE Leap 42.2, the Nouveau DRI/3D driver is considered "
