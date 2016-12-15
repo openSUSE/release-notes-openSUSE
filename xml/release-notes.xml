@@ -472,6 +472,23 @@
     installation of &opensuseleap; &version; instead of upgrading.
    </para>
   </section>
+
+  <!-- boo#1006175 -->
+  <section xml:id="sec.upgrade.cciss">
+   <title>Systems with CCISS controllers may fail to boot after
+   update to  &opensuseleap; &version;</title>
+   <para>
+    The driver for Compaq/HP Smart Array (CCISS) controllers
+    (<filename>cciss.ko</filename>) has ceased to support 
+    certain controllers by default. This may lead to
+    the root disk not being detected by the &opensuseleap; &version; kernel.
+    Users should add the kernel parameter
+    <literal>cciss.cciss_allow_hpsa=0</literal> on affected
+    systems. This will cause the CCISS driver to revert to the previous
+    behavior and detect the controllers again.
+   </para>
+  </section>
+
  </section>
 
  <section xml:id="sec.upgrade.132">
