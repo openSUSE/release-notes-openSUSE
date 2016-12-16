@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2016-12-12 11:26+0100\n"
+"POT-Creation-Date: 2016-12-16 14:55+0100\n"
 "PO-Revision-Date: 2016-11-16 19:53+0000\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.opensuse.org/projects/release-notes-"
@@ -36,9 +36,14 @@ msgid "42.2"
 msgstr "42.2"
 
 #: xml/release-notes.xml:22(para)
+#, fuzzy
+#| msgid ""
+#| "openSUSE Leap is a free and Linux-based operating system for your PC, "
+#| "Laptop or Server. You can surf the web, manage your e-mails and photos, "
+#| "do office work, play videos or music and have a lot of fun!"
 msgid ""
 "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop "
-"or Server. You can surf the web, manage your e-mails and photos, do office "
+"or Server. You can surf the Web, manage your e-mails and photos, do office "
 "work, play videos or music and have a lot of fun!"
 msgstr ""
 "„openSUSE Leap“ yra atviro kodo „Linux“ operacinė sistema ir skirta "
@@ -534,8 +539,12 @@ msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 
 #: xml/release-notes.xml:361(para)
+#, fuzzy
+#| msgid ""
+#| "If you don't have a <filename>@</filename> subvolume, mount subvolume ID "
+#| "5 instead:"
 msgid ""
-"If you don't have a <filename>@</filename> subvolume, mount subvolume ID 5 "
+"If you do not have a <filename>@</filename> subvolume, mount subvolume ID 5 "
 "instead:"
 msgstr ""
 "Jei neturi <filename>@</filename> potomio, tuomet prijunkite potomį su ID 5:"
@@ -599,7 +608,7 @@ msgstr "rm -rf /mnt/var/cache.old"
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Atjunkite potomį:"
 
-#: xml/release-notes.xml:404(command) xml/release-notes.xml:554(screen)
+#: xml/release-notes.xml:404(command) xml/release-notes.xml:581(screen)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
@@ -626,13 +635,24 @@ msgstr "Prijunkite naują potomį pagal <filename>/etc/fstab</filename>:"
 msgid "mount /var/cache"
 msgstr "mount /var/cache"
 
-#: xml/release-notes.xml:425(title)
+#: xml/release-notes.xml:426(title)
+msgid "GNOME Keyring Does Not Integrate with GPG Anymore"
+msgstr ""
+
+#: xml/release-notes.xml:427(para)
+msgid ""
+"The integrated GPG agent of GNOME Keyring has been removed. Therefore, GNOME "
+"Keyring cannot be used to manage GPG keys anymore. You can still manage GPG "
+"keys on the command line using the <command>gpg</command> tool."
+msgstr ""
+
+#: xml/release-notes.xml:435(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr ""
 "Synaptics X tvarkyklė gali neveikti sklandžiai naudojant jutiklinį kilimėlį "
 "GNOME aplinkoje"
 
-#: xml/release-notes.xml:426(para)
+#: xml/release-notes.xml:436(para)
 msgid ""
 "In Leap 42.1, the Synaptics X driver (package <package>xf86-input-synaptics</"
 "package>) was installed by default but had a lower priority than the "
@@ -642,22 +662,22 @@ msgstr ""
 "(<package>xf86-input-synaptics</package> paketas), tačiau mažesniu "
 "prioritetu libinput tvarkyklė (<package>xf86-input-libinput</package>)."
 
-#: xml/release-notes.xml:432(para)
+#: xml/release-notes.xml:442(para)
 msgid "Starting with Leap 42.2:"
 msgstr "Nuo Leap 42.2:"
 
-#: xml/release-notes.xml:437(para)
+#: xml/release-notes.xml:447(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr "Synaptics tvarkyklės nebediegiamos numatytuoju atveju."
 
-#: xml/release-notes.xml:442(para)
+#: xml/release-notes.xml:452(para)
 msgid ""
 "If the Synaptics X driver is installed, it will take precedence for any "
 "touchpad devices."
 msgstr ""
 "Kai įdiegta Synaptics X tvarkyklė, ji perima jutiklinių kilimėlių valdymą."
 
-#: xml/release-notes.xml:448(para)
+#: xml/release-notes.xml:458(para)
 msgid ""
 "The Synaptics X driver is no longer supported by GNOME. This means when the "
 "driver is installed, Synaptics touchpads can only be configured to the "
@@ -667,7 +687,7 @@ msgstr ""
 "įdiegta, Synaptics jutiklinius kilimėlius galite konfigūruoti tik kaip "
 "paprastą pelę."
 
-#: xml/release-notes.xml:455(para)
+#: xml/release-notes.xml:465(para)
 msgid ""
 "Unless you are using a Synaptics touchpad and have a large amount of custom "
 "configuration for the Synaptics driver, remove the package from your system:"
@@ -675,11 +695,11 @@ msgstr ""
 "Jei nenaudojate Synaptics jutiklinio kilimėlio ir nenaudojate nuosavos "
 "sudėtingos Synaptics tvarkyklės konfigūracijos, tuomet pašalinkite paketą:"
 
-#: xml/release-notes.xml:459(command)
+#: xml/release-notes.xml:469(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr "sudo zypper rm xf86-input-synaptics"
 
-#: xml/release-notes.xml:464(title)
+#: xml/release-notes.xml:474(title)
 msgid ""
 "AArch64: Page Size Has Been Changed From openSUSE Leap 42.1 to openSUSE Leap "
 "42.2"
@@ -687,7 +707,7 @@ msgstr ""
 "AArch64: lyginant su openSUSE Leap 42.1, openSUSE Leap 42.2 versijoje "
 "pasikeitė puslapio dydis"
 
-#: xml/release-notes.xml:465(para)
+#: xml/release-notes.xml:475(para)
 msgid ""
 "In openSUSE Leap 42.1, the default page size on AArch64 platforms was 64 kB. "
 "With openSUSE Leap 42.2, the page size has been changed to 4 kB. This "
@@ -697,7 +717,7 @@ msgstr ""
 "Nuo openSUSE Leap 42.2 AArch64 sistemų puslapio dydis yra 4 kB. Tad senos "
 "mainų (Swap) ir Btrfs rinkmenų sistemos nebetinkamos naudoti."
 
-#: xml/release-notes.xml:470(para)
+#: xml/release-notes.xml:480(para)
 msgid ""
 "If you are currently on openSUSE Leap 42.1 on AArch64, consider a fresh "
 "installation of openSUSE Leap 42.2 instead of upgrading."
@@ -705,11 +725,30 @@ msgstr ""
 "jei naudojate AArch64 architektūros openSUSE Leap 42.1, tuomet ne "
 "atnaujinkite sistemą, o  openSUSE Leap 42.2 diekite naujai."
 
-#: xml/release-notes.xml:478(title)
+#: xml/release-notes.xml:488(title)
+msgid "Systems with CCISS Controllers Can Fail to Boot After Upgrade"
+msgstr ""
+
+#: xml/release-notes.xml:489(para)
+msgid ""
+"The driver for Compaq/HP Smart Array (CCISS) controllers (<filename>cciss."
+"ko</filename>) does not support certain controllers anymore by default. This "
+"can lead to the root disk not being detected by the openSUSE Leap 42.2 "
+"kernel."
+msgstr ""
+
+#: xml/release-notes.xml:495(para)
+msgid ""
+"On affected systems, the CCISS driver can be configured to revert to the "
+"previous behavior and detect the controllers again. To do so, add the kernel "
+"parameter <literal>cciss.cciss_allow_hpsa=0</literal>."
+msgstr ""
+
+#: xml/release-notes.xml:505(title)
 msgid "Upgrading from openSUSE 13.2"
 msgstr "Naujovinimas iš openSUSE 13.2"
 
-#: xml/release-notes.xml:479(para)
+#: xml/release-notes.xml:506(para)
 msgid ""
 "The following notes apply to upgrades from openSUSE 13.2 or older. Make sure "
 "to also review the information provided in <xref linkend=\"sec.upgrade.421\"/"
@@ -719,11 +758,11 @@ msgstr ""
 "sistemą. Be kita ko peržiūrėkite informaciją, pateiktą ties <xref linkend="
 "\"sec.upgrade.421\"/>."
 
-#: xml/release-notes.xml:486(title)
+#: xml/release-notes.xml:513(title)
 msgid "Network Interface Names"
 msgstr "Tinklo sąsajų vardai"
 
-#: xml/release-notes.xml:487(para)
+#: xml/release-notes.xml:514(para)
 msgid ""
 "When upgrading a remote machine from openSUSE 13.2, make sure your network "
 "interfaces are named correctly."
@@ -731,7 +770,7 @@ msgstr ""
 "Atnaujindami nuotolinę openSUSE 13.2 sistemą, įsitikinkite, ar tinklo sąsajų "
 "vardai yra teisingi."
 
-#: xml/release-notes.xml:491(para)
+#: xml/release-notes.xml:518(para)
 msgid ""
 "openSUSE 13.2 used so-called predictable network interface names (for "
 "example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses "
@@ -748,27 +787,27 @@ msgstr ""
 "nebepasiekiama. Norėdami išvengti sąsajų pervadinimo, prieš paleisdami "
 "sistemą iš naujo, kiekvienai tinklo sąsajai įvykdykite įvykdykite komandą:"
 
-#: xml/release-notes.xml:500(replaceable)
+#: xml/release-notes.xml:527(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
-#: xml/release-notes.xml:500(screen)
+#: xml/release-notes.xml:527(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
-#: xml/release-notes.xml:502(para)
+#: xml/release-notes.xml:529(para)
 msgid ""
 "Replace <replaceable>enp5s0</replaceable> with the name of your network "
 "interface."
 msgstr ""
 "Vietoj <replaceable>enp5s0</replaceable> rašykite savo tinklo sąsajos vardą."
 
-#: xml/release-notes.xml:510(title)
+#: xml/release-notes.xml:537(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: prarasta disko vieta po momentinės kopijos grąžinimo"
 
-#: xml/release-notes.xml:511(para)
+#: xml/release-notes.xml:538(para)
 #, fuzzy
 #| msgid ""
 #| "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space "
@@ -788,7 +827,7 @@ msgstr ""
 "ankstesnė momentinė kopija. Ši išdėsdymo klaida ištaisyta openSUSE Leap 42.1 "
 "sistemoje, tačiau pataisa veiks tik naujai įdiegtose sistemose."
 
-#: xml/release-notes.xml:518(para)
+#: xml/release-notes.xml:545(para)
 msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
@@ -797,62 +836,66 @@ msgstr ""
 "sistemos į naująjį išdėstymą, tačiau galėsite susigrąžinti prarastą disko "
 "vietą."
 
-#: xml/release-notes.xml:523(title)
+#: xml/release-notes.xml:550(title)
 msgid "Data Loss with Non-Standard Settings or No Rollbacks"
 msgstr ""
 
-#: xml/release-notes.xml:524(para)
+#: xml/release-notes.xml:551(para)
 msgid ""
 "The following procedure will only work properly on installations set up "
 "using the default proposal created by the openSUSE 13.2 installer."
 msgstr ""
 
-#: xml/release-notes.xml:528(para)
+#: xml/release-notes.xml:555(para)
 msgid "Additionally, you must have previously made a system rollback."
 msgstr ""
 
-#: xml/release-notes.xml:531(para)
+#: xml/release-notes.xml:558(para)
 msgid ""
 "If you have set up your Btrfs file system with a non-standard configuration "
 "or have not previously made a system rollback, executing the following "
 "procedure can incur data loss."
 msgstr ""
 
-#: xml/release-notes.xml:539(para)
-msgid "Mount the initial root filesystem:"
+#: xml/release-notes.xml:566(para)
+#, fuzzy
+#| msgid "Mount the initial root filesystem:"
+msgid "Mount the initial root file system:"
 msgstr "Programiškai prijunkite pradinę rinkmenų sistemą:"
 
-#: xml/release-notes.xml:542(replaceable)
+#: xml/release-notes.xml:569(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ŠAKNINĖ_RINKMENŲ_SISTEMA&gt;"
 
-#: xml/release-notes.xml:542(screen)
+#: xml/release-notes.xml:569(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:545(para)
+#: xml/release-notes.xml:572(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Iš /mnt pašalinkite potomiui nepriklausančias rinkmenas:"
 
-#: xml/release-notes.xml:548(screen)
+#: xml/release-notes.xml:575(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
-#: xml/release-notes.xml:551(para)
-msgid "Umount the filesystem again:"
+#: xml/release-notes.xml:578(para)
+#, fuzzy
+#| msgid "Umount the filesystem again:"
+msgid "Umount the file system again:"
 msgstr "Vėl programiškai atjunkite rinkmenų sistemą:"
 
-#: xml/release-notes.xml:560(title)
+#: xml/release-notes.xml:587(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Spausdinimo sistema: patobulinimai ir nesuderinami pakeitimai"
 
-#: xml/release-notes.xml:563(emphasis)
+#: xml/release-notes.xml:590(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS versija naujovinta iki 1.7"
 
-#: xml/release-notes.xml:565(para)
+#: xml/release-notes.xml:592(para)
 msgid ""
 "Compared to CUPS 1.5 in openSUSE 13.2 CUPS 1.7 introduced some major changes "
 "that may require manual configuration adjustments."
@@ -861,7 +904,7 @@ msgstr ""
 "CUPS 1.5 versijos, tad gali tekti konfigūraciją šiek tiek pakeisti rankiniu "
 "būdu."
 
-#: xml/release-notes.xml:572(para)
+#: xml/release-notes.xml:599(para)
 msgid ""
 "PDF is now the standard print job format rather than PS. Therefore "
 "traditional PostScript printers now also need a filter driver for printing."
@@ -869,14 +912,14 @@ msgstr ""
 "Spausdinimo užduočių formatu tapo PDF, o anksčiau buvo PS. Tad tradiciniams "
 "postskriptiniams spausdintuvams nuo šiol irgi reikės filtro tvarkyklių."
 
-#: xml/release-notes.xml:577(para)
+#: xml/release-notes.xml:604(para)
 msgid ""
 "See <link href=\"https://en.opensuse.org/Concepts_printing\"/> for details."
 msgstr ""
 "Daugiau informacijos rasite <link href=\"https://en.opensuse.org/"
 "Concepts_printing\"/>."
 
-#: xml/release-notes.xml:585(para)
+#: xml/release-notes.xml:612(para)
 msgid ""
 "The network printer discovery protocol has changed. The native method to "
 "discover network printers is now based on DNS Service discovery (DNS-SD, "
@@ -894,7 +937,7 @@ msgstr ""
 "ir KDE) aptiktų spausdintuvus, reikia, kad vienu metu veiktų ir "
 "<literal>cupsd</literal>, ir <literal>cups-browsed</literal>."
 
-#: xml/release-notes.xml:598(para)
+#: xml/release-notes.xml:625(para)
 msgid ""
 "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers "
 "like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 "
@@ -907,16 +950,21 @@ msgstr ""
 "Request</literal>) klaidą (žr. <link href=\"http://www.cups.org/str.php?"
 "L4231\"/>)."
 
-#: xml/release-notes.xml:604(para)
+#: xml/release-notes.xml:631(para)
+#, fuzzy
+#| msgid ""
+#| "To be able to print to old servers, the IPP protocol version must be "
+#| "specified explictly by appending <literal>/version=1.1</literal> to "
+#| "either:"
 msgid ""
 "To be able to print to old servers, the IPP protocol version must be "
-"specified explictly by appending <literal>/version=1.1</literal> to either:"
+"specified explicitly by appending <literal>/version=1.1</literal> to either:"
 msgstr ""
 "Tokiu atveju turėtumėte nurodyti, kad į senus serverius būtų kreipiamasi "
 "naudojant būtent senesnį IPP protokolą pridedant <literal>/version=1.1</"
 "literal>:"
 
-#: xml/release-notes.xml:611(para)
+#: xml/release-notes.xml:638(para)
 msgid ""
 "The <literal>ServerName</literal> settings in <literal>client.conf</literal> "
 "(for example, <literal>ServerName older.server.example.com/version=1.1</"
@@ -926,11 +974,11 @@ msgstr ""
 "<literal>ServerName</literal> (pvz., <literal>ServerName senesnis.serveris."
 "pavyzdys.lt/version=1.1</literal>);"
 
-#: xml/release-notes.xml:619(para)
+#: xml/release-notes.xml:646(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "arba <literal>CUPS_SERVER</literal> aplinkos kintamojo reikšmėje."
 
-#: xml/release-notes.xml:625(para)
+#: xml/release-notes.xml:652(para)
 msgid ""
 "The server name value of the <literal>-h</literal> option of the command "
 "line tools, for example:"
@@ -938,12 +986,12 @@ msgstr ""
 "arba prie serverio vardo reikšmės naudojant komandinės eilutės <literal>-h</"
 "literal> parinktį, pavyzdžiui,"
 
-#: xml/release-notes.xml:629(screen)
+#: xml/release-notes.xml:656(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h senesnis.serveris.pavyzdys.lt/version=1.1 -p"
 
-#: xml/release-notes.xml:635(para)
+#: xml/release-notes.xml:662(para)
 msgid ""
 "Some printing filters and back-ends were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package."
@@ -951,7 +999,7 @@ msgstr ""
 "Kai kurios spausdintuvų tvarkyklės ir sąsajos iš <literal>cups</literal> "
 "paketo perkeltos į <literal>cups-filters</literal> paketą."
 
-#: xml/release-notes.xml:643(para)
+#: xml/release-notes.xml:670(para)
 msgid ""
 "Some configuration directives were split from <literal>cupsd.conf</literal> "
 "into <literal>cups-files.conf</literal> (see <link href=\"http://www.cups."
@@ -963,7 +1011,7 @@ msgstr ""
 "cups.org/str.php?L4223\"/>, CVE-2012-5519 ir <link href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=789566\"/>)."
 
-#: xml/release-notes.xml:652(para)
+#: xml/release-notes.xml:679(para)
 msgid ""
 "CUPS banners and the CUPS test page were moved from the <literal>cups</"
 "literal> package to the <literal>cups-filters</literal> package (see <link "
@@ -975,21 +1023,21 @@ msgstr ""
 "cups.org/str.php?L4120\"/> ir <link href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=735404\"/>)."
 
-#: xml/release-notes.xml:667(title)
+#: xml/release-notes.xml:694(title)
 msgid "General"
 msgstr "Bendrybės"
 
-#: xml/release-notes.xml:669(para)
+#: xml/release-notes.xml:696(para)
 msgid ""
 "This section lists general issues with openSUSE Leap 42.2 that do not match "
 "any other category."
 msgstr "Šioje dalyje pateikiami kiti openSUSE Leap 42.2 nesklandumai."
 
-#: xml/release-notes.xml:675(title)
+#: xml/release-notes.xml:702(title)
 msgid "KDE Software for Personal Information Management (KDE PIM)"
 msgstr "KDE asmeninės informacijos tvarkymo programinė įranga (KDE PIM)"
 
-#: xml/release-notes.xml:676(para)
+#: xml/release-notes.xml:703(para)
 msgid ""
 "openSUSE Leap 42.2 ships two versions of the KDE PIM (Kontact, KMail, etc.) "
 "suite:"
@@ -997,15 +1045,15 @@ msgstr ""
 "openSUSE Leap 42.2 pateikia dvejopas KDE PIM (Kontact, KMail ir kt.) "
 "versijas:"
 
-#: xml/release-notes.xml:682(para)
+#: xml/release-notes.xml:709(para)
 msgid "The legacy 4.x version"
 msgstr "senąsias 4.x versijas"
 
-#: xml/release-notes.xml:687(para)
+#: xml/release-notes.xml:714(para)
 msgid "The version based on KDE Frameworks 5"
 msgstr "versijas, sukurtas KDE Frameworks 5 pagrindu"
 
-#: xml/release-notes.xml:692(para)
+#: xml/release-notes.xml:719(para)
 msgid ""
 "KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid "
 "disrupting user workflows."
@@ -1013,7 +1061,7 @@ msgstr ""
 "KDE PIM 4.x versijų nebepalaiko pati KDE, tačiau jas paliekame tam, kad "
 "naudotojai galėtų toliau ramiai su jomis dirbti."
 
-#: xml/release-notes.xml:696(para)
+#: xml/release-notes.xml:723(para)
 msgid ""
 "The two versions of KDE PIM are not co-installable. Some software, such as "
 "KNode (package <package>knode</package>) require the legacy 4.x version and "
@@ -1025,7 +1073,7 @@ msgstr ""
 "senosios 4.x versijos, tačiau pastaroji būtų pašalinta įdiegiant kokį nors "
 "KDE PIM 5.x paketą (pvz., <package>kmail5</package>)."
 
-#: xml/release-notes.xml:702(para)
+#: xml/release-notes.xml:729(para)
 msgid ""
 "KDE PIM 4.x will be removed in the next version of openSUSE Leap. Therefore, "
 "you are encouraged to switch to the newer 5.x version."
@@ -1033,7 +1081,7 @@ msgstr ""
 "KDE PIM 4.x versijų kitoje openSUSE Leap versijoje nebeliks. Todėl skatiname "
 "pereiti naujesnių 5.x versijų."
 
-#: xml/release-notes.xml:706(para)
+#: xml/release-notes.xml:733(para)
 msgid ""
 "However, not all settings are migrated from the older version at this time. "
 "For more information, see the bug report at <link href=\"https://bugzilla."
@@ -1043,11 +1091,11 @@ msgstr ""
 "naująsias versijas. Daugiau informacijos <link href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=1001872\"/>)."
 
-#: xml/release-notes.xml:715(title)
+#: xml/release-notes.xml:742(title)
 msgid "Dolphin Does Not Set Extended Permission Bits"
 msgstr ""
 
-#: xml/release-notes.xml:716(para)
+#: xml/release-notes.xml:743(para)
 msgid ""
 "The version of the KDE file manager Dolphin that is shipped with openSUSE "
 "Leap 42.2 cannot set <quote>Extended Permission</quote> bits (GID, "
@@ -1055,17 +1103,17 @@ msgid ""
 "by clicking <guimenu>OK</guimenu> clears existing extended permissions bits."
 msgstr ""
 
-#: xml/release-notes.xml:724(para)
+#: xml/release-notes.xml:751(para)
 msgid ""
 "To avoid such issues, edit permissions with Konqueror (GUI) or "
 "<command>chmod</command> (command line) only."
 msgstr ""
 
-#: xml/release-notes.xml:731(title)
+#: xml/release-notes.xml:758(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "Ekranas neužsirakina GNOME aplinkoje be GDM"
 
-#: xml/release-notes.xml:732(para)
+#: xml/release-notes.xml:759(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1076,7 +1124,7 @@ msgstr ""
 "negalėsite persijungti tarp naudotojų, nebent atsijungsite prieš "
 "prisijungdami su kitu."
 
-#: xml/release-notes.xml:737(para)
+#: xml/release-notes.xml:764(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -1084,11 +1132,11 @@ msgstr ""
 "Norėdami užrakinti ekraną iš GNOME aplinkos, kaip prisijungimų tvarkyklę "
 "naudokite GDM:"
 
-#: xml/release-notes.xml:743(para)
+#: xml/release-notes.xml:770(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "Įsitikinkite, ar įdiegtas <package>gdm</package> paketas."
 
-#: xml/release-notes.xml:748(para)
+#: xml/release-notes.xml:775(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -1096,7 +1144,7 @@ msgstr ""
 "Atverkite YaST ir jame atverkite <menuchoice><guimenu>/etc/sysconfig "
 "redaktorių</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:754(para)
+#: xml/release-notes.xml:781(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -1104,7 +1152,7 @@ msgstr ""
 "Eikite <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:761(para)
+#: xml/release-notes.xml:788(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -1112,43 +1160,43 @@ msgstr ""
 "Teksto laukelyje įrašykite <literal>gdm</literal>. Išsaugokite spausdami "
 "<guimenu>Gerai</guimenu>."
 
-#: xml/release-notes.xml:767(para)
+#: xml/release-notes.xml:794(para)
 msgid "Reboot."
 msgstr "Iš naujo paleiskite kompiuterį."
 
 #. bnc#809347
-#: xml/release-notes.xml:802(title)
+#: xml/release-notes.xml:829(title)
 msgid "More Information and Feedback"
 msgstr "Išsamesnė informacija ir grįžtamasis ryšys"
 
-#: xml/release-notes.xml:806(para)
+#: xml/release-notes.xml:833(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 "Skaitykite laikmenoje patalpintą <filename>README</filename> dokumentą."
 
-#: xml/release-notes.xml:811(para)
+#: xml/release-notes.xml:838(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
 "Išsami informacija apie paskiro RPM paketo pakeitimus pateikiama įvykdžius:"
 
-#: xml/release-notes.xml:815(replaceable)
+#: xml/release-notes.xml:842(replaceable)
 msgid "FILENAME"
 msgstr "RINKMENA"
 
-#: xml/release-notes.xml:815(screen)
+#: xml/release-notes.xml:842(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:816(para)
+#: xml/release-notes.xml:843(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Vietoj žodžio <replaceable>RINKMENA</replaceable> rašykite tikrąjį RPM "
 "paketo pavadinimą."
 
-#: xml/release-notes.xml:821(para)
+#: xml/release-notes.xml:848(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1156,13 +1204,13 @@ msgstr ""
 "Norėdami matyti atnaujintų paketų visus pakeitimus laiko bėgyje, laikmenos "
 "šakniniame kataloge ieškokite <filename>ChangeLog</filename> rinkmenos."
 
-#: xml/release-notes.xml:827(para)
+#: xml/release-notes.xml:854(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "Daugiau informacijos laikmenos <filename>docu</filename> kataloge."
 
-#: xml/release-notes.xml:833(para)
+#: xml/release-notes.xml:860(para)
 msgid ""
 "<link href=\"https://doc.opensuse.org/\"/> contains additional or updated "
 "documentation."
@@ -1170,7 +1218,7 @@ msgstr ""
 "<link href=\"https://doc.opensuse.org/\"/> adresu pateikta papildoma ir "
 "atnaujinta dokumentacija."
 
-#: xml/release-notes.xml:838(para)
+#: xml/release-notes.xml:865(para)
 msgid ""
 "Visit <link href=\"https://www.opensuse.org\"/> for the latest product news "
 "from openSUSE."
@@ -1178,15 +1226,15 @@ msgstr ""
 "Daugiau naujienų apie naujausius openSUSE produktus rasite apsilankę <link "
 "href=\"https://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:845(para)
+#: xml/release-notes.xml:872(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Autorinės teisės © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:849(para)
+#: xml/release-notes.xml:876(para)
 msgid "Thanks for using openSUSE."
 msgstr "Ačiū, kad pasirinkote openSUSE."
 
-#: xml/release-notes.xml:852(para)
+#: xml/release-notes.xml:879(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE komanda."
 
