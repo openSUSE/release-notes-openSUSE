@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-16 14:55+0100\n"
-"PO-Revision-Date: 2016-12-05 19:19+0000\n"
+"PO-Revision-Date: 2017-01-07 10:54+0000\n"
 "Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/pl/>\n"
@@ -636,24 +636,26 @@ msgid ""
 "UUID) and change the subvolume name and its mount point consistently to "
 "<filename>/var/cache</filename>."
 msgstr ""
+"Dodaj wpis do <filename>/etc/fstab</filename> dla nowego pod-wolumenu "
+"<filename>/var/cache</filename>. Wykorzystaj istniejący pod-wolumen jako "
+"wzór. Upewnij się by pozostawić UUID nietknięte (to jest UUID głównego "
+"systemu plików) i zmień nazwę pod-wolumenu oraz jego punkt montowania na "
+"<filename>/var/cache</filename>."
 
 #: xml/release-notes.xml:416(para)
-#, fuzzy
 #| msgid ""
 #| "The new default is also explicitly set in <filename>smb.conf</filename>."
 msgid ""
 "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
-msgstr ""
-"Nowa domyślna wartość została wyraźnie umiejscowiona w pliku <filename>smb."
-"conf</filename>."
+msgstr "Zamontuj nowy pod-wolumen jak w <filename>/etc/fstab</filename>:"
 
 #: xml/release-notes.xml:419(command)
 msgid "mount /var/cache"
-msgstr ""
+msgstr "mount /var/cache"
 
 #: xml/release-notes.xml:426(title)
 msgid "GNOME Keyring Does Not Integrate with GPG Anymore"
-msgstr ""
+msgstr "GNOME Keyring Nie jest już zintegrowany z GPG"
 
 #: xml/release-notes.xml:427(para)
 msgid ""
@@ -661,10 +663,16 @@ msgid ""
 "Keyring cannot be used to manage GPG keys anymore. You can still manage GPG "
 "keys on the command line using the <command>gpg</command> tool."
 msgstr ""
+"Zintegrowany agent GPG w GNOME Keyring został usunięty. Dlatego GNOME "
+"Keyring nie może już być wykorzystywany do zarządzania kluczami GPG. Możesz "
+"nadal zarządzać kluczami GPG poprzez linię komend wykorzystując narzędzie "
+"<command>gpg</command>."
 
 #: xml/release-notes.xml:435(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr ""
+"Sterownik Synaptic może pogorszyć doświadczenie przy korzystaniu z panelu "
+"dotykowego pod GNOMEm"
 
 #: xml/release-notes.xml:436(para)
 msgid ""
@@ -672,26 +680,28 @@ msgid ""
 "package>) was installed by default but had a lower priority than the "
 "libinput driver (<package>xf86-input-libinput</package>)."
 msgstr ""
+"W Leap 42.1, sterownik Synaptic (paczka <package>f86-input-"
+"synaptics</package>) była domyślnie zainstalowana ale miała niższy priorytet "
+"niż sterownik libinput (<package>xf86-input-libinput</package>)."
 
 #: xml/release-notes.xml:442(para)
 msgid "Starting with Leap 42.2:"
-msgstr ""
+msgstr "Od wersji Leap 42.2:"
 
 #: xml/release-notes.xml:447(para)
-#, fuzzy
 #| msgid ""
 #| "To reduce security risks, the CIFS service is no longer enabled by "
 #| "default."
 msgid "The Synaptics X driver is no longer installed by default."
-msgstr ""
-"Aby zmniejszyć zagrożenie dla bezpieczeństwa, usługa CIFS nie jest już "
-"domyślnie uruchamiana."
+msgstr "Sterownik Synaptic nie jest już domyślnie instalowany."
 
 #: xml/release-notes.xml:452(para)
 msgid ""
 "If the Synaptics X driver is installed, it will take precedence for any "
 "touchpad devices."
 msgstr ""
+"Jeżeli sterownik Synaptic zostanie zainstalowany, przejmie kontrolę nad "
+"dowolnym panelem dotykowym."
 
 #: xml/release-notes.xml:458(para)
 msgid ""
@@ -699,22 +709,29 @@ msgid ""
 "driver is installed, Synaptics touchpads can only be configured to the "
 "extent that a basic mouse can."
 msgstr ""
+"Sterownik Synaptic nie jest już wspierany przez GNOME. To oznacza że po "
+"instalacji sterownika, panele dotykowe Synaptic będą mogły być "
+"skonfigurowane jedynie jak podstawowa mysz."
 
 #: xml/release-notes.xml:465(para)
 msgid ""
 "Unless you are using a Synaptics touchpad and have a large amount of custom "
 "configuration for the Synaptics driver, remove the package from your system:"
 msgstr ""
+"Jeżeli nie korzystasz z paneli dotykowych Synaptic z dużą ilością własnych "
+"ustawień dla sterownika Synaptic, usuń tą paczkę z systemu:"
 
 #: xml/release-notes.xml:469(command)
 msgid "sudo zypper rm xf86-input-synaptics"
-msgstr ""
+msgstr "sudo zypper rm xf86-input-synaptics"
 
 #: xml/release-notes.xml:474(title)
 msgid ""
 "AArch64: Page Size Has Been Changed From openSUSE Leap 42.1 to openSUSE Leap "
 "42.2"
 msgstr ""
+"AArch64: Rozmiar strony został zmieniony w openSUSE Leap 42.2 w porównaniu z "
+"openSUSE Leap 42.1"
 
 #: xml/release-notes.xml:475(para)
 msgid ""
@@ -722,16 +739,22 @@ msgid ""
 "With openSUSE Leap 42.2, the page size has been changed to 4 kB. This "
 "renders old Swap and Btrfs file systems unusable."
 msgstr ""
+"W openSUSE Leap 42.1, domyślny rozmiar strony wynosił 64 kB. W openSUSE Leap "
+"42.2, rozmiar stron został zmieniony na 4kB. Ta zmiana powoduje że stare "
+"systemy plików Swap oraz Btrfs stają się nie używalne."
 
 #: xml/release-notes.xml:480(para)
 msgid ""
 "If you are currently on openSUSE Leap 42.1 on AArch64, consider a fresh "
 "installation of openSUSE Leap 42.2 instead of upgrading."
 msgstr ""
+"Jeżeli korzystasz z openSUSE Leap 42.1 na AArch64, rozważ świeżą instalację "
+"openSUSE Leap 42.2 zamiast aktualizacji."
 
 #: xml/release-notes.xml:488(title)
 msgid "Systems with CCISS Controllers Can Fail to Boot After Upgrade"
 msgstr ""
+"Systemy z kontrolerami CCISS mogą po aktualizacji przestać się uruchomiać"
 
 #: xml/release-notes.xml:489(para)
 msgid ""
@@ -740,6 +763,10 @@ msgid ""
 "can lead to the root disk not being detected by the openSUSE Leap 42.2 "
 "kernel."
 msgstr ""
+"Sterownik kontrolerów Compaq/HP Smart Array (CCISS) "
+"(<filename>cciss.ko</filename>) nie wspiera już domyślnie niektórych "
+"kontrolerów. Może to doprowadzić do tego że dysk root nie zostanie wykryty "
+"przez kernel openSUSE Leap 42.2."
 
 #: xml/release-notes.xml:495(para)
 msgid ""
@@ -747,10 +774,13 @@ msgid ""
 "previous behavior and detect the controllers again. To do so, add the kernel "
 "parameter <literal>cciss.cciss_allow_hpsa=0</literal>."
 msgstr ""
+"Na dotkniętych systemach, sterownik CCISS może zostać skonfigurowany by "
+"przywrócic poprzednie zachowanie i wykryć kontroler ponownie. Aby to zrobić, "
+"dodaj parametr kernela <literal>cciss.cciss_allow_hpsa=0</literal>."
 
 #: xml/release-notes.xml:505(title)
 msgid "Upgrading from openSUSE 13.2"
-msgstr ""
+msgstr "Aktualizacja z openSUSE 13.2"
 
 #: xml/release-notes.xml:506(para)
 msgid ""
@@ -758,6 +788,8 @@ msgid ""
 "to also review the information provided in <xref linkend=\"sec.upgrade.421\"/"
 ">."
 msgstr ""
+"Poniższe notatki dotyczą aktualizacji od wersji openSUSE 13.2 lub starszej. "
+"Sprawdź również informacje zawarte w <xref linkend=\"sec.upgrade.421\"/>."
 
 #: xml/release-notes.xml:513(title)
 msgid "Network Interface Names"
