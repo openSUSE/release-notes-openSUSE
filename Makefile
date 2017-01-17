@@ -48,6 +48,7 @@ po/%.po: release-notes.pot
 
 xml/release-notes.%.xml: po/%.po xml/release-notes.ent xml/release-notes.xml
 	xml2po -p $< -o $@ xml/release-notes.xml;
+	sed -i -r 's/(<!ENTITY % ([^ ]+) SYSTEM "[^"]+">)/\1 %\2;/' $@
 
 pdf: $(PDF_FILES)
 $(PDF_FILES): $(XML_FILES)
