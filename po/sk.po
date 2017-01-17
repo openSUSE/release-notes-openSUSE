@@ -1,9 +1,9 @@
-# Ferdinand Galko <galko.ferdinand@gmail.com>, 2016.
+# Ferdinand Galko <galko.ferdinand@gmail.com>, 2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
-"POT-Creation-Date: 2016-12-16 14:55+0100\n"
-"PO-Revision-Date: 2016-12-17 15:23+0100\n"
+"POT-Creation-Date: 2017-01-17 12:52+0100\n"
+"PO-Revision-Date: 2017-01-17 19:33+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation-sk@opensuse.org>\n"
 "Language: sk\n"
@@ -47,6 +47,7 @@ msgstr "Ak povyšujete zo staršej verzie na toto vydanie openSUSE Leap, pozrite
 
 #: xml/release-notes.xml:92(title)
 #: xml/release-notes.xml:85(title)
+#: xml/release-notes.xml:96(title)
 msgid "Installation"
 msgstr "Inštalácia"
 
@@ -58,6 +59,7 @@ msgstr "Táto časť obsahuje poznámky týkajúce sa inštalácie. Podrobné po
 #. https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #: xml/release-notes.xml:103(title)
 #: xml/release-notes.xml:96(title)
+#: xml/release-notes.xml:107(title)
 msgid "Minimal System Installation"
 msgstr "Inštalácia minimálneho systému"
 
@@ -67,6 +69,7 @@ msgstr "Aby sa zabránilo nainštalovaniu niektorých veľkých odporúčaných 
 
 #: xml/release-notes.xml:111(para)
 #: xml/release-notes.xml:104(para)
+#: xml/release-notes.xml:115(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>."
 msgstr ""
 "Treba upozorniť, že minimálna inštalácia nemá firewall v predvolenom "
@@ -78,6 +81,7 @@ msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
 #: xml/release-notes.xml:120(para)
 #: xml/release-notes.xml:112(para)
+#: xml/release-notes.xml:123(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr ""
 "Pred inštaláciou openSUSE na systéme, ktorý sa zavádza pomocou UEFI (Unified "
@@ -94,11 +98,13 @@ msgstr "<emphasis>Pozadie:</emphasis>  Niektoré firmware UEFI obsahujú chyby, 
 #. bnc#850056
 #: xml/release-notes.xml:145(title)
 #: xml/release-notes.xml:150(title)
+#: xml/release-notes.xml:161(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT a MS-DOS oddiely"
 
 #: xml/release-notes.xml:146(para)
 #: xml/release-notes.xml:151(para)
+#: xml/release-notes.xml:162(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr ""
 "Spolu so špecifikáciou UEFI/EFI prišiel nový štýl rozdelenia diskov: GPT ("
@@ -120,6 +126,7 @@ msgstr "Riešenie je jednoduché: previesť starší MBR diskový oddiel na nov�
 
 #: xml/release-notes.xml:176(title)
 #: xml/release-notes.xml:211(title)
+#: xml/release-notes.xml:222(title)
 msgid "System Upgrade"
 msgstr "Zvýšenie verzie systému"
 
@@ -130,12 +137,14 @@ msgstr "Táto časť obsahuje poznámky týkajúce sa zvýšenia verzie. Podrobn
 #: xml/release-notes.xml:184(title)
 #: xml/release-notes.xml:493(title)
 #: xml/release-notes.xml:513(title)
+#: xml/release-notes.xml:524(title)
 msgid "Network Interface Names"
 msgstr "Názvy sieťových rozhraní"
 
 #: xml/release-notes.xml:185(para)
 #: xml/release-notes.xml:494(para)
 #: xml/release-notes.xml:514(para)
+#: xml/release-notes.xml:525(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr ""
 "Pri zvyšovaní verzie vzdialeného systému z openSUSE 13.2 sa uistite, že vaše "
@@ -144,6 +153,7 @@ msgstr ""
 #: xml/release-notes.xml:189(para)
 #: xml/release-notes.xml:498(para)
 #: xml/release-notes.xml:518(para)
+#: xml/release-notes.xml:529(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr ""
 "openSUSE 13.2 používa takzvané predvídateľné názvy sieťových rozhraní ("
@@ -157,12 +167,14 @@ msgstr ""
 #: xml/release-notes.xml:198(replaceable)
 #: xml/release-notes.xml:507(replaceable)
 #: xml/release-notes.xml:527(replaceable)
+#: xml/release-notes.xml:538(replaceable)
 msgid "enp5s0"
 msgstr "enp5s0"
 
 #: xml/release-notes.xml:198(screen)
 #: xml/release-notes.xml:507(screen)
 #: xml/release-notes.xml:527(screen)
+#: xml/release-notes.xml:538(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
@@ -172,6 +184,7 @@ msgstr ""
 #: xml/release-notes.xml:200(para)
 #: xml/release-notes.xml:509(para)
 #: xml/release-notes.xml:529(para)
+#: xml/release-notes.xml:540(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
 msgstr ""
 "Nahraďte <replaceable>enp5s0</replaceable> s názvom vášho sieťového "
@@ -180,12 +193,14 @@ msgstr ""
 #: xml/release-notes.xml:208(title)
 #: xml/release-notes.xml:517(title)
 #: xml/release-notes.xml:537(title)
+#: xml/release-notes.xml:548(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: Únik miesta disku po obnoveniach systému"
 
 #: xml/release-notes.xml:209(para)
 #: xml/release-notes.xml:518(para)
 #: xml/release-notes.xml:538(para)
+#: xml/release-notes.xml:549(para)
 msgid "By default, openSUSE 13.2 used a Btrfs partition layout that allowed for disk space to become permanently occupied with stale, inaccessible contents after the first system rollback was executed. This layout issue was fixed in openSUSE Leap 42.1. However, the fix can only be applied to newly installed systems."
 msgstr ""
 "V predvolenom nastavení openSUSE 13.2 používalo rozloženie oddielov Btrfs, "
@@ -197,6 +212,7 @@ msgstr ""
 #: xml/release-notes.xml:216(para)
 #: xml/release-notes.xml:525(para)
 #: xml/release-notes.xml:545(para)
+#: xml/release-notes.xml:556(para)
 msgid "If you are upgrading from openSUSE 13.2, you cannot convert the file system to the new layout, but you can reclaim the lost disk space."
 msgstr ""
 "Ak zvyšujete verziu z openSUSE 13.2, nemôžete konvertovať súborový systém na "
@@ -205,12 +221,14 @@ msgstr ""
 #: xml/release-notes.xml:221(title)
 #: xml/release-notes.xml:530(title)
 #: xml/release-notes.xml:550(title)
+#: xml/release-notes.xml:561(title)
 msgid "Data Loss with Non-Standard Settings or No Rollbacks"
 msgstr "Strata dát s neštandardnými nastaveniami alebo žiadnymi obnoveniami"
 
 #: xml/release-notes.xml:222(para)
 #: xml/release-notes.xml:531(para)
 #: xml/release-notes.xml:551(para)
+#: xml/release-notes.xml:562(para)
 msgid "The following procedure will only work properly on installations set up using the default proposal created by the openSUSE 13.2 installer."
 msgstr ""
 "Nasledujúci postup bude fungovať správne len na inštaláciách nastavených "
@@ -219,12 +237,14 @@ msgstr ""
 #: xml/release-notes.xml:226(para)
 #: xml/release-notes.xml:535(para)
 #: xml/release-notes.xml:555(para)
+#: xml/release-notes.xml:566(para)
 msgid "Additionally, you must have previously made a system rollback."
 msgstr "Navyše musíte mať predtým vytvorené systémové obnovenie."
 
 #: xml/release-notes.xml:229(para)
 #: xml/release-notes.xml:538(para)
 #: xml/release-notes.xml:558(para)
+#: xml/release-notes.xml:569(para)
 msgid "If you have set up your Btrfs file system with a non-standard configuration or have not previously made a system rollback, executing the following procedure can incur data loss."
 msgstr ""
 "Ak ste nastavili súborový systém Btrfs s neštandardnou konfiguráciou, alebo "
@@ -239,12 +259,14 @@ msgstr "Pripojiť počiatočný koreňový súborový systém:"
 #: xml/release-notes.xml:240(replaceable)
 #: xml/release-notes.xml:549(replaceable)
 #: xml/release-notes.xml:569(replaceable)
+#: xml/release-notes.xml:580(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
 msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
 #: xml/release-notes.xml:240(screen)
 #: xml/release-notes.xml:549(screen)
 #: xml/release-notes.xml:569(screen)
+#: xml/release-notes.xml:580(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
@@ -252,12 +274,14 @@ msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 #: xml/release-notes.xml:243(para)
 #: xml/release-notes.xml:552(para)
 #: xml/release-notes.xml:572(para)
+#: xml/release-notes.xml:583(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr "Odstrániť všetky súbory pod /mnt, ktoré nie sú v podzväzku:"
 
 #: xml/release-notes.xml:246(screen)
 #: xml/release-notes.xml:555(screen)
 #: xml/release-notes.xml:575(screen)
+#: xml/release-notes.xml:586(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
@@ -272,6 +296,8 @@ msgstr "Znovu odpojiť súborový systém:"
 #: xml/release-notes.xml:561(screen)
 #: xml/release-notes.xml:404(command)
 #: xml/release-notes.xml:581(screen)
+#: xml/release-notes.xml:415(command)
+#: xml/release-notes.xml:592(screen)
 #, no-wrap
 msgid "umount /mnt"
 msgstr "umount /mnt"
@@ -279,6 +305,7 @@ msgstr "umount /mnt"
 #: xml/release-notes.xml:260(title)
 #: xml/release-notes.xml:674(title)
 #: xml/release-notes.xml:694(title)
+#: xml/release-notes.xml:705(title)
 msgid "General"
 msgstr "Všeobecné"
 
@@ -301,12 +328,14 @@ msgstr "Technické"
 #: xml/release-notes.xml:281(title)
 #: xml/release-notes.xml:567(title)
 #: xml/release-notes.xml:587(title)
+#: xml/release-notes.xml:598(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Tlačový systém: Zlepšenia a nekompatibilné zmeny"
 
 #: xml/release-notes.xml:284(emphasis)
 #: xml/release-notes.xml:570(emphasis)
 #: xml/release-notes.xml:590(emphasis)
+#: xml/release-notes.xml:601(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS zvýšil verziu na 1.7"
 
@@ -317,6 +346,7 @@ msgstr "Nová verzia CUPS predstavila niektoré významné zmeny v porovnaní s 
 #: xml/release-notes.xml:293(para)
 #: xml/release-notes.xml:579(para)
 #: xml/release-notes.xml:599(para)
+#: xml/release-notes.xml:610(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
 msgstr ""
 "PDF je dnes štandardný formát tlačové úlohy skôr než PS. Preto tradičné "
@@ -329,6 +359,7 @@ msgstr "Podrobnosti nájdete na <ulink url=\"https://en.opensuse.org/Concepts_pr
 #: xml/release-notes.xml:306(para)
 #: xml/release-notes.xml:592(para)
 #: xml/release-notes.xml:612(para)
+#: xml/release-notes.xml:623(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is, via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
 "Sieťový protokol zistenie tlačiarní sa zmenil. Natívna metóda pre zisťovanie "
@@ -354,6 +385,7 @@ msgstr ""
 #: xml/release-notes.xml:332(para)
 #: xml/release-notes.xml:618(para)
 #: xml/release-notes.xml:638(para)
+#: xml/release-notes.xml:649(para)
 msgid "The <literal>ServerName</literal> settings in <literal>client.conf</literal> (for example, <literal>ServerName older.server.example.com/version=1.1</literal>)."
 msgstr ""
 "The <literal>ServerName</literal> nastavenie in "
@@ -363,12 +395,14 @@ msgstr ""
 #: xml/release-notes.xml:340(para)
 #: xml/release-notes.xml:626(para)
 #: xml/release-notes.xml:646(para)
+#: xml/release-notes.xml:657(para)
 msgid "The <literal>CUPS_SERVER</literal> environment variable value."
 msgstr "Hodnota premennej prostredia <literal>CUPS_SERVER</literal>."
 
 #: xml/release-notes.xml:346(para)
 #: xml/release-notes.xml:632(para)
 #: xml/release-notes.xml:652(para)
+#: xml/release-notes.xml:663(para)
 msgid "The server name value of the <literal>-h</literal> option of the command line tools, for example:"
 msgstr ""
 "Hodnota názvu servera voľby <literal>-h</literal> nástrojov príkazového "
@@ -377,6 +411,7 @@ msgstr ""
 #: xml/release-notes.xml:350(screen)
 #: xml/release-notes.xml:636(screen)
 #: xml/release-notes.xml:656(screen)
+#: xml/release-notes.xml:667(screen)
 #, no-wrap
 msgid "lpstat -h older.server.example.com/version=1.1 -p"
 msgstr "lpstat -h older.server.example.com/version=1.1 -p"
@@ -384,6 +419,7 @@ msgstr "lpstat -h older.server.example.com/version=1.1 -p"
 #: xml/release-notes.xml:356(para)
 #: xml/release-notes.xml:642(para)
 #: xml/release-notes.xml:662(para)
+#: xml/release-notes.xml:673(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package."
 msgstr ""
 "Niektoré filtre kopírovania a backendy boli presunuté z balíka "
@@ -454,6 +490,7 @@ msgstr "Ak chcete konfigurovať šetrič obrazovky, použite <command>xscreensav
 #: xml/release-notes.xml:792(title)
 #: xml/release-notes.xml:809(title)
 #: xml/release-notes.xml:829(title)
+#: xml/release-notes.xml:840(title)
 msgid "More Information and Feedback"
 msgstr "Ďalšie informácie a spätná väzba"
 
@@ -461,6 +498,7 @@ msgstr "Ďalšie informácie a spätná väzba"
 #: xml/release-notes.xml:796(para)
 #: xml/release-notes.xml:813(para)
 #: xml/release-notes.xml:833(para)
+#: xml/release-notes.xml:844(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Prečítajte si dokumenty <filename>README</filename> na médiu."
 
@@ -468,6 +506,7 @@ msgstr "Prečítajte si dokumenty <filename>README</filename> na médiu."
 #: xml/release-notes.xml:801(para)
 #: xml/release-notes.xml:818(para)
 #: xml/release-notes.xml:838(para)
+#: xml/release-notes.xml:849(para)
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr "Získajte podrobné informácie o zmenách konkrétneho balíka z jeho RPM:"
 
@@ -475,6 +514,7 @@ msgstr "Získajte podrobné informácie o zmenách konkrétneho balíka z jeho R
 #: xml/release-notes.xml:805(replaceable)
 #: xml/release-notes.xml:822(replaceable)
 #: xml/release-notes.xml:842(replaceable)
+#: xml/release-notes.xml:853(replaceable)
 msgid "FILENAME"
 msgstr "FILENAME"
 
@@ -482,6 +522,7 @@ msgstr "FILENAME"
 #: xml/release-notes.xml:805(screen)
 #: xml/release-notes.xml:822(screen)
 #: xml/release-notes.xml:842(screen)
+#: xml/release-notes.xml:853(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
@@ -490,6 +531,7 @@ msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 #: xml/release-notes.xml:806(para)
 #: xml/release-notes.xml:823(para)
 #: xml/release-notes.xml:843(para)
+#: xml/release-notes.xml:854(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>FILENAME</replaceable> s názvom RPM."
 
@@ -497,6 +539,7 @@ msgstr "Nahraďte <replaceable>FILENAME</replaceable> s názvom RPM."
 #: xml/release-notes.xml:811(para)
 #: xml/release-notes.xml:828(para)
 #: xml/release-notes.xml:848(para)
+#: xml/release-notes.xml:859(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr ""
 "Chronologický záznam všetkých zmien vykonaných v aktualizovaných balíkoch "
@@ -507,6 +550,7 @@ msgstr ""
 #: xml/release-notes.xml:817(para)
 #: xml/release-notes.xml:834(para)
 #: xml/release-notes.xml:854(para)
+#: xml/release-notes.xml:865(para)
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr ""
 "Ďalšie informácie nájdete na médiu v adresári <filename>docu</filename>."
@@ -527,6 +571,7 @@ msgstr "Copyright © 2015 SUSE LLC"
 #: xml/release-notes.xml:839(para)
 #: xml/release-notes.xml:856(para)
 #: xml/release-notes.xml:876(para)
+#: xml/release-notes.xml:887(para)
 msgid "Thanks for using openSUSE."
 msgstr "Ďakujeme, že používate openSUSE."
 
@@ -534,6 +579,7 @@ msgstr "Ďakujeme, že používate openSUSE."
 #: xml/release-notes.xml:842(para)
 #: xml/release-notes.xml:859(para)
 #: xml/release-notes.xml:879(para)
+#: xml/release-notes.xml:890(para)
 msgid "The openSUSE Team."
 msgstr "Tím openSUSE."
 
