@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-17 12:52+0100\n"
-"PO-Revision-Date: 2016-12-07 19:44+0000\n"
+"PO-Revision-Date: 2017-01-25 19:21+0000\n"
 "Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/cs/>\n"
@@ -48,7 +48,6 @@ msgid "42.2"
 msgstr "42.2"
 
 #: xml/release-notes.xml:22(para)
-#, fuzzy
 #| msgid ""
 #| "openSUSE Leap is a free and Linux-based operating system for your PC, "
 #| "Laptop or Server. You can surf the web, manage your e-mails and photos, "
@@ -101,9 +100,12 @@ msgid ""
 "version. Before starting the upgrade, make sure that all maintenance updates "
 "for openSUSE Leap 42.2 are applied."
 msgstr ""
+"Podpora openSUSE Leap 42.2 byla již ukončena. K tomu, abyste udrželi vaše "
+"systémy aktuální a bezpečné, je potřeba openSUSE povýšit na aktuální verzi. "
+"Před započetím povýšení systému se ujistěte, že máte nainstalované všechny "
+"údržbové aktualizace pro openSUSE Leap 42.2."
 
 #: xml/release-notes.xml:61(para)
-#, fuzzy
 #| msgid ""
 #| "To report bugs against this release, use the openSUSE Bugzilla. For more "
 #| "information, see <link href=\"http://en.opensuse.org/"
@@ -112,9 +114,8 @@ msgid ""
 "For more information about upgrading to a current openSUSE version, see "
 "<link href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgstr ""
-"K nahlášení chyb v tomto vydání použijte openSUSE Bugzillu. Pro více "
-"informací vizte <link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/"
-">."
+"Pro více informací o povýšení systému na aktuální verzi openSUSE vizte <link "
+"href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 
 #. Previous Release Notes
 #: xml/release-notes.xml:67(para)
@@ -564,7 +565,6 @@ msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount &lt;korenove_zarizeni&gt; -o subvol=@ /mnt"
 
 #: xml/release-notes.xml:372(para)
-#, fuzzy
 #| msgid ""
 #| "If you don't have a <filename>@</filename> subvolume, mount subvolume ID "
 #| "5 instead:"
@@ -662,7 +662,7 @@ msgstr "mount  /var/cache"
 
 #: xml/release-notes.xml:437(title)
 msgid "GNOME Keyring Does Not Integrate with GPG Anymore"
-msgstr ""
+msgstr "GNOME Keyring již nezahrnuje GPG"
 
 #: xml/release-notes.xml:438(para)
 msgid ""
@@ -670,6 +670,10 @@ msgid ""
 "Keyring cannot be used to manage GPG keys anymore. You can still manage GPG "
 "keys on the command line using the <command>gpg</command> tool."
 msgstr ""
+"Vestavěný agent GPG pro klíčenku GNOME Keyring byl odebrán. To znamená, že "
+"GNOME Keyring již nemůže být nadále používán pro správu GPG klíčů. Tyto "
+"klíče můžete nadále spravovat pomocí nástroje <command>gpg</command> v "
+"příkazovém řádku."
 
 #: xml/release-notes.xml:446(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
@@ -752,6 +756,7 @@ msgstr ""
 #: xml/release-notes.xml:499(title)
 msgid "Systems with CCISS Controllers Can Fail to Boot After Upgrade"
 msgstr ""
+"Systémy s kontroléry CCISS mohou po povýšení selhat při zavádění systému"
 
 #: xml/release-notes.xml:500(para)
 msgid ""
@@ -760,6 +765,10 @@ msgid ""
 "can lead to the root disk not being detected by the openSUSE Leap 42.2 "
 "kernel."
 msgstr ""
+"Ovladač pro kontroléry Compaq/HP Smart Array (CCISS) "
+"(<filename>cciss.ko</filename>) již nadále ve výchozím stavu určité "
+"kontroléry nepodporuje. To může vést k tomu, že jádro openSUSE Leapu 42.2 "
+"nerozpozná kořenový disk."
 
 #: xml/release-notes.xml:506(para)
 msgid ""
@@ -767,6 +776,10 @@ msgid ""
 "previous behavior and detect the controllers again. To do so, add the kernel "
 "parameter <literal>cciss.cciss_allow_hpsa=0</literal>."
 msgstr ""
+"Na systémech, kterých se tato chyba týká, můžete ovladač CCISS "
+"nakonfigurovat tak, aby se vrátil k předchozímu chování a tyto kontroléry "
+"opět detekoval. Provedete to tak, že jádru předáte parametr "
+"<literal>cciss.cciss_allow_hpsa=0</literal>."
 
 #: xml/release-notes.xml:516(title)
 msgid "Upgrading from openSUSE 13.2"
@@ -880,7 +893,6 @@ msgstr ""
 "si můžete způsobit ztrátu dat."
 
 #: xml/release-notes.xml:577(para)
-#, fuzzy
 #| msgid "Mount the initial root filesystem:"
 msgid "Mount the initial root file system:"
 msgstr "Připojit výchozí kořenový souborový systém:"
@@ -904,7 +916,6 @@ msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:589(para)
-#, fuzzy
 #| msgid "Umount the filesystem again:"
 msgid "Umount the file system again:"
 msgstr "Znovu odpojit souborový systém:"
@@ -972,7 +983,6 @@ msgstr ""
 "cups.org/str.php?L4231\"/>)."
 
 #: xml/release-notes.xml:642(para)
-#, fuzzy
 #| msgid ""
 #| "To be able to print to old servers, the IPP protocol version must be "
 #| "specified explictly by appending <literal>/version=1.1</literal> to "
