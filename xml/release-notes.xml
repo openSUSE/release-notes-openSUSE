@@ -7,7 +7,6 @@
  <!ENTITY % myents SYSTEM "release-notes.ent" >
  %myents;
 ]>
-
 <article xml:lang="en" xml:id="rnotes"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -15,69 +14,58 @@
  <title>&rnotes;</title>
  <info>
   <releaseinfo>&rversion;</releaseinfo>
-  <productname>&opensuseleap;</productname>
+  <productname>&thisflavor;</productname>
   <productnumber>&version;</productnumber>
   <date><?dbtimestamp format="Y-m-d"?></date>
   <abstract>
    <para>
-    &opensuseleap; is a free and Linux-based operating system for your
-    PC, Laptop or Server.  You can surf the Web, manage your e-mails and
-    photos, do office work, play videos or music and have a lot of fun!
+    &thisflavor; is a free and Linux-based operating system for your PC, Laptop
+    or Server. You can surf the Web, manage your e-mails and photos, do office
+    work, play videos or music and have a lot of fun!
    </para>
   </abstract>
   <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-    <dm:bugtracker>
-      <dm:url>https://bugzilla.opensuse.org/enter_bug.cgi</dm:url>
-      <dm:product>openSUSE Distribution</dm:product>
-      <dm:component>Release Notes</dm:component>
-      <dm:assignee>sknorr@suse.com</dm:assignee>
-    </dm:bugtracker>
+   <dm:bugtracker>
+    <dm:url>https://bugzilla.opensuse.org/enter_bug.cgi</dm:url>
+    <dm:product>openSUSE Distribution</dm:product>
+    <dm:component>Release Notes</dm:component>
+    <dm:assignee>sknorr@suse.com</dm:assignee>
+   </dm:bugtracker>
   </dm:docmanager>
  </info>
 
- <!-- split this para on account of bnc#401301 -->
-
- <!-- during beta testing -->
-
  <para condition="beta">
   This is the initial version of the release notes for the forthcoming
-  &opensuse; &version;.
+  &thisversion;.
  </para>
-
  <para condition="maintained">
   The release notes are under constant development.
   To find out about the latest updates, see the online version at
   <link xlink:href="https://doc.opensuse.org/release-notes"/>.
   The English release notes are updated whenever need arises. Translated
-  language version can temporarily be incomplete.
+  language versions can temporarily be incomplete.
  </para>
-
  <para condition="unmaintained">
-  The end of the maintenance period for &opensuseleap; &version; is now
-  reached. To keep your systems up-to-date and secure, upgrade to a current
-  &opensuse; version. Before starting the upgrade, make sure that all
-  maintenance updates for &opensuseleap; &version; are applied.
+  The end of the maintenance period for &thisversion; is now reached. To keep
+  your systems up-to-date and secure, upgrade to a current &opensuse; version.
+  Before starting the upgrade, make sure that all maintenance updates for
+  &thisversion; are applied.
  </para>
  <para condition="unmaintained">
   For more information about upgrading to a current &opensuse; version, see
   <link xlink:href="http://en.opensuse.org/SDB:Distribution-Upgrade"/>.
  </para>
-
  <!-- Previous Release Notes -->
  <para>
-  If you upgrade from an older version to this &opensuseleap; release, see
+  If you upgrade from an older version to this &thisflavor; release, see
   previous release notes listed here:
   <link xlink:href="http://en.opensuse.org/openSUSE:Release_Notes"/>.
  </para>
-
- <!-- beta statement -->
-
  <para>
   <phrase condition="beta">This public beta test is part of the &opensuse;
-  project.</phrase> Information
-  about the project is available at <link xlink:href="https://www.opensuse.org"/>.
+  project.</phrase> Information about the project is available at
+  <link xlink:href="https://www.opensuse.org"/>.
  </para>
-
  <para condition="beta;pre">
   Report all bugs you encounter using this prerelease of &opensuse; &version;
   in the &opensuse; Bugzilla. For more information, see
@@ -85,49 +73,47 @@
   would like to see anything added to the release notes, file a bug
   report against the component <quote>Release Notes</quote>.
  </para>
-
  <para condition="maintained">
   To report bugs against this release, use the &opensuse; Bugzilla. For more
   information, see
   <link xlink:href="http://en.opensuse.org/Submitting_Bug_Reports"/>.
  </para>
 
- <section xml:id="installation">
+ <sect1 xml:id="installation">
   <title>Installation</title>
 
   <para>
-    This section contains installation-related notes.
-    For detailed upgrade instructions, see the documentation at
-    <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html"/>.
+   This section contains installation-related notes. For detailed upgrade
+   instructions, see the documentation at
+   <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html"/>.
   </para>
 
-  <section xml:id="sec.123.minimalinstall">
-   <!-- https://bugzilla.suse.com/show_bug.cgi?id=947712 -->
-   <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
+  <sect2 xml:id="sec.install.minimalinstall">
+  <!-- https://bugzilla.suse.com/show_bug.cgi?id=947712 -->
+  <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
    <title>Minimal System Installation</title>
    <para>
-    To avoid some big recommended packages from being
-    installed, the pattern for minimal installations uses another
-    pattern that creates conflicts with undesired packages. This pattern,
-    <literal>patterns-openSUSE-minimal_base-conflicts</literal>,
-    can be removed after installation.
+    To avoid some big recommended packages from being installed, the pattern
+    for minimal installations uses another pattern that creates conflicts with
+    undesired packages. This pattern,
+    <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed
+    after installation.
    </para>
    <para>
     Note that the minimal installation has no firewall by default. If you need
     one, install <literal>SuSEfirewall2</literal>.
    </para>
-  </section>
+  </sect2>
 
-  <section xml:id="sec.123.uefi">
+  <sect2 xml:id="sec.install.uefi">
    <title>UEFI&mdash;Unified Extensible Firmware Interface</title>
    <para>
-    Prior to installing &opensuse; on a system that boots using UEFI
-    (Unified Extensible Firmware Interface), you are urgently advised to
-    check for any firmware updates the hardware vendor recommends and,
-    if available, to install such an update. A pre-installed Windows 8
-    is a strong indication that your system boots using UEFI.
+    Prior to installing &opensuse; on a system that boots using UEFI (Unified
+    Extensible Firmware Interface), you are urgently advised to check for any
+    firmware updates the hardware vendor recommends and, if available, to
+    install such an update. A pre-installed Windows 8 is a strong indication
+    that your system boots using UEFI.
    </para>
-
    <para>
     <emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it
     to break if too much data gets written to the UEFI storage area. However,
@@ -142,54 +128,44 @@
     is recommended to install any firmware updates the hardware vendor
     recommends.
    </para>
-  </section>
+  </sect2>
 
-  <!-- boo#1009493 -->
-  <section xml:id="sec.123.mount-by-label">
-   <title>Installer Crashes When Set to Mount by Label by Default</title>
-   <para>
-    When setting the default mount value to
-    <guimenu>By Label</guimenu> during partitioning, the installer will
-    report an error and crash. As a workaround, use another option for
-    installation. If needed, switch back to <guimenu>By Label</guimenu> on
-    the running system.
-   </para>
-  </section>
-
-  <section xml:id="sec.123.uefi-part">
-   <!-- bnc#850056 -->
+  <sect2 xml:id="sec.install.uefi-part">
+  <!-- bnc#850056 -->
    <title>UEFI, GPT, and MS-DOS Partitions</title>
    <para>
-    Together with the EFI/UEFI specification, a new style of
-    partitioning arrived: GPT (GUID Partition Table). This new schema
-    uses globally unique identifiers (128-bit values displayed in 32
-    hexadecimal digits) to identify devices and partition types.
+    Together with the EFI/UEFI specification, a new style of partitioning
+    arrived: GPT (GUID Partition Table). This new schema uses globally unique
+    identifiers (128-bit values displayed in 32 hexadecimal digits) to identify
+    devices and partition types.
    </para>
    <para>
     Additionally, the UEFI specification also allows legacy MBR (MS-DOS)
-    partitions. The Linux boot loaders (ELILO or GRUB 2) try to
-    automatically generate a GUID for those legacy partitions, and write
-    them to the firmware. Such a GUID can change frequently, causing a
-    rewrite in the firmware. A rewrite consists of two different
-    operations: Removing the old entry and creating a new entry that
-    replaces the first one.
+    partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically
+    generate a GUID for those legacy partitions, and write them to the
+    firmware. Such a GUID can change frequently, causing a rewrite in the
+    firmware. A rewrite consists of two different operations: Removing the old
+    entry and creating a new entry that replaces the first one.
    </para>
    <para>
-    Modern firmware has a garbage collector that collects deleted
-    entries and frees the memory reserved for old entries. A problem
-    arises when faulty firmware does not collect and free those entries.
-    This can result in a non-bootable system.
+    Modern firmware has a garbage collector that collects deleted entries and
+    frees the memory reserved for old entries. A problem arises when faulty
+    firmware does not collect and free those entries. This can result in a
+    non-bootable system.
    </para>
    <para>
     To work around this problem, convert the legacy MBR partition to GPT.
    </para>
-  </section>
+  </sect2>
 
-  <!-- bsc#1005323 -->
-  <section xml:id="sec.123.nouveau">
+  <!-- bsc#1005323, commenting for now, not sure whether that is really
+  necessary given all the other mitigations we have in place. - sknorr,
+  2017-02-17 -->
+
+  <!-- <sect2 xml:id="sec.install.nouveau">
    <title>Nouveau 3D/DRI Driver May Crash KDE Applications</title>
    <para>
-    With &opensuseleap; &version;, the Nouveau Mesa/DRI driver for 2D/3D
+    With &thisversion;, the Nouveau Mesa/DRI driver for 2D/3D
     rendering is considered experimental. The Nouveau kernel/KMS
     driver and the Nouveau X.org/DDX driver for 2D rendering are
     still considered stable.
@@ -214,111 +190,114 @@
     <link xlink:href="https://bugs.freedesktop.org/show_bug.cgi?id=91632"/>
     and <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1005323"/>.
    </para>
-  </section>
+  </sect2>-->
+ </sect1>
 
- </section>
-
- <section xml:id="upgrade">
+ <sect1 xml:id="upgrade">
   <title>System Upgrade</title>
+
   <para>
-    This section lists notes related to upgrading the system.
-    For detailed upgrade instructions, see the documentation at
-    <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html"/>.
+   This section lists notes related to upgrading the system. For detailed
+   upgrade instructions, see the documentation at
+   <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html"/>.
   </para>
 
- <section xml:id="sec.upgrade.421">
-  <title>Upgrading from &opensuseleap; 42.1</title>
+  <sect2 xml:id="sec.upgrade.422">
+   <title>Upgrading from &opensuseleap; 42.2</title>
+   <para/>
+  </sect2>
 
-  <section xml:id="sec.upgrade.dropped">
+  <sect2 xml:id="sec.upgrade.421">
+   <title>Upgrading from &opensuseleap; 42.1</title>
+   <sect3 xml:id="sec.upgrade.dropped">
     <title>Removed and Replaced Packages</title>
     <para>
      The following packages have been removed or replaced compared to
      &opensuseleap; 42.1:
     </para>
     <itemizedlist>
-      <listitem>
-        <para>
-          <package>arista</package>: Replaced by <package>transmageddon</package>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>cadabra</package>: The source code no longer builds. The
-          successor, <link xlink:href="http://cadabra.science/">Cadabra
-          2</link> is not stable yet.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>dropbear</package>: Removed because there are no relevant
-          advantages over <package>openssh</package>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>emerillon</package>: Replaced by
-          <package>gnome-maps</package>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>gnome-system-log</package>: Replaced by
-          <package>gnome-logs</package>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>hawk</package>: Replaced by <package>hawk2</package>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>ksnapshot</package>: Replaced by
-          <package>spectacle</package>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>labplot</package>: Labplot has been replaced by its Qt5
-          version, called <package>labplot-kf5</package>. If you are updating
-          from an &opensuseleap; 42.1 installation on which
-          <package>labplot</package> is installed, you will receive the
-          <package>labplot-kf5</package> automatically.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>nodejs</package>: Renamed to <package>nodejs4</package>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>psi</package>: Replaced by <package>psi+</package>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>python-moin</package>: Replaced by
-          <package>moinmoin-wiki</package>. Purely a rename, not a version
-          upgrade - a virtually identical drop-in replacement.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>ungifsicle</package>: Replaced by
-          <package>gifsicle</package>.
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          <package>xchat</package>: Replaced by <package>hexchat</package>.
-        </para>
-      </listitem>
+     <listitem>
+      <para>
+       <package>arista</package>: Replaced by
+       <package>transmageddon</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>cadabra</package>: The source code no longer builds. The
+       successor, <link xlink:href="http://cadabra.science/">Cadabra
+       2</link> is not stable yet.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>dropbear</package>: Removed because there are no relevant
+       advantages over <package>openssh</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>emerillon</package>: Replaced by
+       <package>gnome-maps</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>gnome-system-log</package>: Replaced by
+       <package>gnome-logs</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>hawk</package>: Replaced by <package>hawk2</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>ksnapshot</package>: Replaced by <package>spectacle</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>labplot</package>: Labplot has been replaced by its Qt5
+       version, called <package>labplot-kf5</package>. If you are updating
+       from an &opensuseleap; 42.1 installation on which
+       <package>labplot</package> is installed, you will receive the
+       <package>labplot-kf5</package> automatically.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>nodejs</package>: Renamed to <package>nodejs4</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>psi</package>: Replaced by <package>psi+</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>python-moin</package>: Replaced by
+       <package>moinmoin-wiki</package>. Purely a rename, not a version
+       upgrade - a virtually identical drop-in replacement.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>ungifsicle</package>: Replaced by
+       <package>gifsicle</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>xchat</package>: Replaced by <package>hexchat</package>.
+      </para>
+     </listitem>
     </itemizedlist>
-  </section>
-
-  <!-- FATE#320834 -->
-  <section xml:id="sec.upgrade.cache">
+   </sect3>
+   <!-- FATE#320834 -->
+   <sect3 xml:id="sec.upgrade.cache">
     <title><filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback</title>
     <para>
      <filename>/var/cache</filename> contains a lot of very volatile data, such
@@ -329,7 +308,7 @@
     </para>
     <para>
      To solve this, move <filename>/var/cache</filename> to a separate
-     subvolume. On fresh installations of &opensuseleap; &version;, this is
+     subvolume. On fresh installations of &thisversion;, this is
      done automatically. To convert an existing root file system, perform the
      following steps:
     </para>
@@ -346,8 +325,8 @@
       <para>
        Identify the parent subvolume of all the other subvolumes. For
        &opensuse; 13.2 installations, this is a subvolume named
-       <filename>@</filename>. To check if you have a
-       <filename>@</filename> subvolume, use:
+       <filename>@</filename>. To check if you have a <filename>@</filename>
+       subvolume, use:
       </para>
       <screen><command>btrfs subvolume list / | grep '@'</command></screen>
       <para>
@@ -430,331 +409,142 @@
       <screen><command>mount /var/cache</command></screen>
      </step>
     </procedure>
-  </section>
-
-  <!-- boo#1012371 -->
-  <section xml:id="sec.upgrade.gpg-gnome">
-   <title>GNOME Keyring Does Not Integrate with GPG Anymore</title>
-   <para>
-    The integrated GPG agent of GNOME Keyring has been removed. Therefore,
-    GNOME Keyring cannot be used to manage GPG keys anymore. You can still
-    manage GPG keys on the command line using the <command>gpg</command> tool.
-   </para>
-  </section>
-
-  <section xml:id="sec.upgrade.synaptics">
-   <title>Synaptics X Driver Can Degrade Touchpad Experience Under GNOME</title>
-   <para>
-    In Leap 42.1, the Synaptics X driver (package
-    <package>xf86-input-synaptics</package>) was installed by default but had a
-    lower priority than the libinput driver
-    (<package>xf86-input-libinput</package>).
-   </para>
-   <para>
-    Starting with Leap 42.2:
-   </para>
-   <itemizedlist>
-    <listitem>
-     <para>
-      The Synaptics X driver is no longer installed by default.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      If the Synaptics X driver is installed, it will take precedence for any
-      touchpad devices.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      The Synaptics X driver is no longer supported by GNOME. This means when
-      the driver is installed, Synaptics touchpads can only be configured to
-      the extent that a basic mouse can.
-     </para>
-    </listitem>
-   </itemizedlist>
-   <para>
-    Unless you are using a Synaptics touchpad and have a large amount of custom
-    configuration for the Synaptics driver, remove the package from your system:
-   </para>
-   <screen><command>sudo zypper rm xf86-input-synaptics</command></screen>
-  </section>
-
-  <!-- boo#998663 -->
-  <section xml:id="sec.upgrade.aarch64-64k">
-   <title>AArch64: Page Size Has Been Changed From &opensuseleap; 42.1 to &opensuseleap; &version;</title>
-   <para>
-    In &opensuseleap; 42.1, the default page size on AArch64 platforms was 64
-    kB. With &opensuseleap; 42.2, the page size has been changed to 4 kB.
-    This renders old Swap and Btrfs file systems unusable.
-   </para>
-   <para>
-    If you are currently on &opensuseleap; 42.1 on AArch64, consider a fresh
-    installation of &opensuseleap; &version; instead of upgrading.
-   </para>
-  </section>
-
-  <!-- boo#1006175 -->
-  <section xml:id="sec.upgrade.cciss">
-   <title>Systems with CCISS Controllers Can Fail to Boot After Upgrade</title>
-   <para>
-    The driver for Compaq/HP Smart Array (CCISS) controllers
-    (<filename>cciss.ko</filename>) does not support 
-    certain controllers anymore by default. This can lead to
-    the root disk not being detected by the &opensuseleap; &version; kernel.
-   </para>
-   <para>
-    On affected systems, the CCISS driver can be configured to revert to the
-    previous behavior and detect the controllers again. To do so, add the
-    kernel parameter <literal>cciss.cciss_allow_hpsa=0</literal>.
-   </para>
-  </section>
-
- </section>
-
- <section xml:id="sec.upgrade.132">
-   <title>Upgrading from &opensuse; 13.2</title>
-   <para>
-     The following notes apply to upgrades from &opensuse; 13.2 or older.
-     Make sure to also review the information provided in
-     <xref linkend="sec.upgrade.421"/>.
-   </para>
-
-   <section xml:id="sec.upgrade.interfacename">
-    <title>Network Interface Names</title>
+   </sect3>
+   <!-- boo#1012371 -->
+   <sect3 xml:id="sec.upgrade.gpg-gnome">
+    <title>GNOME Keyring Does Not Integrate with GPG Anymore</title>
     <para>
-     When upgrading a remote machine from &opensuse; 13.2, make sure your
-     network interfaces are named correctly.
+     The integrated GPG agent of GNOME Keyring has been removed. Therefore,
+     GNOME Keyring cannot be used to manage GPG keys anymore. You can still
+     manage GPG keys on the command line using the <command>gpg</command> tool.
+    </para>
+   </sect3>
+   <sect3 xml:id="sec.upgrade.synaptics">
+    <title>Synaptics X Driver Can Degrade Touchpad Experience Under GNOME</title>
+    <para>
+     In &opensuseleap; 42.1, the Synaptics X driver (package
+     <package>xf86-input-synaptics</package>) was installed by default but
+     had a lower priority than the libinput driver
+     (<package>xf86-input-libinput</package>).
     </para>
     <para>
-     &opensuse; 13.2 used so-called predictable network interface names (for
-     example, <literal>enp5s0</literal>), whereas &opensuseleap; 42.1 uses persistent
-     interface names (<literal>eth0</literal>). After upgrading and rebooting,
-     the network interface names may therefore change. This could lock you out
-     of the system. To avoid interfaces from being renamed, run the following
-     command for each of your network interfaces before you reboot the system:
+     With &thisversion;:
     </para>
-
-<screen>/usr/lib/udev/udev-generate-persistent-rule -v -c <replaceable>enp5s0</replaceable> -n <replaceable>enp5s0</replaceable> -o /etc/udev/rules.d/70-persistent-net.rules</screen>
-
+    <itemizedlist>
+     <listitem>
+      <para>
+       The Synaptics X driver is no longer installed by default.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       If the Synaptics X driver is installed, it will take precedence for any
+       touchpad devices.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       The Synaptics X driver is no longer supported by GNOME. This means when
+       the driver is installed, Synaptics touchpads can only be configured to
+       the extent that a basic mouse can.
+      </para>
+     </listitem>
+    </itemizedlist>
     <para>
-     Replace <replaceable>enp5s0</replaceable> with the name of your network
-     interface.
+     Unless you are using a Synaptics touchpad and have a large amount of
+     custom configuration for the Synaptics driver, remove the package from
+     your system:
     </para>
-   </section>
+    <screen><command>sudo zypper rm xf86-input-synaptics</command></screen>
+   </sect3>
 
-   <!-- boo#953985, boo#1010575 -->
-   <section xml:id="sec.upgrade.btrfsleak">
-    <title>Btrfs: Disk Space Leak after System Rollbacks</title>
+   <!-- boo#998663 -->
+   <sect3 xml:id="sec.upgrade.aarch64-64k">
+    <title>AArch64: Page Size Has Been Changed From &opensuseleap; 42.1 to &thisversion;</title>
     <para>
-     By default, &opensuse; 13.2 used a Btrfs partition layout that allowed
-     for disk space to become permanently occupied with stale, inaccessible
-     contents after the first system rollback was executed.
-     This layout issue was fixed in &opensuseleap; 42.1.
-     However, the fix can only be applied to newly installed systems.
+     In &opensuseleap; 42.1, the default page size on AArch64 platforms was 64
+     kB. With &thisversion;, the page size has been changed to 4 kB. This
+     renders old Swap and Btrfs file systems unusable.
     </para>
     <para>
-     If you are upgrading from &opensuse; 13.2, you cannot convert the file
-     system to the new layout, but you can reclaim the lost disk space.
+     If you are currently on &opensuseleap; 42.1 on AArch64, consider a fresh
+     installation of &thisversion; instead of upgrading.
     </para>
-    <warning>
-     <title>Data Loss with Non-Standard Settings or No Rollbacks</title>
-     <para>
-      The following procedure will only work properly on installations set up
-      using the default proposal created by the &opensuse; 13.2 installer.
-     </para>
-     <para>
-      Additionally, you must have previously made a system rollback.
-     </para>
-     <para>
-      If you have set up your Btrfs file system with a non-standard
-      configuration or have not previously made a system rollback, executing
-      the following procedure can incur data loss.
-     </para>
-    </warning>
-    <procedure>
-    <step>
-     <para>
-      Mount the initial root file system:
-     </para>
-<screen>mount /dev/<replaceable>&lt;ROOT_FILE_SYSTEM&gt;</replaceable> -o subvolid=5 /mnt</screen>
-    </step>
-    <step>
-     <para>
-      Remove all files below /mnt that are not in a subvolume:
-     </para>
-<screen>find /mnt -xdev -delete</screen>
-    </step>
-    <step>
-     <para>
-      Umount the file system again:
-     </para>
-<screen>umount /mnt</screen>
-    </step>
-   </procedure>
-  </section>
+   </sect3>
 
-  <section xml:id="fate-314630">
-   <title>Printing System: Improvements and Incompatible Changes</title>
-   <!-- href="https://fate.novell.com/314630" -->
-   <para>
-    <emphasis role="bold">CUPS Version Upgrade to 1.7</emphasis>
-   </para>
-   <para>
-    Compared to CUPS 1.5 in &opensuse; 13.2 CUPS 1.7 introduced some
-    major changes that may require manual configuration adjustments.
-   </para>
-
-   <itemizedlist>
-    <listitem>
-     <para>
-      PDF is now the standard print job format rather than PS.
-      Therefore traditional PostScript printers now also need a
-      filter driver for printing.
-     </para>
-     <para>
-      See
-      <link xlink:href="https://en.opensuse.org/Concepts_printing"/>
-      for details.
-     </para>
-    </listitem>
-
-    <listitem>
-     <para>
-      The network printer discovery protocol has changed.
-      The native method to discover network printers is now based on DNS Service
-      discovery (DNS-SD, that is, via Avahi).
-      The <literal>cups-browsed</literal> service from the
-      <literal>cups-filters</literal> package can be used to bridge old and new
-      protocols. Both <literal>cupsd</literal> and
-      <literal>cups-browsed</literal> need to run to make "legacy" clients
-      discover printers (that includes LibreOffice and KDE).
-     </para>
-    </listitem>
-
-    <listitem>
-     <para> The IPP protocol default version changed from 1.1
-      to 2.0. Older IPP servers like CUPS 1.3.x (for example in
-      &sle; 11) reject IPP 2.0 requests with <literal>Bad Request</literal> (see
-      <link xlink:href="http://www.cups.org/str.php?L4231"/>).
-     </para>
-
-     <para>
-      To be able to print to old servers, the IPP protocol version must be
-      specified explicitly by appending <literal>/version=1.1</literal> to either:
-     </para>
-
-     <itemizedlist>
-      <listitem>
-       <para>
-        The <literal>ServerName</literal> settings in
-        <literal>client.conf</literal> (for example,
-        <literal>ServerName older.server.example.com/version=1.1</literal>).
-       </para>
-      </listitem>
-
-      <listitem>
-       <para>
-        The <literal>CUPS_SERVER</literal> environment variable value.
-       </para>
-      </listitem>
-
-      <listitem>
-       <para>
-        The server name value of the <literal>-h</literal> option of the
-        command line tools, for example:
-       </para>
-        <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>
-      </listitem>
-     </itemizedlist>
-    </listitem>
-
-    <listitem>
-     <para>
-      Some printing filters and back-ends were moved from the
-      <literal>cups</literal> package to the <literal>cups-filters</literal>
-      package.
-     </para>
-    </listitem>
-
-    <listitem>
-     <para> Some configuration directives were split from <literal>cupsd.conf</literal>
-      into <literal>cups-files.conf</literal>
-      (see
-      <link xlink:href="http://www.cups.org/str.php?L4223"/>,
-      CVE-2012-5519, and
-      <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=789566"/>).
-     </para>
-    </listitem>
-    <listitem>
-     <para>CUPS banners and the CUPS test page were moved from
-      the <literal>cups</literal> package to the
-      <literal>cups-filters</literal> package (see
-      <link xlink:href="http://www.cups.org/str.php?L4120"/>
-      and
-      <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=735404"/>).
-     </para>
-    </listitem>
-   </itemizedlist>
-  </section>
-
- </section>
- </section>
-
-<section xml:id="general">
+   <!-- boo#1006175 -->
+   <sect3 xml:id="sec.upgrade.cciss">
+    <title>Systems with CCISS Controllers Can Fail to Boot After Upgrade</title>
+    <para>
+     The driver for Compaq/HP Smart Array (CCISS) controllers
+     (<filename>cciss.ko</filename>) does not support certain controllers
+     anymore by default. This can lead to the root disk not being detected by
+     the &thisversion; kernel.
+    </para>
+    <para>
+     On affected systems, the CCISS driver can be configured to revert to the
+     previous behavior and detect the controllers again. To do so, add the
+     kernel parameter <literal>cciss.cciss_allow_hpsa=0</literal>.
+    </para>
+   </sect3>
+  </sect2>
+ </sect1>
+ <sect1 xml:id="general">
   <title>General</title>
 
   <para>
-    This section lists general issues with &opensuseleap;
-    &version; that do not match any other category.
+   This section lists general issues with &opensuseleap; &version; that do not
+   match any other category.
   </para>
 
-  <section xml:id="sec.general.kdepim">
-      <title>KDE Software for Personal Information Management (KDE PIM)</title>
-      <para>
-          &opensuseleap; &version; ships two versions of the KDE PIM
-          (Kontact, KMail, etc.) suite:
-      </para>
-      <itemizedlist>
-       <listitem>
-        <para>
-         The legacy 4.x version
-        </para>
-       </listitem>
-       <listitem>
-        <para>
-         The version based on KDE Frameworks 5
-        </para>
-       </listitem>
-      </itemizedlist>
-      <para>
-          KDE PIM 4.x is no longer supported by upstream KDE, but was
-          kept to avoid disrupting user workflows.
-      </para>
-      <para>
-          The two versions of KDE PIM are not co-installable. Some software, such as
-          KNode (package <package>knode</package>) require the legacy 4.x
-          version and will be uninstalled when installing any package from
-          KDE PIM 5.x (for example, the package <package>kmail5</package>).
-      </para>
-      <para>
-          KDE PIM 4.x will be removed in the next version of &opensuseleap;.
-          Therefore, you are encouraged to switch to the newer 5.x version.
-      </para>
-      <para>
-          However, not all settings are migrated from the older version at
-          this time. For more information, see the bug report at
-          <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1001872"/>).
-      </para>
-  </section>
+  <!-- Currently still exists in 42.3 (for the moment), so leaving this in.
+  - sknorr, 2017-02-17 -->
+
+  <sect2 xml:id="sec.general.kdepim">
+   <title>KDE Software for Personal Information Management (KDE PIM)</title>
+   <para>
+    &thisversion; ships two versions of the KDE PIM (Kontact, KMail, etc.)
+    suite:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      The legacy 4.x version
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      The version based on KDE Frameworks 5
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid
+    disrupting user workflows.
+   </para>
+   <para>
+    The two versions of KDE PIM are not co-installable. Some software, such
+    as KNode (package <package>knode</package>) require the legacy 4.x
+    version and will be uninstalled when installing any package from KDE PIM
+    5.x (for example, the package <package>kmail5</package>).
+   </para>
+   <para>
+    You are encouraged to switch to the newer 5.x version, as KDE PIM 4.x will
+    be removed in the future.
+   </para>
+   <para>
+    However, not all settings are migrated from the older version at this time.
+    For more information, see the bug report at
+    <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1001872"/>).
+   </para>
+  </sect2>
 
   <!-- boo#1009275 -->
-  <section xml:id="sec.general.dolphin-permission">
+  <sect2 xml:id="sec.general.dolphin-permission">
    <title>Dolphin Does Not Set Extended Permission Bits</title>
    <para>
     The version of the KDE file manager Dolphin that is shipped with
-    &opensuseleap; &version; cannot set
-    <quote>Extended Permission</quote> bits (GID,
+    &thisversion; cannot set <quote>Extended Permission</quote> bits (GID,
     <quote>Sticky</quote>). Additionally, closing the Dolphin permissions
     dialog by clicking <guimenu>OK</guimenu> clears existing extended
     permissions bits.
@@ -763,9 +553,9 @@
     To avoid such issues, edit permissions with Konqueror (GUI) or
     <command>chmod</command> (command line) only.
    </para>
-  </section>
+  </sect2>
 
-  <section xml:id="sec.general.gdm">
+  <sect2 xml:id="sec.general.gdm">
    <title>No Screen Lock When Using GNOME Shell But Not GDM</title>
    <para>
     When using GNOME Shell together with a login manager other than GDM, such
@@ -790,9 +580,8 @@
     </step>
     <step>
      <para>
-      Navigate to
-      <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</guimenu>
-      <guimenu>DISPLAYMANAGER</guimenu></menuchoice>.
+      Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display
+      manager</guimenu> <guimenu>DISPLAYMANAGER</guimenu></menuchoice>.
      </para>
     </step>
     <step>
@@ -807,38 +596,33 @@
      </para>
     </step>
    </procedure>
-  </section>
+  </sect2>
 
-  <!-- <section xml:id="sec.general.nonoss">
+  <!-- <sect2 xml:id="sec.general.nonoss">
     <title>Non-Oss Repository</title>
     <para>
      After the installation, the non-oss repository is disabled.
     </para>
     <para>
-     Enable the <literal>openSUSE-Leap-42.2-Non-Oss</literal> repository using
+     Enable the <literal>openSUSE-Leap-42.3-Non-Oss</literal> repository using
      YaST or on the command line using zypper:
      <screen>zypper mr -e repo-non-oss</screen>
     </para>
-   </section> -->
+   </sect2> -->
+ </sect1>
 
- </section>
-
-<!-- <section xml:id="technical">
+ <!-- <sect1 xml:id="technical">
   <title>Technical</title>
   <para/>
 
-  </section> -->
-
-
- <!-- <section xml:id="misc">
+ </sect1> -->
+ <!-- <sect1 xml:id="misc">
   <title>Miscellaneous</title>
+  <para/>
+ </sect1> -->
 
- </section> -->
-
- <section xml:id="feedback">
-  <!-- bnc#809347 -->
+ <sect1 xml:id="feedback">
   <title>More Information and Feedback</title>
-
   <itemizedlist>
    <listitem>
     <para>
@@ -869,13 +653,14 @@
    </listitem>
    <listitem>
     <para>
-     <link xlink:href="https://doc.opensuse.org/"/> contains additional
-     or updated documentation.</para>
+     For additional or updated documentation, see
+     <link xlink:href="https://doc.opensuse.org/"/>.
+    </para>
    </listitem>
    <listitem>
     <para>
-     Visit <link xlink:href="https://www.opensuse.org"/> for the latest product news
-     from &opensuse;.
+     For the latest product news, from &opensuse;, visit
+     <link xlink:href="https://www.opensuse.org"/>.
     </para>
    </listitem>
   </itemizedlist>
@@ -890,6 +675,5 @@
   <para>
    The &opensuse; Team.
   </para>
- </section>
-
+ </sect1>
 </article>

@@ -17,9 +17,6 @@ LANGSEN := $(LANGS) en
 ifndef STYLEROOT
   STYLEROOT := /usr/share/xml/docbook/stylesheet/opensuse2013-ns
 endif
-ifndef SCHEMA
-  SCHEMA := file:///usr/share/xml/docbook/schema/rng/5.1/docbookxi.rnc
-endif
 ifndef VERSION
   VERSION := unreleased
 endif
@@ -49,7 +46,7 @@ DIRS := $(foreach l, $(LANGSEN), build/release-notes.$(l)/yast-html/)
 # Gets the language code: release-notes.en.xml => en
 LANG_COMMAND = `echo $@ | awk -F '.' '{gsub("/.*","",$$2); print($$2)}'`
 LANG_COMMAND_PROFILE = `echo $@ | awk -F '.' '{gsub("/.*","",$$3); print($$3)}'`
-DAPS_COMMAND_BASIC = daps -vv --styleroot $(STYLEROOT) --schema=$(SCHEMA)
+DAPS_COMMAND_BASIC = daps -vv --styleroot $(STYLEROOT)
 DAPS_COMMAND = $(DAPS_COMMAND_BASIC) -m xml/release-notes.$${lang}.xml
 
 XSLTPROC_COMMAND = xsltproc \
