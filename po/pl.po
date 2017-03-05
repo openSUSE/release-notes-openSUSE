@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-09 11:56+0100\n"
-"PO-Revision-Date: 2017-01-07 09:20+0000\n"
+"PO-Revision-Date: 2017-03-05 21:40+0000\n"
 "Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/pl/>\n"
@@ -66,12 +66,19 @@ msgid "Minimal System Installation"
 msgstr "Minimalna instalacja systemu"
 
 #: xml/release-notes.xml:105(para)
+#, fuzzy
 msgid "In order to avoid some big recommended packages from getting installed the pattern for minimal installations uses another pattern that conflicts with the undesired packages. That pattern can be removed after installation, it's called <literal>patterns-openSUSE-minimal_base-conflicts</literal>"
 msgstr ""
+"Aby uniknąć instalacji niektórych dużych paczek, wzorzec (pattern) "
+"minimalnej instalacji wykorzystuje inny wzorzec, który tworzy konflikt z "
+"niechcianymi paczkami. Ten wzorzec, <literal>patterns-openSUSE-minimal_base-"
+"conflicts</literal>, może być usunięty po zakończeniu instalacji."
 
 #: xml/release-notes.xml:112(para)
 msgid "Note that the minimal installation has no firewall by default. If you need one, install <literal>SuSEfirewall2</literal>"
 msgstr ""
+"Zauważ że minimalna instalacja nie zawiera domyślnie firewalla. Jeżeli jest "
+"on wymagany, zainstaluj <literal>SuSEfirewall2</literal>"
 
 #: xml/release-notes.xml:120(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
@@ -104,14 +111,24 @@ msgstr ""
 #: xml/release-notes.xml:153(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr ""
+"Dodatkowo, w specyfikacji UEFI partycje MRB (MS-DOS) są kompatybilne wstecz. "
+"Program rozruchowy LINUX (ELILO lub GRUB2) próbuje automatycznie wygenerować "
+"GUID dla tych partycji i zapisuje je w firmwarze. Takie GUID mogą się często "
+"zmieniać, wywołując nadpisanie w firmwarze. Na nadpisanie składają się dwie "
+"operacje: Usunięcie starego wpisu oraz stworzenie nowego który zastępuje "
+"pierwszy."
 
 #: xml/release-notes.xml:162(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr ""
+"Nowoczesny firmware posiada kolektor śmieci który zbiera usunięte wpisy i "
+"uwalnia pamięć zarezerwowaną dla starego wpisu.Problem powstaje gdy wadliwy "
+"firmware nie zbiera oraz uwalnia tych wpisów. Może to doprowadzić do "
+"problemów z uruchomieniem systemu."
 
 #: xml/release-notes.xml:168(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
-msgstr ""
+msgstr "W celu ominięcia problemu, przekształć stare partycje MRB na GPT."
 
 #: xml/release-notes.xml:181(title)
 msgid "System Upgrade"
@@ -123,15 +140,18 @@ msgstr "Informacje ogólne"
 
 #: xml/release-notes.xml:191(title)
 msgid "Non-Oss Repository"
-msgstr ""
+msgstr "Repozytorium Non-Oss"
 
 #: xml/release-notes.xml:192(para)
 msgid "After the installation the non-oss repository is disabled"
-msgstr ""
+msgstr "Po zakończeniu instalacji repozytorium non-oss zostanie wyłączone"
 
 #: xml/release-notes.xml:193(para)
 msgid "Enable the <literal>openSUSE-Leap-42.1-Non-Oss</literal> repository using YaST or on the command line using zypper: <screen>zypper mr -e repo-non-oss</screen>"
 msgstr ""
+"Włącz repozytorium <literal>openSUSE-Leap-42.1-Non-Oss</literal> przy pomocy "
+"YaST lub w linii komend używając zypper:<screen>zypper mr -e repo-non-"
+"oss</screen>"
 
 #: xml/release-notes.xml:203(title)
 msgid "Technical"
@@ -140,19 +160,30 @@ msgstr "Informacje techniczne"
 #. sort_key="None"; non-rn-fate-cats="";
 #: xml/release-notes.xml:208(title)
 msgid "Printing System: Improvements and Incompatible Changes"
-msgstr ""
+msgstr "System druku: Usprawnienia oraz niekompatybilne zmiany"
 
 #: xml/release-notes.xml:211(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
-msgstr ""
+msgstr "Wersja CUPS zaktualizowana do 1.7"
 
 #: xml/release-notes.xml:213(para)
 msgid "CUPS &gt;= 1.6 has major incompatible changes compared to CUPS up to version 1.5.4 in particular when printing via network:"
 msgstr ""
+"CUPS &gt;=1.6 posiada niekompatybilne zmiany w porównaniu z wersjami 1.5.4 "
+"oraz wcześniejszymi w szczególności przy drukowaniu sieciowym:"
 
 #: xml/release-notes.xml:214(para)
 msgid "The IPP protocol default version increased from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SLE 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink> ). By adding '/version=1.1' to ServerName in client.conf (e.g., ServerName older.server.example.com/version=1.1) or to the CUPS_SERVER environment variable value or by adding it to the server name value of the '-h' option (e.g., lpstat -h older.server.example.com/version=1.1 -p) the older IPP protocol version for older servers must be specified explicitly."
 msgstr ""
+"Domyślna wersja protokołu IPP zwiększona z 1.1 do 2.0. Starsze serwery IPP "
+"jak CUPS 1.3.x (na przykład z SLE 11) odrzucają zapytania IPP 2.0 z "
+"komunikatem \"Bad Request\" (szczegóły na <ulink url=\""
+"http://www.cups.org/str.php?L4231\""
+">http://www.cups.org/str.php?L4231</ulink>). Poprzez dodanie '/version=1.1' "
+"do 'ServerName' w client.conf(n.p. ServerName starszy.serwer.com/version=1.1)"
+" lub w wartości zmiennej środowiskowej CUPS_SERVER lub poprzez dodanie do "
+"nazwy serwera opcji '-h'  (n.p. lpstat -h starszy.serwer.com/version=1.1 -p) "
+"starsze wersje serwerów muszą być dokładnie określone."
 
 #: xml/release-notes.xml:215(para)
 msgid "CUPS Browsing is dropped in CUPS but the new package cups-filters provides the cups-browsed that provides basic CUPS Browsing and Polling functionality. The native protocol in CUPS for automatic client discovery of printers is now DNS-SD. Start cups-browsed on the local host to receive traditional CUPS Browsing information from traditional remote CUPS servers. To broadcast traditional CUPS Browsing information into the network so that traditional remote CUPS clients can receive it, set \"BrowseLocalProtocols CUPS\" in <literal moreinfo=\"none\">/etc/cups/cups-browsed.conf</literal> and start cups-browsed."
