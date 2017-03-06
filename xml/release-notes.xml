@@ -205,11 +205,26 @@
   <sect2 xml:id="sec.upgrade.422">
    <title>Upgrading from &opensuseleap; 42.2</title>
    <para/>
+   <sect3 xml:id="sec.upgrade.422.removed">
+    <title>Removed and Replaced Packages</title>
+    <para>
+     The following packages have been removed or replaced compared to
+     &opensuseleap; 42.2:
+    </para>
+    <itemizedlist>
+     <listitem>
+      <para>
+       <package>fontinfo</package>: Was never intended to be released as a
+       stable package.
+      </para>
+     </listitem>
+    </itemizedlist>
+   </sect3>
   </sect2>
 
   <sect2 xml:id="sec.upgrade.421">
    <title>Upgrading from &opensuseleap; 42.1</title>
-   <sect3 xml:id="sec.upgrade.dropped">
+   <sect3 xml:id="sec.upgrade.421.removed">
     <title>Removed and Replaced Packages</title>
     <para>
      The following packages have been removed or replaced compared to
@@ -297,7 +312,7 @@
     </itemizedlist>
    </sect3>
    <!-- FATE#320834 -->
-   <sect3 xml:id="sec.upgrade.cache">
+   <sect3 xml:id="sec.upgrade.421.cache">
     <title><filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback</title>
     <para>
      <filename>/var/cache</filename> contains a lot of very volatile data, such
@@ -312,7 +327,7 @@
      done automatically. To convert an existing root file system, perform the
      following steps:
     </para>
-    <procedure xml:id="pro.upgrade.cache">
+    <procedure xml:id="pro.upgrade.421.cache">
      <step>
       <para>
        Find out the device name (for example,
@@ -411,7 +426,7 @@
     </procedure>
    </sect3>
    <!-- boo#1012371 -->
-   <sect3 xml:id="sec.upgrade.gpg-gnome">
+   <sect3 xml:id="sec.upgrade.421.gpg-gnome">
     <title>GNOME Keyring Does Not Integrate with GPG Anymore</title>
     <para>
      The integrated GPG agent of GNOME Keyring has been removed. Therefore,
@@ -459,7 +474,7 @@
    </sect3>
 
    <!-- boo#998663 -->
-   <sect3 xml:id="sec.upgrade.aarch64-64k">
+   <sect3 xml:id="sec.upgrade.421.aarch64-64k">
     <title>AArch64: Page Size Has Been Changed From &opensuseleap; 42.1 to &thisversion;</title>
     <para>
      In &opensuseleap; 42.1, the default page size on AArch64 platforms was 64
@@ -473,7 +488,7 @@
    </sect3>
 
    <!-- boo#1006175 -->
-   <sect3 xml:id="sec.upgrade.cciss">
+   <sect3 xml:id="sec.upgrade.421.cciss">
     <title>Systems with CCISS Controllers Can Fail to Boot After Upgrade</title>
     <para>
      The driver for Compaq/HP Smart Array (CCISS) controllers
