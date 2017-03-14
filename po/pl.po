@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-21 14:25+0200\n"
-"PO-Revision-Date: 2017-03-12 21:20+0000\n"
+"PO-Revision-Date: 2017-03-14 20:51+0000\n"
 "Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_1/pl/>\n"
@@ -140,28 +140,39 @@ msgstr ""
 
 #: xml/release-notes.xml:184(title)
 msgid "Network Interface Names"
-msgstr ""
+msgstr "Nazwy interfejsów sieciowych"
 
 #: xml/release-notes.xml:185(para)
 msgid "When upgrading a remote machine from openSUSE 13.2, make sure your network interfaces are named correctly."
 msgstr ""
+"Jeżeli aktualizujesz zdalną maszynę z openSUSE 13.2, upewnij się że twoje "
+"interfejsy sieciowe są poprawnie nazwane."
 
 #: xml/release-notes.xml:189(para)
 msgid "openSUSE 13.2 used so-called predictable network interface names (for example, <literal>enp5s0</literal>), whereas openSUSE Leap 42.1 uses persistent interface names (<literal>eth0</literal>). After upgrading and rebooting, the network interface names may therefore change. This could lock you out of the system. To avoid interfaces from being renamed, run the following command for each of your network interfaces before you reboot the system:"
 msgstr ""
+"OpenSUSE 13.2 wykorzystywało tak zwane przewidywalne nazwy interfejsów "
+"sieciowych (np. <literal>enp5s0</literal>), natomiast openSUSE Leap 42.1 "
+"wykorzystuje trwałe nazwy interfejsów (<literal>eth0</literal>). Po "
+"aktualizacji i restarcie, nazwy interfejsów sieciowych mogą ulec zmianie. "
+"Może to spowodować ze system będzie nie osiągalny. Aby uniknąć zmian nazwy "
+"na interfejsach, uruchom podaną komendę dla każdego z interfejsów przed "
+"restartem systemu:"
 
 #: xml/release-notes.xml:198(replaceable)
 msgid "enp5s0"
-msgstr ""
+msgstr "enp5s0"
 
 #: xml/release-notes.xml:198(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
+"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
+"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
 #: xml/release-notes.xml:200(para)
 msgid "Replace <replaceable>enp5s0</replaceable> with the name of your network interface."
-msgstr ""
+msgstr "Zamień <replaceable>enp5s0</replaceable> nazwą swojego interfejsu."
 
 #: xml/release-notes.xml:207(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
