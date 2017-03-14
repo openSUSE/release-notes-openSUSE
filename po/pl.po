@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-17 12:52+0100\n"
-"PO-Revision-Date: 2017-03-12 21:20+0000\n"
+"PO-Revision-Date: 2017-03-14 20:51+0000\n"
 "Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/pl/>\n"
@@ -93,6 +93,10 @@ msgid ""
 "version. Before starting the upgrade, make sure that all maintenance updates "
 "for openSUSE Leap 42.2 are applied."
 msgstr ""
+"Okres wsparcia openSUSE 42.2 dobiegł końca. Aby system pozostał aktualny i "
+"bezpieczny, należy go zaktualizować do aktualnej wersji openSUSE. Przed "
+"rozpoczęciem aktualizacji, upewnij się że wszystkie poprawki openSUSE 42.2 "
+"zostały zainstalowane."
 
 #: xml/release-notes.xml:61(para)
 #, fuzzy
@@ -104,9 +108,8 @@ msgid ""
 "For more information about upgrading to a current openSUSE version, see "
 "<link href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgstr ""
-"Do zgłąszania problemów z tą wersją, skorzystaj z Bugzilli openSUSE. W celu "
-"uzyskania sodatkowych informacji odwiedź <link href=\"http://en.opensuse.org/"
-"Submitting_Bug_Reports\"/>."
+"W celu uzyskania informacji o aktualizacji do aktualnej wersji openSUSE, "
+"sprawdź <link href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 
 #. Previous Release Notes
 #: xml/release-notes.xml:67(para)
@@ -229,7 +232,6 @@ msgstr ""
 "dużo</quote>."
 
 #: xml/release-notes.xml:136(para)
-#, fuzzy
 msgid ""
 "openSUSE minimizes the risk by not writing more than the bare minimum "
 "required to boot the OS. The minimum means telling the UEFI firmware about "
@@ -239,15 +241,13 @@ msgid ""
 "is recommended to install any firmware updates the hardware vendor "
 "recommends."
 msgstr ""
-"<emphasis>Wyjaśnienie:</emphasis> Zdarza się, że firmware interfejsu UEFI "
-"zawiera błędy, które powodują niepoprawne działanie, gdy zbyt duża ilość "
-"danych jest zapisywana w buforze UEFI. Nie wiadomo jak dużo to \"za dużo\". "
 "openSUSE ogranicza ryzyko zapisania większej ilości danych niż jest to "
 "niezbędne. Wskazane jest wyłącznie położenie menadżera rozruchu openSUSE. "
 "Jądro Linux zapewnia możliwość użycia bufora UEFI do zapisywania informacji "
-"dotyczących uruchamiania i błędów, jednakże funkcja (<literal>pstore</"
-"literal>) domyślnie jest zablokowana. Niezależnie od tego zaleca się "
-"instalowanie aktualizacji firmware polecanych przez producenta sprzętu."
+"dotyczących uruchamiania i błędów, jednakże funkcja "
+"(<literal>pstore</literal>) domyślnie jest zablokowana. Niezależnie od tego "
+"zaleca się instalowanie aktualizacji firmware polecanych przez producenta "
+"sprzętu."
 
 #: xml/release-notes.xml:149(title)
 msgid "Installer Crashes When Set to Mount by Label by Default"
@@ -810,13 +810,15 @@ msgstr ""
 
 #: xml/release-notes.xml:524(title)
 msgid "Network Interface Names"
-msgstr ""
+msgstr "Nazwy interfejsów sieciowych"
 
 #: xml/release-notes.xml:525(para)
 msgid ""
 "When upgrading a remote machine from openSUSE 13.2, make sure your network "
 "interfaces are named correctly."
 msgstr ""
+"Jeżeli aktualizujesz zdalną maszynę z openSUSE 13.2, upewnij się że twoje "
+"interfejsy sieciowe są poprawnie nazwane."
 
 #: xml/release-notes.xml:529(para)
 msgid ""
@@ -828,21 +830,30 @@ msgid ""
 "following command for each of your network interfaces before you reboot the "
 "system:"
 msgstr ""
+"OpenSUSE 13.2 wykorzystywało tak zwane przewidywalne nazwy interfejsów "
+"sieciowych (np. <literal>enp5s0</literal>), natomiast openSUSE Leap 42.1 "
+"wykorzystuje trwałe nazwy interfejsów (<literal>eth0</literal>). Po "
+"aktualizacji i restarcie, nazwy interfejsów sieciowych mogą ulec zmianie. "
+"Może to spowodować ze system będzie nie osiągalny. Aby uniknąć zmian nazwy "
+"na interfejsach, uruchom podaną komendę dla każdego z interfejsów przed "
+"restartem systemu:"
 
 #: xml/release-notes.xml:538(replaceable)
 msgid "enp5s0"
-msgstr ""
+msgstr "enp5s0"
 
 #: xml/release-notes.xml:538(screen)
 #, no-wrap
 msgid "/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n <placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 msgstr ""
+"/usr/lib/udev/udev-generate-persistent-rule -v -c <placeholder-1/> -n "
+"<placeholder-2/> -o /etc/udev/rules.d/70-persistent-net.rules"
 
 #: xml/release-notes.xml:540(para)
 msgid ""
 "Replace <replaceable>enp5s0</replaceable> with the name of your network "
 "interface."
-msgstr ""
+msgstr "Zamień <replaceable>enp5s0</replaceable> nazwą swojego interfejsu."
 
 #: xml/release-notes.xml:548(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
