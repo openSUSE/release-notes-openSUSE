@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-17 12:52+0100\n"
-"PO-Revision-Date: 2017-03-14 20:51+0000\n"
+"PO-Revision-Date: 2017-03-19 21:48+0000\n"
 "Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/pl/>\n"
@@ -857,7 +857,7 @@ msgstr "Zamień <replaceable>enp5s0</replaceable> nazwą swojego interfejsu."
 
 #: xml/release-notes.xml:548(title)
 msgid "Btrfs: Disk Space Leak after System Rollbacks"
-msgstr ""
+msgstr "Btrfs: Wyciek przestrzeni dysku po operacji przywracania systemu"
 
 #: xml/release-notes.xml:549(para)
 msgid ""
@@ -867,26 +867,37 @@ msgid ""
 "openSUSE Leap 42.1. However, the fix can only be applied to newly installed "
 "systems."
 msgstr ""
+"Domyślnie openSUSE 13.2 wykorzystywał rozkład partycji Btrfs, który pozwalał "
+"na permanentne zajęcie przestrzeni dyskowej przez statyczne i nie osiągalne "
+"treści, gdy pierwsze przywracanie systemu zostało uruchomione. Ten problem "
+"został naprawiony w openSUSE Leap 42.1. Jednakże, poprawka może być "
+"zastosowana jedynie w nowo instalowanych systemach."
 
 #: xml/release-notes.xml:556(para)
 msgid ""
 "If you are upgrading from openSUSE 13.2, you cannot convert the file system "
 "to the new layout, but you can reclaim the lost disk space."
 msgstr ""
+"Jeżeli przeprowadzasz aktualizację z openSUSE 13.2. możesz przekształcić "
+"system plików do nowego rozkładu, ale nie możesz odzyskać utraconej "
+"przestrzeni dyskowej."
 
 #: xml/release-notes.xml:561(title)
 msgid "Data Loss with Non-Standard Settings or No Rollbacks"
-msgstr ""
+msgstr "Utrata danych przy ne standardowych ustawieniach lub bez przywracania"
 
 #: xml/release-notes.xml:562(para)
 msgid ""
 "The following procedure will only work properly on installations set up "
 "using the default proposal created by the openSUSE 13.2 installer."
 msgstr ""
+"Poniższa procedura zadziała wyłącznie na instalacjach skonfigurowanych przy "
+"wykorzystaniu domyślnych wartości zaproponowanych przez instalator openSUSE "
+"13.2."
 
 #: xml/release-notes.xml:566(para)
 msgid "Additionally, you must have previously made a system rollback."
-msgstr ""
+msgstr "Dodatkowo, należało wcześniej dokonać operacji przywracania systemu."
 
 #: xml/release-notes.xml:569(para)
 msgid ""
@@ -894,32 +905,35 @@ msgid ""
 "or have not previously made a system rollback, executing the following "
 "procedure can incur data loss."
 msgstr ""
+"Jeżeli użyto nie standardowych opcji do skonfigurowania systemu plików Btrfs "
+"lub nie dokonano wcześniej procedury przywracania systemu, wywołanie "
+"następującej procedury może doprowadzić do utraty danych."
 
 #: xml/release-notes.xml:577(para)
 msgid "Mount the initial root file system:"
-msgstr ""
+msgstr "Zamontuj początkowy system plików root:"
 
 #: xml/release-notes.xml:580(replaceable)
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-msgstr ""
+msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
 
 #: xml/release-notes.xml:580(screen)
 #, no-wrap
 msgid "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
-msgstr ""
+msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 
 #: xml/release-notes.xml:583(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
-msgstr ""
+msgstr "Usuń wszystkie pliki w /mnt które nie są w sub-volumenie:"
 
 #: xml/release-notes.xml:586(screen)
 #, no-wrap
 msgid "find /mnt -xdev -delete"
-msgstr ""
+msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:589(para)
 msgid "Umount the file system again:"
-msgstr ""
+msgstr "Od montuj system plików:"
 
 #: xml/release-notes.xml:598(title)
 msgid "Printing System: Improvements and Incompatible Changes"
