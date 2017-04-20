@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2017-04-20 17:40+0200\n"
-"PO-Revision-Date: 2017-03-06 22:34+0000\n"
+"PO-Revision-Date: 2017-04-20 22:50+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_3/ja/>\n"
@@ -328,10 +328,9 @@ msgstr ""
 
 #: xml/release-notes.xml:224(title)
 msgid "Synaptics Touchpad Driver with KDE Plasma"
-msgstr ""
+msgstr "KDE Plasma を利用した場合の Synaptics タッチパッドドライバについて"
 
 #: xml/release-notes.xml:225(para)
-#, fuzzy
 #| msgid ""
 #| "In openSUSE Leap 42.1, the Synaptics X driver (package <package>xf86-"
 #| "input-synaptics</package>) was installed by default but had a lower "
@@ -343,13 +342,12 @@ msgid ""
 "upgrade.synaptics\"/>). However, KDE Plasma only offers limited "
 "configuration options for the replacement, libinput."
 msgstr ""
-"openSUSE Leap 42.1 では、 Synaptics X ドライバ (パッケージ <package>xf86-"
-"input-synaptics</package>) が既定でインストールされますが、 libinput のドライ"
-"バ (パッケージ <package>xf86-input-libinput</package>) より低い優先度に設定さ"
-"れてしまっています。"
+"openSUSE Leap 42.2 では、 X11 synaptics ドライバ (パッケージ <package>xf86-input-"
+"synaptics</package>) は既定ではインストールされませんでした (詳しくは <xref linkend=\"sec.upgrade."
+"synaptics\"/> をお読みください) 。しかしながら KDE Plasma では、 libibput "
+"と呼ばれる置換ドライバに対して、限定的な設定オプションしか提供していません。"
 
 #: xml/release-notes.xml:231(para)
-#, fuzzy
 #| msgid ""
 #| "In openSUSE Leap 42.1, the Synaptics X driver (package <package>xf86-"
 #| "input-synaptics</package>) was installed by default but had a lower "
@@ -360,20 +358,20 @@ msgid ""
 "package is installed together with the KDE Plasma desktop (recommended by "
 "<package>plasma5-workspace</package>)."
 msgstr ""
-"openSUSE Leap 42.1 では、 Synaptics X ドライバ (パッケージ <package>xf86-"
-"input-synaptics</package>) が既定でインストールされますが、 libinput のドライ"
-"バ (パッケージ <package>xf86-input-libinput</package>) より低い優先度に設定さ"
-"れてしまっています。"
+"openSUSE Leap 42.3 以降では、 KDE Plasma デスクトップをインストールすることで、 <package>xf86-input-"
+"synaptics</package> パッケージもインストールされるようになります "
+"(<package>plasma5-workspace</package> パッケージ側で推奨が設定されています) 。"
 
 #: xml/release-notes.xml:238(title)
 msgid "Changes in KDE Desktop Search Indexing"
-msgstr ""
+msgstr "KDE デスクトップ検索の索引作成に対する変更について"
 
 #: xml/release-notes.xml:239(para)
 msgid ""
 "In openSUSE Leap 42.3, the desktop search only indexes file names by "
 "default, not the contents of files."
 msgstr ""
+"openSUSE Leap 42.3 では、既定ではデスクトップ検索はファイル名のみを索引対象とし、ファイルの内容については索引対象とはしなくなりました。"
 
 #: xml/release-notes.xml:243(para)
 msgid ""
@@ -381,24 +379,26 @@ msgid ""
 "enabled before, as the previous default was not saved to the configuration. "
 "To do so, follow these steps:"
 msgstr ""
+"以前のバージョンではファイルの内容が索引に含まれていましたが、その時点での既定値は保存されていないため、これを含めたい場合は、再度手作業で有効化する必要が"
+"あります。具体的には下記の手順を実施します:"
 
 #: xml/release-notes.xml:250(para)
 msgid ""
 "Using the main menu or krunner, open the <guimenu>Desktop Configuration</"
 "guimenu>."
-msgstr ""
+msgstr "メインメニューまたは krunner を利用して、 <guimenu>デスクトップ設定</guimenu> を開きます。"
 
 #: xml/release-notes.xml:256(para)
 msgid "Click <guimenu>Search</guimenu>."
-msgstr ""
+msgstr "<guimenu>検索</guimenu> を押します。"
 
 #: xml/release-notes.xml:261(para)
 msgid "Activate the check box <guimenu>Also index file content</guimenu>."
-msgstr ""
+msgstr "<guimenu>ファイルの内容も索引に含める</guimenu> のチェックボックスにチェックを入れます。"
 
 #: xml/release-notes.xml:266(para)
 msgid "Click <guimenu>Apply</guimenu>."
-msgstr ""
+msgstr "<guimenu>適用</guimenu> を押します。"
 
 #: xml/release-notes.xml:275(title)
 msgid "Upgrading from openSUSE Leap 42.1"
@@ -827,7 +827,6 @@ msgid "KDE Software for Personal Information Management (KDE PIM)"
 msgstr "個人情報管理 (PIM) 用の KDE ソフトウエアについて"
 
 #: xml/release-notes.xml:566(para)
-#, fuzzy
 #| msgid ""
 #| "KDE PIM 4.x is no longer supported by upstream KDE, but was kept to avoid "
 #| "disrupting user workflows."
@@ -836,14 +835,16 @@ msgid ""
 "Leap 42.2 together with KDE PIM 5 to avoid disrupting user workflows and "
 "allow for easier migration."
 msgstr ""
-"KDE PIM 4.x は提供元である KDE プロジェクトでは既にサポートが提供されていませ"
-"んが、 openSUSE ではユーザの混乱を防ぐために従来どおり提供されています。"
+"KDE PIM 4.x は提供元である KDE プロジェクトでは既にサポートが提供されていませんが、 openSUSE Leap 42.2 "
+"ではユーザの混乱を防ぐために KDE PIM 5 と共に従来どおり提供され、移行を容易にしていました。"
 
 #: xml/release-notes.xml:571(para)
 msgid ""
 "With openSUSE Leap 42.3, the KDE PIM 4.x stack got dropped and only the "
 "current upstream-supported KDE PIM 5 stack is included."
 msgstr ""
+"openSUSE Leap 42.3 では KDE PIM 4.x のスタックが廃止されており、現在提供元でサポートされている KDE PIM 5 "
+"のみが含まれています。"
 
 #: xml/release-notes.xml:579(title)
 msgid "Dolphin Does Not Set Extended Permission Bits"
@@ -929,28 +930,29 @@ msgid "Reboot."
 msgstr "最後にシステムを再起動してください。"
 
 #: xml/release-notes.xml:637(title)
-#, fuzzy
 #| msgid "No Screensaver Support in KDE Plasma"
 msgid "Global Menu Support in KDE Plasma"
-msgstr "KDE Plasma でのスクリーンセーバサポートについて"
+msgstr "KDE Plasma でのグローバルメニューのサポートについて"
 
 #: xml/release-notes.xml:638(para)
 msgid ""
 "With KDE Plasma 5.9, KDE re-introduced support for the global menu as known "
 "from earlier KDE desktop releases."
 msgstr ""
+"KDE Plasma 5.9 では、 KDE は以前の KDE "
+"デスクトップリリースで提供されていた、グローバルメニューを再度サポートするようになりました。"
 
 #: xml/release-notes.xml:642(para)
 msgid ""
 "In openSUSE Leap 42.3, the application menu bar plasmoid is available as "
 "well."
-msgstr ""
+msgstr "openSUSE Leap 42.3 では、アプリケーションのメニューバープラズモイドも利用できるようになっています。"
 
 #: xml/release-notes.xml:647(para)
 msgid ""
 "Applications not using the Qt toolkit may not support the global menu or "
 "behave incorrectly."
-msgstr ""
+msgstr "Qt ツールキットを利用しないアプリケーションでは、グローバルメニューを利用することができないか、もしくは正しく動作しない場合があります。"
 
 #: xml/release-notes.xml:678(title)
 msgid "More Information and Feedback"
