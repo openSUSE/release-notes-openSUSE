@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2017-04-20 17:40+0200\n"
-"PO-Revision-Date: 2017-06-04 19:25+0000\n"
-"Last-Translator: Victor hck <correohck@gmail.com>\n"
+"PO-Revision-Date: 2017-06-05 21:44+0000\n"
+"Last-Translator: jc sl <trcs@gmx.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_3/es/>\n"
 "Language: es\n"
@@ -45,7 +45,6 @@ msgid "42.3"
 msgstr "42.3"
 
 #: xml/release-notes.xml:21(para)
-#, fuzzy
 #| msgid ""
 #| "openSUSE Leap is a free and Linux-based operating system for your PC, "
 #| "Laptop or Server. You can surf the web, manage your e-mails and photos, "
@@ -56,7 +55,7 @@ msgid ""
 "work, play videos or music and have a lot of fun!"
 msgstr ""
 "openSUSE Leap es un sistema operativo libre y basado en Linux para su PC, "
-"ordenador portátil o servidor. Usted puede navegar por la web, gestionar sus "
+"ordenador portátil o servidor. Podrá navegar por la web, gestionar sus "
 "correos electrónicos y fotos, hacer trabajo de oficina, reproducir vídeos o "
 "música, ¡y divertirse un montón!"
 
@@ -84,7 +83,6 @@ msgstr ""
 "openSUSE 42.3."
 
 #: xml/release-notes.xml:41(para)
-#, fuzzy
 #| msgid ""
 #| "The release notes are under constant development. To find out about the "
 #| "latest updates, see the online version at <link href=\"https://doc."
@@ -97,9 +95,9 @@ msgid ""
 "org/release-notes\"/>. The English release notes are updated whenever need "
 "arises. Translated language versions can temporarily be incomplete."
 msgstr ""
-"Las notas de la versión están en constante desarrollo. Para conocer más "
-"acerca de las últimas actualizaciones, consulte la versión en línea en <link "
-"href=\"https://doc.opensuse.org/release-notes\"/>. La versión en inglés se "
+"Las notas de la versión están en constante desarrollo. Para saber más sobre "
+"las últimas actualizaciones, consulte la versión en línea en <link href=\""
+"https://doc.opensuse.org/release-notes\"/>. La versión en inglés se "
 "actualiza en cuanto es necesario. Las versiones traducidas pueden estar "
 "incompletas temporalmente."
 
@@ -808,15 +806,14 @@ msgstr ""
 "openSUSE Leap 42.3"
 
 #: xml/release-notes.xml:528(para)
-#, fuzzy
 msgid ""
 "In openSUSE Leap 42.1, the default page size on AArch64 platforms was 64 kB. "
 "With openSUSE Leap 42.3, the page size has been changed to 4 kB. This "
 "renders old Swap and Btrfs file systems unusable."
 msgstr ""
 "En openSUSE Leap 42.1, el tamaño de página en plataformas AArch64 era de 64 "
-"kB. Con openSUSE Leap 42.3, el tamaño de la página ha sido cambiado a 4 kB. "
-"Esto hace que las antiguos sistemas de archivos Swap y Btrfs no sean "
+"kB. Con openSUSE Leap 42.3, el tamaño de página ha sido cambiado a 4 kB. "
+"Esto hace que el antiguo sistema de archivos Swap y Btrfs no sean "
 "utilizables."
 
 #: xml/release-notes.xml:533(para)
@@ -841,6 +838,10 @@ msgid ""
 "can lead to the root disk not being detected by the openSUSE Leap 42.3 "
 "kernel."
 msgstr ""
+"El manejador de dispositivo para los controladores Compaq/HP Smart Array "
+"(CCISS) (<filename>cciss.ko</filename>) ya no admite ciertos controladores "
+"de forma predeterminada. Esto puede causar que el disco raíz no sea "
+"detectado por el kernel de openSUSE Leap 42.3."
 
 #: xml/release-notes.xml:548(para)
 msgid ""
@@ -848,6 +849,10 @@ msgid ""
 "previous behavior and detect the controllers again. To do so, add the kernel "
 "parameter <literal>cciss.cciss_allow_hpsa=0</literal>."
 msgstr ""
+"En los sistemas afectados, el controlador CCISS puede ser configurado para "
+"comportarse como lo hacía antes y detectar de nuevo los controladores. Para "
+"hacerlo, añada el parámetro del kernel "
+"<literal>cciss.cciss_allow_hpsa=0</literal>."
 
 #: xml/release-notes.xml:557(title)
 msgid "General"
@@ -882,14 +887,19 @@ msgstr ""
 "usuarios y permitir una migración más sencilla."
 
 #: xml/release-notes.xml:571(para)
+#, fuzzy
 msgid ""
 "With openSUSE Leap 42.3, the KDE PIM 4.x stack got dropped and only the "
 "current upstream-supported KDE PIM 5 stack is included."
 msgstr ""
+"En openSUSE Leap 42.3, la pila KDE PIM 4.x ha sido eliminada y solo se "
+"incluye la versión actual KDE PIM 5 mantenida por los desarrolladores del "
+"proyecto."
 
 #: xml/release-notes.xml:579(title)
+#, fuzzy
 msgid "Dolphin Does Not Set Extended Permission Bits"
-msgstr ""
+msgstr "Dolphin no establece bits de ampliación de permisos"
 
 #: xml/release-notes.xml:580(para)
 msgid ""
@@ -898,23 +908,34 @@ msgid ""
 "<quote>Sticky</quote>). Additionally, closing the Dolphin permissions dialog "
 "by clicking <guimenu>OK</guimenu> clears existing extended permissions bits."
 msgstr ""
+"La versión del administrador de archivos Dolphin de KDE que se incluye con "
+"openSUSE Leap 42.3 no puede establecer bits de <quote>Ampliación de "
+"permisos</quote> (GID, <quote>Pegajoso</quote>). Además, cerrar el diálogo "
+"de permisos de Dolphin haciendo clic en <guimenu>Aceptar</guimenu> elimina "
+"los bits de ampliación de permisos ya existentes."
 
 #: xml/release-notes.xml:587(para)
 msgid ""
 "To avoid such issues, edit permissions with Konqueror (GUI) or "
 "<command>chmod</command> (command line) only."
 msgstr ""
+"Para evitar estos problemas, edite los permisos solo con Konqueror (interfaz "
+"gráfica de usuario) o <command>chmod</command> (línea de órdenes)."
 
 #: xml/release-notes.xml:594(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
-msgstr ""
+msgstr "No se puede bloquear la pantalla al usar GNOME Shell sin GDM"
 
 #: xml/release-notes.xml:595(para)
+#, fuzzy
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
 "users without logging out is not possible."
 msgstr ""
+"Al usar GNOME Shell con un gestor de inicio de sesión distinto a GDM, como "
+"SDDM o LightDM, la pantalla no se puede ni poner en negro ni bloquear. "
+"Además, no se puede cambiar de usuario sin terminar la sesión."
 
 #: xml/release-notes.xml:600(para)
 msgid ""
