@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2017-01-17 12:52+0100\n"
-"PO-Revision-Date: 2017-06-08 13:55+0000\n"
-"Last-Translator: Javier Llorente <javier@opensuse.org>\n"
+"PO-Revision-Date: 2017-06-12 07:20+0000\n"
+"Last-Translator: Gabriel Maculus <gabrielmaculus@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/es/>\n"
 "Language: es\n"
@@ -94,12 +94,17 @@ msgstr ""
 "incompletas temporalmente."
 
 #: xml/release-notes.xml:55(para)
+#, fuzzy
 msgid ""
 "The end of the maintenance period for openSUSE Leap 42.2 is now reached. To "
 "keep your systems up-to-date and secure, upgrade to a current openSUSE "
 "version. Before starting the upgrade, make sure that all maintenance updates "
 "for openSUSE Leap 42.2 are applied."
 msgstr ""
+"Se ha alcanzado el fin del periodo de mantenimiento de openSUSE Leap 42.2. "
+"Para mantener sus sistemas actualizados y seguros, actualice a la version "
+"actual de openSUSE. Antes de empezar la actualizacion, asegurese que todas "
+"las actualizaciones de mantenimiento para openSUSE 42.2 este aplicadas."
 
 #: xml/release-notes.xml:61(para)
 #| msgid ""
@@ -737,6 +742,8 @@ msgid ""
 "AArch64: Page Size Has Been Changed From openSUSE Leap 42.1 to openSUSE Leap "
 "42.2"
 msgstr ""
+"AArch64: El tamaño de pagina ha sido cambiado de openSUSE Leap 42.1 a "
+"openSUSE Leap 42.2"
 
 #: xml/release-notes.xml:486(para)
 msgid ""
@@ -744,12 +751,18 @@ msgid ""
 "With openSUSE Leap 42.2, the page size has been changed to 4 kB. This "
 "renders old Swap and Btrfs file systems unusable."
 msgstr ""
+"En openSUSE Leap 42.1, el tamaño predefinido de la pagina en la plataforma "
+"AArch64 era 64 kB. En openSUSE Leap 42.2, el tamaño de la pagina fue "
+"cambiado a 4 kB. Esto lo vuelve inusable con antiguos sistemas de archivos "
+"Swap y Btrfs."
 
 #: xml/release-notes.xml:491(para)
 msgid ""
 "If you are currently on openSUSE Leap 42.1 on AArch64, consider a fresh "
 "installation of openSUSE Leap 42.2 instead of upgrading."
 msgstr ""
+"Si usted esta usando openSUSE Leap 42.1 en AArch64, considere una "
+"instalacion limpia de openSUSE 42.2 en vez de actualizar."
 
 #: xml/release-notes.xml:499(title)
 msgid "Systems with CCISS Controllers Can Fail to Boot After Upgrade"
@@ -841,7 +854,6 @@ msgid "Btrfs: Disk Space Leak after System Rollbacks"
 msgstr "Btrfs: pérdida de espacio en disco tras revertir cambios en el sistema"
 
 #: xml/release-notes.xml:549(para)
-#, fuzzy
 #| msgid ""
 #| "openSUSE 13.2 used a Btrfs partition layout that allowed for disk space "
 #| "to become permanently occupied with stale, inaccessible contents after "
@@ -855,12 +867,12 @@ msgid ""
 "openSUSE Leap 42.1. However, the fix can only be applied to newly installed "
 "systems."
 msgstr ""
-"openSUSE 13.2 usaba un diseño de particionado Btrfs que permitía al espacio "
-"del disco duro estar permanentemente ocupado por contenidos inaccesibles y "
-"erróneos después de que fuera llevada a cabo la primera reversión del "
-"sistema. Este problema de diseño ha sido corregido en openSUSE 42.1. Sin "
-"embargo, esta corrección sólo está disponible para instalaciones nuevas del "
-"sistema."
+"Por omisión openSUSE 13.2 usaba un diseño de particionado Btrfs que permitía "
+"al espacio del disco duro estar permanentemente ocupado por contenidos "
+"inaccesibles y erróneos después de que fuera llevada a cabo la primera "
+"reversión del sistema. Este problema de diseño ha sido corregido en openSUSE "
+"42.1. Sin embargo, esta corrección sólo está disponible para instalaciones "
+"nuevas del sistema."
 
 #: xml/release-notes.xml:556(para)
 msgid ""
@@ -873,6 +885,7 @@ msgstr ""
 #: xml/release-notes.xml:561(title)
 msgid "Data Loss with Non-Standard Settings or No Rollbacks"
 msgstr ""
+"Pérdida de datos con configuraciones no estandar o no hay revisiones antiguas"
 
 #: xml/release-notes.xml:562(para)
 msgid ""
@@ -895,11 +908,12 @@ msgstr ""
 #, fuzzy
 #| msgid "Mount the initial root filesystem:"
 msgid "Mount the initial root file system:"
-msgstr "Monte el sistema incial de archivos raíz:"
+msgstr "Monte el sistema de archivos inicial de raíz (root):"
 
 #: xml/release-notes.xml:580(replaceable)
+#, fuzzy
 msgid "&lt;ROOT_FILE_SYSTEM&gt;"
-msgstr "&lt;ROOT_FILE_SYSTEM&gt;"
+msgstr "&lt;SISTEMA_DE_ARCHIVOS_RAIZ&gt;"
 
 #: xml/release-notes.xml:580(screen)
 #, no-wrap
@@ -909,7 +923,7 @@ msgstr "mount /dev/<placeholder-1/> -o subvolid=5 /mnt"
 #: xml/release-notes.xml:583(para)
 msgid "Remove all files below /mnt that are not in a subvolume:"
 msgstr ""
-"Eliminar todos los archivos por debajo de /mnt que no están en un subvolumen:"
+"Elimine todos los archivos por debajo de /mnt que no están en un subvolumen:"
 
 #: xml/release-notes.xml:586(screen)
 #, no-wrap
@@ -917,10 +931,9 @@ msgid "find /mnt -xdev -delete"
 msgstr "find /mnt -xdev -delete"
 
 #: xml/release-notes.xml:589(para)
-#, fuzzy
 #| msgid "Umount the filesystem again:"
 msgid "Umount the file system again:"
-msgstr "Desmontar de nuevo el sistema de archivos:"
+msgstr "Desmonte de nuevo el sistema de archivos:"
 
 #: xml/release-notes.xml:598(title)
 msgid "Printing System: Improvements and Incompatible Changes"
@@ -1154,15 +1167,14 @@ msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "No se puede bloquear la pantalla al usar GNOME Shell sin GDM"
 
 #: xml/release-notes.xml:770(para)
-#, fuzzy
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
 "users without logging out is not possible."
 msgstr ""
 "Al usar GNOME Shell con un gestor de inicio de sesión distinto a GDM, como "
-"SDDM o LightDM, la pantalla no se puede ni poner en negro ni bloquear. "
-"Además, no se puede cambiar de usuario sin terminar la sesión."
+"SDDM o LightDM, la pantalla no se puede poner en negro ni bloquear. Además, "
+"no se puede cambiar de usuario sin terminar la sesión."
 
 #: xml/release-notes.xml:775(para)
 msgid ""
