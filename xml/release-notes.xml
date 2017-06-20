@@ -67,7 +67,7 @@
   <link xlink:href="https://www.opensuse.org"/>.
  </para>
  <para condition="beta;pre">
-  Report all bugs you encounter using this prerelease of &opensuse; &version;
+  Report all bugs you encounter using this prerelease of &thisflavor; &version;
   in the &opensuse; Bugzilla. For more information, see
   <link xlink:href="http://en.opensuse.org/Submitting_Bug_Reports"/>. If you
   would like to see anything added to the release notes, file a bug
@@ -155,6 +155,31 @@
    </para>
    <para>
     To work around this problem, convert the legacy MBR partition to GPT.
+   </para>
+  </sect2>
+
+  <!-- text via boo#1045124, underlying issue: boo#1044816 -->
+  <sect2 xml:id="sec.install.nouveau-extra">
+   <title>Changes for Users Installing the Nvidia Driver Manually</title>
+   <para>
+    On &thisversion;, you need to uninstall the package
+    <package>drm-kmp-default</package> first, before you can manually install
+    Nvidia drivers using the <filename>.run</filename> shell script archive:
+   </para>
+   <screen>zypper rm drm-kmp-default</screen>
+   <para>
+    If you install the RPMs provided by Nvidia, you will not be affected by
+    this issue, because in that case the package
+    <package>drm-kmp-default</package> is replaced during the driver
+    installation automatically.
+   </para>
+   <para>
+    If you decide to uninstall Nvidia's driver later,
+    make sure to reinstall the package <package>drm-kmp-default</package>.
+   </para>
+   <para>
+    For more information, see
+    <link xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=1044816"/>.
    </para>
   </sect2>
 
