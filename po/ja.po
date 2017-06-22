@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2017-06-20 14:33+0200\n"
-"PO-Revision-Date: 2017-04-20 22:50+0000\n"
+"PO-Revision-Date: 2017-06-22 12:26+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_3/ja/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.6\n"
+"X-Generator: Weblate 2.13.1\n"
 
 #: xml/release-notes.xml:14(title) xml/release-notes.xml:31(component)
 msgid "Release Notes"
@@ -122,13 +122,6 @@ msgstr ""
 "opensuse.org\"/> をお読みください。"
 
 #: xml/release-notes.xml:69(para)
-#, fuzzy
-#| msgid ""
-#| "Report all bugs you encounter using this prerelease of openSUSE 42.3 in "
-#| "the openSUSE Bugzilla. For more information, see <link href=\"http://en."
-#| "opensuse.org/Submitting_Bug_Reports\"/>. If you would like to see "
-#| "anything added to the release notes, file a bug report against the "
-#| "component <quote>Release Notes</quote>."
 msgid ""
 "Report all bugs you encounter using this prerelease of openSUSE Leap 42.3 in "
 "the openSUSE Bugzilla. For more information, see <link href=\"http://en."
@@ -136,11 +129,10 @@ msgid ""
 "added to the release notes, file a bug report against the component "
 "<quote>Release Notes</quote>."
 msgstr ""
-"openSUSE 42.3 のプレリリース版でなんらかのバグに直面した場合は、 openSUSE "
-"Bugzilla にご報告ください。詳しくは <link href=\"https://ja.opensuse.org/バグ"
-"レポート\"/> をお読みください。また、リリースノートに追記すべきとお考えの項目"
-"については、コンポーネントで <quote>Release Notes</quote> を選択し、バグを報"
-"告してください。"
+"openSUSE Leap 42.3 のプレリリース版でなんらかのバグに直面した場合は、 openSUSE Bugzilla にご報告ください。詳しくは "
+"<link href=\"https://ja.opensuse.org/バグレポート\"/> "
+"をお読みください。また、リリースノートに追記すべきとお考えの項目については、コンポーネントで <quote>Release Notes</quote> "
+"を選択し、バグを報告してください。"
 
 #: xml/release-notes.xml:76(para)
 msgid ""
@@ -295,7 +287,7 @@ msgstr ""
 
 #: xml/release-notes.xml:163(title)
 msgid "Changes for Users Installing the Nvidia Driver Manually"
-msgstr ""
+msgstr "nVidia ドライバを手作業でインストールする場合の作業について"
 
 #: xml/release-notes.xml:164(para)
 msgid ""
@@ -303,11 +295,14 @@ msgid ""
 "default</package> first, before you can manually install Nvidia drivers "
 "using the <filename>.run</filename> shell script archive:"
 msgstr ""
+"openSUSE Leap 42.3 では、 <filename>.run</filename> シェルスクリプトアーカイブを利用して手作業で "
+"nVidia ドライバをインストールする場合、あらかじめ <package>drm-kmp-default</package> "
+"パッケージをアンインストールしておく必要があります:"
 
 #: xml/release-notes.xml:169(screen)
 #, no-wrap
 msgid "zypper rm drm-kmp-default"
-msgstr ""
+msgstr "zypper rm drm-kmp-default"
 
 #: xml/release-notes.xml:170(para)
 msgid ""
@@ -315,26 +310,25 @@ msgid ""
 "issue, because in that case the package <package>drm-kmp-default</package> "
 "is replaced during the driver installation automatically."
 msgstr ""
+"nVidia が提供する RPM をインストールする場合は、このような問題は発生しません。これは、 RPM "
+"パッケージが提供するドライバをインストールする際に、自動的に <package>drm-kmp-default</package> "
+"が置き換えられるようになっているためです。"
 
 #: xml/release-notes.xml:176(para)
 msgid ""
 "If you decide to uninstall Nvidia's driver later, make sure to reinstall the "
 "package <package>drm-kmp-default</package>."
 msgstr ""
+"なお、後日 nVidia ドライバをアンインストールする場合は、忘れずに <package>drm-kmp-default</package> "
+"パッケージをインストールしてください。"
 
 #: xml/release-notes.xml:180(para)
-#, fuzzy
-#| msgid ""
-#| "For more information, see the bug reports at <link href=\"https://bugs."
-#| "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://"
-#| "bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/>."
 msgid ""
 "For more information, see <link href=\"https://bugzilla.suse.com/show_bug."
 "cgi?id=1044816\"/>."
 msgstr ""
-"詳しくは <link href=\"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> "
-"および <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/"
-"> のバグ報告をお読みください。"
+"詳しくは <link href=\"https://bugzilla.suse.com/show_bug.cgi?id=1044816\"/> "
+"をお読みください。"
 
 #: xml/release-notes.xml:222(title)
 msgid "System Upgrade"
@@ -380,7 +374,7 @@ msgstr ""
 msgid ""
 "<package>plasma5-mediacenter</package>: Dropped by upstream after version "
 "5.7.3."
-msgstr ""
+msgstr "<package>plasma5-mediacenter</package>: バージョン 5.7.3 で提供元が公開を停止しています。"
 
 #: xml/release-notes.xml:255(title)
 msgid "Synaptics Touchpad Driver with KDE Plasma"
