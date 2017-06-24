@@ -300,6 +300,69 @@
        </step>
        </procedure>
    </sect3>
+   <sect3 xml:id="sec.upgrade.422.shorewall">
+    <title>Shorewall upgrade</title>
+    <para>
+      In &opensuseleap; 42.3, Shorewall was upgrade to last stable 5.1x series.
+      <package>shorewall</package> and <package>shorewall6</package> on upgrade
+      will warn admin that an upgrade of configurations files is needed.
+    </para>
+    <para>
+      Documentation is available on <link xlink:href="http://shorewall.net/">shorewall.net</link>
+    </para>
+    <sect4 xml:id="sec.upgrade.422.shorewall.shorewall4">
+     <procedure>
+      <step>
+       <para>
+        With root privileges in a console session apply the following command:
+        <screen><command>shorewall update -a /etc/shorewall</command></screen>
+       </para>
+      </step>
+      <step>
+       <para>
+        Adapt your configuration to newer syntax if the tool doesn't do that for you.
+        Should normally only be require on specific or over-complex configurations.
+       </para>
+      </step>
+      <step>
+       <para>
+        Verfiy and test the resulting configuration with:
+        <screen><command>shorewall try /etc/shorewall</command></screen>
+       </para>
+       <para>
+        If everything work, then you can reboot your computer, or restart the service.
+        <screen><command>systemctl restart shorewall.service</command></screen>
+       </para>
+      </step>
+     </procedure>
+    </sect4>
+    <sect4 xml:id="sec.upgrade.422.shorewall.shorewall6">
+     <procedure>
+      <step>
+       <para>
+        With root privileges in a console session apply the following command:
+        <screen><command>shorewall6 update -a /etc/shorewall6</command></screen>
+       </para>
+      </step>
+      <step>
+       <para>
+        Adapt your configuration to newer syntax if the tool doesn't do that for you.
+        Should normally only be require on specific or over-complex configurations.
+       </para>
+      </step>
+      <step>
+       <para>
+        Verfiy and test the resulting configuration with:
+        <screen><command>shorewall6 try /etc/shorewall</command></screen>
+       </para>
+       <para>
+        If everything work, then you can reboot your computer, or restart the service.
+        <screen><command>systemctl restart shorewall6.service</command></screen>
+       </para>
+      </step>
+     </procedure>
+    </sect4>
+   </sect3>
   </sect2>
 
   <sect2 xml:id="sec.upgrade.421">
