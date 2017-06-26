@@ -31,16 +31,14 @@ To translate openSUSE release notes, use [Weblate](https://l10n.opensuse.org/pro
 
 ## Build Requirements
 
-- make
-- daps
-- suse-xsl-stylesheets
-- gettext-tools
-- w3m
-- xml2po
-- xmlcharent
-- xsltproc
-- dejavu-fonts
-- google-opensans-font
+- `make`
+- `daps` & `suse-xsl-stylesheets`
+- `xsltproc`
+- `w3m`
+- `dejavu-fonts` & `google-opensans-fonts`
+- `gettext-tools`
+- `xml2po`
+- `xmlcharent`
 
 ## Manual Build
 * To produce the output formats, we use DAPS (package `daps`) and the SUSE
