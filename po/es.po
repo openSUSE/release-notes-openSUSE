@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2017-06-20 14:33+0200\n"
-"PO-Revision-Date: 2017-06-14 20:37+0000\n"
-"Last-Translator: Javier Llorente <javier@opensuse.org>\n"
+"PO-Revision-Date: 2017-06-26 15:54+0000\n"
+"Last-Translator: Victor hck <correohck@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_3/es/>\n"
 "Language: es\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.6\n"
+"X-Generator: Weblate 2.13.1\n"
 
 #: xml/release-notes.xml:14(title) xml/release-notes.xml:31(component)
 msgid "Release Notes"
@@ -131,13 +131,6 @@ msgstr ""
 "disponible en <link href=\"https://www.opensuse.org\"/>."
 
 #: xml/release-notes.xml:69(para)
-#, fuzzy
-#| msgid ""
-#| "Report all bugs you encounter using this prerelease of openSUSE 42.3 in "
-#| "the openSUSE Bugzilla. For more information, see <link href=\"http://en."
-#| "opensuse.org/Submitting_Bug_Reports\"/>. If you would like to see "
-#| "anything added to the release notes, file a bug report against the "
-#| "component <quote>Release Notes</quote>."
 msgid ""
 "Report all bugs you encounter using this prerelease of openSUSE Leap 42.3 in "
 "the openSUSE Bugzilla. For more information, see <link href=\"http://en."
@@ -146,8 +139,8 @@ msgid ""
 "<quote>Release Notes</quote>."
 msgstr ""
 "Informe de cualquier fallo que encuentre en esta versión previa de openSUSE "
-"42.3 en el Bugzilla de openSUSE. Para más información, vea <link href="
-"\"http://en.opensuse.org/Submitting_Bug_Reports\"/>. Si quiere ver cualquier "
+"Leap 42.3 en el Bugzilla de openSUSE. Para más información, vea <link href=\""
+"http://en.opensuse.org/Submitting_Bug_Reports\"/>. Si quiere ver cualquier "
 "cosa añadida a las notas de la versión, presente un informe de fallos sobre "
 "el componente <quote>Release Notes</quote>."
 
@@ -300,6 +293,8 @@ msgstr "Para solucionar este problema, convierta la partición MBR en GPT."
 #: xml/release-notes.xml:163(title)
 msgid "Changes for Users Installing the Nvidia Driver Manually"
 msgstr ""
+"Cambios para los usuarios que instalen el controlador de Nvidia de manera "
+"manual"
 
 #: xml/release-notes.xml:164(para)
 msgid ""
@@ -307,11 +302,14 @@ msgid ""
 "default</package> first, before you can manually install Nvidia drivers "
 "using the <filename>.run</filename> shell script archive:"
 msgstr ""
+"En openSUSE Leap 42.3, necesita desinstalar el paquete <package>drm-kmp-"
+"default</package> primero, antes puede instalar el controlador Nvidia "
+"utilizando el script <filename>.run</filename> desde la línea de comandos:"
 
 #: xml/release-notes.xml:169(screen)
 #, no-wrap
 msgid "zypper rm drm-kmp-default"
-msgstr ""
+msgstr "zypper rm drm-kmp-default"
 
 #: xml/release-notes.xml:170(para)
 msgid ""
@@ -319,24 +317,26 @@ msgid ""
 "issue, because in that case the package <package>drm-kmp-default</package> "
 "is replaced during the driver installation automatically."
 msgstr ""
+"Si instala los paquetes RPM que ofrece Nvidia, no se verá afectado por este "
+"problema, debido a que en ese caso el paquete <package>drm-kmp-"
+"default</package> es reemplazado automáticamente durante la instalación del "
+"controlador."
 
 #: xml/release-notes.xml:176(para)
 msgid ""
 "If you decide to uninstall Nvidia's driver later, make sure to reinstall the "
 "package <package>drm-kmp-default</package>."
 msgstr ""
+"Si decide desinstalar el controlador de Nvidia más tarde, asegúrese de "
+"volver a instalar el paquete <package>drm-kmp-default</package>."
 
 #: xml/release-notes.xml:180(para)
-#, fuzzy
-#| msgid ""
-#| "This is also being tracked in the upstream bug report <ulink url="
-#| "\"https://bugzilla.gnome.org/show_bug.cgi?id=689839\"/>."
 msgid ""
 "For more information, see <link href=\"https://bugzilla.suse.com/show_bug."
 "cgi?id=1044816\"/>."
 msgstr ""
-"También se está haciendo un seguimiento de este problema en <ulink url="
-"\"https://bugzilla.gnome.org/show_bug.cgi?id=689839\"/>."
+"Para más información, vea este enlace <link href=\""
+"https://bugzilla.suse.com/show_bug.cgi?id=1044816\"/>."
 
 # CER: Usamos la misma traducci´on para update y upgrade, y hay que diferenciarlos
 #: xml/release-notes.xml:222(title)
@@ -384,6 +384,8 @@ msgid ""
 "<package>plasma5-mediacenter</package>: Dropped by upstream after version "
 "5.7.3."
 msgstr ""
+"<package>plasma5-mediacenter</package>: Ha sido eliminado de los "
+"repositorios de donde procede después de la versión 5.7.3."
 
 #: xml/release-notes.xml:255(title)
 msgid "Synaptics Touchpad Driver with KDE Plasma"
