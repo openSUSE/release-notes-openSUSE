@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2017-07-04 14:37+0200\n"
-"PO-Revision-Date: 2017-06-18 19:36+0000\n"
+"PO-Revision-Date: 2017-07-11 21:24+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_3/ru/>\n"
@@ -18,9 +18,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.6\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13.1\n"
 
 #: xml/release-notes.xml:14(title) xml/release-notes.xml:31(component)
 msgid "Release Notes"
@@ -123,13 +123,6 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #: xml/release-notes.xml:69(para)
-#, fuzzy
-#| msgid ""
-#| "Report all bugs you encounter using this prerelease of openSUSE 42.3 in "
-#| "the openSUSE Bugzilla. For more information, see <link href=\"http://en."
-#| "opensuse.org/Submitting_Bug_Reports\"/>. If you would like to see "
-#| "anything added to the release notes, file a bug report against the "
-#| "component <quote>Release Notes</quote>."
 msgid ""
 "Report all bugs you encounter using this prerelease of openSUSE Leap 42.3 in "
 "the openSUSE Bugzilla. For more information, see <link href=\"http://en."
@@ -138,8 +131,8 @@ msgid ""
 "<quote>Release Notes</quote>."
 msgstr ""
 "Сообщайте обо всех ошибках, обнаруженных при использовании предварительных "
-"выпусков openSUSE 42.3, в openSUSE Bugzilla. Подробнее см. <link href="
-"\"http://en.opensuse.org/Submitting_Bug_Reports\"/>. Если вы хотели бы "
+"выпусков openSUSE Leap 42.3, в openSUSE Bugzilla. Подробнее см. <link href=\""
+"http://en.opensuse.org/Submitting_Bug_Reports\"/>. Если вы хотели бы "
 "добавить что-то в примечания к выпуску, отправьте сообщение об ошибке в "
 "компоненте <quote>Release Notes</quote>."
 
@@ -291,7 +284,7 @@ msgstr ""
 
 #: xml/release-notes.xml:163(title)
 msgid "Changes for Users Installing the Nvidia Driver Manually"
-msgstr ""
+msgstr "Изменения для пользователей, устанавливающих драйвер Nvidia вручную"
 
 #: xml/release-notes.xml:164(para)
 msgid ""
@@ -299,11 +292,14 @@ msgid ""
 "default</package> first, before you can manually install Nvidia drivers "
 "using the <filename>.run</filename> shell script archive:"
 msgstr ""
+"В openSUSE Leap 42.3 вам потребуется сначала удалить пакет <package>drm-kmp-"
+"default</package>, прежде чем вручную устанавливать драйверы Nvidia из файла "
+"<filename>.run</filename>:"
 
 #: xml/release-notes.xml:169(screen)
 #, no-wrap
 msgid "zypper rm drm-kmp-default"
-msgstr ""
+msgstr "zypper rm drm-kmp-default"
 
 #: xml/release-notes.xml:170(para)
 msgid ""
@@ -311,24 +307,25 @@ msgid ""
 "issue, because in that case the package <package>drm-kmp-default</package> "
 "is replaced during the driver installation automatically."
 msgstr ""
+"Если же вы используете RPM, предоставленные Nvidia, то эта проблема вас не "
+"коснётся, поскольку в этом случае пакет <package>drm-kmp-default</package> "
+"заменяется при установке драйвера автоматически."
 
 #: xml/release-notes.xml:176(para)
 msgid ""
 "If you decide to uninstall Nvidia's driver later, make sure to reinstall the "
 "package <package>drm-kmp-default</package>."
 msgstr ""
+"Если позже вы захотите удалить драйвер Nvidia, убедитесь, что снова "
+"установили пакет <package>drm-kmp-default</package>."
 
 #: xml/release-notes.xml:180(para)
-#, fuzzy
-#| msgid ""
-#| "This is also being tracked in the upstream bug report <ulink url="
-#| "\"https://bugzilla.gnome.org/show_bug.cgi?id=689839\"/>."
 msgid ""
 "For more information, see <link href=\"https://bugzilla.suse.com/show_bug."
 "cgi?id=1044816\"/>."
 msgstr ""
-"Эта проблема отслеживается в апстриме <ulink url=\"https://bugzilla.gnome."
-"org/show_bug.cgi?id=689839\"/>."
+"Больше сведений по ссылке <link href=\""
+"https://bugzilla.suse.com/show_bug.cgi?id=1044816\"/>."
 
 #: xml/release-notes.xml:222(title)
 msgid "System Upgrade"
@@ -374,6 +371,8 @@ msgid ""
 "<package>plasma5-mediacenter</package>: Dropped by upstream after version "
 "5.7.3."
 msgstr ""
+"<package>plasma5-mediacenter</package>: разработка прекращена после версии "
+"5.7.3."
 
 #: xml/release-notes.xml:255(title)
 msgid "Synaptics Touchpad Driver with KDE Plasma"
@@ -445,7 +444,7 @@ msgstr "Нажмите <guimenu>Применить</guimenu>."
 
 #: xml/release-notes.xml:304(title)
 msgid "Shorewall Has Been Upgraded to Version 5.1"
-msgstr ""
+msgstr "Shorewall обновлён до версии 5.1"
 
 #: xml/release-notes.xml:305(para)
 msgid ""
@@ -453,27 +452,31 @@ msgid ""
 "When upgrading, <package>shorewall</package> and <package>shorewall6</"
 "package> will warn admin that an upgrade of configurations files is required."
 msgstr ""
+"В openSUSE Leap 42.3 Shorewall обновлён до последнего стабильного выпуска "
+"5.1. При обновлении <package>shorewall</package> и "
+"<package>shorewall6</package> предупредят администратора о необходимости "
+"обновления конфигурационных файлов."
 
 #: xml/release-notes.xml:310(para)
 msgid "Documentation is available on <link href=\"http://shorewall.net/\"/>."
-msgstr ""
+msgstr "Документация доступна на сайте <link href=\"http://shorewall.net/\"/>."
 
 #: xml/release-notes.xml:314(title)
 msgid "Upgrading Shorewall"
-msgstr ""
+msgstr "Обновление Shorewall"
 
 #: xml/release-notes.xml:316(para)
 msgid "With root privileges in a console session, run:"
-msgstr ""
+msgstr "От имени администратора запустите в сеансе консоли:"
 
 #: xml/release-notes.xml:319(prompt) xml/release-notes.xml:332(prompt)
 #: xml/release-notes.xml:336(prompt)
 msgid "root #"
-msgstr ""
+msgstr "root #"
 
 #: xml/release-notes.xml:319(command)
 msgid "shorewall update -a /etc/shorewall"
-msgstr ""
+msgstr "shorewall update -a /etc/shorewall"
 
 #: xml/release-notes.xml:322(para)
 msgid ""
@@ -481,28 +484,29 @@ msgid ""
 "not do that for you. This should normally only be required on specific, very "
 "complex configurations."
 msgstr ""
+"Переведите свои настройки на новый синтаксис в тех случаях, когда "
+"автоматическое преобразование не справляется. Это может потребоваться только "
+"в особенных, очень сложных конфигурациях."
 
 #: xml/release-notes.xml:329(para)
 msgid "Verify and test the resulting configuration with:"
-msgstr ""
+msgstr "Проверьте получившийся результат с помощью:"
 
 #: xml/release-notes.xml:332(command)
 msgid "shorewall try /etc/shorewall"
-msgstr ""
+msgstr "shorewall try /etc/shorewall"
 
 #: xml/release-notes.xml:333(para)
 msgid "If everything works, reboot your computer or restart the service with:"
-msgstr ""
+msgstr "Если всё работает, перезагрузитесь или перезапустите службу с помощью:"
 
 #: xml/release-notes.xml:336(command)
-#, fuzzy
-#| msgid "systemctl     start     network.service"
 msgid "systemctl restart shorewall.service"
-msgstr "systemctl     start     network.service"
+msgstr "systemctl restart shorewall.service"
 
 #: xml/release-notes.xml:340(title)
 msgid "Upgrading <command>shorewall6</command>"
-msgstr ""
+msgstr "Обновление <command>shorewall6</command>"
 
 #: xml/release-notes.xml:341(para)
 msgid ""
@@ -511,6 +515,10 @@ msgid ""
 "upgrade.422.shorewall.do\"/>. However, you need to replace all instances of "
 "the <literal>shorewall</literal> with <literal>shorewall6</literal>."
 msgstr ""
+"Процесс обновления <command>shorewall6</command> совпадает с процессом для "
+"<command>shorewall</command>, описанным в разделе <xref linkend=\""
+"pro.upgrade.422.shorewall.do\"/>. Хотя вам нужно заменить все вхождения "
+"<literal>shorewall</literal> на <literal>shorewall6</literal>."
 
 #: xml/release-notes.xml:353(title)
 msgid "Upgrading from openSUSE Leap 42.1"
@@ -611,6 +619,9 @@ msgid ""
 "upstream, the functionality is replaced by <package>perl-Mojolicious-Plugin-"
 "AssetPack</package>."
 msgstr ""
+"<package>perl-Mojolicious-Plugin-Bootstrap3</package>: признан устаревшим, "
+"его функции доступны в пакете <package>perl-Mojolicious-Plugin-"
+"AssetPack</package>."
 
 #: xml/release-notes.xml:450(title)
 msgid ""
