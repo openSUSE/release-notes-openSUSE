@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
-"POT-Creation-Date: 2017-07-13 15:40+0200\n"
+"POT-Creation-Date: 2017-07-19 14:49+0200\n"
 "PO-Revision-Date: 2017-07-14 22:43+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
@@ -192,12 +192,19 @@ msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI—Unified Extensible Firmware Interface"
 
 #: xml/release-notes.xml:110(para)
+#, fuzzy
+#| msgid ""
+#| "Prior to installing openSUSE on a system that boots using UEFI (Unified "
+#| "Extensible Firmware Interface), you are urgently advised to check for any "
+#| "firmware updates the hardware vendor recommends and, if available, to "
+#| "install such an update. A pre-installed Windows 8 is a strong indication "
+#| "that your system boots using UEFI."
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
 "firmware updates the hardware vendor recommends and, if available, to "
-"install such an update. A pre-installed Windows 8 is a strong indication "
-"that your system boots using UEFI."
+"install such an update. A pre-installation of Windows 8 or later is a strong "
+"indication that your system boots using UEFI."
 msgstr ""
 "UEFI (Unified Extensible Firmware Interface) を利用して起動するシステムに "
 "openSUSE をインストールする場合、事前に製造元が推奨するファームウエア更新を必"
@@ -405,7 +412,8 @@ msgstr "<package>qtsharp</package>: 42.3 では構築に失敗しています。
 
 #: xml/release-notes.xml:275(para)
 msgid "<package>rubygem-mysql</package>: Replaced by rubygem-mysql2."
-msgstr "<package>rubygem-mysql</package>: rubygem-mysql2 に置き換えられています。"
+msgstr ""
+"<package>rubygem-mysql</package>: rubygem-mysql2 に置き換えられています。"
 
 #: xml/release-notes.xml:282(title)
 msgid "Synaptics Touchpad Driver with KDE Plasma"
@@ -1111,7 +1119,11 @@ msgstr ""
 "openSUSE Leap 42.3 では、アプリケーションのメニューバープラズモイドも利用でき"
 "るようになっています。"
 
-#: xml/release-notes.xml:752(para)
+#: xml/release-notes.xml:752(title)
+msgid "Non-Qt Applications Can Behave Incorrectly"
+msgstr ""
+
+#: xml/release-notes.xml:753(para)
 msgid ""
 "Applications not using the Qt toolkit may not support the global menu or "
 "behave incorrectly."
@@ -1119,15 +1131,37 @@ msgstr ""
 "Qt ツールキットを利用しないアプリケーションでは、グローバルメニューを利用する"
 "ことができないか、もしくは正しく動作しない場合があります。"
 
-#: xml/release-notes.xml:783(title)
+#: xml/release-notes.xml:761(title)
+msgid "No Support for Type-1 Fonts in LibreOffice"
+msgstr ""
+
+#: xml/release-notes.xml:762(para)
+msgid ""
+"LibreOffice 5.3 does not support legacy Type-1 fonts (file extensions "
+"<filename>.afm</filename> and <filename>.pfb</filename>) anymore. Most users "
+"should not be affected by this, as current fonts are available either in the "
+"format TrueType (<filename>.ttf</filename>) or OpenType (<filename>.otf</"
+"filename>) formats."
+msgstr ""
+
+#: xml/release-notes.xml:769(para)
+msgid ""
+"If you are affected by this, convert Type-1 fonts to a supported format, "
+"such as TrueType and then use the converted fonts. Conversion is possible "
+"with the application FontForge (package <package>fontforge</package>) which "
+"is included in openSUSE. For information on scripting such conversions, see "
+"<link href=\"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
+msgstr ""
+
+#: xml/release-notes.xml:803(title)
 msgid "More Information and Feedback"
 msgstr "さらに詳しい情報とフィードバック"
 
-#: xml/release-notes.xml:786(para)
+#: xml/release-notes.xml:806(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "まずはメディア内の <filename>README</filename> 文書をお読みください。"
 
-#: xml/release-notes.xml:791(para)
+#: xml/release-notes.xml:811(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1135,22 +1169,22 @@ msgstr ""
 "また、特定のパッケージに対する詳細な変更点を RPM パッケージから表示するには、"
 "下記のコマンドを実行します:"
 
-#: xml/release-notes.xml:795(replaceable)
+#: xml/release-notes.xml:815(replaceable)
 msgid "FILENAME"
 msgstr "ファイル名"
 
-#: xml/release-notes.xml:795(screen)
+#: xml/release-notes.xml:815(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:796(para)
+#: xml/release-notes.xml:816(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "<replaceable>ファイル名</replaceable> の箇所を RPM の名前に置き換えてお使いく"
 "ださい。"
 
-#: xml/release-notes.xml:801(para)
+#: xml/release-notes.xml:821(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1159,7 +1193,7 @@ msgstr ""
 "ルがあります。ここには、更新されたパッケージに対する全ての変更点が時系列順に"
 "並んでいます。"
 
-#: xml/release-notes.xml:807(para)
+#: xml/release-notes.xml:827(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1167,7 +1201,7 @@ msgstr ""
 "そのほか、 メディアの <filename>docu</filename> ディレクトリには、さらに詳し"
 "い情報があります。"
 
-#: xml/release-notes.xml:813(para)
+#: xml/release-notes.xml:833(para)
 msgid ""
 "For additional or updated documentation, see <link href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1175,7 +1209,7 @@ msgstr ""
 "追加のドキュメンテーションや更新されたドキュメンテーションをお読みになりたい"
 "場合は、 <link href=\"https://doc.opensuse.org/\"/> をご覧ください。"
 
-#: xml/release-notes.xml:819(para)
+#: xml/release-notes.xml:839(para)
 msgid ""
 "For the latest product news, from openSUSE, visit <link href=\"https://www."
 "opensuse.org\"/>."
@@ -1183,15 +1217,15 @@ msgstr ""
 "また、 openSUSE からの最新の製品ニュースについては、 <link href=\"https://"
 "www.opensuse.org\"/> をご覧ください。"
 
-#: xml/release-notes.xml:826(para)
+#: xml/release-notes.xml:846(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:830(para)
+#: xml/release-notes.xml:850(para)
 msgid "Thanks for using openSUSE."
 msgstr "openSUSE をお使いいただき、ありがとうございます。"
 
-#: xml/release-notes.xml:833(para)
+#: xml/release-notes.xml:853(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE チームより。"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2017-07-13 15:40+0200\n"
+"POT-Creation-Date: 2017-07-19 14:49+0200\n"
 "PO-Revision-Date: 2017-07-15 17:49+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
@@ -18,8 +18,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.13.1\n"
 
 #: xml/release-notes.xml:14(title) xml/release-notes.xml:31(component)
@@ -190,12 +190,19 @@ msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI — единый интерфейс EFI"
 
 #: xml/release-notes.xml:110(para)
+#, fuzzy
+#| msgid ""
+#| "Prior to installing openSUSE on a system that boots using UEFI (Unified "
+#| "Extensible Firmware Interface), you are urgently advised to check for any "
+#| "firmware updates the hardware vendor recommends and, if available, to "
+#| "install such an update. A pre-installed Windows 8 is a strong indication "
+#| "that your system boots using UEFI."
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
 "firmware updates the hardware vendor recommends and, if available, to "
-"install such an update. A pre-installed Windows 8 is a strong indication "
-"that your system boots using UEFI."
+"install such an update. A pre-installation of Windows 8 or later is a strong "
+"indication that your system boots using UEFI."
 msgstr ""
 "Перед установкой openSUSE на систему, загружающуюся с помощью UEFI (Unified "
 "Extensible Firmware Interface), вам настоятельно рекомендуется проверить "
@@ -980,18 +987,18 @@ msgid ""
 "permissions bits."
 msgstr ""
 "Версии файловых менеджеров для KDE Dolphin и Konqueror, поставляемые в "
-"openSUSE Leap 42.3, не могут сохранять биты <quote>Extended "
-"Permission</quote> (GID, <quote>Sticky</quote>). Более того, при закрытии "
-"диалога разрешений Dolphin нажатием кнопки <guimenu>OK</guimenu> сбрасывает "
-"уже установленные биты."
+"openSUSE Leap 42.3, не могут сохранять биты <quote>Extended Permission</"
+"quote> (GID, <quote>Sticky</quote>). Более того, при закрытии диалога "
+"разрешений Dolphin нажатием кнопки <guimenu>OK</guimenu> сбрасывает уже "
+"установленные биты."
 
 #: xml/release-notes.xml:692(para)
 msgid ""
 "To avoid such issues, edit permissions with <command>chmod</command> "
 "(command line) only."
 msgstr ""
-"Во избежание подобных проблем, правьте разрешения командой "
-"<command>chmod</command>."
+"Во избежание подобных проблем, правьте разрешения командой <command>chmod</"
+"command>."
 
 #: xml/release-notes.xml:699(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
@@ -1065,7 +1072,11 @@ msgid ""
 "well."
 msgstr "В openSUSE Leap 42.3 снова доступен плазмоид строки меню приложения."
 
-#: xml/release-notes.xml:752(para)
+#: xml/release-notes.xml:752(title)
+msgid "Non-Qt Applications Can Behave Incorrectly"
+msgstr ""
+
+#: xml/release-notes.xml:753(para)
 msgid ""
 "Applications not using the Qt toolkit may not support the global menu or "
 "behave incorrectly."
@@ -1073,34 +1084,56 @@ msgstr ""
 "Приложения, не использующие библиотеки Qt, могут не поддерживать глобальное "
 "меню или вести себя некорректно."
 
-#: xml/release-notes.xml:783(title)
+#: xml/release-notes.xml:761(title)
+msgid "No Support for Type-1 Fonts in LibreOffice"
+msgstr ""
+
+#: xml/release-notes.xml:762(para)
+msgid ""
+"LibreOffice 5.3 does not support legacy Type-1 fonts (file extensions "
+"<filename>.afm</filename> and <filename>.pfb</filename>) anymore. Most users "
+"should not be affected by this, as current fonts are available either in the "
+"format TrueType (<filename>.ttf</filename>) or OpenType (<filename>.otf</"
+"filename>) formats."
+msgstr ""
+
+#: xml/release-notes.xml:769(para)
+msgid ""
+"If you are affected by this, convert Type-1 fonts to a supported format, "
+"such as TrueType and then use the converted fonts. Conversion is possible "
+"with the application FontForge (package <package>fontforge</package>) which "
+"is included in openSUSE. For information on scripting such conversions, see "
+"<link href=\"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
+msgstr ""
+
+#: xml/release-notes.xml:803(title)
 msgid "More Information and Feedback"
 msgstr "Дополнительные сведения и обратная связь"
 
-#: xml/release-notes.xml:786(para)
+#: xml/release-notes.xml:806(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Читать файлы <filename>README</filename> на установочном носителе."
 
-#: xml/release-notes.xml:791(para)
+#: xml/release-notes.xml:811(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Просмотреть подробный журнал изменений конкретного пакета из его RPM:"
 
-#: xml/release-notes.xml:795(replaceable)
+#: xml/release-notes.xml:815(replaceable)
 msgid "FILENAME"
 msgstr "ИМЯ_ФАЙЛА"
 
-#: xml/release-notes.xml:795(screen)
+#: xml/release-notes.xml:815(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:796(para)
+#: xml/release-notes.xml:816(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Замените <replaceable>ИМЯ_ФАЙЛА</replaceable> на имя пакета RPM."
 
-#: xml/release-notes.xml:801(para)
+#: xml/release-notes.xml:821(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1108,14 +1141,14 @@ msgstr ""
 "Хронологический журнал всех изменений в обновлённых пакетах приведён в файле "
 "<filename>ChangeLog</filename> на верхнем уровне диска."
 
-#: xml/release-notes.xml:807(para)
+#: xml/release-notes.xml:827(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
 "Больше сведений вы найдёте в каталоге <filename>docu</filename> на диске."
 
-#: xml/release-notes.xml:813(para)
+#: xml/release-notes.xml:833(para)
 msgid ""
 "For additional or updated documentation, see <link href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1123,7 +1156,7 @@ msgstr ""
 "Дополнительная и обновлённая документация по адресу <link href=\"https://doc."
 "opensuse.org/\"/>."
 
-#: xml/release-notes.xml:819(para)
+#: xml/release-notes.xml:839(para)
 msgid ""
 "For the latest product news, from openSUSE, visit <link href=\"https://www."
 "opensuse.org\"/>."
@@ -1131,15 +1164,15 @@ msgstr ""
 "Последние новости от openSUSE по адресу <link href=\"https://www.opensuse.org"
 "\"/>."
 
-#: xml/release-notes.xml:826(para)
+#: xml/release-notes.xml:846(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "© <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:830(para)
+#: xml/release-notes.xml:850(para)
 msgid "Thanks for using openSUSE."
 msgstr "Спасибо за использование openSUSE."
 
-#: xml/release-notes.xml:833(para)
+#: xml/release-notes.xml:853(para)
 msgid "The openSUSE Team."
 msgstr "Команда openSUSE."
 
