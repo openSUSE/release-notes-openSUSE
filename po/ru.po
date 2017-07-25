@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2017-07-25 18:39+0200\n"
-"PO-Revision-Date: 2017-07-15 17:49+0000\n"
+"PO-Revision-Date: 2017-07-25 20:03+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_3/ru/>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.13.1\n"
 
 #: xml/release-notes.xml:14(title) xml/release-notes.xml:31(component)
@@ -190,13 +190,6 @@ msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI — единый интерфейс EFI"
 
 #: xml/release-notes.xml:110(para)
-#, fuzzy
-#| msgid ""
-#| "Prior to installing openSUSE on a system that boots using UEFI (Unified "
-#| "Extensible Firmware Interface), you are urgently advised to check for any "
-#| "firmware updates the hardware vendor recommends and, if available, to "
-#| "install such an update. A pre-installed Windows 8 is a strong indication "
-#| "that your system boots using UEFI."
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
@@ -207,8 +200,8 @@ msgstr ""
 "Перед установкой openSUSE на систему, загружающуюся с помощью UEFI (Unified "
 "Extensible Firmware Interface), вам настоятельно рекомендуется проверить "
 "наличие обновлений прошивки, рекомендованных производителем, и в случае их "
-"существования установить такие обновления. Предустановленная Windows 8 "
-"является верным признаком того, что ваша система использует UEFI."
+"существования установить такие обновления. Предустановленная Windows 8 или "
+"более новая является верным признаком того, что ваша система использует UEFI."
 
 #: xml/release-notes.xml:117(para)
 msgid ""
@@ -555,7 +548,7 @@ msgstr ""
 
 #: xml/release-notes.xml:379(title)
 msgid "GCC 6 Package Versions Match Packages Shipped with SLE 12 SP3"
-msgstr ""
+msgstr "Версии пакетов GCC 6 совпадают с поставляемыми в SLE 12 SP3"
 
 #: xml/release-notes.xml:380(para)
 msgid ""
@@ -564,12 +557,18 @@ msgid ""
 "for openSUSE Leap 42.3 which ships with the same versions of GCC 6 packages "
 "as SUSE Linux Enterprise 12 SP3."
 msgstr ""
+"openSUSE Leap 42.2 была случайно выпущена с более новой версией GCC 6, чем в "
+"SUSE Linux Enterprise на тот момент. Это было исправлено в openSUSE Leap "
+"42.3, которая поставляется с теми же версиями пакетов GCC 6, что и SUSE "
+"Linux Enterprise 12 SP3."
 
 #: xml/release-notes.xml:386(para)
 msgid ""
 "However, if GCC 6 packages are installed, this leads to forced package "
 "downgrades during the operating system upgrade."
 msgstr ""
+"Тем не менее, если пакеты GCC 6 уже установлены, это приведёт к "
+"принудительному понижению версии при обновлении операцонной системы."
 
 #: xml/release-notes.xml:395(title)
 msgid "Upgrading from openSUSE Leap 42.1"
@@ -1092,7 +1091,7 @@ msgstr "В openSUSE Leap 42.3 снова доступен плазмоид ст�
 
 #: xml/release-notes.xml:767(title)
 msgid "Non-Qt Applications Can Behave Incorrectly"
-msgstr ""
+msgstr "Не-Qt приложения могут вести себя некорректно"
 
 #: xml/release-notes.xml:768(para)
 msgid ""
@@ -1104,13 +1103,15 @@ msgstr ""
 
 #: xml/release-notes.xml:776(title)
 msgid "Playing MP3 Media Files"
-msgstr ""
+msgstr "Воспроизведение MP3-файлов"
 
 #: xml/release-notes.xml:777(para)
 msgid ""
 "Starting with openSUSE Leap 42.3, the codecs to play MP3 media files are now "
 "shipped as part of the standard repository."
 msgstr ""
+"Начиная с openSUSE Leap 42.3, кодеки для воспроизведения файлов MP3 входят в "
+"состав стандартного репозитория."
 
 #: xml/release-notes.xml:781(para)
 msgid ""
@@ -1118,10 +1119,13 @@ msgid ""
 "Rhythmbox or Totem, install the package <literal>gstreamer-plugins-ugly</"
 "literal>."
 msgstr ""
+"Чтобы использовать этот декодер в приложениях и фреймворках на базе "
+"gstreamer, например, Rhythmbox или Totem, установите пакет <literal"
+">gstreamer-plugins-ugly</literal>."
 
 #: xml/release-notes.xml:789(title)
 msgid "No Support for Type-1 Fonts in LibreOffice"
-msgstr ""
+msgstr "В LibreOffice нет поддержки шрифтов Type-1"
 
 #: xml/release-notes.xml:790(para)
 msgid ""
@@ -1131,6 +1135,11 @@ msgid ""
 "format TrueType (<filename>.ttf</filename>) or OpenType (<filename>.otf</"
 "filename>) formats."
 msgstr ""
+"LibreOffice 5.3 больше не поддерживает устаревшие шрифты в формате Type-1 ("
+"расширения <filename>.afm</filename> и <filename>.pfb</filename>). Это никак "
+"не скажется на работе большинства пользователей, поскольку современные "
+"шрифты доступны в формате TrueType (<filename>.ttf</filename>) либо OpenType "
+"(<filename>.otf</filename>)."
 
 #: xml/release-notes.xml:797(para)
 msgid ""
@@ -1140,6 +1149,12 @@ msgid ""
 "is included in openSUSE. For information on scripting such conversions, see "
 "<link href=\"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
 msgstr ""
+"Если на вашу работу это влияет, преобразуйте шрифты Type-1 в поддерживаемый "
+"формат, например, TrueType, и используйте преобразованные шрифты. "
+"Преобразование можно выполнить с помощью приложения FontForge (пакет "
+"<package>fontforge</package>), входящего в состав openSUSE. Сведения по "
+"написанию скриптов для преобразования приведены по адресу <link href=\""
+"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
 
 #: xml/release-notes.xml:831(title)
 msgid "More Information and Feedback"
