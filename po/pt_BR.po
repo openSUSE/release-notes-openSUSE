@@ -6,11 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2017-07-25 18:39+0200\n"
+"POT-Creation-Date: 2017-07-31 12:48+0200\n"
 "PO-Revision-Date: 2017-07-27 17:05+0000\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects"
-"/release-notes-opensuse/leap_42_3/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap_42_3/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -285,11 +285,37 @@ msgstr ""
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "O corrijir este problema, converta a partição antiga MBR para GPT."
 
-#: xml/release-notes.xml:163(title)
+#: xml/release-notes.xml:162(title)
+msgid "Update of Kernel Graphics Stack"
+msgstr ""
+
+#: xml/release-notes.xml:163(para)
+msgid ""
+"On openSUSE Leap 42.3, the upgrade of the graphics stack up to 4.9.x kernel "
+"code is provided via <package>drm-kmp-default</package> package instead of "
+"backporting tons of patches into the kernel itself. Usually this package is "
+"installed automatically at installation when a corresponding graphics device "
+"is found on your machine."
+msgstr ""
+
+#: xml/release-notes.xml:171(para)
+msgid ""
+"The KMP gives users also another benefit: you can roll back to the 4.4.x "
+"kernel code easily simply by uninstalling this package. When you face often "
+"a critical issue like GPU hang up, try to uninstall the package once like "
+"below, reboot and retest."
+msgstr ""
+
+#: xml/release-notes.xml:177(screen) xml/release-notes.xml:188(screen)
+#, no-wrap
+msgid "zypper rm drm-kmp-default"
+msgstr "zypper rm drm-kmp-default"
+
+#: xml/release-notes.xml:182(title)
 msgid "Changes for Users Installing the Nvidia Driver Manually"
 msgstr "Alterações para usuários que instalam o driver Nvidia manualmente"
 
-#: xml/release-notes.xml:164(para)
+#: xml/release-notes.xml:183(para)
 msgid ""
 "On openSUSE Leap 42.3, you need to uninstall the package <package>drm-kmp-"
 "default</package> first, before you can manually install Nvidia drivers "
@@ -299,12 +325,7 @@ msgstr ""
 "default</package> antes de instalar manualmente os drivers Nvidia usando o "
 "arquivo de shell script <filename>.run</filename> :"
 
-#: xml/release-notes.xml:169(screen)
-#, no-wrap
-msgid "zypper rm drm-kmp-default"
-msgstr "zypper rm drm-kmp-default"
-
-#: xml/release-notes.xml:170(para)
+#: xml/release-notes.xml:189(para)
 msgid ""
 "If you install the RPMs provided by Nvidia, you will not be affected by this "
 "issue, because in that case the package <package>drm-kmp-default</package> "
@@ -314,7 +335,7 @@ msgstr ""
 "Nvidia, já que o pacote <package>drm-kmp-default</package> é substituído "
 "automaticamente durante a instalação do driver."
 
-#: xml/release-notes.xml:176(para)
+#: xml/release-notes.xml:195(para)
 msgid ""
 "If you decide to uninstall Nvidia's driver later, make sure to reinstall the "
 "package <package>drm-kmp-default</package>."
@@ -322,7 +343,7 @@ msgstr ""
 "Caso decida desinstalar o driver Nvidia depois, certifique-se de reinstalar "
 "o pacote <package>drm-kmp-default</package>."
 
-#: xml/release-notes.xml:180(para)
+#: xml/release-notes.xml:199(para)
 msgid ""
 "For more information, see <link href=\"https://bugzilla.suse.com/show_bug."
 "cgi?id=1044816\"/>."
@@ -330,11 +351,11 @@ msgstr ""
 "Veja <link href=\"https://bugzilla.suse.com/show_bug.cgi?id=1044816\"/> para "
 "mais informações."
 
-#: xml/release-notes.xml:222(title)
+#: xml/release-notes.xml:241(title)
 msgid "System Upgrade"
 msgstr "Atualização do sistema"
 
-#: xml/release-notes.xml:224(para)
+#: xml/release-notes.xml:243(para)
 msgid ""
 "This section lists notes related to upgrading the system. For detailed "
 "upgrade instructions, see the documentation at <link href=\"https://doc."
@@ -346,15 +367,15 @@ msgstr ""
 "\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse."
 "startup/cha.update.osuse.html\"/>."
 
-#: xml/release-notes.xml:231(title)
+#: xml/release-notes.xml:250(title)
 msgid "Upgrading from openSUSE Leap 42.2"
 msgstr "Atualizando do openSUSE Leap 42.2"
 
-#: xml/release-notes.xml:234(title) xml/release-notes.xml:397(title)
+#: xml/release-notes.xml:253(title) xml/release-notes.xml:416(title)
 msgid "Removed and Replaced Packages"
 msgstr "Pacotes removidos e substituídos"
 
-#: xml/release-notes.xml:235(para)
+#: xml/release-notes.xml:254(para)
 msgid ""
 "The following packages have been removed or replaced compared to openSUSE "
 "Leap 42.2:"
@@ -362,15 +383,15 @@ msgstr ""
 "Os seguintes pacotes foram removidos ou substituídos comparando com o "
 "openSUSE Leap 42.2:"
 
-#: xml/release-notes.xml:241(para)
+#: xml/release-notes.xml:260(para)
 msgid "<package>ldapjdk</package>: Fails to build on 42.3."
 msgstr "<package>ldapjdk</package>: falha ao compilar no 42.3."
 
-#: xml/release-notes.xml:246(para)
+#: xml/release-notes.xml:265(para)
 msgid "<package>castor</package>: Fails to build on 42.3."
 msgstr "<package>castor</package>: falha ao compilar no 42.3."
 
-#: xml/release-notes.xml:251(para)
+#: xml/release-notes.xml:270(para)
 msgid ""
 "<package>fontinfo</package>: Was never intended to be released as a stable "
 "package."
@@ -378,7 +399,7 @@ msgstr ""
 "<package>fontinfo</package>: nunca foi concebido para ser lançado como um "
 "pacote estável."
 
-#: xml/release-notes.xml:257(para)
+#: xml/release-notes.xml:276(para)
 msgid ""
 "<package>plasma5-mediacenter</package>: Dropped by upstream after version "
 "5.7.3."
@@ -386,7 +407,7 @@ msgstr ""
 "<package>plasma5-mediacenter</package>: removido oficialmente após a versão "
 "5.7.3."
 
-#: xml/release-notes.xml:263(para)
+#: xml/release-notes.xml:282(para)
 msgid ""
 "<package>perl-Mojolicious-Plugin-Bootstrap3</package>: Deprecated by "
 "upstream, the functionality is replaced by <package>perl-Mojolicious-Plugin-"
@@ -396,19 +417,19 @@ msgstr ""
 "pelos desenvolvedores oficiais, a funcionalidade foi substituída pelo "
 "<package>perl-Mojolicious-Plugin-AssetPack</package>."
 
-#: xml/release-notes.xml:270(para)
+#: xml/release-notes.xml:289(para)
 msgid "<package>qtsharp</package>: Fails to build on 42.3."
 msgstr "<package>qtsharp</package>: falha ao compilar no 42.3."
 
-#: xml/release-notes.xml:275(para)
+#: xml/release-notes.xml:294(para)
 msgid "<package>rubygem-mysql</package>: Replaced by rubygem-mysql2."
 msgstr "<package>rubygem-mysql</package>: substituído por rubygem-mysql2."
 
-#: xml/release-notes.xml:282(title)
+#: xml/release-notes.xml:301(title)
 msgid "Synaptics Touchpad Driver with KDE Plasma"
 msgstr "Driver do touchpad Synaptics com o Plasma do KDE"
 
-#: xml/release-notes.xml:283(para)
+#: xml/release-notes.xml:302(para)
 msgid ""
 "In openSUSE Leap 42.2, the X11 synaptics driver (package <package>xf86-input-"
 "synaptics</package>) was not installed by default (see <xref linkend=\"sec."
@@ -420,7 +441,7 @@ msgstr ""
 "upgrade.synaptics\"/>). No entanto, o Plasma do KDE oferece apenas opções "
 "limitadas de configuração para o driver substituto libinput."
 
-#: xml/release-notes.xml:289(para)
+#: xml/release-notes.xml:308(para)
 msgid ""
 "Since openSUSE Leap 42.3, the <package>xf86-input-synaptics</package> "
 "package is installed together with the KDE Plasma desktop (recommended by "
@@ -430,11 +451,11 @@ msgstr ""
 "package>) é instalado junto com a área de trabalho Plasma do KDE "
 "(recomendado pelo pacote <package>plasma5-workspace</package>)."
 
-#: xml/release-notes.xml:296(title)
+#: xml/release-notes.xml:315(title)
 msgid "Changes in KDE Desktop Search Indexing"
 msgstr "Alterações na indexação da pesquisa da área de trabalho KDE"
 
-#: xml/release-notes.xml:297(para)
+#: xml/release-notes.xml:316(para)
 msgid ""
 "In openSUSE Leap 42.3, the desktop search only indexes file names by "
 "default, not the contents of files."
@@ -442,7 +463,7 @@ msgstr ""
 "No openSUSE Leap 42.3, a pesquisa da área de trabalho indexa apenas os nomes "
 "de arquivo por padrão, não o conteúdo dos arquivos."
 
-#: xml/release-notes.xml:301(para)
+#: xml/release-notes.xml:320(para)
 msgid ""
 "File content indexing needs to be re-enabled manually, even if it was "
 "enabled before, as the previous default was not saved to the configuration. "
@@ -452,7 +473,7 @@ msgstr ""
 "mesmo que já estava habilitada anteriormente, pois o antigo padrão não era "
 "salvo na configuração. Para fazer isto, siga estes passos:"
 
-#: xml/release-notes.xml:308(para)
+#: xml/release-notes.xml:327(para)
 msgid ""
 "Using the main menu or krunner, open the <guimenu>Desktop Configuration</"
 "guimenu>."
@@ -460,25 +481,25 @@ msgstr ""
 "Usando o menu principal ou krunner, abra a <guimenu>Configuração da Área de "
 "Trabalho</guimenu>."
 
-#: xml/release-notes.xml:314(para)
+#: xml/release-notes.xml:333(para)
 msgid "Click <guimenu>Search</guimenu>."
 msgstr "Clique <guimenu>Pesquisa</guimenu>."
 
-#: xml/release-notes.xml:319(para)
+#: xml/release-notes.xml:338(para)
 msgid "Activate the check box <guimenu>Also index file content</guimenu>."
 msgstr ""
 "Ativar a caixa de seleção <guimenu>Também indexar o conteúdo do arquivo</"
 "guimenu>."
 
-#: xml/release-notes.xml:324(para)
+#: xml/release-notes.xml:343(para)
 msgid "Click <guimenu>Apply</guimenu>."
 msgstr "Clique em <guimenu>Aplicar</guimenu>."
 
-#: xml/release-notes.xml:331(title)
+#: xml/release-notes.xml:350(title)
 msgid "Shorewall Has Been Upgraded to Version 5.1"
 msgstr "Shorewall atualizado para a versão 5.1"
 
-#: xml/release-notes.xml:332(para)
+#: xml/release-notes.xml:351(para)
 msgid ""
 "In openSUSE Leap 42.3, Shorewall was upgraded to last stable 5.1 release. "
 "When upgrading, <package>shorewall</package> and <package>shorewall6</"
@@ -489,29 +510,29 @@ msgstr ""
 "package> alertarão o administrador que é necessária uma atualização dos "
 "arquivos de configuração."
 
-#: xml/release-notes.xml:337(para)
+#: xml/release-notes.xml:356(para)
 msgid "Documentation is available on <link href=\"http://shorewall.net/\"/>."
 msgstr ""
 "A documentação está disponível em <link href=\"http://shorewall.net/\"/>."
 
-#: xml/release-notes.xml:341(title)
+#: xml/release-notes.xml:360(title)
 msgid "Upgrading Shorewall"
 msgstr "Atualizando o Shorewall"
 
-#: xml/release-notes.xml:343(para)
+#: xml/release-notes.xml:362(para)
 msgid "With root privileges in a console session, run:"
 msgstr "Num terminal como root:"
 
-#: xml/release-notes.xml:346(prompt) xml/release-notes.xml:359(prompt)
-#: xml/release-notes.xml:363(prompt)
+#: xml/release-notes.xml:365(prompt) xml/release-notes.xml:378(prompt)
+#: xml/release-notes.xml:382(prompt)
 msgid "root #"
 msgstr "root #"
 
-#: xml/release-notes.xml:346(command)
+#: xml/release-notes.xml:365(command)
 msgid "shorewall update -a /etc/shorewall"
 msgstr "shorewall update -a /etc/shorewall"
 
-#: xml/release-notes.xml:349(para)
+#: xml/release-notes.xml:368(para)
 msgid ""
 "Adapt your configuration to the newer syntax in cases where the tool does "
 "not do that for you. This should normally only be required on specific, very "
@@ -521,27 +542,27 @@ msgstr ""
 "isso por você. Normalmente, isso só será necessário em configurações "
 "específicas, muito complexas."
 
-#: xml/release-notes.xml:356(para)
+#: xml/release-notes.xml:375(para)
 msgid "Verify and test the resulting configuration with:"
 msgstr "Verifique e teste a configuração gerada com:"
 
-#: xml/release-notes.xml:359(command)
+#: xml/release-notes.xml:378(command)
 msgid "shorewall try /etc/shorewall"
 msgstr "shorewall try /etc/shorewall"
 
-#: xml/release-notes.xml:360(para)
+#: xml/release-notes.xml:379(para)
 msgid "If everything works, reboot your computer or restart the service with:"
 msgstr "Se tudo funcionar, reinicie seu computador ou o serviço com:"
 
-#: xml/release-notes.xml:363(command)
+#: xml/release-notes.xml:382(command)
 msgid "systemctl restart shorewall.service"
 msgstr "systemctl restart shorewall.service"
 
-#: xml/release-notes.xml:367(title)
+#: xml/release-notes.xml:386(title)
 msgid "Upgrading <command>shorewall6</command>"
 msgstr "Atualizando o <command>shorewall6</command>"
 
-#: xml/release-notes.xml:368(para)
+#: xml/release-notes.xml:387(para)
 msgid ""
 "The upgrade process for <command>shorewall6</command> matches the process "
 "for <command>shorewall</command> described in <xref linkend=\"pro."
@@ -554,11 +575,11 @@ msgstr ""
 "ocorrências do <literal>shorewall</literal> com <literal>shorewall6</"
 "literal>."
 
-#: xml/release-notes.xml:379(title)
+#: xml/release-notes.xml:398(title)
 msgid "GCC 6 Package Versions Match Packages Shipped with SLE 12 SP3"
 msgstr "Versão do pacote GCC 6 corresponde ao distribuído no SLE 12 SP3"
 
-#: xml/release-notes.xml:380(para)
+#: xml/release-notes.xml:399(para)
 msgid ""
 "openSUSE Leap 42.2 accidentally shipped with a newer version of GCC 6 than "
 "was shipped with SUSE Linux Enterprise at the time. This has been corrected "
@@ -570,19 +591,19 @@ msgstr ""
 "Leap 42.3 que distribui a mesma versão do GCC6 que o SUSE Linux Enterprise "
 "12 SP3."
 
-#: xml/release-notes.xml:386(para)
+#: xml/release-notes.xml:405(para)
 msgid ""
 "However, if GCC 6 packages are installed, this leads to forced package "
 "downgrades during the operating system upgrade."
 msgstr ""
-"No entanto, se os pacotes GCC 6 estão instalados, isto forçará a \""
-"downgrades\" de pacotes durante a operação de atualização do sistema."
+"No entanto, se os pacotes GCC 6 estão instalados, isto forçará a \"downgrades"
+"\" de pacotes durante a operação de atualização do sistema."
 
-#: xml/release-notes.xml:395(title)
+#: xml/release-notes.xml:414(title)
 msgid "Upgrading from openSUSE Leap 42.1"
 msgstr "Atualizando do openSUSE Leap 42.1"
 
-#: xml/release-notes.xml:398(para)
+#: xml/release-notes.xml:417(para)
 msgid ""
 "The following packages have been removed or replaced compared to openSUSE "
 "Leap 42.1:"
@@ -590,13 +611,13 @@ msgstr ""
 "Os seguintes pacotes foram removidos ou substituídos comparando com o "
 "openSUSE Leap 42.1:"
 
-#: xml/release-notes.xml:404(para)
+#: xml/release-notes.xml:423(para)
 msgid ""
 "<package>arista</package>: Replaced by <package>transmageddon</package>."
 msgstr ""
 "<package>arista</package>: substituído por <package>transmageddon</package>."
 
-#: xml/release-notes.xml:410(para)
+#: xml/release-notes.xml:429(para)
 msgid ""
 "<package>cadabra</package>: The source code no longer builds. The successor, "
 "<link href=\"http://cadabra.science/\">Cadabra 2</link> is not stable yet."
@@ -604,7 +625,7 @@ msgstr ""
 "<package>cadabra</package>: o código fonte não compila mais. O sucessor, "
 "<link href=\"http://cadabra.science/\">Cadabra 2</link> ainda não é estável."
 
-#: xml/release-notes.xml:417(para)
+#: xml/release-notes.xml:436(para)
 msgid ""
 "<package>dropbear</package>: Removed because there are no relevant "
 "advantages over <package>openssh</package>."
@@ -612,13 +633,13 @@ msgstr ""
 "<package>dropbear</package>: removido por não ter vantagens relevantes sobre "
 "o <package>openssh</package>."
 
-#: xml/release-notes.xml:423(para)
+#: xml/release-notes.xml:442(para)
 msgid ""
 "<package>emerillon</package>: Replaced by <package>gnome-maps</package>."
 msgstr ""
 "<package>emerillon</package>: substituído por <package>gnome-maps</package>."
 
-#: xml/release-notes.xml:429(para)
+#: xml/release-notes.xml:448(para)
 msgid ""
 "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</"
 "package>."
@@ -626,16 +647,16 @@ msgstr ""
 "<package>gnome-system-log</package>: substituído por <package>gnome-logs</"
 "package>."
 
-#: xml/release-notes.xml:435(para)
+#: xml/release-notes.xml:454(para)
 msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgstr "<package>hawk</package>: substituído por <package>hawk2</package>."
 
-#: xml/release-notes.xml:440(para)
+#: xml/release-notes.xml:459(para)
 msgid "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
 msgstr ""
 "<package>ksnapshot</package>: substituído por <package>spectacle</package>."
 
-#: xml/release-notes.xml:445(para)
+#: xml/release-notes.xml:464(para)
 msgid ""
 "<package>labplot</package>: Labplot has been replaced by its Qt5 version, "
 "called <package>labplot-kf5</package>. If you are updating from an openSUSE "
@@ -647,15 +668,15 @@ msgstr ""
 "openSUSE Leap 42.1 no qual o <package>labplot</package> está instalado, você "
 "receberá o <package>labplot-kf5</package> automaticamente."
 
-#: xml/release-notes.xml:454(para)
+#: xml/release-notes.xml:473(para)
 msgid "<package>nodejs</package>: Renamed to <package>nodejs4</package>."
 msgstr "<package>nodejs</package>: renomeado para <package>nodejs4</package>."
 
-#: xml/release-notes.xml:459(para)
+#: xml/release-notes.xml:478(para)
 msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgstr "<package>psi</package>: substituído por <package>psi+</package>."
 
-#: xml/release-notes.xml:464(para)
+#: xml/release-notes.xml:483(para)
 msgid ""
 "<package>python-moin</package>: Replaced by <package>moinmoin-wiki</"
 "package>. Purely a rename, not a version upgrade - a virtually identical "
@@ -665,16 +686,16 @@ msgstr ""
 "package>. Apenas uma troca de nomes, não atualização de versão - uma "
 "substituição virtualmente idêntica."
 
-#: xml/release-notes.xml:471(para)
+#: xml/release-notes.xml:490(para)
 msgid "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
 msgstr ""
 "<package>ungifsicle</package>: substituído por <package>gifsicle</package>."
 
-#: xml/release-notes.xml:477(para)
+#: xml/release-notes.xml:496(para)
 msgid "<package>xchat</package>: Replaced by <package>hexchat</package>."
 msgstr "<package>xchat</package>: substituído por <package>hexchat</package>."
 
-#: xml/release-notes.xml:485(title)
+#: xml/release-notes.xml:504(title)
 msgid ""
 "<filename>/var/cache</filename> on an Own Subvolume for Snapshots and "
 "Rollback"
@@ -682,7 +703,7 @@ msgstr ""
 "<filename>/var/cache</filename> em um subvolume próprio para snapshots e "
 "rollback"
 
-#: xml/release-notes.xml:486(para)
+#: xml/release-notes.xml:505(para)
 msgid ""
 "<filename>/var/cache</filename> contains a lot of very volatile data, such "
 "as the Zypper cache with RPM packages in different versions for each update. "
@@ -695,7 +716,7 @@ msgstr ""
 "altamente volátil, a quantidade de espaço em disco que um snapshot ocupa "
 "pode aumentar muito rápido."
 
-#: xml/release-notes.xml:493(para)
+#: xml/release-notes.xml:512(para)
 msgid ""
 "To solve this, move <filename>/var/cache</filename> to a separate subvolume. "
 "On fresh installations of openSUSE Leap 42.3, this is done automatically. To "
@@ -706,7 +727,7 @@ msgstr ""
 "automaticamente. Para converter um sistema de arquivos raiz existente, siga "
 "estes passos:"
 
-#: xml/release-notes.xml:501(para)
+#: xml/release-notes.xml:520(para)
 msgid ""
 "Find out the device name (for example, <filename>/dev/sda2</filename> or "
 "<filename>/dev/sda3</filename>) of the root file system:"
@@ -714,11 +735,11 @@ msgstr ""
 "Descubra o nome do dispositivo (por exemplo, <filename>/dev/sda2</filename> "
 "ou <filename>/dev/sda3</filename>) do sistema de arquivos raiz:"
 
-#: xml/release-notes.xml:506(command)
+#: xml/release-notes.xml:525(command)
 msgid "df /"
 msgstr "df /"
 
-#: xml/release-notes.xml:509(para)
+#: xml/release-notes.xml:528(para)
 msgid ""
 "Identify the parent subvolume of all the other subvolumes. For openSUSE 13.2 "
 "installations, this is a subvolume named <filename>@</filename>. To check if "
@@ -729,11 +750,11 @@ msgstr ""
 "filename>. Para verificar se você tem um subvolume <filename>@</filename>, "
 "use:"
 
-#: xml/release-notes.xml:515(command)
+#: xml/release-notes.xml:534(command)
 msgid "btrfs subvolume list / | grep '@'"
 msgstr "btrfs subvolume list / | grep '@'"
 
-#: xml/release-notes.xml:516(para)
+#: xml/release-notes.xml:535(para)
 msgid ""
 "If the output of this command is empty, you do not have a subvolume named "
 "<filename>@</filename>. In that case, you may be able to proceed with "
@@ -743,11 +764,11 @@ msgstr ""
 "<filename>@</filename>. Neste caso, você pode proceder com o  subvolume ID 5 "
 "que foi usado em versões mais antigas do openSUSE."
 
-#: xml/release-notes.xml:523(para)
+#: xml/release-notes.xml:542(para)
 msgid "Now mount the requisite subvolume."
 msgstr "Monte agora o subvolume requisitado."
 
-#: xml/release-notes.xml:528(para)
+#: xml/release-notes.xml:547(para)
 msgid ""
 "If you have a <filename>@</filename> subvolume, mount that subvolume to a "
 "temporary mount point:"
@@ -755,22 +776,22 @@ msgstr ""
 "Se você tem um subvolume <filename>@</filename>, monte este subvolume em um "
 "ponto de montagem temporário:"
 
-#: xml/release-notes.xml:532(command)
+#: xml/release-notes.xml:551(command)
 msgid "mount &lt;root_device&gt; -o subvol=@ /mnt"
 msgstr "mount &lt;root_device&gt; -o subvol=@ /mnt"
 
-#: xml/release-notes.xml:535(para)
+#: xml/release-notes.xml:554(para)
 msgid ""
 "If you do not have a <filename>@</filename> subvolume, mount subvolume ID 5 "
 "instead:"
 msgstr ""
 "Se você não tem um subvolume <filename>@</filename>, monte o subvolume ID 5:"
 
-#: xml/release-notes.xml:539(command)
+#: xml/release-notes.xml:558(command)
 msgid "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 msgstr "mount &lt;root_device&gt; -o subvolid=5 /mnt"
 
-#: xml/release-notes.xml:544(para)
+#: xml/release-notes.xml:563(para)
 msgid ""
 "<filename>/mnt/var/cache</filename> can already exist and could be the same "
 "directory as <filename>/var/cache</filename>. To avoid data loss, move it:"
@@ -779,19 +800,19 @@ msgstr ""
 "diretório que <filename>/var/cache</filename>. Para evitar perda de dados, "
 "mova-o:"
 
-#: xml/release-notes.xml:549(command)
+#: xml/release-notes.xml:568(command)
 msgid "mv /mnt/var/cache /mnt/var/cache.old"
 msgstr "mv /mnt/var/cache /mnt/var/cache.old"
 
-#: xml/release-notes.xml:552(para)
+#: xml/release-notes.xml:571(para)
 msgid "Create a new subvolume:"
 msgstr "Crie um novo subvolume:"
 
-#: xml/release-notes.xml:555(command)
+#: xml/release-notes.xml:574(command)
 msgid "btrfs subvol create /mnt/var/cache"
 msgstr "btrfs subvol create /mnt/var/cache"
 
-#: xml/release-notes.xml:558(para)
+#: xml/release-notes.xml:577(para)
 msgid ""
 "If there is now a directory <filename>/var/cache.old</filename>, move it to "
 "the new location:"
@@ -799,35 +820,35 @@ msgstr ""
 "Se existir agora um diretório <filename>/var/cache.old</filename>, mova-o "
 "para a nova localização:"
 
-#: xml/release-notes.xml:562(command)
+#: xml/release-notes.xml:581(command)
 msgid "mv /var/cache.old/* /mnt/var/cache"
 msgstr "mv /var/cache.old/* /mnt/var/cache"
 
-#: xml/release-notes.xml:563(para)
+#: xml/release-notes.xml:582(para)
 msgid "If that is not the case, instead do:"
 msgstr "Se este não for o caso, faça:"
 
-#: xml/release-notes.xml:566(command)
+#: xml/release-notes.xml:585(command)
 msgid "mv /var/cache/* /mnt/var/cache/"
 msgstr "mv /var/cache/* /mnt/var/cache/"
 
-#: xml/release-notes.xml:569(para)
+#: xml/release-notes.xml:588(para)
 msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgstr "Opcionalmente, exclua <filename>/mnt/var/cache.old</filename>:"
 
-#: xml/release-notes.xml:572(command)
+#: xml/release-notes.xml:591(command)
 msgid "rm -rf /mnt/var/cache.old"
 msgstr "rm -rf /mnt/var/cache.old"
 
-#: xml/release-notes.xml:575(para)
+#: xml/release-notes.xml:594(para)
 msgid "Unmount the subvolume from the temporary mount point:"
 msgstr "Desmonte o subvolume do ponto de montagem temporário:"
 
-#: xml/release-notes.xml:578(command)
+#: xml/release-notes.xml:597(command)
 msgid "umount /mnt"
 msgstr "umount /mnt"
 
-#: xml/release-notes.xml:581(para)
+#: xml/release-notes.xml:600(para)
 msgid ""
 "Add an entry to <filename>/etc/fstab</filename> for the new <filename>/var/"
 "cache</filename> subvolume. Use an existing subvolume as a template to copy "
@@ -841,21 +862,21 @@ msgstr ""
 "UUID do sistema de arquivos raiz) e altere o nome do subvolume e seu ponto "
 "de montagem de forma consistente para <filename>/var/cache</filename>."
 
-#: xml/release-notes.xml:590(para)
+#: xml/release-notes.xml:609(para)
 msgid ""
 "Mount the new subvolume as specified in <filename>/etc/fstab</filename>:"
 msgstr ""
 "Monte o novo subvolume como especificado no <filename>/etc/fstab</filename>:"
 
-#: xml/release-notes.xml:593(command)
+#: xml/release-notes.xml:612(command)
 msgid "mount /var/cache"
 msgstr "mount /var/cache"
 
-#: xml/release-notes.xml:599(title)
+#: xml/release-notes.xml:618(title)
 msgid "GNOME Keyring Does Not Integrate with GPG Anymore"
 msgstr "O Chaveiro do GNOME não se integra mais ao GPG"
 
-#: xml/release-notes.xml:600(para)
+#: xml/release-notes.xml:619(para)
 msgid ""
 "The integrated GPG agent of GNOME Keyring has been removed. Therefore, GNOME "
 "Keyring cannot be used to manage GPG keys anymore. You can still manage GPG "
@@ -866,11 +887,11 @@ msgstr ""
 "ainda pode gerenciar chaves GPG na linha de comando usand o ferramenta "
 "<command>gpg</command>."
 
-#: xml/release-notes.xml:607(title)
+#: xml/release-notes.xml:626(title)
 msgid "Synaptics X Driver Can Degrade Touchpad Experience Under GNOME"
 msgstr "Driver X do Synaptics pode degradar a experiência do touchpad no GNOME"
 
-#: xml/release-notes.xml:608(para)
+#: xml/release-notes.xml:627(para)
 msgid ""
 "In openSUSE Leap 42.1, the Synaptics X driver (package <package>xf86-input-"
 "synaptics</package>) was installed by default but had a lower priority than "
@@ -880,15 +901,15 @@ msgstr ""
 "synaptics</package>) foi instalado por padrão mas tem uma prioridade menor "
 "que o driver libinput (<package>xf86-input-libinput</package>)."
 
-#: xml/release-notes.xml:614(para)
+#: xml/release-notes.xml:633(para)
 msgid "With openSUSE Leap 42.3:"
 msgstr "Com o openSUSE Leap 42.3:"
 
-#: xml/release-notes.xml:619(para)
+#: xml/release-notes.xml:638(para)
 msgid "The Synaptics X driver is no longer installed by default."
 msgstr "O driver X do Synaptics não é mais instalado por padrão."
 
-#: xml/release-notes.xml:624(para)
+#: xml/release-notes.xml:643(para)
 msgid ""
 "If the Synaptics X driver is installed, it will take precedence for any "
 "touchpad devices."
@@ -896,7 +917,7 @@ msgstr ""
 "Se o driver X do Synaptics está instalado, ele terá precedência em qualquer "
 "dispositivo touchpad."
 
-#: xml/release-notes.xml:630(para)
+#: xml/release-notes.xml:649(para)
 msgid ""
 "The Synaptics X driver is no longer supported by GNOME. This means when the "
 "driver is installed, Synaptics touchpads can only be configured to the "
@@ -906,7 +927,7 @@ msgstr ""
 "quando o driver está instalado, os touchpad Synaptics podem ser configurador "
 "apenas até onde um mouse básico pode."
 
-#: xml/release-notes.xml:637(para)
+#: xml/release-notes.xml:656(para)
 msgid ""
 "Unless you are using a Synaptics touchpad and have a large amount of custom "
 "configuration for the Synaptics driver, remove the package from your system:"
@@ -915,11 +936,11 @@ msgstr ""
 "quantidade de configurações personalizadas para o driver Synaptics, remova o "
 "pacote do seu sistema:"
 
-#: xml/release-notes.xml:642(command)
+#: xml/release-notes.xml:661(command)
 msgid "sudo zypper rm xf86-input-synaptics"
 msgstr "sudo zypper rm xf86-input-synaptics"
 
-#: xml/release-notes.xml:647(title)
+#: xml/release-notes.xml:666(title)
 msgid ""
 "AArch64: Page Size Has Been Changed From openSUSE Leap 42.1 to openSUSE Leap "
 "42.3"
@@ -927,7 +948,7 @@ msgstr ""
 "AArch64: Tamanho da página foi alterado do openSUSE Leap 42.1 para o "
 "openSUSE Leap 42.3"
 
-#: xml/release-notes.xml:648(para)
+#: xml/release-notes.xml:667(para)
 msgid ""
 "In openSUSE Leap 42.1, the default page size on AArch64 platforms was 64 kB. "
 "With openSUSE Leap 42.3, the page size has been changed to 4 kB. This "
@@ -937,7 +958,7 @@ msgstr ""
 "de 64 kB. Com o openSUSE Leap 42.3, o tamanho de página foi alterado para 4 "
 "kB. Isto torna o sistema de arquivos Btrfs e Swap antigos inutilizável."
 
-#: xml/release-notes.xml:653(para)
+#: xml/release-notes.xml:672(para)
 msgid ""
 "If you are currently on openSUSE Leap 42.1 on AArch64, consider a fresh "
 "installation of openSUSE Leap 42.3 instead of upgrading."
@@ -945,12 +966,12 @@ msgstr ""
 "Se você está atualmente no openSUSE Leap 42.1 em um AArch64, considere uma "
 "instalação limpa do openSUSE Leap 42.3 ao invés de uma atualização."
 
-#: xml/release-notes.xml:661(title)
+#: xml/release-notes.xml:680(title)
 msgid "Systems with CCISS Controllers Can Fail to Boot After Upgrade"
 msgstr ""
 "Sistemas com controladoras CCISS podem falhar ao iniciar após atualização"
 
-#: xml/release-notes.xml:662(para)
+#: xml/release-notes.xml:681(para)
 msgid ""
 "The driver for Compaq/HP Smart Array (CCISS) controllers (<filename>cciss."
 "ko</filename>) does not support certain controllers anymore by default. This "
@@ -962,7 +983,7 @@ msgstr ""
 "padrão. Isto pode levar ao disco raiz não ser detectado pelo kernel do "
 "openSUSE Leap 42.3 kernel."
 
-#: xml/release-notes.xml:668(para)
+#: xml/release-notes.xml:687(para)
 msgid ""
 "On affected systems, the CCISS driver can be configured to revert to the "
 "previous behavior and detect the controllers again. To do so, add the kernel "
@@ -973,11 +994,11 @@ msgstr ""
 "isto, adicione o parâmetro de kernel <literal>cciss.cciss_allow_hpsa=0</"
 "literal>."
 
-#: xml/release-notes.xml:677(title)
+#: xml/release-notes.xml:696(title)
 msgid "General"
 msgstr "Geral"
 
-#: xml/release-notes.xml:679(para)
+#: xml/release-notes.xml:698(para)
 msgid ""
 "This section lists general issues with openSUSE Leap 42.3 that do not match "
 "any other category."
@@ -985,11 +1006,11 @@ msgstr ""
 "Esta seção lista problemas gerais com o openSUSE Leap 42.3 que não se "
 "enquadram em qualquer categoria."
 
-#: xml/release-notes.xml:685(title)
+#: xml/release-notes.xml:704(title)
 msgid "KDE Software for Personal Information Management (KDE PIM)"
 msgstr "KDEPIM (Aplicativos do KDE para gerenciamento de informação pessoal)"
 
-#: xml/release-notes.xml:686(para)
+#: xml/release-notes.xml:705(para)
 msgid ""
 "KDE PIM 4.x is no longer supported by upstream KDE, but was kept in openSUSE "
 "Leap 42.2 together with KDE PIM 5 to avoid disrupting user workflows and "
@@ -999,7 +1020,7 @@ msgstr ""
 "openSUSE Leap 42.2 junto com o KDE PIM 5 para evitar interrupção no fluxo de "
 "trabalho do usuário e permitir uma migração fácil."
 
-#: xml/release-notes.xml:691(para)
+#: xml/release-notes.xml:710(para)
 msgid ""
 "With openSUSE Leap 42.3, the KDE PIM 4.x stack got dropped and only the "
 "current upstream-supported KDE PIM 5 stack is included."
@@ -1007,11 +1028,11 @@ msgstr ""
 "Com o openSUSE Leap 42.3, o KDE PIM 4.x foi removido e apenas a versão "
 "suportada oficialmente do KDE PIM 5 está incluído."
 
-#: xml/release-notes.xml:699(title)
+#: xml/release-notes.xml:718(title)
 msgid "Dolphin and Konqueror Cannot Set Extended Permission Bits"
 msgstr "Dolphin e Konqueror não definem o bit de permissão estendida"
 
-#: xml/release-notes.xml:700(para)
+#: xml/release-notes.xml:719(para)
 msgid ""
 "The versions of the KDE file managers Dolphin and Konqueror that are shipped "
 "with openSUSE Leap 42.3 cannot set <quote>Extended Permission</quote> bits "
@@ -1025,7 +1046,7 @@ msgstr ""
 "diálogo de permissões do Dolphin clicando em <guimenu>OK</guimenu> limpa o "
 "bit de permissão estendida existente."
 
-#: xml/release-notes.xml:707(para)
+#: xml/release-notes.xml:726(para)
 msgid ""
 "To avoid such issues, edit permissions with <command>chmod</command> "
 "(command line) only."
@@ -1033,11 +1054,11 @@ msgstr ""
 "Para evitar tais problemas, edite as permissões apenas com <command>chmod</"
 "command> (linha de comando)."
 
-#: xml/release-notes.xml:714(title)
+#: xml/release-notes.xml:733(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "Sem bloqueio de tela ao usar o GNOME Shell e não o GDM"
 
-#: xml/release-notes.xml:715(para)
+#: xml/release-notes.xml:734(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1047,7 +1068,7 @@ msgstr ""
 "como o SDDM ou LightDM, a tela não será bloqueada ou ficará escura. "
 "Adicionalmente, alternar entre usuários sem encerrar a sessão não é possível."
 
-#: xml/release-notes.xml:720(para)
+#: xml/release-notes.xml:739(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -1055,11 +1076,11 @@ msgstr ""
 "Para poder bloquear a tela no GNOME Shell, habilite o GDM como seu "
 "gerenciador de login:"
 
-#: xml/release-notes.xml:726(para)
+#: xml/release-notes.xml:745(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "Certifique-se de que o pacote <package>gdm</package> está instalado."
 
-#: xml/release-notes.xml:731(para)
+#: xml/release-notes.xml:750(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -1067,7 +1088,7 @@ msgstr ""
 "Abra o YaST e de lá, abra <menuchoice><guimenu>Editor do /etc/sysconfig</"
 "guimenu></menuchoice>."
 
-#: xml/release-notes.xml:737(para)
+#: xml/release-notes.xml:756(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -1075,7 +1096,7 @@ msgstr ""
 "Navegue para <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:743(para)
+#: xml/release-notes.xml:762(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -1083,15 +1104,15 @@ msgstr ""
 "Na caixa de texto, especifique <literal>gdm</literal>. Para salvar, clique "
 "em <guimenu>OK</guimenu>."
 
-#: xml/release-notes.xml:749(para)
+#: xml/release-notes.xml:768(para)
 msgid "Reboot."
 msgstr "Reinicie."
 
-#: xml/release-notes.xml:757(title)
+#: xml/release-notes.xml:776(title)
 msgid "Global Menu Support in KDE Plasma"
 msgstr "Suporte ao menu global no Plasma do KDE"
 
-#: xml/release-notes.xml:758(para)
+#: xml/release-notes.xml:777(para)
 msgid ""
 "With KDE Plasma 5.9, KDE re-introduced support for the global menu as known "
 "from earlier KDE desktop releases."
@@ -1099,7 +1120,7 @@ msgstr ""
 "Com o Plasma 5.9, o KDE reintroduz o suporte ao menu global, conhecido de "
 "versões anteriores da área de trabalho KDE."
 
-#: xml/release-notes.xml:762(para)
+#: xml/release-notes.xml:781(para)
 msgid ""
 "In openSUSE Leap 42.3, the application menu bar plasmoid is available as "
 "well."
@@ -1107,11 +1128,11 @@ msgstr ""
 "No openSUSE Leap 42.3, o plasmoide do menu de aplicativos também está "
 "disponível."
 
-#: xml/release-notes.xml:767(title)
+#: xml/release-notes.xml:786(title)
 msgid "Non-Qt Applications Can Behave Incorrectly"
 msgstr "Aplicativos não Qt podem se comportar de forma incorreta"
 
-#: xml/release-notes.xml:768(para)
+#: xml/release-notes.xml:787(para)
 msgid ""
 "Applications not using the Qt toolkit may not support the global menu or "
 "behave incorrectly."
@@ -1119,11 +1140,11 @@ msgstr ""
 "Aplicativos que não usam o kit de ferramentas Qt podem não suportar o menu "
 "global ou ter um comportamento incorreto."
 
-#: xml/release-notes.xml:776(title)
+#: xml/release-notes.xml:795(title)
 msgid "Playing MP3 Media Files"
 msgstr "Reproduzindo arquivos MP3"
 
-#: xml/release-notes.xml:777(para)
+#: xml/release-notes.xml:796(para)
 msgid ""
 "Starting with openSUSE Leap 42.3, the codecs to play MP3 media files are now "
 "shipped as part of the standard repository."
@@ -1131,7 +1152,7 @@ msgstr ""
 "A partir do openSUSE Leap 42.3, os codecs para reproduzir arquivos MP3 "
 "estarão inclusos no repositório principal."
 
-#: xml/release-notes.xml:781(para)
+#: xml/release-notes.xml:800(para)
 msgid ""
 "To use this decoder in gstreamer-based applications and frameworks, such as "
 "Rhythmbox or Totem, install the package <literal>gstreamer-plugins-ugly</"
@@ -1141,11 +1162,11 @@ msgstr ""
 "como o Rhythmbox ou Totem, instale o pacote <literal>gstreamer-plugins-ugly</"
 "literal>."
 
-#: xml/release-notes.xml:789(title)
+#: xml/release-notes.xml:808(title)
 msgid "No Support for Type-1 Fonts in LibreOffice"
 msgstr "Sem suporte para fontes Type-1 no LibreOffice"
 
-#: xml/release-notes.xml:790(para)
+#: xml/release-notes.xml:809(para)
 msgid ""
 "LibreOffice 5.3 does not support legacy Type-1 fonts (file extensions "
 "<filename>.afm</filename> and <filename>.pfb</filename>) anymore. Most users "
@@ -1159,7 +1180,7 @@ msgstr ""
 "disponíveis ou no formato TrueType (<filename>.ttf</filename>) ou OpenType "
 "(<filename>.otf</filename>)."
 
-#: xml/release-notes.xml:797(para)
+#: xml/release-notes.xml:816(para)
 msgid ""
 "If you are affected by this, convert Type-1 fonts to a supported format, "
 "such as TrueType and then use the converted fonts. Conversion is possible "
@@ -1174,15 +1195,15 @@ msgstr ""
 "conversões via scripts, veja <link href=\"https://fontforge.github.io/en-US/"
 "documentation/scripting/\"/>."
 
-#: xml/release-notes.xml:831(title)
+#: xml/release-notes.xml:850(title)
 msgid "More Information and Feedback"
 msgstr "Mais informações e comentários"
 
-#: xml/release-notes.xml:834(para)
+#: xml/release-notes.xml:853(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Leia os documentos <filename>README</filename> disponíveis na mídia."
 
-#: xml/release-notes.xml:839(para)
+#: xml/release-notes.xml:858(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1190,22 +1211,22 @@ msgstr ""
 "Obtenha informações detalhadas de changelog (log de alterações) sobre um "
 "pacote em particular a partir do seu arquivo RPM:"
 
-#: xml/release-notes.xml:843(replaceable)
+#: xml/release-notes.xml:862(replaceable)
 msgid "FILENAME"
 msgstr "NOME_DO_ARQUIVO"
 
-#: xml/release-notes.xml:843(screen)
+#: xml/release-notes.xml:862(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:844(para)
+#: xml/release-notes.xml:863(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Substitua <replaceable>NOME_DO_ARQUIVO</replaceable> com o nome do arquivo "
 "RPM."
 
-#: xml/release-notes.xml:849(para)
+#: xml/release-notes.xml:868(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1214,7 +1235,7 @@ msgstr ""
 "mídia para um log cronológico de todas as alterações feitas nos pacotes "
 "atualizados."
 
-#: xml/release-notes.xml:855(para)
+#: xml/release-notes.xml:874(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1222,7 +1243,7 @@ msgstr ""
 "Encontre mais informação no diretório <filename>docu</filename> presente na "
 "mídia."
 
-#: xml/release-notes.xml:861(para)
+#: xml/release-notes.xml:880(para)
 msgid ""
 "For additional or updated documentation, see <link href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1230,7 +1251,7 @@ msgstr ""
 "Para documentação adicional e atualizada, veja <link href=\"https://doc."
 "opensuse.org/\"/>."
 
-#: xml/release-notes.xml:867(para)
+#: xml/release-notes.xml:886(para)
 msgid ""
 "For the latest product news, from openSUSE, visit <link href=\"https://www."
 "opensuse.org\"/>."
@@ -1238,15 +1259,15 @@ msgstr ""
 "Para as últimas notícias de produtos do openSUSE, visite, visit <link href="
 "\"https://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:874(para)
+#: xml/release-notes.xml:893(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:878(para)
+#: xml/release-notes.xml:897(para)
 msgid "Thanks for using openSUSE."
 msgstr "Obrigado por usar o openSUSE."
 
-#: xml/release-notes.xml:881(para)
+#: xml/release-notes.xml:900(para)
 msgid "The openSUSE Team."
 msgstr "A equipe do openSUSE."
 
