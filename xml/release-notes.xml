@@ -158,6 +158,25 @@
    </para>
   </sect2>
 
+  <sect2 xml:id="sec.install.drm-kmp">
+   <title>Update of Kernel Graphics Stack</title>
+   <para>
+    On &thisversion;, the upgrade of the graphics stack up to 4.9.x
+    kernel code is provided via the package <package>drm-kmp-default</package>
+    instead of backporting tons of patches into the kernel
+    itself.  Usually this package is installed automatically at
+    installation when a corresponding graphics device is found on your
+    machine.
+   </para>
+   <para>
+    The KMP gives users also another benefit: you can roll back to the
+    4.4.x kernel code simply by uninstalling this package.
+    If you often face critical issues, like a hung GPU, try to
+    uninstall the package once like below, reboot and retest.
+   </para>
+   <screen>zypper rm drm-kmp-default</screen>
+  </sect2>
+
   <!-- text via boo#1045124, underlying issue: boo#1044816 -->
   <sect2 xml:id="sec.install.nouveau-extra">
    <title>Changes for Users Installing the Nvidia Driver Manually</title>
