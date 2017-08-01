@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2017-07-17 15:10+0200\n"
-"PO-Revision-Date: 2016-12-20 16:07+0000\n"
+"PO-Revision-Date: 2017-08-01 10:57+0000\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_2/lt/>\n"
@@ -15,9 +15,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.6\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || "
+"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Weblate 2.13.1\n"
 
 #: xml/release-notes.xml:15(title) xml/release-notes.xml:32(component)
 msgid "Release Notes"
@@ -84,20 +84,19 @@ msgid ""
 "version. Before starting the upgrade, make sure that all maintenance updates "
 "for openSUSE Leap 42.2 are applied."
 msgstr ""
+"openSUSE Leap 42.2 palaikymas jau nutrauktas. Raginame naujovinti savo "
+"sistemą iki šiuo metu palaikomos versijos tam, kad ji būtų saugi naudoti. "
+"Prieš naujovindami iki kitos openSUSE versijos, įdiekite visus openSUSE Leap "
+"42.2 atnaujinimus."
 
 #: xml/release-notes.xml:61(para)
-#, fuzzy
-#| msgid ""
-#| "To report bugs against this release, use the openSUSE Bugzilla. For more "
-#| "information, see <link href=\"http://en.opensuse.org/"
-#| "Submitting_Bug_Reports\"/>."
 msgid ""
 "For more information about upgrading to a current openSUSE version, see "
 "<link href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgstr ""
-"Jei šioje openSUSE versijoje aptikote klaidų, praneškite apie jas per "
-"openSUSE Bugzilla. Daugiau informacijos <link href=\"http://en.opensuse.org/"
-"Submitting_Bug_Reports\"/>."
+"Daugiau informacijos apie openSUSE naujovinimą (atnaujinimą keičiant "
+"ženkliai versiją) rasite <link href=\"http://en.opensuse.org/SDB"
+":Distribution-Upgrade\"/>."
 
 #. Previous Release Notes
 #: xml/release-notes.xml:67(para)
@@ -842,16 +841,22 @@ msgstr ""
 #: xml/release-notes.xml:561(title)
 msgid "Data Loss with Non-Standard Settings or No Rollbacks"
 msgstr ""
+"Duomenų praradimas parinkus nestandartines nuostatas arba negalėjimas grįžti "
+"prie ankstesnės momentinės kopijos"
 
 #: xml/release-notes.xml:562(para)
 msgid ""
 "The following procedure will only work properly on installations set up "
 "using the default proposal created by the openSUSE 13.2 installer."
 msgstr ""
+"Tolesni nurodymai tinka, jei diegdami openSUSE 13.2 pasirinkote automatiškai "
+"pasiūlytą skaidinių sąranką."
 
 #: xml/release-notes.xml:566(para)
 msgid "Additionally, you must have previously made a system rollback."
 msgstr ""
+"Be to, prieš kartą bent kartą turėjote grįžti prie ankstesnės momentinės "
+"kopijos."
 
 #: xml/release-notes.xml:569(para)
 msgid ""
@@ -859,6 +864,9 @@ msgid ""
 "or have not previously made a system rollback, executing the following "
 "procedure can incur data loss."
 msgstr ""
+"Jei jūsiškė Btrfs rinkmenų sistema turi nestandartinę konfigūraciją arba "
+"niekada nebandėte grįžti prie ankstesnės momentinės kopijos, tuomet "
+"vykdydami tolesnes instrukcijas galite prarasti duomenis."
 
 #: xml/release-notes.xml:577(para)
 msgid "Mount the initial root file system:"
@@ -1102,6 +1110,8 @@ msgid ""
 "To avoid such issues, edit permissions with Konqueror (GUI) or "
 "<command>chmod</command> (command line) only."
 msgstr ""
+"Norėdami išvengti šių bėdų, leidimus keiskite tik su Konqueror (grafinėje "
+"sąsajoje) arba naudodami <command>chmod</command> (komandinėje eilutėje)."
 
 #: xml/release-notes.xml:769(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
@@ -1160,7 +1170,7 @@ msgstr "Iš naujo paleiskite kompiuterį."
 
 #: xml/release-notes.xml:813(title)
 msgid "No Support for Type-1 Fonts in LibreOffice"
-msgstr ""
+msgstr "LibreOffice nebepalaiko „Type-1“ šriftų"
 
 #: xml/release-notes.xml:814(para)
 msgid ""
@@ -1170,6 +1180,11 @@ msgid ""
 "format TrueType (<filename>.ttf</filename>) or OpenType (<filename>.otf</"
 "filename>) formats."
 msgstr ""
+"LibreOffice nuo 5.3 versijos nebepalaiko pasenusio „Type-1“ šriftų (kurių "
+"prievardžiai yra <filename>.afm</filename> arba <filename>.pfb</filename>). "
+"Dauguma naudotojų to nė nepastebės, nes šiuolaikiniai šriftai pateikiami "
+"„TrueType“ (<filename>.ttf</filename>) arba „OpenType“ "
+"(<filename>.otf</filename>) formatu."
 
 #: xml/release-notes.xml:821(para)
 msgid ""
@@ -1179,6 +1194,13 @@ msgid ""
 "is included in openSUSE. For information on scripting such conversions, see "
 "<link href=\"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
 msgstr ""
+"Jei jums reikalingi „Type-1“ šriftai, tuomet konvertuokite juos į palaikomą "
+"formatą, pvz., į „TrueType“, ir naudokite konvertuotuosius šriftus. Šriftus "
+"galite konvertuoti su FontForge programa (pateikiama "
+"<package>fontforge</package> pakete), kuri platinama su openSUSE. Daugiau "
+"informacijos apie šios programos naudojimą konvertavimo automatizavimui "
+"rasite <link href=\"https://fontforge.github.io/en-"
+"US/documentation/scripting/\"/>."
 
 #. bnc#809347
 #: xml/release-notes.xml:859(title)
