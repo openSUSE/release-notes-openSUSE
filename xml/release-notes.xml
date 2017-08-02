@@ -245,6 +245,9 @@
    upgrade instructions, see the documentation at
    <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html"/>.
   </para>
+  <para>
+    Please also check <xref linkend="sec.general.deprecated"/>
+  </para>
 
   <sect2 xml:id="sec.upgrade.422">
    <title>Upgrading from &opensuseleap; 42.2</title>
@@ -704,6 +707,31 @@
    This section lists general issues with &opensuseleap; &version; that do not
    match any other category.
   </para>
+
+  <sect2 xml:id="sec.general.deprecated">
+    <title>Deprecated Packages</title>
+    <para>The following packages are still shipped as part of the
+     distribution but are deprecated. The packages are there to aid
+     migrations, their use is discouraged and they may not receive
+     updates. The packages will be removed in the next version of
+     the distribution.
+    </para>
+
+    <itemizedlist>
+     <listitem>
+      <para>
+       <package>mysql-community-server</package>: May not receive
+       maintenance and security fixes anymore. It is advised to migrate to <package>mariadb</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>uClibc</package>: unmaintained
+      </para>
+     </listitem>
+     </itemizedlist>
+
+  </sect2>
 
   <sect2 xml:id="sec.general.kdepim">
    <title>KDE Software for Personal Information Management (KDE PIM)</title>
