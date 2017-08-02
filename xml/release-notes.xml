@@ -720,8 +720,23 @@
     <itemizedlist>
      <listitem>
       <para>
+       <package>lxdm</package>: unmaintained, use lightdm instead
+      </para>
+     </listitem>
+     <listitem>
+      <para>
        <package>mysql-community-server</package>: May not receive
        maintenance and security fixes anymore. It is advised to migrate to <package>mariadb</package>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>ruby 2.2</package>: for development only. Use Ruby 2.1 or 2.4 instead.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <package>ruby 2.3</package>: for development only. Use Ruby 2.1 or 2.4 instead.
       </para>
      </listitem>
      <listitem>
@@ -729,7 +744,13 @@
        <package>uClibc</package>: unmaintained
       </para>
      </listitem>
-     </itemizedlist>
+    </itemizedlist>
+
+    <para>
+     To check whether installed packages are no longer maintained the
+     <command>zypper lifecycle</command> command can be used, provided that
+     <package>lifecycle-data-openSUSE</package> is installed.
+    </para>
 
   </sect2>
 
