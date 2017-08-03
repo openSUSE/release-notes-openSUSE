@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2017-07-31 12:48+0200\n"
-"PO-Revision-Date: 2017-07-14 18:15+0000\n"
-"Last-Translator: anonymous <>\n"
+"PO-Revision-Date: 2017-08-03 21:45+0000\n"
+"Last-Translator: jc sl <trcs@gmx.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_3/es/>\n"
 "Language: es\n"
@@ -199,13 +199,6 @@ msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI: Interfaz de Firmware Unificada Extensible"
 
 #: xml/release-notes.xml:110(para)
-#, fuzzy
-#| msgid ""
-#| "Prior to installing openSUSE on a system that boots using UEFI (Unified "
-#| "Extensible Firmware Interface), you are urgently advised to check for any "
-#| "firmware updates the hardware vendor recommends and, if available, to "
-#| "install such an update. A pre-installed Windows 8 is a strong indication "
-#| "that your system boots using UEFI."
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
@@ -213,11 +206,11 @@ msgid ""
 "install such an update. A pre-installation of Windows 8 or later is a strong "
 "indication that your system boots using UEFI."
 msgstr ""
-"Antes de instalar openSUSE en un sistema que se inicia utilizando UEFI "
-"(Interfaz Unificada Extensible del Firmware), se recomienda encarecidamente "
-"verificar si hay  actualizaciones del firmware del fabricante, y, de "
-"existir, instalar dicha actualización. Un sistema con Windows 8 preinstalado "
-"es un gran indicador de que su sistema se inicia utilizando UEFI."
+"Antes de instalar openSUSE en un sistema que se inicia utilizando UEFI ("
+"Interfaz Unificada Extensible del Firmware), se recomienda encarecidamente "
+"verificar si hay actualizaciones del firmware del fabricante, y, de existir, "
+"instalar dichas actualizaciones. Un sistema con Windows 8 preinstalado es un "
+"gran indicador de que su sistema se inicia utilizando UEFI."
 
 #: xml/release-notes.xml:117(para)
 msgid ""
@@ -300,7 +293,7 @@ msgstr "Para solucionar este problema, convierta la partición MBR en GPT."
 
 #: xml/release-notes.xml:162(title)
 msgid "Update of Kernel Graphics Stack"
-msgstr ""
+msgstr "Actualización de la pila gráfica del kernel"
 
 #: xml/release-notes.xml:163(para)
 msgid ""
@@ -310,6 +303,11 @@ msgid ""
 "installed automatically at installation when a corresponding graphics device "
 "is found on your machine."
 msgstr ""
+"En openSUSE Leap 42.3, la actualización de la pila gráfica hasta el código "
+"del kernel 4.9.x se proporciona mediante el paquete <package>drm-kmp-"
+"default</package> en vez de adaptar montones de parches para el kernel en "
+"sí. Normalmente, este paquete se instala automáticamente cuando se detecta "
+"un dispositivo gráfico relacionado en su máquina."
 
 #: xml/release-notes.xml:171(para)
 msgid ""
@@ -318,6 +316,11 @@ msgid ""
 "a critical issue like GPU hang up, try to uninstall the package once like "
 "below, reboot and retest."
 msgstr ""
+"El KMP también da a los usuarios otro beneficio: se puede volver al código "
+"del kernel 4.4.x fácilmente con solo desinstalar este paquete. Si se "
+"encuentra con frecuencia con un problema crítico tal como el bloqueo de la "
+"GPU, intente desinstalar el paquete como aparece a continuación, reiniciando "
+"y volviendo a probar."
 
 #: xml/release-notes.xml:177(screen) xml/release-notes.xml:188(screen)
 #, no-wrap
@@ -596,6 +599,8 @@ msgstr ""
 #: xml/release-notes.xml:398(title)
 msgid "GCC 6 Package Versions Match Packages Shipped with SLE 12 SP3"
 msgstr ""
+"Las versiones del paquete GCC 6 coinciden con las de los paquetes incluidos "
+"con SLE 12 SP3"
 
 #: xml/release-notes.xml:399(para)
 msgid ""
@@ -604,12 +609,19 @@ msgid ""
 "for openSUSE Leap 42.3 which ships with the same versions of GCC 6 packages "
 "as SUSE Linux Enterprise 12 SP3."
 msgstr ""
+"openSUSE Leap 42.2 incluía por error una versión más nueva de GCC 6 que la "
+"encontrada en SUSE Linux Enterprise en ese momento. Esto se ha corregido en "
+"openSUSE Leap 42.3, que viene con la misma versión de paquetes de GCC 6 que "
+"SUSE Linux Enterprise 12 SP3."
 
 #: xml/release-notes.xml:405(para)
 msgid ""
 "However, if GCC 6 packages are installed, this leads to forced package "
 "downgrades during the operating system upgrade."
 msgstr ""
+"Sin embargo, si los paquetes de GCC 6 están instalados, esto lleva a la "
+"desactualización forzosa de paquetes durante la operación de actualización "
+"del sistema."
 
 #: xml/release-notes.xml:414(title)
 msgid "Upgrading from openSUSE Leap 42.1"
@@ -1149,7 +1161,7 @@ msgstr ""
 
 #: xml/release-notes.xml:786(title)
 msgid "Non-Qt Applications Can Behave Incorrectly"
-msgstr ""
+msgstr "Las aplicaciones no escritas con Qt pueden comportarse incorrectamente"
 
 #: xml/release-notes.xml:787(para)
 msgid ""
@@ -1161,13 +1173,15 @@ msgstr ""
 
 #: xml/release-notes.xml:795(title)
 msgid "Playing MP3 Media Files"
-msgstr ""
+msgstr "Reproducción de ficheros MP3"
 
 #: xml/release-notes.xml:796(para)
 msgid ""
 "Starting with openSUSE Leap 42.3, the codecs to play MP3 media files are now "
 "shipped as part of the standard repository."
 msgstr ""
+"Empezando con openSUSE Leap 42.3, los códec para reproducir ficheros MP3 "
+"forman ahora parte del repositorio estándar."
 
 #: xml/release-notes.xml:800(para)
 msgid ""
@@ -1175,10 +1189,13 @@ msgid ""
 "Rhythmbox or Totem, install the package <literal>gstreamer-plugins-ugly</"
 "literal>."
 msgstr ""
+"Para usar este descodificador en aplicaciones basadas en gstreamer y "
+"frameworks, tales como Rhythmbox o Totem, instale el paquete <literal"
+">gstreamer-plugins-ugly</literal>."
 
 #: xml/release-notes.xml:808(title)
 msgid "No Support for Type-1 Fonts in LibreOffice"
-msgstr ""
+msgstr "No hay soporte para fuentes Type-1 en LibreOffice"
 
 #: xml/release-notes.xml:809(para)
 msgid ""
@@ -1188,6 +1205,11 @@ msgid ""
 "format TrueType (<filename>.ttf</filename>) or OpenType (<filename>.otf</"
 "filename>) formats."
 msgstr ""
+"LibreOffice 5.3 no volverá a admitir las antiguas fuentes Type-1 ("
+"extensiones de fichero <filename>.afm</filename> y <filename>.pfb</filename>)"
+". La mayoría de usuarios no debería verse afectado por esto, ya que las "
+"fuentes actuales están disponibles ya sea en formato TrueType "
+"(<filename>.ttf</filename>) u OpenType (<filename>.otf</filename>)."
 
 #: xml/release-notes.xml:816(para)
 msgid ""
@@ -1197,6 +1219,12 @@ msgid ""
 "is included in openSUSE. For information on scripting such conversions, see "
 "<link href=\"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
 msgstr ""
+"Si se ve afectado por esto, convierta las fuentes Type-1 a un formato con "
+"soporte, como TrueType, y use entonces las fuentes convertidas. La "
+"conversión es posible con la aplicación FontForge (paquete "
+"<package>fontforge</package>) que está incluido en openSUSE. Para obtener "
+"más información sobre crear guiones para dichas conversiones, vea <link href="
+"\"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
 
 # CER: no estoy seguro de la traducción de Feedback. Tiene el sentido de comentarios de los usuarios hacia los desarrolladores o la distro.
 #: xml/release-notes.xml:850(title)
