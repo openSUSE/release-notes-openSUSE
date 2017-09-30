@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2017-08-14 18:12+0200\n"
-"PO-Revision-Date: 2017-07-25 18:13+0000\n"
+"PO-Revision-Date: 2017-09-30 05:36+0000\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_42_3/uk/>\n"
@@ -22,8 +22,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.13.1\n"
 
 #: xml/release-notes.xml:14(title) xml/release-notes.xml:31(component)
@@ -291,7 +291,7 @@ msgstr ""
 
 #: xml/release-notes.xml:162(title)
 msgid "Update of Kernel Graphics Stack"
-msgstr ""
+msgstr "Оновлення графічного стеку ядра"
 
 #: xml/release-notes.xml:163(para)
 msgid ""
@@ -301,6 +301,11 @@ msgid ""
 "installed automatically during the OS installation when a corresponding "
 "graphics device is found on your machine."
 msgstr ""
+"В OpenSUSE Leap 42.3 оновлення графічного стеку до коду ядра версії 4.9.x "
+"надається через пакунок <package>drm-kmp-default</package>, замість того, "
+"щоб імпортувати велику кількість латок в саме ядро. Зазвичай цей пакунок "
+"встановлюється автоматично під час встановлення ОС, коли на вашому "
+"комп'ютері знайдено відповідний графічний пристрій."
 
 #: xml/release-notes.xml:171(para)
 msgid ""
@@ -309,6 +314,10 @@ msgid ""
 "a hung GPU, try to uninstall the package as shown below, then reboot and "
 "retest:"
 msgstr ""
+"KMP дає користувачам ще одну перевагу: ви можете повернутися до коду ядра "
+"4.4.x, вилучивши цей пакунок. Якщо ви зіткнулися з критичними проблемами, "
+"наприклад, з завислим графічним процесором, спробуйте видалити пакет, як "
+"показано нижче, а потім перезавантажтесь і повторіть перевірку:"
 
 #: xml/release-notes.xml:177(screen) xml/release-notes.xml:188(screen)
 #, no-wrap
@@ -373,7 +382,7 @@ msgstr ""
 
 #: xml/release-notes.xml:248(para)
 msgid "Additionally, check <xref linkend=\"sec.general.deprecated\"/>."
-msgstr ""
+msgstr "Також перевірте <xref linkend=\"sec.general.deprecated\"/>."
 
 #: xml/release-notes.xml:253(title)
 msgid "Upgrading from openSUSE Leap 42.2"
@@ -395,10 +404,8 @@ msgid "<package>ldapjdk</package>: Fails to build on 42.3."
 msgstr "<package>ldapjdk</package>: не збирається на 42.3."
 
 #: xml/release-notes.xml:268(para)
-#, fuzzy
-#| msgid "<package>castor</package>: Fails to build on 42.3."
 msgid "<package>libatlas3</package>: Fails to build on 42.3."
-msgstr "<package>castor</package>: не збирається на 42.3."
+msgstr "<package>libatlas3</package>: не збирається на 42.3."
 
 #: xml/release-notes.xml:273(para)
 msgid "<package>castor</package>: Fails to build on 42.3."
@@ -1020,7 +1027,7 @@ msgstr ""
 
 #: xml/release-notes.xml:712(title)
 msgid "Deprecated Packages"
-msgstr ""
+msgstr "Застарілі пакунки"
 
 #: xml/release-notes.xml:713(para)
 msgid ""
@@ -1029,39 +1036,47 @@ msgid ""
 "discouraged and they may not receive updates. The packages will be removed "
 "in the next version of the distribution."
 msgstr ""
+"Наступні пакети як і раніше поставляються у вигляді частини дистрибутиву, "
+"але є застарілими. Вони існують для полегшення міграції, але їхнє "
+"використання не рекомендується, і для них можуть бути відсутні оновлення. Ці "
+"пакунки будуть видалені у наступній версії дистрибутиву."
 
 #: xml/release-notes.xml:722(para)
-#, fuzzy
-#| msgid "<package>nodejs</package>: Renamed to <package>nodejs4</package>."
 msgid ""
 "<package>lxdm</package>: Unmaintained, use <package>lightdm</package> "
 "instead."
 msgstr ""
-"<package>nodejs</package>: перейменовано на <package>nodejs4</package>."
+"<package>lxdm</package>: не підтримується, використовуйте замість нього "
+"<package>lightdm</package>."
 
 #: xml/release-notes.xml:728(para)
 msgid ""
 "<package>mysql-community-server</package>: May not receive maintenance and "
 "security fixes anymore. We advise migrating to <package>mariadb</package>."
 msgstr ""
+"<package>mysql-community-server</package>: може більше не отримувати "
+"виправлення по обслуговуванню та безпеці. Радимо перейти на "
+"<package>mariadb</package>."
 
 #: xml/release-notes.xml:735(para)
 msgid ""
 "<package>ruby2.2-*</package>: For development only. Use Ruby 2.1 or 2.4 "
 "instead."
 msgstr ""
+"<package>ruby2.2-*</package>: тільки для розробки. Використовуйте замість "
+"нього Ruby 2.1 або 2.4."
 
 #: xml/release-notes.xml:741(para)
 msgid ""
 "<package>ruby2.3-*</package>: For development only. Use Ruby 2.1 or 2.4 "
 "instead."
 msgstr ""
+"<package>ruby2.3-*</package>: тільки для розробки. Використовуйте замість "
+"нього Ruby 2.1 або 2.4."
 
 #: xml/release-notes.xml:747(para)
-#, fuzzy
-#| msgid "<package>castor</package>: Fails to build on 42.3."
 msgid "<package>uClibc</package>: Unmaintained."
-msgstr "<package>castor</package>: не збирається на 42.3."
+msgstr "<package>uClibc</package>: не підтримується."
 
 #: xml/release-notes.xml:753(para)
 msgid ""
@@ -1069,11 +1084,14 @@ msgid ""
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
 "command:"
 msgstr ""
+"Щоб перевірити, чи мають підтримку встановлені пакети, переконайтеся, що "
+"встановлено <package>lifecycle-data-openSUSE</package>, а потім "
+"використовуйте команду:"
 
 #: xml/release-notes.xml:758(screen)
 #, no-wrap
 msgid "zypper lifecycle"
-msgstr ""
+msgstr "zypper lifecycle"
 
 #: xml/release-notes.xml:763(title)
 msgid "KDE Software for Personal Information Management (KDE PIM)"
