@@ -92,6 +92,8 @@
   <!-- https://bugzilla.suse.com/show_bug.cgi?id=947712 -->
   <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
    <title>Minimal System Installation</title>
+   <!-- FIXME: Is this still accurate, patterns and all or is this affected
+   by decisions made on the SLE side? -->
    <para>
     To avoid some big recommended packages from being installed, the pattern
     for minimal installations uses another pattern that creates conflicts with
@@ -99,6 +101,8 @@
     <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed
     after installation.
    </para>
+   <!-- FIXME: Will SuSEFirewall2 continue to be shipped in Leap 15? If not,
+   what is the replacement? -->
    <para>
     Note that the minimal installation has no firewall by default. If you need
     one, install <literal>SuSEfirewall2</literal>.
@@ -158,28 +162,9 @@
    </para>
   </sect2>
 
-  <sect2 xml:id="sec.install.drm-kmp">
-   <title>Update of Kernel Graphics Stack</title>
-   <para>
-    On &thisversion;, the upgrade of the graphics stack up to 4.9.x
-    kernel code is provided via the package <package>drm-kmp-default</package>
-    instead of backporting many patches into the kernel
-    itself. Usually, this package is installed automatically during the OS
-    installation when a corresponding graphics device is found on your
-    machine.
-   </para>
-   <para>
-    The KMP gives users also another benefit: You can roll back to the
-    4.4.x kernel code by uninstalling this package.
-    If you face critical issues, like a hung GPU, try to
-    uninstall the package as shown below, then reboot and retest:
-   </para>
-   <screen>zypper rm drm-kmp-default</screen>
-  </sect2>
-
   <!-- text via boo#1045124, underlying issue: boo#1044816 -->
   <sect2 xml:id="sec.install.nouveau-extra">
-   <title>Changes for Users Installing the Nvidia Driver Manually</title>
+   <title>Installing the Nvidia Driver Manually</title>
    <para>
     On &thisversion;, you need to uninstall the package
     <package>drm-kmp-default</package> first, before you can manually install
@@ -188,7 +173,7 @@
    <screen>zypper rm drm-kmp-default</screen>
    <para>
     If you install the RPMs provided by Nvidia, you will not be affected by
-    this issue, because in that case the package
+    this issue, because in that case, the package
     <package>drm-kmp-default</package> is replaced during the driver
     installation automatically.
    </para>
@@ -201,40 +186,6 @@
     <link xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=1044816"/>.
    </para>
   </sect2>
-
-  <!-- bsc#1005323, commenting for now, not sure whether that is really
-  necessary given all the other mitigations we have in place. - sknorr,
-  2017-02-17 -->
-
-  <!-- <sect2 xml:id="sec.install.nouveau">
-   <title>Nouveau 3D/DRI Driver May Crash KDE Applications</title>
-   <para>
-    With &thisversion;, the Nouveau Mesa/DRI driver for 2D/3D
-    rendering is considered experimental. The Nouveau kernel/KMS
-    driver and the Nouveau X.org/DDX driver for 2D rendering are
-    still considered stable.
-   </para>
-   <para>
-    When the Nouveau Mesa/DRI driver is in use, some applications may crash,
-    especially KDE and Qt applications. The driver is now in a separate
-    package called <package>Mesa-dri-nouveau</package>, which can be removed
-    in case of problems.
-   </para>
-   <para>
-    Without this driver installed, there is no hardware 3D acceleration support
-    on any Nvidia GPU and no 2D acceleration on newer Nvidia GPUs
-    that use Glamor for fast 2D operations. Kernel Mode Setting and
-    basic 2D are still available, as is 2D acceleration via EXA on
-    GPUs from the Nvidia GPU generation code-named Kepler
-    (introduced in 2012) and earlier. 3D operations are supported
-    via software rendering.
-   </para>
-   <para>
-    For more information, see the bug reports at
-    <link xlink:href="https://bugs.freedesktop.org/show_bug.cgi?id=91632"/>
-    and <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1005323"/>.
-   </para>
-  </sect2>-->
  </sect1>
 
  <sect1 xml:id="upgrade">
@@ -248,6 +199,11 @@
   <para>
    Additionally, check <xref linkend="sec.general.deprecated"/>.
   </para>
+
+  <sect2 xml:id="sec.upgrade.423">
+   <title>Upgrading from &opensuseleap; 42.3</title>
+   <para/>
+  </sect2>
 
   <sect2 xml:id="sec.upgrade.422">
    <title>Upgrading from &opensuseleap; 42.2</title>
@@ -309,8 +265,8 @@
     <title>Synaptics Touchpad Driver with KDE Plasma</title>
     <para>
       In &opensuseleap; 42.2, the X11 synaptics driver (package
-      <package>xf86-input-synaptics</package>) was not installed by default
-      (see <xref linkend="sec.upgrade.synaptics"/>). However, KDE Plasma
+      <package>xf86-input-synaptics</package>) was not installed by
+      default<!-- (see <xref linkend="sec.upgrade.synaptics"/>) -->. However, KDE Plasma
       only offers limited configuration options for the replacement, libinput.
     </para>
     <para>
@@ -418,7 +374,7 @@
 
   </sect2>
 
-  <sect2 xml:id="sec.upgrade.421">
+  <!--<sect2 xml:id="sec.upgrade.421">
    <title>Upgrading from &opensuseleap; 42.1</title>
    <sect3 xml:id="sec.upgrade.421.removed">
     <title>Removed and Replaced Packages</title>
@@ -507,7 +463,7 @@
      </listitem>
     </itemizedlist>
    </sect3>
-   <!-- FATE#320834 -->
+   <!-/- FATE#320834 -/->
    <sect3 xml:id="sec.upgrade.421.cache">
     <title><filename>/var/cache</filename> on an Own Subvolume for Snapshots and Rollback</title>
     <para>
@@ -621,7 +577,7 @@
      </step>
     </procedure>
    </sect3>
-   <!-- boo#1012371 -->
+   <!-/- boo#1012371 -/->
    <sect3 xml:id="sec.upgrade.421.gpg-gnome">
     <title>GNOME Keyring Does Not Integrate with GPG Anymore</title>
     <para>
@@ -669,7 +625,7 @@
     <screen><command>sudo zypper rm xf86-input-synaptics</command></screen>
    </sect3>
 
-   <!-- boo#998663 -->
+   <!-/- boo#998663 -/->
    <sect3 xml:id="sec.upgrade.421.aarch64-64k">
     <title>AArch64: Page Size Has Been Changed From &opensuseleap; 42.1 to &thisversion;</title>
     <para>
@@ -683,7 +639,7 @@
     </para>
    </sect3>
 
-   <!-- boo#1006175 -->
+   <!-/- boo#1006175 -/->
    <sect3 xml:id="sec.upgrade.421.cciss">
     <title>Systems with CCISS Controllers Can Fail to Boot After Upgrade</title>
     <para>
@@ -698,13 +654,13 @@
      kernel parameter <literal>cciss.cciss_allow_hpsa=0</literal>.
     </para>
    </sect3>
-  </sect2>
+  </sect2> -->
  </sect1>
  <sect1 xml:id="general">
   <title>General</title>
 
   <para>
-   This section lists general issues with &opensuseleap; &version; that do not
+   This section lists general issues with &thisversion; that do not
    match any other category.
   </para>
 
@@ -717,38 +673,14 @@
      the distribution.
     </para>
 
-    <itemizedlist>
+    <!-- <itemizedlist>
      <listitem>
       <para>
-       <package>lxdm</package>: Unmaintained, use
-       <package>lightdm</package> instead.
+       <package>example</package>: Replaced by
+       <package>example2</package>.
       </para>
      </listitem>
-     <listitem>
-      <para>
-       <package>mysql-community-server</package>: May not receive
-       maintenance and security fixes anymore. We advise migrating to
-       <package>mariadb</package>.
-      </para>
-     </listitem>
-     <listitem>
-      <para>
-       <package>ruby2.2-*</package>: For development only. Use Ruby 2.1 or 2.4
-       instead.
-      </para>
-     </listitem>
-     <listitem>
-      <para>
-       <package>ruby2.3-*</package>: For development only. Use Ruby 2.1 or 2.4
-       instead.
-      </para>
-     </listitem>
-     <listitem>
-      <para>
-       <package>uClibc</package>: Unmaintained.
-      </para>
-     </listitem>
-    </itemizedlist>
+    </itemizedlist> -->
 
     <para>
      To check whether installed packages are no longer maintained: Make sure
@@ -757,19 +689,6 @@
     </para>
     <screen>zypper lifecycle</screen>
 
-  </sect2>
-
-  <sect2 xml:id="sec.general.kdepim">
-   <title>KDE Software for Personal Information Management (KDE PIM)</title>
-   <para>
-    KDE PIM 4.x is no longer supported by upstream KDE, but was kept in
-    &opensuseleap; 42.2 together with KDE PIM 5 to avoid disrupting user
-    workflows and allow for easier migration.
-   </para>
-   <para>
-    With &opensuseleap; 42.3, the KDE PIM 4.x stack got dropped and only the
-    current upstream-supported KDE PIM 5 stack is included.
-   </para>
   </sect2>
 
   <!-- boo#1009275 -->
@@ -831,30 +750,11 @@
    </procedure>
   </sect2>
 
-  <sect2 xml:id="sec.general.plasmaglobalmenu">
-    <title>Global Menu Support in KDE Plasma</title>
-    <para>
-      With KDE Plasma 5.9, KDE re-introduced support for the global menu as
-      known from earlier KDE desktop releases.
-    </para>
-    <para>
-      In &opensuseleap; 42.3, the application menu bar plasmoid is
-      available as well.
-    </para>
-    <note>
-      <title>Non-Qt Applications Can Behave Incorrectly</title>
-      <para>
-        Applications not using the Qt toolkit may not support the global menu
-        or behave incorrectly.
-      </para>
-    </note>
-  </sect2>
-
   <sect2 xml:id="sec.general.mp3-media">
     <title>Playing MP3 Media Files</title>
     <para>
-      Starting with &opensuseleap; 42.3, the codecs to play MP3 media files
-      are now shipped as part of the standard repository.
+      The codecs to play MP3 media files
+      are shipped as part of the standard repository.
     </para>
     <para>
       To use this decoder in gstreamer-based applications and frameworks,
@@ -866,7 +766,7 @@
   <sect2 xml:id="sec.general.libreoffice.type1">
    <title>No Support for Type-1 Fonts in LibreOffice</title>
    <para>
-    LibreOffice 5.3 does not support legacy Type-1 fonts (file extensions
+    LibreOffice 5.3 and higher do not support legacy Type-1 fonts (file extensions
     <filename>.afm</filename> and <filename>.pfb</filename>) anymore. Most
     users should not be affected by this, as current fonts are available
     either in the format TrueType (<filename>.ttf</filename>) or OpenType
