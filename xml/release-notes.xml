@@ -691,6 +691,69 @@
 
   </sect2>
 
+  <!--  boo#1059438, boo#1062550 -->
+  <sect2 xml:id="sec.general.compose-key">
+   <title>No Default Compose Key Combination</title>
+   <para>
+    In previous versions of &os;, the compose key combination
+    allowed typing characters that were not part of the regular keyboard layout.
+    For example, to produce <quote>å</quote>, you could press and release
+    <keycombo><keycap function="shift"/><keycap>Right Ctrl</keycap></keycombo>
+    and then press <keycap>a</keycap> twice.
+   </para>
+   <para>
+    In &thisversion;, there is no longer a predefined compose key combination
+    because
+    <keycombo><keycap function="shift"/><keycap>Right Ctrl</keycap></keycombo>
+    does not work as expected anymore.
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      To define a system-wide custom compose key combination, use the file
+      <filename>/etc/X11/Xmodmap</filename> and look for the following lines:
+     </para>
+<screen>[...]
+!! Third example: Change right Control key to Compose key.
+!! To do Compose Character, press this key and afterwards two
+!! characters (e.g. `a' and `^' to get 342).
+!remove  Control  = Control_R
+!keysym Control_R = Multi_key
+!add     Control  = Control_R
+[...]</screen>
+     <para>
+      To uncomment the example code, remove the
+      <literal>!</literal> characters at the beginning of lines. However,
+      note that the setup from <filename>Xmodmap</filename> will be
+      overwritten if you are using <command>setxkbmap</command>.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      To define a user-specific compose key combination, use your desktop's
+      keyboard configuration tool or the command-line tool
+      <command>setxkbmap</command>:
+     </para>
+     <screen>
+setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>
+     </screen>
+     <para>
+      For the variable <replaceable>COMPOSE_KEY</replaceable>, use your
+      preferred character, for example
+      <literal>ralt</literal>, <literal>lwin</literal>,
+      <literal>rwin</literal>, <literal>menu</literal>,
+      <literal>rctl</literal>, or <literal>caps</literal>.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Alternatively, use an IBus input method that allows typing the
+      characters you need without a Compose key.
+     </para>
+    </listitem>
+   </itemizedlist>
+  </sect2>
+
   <!-- boo#1009275 -->
   <sect2 xml:id="sec.general.dolphin-permission">
    <title>Dolphin and Konqueror Cannot Set Extended Permission Bits</title>
