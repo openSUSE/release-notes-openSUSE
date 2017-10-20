@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2017-10-18 15:29+0200\n"
-"PO-Revision-Date: 2017-10-18 20:39+0000\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
+"PO-Revision-Date: 2017-10-20 11:20+0000\n"
+"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects"
 "/release-notes-opensuse/leap_15_0/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -646,7 +646,7 @@ msgstr "zypper lifecycle"
 
 #: xml/release-notes.xml:696(title)
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Sem combinação de teclas de composição padrão"
 
 #: xml/release-notes.xml:697(para)
 msgid ""
@@ -656,6 +656,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"Nas versões anteriores do openSUSE, a combinação de teclas de compor "
+"permitiu caracteres de digitação que não faziam parte do layout do teclado "
+"normal. Por exemplo, para produzir <quote>å</quote>, você pode pressionar e "
+"liberar <keycombo><keycap function=\"shift\"/><keycap>Ctrl "
+"Direito</keycap></keycombo> e depois pressione <keycap>a</keycap> duas vezes."
 
 #: xml/release-notes.xml:704(para)
 msgid ""
@@ -663,12 +668,18 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"No openSUSE Leap 15.0, não existe mais uma combinação de teclas de compor "
+"predefinidas porque <keycombo><keycap function=\"shift\"/><keycap>Ctrl "
+"Direito</keycap></keycombo> não funciona como esperado."
 
 #: xml/release-notes.xml:712(para)
 msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Para definir uma combinação de teclas personalizadas de todo o sistema, use "
+"o arquivo <filename>/etc/X11/Xmodmap</filename> e procure as seguintes "
+"linhas:"
 
 #: xml/release-notes.xml:716(screen)
 #, no-wrap
@@ -682,6 +693,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Terceiro exemplo: mude a tecla de controle direita para compor a tecla.\n"
+"!! Para compor Compose Character, pressione esta tecla e depois dois\n"
+"!! caracteres (por exemplo, `a 'e` ^' para obter 342).\n"
+"!remover  Control  = Control_R\n"
+"!tecla Control_R = Multi_key\n"
+"!adicionar Control = Control_R\n"
+"[...]"
 
 #: xml/release-notes.xml:724(para)
 msgid ""
@@ -689,6 +708,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Para descomentar o código de exemplo, remova o <literal>!</literal> "
+"caracteres no início de linhas. No entanto, note que a configuração de "
+"<filename>Xmodmap</filename> será substituído se você estiver usando "
+"<command>setxkbmap</command>."
 
 #: xml/release-notes.xml:732(para)
 msgid ""
@@ -696,6 +719,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Para definir uma combinação de teclas de composição específica do usuário, "
+"use a ferramenta de configuração do teclado da sua área de trabalho ou a "
+"ferramenta de linha de comando <command>setxkbmap</command>:"
 
 #: xml/release-notes.xml:738(replaceable)
 msgid "[...]"
@@ -723,12 +749,18 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"Para a variável <replaceable>COMPOSE_KEY</replaceable>, use seu caractere "
+"preferido , por exemplo <literal>ralt</literal>, <literal>lwin</literal>, "
+"<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
+"ou <literal>caps</literal>."
 
 #: xml/release-notes.xml:749(para)
 msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"Alternativamente, use um método de entrada do IBus que permite digitar os "
+"caracteres que você precisa sem uma tecla de composição."
 
 #: xml/release-notes.xml:759(title)
 msgid "Dolphin and Konqueror Cannot Set Extended Permission Bits"
