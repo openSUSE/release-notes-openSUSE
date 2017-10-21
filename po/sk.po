@@ -3,15 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2017-10-18 15:29+0200\n"
-"PO-Revision-Date: 2017-10-19 14:05+0100\n"
+"PO-Revision-Date: 2017-10-21 09:51+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
-"Language-Team: Slovak <opensuse-translation-sk@opensuse.org>\n"
+"Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_15_0/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Weblate 2.13.1\n"
 
 #: xml/release-notes.xml:14(title) xml/release-notes.xml:31(component)
 msgid "Release Notes"
@@ -636,7 +637,7 @@ msgstr "zypper lifecycle"
 
 #: xml/release-notes.xml:696(title)
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Žiadna predvolená klávesová skratiek pre Compose"
 
 #: xml/release-notes.xml:697(para)
 msgid ""
@@ -646,6 +647,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"V predchádzajúcich verziách openSUSE umožňovala kombinácia klávesovej "
+"skratky pre compose písať znaky, ktoré neboli súčasťou bežného rozloženia "
+"klávesnice. Napríklad na vytvorenie <quote>å</quote>, ste mohli stlačiť a "
+"pustiť <keycombo><keycap function=\"shift\"/><keycap>Pravý "
+"Ctrl</keycap></keycombo> a potom stlačiť <keycap>a</keycap> dvakrát."
 
 #: xml/release-notes.xml:704(para)
 msgid ""
@@ -653,12 +659,18 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"V openSUSE Leap 15.0 už neexistuje preddefinovaná  klávesová skratka\n"
+" pre compose, pretože <keycombo><keycap function=\"shift\"/><keycap>Pravý\n"
+" Ctrl</keycap></keycombo> už nefunguje podľa očakávaní."
 
 #: xml/release-notes.xml:712(para)
 msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Ak chcete definovať vlastnú klávesovú kombináciu pre compose v systéme,  "
+"použite súbor <filename>/etc/X11/Xmodmap</filename> a vyhľadajte "
+"nasledujúce  riadky:"
 
 #: xml/release-notes.xml:716(screen)
 #, no-wrap
@@ -672,6 +684,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Tretí príklad: Zmeňte pravé tlačidlo Control na tlačidlo Compose.\n"
+"!! Ak chcete urobiť znak Compose, stlačte tento kláves a potom\n"
+"!! dva znaky (napr. `a' and `^' pre získanie 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #: xml/release-notes.xml:724(para)
 msgid ""
@@ -679,6 +699,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Ak chcete zrušiť komentár na kóde príkladu, odstráňte znaky "
+"<literal>!</literal> na začiatku riadkov. Treba však upozorniť, že "
+"nastavenie z <filename>Xmodmap</filename> bude prepísané, ak používate "
+"<command>setxkbmap</command>."
 
 #: xml/release-notes.xml:732(para)
 msgid ""
@@ -686,6 +710,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Ak chcete definovať používateľskú klávesovú skratku pre compose, použite váš "
+"desktopový nástroj na konfiguráciu klávesnice alebo nástroj príkazového "
+"riadka <command>setxkbmap</command>:"
 
 #: xml/release-notes.xml:738(replaceable)
 msgid "[...]"
@@ -693,7 +720,7 @@ msgstr "[...]"
 
 #: xml/release-notes.xml:738(replaceable)
 msgid "COMPOSE_KEY"
-msgstr ""
+msgstr "COMPOSE_KEY"
 
 #: xml/release-notes.xml:737(screen)
 #, no-wrap
@@ -702,6 +729,9 @@ msgid ""
 "setxkbmap <placeholder-1/> -option compose:<placeholder-2/>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <placeholder-1/> -voľba compose:<placeholder-2/>\n"
+"     "
 
 #: xml/release-notes.xml:740(para)
 msgid ""
@@ -710,12 +740,18 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"Pre premennú <replaceable>COMPOSE_KEY</replaceable>, použite svoj "
+"preferovaný znak, napríklad <literal>ralt</literal>, <literal>lwin</literal>"
+", <literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
+"alebo <literal>caps</literal>."
 
 #: xml/release-notes.xml:749(para)
 msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"Prípadne použite vstupnú metódu IBus, ktorá umožňuje písať znaky, ktoré  "
+"potrebujete bez klávesu Compose."
 
 #: xml/release-notes.xml:759(title)
 msgid "Dolphin and Konqueror Cannot Set Extended Permission Bits"
