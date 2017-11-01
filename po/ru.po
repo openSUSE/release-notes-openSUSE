@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2017-10-18 15:29+0200\n"
-"PO-Revision-Date: 2017-10-31 21:00+0000\n"
+"PO-Revision-Date: 2017-11-01 11:15+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_15_0/ru/>\n"
@@ -565,12 +565,6 @@ msgid "GCC 6 Package Versions Match Packages Shipped with SLE 12 SP3"
 msgstr "Версии пакетов GCC 6 совпадают с поставляемыми в SLE 12 SP3"
 
 #: xml/release-notes.xml:363(para)
-#, fuzzy
-#| msgid ""
-#| "openSUSE Leap 42.2 accidentally shipped with a newer version of GCC 6 "
-#| "than was shipped with SUSE Linux Enterprise at the time. This has been "
-#| "corrected for openSUSE Leap 42.3 which ships with the same versions of "
-#| "GCC 6 packages as SUSE Linux Enterprise 12 SP3."
 msgid ""
 "openSUSE Leap 42.2 accidentally shipped with a newer version of GCC 6 than "
 "was shipped with SUSE Linux Enterprise at the time. This has been corrected "
@@ -579,7 +573,7 @@ msgid ""
 msgstr ""
 "openSUSE Leap 42.2 была случайно выпущена с более новой версией GCC 6, чем в "
 "SUSE Linux Enterprise на тот момент. Это было исправлено в openSUSE Leap "
-"42.3, которая поставляется с теми же версиями пакетов GCC 6, что и SUSE "
+"15.0, которая поставляется с теми же версиями пакетов GCC 6, что и SUSE "
 "Linux Enterprise 12 SP3."
 
 #: xml/release-notes.xml:369(para)
@@ -595,15 +589,11 @@ msgid "General"
 msgstr "Общее"
 
 #: xml/release-notes.xml:662(para)
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 42.3 that do not "
-#| "match any other category."
 msgid ""
 "This section lists general issues with openSUSE Leap 15.0 that do not match "
 "any other category."
 msgstr ""
-"В этой секции перечислены общие проблемы с openSUSE Leap 42.3, не попавшие в "
+"В этой секции перечислены общие проблемы с openSUSE Leap 15.0, не попавшие в "
 "остальные категории."
 
 #: xml/release-notes.xml:668(title)
@@ -647,7 +637,7 @@ msgstr "zypper lifecycle"
 
 #: xml/release-notes.xml:696(title)
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Нет клавиши Compose по умолчанию"
 
 #: xml/release-notes.xml:697(para)
 msgid ""
@@ -657,6 +647,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"В предыдущих версиях openSUSE клавиша compose позволяла набирать символы, не "
+"входящие в состав обычной раскладки клавиатуры. Например, чтобы набрать "
+"<quote>å</quote>, можно было нажать и отпустить <keycombo><keycap function=\""
+"shift\"/><keycap>Правый Ctrl</keycap></keycombo>, а затем дважды нажать "
+"<keycap>a</keycap>."
 
 #: xml/release-notes.xml:704(para)
 msgid ""
@@ -664,12 +659,18 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"В openSUSE Leap 15.0 больше нет предопределённого сочетания клавиш для "
+"функции compose, поскольку сочетание клавиш <keycombo><keycap function=\""
+"shift\"/><keycap>Правый Ctrl</keycap></keycombo> перестало работать как "
+"раньше."
 
 #: xml/release-notes.xml:712(para)
 msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Для назначения общесистемного сочетания клавиш для compose воспользуйтесь "
+"следующими строчками в файле <filename>/etc/X11/Xmodmap</filename>:"
 
 #: xml/release-notes.xml:716(screen)
 #, no-wrap
@@ -683,6 +684,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #: xml/release-notes.xml:724(para)
 msgid ""
@@ -690,6 +699,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Чтобы раскомментировать код примера, удалите символы <literal>!</literal> в "
+"начале каждой строки. Обратите внимание, что настройки из файла "
+"<filename>Xmodmap</filename> будут перезаписаны, если вы воспользуетесь "
+"командой <command>setxkbmap</command>."
 
 #: xml/release-notes.xml:732(para)
 msgid ""
@@ -697,14 +710,17 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Чтобы определить сочетание клавиш для compose индивидуально для "
+"пользователя, используйте утилиту настройки клавиатуры его рабочего стола "
+"или утилиту командной строки <command>setxkbmap</command>:"
 
 #: xml/release-notes.xml:738(replaceable)
 msgid "[...]"
-msgstr ""
+msgstr "[...]"
 
 #: xml/release-notes.xml:738(replaceable)
 msgid "COMPOSE_KEY"
-msgstr ""
+msgstr "КЛАВИША_COMPOSE"
 
 #: xml/release-notes.xml:737(screen)
 #, no-wrap
@@ -713,6 +729,9 @@ msgid ""
 "setxkbmap <placeholder-1/> -option compose:<placeholder-2/>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <placeholder-1/> -option compose:<placeholder-2/>\n"
+"     "
 
 #: xml/release-notes.xml:740(para)
 msgid ""
@@ -721,25 +740,24 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"В переменной <replaceable>КЛАВИША_COMPOSE</replaceable> используйте "
+"предпочитаемую кнопку, например, <literal>ralt</literal>, "
+"<literal>lwin</literal>, <literal>rwin</literal>, <literal>menu</literal>, "
+"<literal>rctl</literal> или <literal>caps</literal>."
 
 #: xml/release-notes.xml:749(para)
 msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"В качестве альтернативы можно использовать метод ввода IBus, позволяющий "
+"набирать нужные символы без использования клавиши Compose."
 
 #: xml/release-notes.xml:759(title)
 msgid "Dolphin and Konqueror Cannot Set Extended Permission Bits"
 msgstr "Dolphin и Konqueror не могут сохранить биты расширенных прав доступа"
 
 #: xml/release-notes.xml:760(para)
-#, fuzzy
-#| msgid ""
-#| "The versions of the KDE file managers Dolphin and Konqueror that are "
-#| "shipped with openSUSE Leap 42.3 cannot set <quote>Extended Permission</"
-#| "quote> bits (GID, <quote>Sticky</quote>). Additionally, closing the "
-#| "Dolphin permissions dialog by clicking <guimenu>OK</guimenu> clears "
-#| "existing extended permissions bits."
 msgid ""
 "The versions of the KDE file managers Dolphin and Konqueror that are shipped "
 "with openSUSE Leap 15.0 cannot set <quote>Extended Permission</quote> bits "
@@ -748,10 +766,10 @@ msgid ""
 "permissions bits."
 msgstr ""
 "Версии файловых менеджеров для KDE Dolphin и Konqueror, поставляемые в "
-"openSUSE Leap 42.3, не могут сохранять биты <quote>Extended Permission</"
-"quote> (GID, <quote>Sticky</quote>). Более того, при закрытии диалога "
-"разрешений Dolphin нажатием кнопки <guimenu>OK</guimenu> сбрасывает уже "
-"установленные биты."
+"openSUSE Leap 15.0, не могут сохранять биты <quote>Extended "
+"Permission</quote> (GID, <quote>Sticky</quote>). Более того, при закрытии "
+"диалога разрешений Dolphin нажатием кнопки <guimenu>OK</guimenu> сбрасывает "
+"уже установленные биты."
 
 #: xml/release-notes.xml:767(para)
 msgid ""
@@ -820,16 +838,12 @@ msgid "Playing MP3 Media Files"
 msgstr "Воспроизведение MP3-файлов"
 
 #: xml/release-notes.xml:818(para)
-#, fuzzy
-#| msgid ""
-#| "Starting with openSUSE Leap 42.3, the codecs to play MP3 media files are "
-#| "now shipped as part of the standard repository."
 msgid ""
 "The codecs to play MP3 media files are shipped as part of the standard "
 "repository."
 msgstr ""
-"Начиная с openSUSE Leap 42.3, кодеки для воспроизведения файлов MP3 входят в "
-"состав стандартного репозитория."
+"Кодеки для воспроизведения файлов MP3 входят в состав стандартного "
+"репозитория."
 
 #: xml/release-notes.xml:822(para)
 msgid ""
@@ -846,13 +860,6 @@ msgid "No Support for Type-1 Fonts in LibreOffice"
 msgstr "В LibreOffice нет поддержки шрифтов Type-1"
 
 #: xml/release-notes.xml:831(para)
-#, fuzzy
-#| msgid ""
-#| "LibreOffice 5.3 does not support legacy Type-1 fonts (file extensions "
-#| "<filename>.afm</filename> and <filename>.pfb</filename>) anymore. Most "
-#| "users should not be affected by this, as current fonts are available "
-#| "either in the format TrueType (<filename>.ttf</filename>) or OpenType "
-#| "(<filename>.otf</filename>) formats."
 msgid ""
 "LibreOffice 5.3 and higher do not support legacy Type-1 fonts (file "
 "extensions <filename>.afm</filename> and <filename>.pfb</filename>) anymore. "
@@ -860,11 +867,11 @@ msgid ""
 "either in the format TrueType (<filename>.ttf</filename>) or OpenType "
 "(<filename>.otf</filename>) formats."
 msgstr ""
-"LibreOffice 5.3 больше не поддерживает устаревшие шрифты в формате Type-1 "
-"(расширения <filename>.afm</filename> и <filename>.pfb</filename>). Это "
-"никак не скажется на работе большинства пользователей, поскольку современные "
-"шрифты доступны в формате TrueType (<filename>.ttf</filename>) либо OpenType "
-"(<filename>.otf</filename>)."
+"LibreOffice версии 5.3 и выше больше не поддерживает устаревшие шрифты в "
+"формате Type-1 (расширения <filename>.afm</filename> и "
+"<filename>.pfb</filename>). Это никак не скажется на работе большинства "
+"пользователей, поскольку современные шрифты доступны в формате TrueType "
+"(<filename>.ttf</filename>) либо OpenType (<filename>.otf</filename>)."
 
 #: xml/release-notes.xml:838(para)
 msgid ""
