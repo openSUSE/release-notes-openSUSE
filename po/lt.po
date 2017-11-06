@@ -6,17 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2016-02-17 17:39+0100\n"
+"POT-Creation-Date: 2017-11-06 10:59+0100\n"
 "PO-Revision-Date: 2016-11-06 15:05+0000\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
-"Language-Team: Lithuanian <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/master/lt/>\n"
+"Language-Team: Lithuanian <https://l10n.opensuse.org/projects/release-notes-opensuse/master/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.6\n"
 
 #: xml/release-notes.xml:10(title)
@@ -31,205 +29,180 @@ msgstr "@VERSION@"
 msgid "openSUSE Tumbleweed"
 msgstr "openSUSE Tumbleweed"
 
-#: xml/release-notes.xml:96(title)
+#: xml/release-notes.xml:19(para)
+#, fuzzy
+msgid "openSUSE Tumbleweed is a free and Linux-based operating system for your PC, laptop or server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
+msgstr "„openSUSE Leap“ yra atviro kodo „Linux“ operacinė sistema ir skirta staliniams, nešiojamiesiems kompiuteriams, serveriams. Su ja galite naršyti saityne, naudotis el. paštu, redaguoti nuotraukas, atlikti raštinės darbus, leisti vaizdo ir garso kūrinius bei tiesiog patirti daug džiugių akimirkų!"
+
+#: xml/release-notes.xml:26(para)
+msgid "The release notes are under constant development. To find out about the latest updates, see the online version at <ulink url=\"https://doc.opensuse.org/release-notes\"/>. The English release notes are updated whenever need arises. Translated language versions can temporarily be incomplete."
+msgstr ""
+
+#: xml/release-notes.xml:34(para)
+#, fuzzy
+msgid "To report bugs against this release, use the openSUSE Bugzilla. For more information, see <ulink url=\"https://en.opensuse.org/openSUSE:Submitting_bug_reports\"/>."
+msgstr "Arba galite įdiegti nuosavybines AMD tvarkykles. Daugiau informacijos rasite <ulink url=\"http://en.opensuse.org/SDB:ATI_drivers\"/>."
+
+#: xml/release-notes.xml:42(title)
 msgid "Installation"
 msgstr "Diegimas"
 
-#: xml/release-notes.xml:101(title)
+#: xml/release-notes.xml:47(title)
 msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgstr "UEFI&mdash;Unifikuota išplečiama programinės aparatinės įrangos sąsaja"
 
-#: xml/release-notes.xml:102(para)
+#: xml/release-notes.xml:48(para)
 msgid "Prior to installing openSUSE on a system that boots using UEFI (Unified Extensible Firmware Interface), you are urgently advised to check for any firmware updates the hardware vendor recommends and, if available, to install such an update. A pre-installed Windows 8 is a strong indication that your system boots using UEFI."
 msgstr "Prieš diegdami openSUSE į sistemą, kuriai paleisti reikalinga UEFI (angl. „Unified Extensible Firmware Interface“), patikrinkite, ar jūsų aparatinės įrangos gamintojas nepateikė programinės aparatinės įrangos (angl. „firmware“) atnaujinimų; jei pateikia – juos įdiekite pirmiausiai. Jei Jūsų kompiuteryje jau įdiegta Windows 8 sistema, tuomet jūsų sistemos paleidimui UEFI tikrai reikia."
 
-#: xml/release-notes.xml:110(para)
+#: xml/release-notes.xml:56(para)
 msgid "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it to break if too much data gets written to the UEFI storage area. Nobody really knows how much \"too much\" is, though. openSUSE minimizes the risk by not writing more than the bare minimum required to boot the OS. The minimum means telling the UEFI firmware about the location of the openSUSE boot loader. Upstream Linux Kernel features that use the UEFI storage area for storing boot and crash information (<literal>pstore</literal>) have been disabled by default. Nevertheless, it is recommended to install any firmware updates the hardware vendor recommends."
 msgstr "<emphasis>Papildomi paaiškinimai:</emphasis> UEFI programinėje aparatinėje įrangoje („firmware“) kai kuriais atvejais gali būti klaidų, kurios gali sutrikdyti sistemą, bet tik tada, jei į UEFI atmintį įrašoma per daug duomenų. Niekas nežino, kiek būtų jau per daug. Norėdama kaip galima sumažinti riziką, openSUSE įrašo tik tiek, kiek reikia operacinei sistemai paleisti. Minimumas reiškia tai, kad UEFI programinė įranga sužino apie openSUSE paleidyklės vietą. Standartiniame Linux branduolyje išjungta tiek savybė naudoti UEFI atmintį paleidimo informacijos laikymui, tiek lūžių informacijos laikymui (<literal>pstore</literal>). Vis dėl to, jei yra atnaujinimų, patariama atnaujinti programinę aparatinę įrangą („firmware“)."
 
 #. bnc#850056
-#: xml/release-notes.xml:127(title)
+#: xml/release-notes.xml:73(title)
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT ir MS-DOS skaidiniai"
 
-#: xml/release-notes.xml:128(para)
+#: xml/release-notes.xml:74(para)
 msgid "Together with the EFI/UEFI specification, a new style of partitioning arrived: GPT (GUID Partition Table). This new schema uses globally unique identifiers (128-bit values displayed in 32 hexadecimal digits) to identify devices and partition types."
 msgstr "Su EFI/UEFI specifikacija ateina naujas skaidinių tvarkymo stilius: GPT (GUID Partition Table). Šioje naujoje schemoje įrenginiams ir skaidinių tipams identifikuoti naudojami bendrieji unikalūs identifikatoriai (128 bitų reikšmės rodomos 32 šešioliktainiais skaitmenimis)."
 
-#: xml/release-notes.xml:134(para)
+#: xml/release-notes.xml:80(para)
 msgid "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) partitions. The Linux boot loaders (ELILO or GRUB2) try to automatically generate a GUID for those legacy partitions, and write them to the firmware. Such a GUID can change frequently, causing a rewrite in the firmware. A rewrite consist of two different operation: removing the old entry and creating a new entry that replaces the first one."
 msgstr "Be to, UEFI specifikacija be kita ko leidžia senuosius MBR (MS-DOS) skaidinius. Linux paleidyklės (ELILO ar GRUB2) šiems seniems skaidiniams bando automatiškai sukurti GUID ir į juos įrašyti programinę aparatinę įrangą (angl. firmware). Toks GUID gali dažnai keistis, tad gali būti perrašyta programinė aparatinė įranga. Perrašymą sudaro du atskiri žingsniai: senojo įrašo pašalinimas ir naujojo įrašo sukūrimas, kuris pakeičia senąjį."
 
-#: xml/release-notes.xml:143(para)
+#: xml/release-notes.xml:89(para)
 msgid "Modern firmware has a garbage collector that collects deleted entries and frees the memory reserved for old entries. A problem arises when faulty firmware does not collect and free those entries; this may end up with a non-bootable system."
 msgstr "Šiuolaikinė programinė aparatinė įranga stengiasi surinkti „šiukšles“ – ištrintus įrašus ir išlaisvina seniesiems įrašams skirtą vietą. Problemų kyla, kai klaidinga programinė įranga nesurenka šiukšlių ir neišlaisvina tų įrašų; dėl to sistema gali nebepasileisti."
 
-#: xml/release-notes.xml:149(para)
+#: xml/release-notes.xml:95(para)
 msgid "The workaround is simple: convert the legacy MBR partition to the new GPT to avoid this problem completely."
 msgstr "Sprendimas paprastas: nesklandumų visiškai išvengsite senąjį MBR skaidinį konvertavę į naująjį GPT."
 
-#: xml/release-notes.xml:166(title)
+#: xml/release-notes.xml:112(title)
 msgid "General"
 msgstr "Bendrybės"
 
-#: xml/release-notes.xml:169(title)
+#: xml/release-notes.xml:115(title)
 msgid "System with LUKS-Encrypted Partition Does Not Boot"
 msgstr "Nepasileidžia sistemos, turinčios su LUKS užšifruotų skaidinių"
 
-#: xml/release-notes.xml:170(para)
+#: xml/release-notes.xml:116(para)
 msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
-msgstr ""
-"Kartais Plymouth tinkamai nepaprašo slaptažodžio. Norėdami ištaisyti šį "
-"nesklandumą, branduolio komandinėje eilutėje prirašykite "
-"<literal>plymouth.enable=0</literal>. Daugiau informacijos pateikta <ulink "
-"url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
+msgstr "Kartais Plymouth tinkamai nepaprašo slaptažodžio. Norėdami ištaisyti šį nesklandumą, branduolio komandinėje eilutėje prirašykite <literal>plymouth.enable=0</literal>. Daugiau informacijos pateikta <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 
-#: xml/release-notes.xml:180(title)
+#: xml/release-notes.xml:126(title)
 msgid "Technical"
 msgstr "Techninė informacija"
 
 #. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:185(title)
+#: xml/release-notes.xml:131(title)
 msgid "Printing System: Improvements and Incompatible Changes"
 msgstr "Spausdinimo sistema: patobulinimai ir nesuderinami pakeitimai"
 
-#: xml/release-notes.xml:188(emphasis)
+#: xml/release-notes.xml:134(emphasis)
 msgid "CUPS Version Upgrade to 1.7"
 msgstr "CUPS versija naujovinta iki 1.7"
 
-#: xml/release-notes.xml:190(para)
+#: xml/release-notes.xml:136(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
-msgstr ""
-"Naujojoji CUPS versija gerokai pasikeitė nuo 1.5 versijos, tad gali reikėti "
-"konfigūraciją paredaguoti rankiniu būdu"
+msgstr "Naujojoji CUPS versija gerokai pasikeitė nuo 1.5 versijos, tad gali reikėti konfigūraciją paredaguoti rankiniu būdu"
 
-#: xml/release-notes.xml:193(para)
+#: xml/release-notes.xml:139(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-msgstr ""
-"Spausdinimo užduočių formatu tapo PDF, o anksčiau buvo PS. Tad tradiciniams "
-"postskriptiniams spausdintuvams nuo šiol irgi reikės filtro tvarkyklių."
+msgstr "Spausdinimo užduočių formatu tapo PDF, o anksčiau buvo PS. Tad tradiciniams postskriptiniams spausdintuvams nuo šiol irgi reikės filtro tvarkyklių."
 
-#: xml/release-notes.xml:197(para)
-msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink> for details."
-msgstr ""
-"Daugiau informacijos <ulink url=\"http://en.opensuse.org/Concepts_printing\""
-">http://en.opensuse.org/Concepts_printing</ulink>."
+#: xml/release-notes.xml:143(para)
+#, fuzzy
+msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\"/> for details."
+msgstr "Daugiau informacijos <ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>."
 
-#: xml/release-notes.xml:203(para)
-msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, ie via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-msgstr ""
-"Pasikeitė tinklo spausdintuvų aptikimo protokolas. Gimtasis protokolas "
-"tinklo spausdintuvų aptikimui dabar remiasi DNS paslaugų aptikimu (DNS-SD, "
-"t. y., per Avahi). Senąjį ir naująjį protokolą galite susieti naudodami "
-"<literal>cups-browsed</literal> paslaugą, kurią pateikia <literal>cups-"
-"filters</literal> paketas. Tam, kad senieji klientai (įskaitant LibreOffice "
-"ir KDE) aptiktų spausdintuvus, reikia, kad vienu metu veiktų ir "
-"<literal>cupsd</literal>, ir <literal>cups-browsed</literal>."
+#: xml/release-notes.xml:149(para)
+#, fuzzy
+msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+msgstr "Pasikeitė tinklo spausdintuvų aptikimo protokolas. Gimtasis protokolas tinklo spausdintuvų aptikimui dabar remiasi DNS paslaugų aptikimu (DNS-SD, t. y., per Avahi). Senąjį ir naująjį protokolą galite susieti naudodami <literal>cups-browsed</literal> paslaugą, kurią pateikia <literal>cups-filters</literal> paketas. Tam, kad senieji klientai (įskaitant LibreOffice ir KDE) aptiktų spausdintuvus, reikia, kad vienu metu veiktų ir <literal>cupsd</literal>, ir <literal>cups-browsed</literal>."
 
-#: xml/release-notes.xml:217(para)
-msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enteprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)."
-msgstr ""
-"Numatytoji IPP protokolo versija iš 1.1 pakeista į 2.0. Senesni IPP "
-"serveriai, pvz., CUPS 1.3.x (naudojami, pvz., SUSE Linux Enteprise 11), "
-"atmes IPP 2.0 užklausas pranešdami apie blogos užklausos (angl. „Bad "
-"Request“) klaidą (žr. <ulink url=\"http://www.cups.org/str.php?L4231\""
-">http://www.cups.org/str.php?L4231</ulink>)."
+#: xml/release-notes.xml:163(para)
+#, fuzzy
+msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
+msgstr "Numatytoji IPP protokolo versija iš 1.1 pakeista į 2.0. Senesni IPP serveriai, pvz., CUPS 1.3.x (naudojami, pvz., SUSE Linux Enteprise 11), atmes IPP 2.0 užklausas pranešdami apie blogos užklausos (angl. „Bad Request“) klaidą (žr. <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)."
 
-#: xml/release-notes.xml:223(para)
+#: xml/release-notes.xml:169(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
-msgstr ""
-"Tokiu atveju turėtumėte nurodyti, kad į senus serverius būtų kreipiamasi "
-"naudojant būtent senesnį IPP protokolą pridedant "
-"<literal>/version=1.1</literal>:"
+msgstr "Tokiu atveju turėtumėte nurodyti, kad į senus serverius būtų kreipiamasi naudojant būtent senesnį IPP protokolą pridedant <literal>/version=1.1</literal>:"
 
-#: xml/release-notes.xml:231(para)
+#: xml/release-notes.xml:177(para)
 msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
-msgstr ""
-"arba konfigūracinėje rinkmenoje <literal>client.conf</literal> ties "
-"<literal>ServerName</literal> (pvz., <literal>ServerName "
-"senesnis.serveris.pavyzdys.lt/version=1.1</literal>);"
+msgstr "arba konfigūracinėje rinkmenoje <literal>client.conf</literal> ties <literal>ServerName</literal> (pvz., <literal>ServerName senesnis.serveris.pavyzdys.lt/version=1.1</literal>);"
 
-#: xml/release-notes.xml:236(para)
+#: xml/release-notes.xml:182(para)
 msgid "the <literal>CUPS_SERVER</literal> environment variable value"
 msgstr "arba <literal>CUPS_SERVER</literal> aplinkos kintamojo reikšmėje;"
 
-#: xml/release-notes.xml:240(para)
+#: xml/release-notes.xml:186(para)
 msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
-msgstr ""
-"arba prie serverio vardo reikšmės naudojant komandinės eilutės "
-"<literal>-h</literal> parinktį, pavyzdžiui, <screen>lpstat -h "
-"senesnis.serveris.pavyzdys.lt/version=1.1 -p</screen>"
+msgstr "arba prie serverio vardo reikšmės naudojant komandinės eilutės <literal>-h</literal> parinktį, pavyzdžiui, <screen>lpstat -h senesnis.serveris.pavyzdys.lt/version=1.1 -p</screen>"
 
-#: xml/release-notes.xml:249(para)
+#: xml/release-notes.xml:195(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
-msgstr ""
-"Kai kurios spausdintuvų tvarkyklės ir sąsajos iš <literal>cups</literal> "
-"paketo perkeltos į <literal>cups-filters</literal> paketą."
+msgstr "Kai kurios spausdintuvų tvarkyklės ir sąsajos iš <literal>cups</literal> paketo perkeltos į <literal>cups-filters</literal> paketą."
 
-#: xml/release-notes.xml:255(para)
-msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
-msgstr ""
-"Dalis Cupsd konfigūracijos direktyvų iš <literal>cupsd.conf</literal> "
-"perkelta į <literal>cups-files.conf</literal> (žr. <ulink url=\""
-"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>"
-" , CVE-2012-5519 ir <ulink url=\""
-"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\""
-">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
+#: xml/release-notes.xml:201(para)
+#, fuzzy
+msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
+msgstr "Dalis Cupsd konfigūracijos direktyvų iš <literal>cupsd.conf</literal> perkelta į <literal>cups-files.conf</literal> (žr. <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink> , CVE-2012-5519 ir <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink>)."
 
-#: xml/release-notes.xml:264(para)
-msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
-msgstr ""
-"CUPS antraštės ir bandomieji puslapiai perkelti iš <literal>cups</literal> "
-"paketo į <literal>cups-filters</literal> paketą (žr. <ulink url=\""
-"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink>"
-" ir <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\""
-">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
+#: xml/release-notes.xml:210(para)
+#, fuzzy
+msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"https://github.com/apple/cups/issues/4120\"/> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
+msgstr "CUPS antraštės ir bandomieji puslapiai perkelti iš <literal>cups</literal> paketo į <literal>cups-filters</literal> paketą (žr. <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> ir <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)."
 
 #. bnc#809347
-#: xml/release-notes.xml:286(title)
+#: xml/release-notes.xml:232(title)
 msgid "More Information and Feedback"
 msgstr "Išsamesnė informacija ir grįžtamasis ryšys"
 
-#: xml/release-notes.xml:290(para)
+#: xml/release-notes.xml:236(para)
 msgid "Read the READMEs on the CDs."
 msgstr "Skaitykite diegimo laikmenose esančias README rinkmenas."
 
-#: xml/release-notes.xml:293(para)
+#: xml/release-notes.xml:239(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "Išsami informacija apie paskiro RPM paketo pakeitimus pateikiama įvykdžius:"
 
-#: xml/release-notes.xml:294(screen)
+#: xml/release-notes.xml:240(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;RINKMENA&gt;.rpm"
 
-#: xml/release-notes.xml:295(para)
+#: xml/release-notes.xml:241(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;RINKMENA&gt;. yra RPM paketo pavadinimas."
 
-#: xml/release-notes.xml:298(para)
+#: xml/release-notes.xml:244(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "Norėdami matyti atnaujintų paketų visus pakeitimus laiko bėgyje, DVD laikmenos šakniniame kataloge ieškokite <filename>ChangeLog</filename> rinkmenos."
 
-#: xml/release-notes.xml:302(para)
-msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
-msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> adresu pateikta papildoma ir atnaujinta dokumentacija."
+#: xml/release-notes.xml:248(para)
+#, fuzzy
+msgid "For additional or updated documentation, see <ulink url=\"https://doc.opensuse.org/\"/>."
+msgstr "Daugiau informacijos rasite <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
 
-#: xml/release-notes.xml:307(para)
-msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest news from openSUSE."
+#: xml/release-notes.xml:253(para)
+#, fuzzy
+msgid "For the latest news from openSUSE, see <ulink url=\"https://www.opensuse.org\"/>."
+msgstr "Daugiau informacijos rasite <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
+
+#: xml/release-notes.xml:259(para)
+msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr ""
-"Daugiau naujienų apie openSUSE rasite apsilankę <ulink url=\""
-"http://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:312(para)
-msgid "Copyright © 2015 SUSE LLC"
-msgstr "Autorinės teisės © 2015 SUSE LLC"
-
-#: xml/release-notes.xml:314(para)
+#: xml/release-notes.xml:261(para)
 msgid "Thanks for using openSUSE."
 msgstr "Ačiū, kad pasirinkote openSUSE."
 
-#: xml/release-notes.xml:315(para)
+#: xml/release-notes.xml:262(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE komanda."
 
@@ -242,11 +215,17 @@ msgstr ""
 "Andrius Štikonas <stikonas@gmail.com>, 2006, 2008. \n"
 "Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2009-2016"
 
+#~ msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
+#~ msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> adresu pateikta papildoma ir atnaujinta dokumentacija."
+
+#~ msgid "Visit <ulink url=\"http://www.opensuse.org\"/> for the latest news from openSUSE."
+#~ msgstr "Daugiau naujienų apie openSUSE rasite apsilankę <ulink url=\"http://www.opensuse.org\"/>."
+
+#~ msgid "Copyright © 2015 SUSE LLC"
+#~ msgstr "Autorinės teisės © 2015 SUSE LLC"
+
 #~ msgid "42.1"
 #~ msgstr "42.1"
-
-#~ msgid "openSUSE Leap is a free and Linux-based operating system for your PC, Laptop or Server. You can surf the web, manage your e-mails and photos, do office work, play videos or music and have a lot of fun!"
-#~ msgstr "„openSUSE Leap“ yra atviro kodo „Linux“ operacinė sistema ir skirta staliniams, nešiojamiesiems kompiuteriams, serveriams. Su ja galite naršyti saityne, naudotis el. paštu, redaguoti nuotraukas, atlikti raštinės darbus, leisti vaizdo ir garso kūrinius bei tiesiog patirti daug džiugių akimirkų!"
 
 #~ msgid "If you upgrade from an older version to this openSUSE Leap release, see previous release notes listed here: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
 #~ msgstr "Jei senesnę sistemos versiją naujovinote iki šios „openSUSE Leap“ laidos, ankstesnių laidos informacijų ieškokite čia: <ulink url=\"http://en.opensuse.org/openSUSE:Release_Notes\"/>"
@@ -500,9 +479,6 @@ msgstr ""
 
 #~ msgid "openSUSE includes various PDF viewing tools like Okular, Evince, and poppler-tools. These tools are actively maintained and get security fixes from openSUSE and their upstream authors."
 #~ msgstr "openSUSE siūlo rinktis įvairias PDF peržiūros programas, pvz.: Okular, Evince, poppler-tools. Šie įrankiai aktyviai prižiūrimi ir sulaukia saugumo atnaujinimų tiek iš openSUSE, tiek iš pačių programų kūrėjų."
-
-#~ msgid "For more information, see <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
-#~ msgstr "Daugiau informacijos rasite <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
 
 #~ msgid "Upgrading with Zypper (dup) Requires /etc/fstab Cleanup"
 #~ msgstr "Atnaujinant su Zypper (dup), reikia išvalyti /etc/fstab"
@@ -826,9 +802,6 @@ msgstr ""
 
 #~ msgid "Then reboot to apply the change."
 #~ msgstr "Tam, kad įsigaliotų pakeitimai, iš naujo paleiskite kompiuterį."
-
-#~ msgid "Alternatively, users can install the proprietary driver from AMD. For more information, see <ulink url=\"http://en.opensuse.org/SDB:ATI_drivers\"/>."
-#~ msgstr "Arba galite įdiegti nuosavybines AMD tvarkykles. Daugiau informacijos rasite <ulink url=\"http://en.opensuse.org/SDB:ATI_drivers\"/>."
 
 #~ msgid "For the moment, these snippets are listed unsorted&mdash;we are working on improvements."
 #~ msgstr "Kol kas elementai nesurūšiuoti &mdash; vis dar tobulinama."
