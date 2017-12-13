@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2017-12-11 11:10+0100\n"
-"PO-Revision-Date: 2017-07-18 07:11+0000\n"
-"Last-Translator: Grover Chou <groverchout@gmail.com>\n"
+"PO-Revision-Date: 2017-12-13 08:55+0000\n"
+"Last-Translator: Wenruo Qu <wqu@suse.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap_42_3/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.13.1\n"
+"X-Generator: Weblate 2.17.1\n"
 
 #: xml/release-notes.xml:14(title) xml/release-notes.xml:31(component)
 msgid "Release Notes"
@@ -175,13 +175,6 @@ msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI — 统一可扩展固件接口"
 
 #: xml/release-notes.xml:110(para)
-#, fuzzy
-#| msgid ""
-#| "Prior to installing openSUSE on a system that boots using UEFI (Unified "
-#| "Extensible Firmware Interface), you are urgently advised to check for any "
-#| "firmware updates the hardware vendor recommends and, if available, to "
-#| "install such an update. A pre-installed Windows 8 is a strong indication "
-#| "that your system boots using UEFI."
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
@@ -189,9 +182,9 @@ msgid ""
 "install such an update. A pre-installation of Windows 8 or later is a strong "
 "indication that your system boots using UEFI."
 msgstr ""
-"将 openSUSE 安装到使用 UEFI（统一可扩展固件接口）引导的计算机上前，特别建议您"
-"检查一下硬件制造商推荐的固件更新，并且，如果有的话，请安装这样的更新。预装了 "
-"Windows 8 是表明您计算机使用 UEFI 引导的一个明显标志。"
+"将 openSUSE 安装到使用 "
+"UEFI（统一可扩展固件接口）引导的计算机上前，特别建议您检查一下硬件制造商推荐的固件更新，并且，如果有的话，请安装这样的更新。预装了 Windows "
+"8及更新版本 是表明您计算机使用 UEFI 引导的一个明显标志。"
 
 #: xml/release-notes.xml:117(para)
 msgid ""
@@ -262,7 +255,7 @@ msgstr "规避方法很简单：将传统的 MBR 分区转换成新的 GPT 分�
 
 #: xml/release-notes.xml:162(title)
 msgid "Update of Kernel Graphics Stack"
-msgstr ""
+msgstr "更新内核的图形栈"
 
 #: xml/release-notes.xml:163(para)
 msgid ""
@@ -272,6 +265,8 @@ msgid ""
 "installed automatically during the OS installation when a corresponding "
 "graphics device is found on your machine."
 msgstr ""
+"在openSUSE Leap 42.3上，4.9.x内核的图形栈的升级是通过 <package>drm-kmp-"
+"default</package>来进行的，而并非通过反向移植各种补丁到当前内核。通常来说这一软件包会在系统安装时根据硬件自动安装。"
 
 #: xml/release-notes.xml:171(para)
 msgid ""
@@ -280,6 +275,7 @@ msgid ""
 "a hung GPU, try to uninstall the package as shown below, then reboot and "
 "retest:"
 msgstr ""
+"KMP还提供了另一优势：用户卸载该包即可回滚至4.4.x内核。 如果用户经历了严重问题，比如GPU失去响应，可以尝试使用下列命令卸载软件包，重启后再尝试："
 
 #: xml/release-notes.xml:177(screen) xml/release-notes.xml:188(screen)
 #, no-wrap
@@ -342,7 +338,7 @@ msgstr ""
 
 #: xml/release-notes.xml:248(para)
 msgid "Additionally, check <xref linkend=\"sec.general.deprecated\"/>."
-msgstr ""
+msgstr "如需了解更多信息，请见<xref linkend=\"sec.general.deprecated\"/>。"
 
 #: xml/release-notes.xml:253(title)
 msgid "Upgrading from openSUSE Leap 42.2"
@@ -363,10 +359,8 @@ msgid "<package>ldapjdk</package>: Fails to build on 42.3."
 msgstr "<package>ldapjdk</package>：在 42.3 上构建失败。"
 
 #: xml/release-notes.xml:268(para)
-#, fuzzy
-#| msgid "<package>castor</package>: Fails to build on 42.3."
 msgid "<package>libatlas3</package>: Fails to build on 42.3."
-msgstr "<package>castor</package>：在 42.3 上构建失败。"
+msgstr "<package>libatlas3</package>：在 42.3 上构建失败。"
 
 #: xml/release-notes.xml:273(para)
 msgid "<package>castor</package>: Fails to build on 42.3."
@@ -541,7 +535,7 @@ msgstr ""
 
 #: xml/release-notes.xml:406(title)
 msgid "GCC 6 Package Versions Match Packages Shipped with SLE 12 SP3"
-msgstr ""
+msgstr "关于SLE12 SP3的GCC6版本兼容性问题"
 
 #: xml/release-notes.xml:407(para)
 msgid ""
@@ -550,12 +544,14 @@ msgid ""
 "for openSUSE Leap 42.3 which ships with the same versions of GCC 6 packages "
 "as SUSE Linux Enterprise 12 SP3."
 msgstr ""
+"openSUSE Leap 42.2 错误的捆绑了更新版本的GCC6。这一问题已在openSUSE Leap 42.3中被修复，"
+"现在提供的GCC6将与SUSE Linux Enterprise 12 SP3版本一致。"
 
 #: xml/release-notes.xml:413(para)
 msgid ""
 "However, if GCC 6 packages are installed, this leads to forced package "
 "downgrades during the operating system upgrade."
-msgstr ""
+msgstr "如果已经安装了GCC6，这就需要在系统升级时强制指定降级软件包。"
 
 #: xml/release-notes.xml:422(title)
 msgid "Upgrading from openSUSE Leap 42.1"
@@ -931,7 +927,7 @@ msgstr "这部分列出了关于 openSUSE Leap 42.3 但无法归类的一般性�
 
 #: xml/release-notes.xml:712(title)
 msgid "Deprecated Packages"
-msgstr ""
+msgstr "关于即将废弃的软件包"
 
 #: xml/release-notes.xml:713(para)
 msgid ""
@@ -940,38 +936,38 @@ msgid ""
 "discouraged and they may not receive updates. The packages will be removed "
 "in the next version of the distribution."
 msgstr ""
+"以下软件包虽然依旧被提供，但它们即将被废弃。这些软件包只被用来方便迁移与升级，它们已经不再被更新，并不推荐继续使用这些软件包。下一个版本中这些软件包将被移"
+"除。"
 
 #: xml/release-notes.xml:722(para)
-#, fuzzy
-#| msgid "<package>nodejs</package>: Renamed to <package>nodejs4</package>."
 msgid ""
 "<package>lxdm</package>: Unmaintained, use <package>lightdm</package> "
 "instead."
-msgstr "<package>nodejs</package>：被重命名为 <package>nodejs4</package>。"
+msgstr "<package>lxdm</package>：已无人维护，请使用 <package>lightdm</package>。"
 
 #: xml/release-notes.xml:728(para)
 msgid ""
 "<package>mysql-community-server</package>: May not receive maintenance and "
 "security fixes anymore. We advise migrating to <package>mariadb</package>."
 msgstr ""
+"<package>mysql-community-server</package>: 可能无法收到持续的维护与安全更新。我们推荐迁移至 "
+"<package>mariadb</package>。"
 
 #: xml/release-notes.xml:735(para)
 msgid ""
 "<package>ruby2.2-*</package>: For development only. Use Ruby 2.1 or 2.4 "
 "instead."
-msgstr ""
+msgstr "<package>ruby2.2-*</package>: 仅供开发使用。请用Ruby 2.1或者2.4。"
 
 #: xml/release-notes.xml:741(para)
 msgid ""
 "<package>ruby2.3-*</package>: For development only. Use Ruby 2.1 or 2.4 "
 "instead."
-msgstr ""
+msgstr "<package>ruby2.3-*</package>: 仅供开发使用。请用Ruby 2.1或者2.4。"
 
 #: xml/release-notes.xml:747(para)
-#, fuzzy
-#| msgid "<package>castor</package>: Fails to build on 42.3."
 msgid "<package>uClibc</package>: Unmaintained."
-msgstr "<package>castor</package>：在 42.3 上构建失败。"
+msgstr "<package>uClibc</package>：无人维护。"
 
 #: xml/release-notes.xml:753(para)
 msgid ""
@@ -979,11 +975,12 @@ msgid ""
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
 "command:"
 msgstr ""
+"如需确认安装的软件包是否还有人维护，请先安装<package>lifecycle-data-openSUSE</package>软件包，再执行如下命令："
 
 #: xml/release-notes.xml:758(screen)
 #, no-wrap
 msgid "zypper lifecycle"
-msgstr ""
+msgstr "Zypper生命周期"
 
 #: xml/release-notes.xml:763(title)
 msgid "KDE Software for Personal Information Management (KDE PIM)"
@@ -1075,7 +1072,7 @@ msgstr "在 openSUSE Leap 42.3 中，应用程序菜单栏 plasmoid 也已可用
 
 #: xml/release-notes.xml:829(title)
 msgid "Non-Qt Applications Can Behave Incorrectly"
-msgstr ""
+msgstr "关于非Qt程序可能无法正确执行的问题"
 
 #: xml/release-notes.xml:830(para)
 msgid ""
@@ -1085,13 +1082,13 @@ msgstr "不使用 Qt 工具包的应用程序可能不支持全局菜单或将�
 
 #: xml/release-notes.xml:838(title)
 msgid "Playing MP3 Media Files"
-msgstr ""
+msgstr "关于播放MP3文件"
 
 #: xml/release-notes.xml:839(para)
 msgid ""
 "Starting with openSUSE Leap 42.3, the codecs to play MP3 media files are now "
 "shipped as part of the standard repository."
-msgstr ""
+msgstr "从openSUSE Leap 42.3起，播放MP3文件所需的解码器将直接由标准仓库提供。"
 
 #: xml/release-notes.xml:843(para)
 msgid ""
@@ -1099,10 +1096,12 @@ msgid ""
 "Rhythmbox or Totem, install the package <literal>gstreamer-plugins-ugly</"
 "literal>."
 msgstr ""
+"如需在使用gstreamer框架的程序 （如Rhythmbox或Totem）中使用该解码器，请安装<literal>gstreamer-plugins-"
+"ugly</literal>软件包。"
 
 #: xml/release-notes.xml:851(title)
 msgid "No Support for Type-1 Fonts in LibreOffice"
-msgstr ""
+msgstr "关于LibreOffice不支持Type-1字体的问题"
 
 #: xml/release-notes.xml:852(para)
 msgid ""
@@ -1112,6 +1111,9 @@ msgid ""
 "format TrueType (<filename>.ttf</filename>) or OpenType (<filename>.otf</"
 "filename>) formats."
 msgstr ""
+"LibreOffice 5.3并不支持旧式的Type-1字体（<filename>.afm</filename>和<filename>.pfb</file"
+"name>等后缀名的字体文件）。对于绝大多数用户来说这一改动并不会造成影响。因为如今主流字体都已经是TrueType（<filename>.ttf</fi"
+"lename>）或者OpenType（<filename>.otf</filename>）。"
 
 #: xml/release-notes.xml:859(para)
 msgid ""
@@ -1121,6 +1123,9 @@ msgid ""
 "is included in openSUSE. For information on scripting such conversions, see "
 "<link href=\"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
 msgstr ""
+"如果此变更影响到了用户，可以通过将Type-1字体转换成支持的格式（比如TrueType）后再使用转换后的字体。可以使用FontForge "
+"（<package>fontforge</package>软件包）来进行转换。若希望通过脚本进行转换，可以参考 <link href=\""
+"https://fontforge.github.io/en-US/documentation/scripting/\"/> （英文）。"
 
 #: xml/release-notes.xml:893(title)
 msgid "More Information and Feedback"
