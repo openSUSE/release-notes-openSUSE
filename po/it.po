@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2017-12-11 11:16+0100\n"
-"PO-Revision-Date: 2017-11-02 10:49+0000\n"
+"PO-Revision-Date: 2018-01-05 14:36+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_15_0/it/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.13.1\n"
+"X-Generator: Weblate 2.17.1\n"
 
 #: xml/release-notes.xml:14(title) xml/release-notes.xml:31(component)
 msgid "Release Notes"
@@ -415,7 +415,7 @@ msgstr "zypper lifecycle"
 
 #: xml/release-notes.xml:246(title)
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Nessuna combinazione predefinita per il tasto Compose"
 
 #: xml/release-notes.xml:247(para)
 msgid ""
@@ -425,6 +425,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"Nelle versioni precedenti di openSUSE, la combinazione per il tasto Compose "
+"consentiva la digitazione di caratteri non presenti sulla tastiera. Per "
+"esempio, per produrre <quote>å</quote>, era possibile premere e rilasciare "
+"<keycombo><keycap function=\"shift\"/><keycap>Ctrl destro</keycap></keycombo>"
+" e successivamente premere due volte <keycap>a</keycap>."
 
 #: xml/release-notes.xml:254(para)
 msgid ""
@@ -432,12 +437,18 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"In openSUSE Leap 15.0, non esiste più una combinazione predefinita per il "
+"tasto Compose perché <keycombo><keycap function=\"shift\"/><keycap>Ctrl "
+"destro</keycap></keycombo> non funziona più come previsto."
 
 #: xml/release-notes.xml:262(para)
 msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Per definire una combinazione per il tasto Compose valida a livello di "
+"sistema, usare il file <filename>/etc/X11/Xmodmap</filename> e cercare le "
+"righe seguenti:"
 
 #: xml/release-notes.xml:266(screen)
 #, no-wrap
@@ -451,6 +462,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #: xml/release-notes.xml:274(para)
 msgid ""
@@ -458,6 +477,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Per decommentare il codice d'esempio, rimuovere i <literal>!</literal> a "
+"inizio riga. Tuttavia, si noti che la configurazione tramite "
+"<filename>Xmodmap</filename> sarà sovrascritta se si utilizza "
+"<command>setxkbmap</command>."
 
 #: xml/release-notes.xml:282(para)
 msgid ""
@@ -465,6 +488,10 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Per definire una combinazione utente-specifica per il tasto Compose, "
+"utilizzare lo strumento di configurazione della tastiera del proprio "
+"ambiente desktop oppure lo strumento da riga di comando "
+"<command>setxkbmap</command>:"
 
 #: xml/release-notes.xml:288(replaceable)
 msgid "[...]"
@@ -493,9 +520,9 @@ msgid ""
 "or <literal>caps</literal>."
 msgstr ""
 "Per la variabile <replaceable>COMPOSE_KEY</replaceable>, usare il carattere "
-"di propria preferenza, per esempio <literal>ralt</literal>, <literal>lwin</"
-"literal>, <literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</"
-"literal>, o <literal>caps</literal>."
+"di propria preferenza, per esempio <literal>ralt</literal>, "
+"<literal>lwin</literal>, <literal>rwin</literal>, <literal>menu</literal>, "
+"<literal>rctl</literal> o <literal>caps</literal>."
 
 #: xml/release-notes.xml:299(para)
 msgid ""
