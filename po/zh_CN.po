@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2017-11-06 10:59+0100\n"
-"PO-Revision-Date: 2017-12-20 16:01+0000\n"
-"Last-Translator: Grover Chou <groverchout@gmail.com>\n"
+"PO-Revision-Date: 2018-02-03 12:20+0000\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/master/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.17.1\n"
+"X-Generator: Weblate 2.18\n"
 
 #: xml/release-notes.xml:10(title)
 msgid "Release Notes"
@@ -39,11 +39,14 @@ msgstr ""
 #: xml/release-notes.xml:26(para)
 msgid "The release notes are under constant development. To find out about the latest updates, see the online version at <ulink url=\"https://doc.opensuse.org/release-notes\"/>. The English release notes are updated whenever need arises. Translated language versions can temporarily be incomplete."
 msgstr ""
+"发行注记在不断扩充中。要找到最近的更新，请查看在线版本 <ulink url=\"https://doc.opensuse.org/release-"
+"notes\"/>。英文版本的注记需要时就会更新。语言翻译版本暂时可能会不完整。"
 
 #: xml/release-notes.xml:34(para)
-#, fuzzy
 msgid "To report bugs against this release, use the openSUSE Bugzilla. For more information, see <ulink url=\"https://en.opensuse.org/openSUSE:Submitting_bug_reports\"/>."
-msgstr "同样，用户可以安装 AMD 的私有驱动。详情见 <ulink url=\"http://zh.opensuse.org/SDB:ATI_驱动\"/>。"
+msgstr ""
+"要报告此版本的缺陷，请使用 openSUSE Bugzilla。更多信息请查看 <ulink url=\""
+"https://en.opensuse.org/openSUSE:Submitting_bug_reports\"/>。"
 
 #: xml/release-notes.xml:42(title)
 msgid "Installation"
@@ -88,11 +91,14 @@ msgstr "常规"
 
 #: xml/release-notes.xml:115(title)
 msgid "System with LUKS-Encrypted Partition Does Not Boot"
-msgstr ""
+msgstr "使用 LUKS 加密分区的系统无法启动"
 
 #: xml/release-notes.xml:116(para)
 msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 msgstr ""
+"有些情况下，Plymouth 无法正确地显示密码提示。要修复这个问题，请添加 <literal>ymouth.enable=0</literal> "
+"到内核的启动命令行。详情见 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"966255\"/>。"
 
 #: xml/release-notes.xml:126(title)
 msgid "Technical"
@@ -109,52 +115,71 @@ msgstr "CUPS 版本升级至 1.7"
 
 #: xml/release-notes.xml:136(para)
 msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
-msgstr ""
+msgstr "新版的 CPUS 相对 1.5 版本引入了一些重要的更改，可能需要手动调整配置"
 
 #: xml/release-notes.xml:139(para)
 msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-msgstr ""
+msgstr "PDF 已取代 PS 成为标准的打印作业格式。因此传统的 PostScript 打印机现在需要一个筛选器驱动才能打印。"
 
 #: xml/release-notes.xml:143(para)
-#, fuzzy
 msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\"/> for details."
-msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> 搜罗了额外的或更新的文档。"
+msgstr "详细信息请查看 <ulink url=\"http://en.opensuse.org/Concepts_printing\"/>。"
 
 #: xml/release-notes.xml:149(para)
 msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
 msgstr ""
+"网络打印机发现协议已更改。现在发现网络打印机的原生方法基于 DNS 服务发现（DNS-SD，通过 Avahi）。<literal>cups-"
+"filters</literal> 包里的 <literal>cpus-browsed</literal> "
+"服务可用于桥接新旧协议。<literal>cupsd</literal> 和 <literal>cups-browsed</literal> "
+"都需要运行以让“旧的”客户端能发现打印机（包括了 LibreOffice 和 KDE）。"
 
 #: xml/release-notes.xml:163(para)
 msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
 msgstr ""
+"IPP 协议默认版本已从 1.1 更改到 2.0。旧的 IPP 协议如 CUPS 1.3.x（例如 SUSE Linux 企业版 11 "
+"里的）会以“错误的请求”拒绝 IPP 2.0（详情见 <ulink url=\"https://github.com/apple/cups/issues/"
+"4231\"/>）。"
 
 #: xml/release-notes.xml:169(para)
 msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
-msgstr ""
+msgstr "要能够打印到旧服务器，IPP 协议版本必须要明确指定，通过附加“/version=1.1”到"
 
 #: xml/release-notes.xml:177(para)
 msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
 msgstr ""
+"<literal>client.conf</literal> 里的 <literal>ServerName</literal> "
+"设置项（例如<literal>ServerName older.server.example.com/version=1.1</literal>）"
 
 #: xml/release-notes.xml:182(para)
 msgid "the <literal>CUPS_SERVER</literal> environment variable value"
-msgstr ""
+msgstr "环境变量 <literal>CUPS_SERVER</literal>"
 
 #: xml/release-notes.xml:186(para)
 msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
 msgstr ""
+"命令行工具里 <literal>-h</literal> 选项指定的服务器名。例如<screen>lpstat -h "
+"older.server.example.com/version=1.1 -p</screen>"
 
 #: xml/release-notes.xml:195(para)
 msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
 msgstr ""
+"有些打印筛选器和后端已从 <literal>cups</literal> 包移到 <literal>cups-filters</literal> 包"
 
 #: xml/release-notes.xml:201(para)
 msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
 msgstr ""
+"有些配置指令已从 <literal>cupsd.conf</literal> 分离出来移进 <literal>cups-"
+"file.conf</literal>（详情见 <ulink url=\"https://github.com/apple/cups/issues/"
+"4223\"/>、CVE-2012-5519 和 <ulink url=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>）。"
 
 #: xml/release-notes.xml:210(para)
 msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package the <literal>cups-filters</literal> package (see <ulink url=\"https://github.com/apple/cups/issues/4120\"/> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 msgstr ""
+"CUPS 横幅和 CUPS 测试页已从 <literal>cups</literal> 包移到 <literal>cups-"
+"filters</literal> 包（详情见 <ulink url=\"https://github.com/apple/cups/issues/"
+"4120\"/> 和 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"735404\"/>）。"
 
 #. bnc#809347
 #: xml/release-notes.xml:232(title)
@@ -183,14 +208,12 @@ msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD
 msgstr "查看 DVD 顶级目录中的 <filename>ChangeLog</filename> 日志可获得按时间排列的全部软件包更新历史。"
 
 #: xml/release-notes.xml:248(para)
-#, fuzzy
 msgid "For additional or updated documentation, see <ulink url=\"https://doc.opensuse.org/\"/>."
-msgstr "更多信息请访问： <ulink url=\"http://zh.opensuse.org/Adobe_Reader\"/>。"
+msgstr "更多信息或更新的文档，请访问 <ulink url=\"https://doc.opensuse.org/\"/>。"
 
 #: xml/release-notes.xml:253(para)
-#, fuzzy
 msgid "For the latest news from openSUSE, see <ulink url=\"https://www.opensuse.org\"/>."
-msgstr "更多信息请访问： <ulink url=\"http://zh.opensuse.org/Adobe_Reader\"/>。"
+msgstr "获取 openSUSE 的最新新闻，请访问 <ulink url=\"https://www.opensuse.org\"/>。"
 
 #: xml/release-notes.xml:259(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
