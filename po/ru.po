@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2018-02-09 11:12+0100\n"
+"POT-Creation-Date: 2018-02-09 12:03+0100\n"
 "PO-Revision-Date: 2018-02-04 19:48+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-opensuse/master/ru/>\n"
@@ -93,111 +93,49 @@ msgstr "Система с зашифрованным LUKS разделом не 
 msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 msgstr "В некоторых случаях Plymouth не отображает запрос пароля. Чтобы избежать этого, добавьте <literal>plymouth.enable=0</literal> к строке параметров ядра. См. также <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 
-#: xml/release-notes.xml:126(title)
-msgid "Technical"
-msgstr "Технические данные"
-
-#. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:131(title)
-msgid "Printing System: Improvements and Incompatible Changes"
-msgstr "Система печати: улучшения и несовместимые изменения"
-
-#: xml/release-notes.xml:134(emphasis)
-msgid "CUPS Version Upgrade to 1.7"
-msgstr "Обновление CUPS до версии 1.7"
-
-#: xml/release-notes.xml:136(para)
-msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
-msgstr "В новой версии CUPS представлены существенные изменения по сравнению с 1.5, что может потребовать ручного вмешательства в настройки"
-
-#: xml/release-notes.xml:139(para)
-msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-msgstr "Стандартным форматом заданий на печать теперь является PDF, а не PS. Таким образом, теперь для традиционных PostScript-принтеров тоже нужен фильтр/драйвер для печати."
-
-#: xml/release-notes.xml:143(para)
-msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\"/> for details."
-msgstr "Подробности см. в статье <ulink url=\"http://en.opensuse.org/Concepts_printing\"/>."
-
-#: xml/release-notes.xml:149(para)
-msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-msgstr "Изменился протокол обнаружения сетевых принтеров. «Родной» метод теперь основан на DNS Service discovery (DNS-SD, т.е. через Avahi). Для обеспечения совместной работы старого и нового протоколов можно использовать службу <literal>cups-browsed</literal> из пакета <literal>cups-filters</literal>. И <literal>cupsd</literal>, и <literal>cups-browsed</literal> должны быть запущены, чтобы «старые» клиенты (в том числе LibreOffice и KDE) могли обнаруживать принтеры."
-
-#: xml/release-notes.xml:163(para)
-msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
-msgstr "Версия по умолчанию протокола IPP увеличена с 1.1 до 2.0. Более старые IPP-сервера типа CUPS 1.3.x (например, в SUSE Linux Enterprise 11) отклоняют запросы по IPP 2.0 с ответом «Bad Request» (см. <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
-
-#: xml/release-notes.xml:169(para)
-msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
-msgstr "Теперь для печати через старые серверы нужно явно указывать версию протокола IPP, добавляя «/version=1.1» к"
-
-#: xml/release-notes.xml:177(para)
-msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
-msgstr "параметру <literal>ServerName</literal> в файле <literal>client.conf</literal> (т.е. <literal>ServerName staryi.server.primer.ru/version=1.1</literal>)"
-
-#: xml/release-notes.xml:182(para)
-msgid "the <literal>CUPS_SERVER</literal> environment variable value"
-msgstr "значению переменной среды окружения  <literal>CUPS_SERVER</literal>"
-
-#: xml/release-notes.xml:186(para)
-msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
-msgstr "значению имени сервера параметра <literal>-h</literal> инструментов командной строки, например, <screen>lpstat -h staryi.server.primer.ru/version=1.1 -p</screen>"
-
-#: xml/release-notes.xml:195(para)
-msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
-msgstr "Некоторые фильтры и фоновые механизмы печати были перенесены из пакета <literal>cups</literal> в пакет <literal>cups-filters</literal>"
-
-#: xml/release-notes.xml:201(para)
-msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
-msgstr "Некоторые параметры настройки были вынесены из <literal>cupsd.conf</literal> в <literal>cups-files.conf</literal> (см. <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519 и <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
-
-#: xml/release-notes.xml:210(para)
-#, fuzzy
-msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"https://github.com/apple/cups/issues/4120\"/> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
-msgstr "Тестовая страница и баннеры CUPS были перенесены из пакета <literal>cups</literal> в пакет <literal>cups-filters</literal> (см. <ulink url=\"https://github.com/apple/cups/issues/4120\"/> и <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
-
 #. bnc#809347
-#: xml/release-notes.xml:232(title)
+#: xml/release-notes.xml:141(title)
 msgid "More Information and Feedback"
 msgstr "Дополнительные сведения и обратная связь"
 
-#: xml/release-notes.xml:236(para)
+#: xml/release-notes.xml:145(para)
 msgid "Read the READMEs on the CDs."
 msgstr "Читать файлы README на CD."
 
-#: xml/release-notes.xml:239(para)
+#: xml/release-notes.xml:148(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "Получить подробный журнал изменений конкретного пакета с помощью RPM:"
 
-#: xml/release-notes.xml:240(screen)
+#: xml/release-notes.xml:149(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;ИМЯ_ФАЙЛА&gt;.rpm"
 
-#: xml/release-notes.xml:241(para)
+#: xml/release-notes.xml:150(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;ИМЯ_ФАЙЛА&gt;. — это имя пакета RPM."
 
-#: xml/release-notes.xml:244(para)
+#: xml/release-notes.xml:153(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "Хронологический журнал всех изменений в обновлённых пакетах приведён в файле <filename>ChangeLog</filename> на верхнем уровне DVD."
 
-#: xml/release-notes.xml:248(para)
+#: xml/release-notes.xml:157(para)
 msgid "For additional or updated documentation, see <ulink url=\"https://doc.opensuse.org/\"/>."
 msgstr "Дополнительная и обновлённая документация доступна на сайте <ulink url=\"https://doc.opensuse.org/\"/>."
 
-#: xml/release-notes.xml:253(para)
+#: xml/release-notes.xml:162(para)
 msgid "For the latest news from openSUSE, see <ulink url=\"https://www.opensuse.org\"/>."
 msgstr "Последние новости об openSUSE на сайте <ulink url=\"https://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:259(para)
+#: xml/release-notes.xml:168(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Все права защищены © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:261(para)
+#: xml/release-notes.xml:170(para)
 msgid "Thanks for using openSUSE."
 msgstr "Спасибо за использование openSUSE."
 
-#: xml/release-notes.xml:262(para)
+#: xml/release-notes.xml:171(para)
 msgid "The openSUSE Team."
 msgstr "Команда openSUSE."
 
@@ -207,6 +145,52 @@ msgid "translator-credits"
 msgstr ""
 "Переводчики:\n"
 "Александр Мелентьев <minton@opensuse.org>, 2008-2017"
+
+#~ msgid "Technical"
+#~ msgstr "Технические данные"
+
+#~ msgid "Printing System: Improvements and Incompatible Changes"
+#~ msgstr "Система печати: улучшения и несовместимые изменения"
+
+#~ msgid "CUPS Version Upgrade to 1.7"
+#~ msgstr "Обновление CUPS до версии 1.7"
+
+#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
+#~ msgstr "В новой версии CUPS представлены существенные изменения по сравнению с 1.5, что может потребовать ручного вмешательства в настройки"
+
+#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+#~ msgstr "Стандартным форматом заданий на печать теперь является PDF, а не PS. Таким образом, теперь для традиционных PostScript-принтеров тоже нужен фильтр/драйвер для печати."
+
+#~ msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\"/> for details."
+#~ msgstr "Подробности см. в статье <ulink url=\"http://en.opensuse.org/Concepts_printing\"/>."
+
+#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+#~ msgstr "Изменился протокол обнаружения сетевых принтеров. «Родной» метод теперь основан на DNS Service discovery (DNS-SD, т.е. через Avahi). Для обеспечения совместной работы старого и нового протоколов можно использовать службу <literal>cups-browsed</literal> из пакета <literal>cups-filters</literal>. И <literal>cupsd</literal>, и <literal>cups-browsed</literal> должны быть запущены, чтобы «старые» клиенты (в том числе LibreOffice и KDE) могли обнаруживать принтеры."
+
+#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
+#~ msgstr "Версия по умолчанию протокола IPP увеличена с 1.1 до 2.0. Более старые IPP-сервера типа CUPS 1.3.x (например, в SUSE Linux Enterprise 11) отклоняют запросы по IPP 2.0 с ответом «Bad Request» (см. <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
+
+#~ msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
+#~ msgstr "Теперь для печати через старые серверы нужно явно указывать версию протокола IPP, добавляя «/version=1.1» к"
+
+#~ msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
+#~ msgstr "параметру <literal>ServerName</literal> в файле <literal>client.conf</literal> (т.е. <literal>ServerName staryi.server.primer.ru/version=1.1</literal>)"
+
+#~ msgid "the <literal>CUPS_SERVER</literal> environment variable value"
+#~ msgstr "значению переменной среды окружения  <literal>CUPS_SERVER</literal>"
+
+#~ msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
+#~ msgstr "значению имени сервера параметра <literal>-h</literal> инструментов командной строки, например, <screen>lpstat -h staryi.server.primer.ru/version=1.1 -p</screen>"
+
+#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
+#~ msgstr "Некоторые фильтры и фоновые механизмы печати были перенесены из пакета <literal>cups</literal> в пакет <literal>cups-filters</literal>"
+
+#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
+#~ msgstr "Некоторые параметры настройки были вынесены из <literal>cupsd.conf</literal> в <literal>cups-files.conf</literal> (см. <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519 и <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
+
+#, fuzzy
+#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"https://github.com/apple/cups/issues/4120\"/> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
+#~ msgstr "Тестовая страница и баннеры CUPS были перенесены из пакета <literal>cups</literal> в пакет <literal>cups-filters</literal> (см. <ulink url=\"https://github.com/apple/cups/issues/4120\"/> и <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 
 #~ msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 #~ msgstr "Дополнительная и обновлённая документация на сайте <ulink url=\"https://activedoc.opensuse.org/\"/>."

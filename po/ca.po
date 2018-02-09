@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2018-02-09 11:12+0100\n"
+"POT-Creation-Date: 2018-02-09 12:03+0100\n"
 "PO-Revision-Date: 2017-11-09 17:30+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-opensuse/master/ca/>\n"
@@ -92,111 +92,49 @@ msgstr "El sistema amb una partició encriptada amb LUKS no arrenca"
 msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 msgstr "En alguns casos, el Plymouth no mostra la demanda de la frase de pas correctament. Per corregir-ho, afegiu <literal>plymouth.enable=0</literal> a la línia d'ordres del nucli. Vegeu també l'enllaç <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 
-#: xml/release-notes.xml:126(title)
-msgid "Technical"
-msgstr "Tècnic"
-
-#. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:131(title)
-msgid "Printing System: Improvements and Incompatible Changes"
-msgstr "Sistema d'impressió: millores i canvis incompatibles"
-
-#: xml/release-notes.xml:134(emphasis)
-msgid "CUPS Version Upgrade to 1.7"
-msgstr "Actualització del CUPS a la versió 1.7"
-
-#: xml/release-notes.xml:136(para)
-msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
-msgstr "La nova versió de CUPS ha introduït alguns canvis importants en comparació la 1.5, cosa que pot requerir ajustaments manuals de la configuració"
-
-#: xml/release-notes.xml:139(para)
-msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-msgstr "El PDF és ara el format de tasca d'impressió estàndard en lloc de PS. Per tant, les impressores PostScript tradicionals ara també necessiten un controlador de filtre per a la impressió."
-
-#: xml/release-notes.xml:143(para)
-msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\"/> for details."
-msgstr "Per a més detalls, vegeu <ulink url=\"http://en.opensuse.org/Concepts_printing\"/>."
-
-#: xml/release-notes.xml:149(para)
-msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-msgstr "El protocol de detecció d'impressores de xarxa ha canviat. El mètode natiu per descobrir impressores de xarxa es basa ara en el descobriment de servei DNS (DNS-SD, és a dir, per mitjà d'Avahi). El servei <literal>cups-browsed</literal> del paquet <literal>cups-filters</literal> es pot usar per estendre un pont sobre els protocols vells i nous. Tant  <literal>cupsd</literal> com <literal>cups-browsed</literal> s'han d'executar perquè els clients de \"llegat\" descobreixin impressores (això inclou el LibreOffice i el KDE)."
-
-#: xml/release-notes.xml:163(para)
-msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
-msgstr "La versió per defecte del protocol IPP ha passat de la 1.1 a la 2.0. Les versions anteriors d'IPP com ara el CUPS 1.3.x (per exemple de SUSE Linux Enterprise 11) rebutgen les sol·licituds IPP 2.0 amb un \"Bad Request\" (vegeu <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
-
-#: xml/release-notes.xml:169(para)
-msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
-msgstr "Per ser capaç d'imprimir als servidors antics, la versió del protocol IPP s'ha d'especificar explícitament afegint \"/version=1.1\" a cada un"
-
-#: xml/release-notes.xml:177(para)
-msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
-msgstr "els paràmetres de <literal>ServerName</literal> a <literal>client.conf</literal> (p. e., <literal>ServerName older.server.example.com/version=1.1</literal>)"
-
-#: xml/release-notes.xml:182(para)
-msgid "the <literal>CUPS_SERVER</literal> environment variable value"
-msgstr "el valor de la variable d'entorn <literal>CUPS_SERVER</literal>"
-
-#: xml/release-notes.xml:186(para)
-msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
-msgstr "el valor del nom del servidor de l'opció <literal>-h</literal> de les eines de línia d'ordres; per exemple, <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
-
-#: xml/release-notes.xml:195(para)
-msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
-msgstr "Alguns filtres d'impressió i rerefons s'han mogut del paquet <literal>cups</literal> al paquet <literal>cups-filters</literal>"
-
-#: xml/release-notes.xml:201(para)
-msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
-msgstr "Algunes directives de configuració s'han separat de <literal>cupsd.conf</literal> a <literal>cups-files.conf</literal> (vegeu <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, i <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
-
-#: xml/release-notes.xml:210(para)
-#, fuzzy
-msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"https://github.com/apple/cups/issues/4120\"/> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
-msgstr "Els bàners i la pàgina de prova de CUPS s'han desplaçat del paquet <literal>cups</literal> al paquet <literal>cups-filters</literal> (vegeu <ulink url=\"https://github.com/apple/cups/issues/4120\"/> i <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
-
 #. bnc#809347
-#: xml/release-notes.xml:232(title)
+#: xml/release-notes.xml:141(title)
 msgid "More Information and Feedback"
 msgstr "Més informació i informació de retorn"
 
-#: xml/release-notes.xml:236(para)
+#: xml/release-notes.xml:145(para)
 msgid "Read the READMEs on the CDs."
 msgstr "Llegiu els README dels CD."
 
-#: xml/release-notes.xml:239(para)
+#: xml/release-notes.xml:148(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "Obteniu informació sobre el registre de canvis sobre un paquet concret de l'RPM:"
 
-#: xml/release-notes.xml:240(screen)
+#: xml/release-notes.xml:149(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;NOM_DEL_FITXER&gt;.rpm"
 
-#: xml/release-notes.xml:241(para)
+#: xml/release-notes.xml:150(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;FILENAME&gt;. és el nom de l'RPM."
 
-#: xml/release-notes.xml:244(para)
+#: xml/release-notes.xml:153(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "Comproveu el fitxer <filename>ChangeLog</filename> al primer nivell del DVD per veure el registre cronològic de tots els canvis fets als paquets actualitzats."
 
-#: xml/release-notes.xml:248(para)
+#: xml/release-notes.xml:157(para)
 msgid "For additional or updated documentation, see <ulink url=\"https://doc.opensuse.org/\"/>."
 msgstr "Per a informació addicional o documentació actualitzada, vegeu <ulink url=\"https://doc.opensuse.org/\"/>."
 
-#: xml/release-notes.xml:253(para)
+#: xml/release-notes.xml:162(para)
 msgid "For the latest news from openSUSE, see <ulink url=\"https://www.opensuse.org\"/>."
 msgstr "Per a les últimes notícies d'openSUSE, vegeu <ulink url=\"https://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:259(para)
+#: xml/release-notes.xml:168(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 
-#: xml/release-notes.xml:261(para)
+#: xml/release-notes.xml:170(para)
 msgid "Thanks for using openSUSE."
 msgstr "Gràcies per usar openSUSE."
 
-#: xml/release-notes.xml:262(para)
+#: xml/release-notes.xml:171(para)
 msgid "The openSUSE Team."
 msgstr "L'equip d'openSUSE i l'equip de traducció al català: opensusecatala@gmail.com."
 
@@ -204,6 +142,52 @@ msgstr "L'equip d'openSUSE i l'equip de traducció al català: opensusecatala@gm
 #: xml/release-notes.xml:0(None)
 msgid "translator-credits"
 msgstr "Equip de traducció d'openSUSE al català: opensusecatala@gmail.com"
+
+#~ msgid "Technical"
+#~ msgstr "Tècnic"
+
+#~ msgid "Printing System: Improvements and Incompatible Changes"
+#~ msgstr "Sistema d'impressió: millores i canvis incompatibles"
+
+#~ msgid "CUPS Version Upgrade to 1.7"
+#~ msgstr "Actualització del CUPS a la versió 1.7"
+
+#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
+#~ msgstr "La nova versió de CUPS ha introduït alguns canvis importants en comparació la 1.5, cosa que pot requerir ajustaments manuals de la configuració"
+
+#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+#~ msgstr "El PDF és ara el format de tasca d'impressió estàndard en lloc de PS. Per tant, les impressores PostScript tradicionals ara també necessiten un controlador de filtre per a la impressió."
+
+#~ msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\"/> for details."
+#~ msgstr "Per a més detalls, vegeu <ulink url=\"http://en.opensuse.org/Concepts_printing\"/>."
+
+#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+#~ msgstr "El protocol de detecció d'impressores de xarxa ha canviat. El mètode natiu per descobrir impressores de xarxa es basa ara en el descobriment de servei DNS (DNS-SD, és a dir, per mitjà d'Avahi). El servei <literal>cups-browsed</literal> del paquet <literal>cups-filters</literal> es pot usar per estendre un pont sobre els protocols vells i nous. Tant  <literal>cupsd</literal> com <literal>cups-browsed</literal> s'han d'executar perquè els clients de \"llegat\" descobreixin impressores (això inclou el LibreOffice i el KDE)."
+
+#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
+#~ msgstr "La versió per defecte del protocol IPP ha passat de la 1.1 a la 2.0. Les versions anteriors d'IPP com ara el CUPS 1.3.x (per exemple de SUSE Linux Enterprise 11) rebutgen les sol·licituds IPP 2.0 amb un \"Bad Request\" (vegeu <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
+
+#~ msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
+#~ msgstr "Per ser capaç d'imprimir als servidors antics, la versió del protocol IPP s'ha d'especificar explícitament afegint \"/version=1.1\" a cada un"
+
+#~ msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
+#~ msgstr "els paràmetres de <literal>ServerName</literal> a <literal>client.conf</literal> (p. e., <literal>ServerName older.server.example.com/version=1.1</literal>)"
+
+#~ msgid "the <literal>CUPS_SERVER</literal> environment variable value"
+#~ msgstr "el valor de la variable d'entorn <literal>CUPS_SERVER</literal>"
+
+#~ msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
+#~ msgstr "el valor del nom del servidor de l'opció <literal>-h</literal> de les eines de línia d'ordres; per exemple, <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
+
+#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
+#~ msgstr "Alguns filtres d'impressió i rerefons s'han mogut del paquet <literal>cups</literal> al paquet <literal>cups-filters</literal>"
+
+#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
+#~ msgstr "Algunes directives de configuració s'han separat de <literal>cupsd.conf</literal> a <literal>cups-files.conf</literal> (vegeu <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, i <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
+
+#, fuzzy
+#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"https://github.com/apple/cups/issues/4120\"/> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
+#~ msgstr "Els bàners i la pàgina de prova de CUPS s'han desplaçat del paquet <literal>cups</literal> al paquet <literal>cups-filters</literal> (vegeu <ulink url=\"https://github.com/apple/cups/issues/4120\"/> i <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
 
 #~ msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 #~ msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> conté documentació addicional o actualitzada."

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2018-02-09 11:12+0100\n"
+"POT-Creation-Date: 2018-02-09 12:03+0100\n"
 "PO-Revision-Date: 2017-08-09 14:48+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-notes-opensuse/master/zh_TW/>\n"
@@ -87,115 +87,49 @@ msgstr "使用 LUKS 加密分割區的系統無法開機"
 msgid "In some cases, Plymouth does not display the passphrase prompt properly. To fix this, add <literal>plymouth.enable=0</literal> to the kernel command line. See also <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 msgstr "在一些情況下，Plymouth 無法正常顯示密碼輸入提示。要修正這個問題，請在核心開機選項加入 <literal>plymouth.enable=0</literal>。請詳見 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/> 的說明。"
 
-#: xml/release-notes.xml:126(title)
-msgid "Technical"
-msgstr "技術議題"
-
-#. sort_key="None"; non-rn-fate-cats="";
-#: xml/release-notes.xml:131(title)
-msgid "Printing System: Improvements and Incompatible Changes"
-msgstr "列印系統：改進以及不相容的變動"
-
-#: xml/release-notes.xml:134(emphasis)
-msgid "CUPS Version Upgrade to 1.7"
-msgstr "CUPS 版本昇級至 1.7"
-
-#: xml/release-notes.xml:136(para)
-msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
-msgstr "新版的 CUPS，相較於 1.5 版，導入了一些重大改變，因此需要手動調整設定。"
-
-#: xml/release-notes.xml:139(para)
-msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
-msgstr "PDF 取代 PS 成為標準的列印工作格式。故傳統的 PostScript 印表機現在需要一個過濾器 (filter) 驅動程式才能進行列印。"
-
-#: xml/release-notes.xml:143(para)
-#, fuzzy
-msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\"/> for details."
-msgstr "欲了解更多資訊，請見 SUSE 維基頁面 \"Concepts printing\" (<ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>)。"
-
-#: xml/release-notes.xml:149(para)
-#, fuzzy
-msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
-msgstr "網路印表機探查通訊協定已經改變為基於 DNS Service discovery 協定 (DNS-SD，透過 Avahi 提供)。<literal>cups-filters</literal> 套件提供的 <literal>cups-browsed</literal> 服務可用來橋接舊的與新的通訊協定。<literal>cupsd</literal> 與 <literal>cups-browsed</literal> 需要一起運作才能讓舊的客戶端 (包括 LibreOffice 與 KDE) 能夠發現網路印表機。"
-
-#: xml/release-notes.xml:163(para)
-#, fuzzy
-msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
-msgstr "IPP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 的連線要求，並回傳 \\\"Bad Request\\\" (請見 <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)。"
-
-#: xml/release-notes.xml:169(para)
-msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
-msgstr "要能夠使用舊印表機來列印，IPP 通訊協定版本必須要明確指定。將 '/version=1.1' 字串附加在"
-
-#: xml/release-notes.xml:177(para)
-msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
-msgstr "<literal>client.conf</literal> 設定檔中的 <literal>ServerName</literal> 設定 (例如 <literal>ServerName older.server.example.com/version=1.1</literal>)"
-
-#: xml/release-notes.xml:182(para)
-msgid "the <literal>CUPS_SERVER</literal> environment variable value"
-msgstr "環境變數 <literal>CUPS_SERVER</literal>"
-
-#: xml/release-notes.xml:186(para)
-msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
-msgstr "在命令列工具中，以 <literal>-h</literal> 選項指定的伺服器名稱。例如 <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
-
-#: xml/release-notes.xml:195(para)
-msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
-msgstr "一些列印過濾器和後端已從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件"
-
-#: xml/release-notes.xml:201(para)
-#, fuzzy
-msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
-msgstr "一些設定指令已經自 <literal>cupsd.conf</literal> 分離出來，並移到 <literal>cups-files.conf</literal> 設定檔中。請詳見 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> 的說明。"
-
-#: xml/release-notes.xml:210(para)
-#, fuzzy
-msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"https://github.com/apple/cups/issues/4120\"/> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
-msgstr "CUPS banner 頁面以及測試頁面已從 <literal>cups</literal> 套件移到 <literal>cups-filters</literal> 套件 (請見 <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> 與 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)。"
-
 #. bnc#809347
-#: xml/release-notes.xml:232(title)
+#: xml/release-notes.xml:141(title)
 msgid "More Information and Feedback"
 msgstr "更多資訊與反饋"
 
-#: xml/release-notes.xml:236(para)
+#: xml/release-notes.xml:145(para)
 msgid "Read the READMEs on the CDs."
 msgstr "閱讀安裝 CD 中的 README 檔案。"
 
-#: xml/release-notes.xml:239(para)
+#: xml/release-notes.xml:148(para)
 msgid "Get detailed changelog information about a particular package from the RPM:"
 msgstr "從 RPM 獲取某個套件詳細的變動歷史資訊："
 
-#: xml/release-notes.xml:240(screen)
+#: xml/release-notes.xml:149(screen)
 #, no-wrap
 msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
 
-#: xml/release-notes.xml:241(para)
+#: xml/release-notes.xml:150(para)
 msgid "&lt;FILENAME&gt;. is the name of the RPM."
 msgstr "&lt;FILENAME&gt; 是該套件的名稱。"
 
-#: xml/release-notes.xml:244(para)
+#: xml/release-notes.xml:153(para)
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the DVD for a chronological log of all changes made to the updated packages."
 msgstr "請查看在安裝 DVD 最上層目錄下的 <filename>ChangeLog</filename> 檔案以了解所更新套件的變動歷史（按時間先後排序）。"
 
-#: xml/release-notes.xml:248(para)
+#: xml/release-notes.xml:157(para)
 msgid "For additional or updated documentation, see <ulink url=\"https://doc.opensuse.org/\"/>."
 msgstr ""
 
-#: xml/release-notes.xml:253(para)
+#: xml/release-notes.xml:162(para)
 msgid "For the latest news from openSUSE, see <ulink url=\"https://www.opensuse.org\"/>."
 msgstr ""
 
-#: xml/release-notes.xml:259(para)
+#: xml/release-notes.xml:168(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr ""
 
-#: xml/release-notes.xml:261(para)
+#: xml/release-notes.xml:170(para)
 msgid "Thanks for using openSUSE."
 msgstr "感謝使用 openSUSE。"
 
-#: xml/release-notes.xml:262(para)
+#: xml/release-notes.xml:171(para)
 msgid "The openSUSE Team."
 msgstr "openSUSE 團隊"
 
@@ -208,6 +142,56 @@ msgstr ""
 "Joe Man <trmetal@yahoo.com.hk>, 2001\n"
 "Ray Chen <swyear@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012\n"
 "Ramax Lo <ramaxlo@gmail.com>, 2013, 2014, 2015, 2016, 2017"
+
+#~ msgid "Technical"
+#~ msgstr "技術議題"
+
+#~ msgid "Printing System: Improvements and Incompatible Changes"
+#~ msgstr "列印系統：改進以及不相容的變動"
+
+#~ msgid "CUPS Version Upgrade to 1.7"
+#~ msgstr "CUPS 版本昇級至 1.7"
+
+#~ msgid "The new CUPS version introduced some major changes compared to 1.5 that may require manual configuration adjustments"
+#~ msgstr "新版的 CUPS，相較於 1.5 版，導入了一些重大改變，因此需要手動調整設定。"
+
+#~ msgid "PDF is now the standard print job format rather than PS. Therefore traditional PostScript printers now also need a filter driver for printing."
+#~ msgstr "PDF 取代 PS 成為標準的列印工作格式。故傳統的 PostScript 印表機現在需要一個過濾器 (filter) 驅動程式才能進行列印。"
+
+#, fuzzy
+#~ msgid "See <ulink url=\"http://en.opensuse.org/Concepts_printing\"/> for details."
+#~ msgstr "欲了解更多資訊，請見 SUSE 維基頁面 \"Concepts printing\" (<ulink url=\"http://en.opensuse.org/Concepts_printing\">http://en.opensuse.org/Concepts_printing</ulink>)。"
+
+#, fuzzy
+#~ msgid "The network printer discovery protocol has changed. The native method to discover network printers is now based on DNS Service discovery (DNS-SD, that is via Avahi). The <literal>cups-browsed</literal> service from the <literal>cups-filters</literal> package can be used to bridge old and new protocols. Both <literal>cupsd</literal> and <literal>cups-browsed</literal> need to run to make \"legacy\" clients discover printers (that includes LibreOffice and KDE)."
+#~ msgstr "網路印表機探查通訊協定已經改變為基於 DNS Service discovery 協定 (DNS-SD，透過 Avahi 提供)。<literal>cups-filters</literal> 套件提供的 <literal>cups-browsed</literal> 服務可用來橋接舊的與新的通訊協定。<literal>cupsd</literal> 與 <literal>cups-browsed</literal> 需要一起運作才能讓舊的客戶端 (包括 LibreOffice 與 KDE) 能夠發現網路印表機。"
+
+#, fuzzy
+#~ msgid "The IPP protocol default version changed from 1.1 to 2.0. Older IPP servers like CUPS 1.3.x (for example in SUSE Linux Enterprise 11) reject IPP 2.0 requests with \"Bad Request\" (see <ulink url=\"https://github.com/apple/cups/issues/4231\"/>)."
+#~ msgstr "IPP 通訊協定預設版本自 1.1 昇級到 2.0。舊的 IPP 伺服器 (例如 SLE11 使用的 CUPS 1.3.x)，會拒絕 IPP 2.0 的連線要求，並回傳 \\\"Bad Request\\\" (請見 <ulink url=\"http://www.cups.org/str.php?L4231\">http://www.cups.org/str.php?L4231</ulink>)。"
+
+#~ msgid "To be able to print to old servers the IPP protocol version must be specified explictly by appending '/version=1.1' to either"
+#~ msgstr "要能夠使用舊印表機來列印，IPP 通訊協定版本必須要明確指定。將 '/version=1.1' 字串附加在"
+
+#~ msgid "the <literal>ServerName</literal> settings in <literal>client.conf</literal> (e.g., <literal>ServerName older.server.example.com/version=1.1</literal>)"
+#~ msgstr "<literal>client.conf</literal> 設定檔中的 <literal>ServerName</literal> 設定 (例如 <literal>ServerName older.server.example.com/version=1.1</literal>)"
+
+#~ msgid "the <literal>CUPS_SERVER</literal> environment variable value"
+#~ msgstr "環境變數 <literal>CUPS_SERVER</literal>"
+
+#~ msgid "the server name value of the <literal>-h</literal> option of the command line tools e.g., <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
+#~ msgstr "在命令列工具中，以 <literal>-h</literal> 選項指定的伺服器名稱。例如 <screen>lpstat -h older.server.example.com/version=1.1 -p</screen>"
+
+#~ msgid "Some printing filters and back-ends were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package"
+#~ msgstr "一些列印過濾器和後端已從 <literal>cups</literal> 移到 <literal>cups-filters</literal> 套件"
+
+#, fuzzy
+#~ msgid "Some configuration directives were split from <literal>cupsd.conf</literal> into <literal>cups-files.conf</literal> (see <ulink url=\"https://github.com/apple/cups/issues/4223\"/>, CVE-2012-5519, and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\"/>)."
+#~ msgstr "一些設定指令已經自 <literal>cupsd.conf</literal> 分離出來，並移到 <literal>cups-files.conf</literal> 設定檔中。請詳見 <ulink url=\"http://www.cups.org/str.php?L4223\">http://www.cups.org/str.php?L4223</ulink>、CVE-2012-5519，以及 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=789566\">https://bugzilla.opensuse.org/show_bug.cgi?id=789566</ulink> 的說明。"
+
+#, fuzzy
+#~ msgid "CUPS banners and the CUPS test page were moved from the <literal>cups</literal> package to the <literal>cups-filters</literal> package (see <ulink url=\"https://github.com/apple/cups/issues/4120\"/> and <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\"/>)."
+#~ msgstr "CUPS banner 頁面以及測試頁面已從 <literal>cups</literal> 套件移到 <literal>cups-filters</literal> 套件 (請見 <ulink url=\"http://www.cups.org/str.php?L4120\">http://www.cups.org/str.php?L4120</ulink> 與 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>)。"
 
 #~ msgid "<ulink url=\"https://activedoc.opensuse.org/\"/> contains additional or updated documentation."
 #~ msgstr "<ulink url=\"https://activedoc.opensuse.org/\"/> 包含了額外或是更新的文件。"
