@@ -148,19 +148,22 @@ output_package() {
     for i in "$DESTINATION"/*.html ; do
         test -L "$i" -a ! -f "$i" && $DO_ECHO rm $VERBOSE "$i"
     done
-    REL_SOURCE=''
-    for i in en en_US en_GB; do
-	if [ -f "$DESTINATION/RELEASE-NOTES.$i.html" ]; then
-	    REL_SOURCE="$DESTINATION/RELEASE-NOTES.$i.html"
-	    break
-	fi
+    pushd "$DESTINATION" 1>/dev/null
+    for i in RELEASE-NOTES.*.html; do
+	l="${i%.html}"
+	l="${l##*.}"
+	# use cp as symlinks do not work properly - see bnc #612554 for details (mod_proxy)
+	$DO_ECHO cp -f $VERBOSE "$i" index.html."$l"
     done
-    if [ -n "$REL_SOURCE" ]; then
-        pushd "$DESTINATION" 1>/dev/null
-        # use cp as symlinks do not work properly - see bnc #612554 for details (mod_proxy)
-        $DO_ECHO cp -f $VERBOSE $REL_SOURCE index.html
-        popd 1>/dev/null
+    if [ ! -e index.html.en ]; then
+	for i in en_US en_GB; do
+	    if [ -e index.html.$i ]; then
+		$DO_ECHO mv -f $VERBOSE index.html.$i index.html.en
+		break
+	    fi
+	done
     fi
+    popd 1>/dev/null
     if [ -d $TMPDIR/usr/share/doc/release-notes/*/static ]; then
         $DO_ECHO cp -a $VERBOSE "$TMPDIR"/usr/share/doc/release-notes/*/static "$DESTINATION"/
     fi
