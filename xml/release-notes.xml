@@ -241,6 +241,56 @@
 
   </sect2>
 
+  <sect2 xml:id="sec.general.apparmor-restart">
+   <!-- boo#1074097 -->
+   <title><command>systemctl stop apparmor</command> Does Not Work</title>
+   <para>
+    In the past, there could be confusion over the difference between how the
+    very similarly named <command>systemctl</command> subcommands
+    <literal>reload</literal> and <literal>restart</literal> worked for
+    AppArmor:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      <command>systemctl reload apparmor</command> properly reloaded all
+      AppArmor profiles. (It was and continues to be the recommended way of
+      reloading AppArmor profiles.)
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <command>systemctl restart apparmor</command> meant that
+      AppArmor would stop, thereby unloading all AppArmor profiles and then
+      restart which left all existing processes unconfined. Only newly
+      started processes would then be confined again.
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    Unfortunately, <systemitem>systemd</systemitem> does
+    not provide a solution within its unit file format for the issue posed
+    by the <literal>restart</literal> scenario.
+   </para>
+   <para>
+    Starting with AppArmor 2.12, the command
+    <command>systemctl stop apparmor</command> will not work.
+    As a consequence, <command>systemctl restart apparmor</command> will now
+    correctly reload AppArmor profiles.
+   </para>
+   <para>
+    To unload all AppArmor profiles, use the new command
+    <command>aa-teardown</command> instead which matches the previous
+    behavior of <command>systemctl stop apparmor</command>.
+   </para>
+   <para>
+    For more information, see
+    <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=996520"/>
+    and
+    <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=853019"/>.
+   </para>
+  </sect2>
+
   <!--  boo#1059438, boo#1062550 -->
   <sect2 xml:id="sec.general.compose-key">
    <title>No Default Compose Key Combination</title>
