@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2017-12-11 11:16+0100\n"
+"POT-Creation-Date: 2018-02-14 19:42+0100\n"
 "PO-Revision-Date: 2017-12-14 21:02+0000\n"
 "Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
@@ -306,10 +306,10 @@ msgid ""
 "default</package> first, before you can manually install Nvidia drivers "
 "using the <filename>.run</filename> shell script archive:"
 msgstr ""
-"Auf openSUSE Leap 15.0 müssen Sie zuerst das Paket <package>drm-kmp-"
-"default</package> deinstallieren, bevor Sie manuell den Nvidia-Treiber unter "
-"der Verwendung des <filename>.run</filename> Shellskript-Archivs "
-"installieren können:"
+"Auf openSUSE Leap 15.0 müssen Sie zuerst das Paket <package>drm-kmp-default</"
+"package> deinstallieren, bevor Sie manuell den Nvidia-Treiber unter der "
+"Verwendung des <filename>.run</filename> Shellskript-Archivs installieren "
+"können:"
 
 #: xml/release-notes.xml:173(screen)
 #, no-wrap
@@ -419,11 +419,74 @@ msgstr ""
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
+#. boo#1074097
 #: xml/release-notes.xml:246(title)
-msgid "No Default Compose Key Combination"
+msgid "<command>systemctl stop apparmor</command> Does Not Work"
 msgstr ""
 
 #: xml/release-notes.xml:247(para)
+msgid ""
+"In the past, there could be confusion over the difference between how the "
+"very similarly named <command>systemctl</command> subcommands "
+"<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
+msgstr ""
+
+#: xml/release-notes.xml:255(para)
+msgid ""
+"<command>systemctl reload apparmor</command> properly reloaded all AppArmor "
+"profiles. (It was and continues to be the recommended way of reloading "
+"AppArmor profiles.)"
+msgstr ""
+
+#: xml/release-notes.xml:262(para)
+msgid ""
+"<command>systemctl restart apparmor</command> meant that AppArmor would "
+"stop, thereby unloading all AppArmor profiles and then restart which left "
+"all existing processes unconfined. Only newly started processes would then "
+"be confined again."
+msgstr ""
+
+#: xml/release-notes.xml:270(para)
+msgid ""
+"Unfortunately, <systemitem>systemd</systemitem> does not provide a solution "
+"within its unit file format for the issue posed by the <literal>restart</"
+"literal> scenario."
+msgstr ""
+
+#: xml/release-notes.xml:275(para)
+msgid ""
+"Starting with AppArmor 2.12, the command <command>systemctl stop apparmor</"
+"command> will not work. As a consequence, <command>systemctl restart "
+"apparmor</command> will now correctly reload AppArmor profiles."
+msgstr ""
+
+#: xml/release-notes.xml:281(para)
+msgid ""
+"To unload all AppArmor profiles, use the new command <command>aa-teardown</"
+"command> instead which matches the previous behavior of <command>systemctl "
+"stop apparmor</command>."
+msgstr ""
+
+#: xml/release-notes.xml:286(para)
+#, fuzzy
+#| msgid ""
+#| "For more information, see the bug reports at <link href=\"https://bugs."
+#| "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://"
+#| "bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/>."
+msgid ""
+"For more information, see <link href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=996520\"/> and <link href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=853019\"/>."
+msgstr ""
+"Weitere Informationen finden Sie in den Fehlerberichten unter <link href="
+"\"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> und <link href="
+"\"https://bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/>."
+
+#: xml/release-notes.xml:296(title)
+msgid "No Default Compose Key Combination"
+msgstr ""
+
+#: xml/release-notes.xml:297(para)
 msgid ""
 "In previous versions of openSUSE, the compose key combination allowed typing "
 "characters that were not part of the regular keyboard layout. For example, "
@@ -432,20 +495,20 @@ msgid ""
 "<keycap>a</keycap> twice."
 msgstr ""
 
-#: xml/release-notes.xml:254(para)
+#: xml/release-notes.xml:304(para)
 msgid ""
 "In openSUSE Leap 15.0, there is no longer a predefined compose key "
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
 
-#: xml/release-notes.xml:262(para)
+#: xml/release-notes.xml:312(para)
 msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
 
-#: xml/release-notes.xml:266(screen)
+#: xml/release-notes.xml:316(screen)
 #, no-wrap
 msgid ""
 "[...]\n"
@@ -458,29 +521,29 @@ msgid ""
 "[...]"
 msgstr ""
 
-#: xml/release-notes.xml:274(para)
+#: xml/release-notes.xml:324(para)
 msgid ""
 "To uncomment the example code, remove the <literal>!</literal> characters at "
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
 
-#: xml/release-notes.xml:282(para)
+#: xml/release-notes.xml:332(para)
 msgid ""
 "To define a user-specific compose key combination, use your desktop's "
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
 
-#: xml/release-notes.xml:288(replaceable)
+#: xml/release-notes.xml:338(replaceable)
 msgid "[...]"
 msgstr ""
 
-#: xml/release-notes.xml:288(replaceable)
+#: xml/release-notes.xml:338(replaceable)
 msgid "COMPOSE_KEY"
 msgstr ""
 
-#: xml/release-notes.xml:287(screen)
+#: xml/release-notes.xml:337(screen)
 #, no-wrap
 msgid ""
 "\n"
@@ -488,7 +551,7 @@ msgid ""
 "     "
 msgstr ""
 
-#: xml/release-notes.xml:290(para)
+#: xml/release-notes.xml:340(para)
 msgid ""
 "For the variable <replaceable>COMPOSE_KEY</replaceable>, use your preferred "
 "character, for example <literal>ralt</literal>, <literal>lwin</literal>, "
@@ -496,17 +559,17 @@ msgid ""
 "or <literal>caps</literal>."
 msgstr ""
 
-#: xml/release-notes.xml:299(para)
+#: xml/release-notes.xml:349(para)
 msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
 
-#: xml/release-notes.xml:308(title)
+#: xml/release-notes.xml:358(title)
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "Keine Bildschirmsperre bei Verwendung der GNOME-Shell, aber ohne GDM"
 
-#: xml/release-notes.xml:309(para)
+#: xml/release-notes.xml:359(para)
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -516,7 +579,7 @@ msgstr ""
 "als GDM, wie SDDM oder LightDM, kann der Bildschirm nicht gesperrt werden "
 "und wird sich nicht automatisch abschalten."
 
-#: xml/release-notes.xml:314(para)
+#: xml/release-notes.xml:364(para)
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -524,12 +587,12 @@ msgstr ""
 "Um den Bildschirm der GNOME-Shell sperren zu können aktivieren Sie den GDM "
 "als ihren Login-Manager:"
 
-#: xml/release-notes.xml:320(para)
+#: xml/release-notes.xml:370(para)
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr ""
 "Gehen Sie sicher, dass das Paket <package>gdm</package> installiert ist."
 
-#: xml/release-notes.xml:325(para)
+#: xml/release-notes.xml:375(para)
 msgid ""
 "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
 "guimenu></menuchoice>."
@@ -537,7 +600,7 @@ msgstr ""
 "Öffnen Sie YaST und daraus öffnen Sie <menuchoice><guimenu>/etc/sysconfig "
 "Manager</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:331(para)
+#: xml/release-notes.xml:381(para)
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -545,7 +608,7 @@ msgstr ""
 "Navigieren Sie zu <menuchoice><guimenu>Desktop</guimenu><guimenu>Display "
 "manager</guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 
-#: xml/release-notes.xml:337(para)
+#: xml/release-notes.xml:387(para)
 msgid ""
 "In the text box, specify <literal>gdm</literal>. To save, click <guimenu>OK</"
 "guimenu>."
@@ -553,15 +616,15 @@ msgstr ""
 "In der Text-Box geben Sie <literal>gdm</literal> an. Um zu speichern klicken "
 "Sie <guimenu>OK</guimenu>."
 
-#: xml/release-notes.xml:343(para)
+#: xml/release-notes.xml:393(para)
 msgid "Reboot."
 msgstr "Neustart."
 
-#: xml/release-notes.xml:351(title)
+#: xml/release-notes.xml:401(title)
 msgid "Playing MP3 Media Files"
 msgstr "Abspielen Von MP3-Dateien"
 
-#: xml/release-notes.xml:352(para)
+#: xml/release-notes.xml:402(para)
 msgid ""
 "The codecs to play MP3 media files are shipped as part of the standard "
 "repository."
@@ -569,7 +632,7 @@ msgstr ""
 "Die Codecs MP3-Dateien abzuspielen werden als Teil des Standard-Repositorys "
 "mitgeliefert."
 
-#: xml/release-notes.xml:356(para)
+#: xml/release-notes.xml:406(para)
 msgid ""
 "To use this decoder in gstreamer-based applications and frameworks, such as "
 "Rhythmbox or Totem, install the package <literal>gstreamer-plugins-ugly</"
@@ -579,11 +642,11 @@ msgstr ""
 "verwenden, wie z.B. Rhythmbox oder Totem, installieren Sie das Paket "
 "<literal>gstreamer-plugins-ugly</literal>."
 
-#: xml/release-notes.xml:364(title)
+#: xml/release-notes.xml:414(title)
 msgid "No Support for Type-1 Fonts in LibreOffice"
 msgstr "Keine Unterstützung von Schriften der Art Type-1 in LibreOffice"
 
-#: xml/release-notes.xml:365(para)
+#: xml/release-notes.xml:415(para)
 msgid ""
 "LibreOffice 5.3 and higher do not support legacy Type-1 fonts (file "
 "extensions <filename>.afm</filename> and <filename>.pfb</filename>) anymore. "
@@ -592,13 +655,13 @@ msgid ""
 "(<filename>.otf</filename>) formats."
 msgstr ""
 "LibreOffice 5.3 und höher unterstützt nicht länger hinterlassene Schriften "
-"der Art Type-1 (Dateierweiterungen <filename>.afm</filename> und "
-"<filename>.pfb</filename>). Die meisten Benutzer sollten nicht davon "
-"betroffen sein, so lange momentane Schriften entweder im Format TrueType "
-"(<filename>.ttf</filename>) oder in Formaten OpenType "
-"(<filename>.otf</filename>) verfügbar sind."
+"der Art Type-1 (Dateierweiterungen <filename>.afm</filename> und <filename>."
+"pfb</filename>). Die meisten Benutzer sollten nicht davon betroffen sein, so "
+"lange momentane Schriften entweder im Format TrueType (<filename>.ttf</"
+"filename>) oder in Formaten OpenType (<filename>.otf</filename>) verfügbar "
+"sind."
 
-#: xml/release-notes.xml:372(para)
+#: xml/release-notes.xml:422(para)
 msgid ""
 "If you are affected by this, convert Type-1 fonts to a supported format, "
 "such as TrueType and then use the converted fonts. Conversion is possible "
@@ -613,15 +676,15 @@ msgstr ""
 "Schriftkonversionen skriptgestützt durchführen können, finden Sie unter "
 "<link href=\"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
 
-#: xml/release-notes.xml:406(title)
+#: xml/release-notes.xml:456(title)
 msgid "More Information and Feedback"
 msgstr "Weitere Informationen und Rückmeldungen"
 
-#: xml/release-notes.xml:409(para)
+#: xml/release-notes.xml:459(para)
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Lesen Sie die <filename>README</filename>-Dokumente auf dem Medium."
 
-#: xml/release-notes.xml:414(para)
+#: xml/release-notes.xml:464(para)
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -629,22 +692,22 @@ msgstr ""
 "Eine detaillierte Liste der Änderungen an einem bestimmten Paket erhalten "
 "Sie aus dem RPM:"
 
-#: xml/release-notes.xml:418(replaceable)
+#: xml/release-notes.xml:468(replaceable)
 msgid "FILENAME"
 msgstr "DATEINAME"
 
-#: xml/release-notes.xml:418(screen)
+#: xml/release-notes.xml:468(screen)
 #, no-wrap
 msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
-#: xml/release-notes.xml:419(para)
+#: xml/release-notes.xml:469(para)
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Ersetzen Sie <replaceable>DATEINAME</replaceable> durch den Namen des "
 "gewünschten RPMs."
 
-#: xml/release-notes.xml:424(para)
+#: xml/release-notes.xml:474(para)
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -653,7 +716,7 @@ msgstr ""
 "finden Sie eine chronologische Liste aller Änderungen, die an den "
 "aktualisierten Paketen gemacht wurden."
 
-#: xml/release-notes.xml:430(para)
+#: xml/release-notes.xml:480(para)
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -661,7 +724,7 @@ msgstr ""
 "Weitere Information finden Sie im Verzeichnis <filename>docu</filename> auf "
 "dem Medium."
 
-#: xml/release-notes.xml:436(para)
+#: xml/release-notes.xml:486(para)
 msgid ""
 "For additional or updated documentation, see <link href=\"https://doc."
 "opensuse.org/\"/>."
@@ -669,7 +732,7 @@ msgstr ""
 "Für mehr oder aktualisierte Informationen gehen Sie auf <link href=\"https://"
 "doc.opensuse.org/\"/>."
 
-#: xml/release-notes.xml:442(para)
+#: xml/release-notes.xml:492(para)
 msgid ""
 "For the latest product news, from openSUSE, visit <link href=\"https://www."
 "opensuse.org\"/>."
@@ -677,15 +740,15 @@ msgstr ""
 "Für die neuesten Produktinformationen von openSUSE besuchen Sie <link href="
 "\"https://www.opensuse.org\"/>."
 
-#: xml/release-notes.xml:449(para)
+#: xml/release-notes.xml:499(para)
 msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgstr "Copyright © <?dbtimestamp format=\"Y\" ?>  SUSE LLC"
 
-#: xml/release-notes.xml:453(para)
+#: xml/release-notes.xml:503(para)
 msgid "Thanks for using openSUSE."
 msgstr "Danke, dass Sie openSUSE benutzen."
 
-#: xml/release-notes.xml:456(para)
+#: xml/release-notes.xml:506(para)
 msgid "The openSUSE Team."
 msgstr "Das openSUSE-Team."
 
@@ -1449,15 +1512,6 @@ msgstr ""
 #~ "Beschleunigung mittels EXA auf GPUs der 2012 eingeführten Nvidia-GPU-"
 #~ "Generation „Kepler“ und früheren Generationen. 3D-Operationen werden "
 #~ "durch Software-Rendering unterstützt."
-
-#~ msgid ""
-#~ "For more information, see the bug reports at <link href=\"https://bugs."
-#~ "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://"
-#~ "bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/>."
-#~ msgstr ""
-#~ "Weitere Informationen finden Sie in den Fehlerberichten unter <link href="
-#~ "\"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> und <link href="
-#~ "\"https://bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/>."
 
 #~ msgid "Starting with Leap 42.2:"
 #~ msgstr "Starten mit Leap 42.2:"
