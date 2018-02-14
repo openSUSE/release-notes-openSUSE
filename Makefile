@@ -49,6 +49,8 @@ LANG_COMMAND_PROFILE = `echo $@ | awk -F '.' '{gsub("/.*","",$$3); print($$3)}'`
 DAPS_COMMAND_BASIC = daps -vv --styleroot $(STYLEROOT)
 DAPS_COMMAND = $(DAPS_COMMAND_BASIC) -m xml/release-notes.$${lang}.xml
 
+ITSTOOL = itstool -i /usr/share/itstool/its/docbook5.its
+
 XSLTPROC_COMMAND = xsltproc \
 --stringparam generate.toc "book toc" \
 --stringparam generate.section.toc.level 0 \
@@ -69,7 +71,7 @@ po/LINGUAS: po/*.po po/po-selector
 pot: release-notes.pot
 release-notes.pot: xml/release-notes.xml xml/release-notes.ent
 	$(DAPS_COMMAND_BASIC) -m $< validate
-	xml2po --expand-all-entities -o $@ $<
+	$(ITSTOOL) -o $@ $<
 
 po: $(PO_FILES)
 po/%.po: release-notes.pot
@@ -79,23 +81,14 @@ po/%.po: release-notes.pot
        msgen -o $@ $<; \
    fi
 
-# FIXME: Unfortunately, xml2po has some issues with namespaces. We can avoid
-# those using sed. However, that is more like a last resort here. What we really
-# need is a docbook5 mode for xml2po. Issues are:
-# * need to use xml:lang (instead of lang)
-# * need to use link xlink:href (link href, occasionally also ulink url and
-#   mixtures because of old translations)
-# * need to handle dm: tags (right they are just removed)
-# Finally:
-# * fix translations of @VERSION@ (would be nice to exclude that too, though)
-# * Remove trailing spaces in the translated files (because they are ugly and
-#   unpredictable)
-xml/release-notes.%.xml: po/%.po xml/release-notes.ent xml/release-notes.xml
-	xml2po --expand-all-entities -p $< -o $@ xml/release-notes.xml;
+po/%.mo: po/%.po
+	msgfmt $< -o $@
+
+# FIXME: Enable use of its:translate attribute, then we can leave away more of
+# this sed.
+xml/release-notes.%.xml: po/%.mo xml/release-notes.ent xml/release-notes.xml
+	$(ITSTOOL) -m $< -o $@ xml/release-notes.xml;
 	sed -i -r \
-	  -e 's_(<article [^>]*)xml:lang="en"_\1_' \
-	  -e 's_(<article [^>]*)lang=_\1xml:lang=_' \
-	  -e 's_<(ulink|link) (xlink:)?(href|url)=_<link xlink:href=_g' \
 	  -e '/^ *<dm:docmanager.*$$/,/^ *<\/dm:docmanager>.*$$/d' \
 	  -e "s_<releaseinfo>[^>]+>_<releaseinfo>$(VERSION)</releaseinfo>_" \
 	  -e 's_\s+$$__' \
@@ -142,4 +135,4 @@ $(DIRS):
 	mkdir -p $@
 
 clean:
-	rm -rf po/*~ po/LINGUAS build/ xml/release-notes.*.xml release-notes.pot
+	rm -rf po/*~ po/*.mo po/LINGUAS build/ xml/release-notes.*.xml release-notes.pot
