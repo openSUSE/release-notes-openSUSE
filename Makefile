@@ -113,9 +113,14 @@ xml/release-notes.%.xml: po/%.mo xml/release-notes.ent xml/release-notes.xml
 
 
 translatedxml: xml/release-notes.xml xml/release-notes.ent $(XML_FILES)
-	cp $< xml/release-notes.en.xml
-	sed -i -r -e "s_<releaseinfo>[^>]+>_<releaseinfo>$(VERSION)</releaseinfo>_" \
-	  xml/release-notes.en.xml
+	xsltproc \
+	  --stringparam 'version' "$(VERSION)" \
+	  --stringparam 'dmurl' "$(URL)" \
+	  --stringparam 'dmproduct' "$(PRODUCT)" \
+	  --stringparam 'dmcomponent' "$(COMPONENT)" \
+	  --stringparam 'dmassignee' "$(ASSIGNEE)" \
+	  fix-up.xsl $< \
+	  > xml/release-notes.en.xml
 
 pdf: $(PDF_FILES)
 $(PDF_FILES): po/LINGUAS translatedxml

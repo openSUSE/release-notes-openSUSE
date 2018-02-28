@@ -24,7 +24,7 @@
   <!-- Use the correct version number -->
   <xsl:template match="db:releaseinfo">
     <xsl:if test="$version != ''">
-      <releaseinfo><xsl:value-of select="$version"/></releaseinfo>
+      <db:releaseinfo><xsl:value-of select="$version"/></db:releaseinfo>
     </xsl:if>
   </xsl:template>
 
