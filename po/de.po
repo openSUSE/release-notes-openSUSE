@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-02-14 20:56+0100\n"
-"PO-Revision-Date: 2017-12-14 21:02+0000\n"
-"Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
+"PO-Revision-Date: 2018-02-28 22:02+0000\n"
+"Last-Translator: Stefan Knorr <sknorr@suse.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_15_0/de/>\n"
 "Language: de\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.17.1\n"
+"X-Generator: Weblate 2.18\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 #, fuzzy
@@ -93,13 +93,6 @@ msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:41
-#, fuzzy
-#| msgid ""
-#| "The release notes are under constant development. To find out about the "
-#| "latest updates, see the online version at <link href=\"https://doc."
-#| "opensuse.org/release-notes\"/>. The English release notes are updated "
-#| "whenever need arises. Translated language versions can temporarily be "
-#| "incomplete."
 msgid ""
 "The release notes are under constant development. To find out about the "
 "latest updates, see the online version at <link xlink:href=\"https://doc."
@@ -107,11 +100,11 @@ msgid ""
 "whenever need arises. Translated language versions can temporarily be "
 "incomplete."
 msgstr ""
-"Die Versionshinweise werden ständig weiterentwickelt. Um die neuesten "
-"Aktualisierungen zu sehen, benutzen Sie die Onlineversion auf <link href="
+"Die Versionshinweise werden permanent weiterentwickelt. Die letzten "
+"Aktualisierungen stehen in der Onlineversion zur Verfügung: <link xlink:href="
 "\"https://doc.opensuse.org/release-notes\"/>. Die englischen "
-"Versionshinweise werden aktualisiert, wann immer nötig. Übersetzte "
-"Sprachversionen können zwischenzeitlich unvollständig sein."
+"Versionshinweise werden aktualisiert, wann immer die Notwendigkeit besteht. "
+"Übersetzte Versionen (wie diese) können zeitweise unvollständig sein."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:48
@@ -265,8 +258,9 @@ msgstr ""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:113
+#, fuzzy
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI — Unified Extensible Firmware Interface"
+msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:114
@@ -516,7 +510,7 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:246
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr ""
+msgstr "<command>systemctl stop apparmor</command> funktioniert nicht"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:247
@@ -525,6 +519,9 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"In der Vergangenheit konnte der funktionale Unterschied zwischen den sehr "
+"ähnlich klingenden <command>systemctl</command> Unterkommandos "
+"<literal>reload</literal> und <literal>restart</literal> Verwirrung stiften:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
@@ -533,6 +530,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> lud alle AppArmor-Profile "
+"korrekt neu. (Dieses Kommando war und bleibt die bevorzugte Variante "
+"AppArmor-Profile neu zu laden.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -542,6 +542,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> bedeutete, dass AppArmor "
+"beendet würde, dabei alle AppArmor-Profile deaktivierte und dann neu "
+"startete. Beim Neustart blieben alle existierenden Prozesse uneingeschränkt. "
+"Nur neu gestartete Prozesse wurden dann wieder von AppArmor erfasst."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:270
@@ -550,6 +554,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"Unglücklicherweise bietet das Unit-File-Dateiformat von "
+"<systemitem>systemd</systemitem> keine Lösung für dieses "
+"<literal>restart</literal>-Szenario."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:275
@@ -558,6 +565,9 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"Beginnend mit AppArmor 2.12 funktioniert das Kommando <command>systemctl "
+"stop apparmor</command> nicht mehr. In der Konsequenz wird <command>"
+"systemctl restart apparmor</command> nun AppArmor-Profile korrekt neu laden."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:281
@@ -566,22 +576,20 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Um alle AppArmor-Profile zu deaktivieren, benutzen Sie das neue Kommando "
+"<command>aa-teardown</command>, welches nun den Ersatz für das frühere "
+"Verhalten von <command>systemctl stop apparmor</command> darstellt."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:286
-#, fuzzy
-#| msgid ""
-#| "For more information, see the bug reports at <link href=\"https://bugs."
-#| "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://"
-#| "bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"Weitere Informationen finden Sie in den Fehlerberichten unter <link href="
-"\"https://bugs.freedesktop.org/show_bug.cgi?id=91632\"/> und <link href="
-"\"https://bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/>."
+"Details finden sie unter <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=996520\"/> und <link "
+"xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:296
