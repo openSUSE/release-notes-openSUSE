@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-02-14 20:56+0100\n"
-"PO-Revision-Date: 2018-02-16 00:02+0000\n"
-"Last-Translator: Benoît Monin <benoit.monin@gmx.fr>\n"
+"PO-Revision-Date: 2018-02-28 21:13+0000\n"
+"Last-Translator: Antoine Belvire <antoine.belvire@opensuse.org>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_15_0/fr/>\n"
 "Language: fr\n"
@@ -15,13 +15,11 @@ msgstr ""
 "X-Poedit-Language: French\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#, fuzzy
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Guillaume GARDET <guillaume.gardet@opensuse.org>, 2007-2016.\n"
-"Antoine BELVIRE <antoine.belvire@laposte.net>, 2015-2016.\n"
+"Antoine BELVIRE <antoine.belvire@opensuse.org>, 2015-2018.\n"
 "Sylvain TOSTAIN <locnar@gmx.com>, 2013.\n"
 "Fabien CRESPEL <fabien@crespel.net>, 2008-2012.\n"
 "Damien LOZACH <damien.lozach@gmail.com>, 2007.\n"
@@ -93,11 +91,11 @@ msgid ""
 "whenever need arises. Translated language versions can temporarily be "
 "incomplete."
 msgstr ""
-"Les notes de version sont en développement constant. Pour avoir connaissance "
-"de leurs dernières mises à jour, veuillez consulter la version en ligne à "
-"l'adresse <link xlink:href=\"https://doc.opensuse.org/release-notes\"/>. Les "
-"notes de version en anglais sont mises à jour dès que le besoin se fait "
-"sentir. Les traductions peuvent être temporairement incomplètes."
+"Les notes de version sont en développement permanent. Pour avoir les "
+"dernières mises à jour, consultez la version en ligne sur <link xlink:href=\""
+"https://doc.opensuse.org/release-notes\"/>. Les notes de version en anglais "
+"sont mises à jour dès que le besoin s'en fait sentir. Les versions traduites "
+"peuvent être temporairement incomplètes."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:48
@@ -221,7 +219,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:113
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI—Unified Extensible Firmware Interface"
+msgstr "UEFI — Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:114
@@ -472,6 +470,9 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"Par le passé, il pouvait y avoir une confusion entre les deux sous-commandes "
+"<literal>reload</literal> et <literal>restart</literal> de "
+"<command>systemctl</command> pour AppArmor :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
@@ -480,6 +481,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> rechargeait proprement tous les "
+"profils AppArmor. (Cela était et continue d'être le moyen recommandé pour "
+"recharger les profils AppArmor.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -489,6 +493,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> stoppait AppArmor, et donc "
+"déchargeait tous ses profils, puis le redémarrait en laissant les processus "
+"existants non confinés. Seuls les processus lancés après le redémarrage "
+"d'AppArmor étaient confinés."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:270
@@ -497,6 +505,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"Malheureusement, <systemitem>systemd</systemitem> ne fournit pas une "
+"solution dans son format de description des services par rapport au problème "
+"posé par le scénario du <literal>restart</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:275
@@ -505,6 +516,10 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"À partir d'AppArmor 2.12, la commande <command>systemctl stop "
+"apparmor</command> ne fonctionne plus. En conséquence, <command>systemctl "
+"restart apparmor</command> ne recharge plus correctement les profils "
+"AppArmor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:281
@@ -513,6 +528,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Pour décharger tous les profils AppArmor, utilisez plutôt la nouvelle "
+"commande <command>aa-teardown</command> qui adopte l'ancien comportement de "
+"<command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:286
@@ -521,14 +539,14 @@ msgid ""
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"Pour plus d'informations, consultez <link xlink:href=\""
+"Pour plus d'informations, voir <link xlink:href=\""
 "https://bugzilla.opensuse.org/show_bug.cgi?id=996520\"/> et <link xlink:href="
 "\"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:296
 msgid "No Default Compose Key Combination"
-msgstr "Aucune combinaison avec la touche compose par défaut"
+msgstr "Pas de touche Compose par défaut"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:297
@@ -539,11 +557,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
-"Dans de précédentes versions d'openSUSE, la touche compose permettait de "
-"saisir des caractères non présents sur le clavier. Par exemple, pour "
-"produire <quote>å</quote>, vous pouviez appuyer sur <keycombo><keycap "
-"function=\"shift\"/><keycap>Ctrl droit</keycap></keycombo>, relâcher, puis "
-"appuyer sur <keycap>a</keycap> deux fois."
+"Dans les précédentes versions d'openSUSE, la touche Compose permettait de "
+"saisir des caractères qui ne faisaient pas partie de l'agencement du clavier "
+"standard. Par exemple, pour produire <quote>å</quote>, vous pouviez appuyer "
+"et relâcher <keycombo><keycap function=\"shift\"/><keycap>Ctrl "
+"droit</keycap></keycombo> puis appuyer sur <keycap>a</keycap> deux fois."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:304
@@ -562,8 +580,9 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
-"Pour définir une touche compose pour le système, utilisez le fichier "
-"<filename>/etc/X11/Xmodmap</filename> et cherchez les lignes suivantes :"
+"Pour définir une touche Compose au niveau du système, utilisez le "
+"fichier<filename>/etc/X11/Xmodmap</filename> et cherchez les lignes "
+"suivantes :"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:316
@@ -594,10 +613,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
-"Pour décommenter le code en exemple, supprimez le caractère <literal>!</"
-"literal> au début des lignes. Toutefois, notez que la configuration de "
-"<filename>Xmodmap</filename> sera écrasée si vous utilisez "
-"<command>setxkbmap</command>."
+"Pour décommenter le code en exemple, supprimer le caractère "
+"<literal>!</literal> en début des lignes. Cependant, veuillez noter que la "
+"configuration dans <filename>Xmodmap</filename> sera réécrite si vous "
+"utilisez la commande <command>setxkbmap</command>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:332
@@ -606,9 +625,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
-"Pour définir une touche compose pour un utilisateur, utilisez l'outil de "
-"configuration du clavier de votre bureau ou l'outil en ligne de commande "
-"<command>setxkbmap</command> :"
+"Pour définir une touche Compose pour un utilisateur spécifique, utilisez "
+"l'outil de configuration du clavier de votre bureau ou l'outil en ligne de "
+"commande <command>setxkbmap</command> :"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:337
@@ -619,7 +638,7 @@ msgid ""
 "     "
 msgstr ""
 "\n"
-"setxkbmap <replaceable>[...]</replaceable> -option "
+"setxkbmap<replaceable>[...]</replaceable> -option "
 "compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 
@@ -631,9 +650,9 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
-"Pour la variable <replaceable>TOUCHE_COMPOSE</replaceable>, utilisez votre "
-"caractère préféré, par exemple <literal>Alt droit</literal>, <literal>Win "
-"gauche</literal>, <literal>Win droit</literal>, <literal>menu</literal>, "
+"Pour la variable <replaceable>COMPOSE_KEY</replaceable>, utilisez votre "
+"touche préférée, par exemple <literal>Alt droit</literal>, <literal>Super "
+"gauche</literal>, <literal>Super droit</literal>, <literal>menu</literal>, "
 "<literal>Ctrl droit</literal> ou <literal>Verr maj</literal>."
 
 #. (itstool) path: listitem/para
@@ -642,8 +661,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
-"Autrement, vous pouvez utiliser une méthode d'entrée IBus qui permet de "
-"saisir les caractères dont vous avez besoin sans touche compose."
+"Autrement, utilisez une méthode de saisie IBus qui permet de saisir les "
+"caractères dont vous avez besoin sans touche Compose."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:358
@@ -687,10 +706,6 @@ msgstr ""
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:381
-#, fuzzy
-#| msgid ""
-#| "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display "
-#| "manager</guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu> <guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
@@ -783,7 +798,8 @@ msgstr "Plus d'informations et de retours"
 #: xml/release-notes.xml:459
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
-"Lisez les documents <filename>README</filename> sur le médium d'installation."
+"Veuillez lire les documents <filename>README</filename> sur le support de "
+"stockage."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:464
@@ -791,19 +807,20 @@ msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
-"Obtenir les informations détaillées du journal de modifications (changelog) "
-"à propos d'un paquet particulier à partir du RPM :"
+"Voir les informations détaillées du journal de modifications à propos d'un "
+"paquet particulier à partir de RPM :"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:468
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+msgstr "rpm --changelog -qp <replaceable>NOM_DU_PAQUET</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:469
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr "Remplacez <replaceable>NOM</replaceable> avec le nom du RPM."
+msgstr ""
+"Remplacez <replaceable>NOM_DU_PAQUET</replaceable> par le nom du paquet RPM."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:474
@@ -811,9 +828,9 @@ msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
-"Vérifiez le fichier <filename>ChangeLog</filename> à la racine du médium "
-"d'installation pour un historique chronologique de toutes les modifications "
-"apportées aux paquets mis à jour."
+"Vérifiez le fichier <filename>ChangeLog</filename> à la racine du support de "
+"stockage pour un historique chronologique de toutes les modifications "
+"apportées aux paquets mis à jours."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:480
@@ -822,7 +839,7 @@ msgid ""
 "medium."
 msgstr ""
 "Retrouvez plus d'informations dans le dossier <filename>docu</filename> sur "
-"le médium d'installation."
+"le support de stockage."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:486
@@ -830,7 +847,7 @@ msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
 msgstr ""
-"Pour de la documentation supplémentaire et à jour, consultez <link "
+"Pour une documentation supplémentaire ou mise à jour, consultez <link "
 "xlink:href=\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
@@ -839,7 +856,7 @@ msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
-"Pour les dernières nouvelles concernant openSUSE, visitez <link xlink:href=\""
+"Pour les dernières nouvelles sur openSUSE, consultez <ulink url=\""
 "https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
