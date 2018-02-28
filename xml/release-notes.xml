@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
-     "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+<?xml-stylesheet href="urn:x-suse:xslt:profiling:docbook51-profile.xsl"
+                 type="text/xml"
+                 title="Profiling step"?>
+<!DOCTYPE article
 [
  <!ENTITY % myents SYSTEM "release-notes.ent" >
  %myents;
 ]>
-
-<article lang="en" id="rnotes">
+<article xml:lang="en" xml:id="rnotes"
+  xmlns="http://docbook.org/ns/docbook" version="5.1"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&rnotes;</title>
- <articleinfo>
+ <info>
   <releaseinfo>&rversion;</releaseinfo>
-  <productname>&opensusetw;</productname>
+  <productname>&thisflavor;</productname>
   <!-- version doesn't make sense for TW
   <productnumber>&version;</productnumber>
   -->
   <date><?dbtimestamp format="Y-m-d"?></date>
   <abstract>
-   <para> &opensusetw; is a free and Linux-based operating system for your
+   <para>&thisflavor; is a free and Linux-based operating system for your
    PC, laptop or server. You can surf the web, manage your e-mails and
    photos, do office work, play videos or music and have a lot of fun!
    </para>
   </abstract>
- </articleinfo>
+  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+   <dm:bugtracker>
+    <dm:url>https://bugzilla.opensuse.org/enter_bug.cgi</dm:url>
+    <dm:product>openSUSE Tumbleweed</dm:product>
+    <dm:component>Release Notes</dm:component>
+    <dm:assignee>sknorr@suse.com</dm:assignee>
+   </dm:bugtracker>
+  </dm:docmanager>
+ </info>
 
  <para>
   The release notes are under constant development. To find out about the
   latest updates, see the online version at
-  <ulink url="https://doc.opensuse.org/release-notes"/>. The English release
+  <link xlink:href="https://doc.opensuse.org/release-notes"/>. The English release
   notes are updated whenever need arises. Translated language versions can
   temporarily be incomplete.
  </para>
@@ -34,19 +46,19 @@
  <para>
   To report bugs against this release, use the &opensuse; Bugzilla. For more
   information, see
-  <ulink url="https://en.opensuse.org/openSUSE:Submitting_bug_reports"/>.
+  <link xlink:href="https://en.opensuse.org/openSUSE:Submitting_bug_reports"/>.
  </para>
 
 
- <section id="installation">
+ <sect1 xml:id="installation">
   <title>Installation</title>
 
   <para/>
 
-  <section id="sec.123.uefi">
+  <sect2 xml:id="sec.123.uefi">
    <title>UEFI&mdash;Unified Extensible Firmware Interface</title>
    <para>
-    Prior to installing openSUSE on a system that boots using UEFI
+    Prior to installing &osuse; on a system that boots using UEFI
     (Unified Extensible Firmware Interface), you are urgently advised to
     check for any firmware updates the hardware vendor recommends and,
     if available, to install such an update. A pre-installed Windows 8
@@ -65,10 +77,10 @@
     disabled by default. Nevertheless, it is recommended to install any
     firmware updates the hardware vendor recommends.
    </para>
-  </section>
+  </sect2>
 
 
-  <section id="sec.123.uefi-part">
+  <sect2 xml:id="sec.123.uefi-part">
    <!-- bnc#850056 -->
    <title>UEFI, GPT, and MS-DOS Partitions</title>
    <para>
@@ -96,77 +108,211 @@
     The workaround is simple: convert the legacy MBR partition to the
     new GPT to avoid this problem completely.
    </para>
-  </section>
+  </sect2>
 
- </section>
+ </sect1>
 
  <!--
- <section id="upgrade">
+ <sect1 xml:id="upgrade">
   <title>System Upgrade</title>
   <para></para>
 
- </section>
+ </sect1>
  -->
 
- <section id="general">
+ <sect1 xml:id="general">
   <title>General</title>
 
-  <section>
+  <sect2>
     <title>System with LUKS-Encrypted Partition Does Not Boot</title>
     <para>In some cases, Plymouth does not display the passphrase prompt
     properly. To fix this, add <literal>plymouth.enable=0</literal> to the
     kernel command line. See also
-    <ulink url="https://bugzilla.opensuse.org/show_bug.cgi?id=966255"/>.
+    <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=966255"/>.
     </para>
-  </section>
+  </sect2>
 
- </section>
+  <sect2 xml:id="sec.general.apparmor-restart">
+   <!-- boo#1074097 -->
+   <title><command>systemctl stop apparmor</command> Does Not Work</title>
+   <para>
+    In the past, there could be confusion over the difference between how the
+    very similarly named <command>systemctl</command> subcommands
+    <literal>reload</literal> and <literal>restart</literal> worked for
+    AppArmor:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      <command>systemctl reload apparmor</command> properly reloaded all
+      AppArmor profiles. (It was and continues to be the recommended way of
+      reloading AppArmor profiles.)
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <command>systemctl restart apparmor</command> meant that
+      AppArmor would stop, thereby unloading all AppArmor profiles and then
+      restart which left all existing processes unconfined. Only newly
+      started processes would then be confined again.
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    Unfortunately, <systemitem>systemd</systemitem> does
+    not provide a solution within its unit file format for the issue posed
+    by the <literal>restart</literal> scenario.
+   </para>
+   <para>
+    Starting with AppArmor 2.12, the command
+    <command>systemctl stop apparmor</command> will not work.
+    As a consequence, <command>systemctl restart apparmor</command> will now
+    correctly reload AppArmor profiles.
+   </para>
+   <para>
+    To unload all AppArmor profiles, use the new command
+    <command>aa-teardown</command> instead which matches the previous
+    behavior of <command>systemctl stop apparmor</command>.
+   </para>
+   <para>
+    For more information, see
+    <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=996520"/>
+    and
+    <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=853019"/>.
+   </para>
+  </sect2>
 
- <!-- <section id="technical">
+  <!-- boo#1059438, boo#1062550 -->
+  <sect2 xml:id="sec.general.compose-key">
+   <title>No Default Compose Key Combination</title>
+   <para>
+    In previous versions of &os;, the compose key combination
+    allowed typing characters that were not part of the regular keyboard layout.
+    For example, to produce <quote>å</quote>, you could press and release
+    <keycombo><keycap function="shift"/><keycap>Right Ctrl</keycap></keycombo>
+    and then press <keycap>a</keycap> twice.
+   </para>
+   <para>
+    In &thisversion;, there is no longer a predefined compose key combination
+    because
+    <keycombo><keycap function="shift"/><keycap>Right Ctrl</keycap></keycombo>
+    does not work as expected anymore.
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      To define a system-wide custom compose key combination, use the file
+      <filename>/etc/X11/Xmodmap</filename> and look for the following lines:
+     </para>
+<screen>[...]
+!! Third example: Change right Control key to Compose key.
+!! To do Compose Character, press this key and afterwards two
+!! characters (e.g. `a' and `^' to get 342).
+!remove  Control  = Control_R
+!keysym Control_R = Multi_key
+!add     Control  = Control_R
+[...]</screen>
+     <para>
+      To uncomment the example code, remove the
+      <literal>!</literal> characters at the beginning of lines. However,
+      note that the setup from <filename>Xmodmap</filename> will be
+      overwritten if you are using <command>setxkbmap</command>.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      To define a user-specific compose key combination, use your desktop's
+      keyboard configuration tool or the command-line tool
+      <command>setxkbmap</command>:
+     </para>
+     <screen>
+setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>
+     </screen>
+     <para>
+      For the variable <replaceable>COMPOSE_KEY</replaceable>, use your
+      preferred character, for example
+      <literal>ralt</literal>, <literal>lwin</literal>,
+      <literal>rwin</literal>, <literal>menu</literal>,
+      <literal>rctl</literal>, or <literal>caps</literal>.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Alternatively, use an IBus input method that allows typing the
+      characters you need without a Compose key.
+     </para>
+    </listitem>
+   </itemizedlist>
+  </sect2>
+
+ </sect1>
+
+ <!-- <sect1 xml:id="technical">
   <title>Technical</title>
   <para/>
- </section> -->
+ </sect1> -->
 
  <!--
- <section id="misc" remap="Misc">
+ <sect1 xml:id="misc" remap="Misc">
   <title>Miscellaneous</title>
 
- </section>
+ </sect1>
  -->
 
- <section id="Feedback">
-  <!-- bnc#809347 -->
+ <sect1 xml:id="feedback">
   <title>More Information and Feedback</title>
-
   <itemizedlist>
    <listitem>
-    <para>Read the READMEs on the CDs.</para>
+    <para>
+     Read the <filename>README</filename> documents on the medium.
+    </para>
    </listitem>
    <listitem>
-    <para>Get detailed changelog information about a particular package from the RPM: </para>
-    <screen>rpm --changelog -qp &lt;FILENAME&gt;.rpm</screen>
-    <para>&lt;FILENAME&gt;. is the name of the RPM.</para>
+    <para>
+     View a detailed changelog information about a particular package from its
+     RPM:
+    </para>
+    <screen>rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm</screen>
+    <para>
+     Replace <replaceable>FILENAME</replaceable> with the name of the RPM.
+    </para>
    </listitem>
    <listitem>
-    <para>Check the <filename>ChangeLog</filename> file in the top level of the DVD for a
-     chronological log of all changes made to the updated packages. </para>
+    <para>
+     Check the <filename>ChangeLog</filename> file in the top level of the
+     medium for a chronological log of all changes made to the updated packages.
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+     Find more information in the <filename>docu</filename> directory on the
+     medium.
+    </para>
    </listitem>
    <listitem>
     <para>
      For additional or updated documentation, see
-     <ulink url="https://doc.opensuse.org/"/>.</para>
+     <link xlink:href="https://doc.opensuse.org/"/>.
+    </para>
    </listitem>
    <listitem>
     <para>
-     For the latest news from &opensuse;,
-     see <ulink url="https://www.opensuse.org"/>.</para>
+     For the latest product news, from &opensuse;, visit
+     <link xlink:href="https://www.opensuse.org"/>.
+    </para>
    </listitem>
   </itemizedlist>
 
-  <para>Copyright © <?dbtimestamp format="Y" ?> SUSE LLC</para>
+  <para>
+   Copyright © <?dbtimestamp format="Y" ?> SUSE LLC
+  </para>
 
-  <para>Thanks for using &opensuse;.</para>
-  <para>The &opensuse; Team.</para>
- </section>
+  <para>
+   Thanks for using &opensuse;.
+  </para>
+  <para>
+   The &opensuse; Team.
+  </para>
+ </sect1>
 
 </article>
