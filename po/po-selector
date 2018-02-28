@@ -8,7 +8,7 @@
 #
 # All rights reserved.
 #
-# The script is in public domain. Do anything you want to need with.
+# The script is in public domain. Do anything you want with it.
 #
 
 # maximal age of translation to apply CRITERION_NEW instead of CRITERION
@@ -16,16 +16,21 @@
 NEW_AGE=31
 
 # Criterion for po files to qualify.
-# Implemented vaules: at_least, mandatory_at_least
+# Implemented values: at_least, mandatory_at_least
 CRITERION=at_least
 
 # Criterion for po files edited in last n days to qualify.
-# Implemented vaules: at_least, mandatory_at_least
+# Implemented values: at_least, mandatory_at_least
 CRITERION_NEW=at_least
 
 # Number of strings that must be translated to qualify. Only for at_least.
 # value in percents
 AT_LEAST=60
+
+# Anything based on BASELANG is excluded from the AT_LEAST check
+# FIXME: Decide whether to remove this entirely, enabling this partially caused
+# bsc#1008192
+#BASELANG='en'
 
 # Number of strings that must be translated in files edited in last n days to qualify. Only for at_least.
 # value in percents
@@ -38,9 +43,9 @@ MANDATORY_POT=../release-notes-mandatory.pot
 # output to stdout: percentage of translated strings
 # input: po file name
 function get_po_percentage() {
-	LC_ALL=C msgfmt --statistics -o /dev/null "$1" 2>&1 |
-		grep -v "warning:" |
-		awk 'BEGIN{FS = ","}
+  LC_ALL=C msgfmt --statistics -o /dev/null "$1" 2>&1 |
+    grep -v "warning:" |
+    awk 'BEGIN{FS = ","}
 {
     $1 ~ /.* translated/ && trans = $1 + 0
     all = $1 + $2 + $3
@@ -54,54 +59,56 @@ function get_po_percentage() {
 # output to stdout: age of translation in days
 # input: po file name
 function get_po_age() {
-	rm -f "$1".po-date
-	msgfilter -i $1 sh -c "grep ^PO-Revision-Date: >>"$1".po-date" 2>/dev/null
-	DATE="$(sed 's/PO-Revision-Date://' <$1.po-date)"
-	if test -z "$DATE" ; then
-		echo 0
-	else
-		eval echo $(( ( $CURRENT_date_s - $(if ! date -d "$DATE" +%s ; then echo 0 ; fi) ) / 86440 ))
-	fi
-	rm -f $1.po-date
+  rm -f "$1".po-date
+  msgfilter -i $1 sh -c "grep ^PO-Revision-Date: >>"$1".po-date" 2>/dev/null
+  DATE="$(sed 's/PO-Revision-Date://' <$1.po-date)"
+  if test -z "$DATE" ; then
+    echo 0
+  else
+    eval echo $(( ( $CURRENT_date_s - $(if ! date -d "$DATE" +%s 2> /dev/null; then echo 0 ; fi) ) / 86440 ))
+  fi
+  rm -f $1.po-date
 }
 CURRENT_date_s=$(date +%s)
 
 cd `dirname $0`
 
 for PO in *.po ; do
-	echo -n >&2 "$PO: "
-	AGE=$(get_po_age "$PO")
-	echo -n >&2 "age $AGE days, "
-	if test $AGE -gt $NEW_AGE ; then
-		echo -n >&2 "applying rule ${CRITERION//_/ } $AT_LEAST% for old files, "
-		THRESHOLD=$AT_LEAST
-		case $CRITERION in
-		at_least )
-			PERCENTAGE=$(get_po_percentage "$PO")
-		;;
-		mandatory_at_least )
-			PERCENTAGE=$(msgmerge -N -q "$PO" $MANDATORY_POT -o - | get_po_percentage - )
-		;;
-		esac
-	else
-		echo -n >&2 "applying rule ${CRITERION_NEW//_/ } $NEW_AT_LEAST% for new files, "
-		THRESHOLD=$NEW_AT_LEAST
-		case $CRITERION_NEW in
-		at_least )
-			PERCENTAGE=$(get_po_percentage "$PO")
-		;;
-		mandatory_at_least )
-			PERCENTAGE=$(msgmerge -N -q "$PO" $MANDATORY_POT -o - | get_po_percentage - )
-		;;
-		esac
-	fi
-	if test $PERCENTAGE -ge $THRESHOLD ; then
-		echo >&2 "got $PERCENTAGE%, passed."
-		echo -n " $PO" | sed 's/\.po//'
-	else
-		echo >&2 "got $PERCENTAGE%, too weak."
-	fi
+  echo -n >&2 "$PO: "
+  AGE=$(get_po_age "$PO")
+  echo -n >&2 "age $AGE days "
+  if test $AGE -gt $NEW_AGE ; then
+    echo -n >&2 "(i.e. old), need ${CRITERION//_/ } $AT_LEAST% translated, "
+    THRESHOLD=$AT_LEAST
+    case $CRITERION in
+    at_least )
+      PERCENTAGE=$(get_po_percentage "$PO")
+    ;;
+    mandatory_at_least )
+      PERCENTAGE=$(msgmerge -N -q "$PO" $MANDATORY_POT -o - | get_po_percentage - )
+    ;;
+    esac
+  else
+    echo -n >&2 "(i.e. new), need ${CRITERION_NEW//_/ } $NEW_AT_LEAST% translated, "
+    THRESHOLD=$NEW_AT_LEAST
+    case $CRITERION_NEW in
+    at_least )
+      PERCENTAGE=$(get_po_percentage "$PO")
+    ;;
+    mandatory_at_least )
+      PERCENTAGE=$(msgmerge -N -q "$PO" $MANDATORY_POT -o - | get_po_percentage - )
+    ;;
+    esac
+  fi
+  if test $PERCENTAGE -ge $THRESHOLD ; then
+    echo >&2 "got $PERCENTAGE%. [passed]"
+    echo -n " $PO" | sed 's/\.po//'
+  # FIXME: Decide whether to remove this entirely, enabling this partially caused
+  # bsc#1008192
+  #elif test $(echo "$PO" | grep "^$BASELANG[-_]"); then
+  #  echo >&2 "got $PERCENTAGE%, but language is special. [passed]"
+  #  echo -n " $PO" | sed 's/\.po//'
+  else
+    echo >&2 "got $PERCENTAGE%. [failed]"
+  fi
 done >LINGUAS
-
-# make sure english is always there
-test -e en.po || echo " en" >> LINGUAS
