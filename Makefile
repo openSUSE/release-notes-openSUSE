@@ -61,6 +61,15 @@ XSLTPROC_COMMAND = xsltproc \
 --stringparam show.comments 0 \
 --xinclude --nonet
 
+# Fetch correct Report Bug link values, so translations get the correct
+# version
+XPATHPREFIX := //*[local-name()='docmanager']/*[local-name()='bugtracker']/*[local-name()
+URL = `xmllint --noent --xpath "$(XPATHPREFIX)='url']/text()" xml/release-notes.xml`
+PRODUCT = `xmllint --noent --xpath "$(XPATHPREFIX)='product']/text()" xml/release-notes.xml`
+COMPONENT = `xmllint --noent --xpath "$(XPATHPREFIX)='component']/text()" xml/release-notes.xml`
+ASSIGNEE = `xmllint --noent --xpath "$(XPATHPREFIX)='assignee']/text()" xml/release-notes.xml`
+
+
 all: single-html yast-html pdf text
 
 linguas: po/LINGUAS
@@ -84,16 +93,24 @@ po/%.po: release-notes.pot
 po/%.mo: po/%.po
 	msgfmt $< -o $@
 
-# FIXME: Enable use of its:translate attribute, then we can leave away more of
-# this sed.
+# FIXME: Enable use of its:translate attribute in GeekoDoc/DocBook...
 xml/release-notes.%.xml: po/%.mo xml/release-notes.ent xml/release-notes.xml
-	$(ITSTOOL) -m $< -o $@ xml/release-notes.xml;
+	$(ITSTOOL) -m $< -o $@.0 xml/release-notes.xml
 	sed -i -r \
-	  -e '/^ *<dm:docmanager.*$$/,/^ *<\/dm:docmanager>.*$$/d' \
-	  -e "s_<releaseinfo>[^>]+>_<releaseinfo>$(VERSION)</releaseinfo>_" \
-	  -e 's_\s+$$__' \
-	  $@;
+	  -e 's_\t+_ _' -e 's_\s+$$__' \
+	  $@.0
+	xsltproc \
+	  --stringparam 'version' "$(VERSION)" \
+	  --stringparam 'dmurl' "$(URL)" \
+	  --stringparam 'dmproduct' "$(PRODUCT)" \
+	  --stringparam 'dmcomponent' "$(COMPONENT)" \
+	  --stringparam 'dmassignee' "$(ASSIGNEE)" \
+	  fix-up.xsl $@.0 \
+	  > $@
+	rm $@.0
+	daps-xmlformat -i $@
 	$(DAPS_COMMAND_BASIC) -m $@ validate
+
 
 translatedxml: xml/release-notes.xml xml/release-notes.ent $(XML_FILES)
 	cp $< xml/release-notes.en.xml
@@ -135,4 +152,4 @@ $(DIRS):
 	mkdir -p $@
 
 clean:
-	rm -rf po/*~ po/*.mo po/LINGUAS build/ xml/release-notes.*.xml release-notes.pot
+	rm -rf po/*~ po/*.mo po/LINGUAS build/ xml/release-notes.*.xml xml/release-notes.*.xml.0 release-notes.pot
