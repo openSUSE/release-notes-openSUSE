@@ -20,8 +20,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-14 20:56+0100\n"
-"PO-Revision-Date: 2018-02-19 20:01+0000\n"
-"Last-Translator: Vojtech Zeisek <Vojtech.Zeisek@opensuse.org>\n"
+"PO-Revision-Date: 2018-03-01 22:01+0000\n"
+"Last-Translator: Aleš Kastner <alkas@volny.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_15_0/cs/>\n"
 "Language: cs\n"
@@ -32,14 +32,12 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#, fuzzy
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Klára Cihlářová <koty@seznam.cz>\n"
-"Jakub Friedl <jfriedl@suse.cz> 2006\n"
-"Marek Stopka <mstopka@opensuse.org> 2008-2010 \n"
+"Jakub Friedl <jfriedl@suse.cz>, 2006\n"
+"Marek Stopka <mstopka@opensuse.org>, 2008, 2010 \n"
 "Vojtěch Zeisek <Vojtech.Zeisek@opensuse.org>\n"
 "Jan Papež <honyczek@centrum.cz>, 2011, 2012, 2013\n"
 "Tým překladatelů l10n.opensuse.org <opensuse-translation@opensuse.org>, 2015"
@@ -109,10 +107,11 @@ msgid ""
 "whenever need arises. Translated language versions can temporarily be "
 "incomplete."
 msgstr ""
-"Poznámky k vydání jsou v neustálém vývoji. Nejnovější aktualizace si "
-"zobrazíte v online verzi na <link xlink:href=\"https://doc.opensuse.org"
-"/release-notes\"/>. Anglické poznámky k vydání jsou aktualizovány kdykoliv "
-"je potřeba. Přeložená jazyková verze může být dočasně neúplná."
+"Poznámky k vydání procházejí neustálým vývojem. Nejnovější aktualizovanou "
+"verzi naleznete on-line na <link xlink:href=\"https://doc.opensuse.org"
+"/release-notes\"/>. Anglická verze je aktualizovaná podle potřeby. Přeložené "
+"verze\n"
+"mohou být dočasně nekompletní."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:48
@@ -232,7 +231,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:113
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI — Unified Extensible Firmware Interface"
+msgstr "UEFI—Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:114
@@ -473,6 +472,9 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"V minulosti by se dalo splést, jak velmi podobně nazvané podpříkazy "
+"<literal>reload</literal> a <literal>restart</literal> příkazu  "
+"<command>systemctl</command> účinkovaly na AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
@@ -481,6 +483,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> správně znovu zavede všechny "
+"profily pro AppArmor. (To je stále doporučený způsob znovuzavedení profilů "
+"AppArmor.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -490,6 +495,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> zastavil AppArmor, takže "
+"uvolnil všechny profily AppArmor a pak restartoval, což ponechalo všechny "
+"existující procesy nepřipoutané (nekonfinované). Znovu připoutané pak byly "
+"jen nově spuštěné procesy."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:270
@@ -498,6 +507,8 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"<systemitem>systemd</systemitem> bohužel ve formátu souboru své jednotky "
+"nenabízí řešení problémů vyvolaných scénářem <literal>restart</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:275
@@ -506,6 +517,10 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"Počínaje AppArmor verzí 2.12 nebude příkaz <command>systemctl stop "
+"apparmor</command> fungovat. V důsledku toho pak nyní příkaz <command>"
+"systemctl restart apparmor</command> nyní korektně znovuzavede profily "
+"AppArmor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:281
@@ -514,6 +529,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Pro uvolnění všech profilů AppArmor použijte nový příkaz <command>aa-"
+"teardown</command>, který přebírá předchozí chování příkazu <command>"
+"systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:286
@@ -522,14 +540,14 @@ msgid ""
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"Pro více podrobností viz <link xlink:href=\""
-"https://bugzilla.opensuse.org/show_bug.cgi?id=996520\"/> a <link xlink:href="
-"\"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>."
+"Další informace viz <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=996520\"> a <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"</>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:296
 msgid "No Default Compose Key Combination"
-msgstr "Žádná výchozí kombinace kláves Compose"
+msgstr "Není výchozí kombinace kláves"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:297
@@ -540,11 +558,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
-"V předchozích verzích openSUSE, kombinace s klávesou Compose umožňovala "
-"napsání znaku, který nebyl součástí standardního rozložení klávesnice. Např. "
-"k napsání <quote>å</quote> jste mohli stisknout a pustit <keycombo><keycap "
-"function=\"shift\"/><keycap>pravý Ctrl</keycap></keycombo> a poté dvakrát "
-"stisknout <keycap>a</keycap>."
+"V předchozích verzích openSUSE umožňovala složená kombimace kláves zápis "
+"znaků, které nebyly uvedeny na příslušné klávesnici. Například k zapsání "
+"<quote>å</quote> šlo stisknout a podržet <keycombo><keycap function=\"shift\""
+"/><keycap>Right Ctrl</keycap></keycombo> a pak dvakrát stisknout "
+"<keycap>a</keycap>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:304
@@ -563,8 +581,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
-"Pro nadefinování vlastní systémové kombinace klávesy Compose použijte soubor "
-"<filename>/etc/X11/Xmodmap</filename> a podívejte se na následující řádky:"
+"K definici uživatelské kombinace kláves platné pro celý systém použijte "
+"soubor <filename>/etc/X11/Xmodmap</filename> a najděte v něm řádky:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:316
@@ -581,8 +599,12 @@ msgid ""
 msgstr ""
 "[...]\n"
 "!! Third example: Change right Control key to Compose key.\n"
+"  (Třetí příklad: Změna pravé klávesy Control na klávesu složené kombinace.)"
+"\n"
 "!! To do Compose Character, press this key and afterwards two\n"
-"!! characters (e.g. `a' and `^' to get 342).\n"
+"  (Pro vytvoření kombinace stiskněte tuto klávesu a pak dva znaky)\n"
+"!! characters (e.g. 'a' and '^' to get 342).\n"
+"  (například pro 342 'a' a '^')\n"
 "!remove  Control  = Control_R\n"
 "!keysym Control_R = Multi_key\n"
 "!add     Control  = Control_R\n"
