@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2018-02-14 20:56+0100\n"
-"PO-Revision-Date: 2018-03-02 14:03+0000\n"
+"PO-Revision-Date: 2018-03-02 20:03+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_15_0/it/>\n"
@@ -486,6 +486,9 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"Nel passato, poteva essere fatta confusione sui diversi effetti che i "
+"sottocomandi <literal>reload</literal> e <literal>restart</literal> di "
+"<command>systemctl</command> hanno su AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
@@ -494,6 +497,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> ricaricava correttamente tutti "
+"i profili AppArmor. (Era e continua ad essere la modalità raccomandata di "
+"ricaricare i profili AppArmor.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -503,6 +509,11 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> significava invece che "
+"AppArmor si sarebbe arrestato, cancellando dunque dalla memoria tutti i "
+"profili, e poi si sarebbe riavviato, il che lasciava tutti i processi non "
+"confinati. Solo i processi avviati da lì in avanti sarebbero stati confinati "
+"di nuovo."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:270
@@ -511,6 +522,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"Sfortunatamente, <systemitem>systemd</systemitem>, nell'ambito del proprio "
+"formato di file di unità, non fornisce una soluzione al problema posto dallo "
+"scenario <literal>restart</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:275
