@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-03-02 20:03+0000\n"
+"PO-Revision-Date: 2018-03-05 07:48+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/it/>\n"
@@ -278,11 +278,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
-"<command>systemctl restart apparmor</command> significava invece che "
-"AppArmor si sarebbe arrestato, cancellando dunque dalla memoria tutti i "
-"profili, e poi si sarebbe riavviato, il che lasciava tutti i processi non "
-"confinati. Solo i processi avviati da lì in avanti sarebbero stati confinati "
-"di nuovo."
+"<command>systemctl restart apparmor</command> implicava invece che AppArmor "
+"si sarebbe arrestato, cancellando dalla memoria tutti i profili, e poi si "
+"sarebbe riavviato, il che lasciava tutti i processi non confinati. Solo i "
+"processi avviati da lì in avanti sarebbero stati confinati di nuovo."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -302,6 +301,9 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"A partire da AppArmor 2.12, il comando <command>systemctl stop "
+"apparmor</command> non funziona più. Di conseguenza, ora <command>systemctl "
+"restart apparmor</command> ricarica correttamente i profili AppArmor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -310,6 +312,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Per cancellare dalla memoria tutti i profili AppArmor, usare invece il nuovo "
+"comando <command>aa-teardown</command>, che si comporta come un tempo faceva "
+"<command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
@@ -349,6 +354,9 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"In openSUSE Tumbleweed, non esiste più una combinazione predefinita per il "
+"tasto Compose perché <keycombo><keycap function=\"shift\"/><keycap>Ctrl "
+"destro</keycap></keycombo> non funziona più come previsto."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:203
