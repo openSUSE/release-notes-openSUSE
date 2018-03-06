@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-03-01 02:02+0000\n"
+"PO-Revision-Date: 2018-03-06 15:39+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/nl/>\n"
@@ -261,6 +261,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> beteknt dat AppArmor zou "
+"stoppen, waarbij AppArmor alle profielen ontlaadt en dan opnieuw start die "
+"alle bestaande processen onbeschermd laaty. Alleen nieuw gestarte processen "
+"zouden dan weer beschermd worden."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -269,6 +273,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"<systemitem>systemd</systemitem> levert helaas geen oplossing binnen het "
+"format van het unitbestand voor het probleem dat komt van het "
+"<literal>restart</literal> scenario."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -288,6 +295,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Om alle AppArmor profielen te ontladen gebruikt dan het nieuwe commando "
+"<command>aa-teardown</command> in plaats van wat overeenkomt met het vorige "
+"gedrag van <command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
@@ -303,7 +313,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Geen standaard compositietoetscombinatie"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -314,6 +324,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"In vorige versies van openSUSE gaf de compositietoetscombinatie de "
+"mogelijkheid tekens te typen die geen onderdeel zijn van de reguliere "
+"toetsenbordindeling. Om bijvoorbeeld <quote>å</quote> te maken, kunt u "
+"indrukken en loslaten <keycombo><keycap function=\"Shift\"/><keycap>Rechter "
+"Ctrl</keycap></keycombo> en dan <keycap>a</keycap> tweemaal indrukken."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -322,6 +337,9 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"In openSUSE Tumbleweed is er niet langer een voorgedefinieerde "
+"compositietoetscombinatie omdat <keycombo><keycap function=\"Shift\""
+"/><keycap>Rechter Ctrl</keycap></keycombo> niet meer werkt zoals verwerkt."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:203
@@ -329,6 +347,9 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Om een systeembrede eigen compositietoetscombinatie te definiëren, gebruik "
+"het bestand <filename>/etc/X11/Xmodmap</filename> en kijk naar de volgende "
+"regels:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -343,6 +364,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Derde voorbeeld: Wijzig rechter Control-toets naar Composiitietoets.\n"
+"!! Om een teken samen te stellen druk op deze toets en daarna op twee\n"
+"!! tekens (bijv. `a' en `^' om 342 te krijgen (â).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:215
@@ -351,6 +380,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Om commentaar van de voorbeeldcode te verwijderen, verwijder de tekens "
+"<literal>!</literal> aan het begin van regels. Merk echter op dat de setup "
+"uit <filename>Xmodmap</filename> overschreven zal worden als u "
+"<command>setxkbmap</command> gebruikt."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -359,6 +392,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Om een gebruiker-specifieke compositietoetscombinatie te definiëren, "
+"gebruikt u het configuratiehulpmiddel voor het toetsenbord van uw bureaublad "
+"of het opdrachtregelhulpmiddel <command>setxkbmap</command>:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:228
@@ -368,6 +404,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSITIE_TOETS</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -377,6 +417,10 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"Voor de variabele <replaceable>COMPOSITIETOETS</replaceable> gebruikt u uw "
+"teken met voorkeur, bijvoorbeeld <literal>ralt</literal>, "
+"<literal>lwin</literal>, <literal>rwin</literal>, <literal>menu</literal>, "
+"<literal>rctl</literal> of <literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:240
@@ -384,6 +428,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"Als alternatief gebruikt u een IBus invoermethode die in staat stelt de "
+"tekens te typen zonder een compositietoets te gebruiken."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:263
@@ -393,7 +439,7 @@ msgstr "Meer informatie en terugkoppeling"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:266
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Lees de documenten <filename>README</filename> op het medium."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:271
@@ -414,6 +460,7 @@ msgstr "rpm --changelog -qp <replaceable>BESTANDSNAAM</replaceable>.rpm"
 #: xml/release-notes.xml:276
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
+"Vervang <replaceable>BESTANDSNAAM</replaceable> door de naam van de RPM."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:281
