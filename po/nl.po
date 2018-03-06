@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-14 20:56+0100\n"
-"PO-Revision-Date: 2018-03-01 02:02+0000\n"
+"PO-Revision-Date: 2018-03-06 18:01+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_15_0/nl/>\n"
@@ -492,10 +492,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
-"<command>systemctl restart apparmor</command> betekent dat AppArmor gestopt "
-"zou worden, waarbij alle AppArmor profielen ontladen worden en daarna "
-"opnieuw gestart die alle bestaande processen onbeschermd laat. Alleen nieuw "
-"gestarte processen zouden dan weer beschermd worden."
+"<command>systemctl restart apparmor</command> beteknt dat AppArmor zou "
+"stoppen, waarbij AppArmor alle profielen ontlaadt en dan opnieuw start die "
+"alle bestaande processen onbeschermd laaty. Alleen nieuw gestarte processen "
+"zouden dan weer beschermd worden."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:270
@@ -504,8 +504,8 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
-"Helaas biedt<systemitem>systemd</systemitem> geen oplossing binnen zijn unit-"
-"bestandsformaat voor het probleem geleverd door het "
+"<systemitem>systemd</systemitem> levert helaas geen oplossing binnen het "
+"format van het unitbestand voor het probleem dat komt van het "
 "<literal>restart</literal> scenario."
 
 #. (itstool) path: sect2/para
@@ -526,8 +526,8 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
-"Om alle AppArmor profielen te ontladen, gebruik in plaats daarvan het nieuwe "
-"commando <command>aa-teardown</command> dat overeenkomt met het vorige "
+"Om alle AppArmor profielen te ontladen gebruikt dan het nieuwe commando "
+"<command>aa-teardown</command> in plaats van wat overeenkomt met het vorige "
 "gedrag van <command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
@@ -544,7 +544,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:296
 msgid "No Default Compose Key Combination"
-msgstr "Geen standaard combinaties met de compositietoets"
+msgstr "Geen standaard compositietoetscombinatie"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:297
@@ -555,11 +555,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
-"In vorige versies van openSUSE stond een combinate met de compositietoets "
-"het typen van tekens toe die geen ondereel zijn van de indeling van het "
-"reguliere toetsenbord. Om, bijvoorbeeld, <quote>å</quote> te produceren, kon "
-"u indrukken en loslaten <keycombo><keycap function=\"shift\"/><keycap>Right "
-"Ctrl</keycap></keycombo> en daarna <keycap>a</keycap> twee keer indrukken."
+"In vorige versies van openSUSE gaf de compositietoetscombinatie de "
+"mogelijkheid tekens te typen die geen onderdeel zijn van de reguliere "
+"toetsenbordindeling. Om bijvoorbeeld <quote>å</quote> te maken, kunt u "
+"indrukken en loslaten <keycombo><keycap function=\"Shift\"/><keycap>Rechter "
+"Ctrl</keycap></keycombo> en dan <keycap>a</keycap> tweemaal indrukken."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:304
@@ -578,8 +578,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
-"Om een systeembrede eigen samensteltoetscombinatie te definiëren, gebruik "
-"het bestand <filename>/etc/X11/Xmodmap</filename> en zoek naar de volgende "
+"Om een systeembrede eigen compositietoetscombinatie te definiëren, gebruik "
+"het bestand <filename>/etc/X11/Xmodmap</filename> en kijk naar de volgende "
 "regels:"
 
 #. (itstool) path: listitem/screen
@@ -596,9 +596,9 @@ msgid ""
 "[...]"
 msgstr ""
 "[...]\n"
-"!! Derde voorbeeld: rechter Ctrl-toets naar Compositie-toets.\n"
-"!! Om  compositietekens (samengestelde tekens) te maken, druk op deze toets en daarna op twee\n"
-"!! toetsen (bijv. 'a' en '^' om 342 te krijgen).\n"
+"!! Derde voorbeeld: Wijzig rechter Control-toets naar Composiitietoets.\n"
+"!! Om een teken samen te stellen druk op deze toets en daarna op twee\n"
+"!! tekens (bijv. `a' en `^' om 342 te krijgen (â).\n"
 "!remove  Control  = Control_R\n"
 "!keysym Control_R = Multi_key\n"
 "!add     Control  = Control_R\n"
@@ -611,9 +611,9 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
-"Om voorbeeldcode als commentaar actief te maken, verwijder de <literal>!</"
-"literal>-tekens aan het begin van reegls. Merk echter op dat de setup uit "
-"<filename>Xmodmap</filename> overschreven zal worden als u "
+"Om commentaar van de voorbeeldcode te verwijderen, verwijder de tekens "
+"<literal>!</literal> aan het begin van regels. Merk echter op dat de setup "
+"uit <filename>Xmodmap</filename> overschreven zal worden als u "
 "<command>setxkbmap</command> gebruikt."
 
 #. (itstool) path: listitem/para
@@ -623,9 +623,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
-"Om een gebruikerspecifieke compositietoetscombinatie te definiëren, gebruikt "
-"u het configuratiehulpmiddel van het toetsenbord in uw bureaublad of het "
-"hulpmiddel voor de opdrachtregel <command>setxkbmap</command>:"
+"Om een gebruiker-specifieke compositietoetscombinatie te definiëren, "
+"gebruikt u het configuratiehulpmiddel voor het toetsenbord van uw bureaublad "
+"of het opdrachtregelhulpmiddel <command>setxkbmap</command>:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:337
@@ -637,7 +637,7 @@ msgid ""
 msgstr ""
 "\n"
 "setxkbmap <replaceable>[...]</replaceable> -option "
-"compose:<replaceable>COMPOSE_KEY</replaceable>\n"
+"compose:<replaceable>COMPOSITIE_TOETS</replaceable>\n"
 "     "
 
 #. (itstool) path: listitem/para
@@ -648,10 +648,10 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
-"Voor de variabele <replaceable>SAMENSTELTOETS</replaceable>, gebruik het "
-"teken van uw voorkeur, bijvoorbeeld <literal>ralt</literal>, <literal>lwin</"
-"literal>, <literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</"
-"literal>, of <literal>caps</literal>."
+"Voor de variabele <replaceable>COMPOSITIETOETS</replaceable> gebruikt u uw "
+"teken met voorkeur, bijvoorbeeld <literal>ralt</literal>, "
+"<literal>lwin</literal>, <literal>rwin</literal>, <literal>menu</literal>, "
+"<literal>rctl</literal> of <literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:349
@@ -659,8 +659,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
-"Gebruik als alternatief een IBus-invoermethode die toetstaat de tekens in te "
-"typen zonder dat u een samensteltoets nodig heeft."
+"Als alternatief gebruikt u een IBus invoermethode die in staat stelt de "
+"tekens te typen zonder een compositietoets te gebruiken."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:358
@@ -795,8 +795,7 @@ msgstr "Meer informatie en terugkoppeling"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:459
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
-"Lees de <filename>README</filename>-documenten op het installatiemedium."
+msgstr "Lees de documenten <filename>README</filename> op het medium."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:464
