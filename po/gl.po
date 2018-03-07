@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-02-14 20:56+0100\n"
-"PO-Revision-Date: 2018-03-04 12:02+0000\n"
+"PO-Revision-Date: 2018-03-07 21:02+0000\n"
 "Last-Translator: Manuel Vazquez <xixirei@yahoo.es>\n"
 "Language-Team: Galician <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap_15_0/gl/>\n"
@@ -71,7 +71,6 @@ msgstr ""
 
 #. (itstool) path: bugtracker/url
 #: xml/release-notes.xml:29
-#, fuzzy
 msgid "https://bugzilla.opensuse.org/enter_bug.cgi"
 msgstr "https://bugzilla.opensuse.org/enter_bug.cgi"
 
@@ -297,6 +296,14 @@ msgid ""
 "is recommended to install any firmware updates the hardware vendor "
 "recommends."
 msgstr ""
+"openSUSE minimiza o risco non escribindo máis que o mínimo necesario para "
+"iniciar o sistema operativo. O mínimo significa indicar ao firmware UEFI "
+"sobre a localización do cargador de arranque , as cales foromde openSUSE. O "
+"kernel Linux orixinal ten características que empregan a área de "
+"almacenamento UEFI para gravar información de inicio e información de fallos "
+"(<literal>pstore</literal>) as cales foron desactivados. Aínda así, "
+"recoméndase instalar calquera actualización de firmware recomendada polo "
+"fabricante."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:139
@@ -311,6 +318,10 @@ msgid ""
 "identifiers (128-bit values displayed in 32 hexadecimal digits) to identify "
 "devices and partition types."
 msgstr ""
+"Xunto coa especificación EFI/UEFI chegou un novo estilo de particionamento: "
+"GPT (GUID Partition Table). Este novo esquema usa identificadores únicos "
+"globais (valores de 128-bit mostrados coma 32 díxitos hexadecimais) para "
+"identificar dispositivos e tipos de particións."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:146
@@ -322,6 +333,12 @@ msgid ""
 "rewrite consists of two different operations: Removing the old entry and "
 "creating a new entry that replaces the first one."
 msgstr ""
+"Ademais, a especificación UEFI tamén permite particións tradicionais MBR (MS-"
+"DOS). Os cargadores de arranque de GNU/Linux (ELILO ou GRUB2) tratan de "
+"xerar automaticamente un GUID para esas particións tradicionais e gravalos "
+"no firmware. Ese GUID pode cambiar frecuentemente, causando unha reescrita "
+"no firmware. Unha reescrita consta de dúas operacións distintas: quitar a "
+"entrada antiga e crear unha nova que substitúa á primeira."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:154
@@ -331,11 +348,15 @@ msgid ""
 "firmware does not collect and free those entries. This can result in a non-"
 "bootable system."
 msgstr ""
+"Os firmware modernos incorporan un colector de lixo que recolle as entradas "
+"eliminadas e libera a memoria reservada para as entradas anteriores. Pode "
+"ocorrer un problema cando un firmware defectuoso non recolecta e libera esas "
+"entradas. Isto pode facer que o sistema non arranque."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:160
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
-msgstr ""
+msgstr "Para solucionar este problema, converta a partición antiga MBR a GPT."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:167
