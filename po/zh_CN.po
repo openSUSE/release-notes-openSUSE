@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-02-14 20:56+0100\n"
-"PO-Revision-Date: 2018-02-03 16:01+0000\n"
-"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
+"PO-Revision-Date: 2018-03-10 14:01+0000\n"
+"Last-Translator: H. Zeng <zhx@cnzhx.net>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap_15_0/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -84,13 +84,6 @@ msgstr "这是即将发布的 openSUSE Leap 15.0 的初版版本资讯。"
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:41
-#, fuzzy
-#| msgid ""
-#| "The release notes are under constant development. To find out about the "
-#| "latest updates, see the online version at <link href=\"https://doc."
-#| "opensuse.org/release-notes\"/>. The English release notes are updated "
-#| "whenever need arises. Translated language versions can temporarily be "
-#| "incomplete."
 msgid ""
 "The release notes are under constant development. To find out about the "
 "latest updates, see the online version at <link xlink:href=\"https://doc."
@@ -98,9 +91,8 @@ msgid ""
 "whenever need arises. Translated language versions can temporarily be "
 "incomplete."
 msgstr ""
-"本发行说明会不断地改进。要了解最新的更新，请在 <link href=\"https://doc."
-"opensuse.org/release-notes\"/> 参阅在线版本。英语版本的发行说明会随时根据需要"
-"进行更新。翻译版本可能暂时性的不完整。"
+"发行说明还在不断地扩充中。要找到最近的更新，请查看在线版本 <link xlink:href=\"https://doc.opensuse.org"
+"/release-notes\"/>。英文版本的说明会随时更新。翻译版本可能暂时不完整。"
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:48
@@ -245,7 +237,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:113
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI——统一可扩展固件接口"
+msgstr "UEFI—统一可扩展固件接口"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:114
@@ -468,7 +460,7 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:246
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr ""
+msgstr "<command>systemctl stop apparmor</command> 不工作"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:247
@@ -477,6 +469,8 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"过去，在作用于 AppArmor 的时候，<command>systemctl</command> 中非常相似的子命令 "
+"<literal>reload</literal> 和 <literal>restart</literal> 可能经常让人混淆："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
@@ -485,6 +479,8 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> 正确地重新加载所有 AppArmor 配置文件。（"
+"这个命令一直都是推荐的重新加载 AppArmor 规则文件的方式。）"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -494,6 +490,8 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> 意味着 AppArmor 会停止工作，当然也就会卸载所有 "
+"AppArmor 配置文件然后重新开始。这也就意味着所有当前存在的进程都会失去限制。只有新启动的进程会再次受限。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:270
@@ -502,6 +500,8 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"遗憾的是，<systemitem>systemd</systemitem> 并没有在它的单元文件格式中提供方案以解决 "
+"<literal>restart</literal> 应用场景带来的问题。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:275
@@ -510,6 +510,8 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"从 AppArmor 2.12 开始，命令 <command>systemctl stop apparmor</command> 将不再工作。结果就是 "
+"<command>systemctl restart apparmor</command> 将会正确地重新加载 AppArmor 配置文件。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:281
@@ -518,22 +520,19 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"要卸载所有 AppArmor 配置文件，请使用新命令 <command>aa-teardown</command>。该指令与之前的 <command>"
+"systemctl stop apparmor</command> 命令的效果一致。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:286
-#, fuzzy
-#| msgid ""
-#| "For more information, see the bug reports at <link href=\"https://bugs."
-#| "freedesktop.org/show_bug.cgi?id=91632\"/> and <link href=\"https://"
-#| "bugzilla.opensuse.org/show_bug.cgi?id=1005323\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"更多的信息见 bug 报告 <link href=\"https://bugs.freedesktop.org/show_bug.cgi?"
-"id=91632\"/> 和 <link href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=1005323\"/> 。"
+"细节请参考 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"996520\"/>  和 <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:296
@@ -549,10 +548,9 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
-"在之前的 openSUSE 版本中，Compose 键是用来输入标准键盘所无法提供的字符的。比"
-"如为了输入 <quote>å</quote>，就需要按下并释放 <keycombo><keycap function="
-"\"shift\"/><keycap>右 Ctrl</keycap></keycombo> 再按下 <keycap>a</keycap> 两"
-"次。"
+"在之前的 openSUSE 版本中，Compose 组合键是用来输入标准键盘所无法提供的字符的。比如为了输入 <quote>å</quote>，"
+"就需要按下并释放 <keycombo><keycap function=\"shift\"/><keycap>右 "
+"Ctrl</keycap></keycombo> 再按下 <keycap>a</keycap> 两次。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:304
@@ -571,8 +569,7 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
-"若需设定系统全局的 Compose 键，请打开 <filename>/etc/X11/Xmodmap</filename> "
-"文件并寻找如下内容："
+"要定义一个系统全局的 Compose 键组合，修改文件 <filename>/etc/X11/Xmodmap</filename> 中的如下行："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:316
@@ -603,9 +600,8 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
-"移除开头的 <literal>!</literal> 即可反注释上述的示例代码。但是，请注意 "
-"<filename>Xmodmap</filename> 将被覆盖如果您使用 <command>setxkbmap</"
-"command>。"
+"要取消注释示例代码，移除行首的 <literal>!</literal> 字符。但是请注意，如果您使用 "
+"<command>setxkbmap</command> 命令的话，<filename>Xmodmap</filename> 文件中的配置将会被覆盖。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:332
@@ -614,19 +610,19 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
-"若需定义用户的Compose键，可以使用桌面环境提供的键盘设定工具或者使用"
-"<command>setxkbmap</command>命令行工具："
+"若需定义用户的 Compose 键组合，可以使用桌面环境提供的键盘设定工具或者使用<command>setxkbmap</command>命令行工具："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:337
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "\n"
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
 "\n"
-"setxkbmap <placeholder-1/> -option compose:<placeholder-2/>\n"
+"setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>"
+"COMPOSE 键</replaceable>\n"
 "     "
 
 #. (itstool) path: listitem/para
@@ -637,9 +633,11 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
-"关于 <replaceable>COMPOSE_KEY</replaceable> 的设定，可以使用如下值： "
-"<literal>ralt</literal>, <literal>lwin</literal>, <literal>rwin</literal>, "
-"<literal>menu</literal>, <literal>rctl</literal>, <literal>caps</literal>。"
+"其中的 <replaceable>COMPOSE 键</replaceable>，可以替换成您喜欢的键号如 "
+"<literal>ralt</literal>（右 Alt 键）、<literal>lwin</literal>（左 Windows "
+"键）、<literal>rwin</literal>（右 Windows "
+"键）、<literal>menu</literal>（菜单键）、<literal>rctl</literal>（右 Ctrl 键）或者 "
+"<literal>caps</literal>（大写锁定键）。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:349
@@ -794,10 +792,9 @@ msgstr "从 RPM 中获取关于某特定软件包的详细修订历史信息："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:468
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <placeholder-1/>.rpm"
+#, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
+msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:469
@@ -822,35 +819,23 @@ msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:486
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <link href=\"https://doc."
-#| "opensuse.org/\"/>."
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
-msgstr ""
-"为查看附加或更新的文档，请访问 <link href=\"https://doc.opensuse.org/\"/>。"
+msgstr "更多信息或更新的文档，请访问 <link xlink:href=\"https://doc.opensuse.org/\"/>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:492
-#, fuzzy
-#| msgid ""
-#| "For the latest product news, from openSUSE, visit <link href=\"https://"
-#| "www.opensuse.org\"/>."
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
-"为了解 openSUSE 的最新产品新闻，请访问 <link href=\"https://www.opensuse.org"
-"\"/>。"
+"获取 openSUSE 的最新产品新闻，请访问 <link xlink:href=\"https://www.opensuse.org\"/>。"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:499
-#, fuzzy
-#| msgid "Copyright © 2015 SUSE LLC"
 msgid "Copyright © SUSE LLC"
-msgstr "版权所有 © 2015 SUSE LLC"
+msgstr "版权所有 © SUSE LLC"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:503
