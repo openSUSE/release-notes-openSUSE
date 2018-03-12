@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-03-12 13:06+0000\n"
+"PO-Revision-Date: 2018-03-12 17:06+0000\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/sv/>\n"
@@ -269,6 +269,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> medför att AppArmor stoppar, "
+"därefter deaktiveras alla AppArmor profiler för att sedan återstartas. Detta "
+"lämnar alla existerande processer obevakade och endast nystartade processer "
+"kommer att omfattas av AppArmor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -277,6 +281,8 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"Olyckligtvis har inte <systemitem>systemd</systemitem> någon lösning i sitt "
+"enhetsfilformatet för detta <literal>restart</literal> scenario."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -285,6 +291,9 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"Från och med AppArmor 2.12 kommer därför inte kommandot <command>systemctl "
+"stop apparmor</command> att fungera. Följaktligen kommer <command>systemctl "
+"restart apparmor</command> att ladda om AppArmor profilerna korrekt."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -293,6 +302,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"För att deaktivera alla AppArmor profilerna, använd det nya kommandot "
+"<command>aa-teardown</command> som motsvarar det gamla kommandot <command>"
+"systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
@@ -301,6 +313,9 @@ msgid ""
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
+"För mer information, se <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=996520\"/> och <link "
+"xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
@@ -392,6 +407,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_KEY</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -437,10 +456,9 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:275
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+#, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr "rpm --changelog -qp &lt;FILNAMN&gt;.rpm"
+msgstr "rpm --changelog -qp <replaceable>FILNAMN</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
@@ -468,36 +486,26 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:293
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <ulink url=\"https://doc."
-#| "opensuse.org/\"/>."
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
 msgstr ""
-"Hitta mer och uppdaterad dokumentation på <ulink url=\"https://doc.opensuse."
-"org/\"/>."
+"För mer eller uppdaterad dokumentation, se <link xlink:href=\""
+"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:299
-#, fuzzy
-#| msgid ""
-#| "For the latest news from openSUSE, see <ulink url=\"https://www.opensuse."
-#| "org\"/>."
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
-"För att få de senaste nyheterna från openSUSE, besök <ulink url=\"https://"
-"www.opensuse.org\"/>."
+"För att se de senaste produktnyheter från openSUSE, besök <link xlink:href=\""
+"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:306
-#, fuzzy
-#| msgid "Copyright © 2015 SUSE LLC"
 msgid "Copyright © SUSE LLC"
-msgstr "Copyright © 2015 SUSE LLC"
+msgstr "Copyright © SUSE LLC"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:310
