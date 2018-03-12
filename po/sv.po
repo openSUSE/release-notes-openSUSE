@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-02-13 18:51+0000\n"
+"PO-Revision-Date: 2018-03-12 13:06+0000\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/sv/>\n"
@@ -63,22 +63,15 @@ msgstr ""
 #. (itstool) path: bugtracker/url
 #: xml/release-notes.xml:30
 msgid "https://bugzilla.opensuse.org/enter_bug.cgi"
-msgstr ""
+msgstr "https://bugzilla.opensuse.org/enter_bug.cgi"
 
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:33
 msgid "sknorr@suse.com"
-msgstr ""
+msgstr "sknorr@suse.com"
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:38
-#, fuzzy
-#| msgid ""
-#| "The release notes are under constant development. To find out about the "
-#| "latest updates, see the online version at <ulink url=\"https://doc."
-#| "opensuse.org/release-notes\"/>. The English release notes are updated "
-#| "whenever need arises. Translated language versions can temporarily be "
-#| "incomplete."
 msgid ""
 "The release notes are under constant development. To find out about the "
 "latest updates, see the online version at <link xlink:href=\"https://doc."
@@ -86,11 +79,11 @@ msgid ""
 "whenever need arises. Translated language versions can temporarily be "
 "incomplete."
 msgstr ""
-"Denna versionsinformationen är under konstant utveckling. För att veta mer "
-"om de senaste uppdateringarna, se onlineversionen på <ulink url=\"https://"
-"doc.opensuse.org/release-notes\"/>. Den engelska versionsinformationen "
-"uppdateras omedelbart, de översatta språkversionerna kan vara temporärt "
-"ofullständiga."
+"Denna versionsinformation är under konstant utveckling. För att få "
+"information om de senaste uppdateringarna, se onlineversionen på <link  "
+"xlink:href=\"https://doc.opensuse.org/release-notes\"/>. Den engelskspråkiga "
+"informationen uppdateras omedelbart. Översatta versioner kan vara "
+"tillfälligt ofullständiga."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:46
@@ -115,10 +108,8 @@ msgstr "Installation"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:59
-#, fuzzy
-#| msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI&mdash;Unified Extensible Firmware Interface"
+msgstr "UEFI—Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:60
@@ -246,7 +237,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:137
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr ""
+msgstr "<command> 1systemctl stop apparmor</command> 2 Fungerar inte"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:138
@@ -255,6 +246,9 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"Tidigare rådde oklarhet om hur kommandot <command>systemctl</command> i "
+"kombination med de till namnet likartade underkommando "
+"<literal>reload</literal> och <literal>restart</literal> påverkade AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -263,6 +257,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> laddade om AppArmors profiler "
+"på ett korret sätt (och är fortfarande det rekommenderade sättet att utföra "
+"detta.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -308,7 +305,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Ingen Default Compose Key kombination"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -319,6 +316,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"I tidigare versioner av openSUSE kunde man skriva bokstäver som inte finns i "
+"tangentbordslayouten med hjälp av compose key kombinationer. T.ex. för att "
+"skriva ett <quote>å</quote>, kunde man trycka ned och sedan släppa upp "
+"<keycombo><keycap function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> "
+"och sedan trycka ned <keycap>a</keycap> två gånger."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -334,6 +336,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"För att definiera en systemomfattande compose key kombination, öppna filen "
+"<filename>/etc/X11/Xmodmap</filename> och sök efter följande rader:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -348,6 +352,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:215
@@ -356,6 +368,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"För att ta bort kommentarerna i exempelkoden, avlägsna <literal>!</literal> "
+"i början på raderna. Men tänk på att inställningarna i "
+"<filename>Xmodmap</filename> kommer att skrivas över i fall du använder "
+"<command>setxkbmap</command>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -364,6 +380,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"För att skapa en användardefinierad compose key kombination, använd det "
+"grafiska gränssnittets konfigurationsverktyg eller kommandoradsverktyget "
+"<command>setxkbmap</command>:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:228
@@ -382,6 +401,11 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"Ange din föredragna tangent i variablen "
+"<replaceable>COMPOSE_KEY</replaceable>, t.ex. "
+"<literal>ralt</literal>,<literal>lwin</literal>, <literal>rwin</literal>, "
+"<literal>menu</literal>, <literal>rctl</literal> eller "
+"<literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:240
@@ -389,6 +413,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"Eller alternativt, använd en IBus inmatningsmetod som tillåter att du "
+"skriver i de bokstäver du behöver utan en compose key."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:263
@@ -398,14 +424,10 @@ msgstr "Mer information och feedback"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:266
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Läs <filename>README</filename> filen på installationsmediet."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:271
-#, fuzzy
-#| msgid ""
-#| "Get detailed changelog information about a particular package from the "
-#| "RPM:"
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -423,14 +445,10 @@ msgstr "rpm --changelog -qp &lt;FILNAMN&gt;.rpm"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "Ersätt <replaceable>FILENAME</replaceable> med namnet på RPM paketet."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:281
-#, fuzzy
-#| msgid ""
-#| "Check the <filename>ChangeLog</filename> file in the top level of the DVD "
-#| "for a chronological log of all changes made to the updated packages."
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -445,6 +463,8 @@ msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
+"För mer information leta i <filename>docu</filename> katalogen på "
+"installationsmediet."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:293
