@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-03-14 19:01+0000\n"
+"PO-Revision-Date: 2018-03-19 16:01+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/master/zh_TW/>\n"
@@ -222,6 +222,8 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"在過去用於操作 AppArmor 的 <command>systemctl</command> 中非常類似的子命令 "
+"<literal>reload</literal> 與 <literal>restart</literal> 可能經常讓人混淆："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -230,6 +232,8 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> 用於正確地重新載入所有 AppArmor 組態。("
+"它一直是重新載入 AppArmor 組態的建議方法，將來也會是如此。)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -239,6 +243,8 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> 意味著 AppArmor 會停止運作，故會連帶卸載所有的 "
+"AppArmor 組態，並導致所有現存的行程都會不再受限制。只有新啟動的行程才會再次被限制。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -247,6 +253,8 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"不幸的是，<systemitem>systemd</systemitem> 並未在它的單元檔案格式 (unit file format) 中提供因 "
+"<literal>restart</literal> 情境所導致問題的解法方案。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -255,6 +263,8 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"從 AppArmor 2.12 開始，<command>systemctl stop apparmor</command> 指令將會失效。因而 "
+"<command>systemctl restart apparmor</command> 將可以正確地重新載入 AppArmor 組態。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -263,25 +273,24 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"要卸載所有的 AppArmor 組態，請使用新指令 <command>aa-teardown</command>。該指令與 <command>"
+"systemctl stop apparmor</command> 的舊行為有相同效果。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
-#, fuzzy
-#| msgid ""
-#| "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-#| "id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"欲了解詳情，請見 <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>。"
+"請見 <link xlink:href=\"https://bugs.freedesktop.org/show_bug.cgi?id=996520\"/>"
+" 與 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\""
+"/> 以了解更多細節。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "沒有預設的 Compose 組合鍵"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
