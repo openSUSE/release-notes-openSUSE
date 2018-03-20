@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-03-13 14:58+0100\n"
-"PO-Revision-Date: 2018-03-19 16:01+0000\n"
+"PO-Revision-Date: 2018-03-20 14:56+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap_15_0/zh_TW/>\n"
@@ -504,6 +504,9 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"在 openSUSE 之前的版本，compose 組合鍵是用來輸入不屬於標準鍵盤佈局的字元。例如，要輸入 <quote>å</quote> 字元，"
+"您可以按下並釋放 <keycombo><keycap function=\"shift\"/><keycap>Right "
+"Ctrl</keycap></keycombo>，接著按下 <keycap>a</keycap> 鍵兩次。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:304
@@ -512,6 +515,8 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"在 openSUSE Leap 15.0，由於 <keycombo><keycap function=\"shift\"/><keycap>Right "
+"Ctrl</keycap></keycombo> 已不如預期般地運作，故不再提供預定義的 compose 組合鍵。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:312
@@ -519,6 +524,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"要定義一個系統全域的客制 compose 組合鍵，請開啟 <filename>/etc/X11/Xmodmap</filename> "
+"檔案並搜尋下列設定行："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:316
@@ -533,6 +540,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:324
@@ -541,6 +556,8 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"要取消註解，請移除設定行開頭的 <literal>!</literal> 字元。然而請注意若您正在使用 "
+"<command>setxkbmap</command>，<filename>Xmodmap</filename> 中的設定將會被覆蓋。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:332
@@ -549,6 +566,7 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"要定義一個使用者特定的 compose 組合鍵，請使用桌面環境的鍵盤設定工具或是 <command>setxkbmap</command> 命令列工具："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:337
@@ -558,6 +576,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_KEY</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:340
@@ -567,13 +589,17 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"其中的 <replaceable>COMPOSE_KEY</replaceable>，請使用您偏好的按鍵，如 "
+"<literal>ralt</literal> (右 Alt 鍵)、<literal>lwin</literal> (左 Win "
+"鍵)、<literal>rwin</literal> (右 Win 鍵)、<literal>menu</literal> "
+"(選單鍵)、<literal>rctl</literal> (右 Alt 鍵)，或是 <literal>caps</literal> (大寫鎖定鍵)。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:349
 msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
-msgstr ""
+msgstr "除此之外，也可以使用 IBus 輸入法來輸入您需要的字元而不需使用 compose 鍵。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:358
@@ -613,16 +639,12 @@ msgstr ""
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:381
-#, fuzzy
-#| msgid ""
-#| "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display "
-#| "manager</guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 msgid ""
 "Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
 "guimenu> <guimenu>DISPLAYMANAGER</guimenu></menuchoice>."
 msgstr ""
-"移動到 <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</"
-"guimenu><guimenu>DISPLAYMANAGER</guimenu></menuchoice>。"
+"移動到 <menuchoice><guimenu>Desktop</guimenu><guimenu>Display manager</guimenu> "
+"<guimenu>DISPLAYMANAGER</guimenu></menuchoice>。"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:387
@@ -645,16 +667,10 @@ msgstr "播放 MP3 媒體檔案"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:402
-#, fuzzy
-#| msgid ""
-#| "Starting with openSUSE Leap 42.3, the codecs to play MP3 media files are "
-#| "now shipped as part of the standard repository."
 msgid ""
 "The codecs to play MP3 media files are shipped as part of the standard "
 "repository."
-msgstr ""
-"從 openSUSE Leap 42.3 開始，播放 MP3 媒體檔案所需的解碼器現在將收錄於標準套件"
-"庫中。"
+msgstr "播放 MP3 媒體檔案所需的解碼器收錄於標準套件庫中。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:406
@@ -673,13 +689,6 @@ msgstr "LibreOffice 不再支援 Type-1 字型"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:415
-#, fuzzy
-#| msgid ""
-#| "LibreOffice 5.3 does not support legacy Type-1 fonts (file extensions "
-#| "<filename>.afm</filename> and <filename>.pfb</filename>) anymore. Most "
-#| "users should not be affected by this, as current fonts are available "
-#| "either in the format TrueType (<filename>.ttf</filename>) or OpenType "
-#| "(<filename>.otf</filename>) formats."
 msgid ""
 "LibreOffice 5.3 and higher do not support legacy Type-1 fonts (file "
 "extensions <filename>.afm</filename> and <filename>.pfb</filename>) anymore. "
@@ -687,21 +696,12 @@ msgid ""
 "either in the format TrueType (<filename>.ttf</filename>) or OpenType "
 "(<filename>.otf</filename>) formats."
 msgstr ""
-"LibreOffice 5.3 不再支援舊的 Type-1 字型了(副檔名為 <filename>.afm</"
-"filename> 與 <filename>.pfb</filename> 的字型檔)。目前字型通常都是 TrueType "
-"(<filename>.ttf</filename>) 或是 OpenType (<filename>.otf</filename>) 格式，"
-"因此大部分使用者並不會受到影響。"
+"LibreOffice 5.3 以上版本不再支援舊的 Type-1 字型了 (副檔名為 <filename>.afm</filename> 與 "
+"<filename>.pfb</filename> 的字型檔)。目前字型通常都是 TrueType (<filename>.ttf</filename>)"
+" 或是 OpenType (<filename>.otf</filename>) 格式，因此大部分使用者並不會受到影響。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:422
-#, fuzzy
-#| msgid ""
-#| "If you are affected by this, convert Type-1 fonts to a supported format, "
-#| "such as TrueType and then use the converted fonts. Conversion is possible "
-#| "with the application FontForge (package <package>fontforge</package>) "
-#| "which is included in openSUSE. For information on scripting such "
-#| "conversions, see <link href=\"https://fontforge.github.io/en-US/"
-#| "documentation/scripting/\"/>."
 msgid ""
 "If you are affected by this, convert Type-1 fonts to a supported format, "
 "such as TrueType and then use the converted fonts. Conversion is possible "
@@ -710,16 +710,15 @@ msgid ""
 "<link xlink:href=\"https://fontforge.github.io/en-US/documentation/scripting/"
 "\"/>."
 msgstr ""
-"如果您有受到影響，請將 Type-1 字型轉換成支援的字型格式 (如 TrueType)，再使用"
-"該轉換後的字型。您可以使用 openSUSE 所包含的 FontForge 應用程式 "
-"(<package>fontforge</package> 套件) 來執行轉換。想了解關於如何使用腳本來自動"
-"化轉換的資訊，請見 <link href=\"https://fontforge.github.io/en-US/"
-"documentation/scripting/\"/>。"
+"如果您有受到影響，請將 Type-1 字型轉換成支援的字型格式 (如 TrueType)，再使用該轉換後的字型。您可以使用 openSUSE 所包含的 "
+"FontForge 應用程式 (<package>fontforge</package> 套件) 來執行轉換。想了解關於如何使用腳本來自動化轉換的資訊，"
+"請見 <link xlink:href=\"https://fontforge.github.io/en-"
+"US/documentation/scripting/\"/>。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:434
 msgid "Loading the Emacs <literal>psgml</literal> Module"
-msgstr ""
+msgstr "載入 Emacs <literal>psgml</literal> 模組"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:435
@@ -729,6 +728,8 @@ msgid ""
 "literal> module automatically. For more information, see the file "
 "<filename>README</filename> from the package <package>psgml</package>."
 msgstr ""
+"由於和來自 Emacs 預設安裝的模組相衝突，openSUSE Leap 15.0 無法自動載入 <literal>psgml</literal> "
+"模組。欲了解詳情，請見 <package>psgml</package> 套件中的 <filename>README</filename> 檔案。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:467
@@ -749,10 +750,9 @@ msgstr "從 RPM 獲取某個套件詳細的變動歷史資訊："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:479
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <placeholder-1/>.rpm"
+#, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
+msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:480
@@ -777,35 +777,23 @@ msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:497
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <link href=\"https://doc."
-#| "opensuse.org/\"/>."
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
-msgstr ""
-"有關其他或更新的文檔，請參閱 <link href=\"https://doc.opensuse.org/\"/>。"
+msgstr "有關其他或更新的文檔，請參閱 <link xlink:href=\"https://doc.opensuse.org/\"/>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:503
-#, fuzzy
-#| msgid ""
-#| "For the latest product news, from openSUSE, visit <link href=\"https://"
-#| "www.opensuse.org\"/>."
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
-"要了解有關openSUSE最新的產品新聞，請訪問 <link href=\"https://www.opensuse."
-"org\"/>。"
+"要了解有關 openSUSE 最新的產品新聞，請造訪 <link xlink:href=\"https://www.opensuse.org\"/>。"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:510
-#, fuzzy
-#| msgid "Copyright © 2015 SUSE LLC"
 msgid "Copyright © SUSE LLC"
-msgstr "版權所有 © 2015 SUSE LLC"
+msgstr "版權所有 © SUSE LLC"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:514
