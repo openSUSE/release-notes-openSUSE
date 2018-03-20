@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-03-19 16:01+0000\n"
+"PO-Revision-Date: 2018-03-20 17:01+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/master/zh_TW/>\n"
@@ -301,6 +301,9 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"在 openSUSE 之前的版本，compose 組合鍵是用來輸入不屬於標準鍵盤佈局的字元。例如，要輸入 <quote>å</quote> 字元，"
+"您可以按下並釋放 <keycombo><keycap function=\"shift\"/><keycap>Right "
+"Ctrl</keycap></keycombo>，接著按下 <keycap>a</keycap> 鍵兩次。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -316,6 +319,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"要定義一個系統全域的客制 compose 組合鍵，請開啟 <filename>/etc/X11/Xmodmap</filename> "
+"檔案並搜尋下列設定行："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -330,6 +335,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:215
@@ -338,6 +351,8 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"要取消註解，請移除設定行開頭的 <literal>!</literal> 字元。然而請注意若您正在使用 "
+"<command>setxkbmap</command>，<filename>Xmodmap</filename> 中的設定將會被覆蓋。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -346,6 +361,7 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"要定義一個使用者特定的 compose 組合鍵，請使用桌面環境的鍵盤設定工具或是 <command>setxkbmap</command> 命令列工具："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:228
@@ -355,6 +371,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_KEY</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -364,13 +384,17 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"其中的 <replaceable>COMPOSE_KEY</replaceable>，請使用您偏好的按鍵，如 "
+"<literal>ralt</literal> (右 Alt 鍵)、<literal>lwin</literal> (左 Win "
+"鍵)、<literal>rwin</literal> (右 Win 鍵)、<literal>menu</literal> "
+"(選單鍵)、<literal>rctl</literal> (右 Alt 鍵)，或是 <literal>caps</literal> (大寫鎖定鍵)。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:240
 msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
-msgstr ""
+msgstr "除此之外，也可以使用 IBus 輸入法來輸入您需要的字元而不需使用 compose 鍵。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:263
@@ -395,10 +419,9 @@ msgstr "從 RPM 獲取某個套件詳細的變動歷史資訊："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:275
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+#, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
@@ -434,7 +457,7 @@ msgstr "在安裝 DVD 中的 <filename>docu</filename> 目錄可找到更多的�
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
-msgstr ""
+msgstr "有關其他或更新的文檔，請參閱 <link xlink:href=\"https://doc.opensuse.org/\"/>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:299
@@ -442,13 +465,12 @@ msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
+"要了解有關 openSUSE 最新的產品新聞，請造訪 <link xlink:href=\"https://www.opensuse.org\"/>。"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:306
-#, fuzzy
-#| msgid "Copyright © 2015 SUSE LLC"
 msgid "Copyright © SUSE LLC"
-msgstr "版權所有 © 2015 SUSE LLC"
+msgstr "版權所有 © SUSE LLC"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:310
