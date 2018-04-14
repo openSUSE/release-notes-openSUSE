@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2017-12-06 08:09+0000\n"
+"PO-Revision-Date: 2018-04-14 08:08+0000\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/uk/>\n"
@@ -22,18 +22,16 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.17.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.18\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#, fuzzy
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"о. Іван Петрущак <fr.ivan@ukrainian-orthodox.org>, 2005, 2006, 2007, 2008, "
-"2009, 2011"
+"о. Іван Петрущак <fr.ivan@ukrainian-orthodox.org>, 2005-2011,\n"
+"Андрій Бандура <andriykopanytsia@gmail.com>, 2012-2018"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -67,22 +65,15 @@ msgstr ""
 #. (itstool) path: bugtracker/url
 #: xml/release-notes.xml:30
 msgid "https://bugzilla.opensuse.org/enter_bug.cgi"
-msgstr ""
+msgstr "https://bugzilla.opensuse.org/enter_bug.cgi"
 
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:33
 msgid "sknorr@suse.com"
-msgstr ""
+msgstr "sknorr@suse.com"
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:38
-#, fuzzy
-#| msgid ""
-#| "The release notes are under constant development. To find out about the "
-#| "latest updates, see the online version at <ulink url=\"https://doc."
-#| "opensuse.org/release-notes\"/>. The English release notes are updated "
-#| "whenever need arises. Translated language versions can temporarily be "
-#| "incomplete."
 msgid ""
 "The release notes are under constant development. To find out about the "
 "latest updates, see the online version at <link xlink:href=\"https://doc."
@@ -90,10 +81,11 @@ msgid ""
 "whenever need arises. Translated language versions can temporarily be "
 "incomplete."
 msgstr ""
-"Ці примітки до випуску перебувають під постійним оновленням. Щоби знайти "
-"останню зміни, перегляньте версію на <ulink url=\"https://doc.opensuse.org/"
-"release-notes\"/>. Примітки до англійського випуску оновлюються, коли "
-"виникає потреба. Перекладені мовні версії можуть бути тимчасово неповними."
+"Примітки до випуску перебувають на стадії розробки. Щоби дізнатися про "
+"останні оновлення, перегляньте їхню версію в інтернеті на <link xlink:href=\""
+"https://doc.opensuse.org/release-notes\"/>. Англійська версія приміток до "
+"випуску оновлюється за потреби. Перекладені мовні версії можуть бути "
+"тимчасово неповними."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:46
@@ -253,7 +245,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:137
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr ""
+msgstr "Команда <command>systemctl stop apparmor</command> НЕ працює"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:138
@@ -262,6 +254,10 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"Раніше можна було легко заплутатися та не помітити різниці між тим, як "
+"подібно названі підкоманди <command>systemctl</command> "
+"<literal>reload</literal> та <literal>restart</literal> працювали для "
+"AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -270,6 +266,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> коректно перезавантажувала усі "
+"профілі AppArmor (це було і залишається рекомендованим способом "
+"перезавантаження профілів AppArmor.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -279,6 +278,9 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"Команда <command>systemctl restart apparmor</command> спричиняла зупинку "
+"AppArmor та вивантаження всіх профілів, що залишало всі наявні процеси без "
+"обмежень. Тобто обмеження застосовувалися лише до знову запущених процесів."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -287,6 +289,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"На жаль, <systemitem>systemd</systemitem> не надає рішення в рамках формату "
+"своїх одиничних файлів для проблеми, створеної сценарієм "
+"<literal>restart</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -295,6 +300,10 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"Починаючи із AppArmor 2.12, команда <command>systemctl stop "
+"apparmor</command> не буде працювати. Внаслідок цього команда <command>"
+"systemctl restart apparmor</command> тепер буде правильно перезавантажувати "
+"профілі AppArmor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -303,25 +312,25 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Для вивантаження всіх профілів AppArmor використовуйте нову команду <command"
+">aa-teardown</command>, що відповідає старій поведінці <command>systemctl "
+"stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
-#, fuzzy
-#| msgid ""
-#| "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-#| "id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"За подробицями див. <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+"Дивіться <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"996520\"/> і <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/> за подробицями."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Немає стандартної дії клавіші Compose"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -332,6 +341,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"У попередніх версіях openSUSE клавіша compose дозволяла набирати символи, що "
+"не входять у склад звичайної розкладки клавіатури. Наприклад, щоби набрати "
+"<quote>å</quote>, можна було натиснути і відпустити <keycombo><keycap "
+"function=\"shift\"/><keycap>Правий Ctrl</keycap></keycombo>, а потім двічі "
+"натиснути <keycap>a</keycap>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -347,6 +361,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Щоби призначити загальносистемне сполучення клавіш для compose, "
+"скористайтеся такими рядками у файлі <filename>/etc/X11/Xmodmap</filename>:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -361,6 +377,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Третій приклад: змініть праву клавішу Control на клавішу Compose.\n"
+"!! Коли хочете задіяти символ Compose, натисніть цю клавішу, а потім два\n"
+"!! символи (наприклад `a' та `^', щоб дістати 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:215
@@ -369,6 +393,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Щоби розкоментувати код прикладу, видаліть символи <literal>!</literal> на "
+"початку кожного рядка. Зверніть увагу, що параметри із файлу "
+"<filename>Xmodmap</filename> будуть переписані, якщо ви скористаєтеся "
+"командою <command>setxkbmap</command>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -377,6 +405,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Щоб визначити сполучення клавіш для compose індивідуально для користувача, "
+"використовуйте утиліту налаштування клавіатури його стільниці або утиліту "
+"командного рядка <command>setxkbmap</command>:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:228
@@ -386,6 +417,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_КЛАВІША</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -395,6 +430,10 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"У змінній <replaceable>КЛАВІША_COMPOSE</replaceable> скористайтеся бажаними "
+"символами, наприклад, <literal>ralt</literal>, <literal>lwin</literal>, "
+"<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal> "
+"або <literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:240
@@ -402,6 +441,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"Альтернативно можна використовувати метод введення IBus, що дозволяє "
+"набирати потрібні символи без використання клавіші Compose."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:263
@@ -411,43 +452,34 @@ msgstr "Додаткові відомості та зворотній зв'яз�
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:266
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Прочитайте документи <filename>README</filename> на носії."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:271
-#, fuzzy
-#| msgid ""
-#| "Get detailed changelog information about a particular package from the "
-#| "RPM:"
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
-msgstr "Отримати докладний журнал змін конкретного пакунку за допомогою RPM:"
+msgstr "Переглянути докладний журнал змін конкретного пакунку за допомогою RPM:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:275
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+#, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr "rpm --changelog -qp &lt;НАЗВАФАЙЛУ&gt;.rpm"
+msgstr "rpm --changelog -qp <replaceable>НАЗВА_ФАЙЛУ</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "Замініть <replaceable>НАЗВАФАЙЛУ</replaceable> назвою пакунку RPM."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:281
-#, fuzzy
-#| msgid ""
-#| "Check the <filename>ChangeLog</filename> file in the top level of the DVD "
-#| "for a chronological log of all changes made to the updated packages."
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
-"Хронологічний журнал усіх змін в оновлених пакетах наведено у файлі "
-"<filename>ChangeLog</filename> на верхньому рівні DVD."
+"Хронологічний журнал усіх змін в оновлених пакунках наведено у файлі "
+"<filename>ChangeLog</filename> на верхньому рівні носія."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:287
@@ -463,36 +495,26 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:293
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <ulink url=\"https://doc."
-#| "opensuse.org/\"/>."
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
 msgstr ""
-"Детальнішу інформацію про нові можливості можна знайти за адресою <ulink url="
-"\"https://doc.opensuse.org/\"/>."
+"Додаткову та оновлену документацію можна знайти на <link xlink:href=\""
+"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:299
-#, fuzzy
-#| msgid ""
-#| "For the latest news from openSUSE, see <ulink url=\"https://www.opensuse."
-#| "org\"/>."
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
-"Детальнішу інформацію про нові можливості можна знайти за адресою <ulink url="
+"Найсвіжіші новини про продукти від openSUSE можна знайти на <link xlink:href="
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:306
-#, fuzzy
-#| msgid "Copyright © 2015 SUSE LLC"
 msgid "Copyright © SUSE LLC"
-msgstr "Авторські права © 2015 SUSE LLC"
+msgstr "Copyright © SUSE LLC"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:310
