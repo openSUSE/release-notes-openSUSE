@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-04-15 11:05+0000\n"
+"PO-Revision-Date: 2018-04-15 16:05+0000\n"
 "Last-Translator: Michał Szymański <szamanx01@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/pl/>\n"
@@ -84,6 +84,10 @@ msgid ""
 "whenever need arises. Translated language versions can temporarily be "
 "incomplete."
 msgstr ""
+"Informacje o wydaniu są nieustannie aktualizowane. Aby sprawdzić najnowszą "
+"wersję, sprawdź <link xlink:href=\"https://doc.opensuse.org/release-notes\"/>"
+". Angielska wersja jest aktualizowana na bieżąco. Tłumaczenia natomiast mogą "
+"być tymczasowo nieaktualne."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:46
@@ -213,7 +217,7 @@ msgstr "Informacje ogólne"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:127
 msgid "System with LUKS-Encrypted Partition Does Not Boot"
-msgstr ""
+msgstr "System z zaszyfrowaną partycją LUKS nie uruchamia się"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:128
@@ -223,11 +227,15 @@ msgid ""
 "line. See also <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=966255\"/>."
 msgstr ""
+"W niektórych przypadkach, Plymouth nie wyświetla poprawnie okienka do "
+"wpisywania hasła. Aby to naprawić dodaj <literal>plymouth.enable=0</literal> "
+"do wiersza poleceń jądra. Sprawdź również <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:137
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr ""
+msgstr "<command>systemctl stop apparmor</command> nie działa"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:138
@@ -236,6 +244,10 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"W przeszłości, powstawało zamieszanie co do różnic pomiędzy podobnie "
+"brzmiącymi pod-komendami polecenia <command> systemctl</command>, "
+"<literal>reload</literal> oraz <literal>restart</literal>, które działały "
+"dla AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -244,6 +256,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"Opcja <command>systemctl reload apparmor</command> przeładowywała profile "
+"AppArmor. (To była i jest rekomendowana metoda do przeładowywania profili "
+"AppArmor.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -253,6 +268,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"Opcja <command>systemctl restart apparmor</command> oznaczała zatrzymanie "
+"AppArmor, przez co profile AppArmor były rozładowane pozostawiając aktualnie "
+"działające procesy nie pokryte po restarcie. Jedynie nowe procesy były "
+"pokrywane."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -261,6 +280,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"Niestety, <systemitem>systemd</systemitem> nie zapewnia rozwiązania problemu "
+"w swoim formacie plików jednostkowych dla scenariusza przedstawionego w "
+"scenariuszu <literal>restart</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -269,6 +291,9 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"Zaczynając od wersji 2.12 AppArmor, polecenie <command>systemctl stop "
+"apparmor</command> nie będzie działało. W konsekwencji <command>systemctl "
+"restart apparmor</command> będzie poprawnie przeładowywać profile AppArmor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -277,6 +302,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Do rozładowania wszystkich profili AppArmor, użyj polecenia <command>aa-"
+"teardown</command>, które odpowiada zachowaniem usunientemu  poleceniu "
+"<command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
