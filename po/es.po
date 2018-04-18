@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-03-27 17:06+0000\n"
-"Last-Translator: Ioannes Andreas <ioannes@tuta.io>\n"
+"PO-Revision-Date: 2018-04-18 14:05+0000\n"
+"Last-Translator: Javier Llorente <javier@opensuse.org>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/es/>\n"
 "Language: es\n"
@@ -33,7 +33,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Sergio Gabriel Teves, 2007-2013\n"
-"Javier Llorente, 2013-2017\n"
+"Javier Llorente, 2013-2018\n"
 "Carlos Robinson M., 2007-2008, 2013-2014\n"
 "Victorhck, 2015\n"
 "Ioannes Andreas <ioannesandreas@opensuse.org>, 2018"
@@ -86,10 +86,10 @@ msgid ""
 "whenever need arises. Translated language versions can temporarily be "
 "incomplete."
 msgstr ""
-"Las notas de la versión están en constante desarrollo. Para saber sobre las "
-"últimas actualizaciones, consulte la siguiente versión en línea: <link "
-"xlink:href=\"https://doc.opensuse.org/release-notes\"/>. Las notas de la "
-"versión inglesa se actualizan en caso de ser necesario. Las versiones "
+"Las notas de la versión están en constante desarrollo. Para estar informado "
+"de las últimas actualizaciones, consulte la siguiente versión en línea: <"
+"link xlink:href=\"https://doc.opensuse.org/release-notes\"/>. Las notas de "
+"la versión inglesa se actualizan en caso de ser necesario. Las versiones "
 "traducidas a otros idiomas pueden estar temporalmente incompletas."
 
 #. (itstool) path: article/para
@@ -246,9 +246,10 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
-"En el pasado existía la confusión entre cómo el muy nombrado "
-"<command>systemctl</command>, y los subcomandos <literal>reload</literal> y "
-"<literal>restart</literal> funcionaban para AppArmor:"
+"En el pasado había confusión sobre las diferencias de cómo los subcomandos "
+"de <command>systemctl</command> con nombres muy parecidos "
+"<literal>reload</literal> y <literal>restart</literal> se comportaban con "
+"AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -257,9 +258,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
-"<command>systemctl reload apparmor</command> recargaba correctamente todos "
-"los perfiles de AppArmor. (Fue y sigue siendo la forma recomendada para "
-"volver a cargar los perfiles de AppArmor)"
+"<command>systemctl reload apparmor</command> volvía a cargar correctamente "
+"todos los perfiles de AppArmor. (Fue y sigue siendo la forma recomendada "
+"para volver a cargar los perfiles de AppArmor)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -270,9 +271,10 @@ msgid ""
 "be confined again."
 msgstr ""
 "<command>systemctl restart apparmor</command> en cambio significaba que "
-"AppArmor se detendría, borrando todos los perfiles de la memoria y luego "
-"reiniciando, lo que dejaba a todos los procesos existentes sin definir. Solo "
-"los procesos recién iniciados serían confinados nuevamente."
+"AppArmor se pararía, y de este modo quitaría todos los perfiles de la "
+"memoria y después se reiniciaría, lo que dejaba a todos los procesos "
+"existentes sin confinar. Sólo los procesos recién iniciados serían "
+"confinados nuevamente."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -293,9 +295,9 @@ msgid ""
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
 "A partir de AppArmor 2.12, el comando <command>systemctl stop "
-"apparmor</command> no funcionará. En consecuencia, el comando <command>"
-"systemctl restart apparmor</command> recargará correctamente los perfiles de "
-"AppArmor."
+"apparmor</command> dejará de funcionar. En consecuencia, el comando <command>"
+"systemctl restart apparmor</command> volverá a cargar correctamente los "
+"perfiles de AppArmor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -304,9 +306,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
-"Para cancelar todos los perfiles de AppArmor, use el nuevo comando <command"
-">aa-teardown</command>, que se comporta de manera similar al anterior "
-"<command>systemctl stop apparmor</command>."
+"Para quitar todos los perfiles de AppArmor, use el nuevo comando <command>aa-"
+"teardown</command>, que se comporta de manera similar al anterior <command>"
+"systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
@@ -322,7 +324,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr "Sin combinación predeterminada para la tecla «Compose»"
+msgstr "Sin combinación predeterminada para la tecla componer"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -333,12 +335,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
-"En las versiones previas de openSUSE, la combinación de la tecla «Compose» "
-"permitía la digitación de caracteres no presentes en el teclado. Por "
-"ejemplo, para producir <quote>å</quote>, podías presionar y soltar "
-"<keycombo><keycap function=\"shift\"/><keycap> Ctrl "
-"derecho</keycap></keycombo> y presionar sucesivamente <keycap>a</keycap> dos "
-"veces."
+"En las versiones previas de openSUSE, la combinación de la tecla componer "
+"permitía escribir caracteres no presentes en la disposición estándar del "
+"teclado. Por ejemplo, para sacar una <quote>å</quote>, podías pulsar y "
+"soltar el <keycombo><keycap function=\"shift\"/><keycap>Ctrl "
+"derecho</keycap></keycombo> y después pulsar <keycap>a</keycap> dos veces."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -358,7 +359,7 @@ msgid ""
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
 "Para definir una combinación válida al nivel del sistema para la tecla "
-"«Compose», use el fichero <filename>/etc/X11/Xmodmap</filename> y busque las "
+"componer, use el archivo <filename>/etc/X11/Xmodmap</filename> y busque las "
 "siguientes líneas:"
 
 #. (itstool) path: listitem/screen
@@ -390,10 +391,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
-"Para deshacer comentarios en el código de ejemplo, remueva el signo "
-"<literal>!</literal> del inicio de la líneas. Sin embargo, tenga en cuenta "
-"que la configuración de <filename>Xmodmap</filename> será sobrescrita si se "
-"emplea <command>setxkbmap</command>."
+"Para descomentar el código de ejemplo, quite el signo <literal>!</literal> "
+"del inicio de las líneas. Sin embargo, tenga en cuenta que la configuración "
+"de <filename>Xmodmap</filename> se sobrescribirá si se usa "
+"<command>setxkbmap</command>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -402,8 +403,8 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
-"Para definir una combinación específica del usuario para la tecla «Compose», "
-"utilice la herramienta de configuración del teclado de su escritorio o la "
+"Para definir una combinación específica del usuario para la tecla componer, "
+"utilice la herramienta de configuración del teclado del escritorio o la "
 "herramienta de línea de comandos <command>setxkbmap</command>:"
 
 #. (itstool) path: listitem/screen
@@ -471,7 +472,8 @@ msgstr "rpm --changelog -qp <replaceable>NOMBRE_DEL_ARCHIVO</replaceable>.rpm"
 #: xml/release-notes.xml:276
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
-"Reemplace <replaceable>NOMBREDELFICHERO</replaceable> con el nombre del RPM."
+"Reemplace <replaceable>NOMBRE_DEL_ARCHIVO</replaceable> con el nombre del "
+"RPM."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:281
@@ -479,9 +481,9 @@ msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
-"Revise el fichero <filename>ChangeLog</filename> en el directorio principal "
-"del medio para obtener una lista cronológica de todos los cambios hechos a "
-"los paquetes actualizados."
+"Consulte el archivo <filename>ChangeLog</filename> en el directorio "
+"principal del medio para obtener una lista cronológica de todos los cambios "
+"hechos a los paquetes actualizados."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:287
