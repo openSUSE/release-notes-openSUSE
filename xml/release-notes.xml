@@ -219,6 +219,75 @@
   <sect2 xml:id="sec.upgrade.423">
    <title>Upgrading from &opensuseleap; 42.3</title>
    <para/>
+
+   <sect3 xml:id="sec.server.postfix-directory">
+    <!-- boo#1091866 -->
+    <title>Postfix Admin Uses Backwards-Incompatible Directory Layout</title>
+    <para>
+     Starting with the version 3.2, as shipped in &thisflavor; 15.0,
+     Postfix Admin (package <package>postfixadmin</package>) uses a new and
+     backwards-incompatible directory layout:
+    </para>
+    <itemizedlist>
+     <listitem>
+      <para>
+       The configuration files moved to <filename>/etc/postfixadmin</filename>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       The PHP code moved to <filename>/usr/share/postfixadmin</filename>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>.
+      </para>
+     </listitem>
+    </itemizedlist>
+    <para>
+     Postfix Admin no longer reads configuration files from their
+     previous locations and the configuration is not migrated automatically.
+     Therefore, you need to migrate the following items manually:
+    </para>
+    <itemizedlist>
+     <listitem>
+      <para>
+       Move <filename>config.local.php</filename> from
+       <filename>/srv/www/htdocs/postfixadmin</filename> to
+       <filename>/etc/postfixadmin</filename>.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       If you made customizations to <filename>config.inc.php</filename>,
+       ideally merge these customizations into
+       <filename>/etc/postfixadmin/config.local.php</filename>.
+       We recommended keeping <filename>config.inc.php</filename> unmodified.
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       In the Apache configuration, add or enable the alias
+       <literal>/postfixadmin</literal>:
+      </para>
+      <itemizedlist>
+       <listitem>
+        <para>
+         To make the alias available on all virtual hosts, run:
+        </para>
+        <screen>a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart</screen>
+       </listitem>
+       <listitem>
+        <para>
+         To make the alias available only on a specific virtual host only, add
+         the alias to the config of that virtual host.
+        </para>
+       </listitem>
+      </itemizedlist>
+     </listitem>
+    </itemizedlist>
+   </sect3>
   </sect2>
 
  </sect1>
@@ -252,11 +321,11 @@
    <screen>zypper lifecycle</screen>
   </sect2>
 
-  <sect2 xml:id="sec.package.removed">
+  <!-- <sect2 xml:id="sec.package.removed">
    <title>Removed Packages</title>
    <para>
-    Deprecated packages are not shipped as part of the distribution anymore.
-   </para>
+    Removed packages are not shipped as part of the distribution anymore.
+   </para> -->
 
    <!-- <itemizedlist>
     <listitem>
@@ -266,7 +335,7 @@
      </para>
     </listitem>
    </itemizedlist> -->
-  </sect2>
+   <!-- </sect2> -->
 
  </sect1>
 
@@ -556,7 +625,16 @@ EnableHiDPI=true
    </sect2> -->
  </sect1>
 
- <sect1>
+<!-- <sect1 xml:id="sec.server">
+  <title>Server Software</title>
+
+  <para>
+   This section lists changes to server software features in &thisversion;.
+  </para>
+
+ </sect1> -->
+
+ <sect1 xml:id="sec.security">
   <title>Security</title>
 
   <para>
