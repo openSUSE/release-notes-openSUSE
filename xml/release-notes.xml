@@ -184,6 +184,18 @@
     <link xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=1044816"/>.
    </para>
   </sect2>
+
+  <sect2 xml:id="sec.install.hidpi">
+   <!-- boo#1090240 -->
+   <title>Scaling the Installer UI on Computers with High-DPI Displays</title>
+   <para>
+    The YaST installer does not scale its UI for High-DPI displays by default.
+    If you have computer with a high-DPI display, you can set YaST to scale
+    its UI automatically for the display. To do so, add the parameter
+    <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> to the bootloader
+    command line.
+   </para>
+  </sect2>
  </sect1>
 
  <sect1 xml:id="upgrade">
@@ -363,6 +375,39 @@ setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_
      </para>
     </step>
    </procedure>
+  </sect2>
+
+  <sect2 xml:id="sec.desktop.yast-hidpi">
+   <!-- boo#1083873 -->
+   <title>Scaling the SDDM UI on Computers with High-DPI Displays</title>
+   <para>
+    The default login manager for KDE, SDDM, does not scale its UI for High-DPI
+    displays by default.
+    If you have computer with a high-DPI display, you can set SDDM to scale
+    its UI automatically for the display using the configuration file
+    <filename>/etc/sddm.conf</filename>:
+   </para>
+<screen>
+[XDisplay]
+ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>
+EnableHiDPI=true
+</screen>
+   <para>
+    Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI
+    value, such as <literal>192</literal>. For best scaling results, use a
+    DPI value that is a multiple of the default 96 DPI.
+   </para>
+  </sect2>
+
+  <sect2 xml:id="sec.desktop.yast-hidpi">
+   <!-- bsc#1090240 -->
+   <title>Scaling the YaST UI on Computers with High-DPI Displays</title>
+   <para>
+    YaST does not scale its UI for High-DPI displays by default.
+    If you have computer with a high-DPI display, you can set YaST to scale
+    its UI automatically for the display. To do so, set the environment
+    variable <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>.
+   </para>
   </sect2>
 
   <sect2 xml:id="sec.general.mp3-media">
