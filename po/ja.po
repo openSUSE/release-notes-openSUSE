@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2018-05-09 22:03+0200\n"
-"PO-Revision-Date: 2018-03-14 01:03+0000\n"
+"PO-Revision-Date: 2018-05-09 23:24+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap_15_0/ja/>\n"
+"opensuse/leap-15_0/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -203,7 +203,7 @@ msgstr "最小限のシステムインストールについて"
 msgid ""
 "The minimal system installation lacks certain functionality that is often "
 "taken for granted:"
-msgstr ""
+msgstr "最小限のシステムをインストールした場合、下記に示すとおり一般的に必要な機能がインストールされません:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:102
@@ -211,6 +211,8 @@ msgid ""
 "It does not contain a software firewall front-end. You can install the "
 "package <package>firewalld</package> additionally."
 msgstr ""
+"ソフトウエアファイアウオールのフロントエンドがインストールされません。必要であれば、 <package>firewalld</package> "
+"パッケージをインストールしてお使いください。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:108
@@ -218,6 +220,8 @@ msgid ""
 "It does not contain a YaST. You can install the pattern <package>patterns-"
 "yast-yast2_basis</package> additionally."
 msgstr ""
+"YaST がインストールされません。必要であれば、 <package>patterns-yast-yast2_basis</package> "
+"パターンをインストールしてお使いください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:117
@@ -382,7 +386,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:196
 msgid "Scaling the Installer UI on Computers with High-DPI Displays"
-msgstr ""
+msgstr "高 DPI ディスプレイのコンピュータにおけるインストーラ UI の表示について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:197
@@ -393,6 +397,10 @@ msgid ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> to the bootloader command "
 "line."
 msgstr ""
+"既定では、 YaST インストーラは高 DPI ディスプレイ環境において、正しい縮尺での表示が行なわれません。お使いのコンピュータが高 DPI "
+"ディスプレイの環境である場合は、起動時に設定を行なうことで YaST に自動で縮尺を設定させることができます。これを実施したい場合は、"
+"ブートローダのコマンドラインパラメータとして <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> "
+"を追加してください。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:208
@@ -414,12 +422,8 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:215
-#, fuzzy
-#| msgid "Additionally, check <xref linkend=\"sec.general.deprecated\"/>."
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
-msgstr ""
-"このほか、 <xref linkend=\"sec.general.deprecated\"/> についてもご覧くださ"
-"い。"
+msgstr "このほか、 <xref linkend=\"sec.package\"/> についてもご覧ください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:220
@@ -429,7 +433,7 @@ msgstr "openSUSE Leap 42.3 からのアップグレード"
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:225
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
-msgstr ""
+msgstr "postfixadmin が後方互換性のないディレクトリレイアウトを使用している問題について"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:226
@@ -438,24 +442,25 @@ msgid ""
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
+"openSUSE Leap 15.0 で同梱されるようになったバージョン 3.2 では、 Postfix Admin "
+"(<package>postfixadmin</package> パッケージ) "
+"は、新しく後方互換性のないディレクトリレイアウトを使用するようになっています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:233
 msgid ""
 "The configuration files moved to <filename>/etc/postfixadmin</filename>."
-msgstr ""
+msgstr "設定ファイルが <filename>/etc/postfixadmin</filename> に移動されています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:238
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
-msgstr ""
+msgstr "PHP コードが <filename>/usr/share/postfixadmin</filename> に移動されています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:243
-#, fuzzy
-#| msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgid "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
-msgstr "古いディレクトリ <filename>/mnt/var/cache.old</filename> を削除します:"
+msgstr "Smarty キャッシュが <filename>/var/cache/postfixadmin</filename> に移動されています。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:248
@@ -464,19 +469,18 @@ msgid ""
 "locations and the configuration is not migrated automatically. Therefore, "
 "you need to migrate the following items manually:"
 msgstr ""
+"Postfix Admin "
+"は、従来のディレクトリの設定を読み込むことは行なっておらず、自動での設定移行も行なっていません。そのため、下記の手順で設定を移行する必要があります:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
-#, fuzzy
-#| msgid ""
-#| "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</"
-#| "filename> to <filename>/etc/fstab</filename>."
 msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
 msgstr ""
-"<filename>/etc/samba/cifstab.rpmsave</filename> ファイルに書かれているマウン"
-"トの設定を、<filename>/etc/fstab</filename> ファイルに追記します。"
+"<filename>config.local.php</filename> を "
+"<filename>/srv/www/htdocs/postfixadmin</filename> から "
+"<filename>/etc/postfixadmin</filename> に移動します。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -486,6 +490,9 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
+"<filename>config.inc.php</filename> をカスタマイズしている場合は、カスタマイズしている項目を "
+"<filename>/etc/postfixadmin/config.local.php</filename> で設定しなおします。なお、 "
+"<filename>config.inc.php</filename> はそのまま変更せず残しておくことをお勧めします。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:270
@@ -493,29 +500,30 @@ msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
 msgstr ""
+"Apache 側の設定では、 <literal>/postfixadmin</literal> の別名定義 (エイリアス) を追加するか、有効にします:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "To make the alias available on all virtual hosts, run:"
-msgstr ""
+msgstr "全ての仮想ホストに対して別名定義を有効化するには、下記のように実行します:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:279
 #, no-wrap
 msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
-msgstr ""
+msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:282
 msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
-msgstr ""
+msgstr "特定の仮想ホストに対してのみ別名定義を有効にするには、対象の仮想ホストの設定内に、別名定義を設定してください。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:296
 msgid "Packaging Changes"
-msgstr ""
+msgstr "パッケージの変更について"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:299
@@ -524,23 +532,14 @@ msgstr "廃止予定のパッケージについて"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:300
-#, fuzzy
-#| msgid ""
-#| "The following packages are still shipped as part of the distribution but "
-#| "are deprecated. The packages exist to aid migration, but their use is "
-#| "discouraged and they may not receive updates. The packages will be "
-#| "removed in the next version of the distribution."
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"下記のパッケージはディストリビューションの一部として配布されていますが、廃止"
-"予定としてマークされています。パッケージは旧バージョンからの移行を目的として"
-"残されていますが、可能であれば使用を避けるべきものであり、今後は更新を受け取"
-"れない可能性があります。また、これらのパッケージはディストリビューションの次"
-"期バージョンで削除される予定です。"
+"廃止予定のパッケージは、ディストリビューションの一部として現在も配布されているものの、次期バージョンの openSUSE Leap で削除される予定になっ"
+"ているものを示しています。これらのパッケージは移行を目的として残されていますが、使用は推奨されず、更新を受け取れない可能性があります。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:316
@@ -562,23 +561,17 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:343
 msgid "Desktop"
-msgstr ""
+msgstr "デスクトップについて"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:345
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#| "match any other category."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
-msgstr ""
-"本章では、他の分類に属さない openSUSE Leap 15.0 関連の一般的な問題を説明して"
-"います。"
+msgstr "本章では、 openSUSE Leap 15.0 のデスクトップ関連の問題や変更点を説明しています。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:351
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
-msgstr ""
+msgstr "Wayland 環境での KDE におけるプロプライエタリ nVidia ドライバのサポートについて"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:352
@@ -587,6 +580,8 @@ msgid ""
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
 "the X session."
 msgstr ""
+"KDE Plasma Wayland セッションは、プロプライエタリ版の nVidia ドライバでサポートしていません。 KDE をお使いの場合で、"
+"プロプライエタリ版の nVidia ドライバをお使いの場合は、 X セッションのままお使いください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:361
@@ -713,6 +708,8 @@ msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
 msgstr ""
+"ログインマネージャとデスクトップセッションの設定方法に対する <command>update-alternatives</command> "
+"への移行について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
@@ -723,26 +720,30 @@ msgid ""
 "defined using <filename>/etc/sysconfig</filename> anymore but with the "
 "alternatives system."
 msgstr ""
+"従来のバージョンでは、 <filename>/etc/sysconfig</filename> か YaST モジュールの <guimenu>/etc/"
+"sysconfig エディタ</guimenu> を利用することで、ログインマネージャとデスクトップセッションを設定していました。 openSUSE "
+"Leap 15.0 では、これらの設定は <filename>/etc/sysconfig</filename> ではなく、 alternatives "
+"システムを利用して設定するようになりました。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:432
 msgid "To change the defaults, use the following alternatives:"
-msgstr ""
+msgstr "既定値を変更するには、下記の alternatives をお使いください:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
 msgid "Login manager: <literal>default-displaymanager</literal>"
-msgstr ""
+msgstr "ログインマネージャ: <literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:442
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
-msgstr ""
+msgstr "Wayland セッション: <literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:447
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
-msgstr ""
+msgstr "X デスクトップセッション: <literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
@@ -750,12 +751,13 @@ msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
 msgstr ""
+"たとえば <literal>default-displaymanager</literal> の設定を表示したい場合は、下記のように実行します:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:456
 #, no-wrap
 msgid "sudo update-alternatives --display default-displaymanager"
-msgstr ""
+msgstr "sudo update-alternatives --display default-displaymanager"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:457
@@ -763,6 +765,8 @@ msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
 msgstr ""
+"<literal>default-displaymanager</literal> を <command>xdm</command> "
+"に切り替えるには、下記のように実行します:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:461
@@ -771,6 +775,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:463
@@ -779,6 +785,9 @@ msgid ""
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
 "<package>yast2-alternatives</package>."
 msgstr ""
+"alternatives をグラフィカルに管理したい場合は、 YaST モジュールの <guimenu>Alternatives</guimenu> "
+"をお使いいただくことができます。このモジュールをインストールするには、 <package>yast2-alternatives</package> "
+"パッケージをインストールしてください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:471
@@ -849,7 +858,7 @@ msgstr "最後にシステムを再起動してください。"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:515
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
-msgstr ""
+msgstr "高 DPI ディスプレイのコンピュータにおける SDDM UI の表示について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:516
@@ -859,6 +868,9 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"KDE の既定のログインマネージャである SDDM は、既定では高 DPI ディスプレイ環境において、正しい縮尺での表示が行なわれません。"
+"お使いのコンピュータが高 DPI ディスプレイの環境である場合は、設定ファイル <filename>/etc/sddm.conf</filename> "
+"内に設定を行なうことで、自動で縮尺を設定させることができます:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:523
@@ -869,6 +881,10 @@ msgid ""
 "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
 "EnableHiDPI=true\n"
 msgstr ""
+"\n"
+"[XDisplay]\n"
+"ServerArguments=-dpi <replaceable>DPI_設定</replaceable>\n"
+"EnableHiDPI=true\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:528
@@ -877,11 +893,14 @@ msgid ""
 "value, such as <literal>192</literal>. For best scaling results, use a DPI "
 "value that is a multiple of the default 96 DPI."
 msgstr ""
+"なお、 <replaceable>DPI_設定</replaceable> の箇所には、設定したい DPI 値 (例: "
+"<literal>192</literal>) を指定してください。最適な縮尺で表示したい場合は、既定の 96 DPI "
+"の整数倍の値を指定してお使いください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:537
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
-msgstr ""
+msgstr "高 DPI ディスプレイのコンピュータにおける YaST UI の表示について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:538
@@ -891,11 +910,14 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"既定では、 YaST は高 DPI ディスプレイ環境において、正しい縮尺での表示が行なわれません。お使いのコンピュータが高 DPI "
+"ディスプレイの環境である場合は、起動時に設定を行なうことで YaST に自動で縮尺を設定させることができます。これを実施したい場合は、環境変数 "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> を設定してください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:548
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
-msgstr ""
+msgstr "Wayland 環境下の Firefox や Chromium で画面共有が動作しない問題について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:549
@@ -905,13 +927,16 @@ msgid ""
 "application windows. This functionality is currently not supported in either "
 "browser when using a Wayland session."
 msgstr ""
+"Firefox と Chromium は、ビデオ会議アプリケーションなどの Web "
+"ベースツールなどで、画面全体や個別のアプリケーションウインドウを共有することができます。ですが、この機能は Wayland "
+"セッションをお使いの場合、どのブラウザでもサポートされていません。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:555
 msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
-msgstr ""
+msgstr "Firefox や Chromium をお使いの場合で、画面共有を利用したい場合は、 X セッションをお使いください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:562
@@ -979,7 +1004,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:595
 msgid "FreeType Font Rendering Changes"
-msgstr ""
+msgstr "FreeType フォント描画方法の変更について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:596
@@ -990,17 +1015,21 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
+"FreeTyoe 2.6.4 では、新しい既定のグリフヒンティングインタプリタ (バージョン 38) "
+"が提供されるようになり、他のオペレーティングシステムに非常に近い表示を行なうようになっています。ですが、この仕組みは環境によっては "
+"<quote>よりぼやけた</quote> 表示のように見えてしまう場合があります。以前の FreeType の描画方法に戻したい場合は、任意のレベル "
+"(システム全体、ユーザ単位、プログラム単位) で下記の環境変数を設定してください:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:603
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
-msgstr ""
+msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:608
 msgid "Enabling KDE Plasma Browser Integration"
-msgstr ""
+msgstr "KDE Plasma におけるブラウザ統合の有効化について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:609
@@ -1009,13 +1038,16 @@ msgid ""
 "multimedia and downloads using KDE system tools and gives quick access to "
 "tabs via the <guimenu>Run Command</guimenu> bar of the KDE Plasma desktop."
 msgstr ""
+"Firefox および Chromium/Chrome に対応する Plasma のブラウザ統合を利用することで、 KDE "
+"のシステムツール経由でマルチメディアの状態を監視したり、ダウンロードを監視したりすることができるほか、 KDE Plasma デスクトップ内の "
+"<guimenu>コマンドの実行 (Run Command)</guimenu> バーから、ブラウザにアクセスすることができるようになります。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:615
 msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
-msgstr ""
+msgstr "ブラウザ統合の機能は、相互に動作する下記の 2 種類のパーツから構成されています:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:621
@@ -1023,13 +1055,15 @@ msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
 msgstr ""
+"デスクトップ側の機能としては、システムパッケージ <package>plasma-browser-integration</package> "
+"をインストールすることで、お使いいただけるようになります。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:627
 msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
-msgstr ""
+msgstr "ブラウザ側の機能としては、お使いのブラウザのアドオンストアでインストールする必要があります:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:633
@@ -1037,6 +1071,8 @@ msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
 msgstr ""
+"Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
+"integration/\"/>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:638
@@ -1044,13 +1080,15 @@ msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 msgstr ""
+"Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/detail"
+"/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:645
 msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
-msgstr ""
+msgstr "ただし、この機能は現在も開発途上のものであり、 openSUSE Leap 15.0 では早期バージョンとして公開されているものになります。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:654
@@ -1059,32 +1097,25 @@ msgstr "Emacs の <literal>psgml</literal> モジュールの読み込みにつ�
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:655
-#, fuzzy
-#| msgid ""
-#| "Because of conflicts with Emacs modules from the default installation, "
-#| "openSUSE Leap openSUSE Leap 15.0 can no longer load the <literal>psgml</"
-#| "literal> module automatically. For more information, see the file "
-#| "<filename>README</filename> from the package <package>psgml</package>."
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
 "automatically. For more information, see the file <filename>README</"
 "filename> from the package <package>psgml</package>."
 msgstr ""
-"既定のインストールでは emacs モジュール間で競合が発生することから、 openSUSE "
-"Leap 15.0 では <literal>psgml</literal> モジュールを自動では読み込まなくなっ"
-"ています。詳しくは <filename>README</filename> ファイル (<package>psgml</"
-"package> パッケージ内) をお読みください。"
+"既定のインストールでは emacs モジュール間で競合が発生することから、 openSUSE Leap 15.0 では "
+"<literal>psgml</literal> モジュールを自動では読み込まなくなっています。詳しくは "
+"<filename>README</filename> ファイル (<package>psgml</package> パッケージ内) をお読みください。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:686
 msgid "Security"
-msgstr ""
+msgstr "セキュリティ"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:688
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
-msgstr ""
+msgstr "本章では、 openSUSE Leap 15.0 におけるセキュリティ機能の変更について説明しています。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:694
