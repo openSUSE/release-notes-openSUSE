@@ -397,6 +397,19 @@ setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_
    </para>
   </sect2>
 
+  <sect2 xml:id="sec.desktop.freetype-rendering-38">
+   <!-- boo#1085372 -->
+   <title>FreeType Font Rendering Changes</title>
+   <para>
+    FreeType 2.6.4 has a new default glyph hinting interpreter (version 38)
+    that more closely matches other operating systems but may look
+    <quote>more fuzzy</quote> to some. To restore the previous FreeType
+    behavior, set the following environment variable at any level
+    (system-wide, user-specific, or program-specific) of your choice:
+   </para>
+   <screen>FREETYPE_PROPERTIES="truetype:interpreter-version=35"</screen>
+  </sect2>
+
   <sect2 xml:id="sec.general.psgml">
    <!-- boo#1080086 -->
    <title>Loading the Emacs <literal>psgml</literal> Module</title>
