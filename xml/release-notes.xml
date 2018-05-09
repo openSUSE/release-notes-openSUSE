@@ -419,6 +419,54 @@ setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_
    </itemizedlist>
   </sect2>
 
+  <sect2 xml:id="sec.desktop.set-login-manager-session">
+   <!-- boo#1091021 -->
+   <title>Use <command>update-alternatives</command> to Set Login Manager and Desktop Session</title>
+   <para>
+    In the past, you could use <filename>/etc/sysconfig</filename> or the
+    &yast; module <guimenu>/etc/sysconfig Editor</guimenu> to define the login
+    manager and desktop session. Starting with &thisflavor; 15.0, the values
+    are not defined using <filename>/etc/sysconfig</filename> anymore but
+    with the alternatives system.
+   </para>
+   <para>
+    To change the defaults, use the following alternatives:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      Login manager: <literal>default-displaymanager</literal>
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Wayland session: <literal>default-waylandsession.desktop</literal>
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      X desktop session: <literal>default-xsession.desktop</literal>
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    For example, to check the value of
+    <literal>default-displaymanager</literal>, use:
+   </para>
+<screen>sudo update-alternatives --display default-displaymanager</screen>
+   <para>
+    To switch the <literal>default-displaymanager</literal> to
+    <command>xdm</command>, use:
+   </para>
+<screen>sudo update-alternatives --set default-displaymanager \
+  /usr/lib/X11/displaymanagers/xdm</screen>
+   <para>
+    To enable graphical management of alternatives, use the &yast; module
+    <guimenu>Alternatives</guimenu> that can be installed from the package
+    <package>yast2-alternatives</package>.
+   </para>
+  </sect2>
+
   <sect2 xml:id="sec.general.gdm">
    <title>No Screen Lock When Using GNOME Shell But Not GDM</title>
    <para>
