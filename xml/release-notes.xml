@@ -89,22 +89,28 @@
   </para>
 
   <sect2 xml:id="sec.install.minimalinstall">
-  <!-- https://bugzilla.suse.com/show_bug.cgi?id=947712 -->
-  <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
+   <!-- https://bugzilla.suse.com/show_bug.cgi?id=947712 -->
+   <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
+   <!-- boo#1092056 -->
    <title>Minimal System Installation</title>
-   <!-- FIXME: Is this still accurate, patterns and all or is this affected
-   by decisions made on the SLE side? -->
    <para>
-    To avoid some big recommended packages from being installed, the pattern
-    for minimal installations uses another pattern that creates conflicts with
-    undesired packages. This pattern,
-    <literal>patterns-openSUSE-minimal_base-conflicts</literal>, can be removed
-    after installation.
+    The minimal system installation lacks certain functionality that is often
+    taken for granted:
    </para>
-   <para>
-    Note that the minimal installation has no firewall by default. If you need
-    one, install <literal>firewalld</literal>.
-   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      It does not contain a software firewall front-end. You can
+      install the package <package>firewalld</package> additionally.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      It does not contain a YaST. You can install the pattern
+      <package>patterns-yast-yast2_basis</package> additionally.
+     </para>
+    </listitem>
+   </itemizedlist>
   </sect2>
 
   <sect2 xml:id="sec.install.uefi">
