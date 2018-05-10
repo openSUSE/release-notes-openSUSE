@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-09 22:03+0200\n"
-"PO-Revision-Date: 2018-03-22 13:00+0000\n"
-"Last-Translator: Stefan Knorr <sknorr@suse.com>\n"
+"PO-Revision-Date: 2018-05-11 00:01+0000\n"
+"Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/nl/>\n"
 "Language: nl\n"
@@ -201,6 +201,8 @@ msgid ""
 "The minimal system installation lacks certain functionality that is often "
 "taken for granted:"
 msgstr ""
+"In de minimale systeeminstallatie ontbreekt bepaalde functionaliteit die "
+"vaak voor lief genomen wordt:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:102
@@ -208,6 +210,8 @@ msgid ""
 "It does not contain a software firewall front-end. You can install the "
 "package <package>firewalld</package> additionally."
 msgstr ""
+"Het bevat geen software firewall front-end. U kunt het pakket "
+"<package>firewalld</package> hiervoor installeren."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:108
@@ -215,6 +219,8 @@ msgid ""
 "It does not contain a YaST. You can install the pattern <package>patterns-"
 "yast-yast2_basis</package> additionally."
 msgstr ""
+"Het bevat geen YaST. U kunt het patroon <package>patterns-yast-"
+"yast2_basis</package> als extra installeren."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:117
@@ -381,6 +387,8 @@ msgstr ""
 #: xml/release-notes.xml:196
 msgid "Scaling the Installer UI on Computers with High-DPI Displays"
 msgstr ""
+"Schalen van de UI van het installatieprogramma op computers met hoge DPI "
+"schermen"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:197
@@ -391,6 +399,11 @@ msgid ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> to the bootloader command "
 "line."
 msgstr ""
+"Het installatieprogramma YaST schaalt zijn UI niet standaard voor hoge DPI "
+"schermen. Als u een computer met een hoge DPI scherm hebt, kunt u YaST "
+"instellen om zijn UI automatisch te schalen voor het scherm. U doet dat door "
+"de parameter <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> toe te voegen "
+"aan de opdrachtregel in de bootloader."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:208
@@ -412,10 +425,8 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:215
-#, fuzzy
-#| msgid "Additionally, check <xref linkend=\"sec.general.deprecated\"/>."
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
-msgstr "Controleer bovendien <xref linkend=\"sec.general.deprecated\"/>."
+msgstr "Controleer bovendien <xref linkend=\"sec.package\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:220
@@ -426,6 +437,7 @@ msgstr "Opwaardering vanaf openSUSE Leap 42.3"
 #: xml/release-notes.xml:225
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
 msgstr ""
+"Postfix-admin gebruikt geen achterwaarts compatibele indeling van mappen"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:226
@@ -434,31 +446,30 @@ msgid ""
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
+"Beginnend met versie 3.2, zoals geleverd in openSUSE Leap 15.0, gebruikt "
+"Postfix-admin (pakket <package>postfixadmin</package>) een nieuwe indeling "
+"van mappen die niet achterwaarts compatibel is:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:233
-#, fuzzy
-#| msgid "The MySQL socket is moved to <filename>/var/run/mysql</filename>."
 msgid ""
 "The configuration files moved to <filename>/etc/postfixadmin</filename>."
 msgstr ""
-"De MySQL-socket is verplaatst naar <filename>/var/run/mysql</filename>."
+"De configuratiebestanden zijn verplaatst naar "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:238
-#, fuzzy
-#| msgid "The MySQL socket is moved to <filename>/var/run/mysql</filename>."
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
 msgstr ""
-"De MySQL-socket is verplaatst naar <filename>/var/run/mysql</filename>."
+"De PHP code is verplaatst naar <filename>/usr/share/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:243
-#, fuzzy
-#| msgid "The MySQL socket is moved to <filename>/var/run/mysql</filename>."
 msgid "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
 msgstr ""
-"De MySQL-socket is verplaatst naar <filename>/var/run/mysql</filename>."
+"De Smarty-cache is verplaatst naar "
+"<filename>/var/cache/postfixadmin</filename>."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:248
@@ -467,19 +478,19 @@ msgid ""
 "locations and the configuration is not migrated automatically. Therefore, "
 "you need to migrate the following items manually:"
 msgstr ""
+"Postfix-admin leest niet langer configuratiebestanden uit hun vorige "
+"locaties en de configuratie is niet automatisch gemigreerd. Daarom moet u de "
+"volgende items handmatig migreren:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
-#, fuzzy
-#| msgid ""
-#| "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</"
-#| "filename> to <filename>/etc/fstab</filename>."
 msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
 msgstr ""
-"Voeg al uw aankoppelpunten uit <filename>/etc/samba/cifstab.rpmsave</"
-"filename> achteraan in <filename>/etc/fstab</filename>."
+"Verplaats <filename>config.local.php</filename> van "
+"<filename>/srv/www/htdocs/postfixadmin</filename> naar "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -506,7 +517,7 @@ msgstr ""
 #: xml/release-notes.xml:279
 #, no-wrap
 msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
-msgstr ""
+msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:282
@@ -518,7 +529,7 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:296
 msgid "Packaging Changes"
-msgstr ""
+msgstr "Wijzigingen in pakketten"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:299
@@ -527,23 +538,16 @@ msgstr "Verouderde pakketten"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:300
-#, fuzzy
-#| msgid ""
-#| "The following packages are still shipped as part of the distribution but "
-#| "are deprecated. The packages exist to aid migration, but their use is "
-#| "discouraged and they may not receive updates. The packages will be "
-#| "removed in the next version of the distribution."
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"De volgende pakketten worden nog steeds geleverd als onderdeel van de "
-"distributie maar zijn verouderd. De pakketten bestaan om te helpen bij "
-"migratie, maar hun gebruik wordt ontraden en ze zullen niet worden "
-"bijgewerkt. De pakketten zullen worden verwijderd in de volgende versie van "
-"de distributie."
+"Verouderde pakketten worden nog steeds geleverd als onderdeel van de "
+"distributie maar zijn gepland om verwijderd te worden in de volgende versie "
+"van openSUSE Leap. Deze pakketten bestaan om migratie te ondersteunen, maar "
+"hun gebruik wordt ontmoedigd en ze worden mogelijk niet bijgewerkt."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:316
@@ -565,23 +569,21 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:343
 msgid "Desktop"
-msgstr ""
+msgstr "Bureaublad"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:345
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#| "match any other category."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
 msgstr ""
-"Deze sectie geeft een lijst met algemene problemen met openSUSE Leap 15.0 "
-"die niet in een andere categorie zijn onder te brengen."
+"Deze sectie geeft een lijst met problemen op het bureaublad in openSUSE Leap "
+"15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:351
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
 msgstr ""
+"KDE onder Wayland wordt niet ondersteund met het Nvidia-stuurprogramma van "
+"de fabrikant"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:352
@@ -717,6 +719,8 @@ msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
 msgstr ""
+"Gebruik <command>update-alternatives</command> om login-beheerder en "
+"bureaubladsessie in te stellen"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
@@ -730,25 +734,23 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:432
-#, fuzzy
-#| msgid "These release notes cover the following areas:"
 msgid "To change the defaults, use the following alternatives:"
-msgstr "Deze uitgavenotities beslaan de volgende gebieden:"
+msgstr "Om de standaarden te wijzigen, gebruik de volgende alternatieven:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
 msgid "Login manager: <literal>default-displaymanager</literal>"
-msgstr ""
+msgstr "Login-beheerder: <literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:442
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
-msgstr ""
+msgstr "Wayland-sessie: <literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:447
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
-msgstr ""
+msgstr "X-bureaubladsessie: <literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
@@ -756,12 +758,14 @@ msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
 msgstr ""
+"Om bijvoorbeeld de waarde van <literal>default-displaymanager</literal> te "
+"controleren, gebruik:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:456
 #, no-wrap
 msgid "sudo update-alternatives --display default-displaymanager"
-msgstr ""
+msgstr "sudo update-alternatives --display default-displaymanager"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:457
@@ -769,6 +773,8 @@ msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
 msgstr ""
+"Om de <literal>default-displaymanager</literal> om te schakelen naar "
+"<command>xdm</command>, gebruik:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:461
@@ -777,6 +783,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:463
