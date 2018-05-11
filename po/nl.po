@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-09 22:03+0200\n"
-"PO-Revision-Date: 2018-05-11 00:01+0000\n"
+"PO-Revision-Date: 2018-05-11 13:00+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/nl/>\n"
@@ -500,6 +500,10 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
+"Als u aanpassingen in <filename>config.inc.php</filename> hebt gemaakt, "
+"breng deze aanpassingen dan aan in "
+"<filename>/etc/postfixadmin/config.local.php</filename>. We bevelen aan om "
+"<filename>config.inc.php</filename> ongewijzigd te laten."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:270
@@ -507,11 +511,13 @@ msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
 msgstr ""
+"Voeg in de Apache configuratie in of schakel de alias "
+"<literal>/postfixadmin</literal> in:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "To make the alias available on all virtual hosts, run:"
-msgstr ""
+msgstr "Om de alias beschikbaar te maken op alle virtual hosts, voer uit:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:279
@@ -525,6 +531,8 @@ msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
 msgstr ""
+"Om de alias beschikbaar te maken op slechts een specifieke virtual host, "
+"voeg de alias in in de configuratie van die virtual host."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:296
@@ -592,6 +600,9 @@ msgid ""
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
 "the X session."
 msgstr ""
+"De KDE Plasma Wayland sessie wordt niet ondersteund met het Nvidia "
+"stuurprogramma van de leverancier. Als u KDE wilt gebruiken en het Nvidia "
+"stuurprogramma van de leverancier, blijf dan met de X-sessie."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:361
@@ -731,6 +742,11 @@ msgid ""
 "defined using <filename>/etc/sysconfig</filename> anymore but with the "
 "alternatives system."
 msgstr ""
+"In het verleden kon u <filename>/etc/sysconfig</filename> gebruiken of de "
+"YaST module <guimenu>/etc/sysconfig bewerker</guimenu> om de login-manager "
+"en bureaubladsessie te definiëren. Beginnend met openSUSE Leap 15.0, worden "
+"de waarden niet langer gedefinieerd met <filename>/etc/sysconfig</filename>, "
+"maar met het systeem van alternatives."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:432
@@ -793,6 +809,9 @@ msgid ""
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
 "<package>yast2-alternatives</package>."
 msgstr ""
+"Om grafisch beheer van alternatives in te schakelen, gebruikt u de YaST-"
+"module <guimenu>Alternatives</guimenu> die geïnstalleerd kan worden uit het "
+"pakket <package>yast2-alternatives</package>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:471
@@ -859,7 +878,7 @@ msgstr "Opnieuw opstarten."
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:515
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
-msgstr ""
+msgstr "De SDDM UI schalen op computers met hoge DPI schermen"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:516
@@ -869,6 +888,10 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"De standaard login-beheerder voor KDE, SDDM, schaalt zijn UI niet standaard "
+"voor hoge DPI schermen. Als u een computer hebt met een hoge DPI scherm, dan "
+"kunt u SDDM instellen om zijn UI automatisch te schalen voor het scherm met "
+"het configuratiebestand <filename>/etc/sddm.conf</filename>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:523
@@ -879,6 +902,10 @@ msgid ""
 "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
 "EnableHiDPI=true\n"
 msgstr ""
+"\n"
+"[XDisplay]\n"
+"ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
+"EnableHiDPI=true\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:528
@@ -887,11 +914,14 @@ msgid ""
 "value, such as <literal>192</literal>. For best scaling results, use a DPI "
 "value that is a multiple of the default 96 DPI."
 msgstr ""
+"Vervang <replaceable>DPI_SETTING</replaceable> met een toepasselijke DPI "
+"waarde, zoals <literal>192</literal>. Voor de beste resultaten met schalen "
+"gebruikt u een DPI waarde die een veelvoud van de standaard 96 DPI is."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:537
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
-msgstr ""
+msgstr "Schalen van de YaST UI op computers met hoge DPI schermen"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:538
@@ -901,11 +931,15 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"YaST schaalt zijn UI niet standaard voor hoge DPI schermen. Als u een "
+"computer hebt met een hoge DPI scherm, dan kunt u YaST instellen om zijn UI "
+"automatisch te schalen voor het scherm. Om dat te doen stel de "
+"omgevingsvariabele <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> in."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:548
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
-msgstr ""
+msgstr "Delen van scherm werkt niet in Firefox of Chromium onder Wayland"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:549
@@ -915,6 +949,10 @@ msgid ""
 "application windows. This functionality is currently not supported in either "
 "browser when using a Wayland session."
 msgstr ""
+"Firefox en Chromium staan normaal op het web gebaseerde hulpmiddelen, zoals "
+"toepassingen voor videoconferenties toe om het gehele scherm of individuele "
+"vensters van toepassingen te delen. Deze functionaliteit wordt nu niet "
+"ondersteund in beide browsers bij gebruikt van een Wayland sessie."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:555
@@ -922,6 +960,8 @@ msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
 msgstr ""
+"Om in staat te zijn uw scherm in Firefox of Chromium te delen, gebruik in "
+"plaats daarvan een X-sessie."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:562
@@ -989,7 +1029,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:595
 msgid "FreeType Font Rendering Changes"
-msgstr ""
+msgstr "Wijzigingen in rendering van FreeType lettertypen"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:596
@@ -1000,17 +1040,22 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
+"FreeType 2.6.4 haeeft een nieuwe standaard \"glyph hinting interpreter\" ("
+"versie 38) die dichter overeenkomt met andere besturingssystemen maar voor "
+"sommigen <quote>vager</quote> kan lijken. Om het vorige gedrag van FreeType "
+"te herstellen, stel de volgende ongevingsvariabele in op elk door u gewenst "
+"niveau (systeem-breed, gebruiker-specifiek of programma-specifiek):"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:603
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
-msgstr ""
+msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:608
 msgid "Enabling KDE Plasma Browser Integration"
-msgstr ""
+msgstr "KDE Plasma Browser-integratie inschakelen"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:609
@@ -1019,6 +1064,10 @@ msgid ""
 "multimedia and downloads using KDE system tools and gives quick access to "
 "tabs via the <guimenu>Run Command</guimenu> bar of the KDE Plasma desktop."
 msgstr ""
+"Plasma browser-integratie voor Firefox en Chromium/Chrome stelt in staat "
+"multimedia en downloads te monitoren met systeemhulpmiddelen van KDE en "
+"geeft snelle toegang tot tabbladen via de balk <guimenu>Commando "
+"uitvoeren</guimenu> van het KDE Plasma bureaublad."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:615
@@ -1026,6 +1075,8 @@ msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
 msgstr ""
+"De functionalityeit voor browser-integratie bestaat uit twee delen die samen "
+"moeten werken:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:621
@@ -1033,6 +1084,8 @@ msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
 msgstr ""
+"Het bureaubladgedeelte dat geïnstalleerd kan worden met het systeempakket "
+"<package>plasma-browser-integration</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:627
@@ -1040,6 +1093,8 @@ msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
 msgstr ""
+"Het browsergedeelte dat geïnstalleerd moet worden uit de add-on opslagruimte "
+"van uw browser:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:633
@@ -1047,6 +1102,8 @@ msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
 msgstr ""
+"Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
+"integration/\"/>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:638
@@ -1054,6 +1111,8 @@ msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 msgstr ""
+"Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/detail"
+"/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:645
@@ -1061,6 +1120,8 @@ msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
 msgstr ""
+"Merk op dat deze functionaliteit officieel nog steedsl in ontwikkeling is en "
+"openSUSE Leap 15.0 levert deze in een vroege versie ervan."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:654
@@ -1069,12 +1130,6 @@ msgstr "De Emacs-<literal>psgml</literal>-module laden"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:655
-#, fuzzy
-#| msgid ""
-#| "Because of conflicts with Emacs modules from the default installation, "
-#| "openSUSE Leap openSUSE Leap 15.0 can no longer load the <literal>psgml</"
-#| "literal> module automatically. For more information, see the file "
-#| "<filename>README</filename> from the package <package>psgml</package>."
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
@@ -1089,12 +1144,14 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:686
 msgid "Security"
-msgstr ""
+msgstr "Beveiliging"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:688
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr ""
+"Deze sectie biedt een lijst met wijzigingen in beveiligingsfuncties in "
+"openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:694
