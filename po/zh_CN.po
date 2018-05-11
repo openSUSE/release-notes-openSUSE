@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-09 22:03+0200\n"
-"PO-Revision-Date: 2018-04-06 22:01+0000\n"
-"Last-Translator: H. Zeng <zhx@cnzhx.net>\n"
+"PO-Revision-Date: 2018-05-11 16:50+0000\n"
+"Last-Translator: Grover Chou <groverchout@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap-15_0/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -186,21 +186,21 @@ msgstr "最小化系统安装"
 msgid ""
 "The minimal system installation lacks certain functionality that is often "
 "taken for granted:"
-msgstr ""
+msgstr "最小安装的系统缺乏通常被认为是理所当然的某些功能："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:102
 msgid ""
 "It does not contain a software firewall front-end. You can install the "
 "package <package>firewalld</package> additionally."
-msgstr ""
+msgstr "它不包含软件防火墙前端，你可以另行安装软件包 <package>firewalld</package>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:108
 msgid ""
 "It does not contain a YaST. You can install the pattern <package>patterns-"
 "yast-yast2_basis</package> additionally."
-msgstr ""
+msgstr "它不包含 YaST，你可以另行安装软件集 <package>patterns-yast-yast2_basis</package>。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:117
@@ -377,10 +377,8 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:215
-#, fuzzy
-#| msgid "Additionally, check <xref linkend=\"sec.general.deprecated\"/>."
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
-msgstr "如需了解更多信息，请见 <xref linkend=\"sec.general.deprecated\"/>。"
+msgstr "如需了解更多信息，请见 <xref linkend=\"sec.package\"/>。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:220
@@ -390,7 +388,7 @@ msgstr "从 openSUSE Leap 42.3 升级"
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:225
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
-msgstr ""
+msgstr "Postfix Admin 使用向后不兼容的目录布局"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:226
@@ -399,24 +397,24 @@ msgid ""
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
+"从版本 3.2 开始，即包含在 openSUSE Leap 15.0 中的 Postfix Admin（软件包 "
+"<package>postfixadmin</package>）使用了一个新的向后不兼容的目录布局："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:233
 msgid ""
 "The configuration files moved to <filename>/etc/postfixadmin</filename>."
-msgstr ""
+msgstr "配置文件移动到了 <filename>/etc/postfixadmin</filename>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:238
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
-msgstr ""
+msgstr "PHP 代码移动到了 <filename>/usr/share/postfixadmin</filename>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:243
-#, fuzzy
-#| msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgid "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
-msgstr "可以选择将 <filename>/mnt/var/cache.old</filename> 删除："
+msgstr "Smarty 缓存移动到了 <filename>/var/cache/postfixadmin</filename>。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:248
@@ -424,20 +422,17 @@ msgid ""
 "Postfix Admin no longer reads configuration files from their previous "
 "locations and the configuration is not migrated automatically. Therefore, "
 "you need to migrate the following items manually:"
-msgstr ""
+msgstr "Postfix Admin 不再从以前的位置读取配置文件，并且配置不会自动迁移。因此，您需要手动迁移以下项目："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
-#, fuzzy
-#| msgid ""
-#| "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</"
-#| "filename> to <filename>/etc/fstab</filename>."
 msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
 msgstr ""
-"从 <filename>/etc/samba/cifstab.rpmsave</filelname> 追加您的全部挂载点到 "
-"<filename>/etc/fstab</filename>。"
+"在 <filename>/srv/www/htdocs/postfixadmin</filename> 中将 "
+"<filename>config.local.php</filename> 移动到 "
+"<filename>/etc/postfixadmin</filename>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -447,31 +442,34 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
+"如果你自行编辑了 <filename>config.inc.php</filename>，理想状态下请将这些自定义配置合并到 "
+"<filename>/etc/postfixadmin/config.local.php</filename>。我们建议保持 "
+"<filename>config.inc.php</filename> 未经修改。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:270
 msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
-msgstr ""
+msgstr "在 Apache 配置中，添加或启用别名 <literal>/postfixadmin</literal>："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "To make the alias available on all virtual hosts, run:"
-msgstr ""
+msgstr "要在所有虚拟主机上使用别名，请运行："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:279
 #, no-wrap
 msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
-msgstr ""
+msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:282
 msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
-msgstr ""
+msgstr "要使别名仅在特定虚拟主机上可用，请将该别名添加到该虚拟主机的配置中。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:296
@@ -725,6 +723,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:463
