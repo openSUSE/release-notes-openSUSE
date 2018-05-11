@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-09 22:03+0200\n"
-"PO-Revision-Date: 2018-05-11 19:49+0000\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
+"PO-Revision-Date: 2018-05-11 23:05+0000\n"
+"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects"
 "/release-notes-opensuse/leap-15_0/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -381,6 +381,8 @@ msgstr ""
 #: xml/release-notes.xml:196
 msgid "Scaling the Installer UI on Computers with High-DPI Displays"
 msgstr ""
+"Dimensionando a interface do usuário do instalador em computadores com "
+"exibições de alto DPI"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:197
@@ -391,6 +393,12 @@ msgid ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> to the bootloader command "
 "line."
 msgstr ""
+"O instalador do YaST não dimensiona sua interface do usuário para exibições "
+"de alto DPI por padrão. Se você tiver um computador com um monitor de alto "
+"DPI, poderá definir o YaST para dimensionar sua interface do usuário "
+"automaticamente para a exibição. Para fazer isso, adicione o parâmetro "
+"<literal> QT_AUTO_SCREEN_SCALE_FACTOR = 1 </literal> à linha de comando do "
+"carregador de inicialização."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:208
@@ -424,6 +432,8 @@ msgstr "Atualizando a partir do openSUSE Leap 42.3"
 #: xml/release-notes.xml:225
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
 msgstr ""
+"O Admin do Postfix usa o layout de diretório incompatível com versões "
+"anteriores"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:226
@@ -432,24 +442,29 @@ msgid ""
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
+"Começando com a versão 3.2, como é fornecido no openSUSE Leap 15.0, o "
+"Postfix Admin (pacote <package> postfixadmin </package>) usa um novo layout "
+"de diretório incompatível com versões anteriores:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:233
 msgid ""
 "The configuration files moved to <filename>/etc/postfixadmin</filename>."
 msgstr ""
+"Os arquivos de configuração movidos para "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:238
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
-msgstr ""
+msgstr "O código PHP movido para <filename>/usr/share/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:243
-#, fuzzy
-#| msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgid "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
-msgstr "Opcionalmente, exclua <filename>/mnt/var/cache.old</filename>:"
+msgstr ""
+"O cache do Smarty foi movido para "
+"<filename>/var/cache/postfixadmin</filename>."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:248
@@ -458,19 +473,19 @@ msgid ""
 "locations and the configuration is not migrated automatically. Therefore, "
 "you need to migrate the following items manually:"
 msgstr ""
+"O Postfix Admin não lê mais os arquivos de configuração de seus locais "
+"anteriores e a configuração não é migrada automaticamente. Portanto, você "
+"precisa migrar os seguintes itens manualmente:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
-#, fuzzy
-#| msgid ""
-#| "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</"
-#| "filename> to <filename>/etc/fstab</filename>."
 msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
 msgstr ""
-"Anexe todos os pontos de montagem de <filename>/etc/samba/cifstab.rpmsave</"
-"filename> em <filename>/etc/fstab</filename>."
+"Movido <filename>config.local.php</filename> de "
+"<filename>/srv/www/htdocs/postfixadmin</filename> para "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -480,6 +495,10 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
+"Se você fez customizações em <filename> config.inc.php </filename>, "
+"idealmente mescle estas customizações em <filename> /etc/postfixadmin/"
+"config.local.php </filename>. Nós recomendamos manter <filename> "
+"config.inc.php </filename> não modificado."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:270
@@ -487,11 +506,13 @@ msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
 msgstr ""
+"Na configuração do Apache, adicione ou ative o alias "
+"<literal>/postfixadmin</literal>:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "To make the alias available on all virtual hosts, run:"
-msgstr ""
+msgstr "Para disponibilizar o alias em todos os hosts virtuais, execute:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:279
@@ -505,6 +526,8 @@ msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
 msgstr ""
+"Para disponibilizar o alias apenas em um host virtual específico, inclua o "
+"alias na configuração desse host virtual."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:296
@@ -850,6 +873,8 @@ msgstr "Reinicie."
 #: xml/release-notes.xml:515
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
 msgstr ""
+"Dimensionando a interface do usuário do SDDM em computadores com telas de "
+"alto DPI"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:516
@@ -859,6 +884,11 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"O gerenciador de login padrão para o KDE, o SDDM, não dimensiona sua "
+"interface do usuário para telas com DPI alto por padrão. Se você tiver um "
+"computador com um monitor de alto DPI, poderá definir o SDDM para "
+"dimensionar sua interface do usuário automaticamente para a exibição usando "
+"o arquivo de configuração <filename>/etc/sddm.conf</filename>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:523
@@ -881,11 +911,16 @@ msgid ""
 "value, such as <literal>192</literal>. For best scaling results, use a DPI "
 "value that is a multiple of the default 96 DPI."
 msgstr ""
+"Substitua <replaceable>DPI_SETTING</replaceable> com um valor adequado de "
+"DPI, como <literal>192</literal>. Para obter melhores resultados de "
+"dimensionamento, use um valor de DPI que seja múltiplo do padrão de 96 DPI."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:537
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
 msgstr ""
+"Dimensionando a interface do usuário do YaST em computadores com exibições "
+"de alto DPI"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:538
@@ -895,11 +930,17 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"O YaST não dimensiona sua interface do usuário para exibições de alto DPI "
+"por padrão. Se você tiver um computador com um monitor de alto DPI, poderá "
+"definir o YaST para dimensionar sua interface do usuário automaticamente "
+"para a exibição. Para fazer isso, defina a variável de ambiente "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:548
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
 msgstr ""
+"O compartilhamento de tela não funciona no Firefox ou no Chromium on Wayland"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:549
@@ -909,6 +950,10 @@ msgid ""
 "application windows. This functionality is currently not supported in either "
 "browser when using a Wayland session."
 msgstr ""
+"O Firefox e o Chromium normalmente permitem que ferramentas baseadas na Web, "
+"como aplicativos de videoconferência, compartilhem a tela inteira ou janelas "
+"de aplicativos individuais. Atualmente, essa funcionalidade não é suportada "
+"em nenhum dos navegadores ao usar uma sessão do Wayland."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:555
@@ -916,6 +961,8 @@ msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
 msgstr ""
+"Para poder compartilhar sua tela no Firefox ou no Chromium, use uma sessão "
+"do X."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:562
@@ -982,7 +1029,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:595
 msgid "FreeType Font Rendering Changes"
-msgstr ""
+msgstr "Mudanças na renderização da fonte FreeType"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:596
@@ -993,17 +1040,23 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
+"O FreeType 2.6.4 tem um novo interpretador de referências de glifo padrão ("
+"versão 38) que mais se aproxima de outros sistemas operacionais, mas pode "
+"parecer <quote>mais impreciso</quote> para alguns. Para restaurar o "
+"comportamento anterior do FreeType, defina a seguinte variável de ambiente "
+"em qualquer nível (em todo o sistema, específico do usuário ou específico do "
+"programa) de sua escolha:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:603
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
-msgstr ""
+msgstr "FREETYPE_PROPERTIES = \"truetype: intérprete-versão = 35\""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:608
 msgid "Enabling KDE Plasma Browser Integration"
-msgstr ""
+msgstr "Permitindo a integração do navegador do KDE Plasma"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:609
@@ -1012,6 +1065,10 @@ msgid ""
 "multimedia and downloads using KDE system tools and gives quick access to "
 "tabs via the <guimenu>Run Command</guimenu> bar of the KDE Plasma desktop."
 msgstr ""
+"A integração com o navegador Plasma para Firefox e Chromium/Chrome permite "
+"monitorar multimídia e downloads usando as ferramentas do sistema KDE e dá "
+"acesso rápido às guias através da barra <guimenu> Executar comando </guimenu>"
+" da área de trabalho do KDE Plasma."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:615
@@ -1019,6 +1076,8 @@ msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
 msgstr ""
+"A funcionalidade de integração do navegador consiste em duas partes que "
+"precisam funcionar juntas:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:621
