@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-05-09 22:03+0200\n"
-"PO-Revision-Date: 2018-05-11 23:02+0000\n"
-"Last-Translator: Vladimir FROMENT <tutux84@onenetbeyond.org>\n"
+"PO-Revision-Date: 2018-05-12 12:02+0000\n"
+"Last-Translator: Benoît Monin <benoit.monin@gmx.fr>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/fr/>\n"
 "Language: fr\n"
@@ -437,7 +437,7 @@ msgstr "Mise à niveau depuis openSUSE Leap 42.3"
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:225
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
-msgstr ""
+msgstr "Postfix Admin utilise un agencement de répertoire non-rétrocompatible"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:226
@@ -446,24 +446,30 @@ msgid ""
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
+"À partir de la version 3.2, fournie par openSUSE Leap 15.0, Postfix Admin ("
+"package <package> 1postfixadmin</package> 2) utilise un nouvel agencement de "
+"répertoire non-rétrocompatible :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:233
 msgid ""
 "The configuration files moved to <filename>/etc/postfixadmin</filename>."
 msgstr ""
+"Les fichiers de configuration sont déplacés dans "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:238
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
 msgstr ""
+"Le code PHP est déplacé dans <filename>/usr/share/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:243
-#, fuzzy
-#| msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgid "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
-msgstr "Éventuellement, supprimez <filename>/mnt/var/cache.old</filename> :"
+msgstr ""
+"Le cache Smarty est déplacé dans "
+"<filename>/var/cache/postfixadmin</filename>."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:248
@@ -472,6 +478,9 @@ msgid ""
 "locations and the configuration is not migrated automatically. Therefore, "
 "you need to migrate the following items manually:"
 msgstr ""
+"Postfix Admin ne lit plus les fichiers de configuration à leurs anciennes "
+"positions et la configuration n'est pas migrée automatiquement. Par "
+"conséquent, vous devez migrer les éléments suivants manuellement :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
@@ -479,6 +488,9 @@ msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
 msgstr ""
+"Déplacer <filename>config.local.php</filename> de "
+"<filename>/srv/www/htdocs/postfixadmin</filename> vers "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -488,6 +500,10 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
+"Si vous aviez fait des personnalisations dans "
+"<filename>config.inc.php</filename>, idéalement il faut les fusionner dans "
+"<filename>/etc/postfixadmin/config.local.php</filename>. Nous recommandions "
+"de garder <filename>config.inc.php</filename> non modifié."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:270
@@ -495,17 +511,19 @@ msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
 msgstr ""
+"Dans la configuration Apache, Ajouter ou activer l'alias "
+"<literal>/postfixadmin</literal> :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "To make the alias available on all virtual hosts, run:"
-msgstr ""
+msgstr "Pour rendre l'alias disponible sur tous les hôtes virtuels, exécuter :"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:279
 #, no-wrap
 msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
-msgstr ""
+msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:282
@@ -513,6 +531,8 @@ msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
 msgstr ""
+"Pour rendre l'alias uniquement disponible dans un hôte virtuel spécifique, "
+"ajouter l'alias à la configuration de cet hôte virtuel."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:296
@@ -526,22 +546,16 @@ msgstr "Paquets obsolètes"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:300
-#, fuzzy
-#| msgid ""
-#| "The following packages are still shipped as part of the distribution but "
-#| "are deprecated. The packages exist to aid migration, but their use is "
-#| "discouraged and they may not receive updates. The packages will be "
-#| "removed in the next version of the distribution."
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"Les paquets suivants sont fournis dans la distribution mais sont obsolètes. "
-"Ces paquets existent pour faciliter la migration, mais leur utilisation est "
-"déconseillée et ils peuvent ne pas recevoir de mise à jour. Ces paquets "
-"seront supprimés dans la prochaine version de la distribution."
+"Les paquets obsolètes sont toujours fournis par la distribution mais sont "
+"prévus pour être supprimés dans la prochaine version d'openSUSE Leap. Ces "
+"paquets existent pour faciliter la migration, mais leur utilisation est "
+"déconseillée et ils peuvent ne pas recevoir de mise à jour."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:316
@@ -563,23 +577,19 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:343
 msgid "Desktop"
-msgstr ""
+msgstr "Bureau"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:345
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#| "match any other category."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
 msgstr ""
-"Cette section liste les problèmes généraux d'openSUSE Leap 15.0 qui ne "
-"correspondent à aucune autre catégorie."
+"Cette section liste les problèmes et les changements liés au environnement "
+"de bureau dans openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:351
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
-msgstr ""
+msgstr "KDE sur Wayland n'est pas compatible avec le pilote propriétaire Nvidia"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:352
@@ -588,6 +598,9 @@ msgid ""
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
 "the X session."
 msgstr ""
+"La session Wayland de KDE Plasma n'est pas compatible avec le pilote "
+"propriétaire Nvidia. Si vous utilisez KDE et le pilote propriétaire Nvidia, "
+"restez avec la session X."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:361
@@ -715,6 +728,8 @@ msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
 msgstr ""
+"Utilisation d'<command>update-alernative</command> pour choisir le "
+"gestionnaire de connexion et la session de bureau"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
@@ -725,26 +740,32 @@ msgid ""
 "defined using <filename>/etc/sysconfig</filename> anymore but with the "
 "alternatives system."
 msgstr ""
+"Par le passé, vous pouviez utiliser <filename>/etc/sysconfig</filename> ou "
+"le module YaST <guimenu>éditeur /etc/sysconfig</guimenu> pour choisir le "
+"gestionnaire de connexion et la session de bureau. À partir d'openSUSE Leap "
+"15.0, ces valeurs ne sont plus définies par "
+"<filename>/etc/sysconfig</filename> mais par le système d'alternatives."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:432
 msgid "To change the defaults, use the following alternatives:"
 msgstr ""
+"Pour changer les réglages par défaut, utilisez les alternatives suivantes :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
 msgid "Login manager: <literal>default-displaymanager</literal>"
-msgstr ""
+msgstr "Gestionnaire de connexion : <literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:442
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
-msgstr ""
+msgstr "Session Wayland : <literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:447
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
-msgstr ""
+msgstr "Session de bureau X : <literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
@@ -752,12 +773,14 @@ msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
 msgstr ""
+"Par exemple, pour vérifier la valeur de <literal>default-"
+"displaymanager</literal>, utilisez :"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:456
 #, no-wrap
 msgid "sudo update-alternatives --display default-displaymanager"
-msgstr ""
+msgstr "sudo update-alternatives --display default-displaymanager"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:457
@@ -765,6 +788,8 @@ msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
 msgstr ""
+"Pour changer <literal>default-displaymanager</literal> vers "
+"<command>xdm</command>, utilisez :"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:461
@@ -773,6 +798,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:463
@@ -781,6 +808,9 @@ msgid ""
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
 "<package>yast2-alternatives</package>."
 msgstr ""
+"Pour activer la gestion graphique des alternatives, utilisez le module YaST "
+"<guimenu>Alternatives</guimenu> qui peut être installé avec le paquet "
+"<package>yast2-alternatives</package>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:471
@@ -868,6 +898,10 @@ msgid ""
 "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
 "EnableHiDPI=true\n"
 msgstr ""
+"\n"
+"[XDisplay]\n"
+"ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
+"EnableHiDPI=true\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:528
@@ -993,7 +1027,7 @@ msgstr ""
 #: xml/release-notes.xml:603
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
-msgstr ""
+msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:608
@@ -1035,6 +1069,8 @@ msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
 msgstr ""
+"Firefox : <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
+"integration/\"/>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:638
@@ -1042,6 +1078,9 @@ msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 msgstr ""
+"Chromium/Chrome : <link xlink:href=\""
+"https://chrome.google.com/webstore/detail/plasma-integration/"
+"cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:645
@@ -1057,12 +1096,6 @@ msgstr "Chargement du module <literal>psgml</literal> d'Emacs"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:655
-#, fuzzy
-#| msgid ""
-#| "Because of conflicts with Emacs modules from the default installation, "
-#| "openSUSE Leap openSUSE Leap 15.0 can no longer load the <literal>psgml</"
-#| "literal> module automatically. For more information, see the file "
-#| "<filename>README</filename> from the package <package>psgml</package>."
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
@@ -1071,18 +1104,20 @@ msgid ""
 msgstr ""
 "En raison de conflits avec les modules Emacs de l'installation par défaut, "
 "openSUSE Leap 15.0 ne peut plus charger le module <literal>pgsml</literal> "
-"automatiquement. Pour plus d'informations, lisez le fichier<filename>README</"
-"filename> du paquet <package>psgml</package>."
+"automatiquement. Pour plus d'informations, lisez le "
+"fichier<filename>README</filename> du paquet <package>psgml</package>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:686
 msgid "Security"
-msgstr ""
+msgstr "Sécurité"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:688
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr ""
+"Cette section liste les changements des fonctions de sécurité d'openSUSE "
+"Leap 15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:694
