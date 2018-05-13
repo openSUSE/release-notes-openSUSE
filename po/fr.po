@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-05-09 22:03+0200\n"
-"PO-Revision-Date: 2018-05-12 12:02+0000\n"
+"PO-Revision-Date: 2018-05-13 09:20+0000\n"
 "Last-Translator: Benoît Monin <benoit.monin@gmx.fr>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/fr/>\n"
@@ -537,7 +537,7 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:296
 msgid "Packaging Changes"
-msgstr ""
+msgstr "Changements relatifs aux paquets"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:299
@@ -879,6 +879,8 @@ msgstr "Redémarrez."
 #: xml/release-notes.xml:515
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
 msgstr ""
+"Mise à l'échelle de SDDM pour les ordinateurs avec des écrans haute "
+"résolution"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:516
@@ -888,6 +890,11 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"Le gestionnaire de connexion par défaut de KDE, SDDM, ne met pas à l'échelle "
+"son interface pour les écrans haute résolution par défaut. Si vous avez un "
+"ordinateur avec un écran haute résolution, vous pouvez configurer SDDM pour "
+"mettre à l'échelle son interface automatiquement en utilisant le fichier de "
+"configuration <filename>/etc/sddm.conf</filename> :"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:523
@@ -910,11 +917,17 @@ msgid ""
 "value, such as <literal>192</literal>. For best scaling results, use a DPI "
 "value that is a multiple of the default 96 DPI."
 msgstr ""
+"Remplacez <replaceable>DPI_SETTING</replaceable> par une valeur de DPI "
+"appropriée, telle que <literal>192</literal>. Pour un meilleur résultat de "
+"mise à l'échelle, utilisez une valeur de DPI multiple de la valeur par "
+"défaut de 96 DPI."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:537
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
 msgstr ""
+"Mise à l'échelle de YaST pour les ordinateurs avec des écrans haute "
+"résolution"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:538
@@ -924,11 +937,17 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"YaST ne met pas à l'échelle son interface pour les écrans haute résolution "
+"par défaut. Si vous avez un ordinateur avec un écran haute résolution, vous "
+"pouvez configurer YaST pour mettre à l'échelle son interface "
+"automatiquement. Pour ce faire, configurer la variable d'environnement "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:548
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
 msgstr ""
+"Le partage d'écran ne fonctionne pas avec Firefox ou Chromium sous Wayland"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:549
@@ -938,6 +957,10 @@ msgid ""
 "application windows. This functionality is currently not supported in either "
 "browser when using a Wayland session."
 msgstr ""
+"Firefox et Chromium autorisent normalement les outils web tels que les "
+"applications de vidéoconférence à partager l'écran entier ou des fenêtres "
+"individuelles d'applications. Cette fonctionnalité n'est actuellement pas "
+"gérée par ces navigateurs lors d'une session Wayland."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:555
@@ -945,6 +968,8 @@ msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
 msgstr ""
+"Pour pouvoir partager votre écran avec Firefox ou Chromium, utilisez une "
+"session X à la place."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:562
@@ -1011,7 +1036,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:595
 msgid "FreeType Font Rendering Changes"
-msgstr ""
+msgstr "Changements de rendu des polices FreeType"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:596
@@ -1022,6 +1047,11 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
+"FreeType 2.6.4 a un nouvel interpréteur de hinting des caractères (version "
+"38) qui est plus proche des autres systèmes d'exploitations mais qui peut "
+"paraître <quote>plus flou</quote> pour certains. Pour restaurer le "
+"comportement précédent de FreeType, configurez la variable d'environnement "
+"suivante au niveau (système, utilisateur ou application) de votre choix :"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:603
@@ -1032,7 +1062,7 @@ msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:608
 msgid "Enabling KDE Plasma Browser Integration"
-msgstr ""
+msgstr "Activation de l'intégration des navigateurs avec KDE Plasma"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:609
@@ -1041,6 +1071,10 @@ msgid ""
 "multimedia and downloads using KDE system tools and gives quick access to "
 "tabs via the <guimenu>Run Command</guimenu> bar of the KDE Plasma desktop."
 msgstr ""
+"L'intégration Plasma des navigateurs pour Firefox et Chromium/Chrome permet "
+"le contrôle multimédia et des téléchargements avec les outils systèmes KDE "
+"et donne un accès rapide aux onglets via la barre <guimenu>Exécuter une "
+"commande</guimenu> du bureau KDE Plasma."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:615
@@ -1048,6 +1082,8 @@ msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
 msgstr ""
+"La fonctionnalité d'intégration des navigateurs consiste en deux parties "
+"devant travailler ensemble :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:621
@@ -1055,6 +1091,8 @@ msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
 msgstr ""
+"La partie pour le bureau peut être installée avec le paquet <package>plasma-"
+"browser-integration</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:627
@@ -1062,6 +1100,8 @@ msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
 msgstr ""
+"La partie pour le navigateur doit être installée depuis les modules "
+"complémentaires de votre navigateur :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:633
@@ -1088,6 +1128,8 @@ msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
 msgstr ""
+"Veuillez noter que cette fonctionnalité est encore officiellement en "
+"développement et qu'openSUSE Leap 15.0 en fournit une version préliminaire."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:654
