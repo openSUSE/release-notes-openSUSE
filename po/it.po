@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2018-05-09 22:03+0200\n"
-"PO-Revision-Date: 2018-05-12 12:03+0000\n"
+"PO-Revision-Date: 2018-05-13 20:17+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/it/>\n"
@@ -417,6 +417,12 @@ msgid ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> to the bootloader command "
 "line."
 msgstr ""
+"L'installatore YaST non adatta di per sé la propria interfaccia agli schermi "
+"ad alta densità. Se si possiede un computer con schermo ad alta densità, si "
+"può impostare YaST per adattare automaticamente la propria interfaccia allo "
+"schermo. Per fare ciò, aggiungere il parametro "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> alla riga di comando del "
+"boot loader."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:208
@@ -449,7 +455,7 @@ msgstr "Aggiornamento da openSUSE Leap 42.3"
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:225
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
-msgstr ""
+msgstr "Postfix Admin usa una struttura di directory non retrocompatibile"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:226
@@ -458,24 +464,31 @@ msgid ""
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
+"A partire dalla versione 3.2, fornita in openSUSE Leap 15.0, Postfix Admin ("
+"pacchetto <package>postfixadmin</package>) usa una nuova struttura di "
+"directory non retrocompatibile:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:233
 msgid ""
 "The configuration files moved to <filename>/etc/postfixadmin</filename>."
 msgstr ""
+"I file di configurazione sono stati spostati in "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:238
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
 msgstr ""
+"Il codice PHP è stato spostato in "
+"<filename>/usr/share/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:243
-#, fuzzy
-#| msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgid "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
-msgstr "Eventualmente, rimuovere <filename>/mnt/var/cache.old</filename>:"
+msgstr ""
+"La cache Smarty è stata spostata in "
+"<filename>/var/cache/postfixadmin</filename>."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:248
@@ -484,19 +497,19 @@ msgid ""
 "locations and the configuration is not migrated automatically. Therefore, "
 "you need to migrate the following items manually:"
 msgstr ""
+"Postfix Admin non legge più i file di configurazione dalle precedenti "
+"posizioni e la configurazione non viene migrata automaticamente. Pertanto è "
+"necessario migrare i seguenti elementi manualmente:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
-#, fuzzy
-#| msgid ""
-#| "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</"
-#| "filename> to <filename>/etc/fstab</filename>."
 msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
 msgstr ""
-"Aggiungere tutti i punti di montaggio definiti in <filename>/etc/samba/"
-"cifstab.rpmsave</filename> a <filename>/etc/fstab</filename>."
+"Spostare <filename>config.local.php</filename> da "
+"<filename>/srv/www/htdocs/postfixadmin</filename> a "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -506,6 +519,11 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
+"Se sono state fatte delle personalizzazioni in "
+"<filename>config.inc.php</filename>, idealmente procedere riportando tali "
+"personalizzazioni in <filename>/etc/postfixadmin/config.local.php</filename>"
+". Si raccomanda di mantenere <filename>config.inc.php</filename> "
+"immodificato."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:270
@@ -513,17 +531,19 @@ msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
 msgstr ""
+"Nella configurazione di Apache, aggiungere o abilitare l'alias "
+"<literal>/postfixadmin</literal>:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "To make the alias available on all virtual hosts, run:"
-msgstr ""
+msgstr "Per rendere l'alias disponibile su tutti gli host virtuali, eseguire:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:279
 #, no-wrap
 msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
-msgstr ""
+msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:282
@@ -531,6 +551,8 @@ msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
 msgstr ""
+"Per rendere l'alias disponibile su un host virtuale specifico soltanto, "
+"aggiungere l'alias alla configurazione di quell'host virtuale."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:296
@@ -544,22 +566,16 @@ msgstr "Pacchetti deprecati"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:300
-#, fuzzy
-#| msgid ""
-#| "The following packages are still shipped as part of the distribution but "
-#| "are deprecated. The packages exist to aid migration, but their use is "
-#| "discouraged and they may not receive updates. The packages will be "
-#| "removed in the next version of the distribution."
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"I seguenti pacchetti fanno tuttora parte della distribuzione, ma sono "
-"deprecati. Tali pacchetti sono inclusi per agevolare la migrazione ma il "
-"loro uso è sconsigliato e potrebbero non ricevere aggiornamenti. Saranno "
-"rimossi nella prossima versione della distribuzione."
+"Pacchetti deprecati fanno tuttora parte della distribuzione ma la loro "
+"rimozione è in programma per la prossima versione di openSUSE Leap. Tali "
+"pacchetti sono inclusi per agevolare la migrazione ma il loro uso è "
+"sconsigliato e potrebbero non ricevere aggiornamenti."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:316
@@ -581,23 +597,19 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:343
 msgid "Desktop"
-msgstr ""
+msgstr "Desktop"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:345
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#| "match any other category."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
 msgstr ""
-"Questa sezione elenca i problemi generici con openSUSE Leap 15.0 che non "
-"corrispondono a nessuna delle altre categorie."
+"Questa sezione elenca i problemi e le modifiche relativi al desktop in "
+"openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:351
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
-msgstr ""
+msgstr "KDE su Wayland non è supportato con i driver Nvidia proprietari"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:352
@@ -606,6 +618,9 @@ msgid ""
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
 "the X session."
 msgstr ""
+"La sessione Wayland di KDE Plasma non è compatibile con i driver Nvidia "
+"proprietari. Se si utilizza KDE con tali driver, si consiglia di continuare "
+"a usare la sessione X."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:361
@@ -734,6 +749,8 @@ msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
 msgstr ""
+"Usare <command>update-alternatives</command> per impostare il gestore delle "
+"sessioni e la sessione desktop"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
@@ -744,28 +761,31 @@ msgid ""
 "defined using <filename>/etc/sysconfig</filename> anymore but with the "
 "alternatives system."
 msgstr ""
+"Nel passato era possibile usare <filename>/etc/sysconfig</filename> o il "
+"modulo YaST <guimenu>Editor di /etc/sysconfig</guimenu> per definire il "
+"gestore delle sessioni e la sessione desktop. A partire da openSUSE Leap "
+"15.0, i valori non sono più definiti tramite "
+"<filename>/etc/sysconfig</filename> ma con il sistema delle alternative."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:432
-#, fuzzy
-#| msgid "These release notes cover the following areas:"
 msgid "To change the defaults, use the following alternatives:"
-msgstr "Queste note di rilascio riguardano i seguenti argomenti:"
+msgstr "Per cambiare i predefiniti, usare le seguenti alternative:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
 msgid "Login manager: <literal>default-displaymanager</literal>"
-msgstr ""
+msgstr "Gestore delle sessioni: <literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:442
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
-msgstr ""
+msgstr "Sessione Wayland: <literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:447
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
-msgstr ""
+msgstr "Sessione desktop X: <literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
@@ -773,12 +793,14 @@ msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
 msgstr ""
+"Per esempio, per controllare il valore di <literal>default-"
+"displaymanager</literal>, usare:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:456
 #, no-wrap
 msgid "sudo update-alternatives --display default-displaymanager"
-msgstr ""
+msgstr "sudo update-alternatives --display default-displaymanager"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:457
@@ -786,6 +808,8 @@ msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
 msgstr ""
+"Per impostare <literal>default-displaymanager</literal> a "
+"<command>xdm</command>, usare:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:461
@@ -794,6 +818,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:463
@@ -802,6 +828,9 @@ msgid ""
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
 "<package>yast2-alternatives</package>."
 msgstr ""
+"Per abilitare la gestione grafica delle alternative, usare il modulo YaST "
+"<guimenu>Alternative</guimenu> che può essere installato tramite il "
+"pacchetto <package>yast2-alternatives</package>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:471
@@ -870,6 +899,7 @@ msgstr "Eseguire il riavvio."
 #: xml/release-notes.xml:515
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
 msgstr ""
+"Adattamento dell'interfaccia di SDDM su computer con schermi ad alta densità"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:516
@@ -879,6 +909,11 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"Il gestore degli accessi predefinito per KDE, SDDM, non adatta di per sé la "
+"propria interfaccia agli schermi ad alta densità. Se si possiede un computer "
+"con schermo ad alta densità, si può impostare SDDM per adattare "
+"automaticamente la propria interfaccia allo schermo usando il file di "
+"configurazione <filename>/etc/sddm.conf</filename>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:523
@@ -889,6 +924,10 @@ msgid ""
 "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
 "EnableHiDPI=true\n"
 msgstr ""
+"\n"
+"[XDisplay]\n"
+"ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
+"EnableHiDPI=true\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:528
@@ -897,11 +936,16 @@ msgid ""
 "value, such as <literal>192</literal>. For best scaling results, use a DPI "
 "value that is a multiple of the default 96 DPI."
 msgstr ""
+"Sostituire <replaceable>DPI_SETTING</replaceable> con un valore di DPI "
+"appropriato, come <literal>192</literal>. Per migliori risultati di "
+"adattamento, usare un valore di DPI che è multiplo del valore predefinito 96 "
+"DPI."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:537
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
 msgstr ""
+"Adattamento dell'interfaccia di YaST su computer con schermi ad alta densità"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:538
@@ -911,11 +955,17 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"YaST non adatta di per sé la propria interfaccia agli schermi ad alta "
+"densità. Se si possiede un computer con schermo ad alta densità, si può "
+"impostare YaST per adattare automaticamente la propria interfaccia allo "
+"schermo. Per fare ciò, impostare la variabile d'ambiente "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:548
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
 msgstr ""
+"La condivisione dello schermo non funziona in Firefox o Chromium su Wayland"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:549
@@ -925,6 +975,10 @@ msgid ""
 "application windows. This functionality is currently not supported in either "
 "browser when using a Wayland session."
 msgstr ""
+"Firefox e Chromium normalmente consentono a strumenti basati sul Web, come "
+"applicazioni di videoconferenza, di condividere lo schermo intero o finestre "
+"di singole applicazioni. Questa funzionalità è attualmente non supportata in "
+"nessuno dei due browser quando si utilizza una sessione Wayland."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:555
@@ -932,6 +986,8 @@ msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
 msgstr ""
+"Per essere in grado di condividere lo schermo in Firefox e Chromium, usare "
+"una sessione X."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:562
@@ -999,7 +1055,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:595
 msgid "FreeType Font Rendering Changes"
-msgstr ""
+msgstr "Modiche alla resa dei tipi di carattere FreeType"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:596
@@ -1010,17 +1066,23 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
+"FreeType 2.6.4 ha un nuovo interprete predefinito di hinting dei glifi ("
+"versione 38) che corrisponde maggiormente a quello di altri sistemi "
+"operativi ma che potrebbe apparire <quote>più confuso</quote> ad alcuni. Per "
+"ripristinare il precedente comportamento di FreeType, impostare la seguente "
+"variabile d'ambiente (a livello di sistema, utente-specifica o programma-"
+"specifica) di propria scelta:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:603
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
-msgstr ""
+msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:608
 msgid "Enabling KDE Plasma Browser Integration"
-msgstr ""
+msgstr "Abilitazione dell'integrazione dei browser con KDE Plasma"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:609
@@ -1029,6 +1091,10 @@ msgid ""
 "multimedia and downloads using KDE system tools and gives quick access to "
 "tabs via the <guimenu>Run Command</guimenu> bar of the KDE Plasma desktop."
 msgstr ""
+"In Plasma l'integrazione del browser per Firefox e Chromium/Chrome consente "
+"il monitoraggio di file multimediali e file scaricati usando strumenti di "
+"sistema di KDE e fornisce accesso immediato alle schede attraverso la barra "
+"<guimenu>Esegui comando</guimenu> del desktop KDE Plasma."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:615
@@ -1036,6 +1102,8 @@ msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
 msgstr ""
+"La funzionalità di integrazione del browser consiste di due componenti che "
+"devono lavorare insieme:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:621
@@ -1043,6 +1111,8 @@ msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
 msgstr ""
+"La componente desktop che può essere installata usando il pacchetto di "
+"sistema <package>plasma-browser-integration</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:627
@@ -1050,6 +1120,8 @@ msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
 msgstr ""
+"La componente browser che necessita di essere installata tramite lo store di "
+"componenti aggiuntivi del browser stesso:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:633
@@ -1057,6 +1129,8 @@ msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
 msgstr ""
+"Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
+"integration/\"/>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:638
@@ -1064,6 +1138,8 @@ msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 msgstr ""
+"Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/detail"
+"/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:645
@@ -1071,6 +1147,8 @@ msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
 msgstr ""
+"Si noti che questa funzionalità è ufficialmente ancora in sviluppo e "
+"openSUSE Leap 15.0 ne fornisce una versione iniziale."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:654
@@ -1079,19 +1157,13 @@ msgstr "Caricamento del modulo Emacs <literal>psgml</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:655
-#, fuzzy
-#| msgid ""
-#| "Because of conflicts with Emacs modules from the default installation, "
-#| "openSUSE Leap openSUSE Leap 15.0 can no longer load the <literal>psgml</"
-#| "literal> module automatically. For more information, see the file "
-#| "<filename>README</filename> from the package <package>psgml</package>."
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
 "automatically. For more information, see the file <filename>README</"
 "filename> from the package <package>psgml</package>."
 msgstr ""
-"A casusa di conflitti con i moduli Emacs dell'installazione predefinita, "
+"A causa di conflitti con i moduli Emacs dell'installazione predefinita, "
 "openSUSE Leap 15.0 non può più caricare automaticamente il modulo "
 "<literal>psgml</literal>. Per maggiori informazioni, si faccia riferimento "
 "al file <filename>README</filename> del pacchetto <package>psgml</package>."
@@ -1099,12 +1171,14 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:686
 msgid "Security"
-msgstr ""
+msgstr "Sicurezza"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:688
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr ""
+"Questa sezione elenca le modifiche relative alle funzionalità di sicurezza "
+"di openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:694
