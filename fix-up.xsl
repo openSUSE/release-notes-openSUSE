@@ -12,6 +12,7 @@
   <xsl:param name="dmproduct" select="''"/>
   <xsl:param name="dmcomponent" select="''"/>
   <xsl:param name="dmassignee" select="''"/>
+  <xsl:param name="date" select="'0000-00-00'"/>
 
 
   <xsl:template match="node() | @*" name="copy">
@@ -61,5 +62,17 @@
   <!-- GeekoDoc doesn't allow the holder element which renders this a bit
   pointless (though it does allow copyright and year) -->
   <xsl:template match="db:copyright"/>
+
+  <!-- Capture certain timestamp PI's before the DocBook stylesheets set it
+  to something wrong. -->
+  <xsl:template match="processing-instruction('dbtimestamp')
+                         [contains(., 'format=&quot;Y&quot;')]">
+    <xsl:value-of select="substring($date, 1, 4)"/>
+  </xsl:template>
+  <xsl:template match="processing-instruction('dbtimestamp')
+                         [contains(., 'format=&quot;Y-m-d&quot;')]">
+    <xsl:value-of select="$date"/>
+  </xsl:template>
+
 
 </xsl:stylesheet>

@@ -20,6 +20,9 @@ endif
 ifndef VERSION
   VERSION := unreleased
 endif
+ifndef DATE
+  DATE := $(shell date +%Y-%0m-%0d)
+endif
 
 # Allows for DocBook profiling (hiding/showing some text).
 LIFECYCLE_VALID := beta pre maintained unmaintained
@@ -105,6 +108,7 @@ xml/release-notes.%.xml: po/%.mo xml/release-notes.ent xml/release-notes.xml
 	  --stringparam 'dmproduct' "$(PRODUCT)" \
 	  --stringparam 'dmcomponent' "$(COMPONENT)" \
 	  --stringparam 'dmassignee' "$(ASSIGNEE)" \
+	  --stringparam 'date' "$(DATE)" \
 	  fix-up.xsl $@.0 \
 	  > $@
 	rm $@.0
@@ -119,6 +123,7 @@ translatedxml: xml/release-notes.xml xml/release-notes.ent $(XML_FILES)
 	  --stringparam 'dmproduct' "$(PRODUCT)" \
 	  --stringparam 'dmcomponent' "$(COMPONENT)" \
 	  --stringparam 'dmassignee' "$(ASSIGNEE)" \
+	  --stringparam 'date' "$(DATE)" \
 	  fix-up.xsl $< \
 	  > xml/release-notes.en.xml
 
