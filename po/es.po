@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-15 19:43+0200\n"
-"PO-Revision-Date: 2018-04-29 00:06+0000\n"
-"Last-Translator: Ioannes Andreas <ioannes@tuta.io>\n"
+"PO-Revision-Date: 2018-05-15 22:06+0000\n"
+"Last-Translator: jc sl <trcs@gmx.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/es/>\n"
 "Language: es\n"
@@ -210,6 +210,8 @@ msgid ""
 "The minimal system installation lacks certain functionality that is often "
 "taken for granted:"
 msgstr ""
+"La instalación mínima del sistema carece de ciertas funcionalidades que a "
+"menudo se dan por sentadas:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:102
@@ -217,6 +219,8 @@ msgid ""
 "It does not contain a software firewall front-end. You can install the "
 "package <package>firewalld</package> additionally."
 msgstr ""
+"No contiene una interfaz software para el cortafuegos. Puede instalar "
+"adicionalmente el paquete <package>firewalld</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:108
@@ -224,6 +228,8 @@ msgid ""
 "It does not contain a YaST. You can install the pattern <package>patterns-"
 "yast-yast2_basis</package> additionally."
 msgstr ""
+"No contiene YaST. Puede instalar adicionalmente el patrón <package>patterns-"
+"yast-yast2_basis</package>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:117
@@ -386,6 +392,8 @@ msgstr ""
 #: xml/release-notes.xml:196
 msgid "Scaling the Installer UI on Computers with High-DPI Displays"
 msgstr ""
+"Escalado de la interfaz de usuario del instalador en ordenadores con "
+"pantallas de alta densidad"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:197
@@ -396,6 +404,12 @@ msgid ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> to the bootloader command "
 "line."
 msgstr ""
+"El instalador de YaST no escala por defecto su interfaz de usuario en "
+"pantallas de alta densidad. Si tiene un ordenador con pantalla de alta "
+"densidad, puede hacer que YaST escale su interfaz de usuario para la "
+"pantalla automáticamente. Para esto, añada el parámetro "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> a la línea de comandos del "
+"cargador de arranque."
 
 # CER: Usamos la misma traducci´on para update y upgrade, y hay que diferenciarlos
 #. (itstool) path: sect1/title
@@ -418,10 +432,8 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:215
-#, fuzzy
-#| msgid "Additionally, check <xref linkend=\"sec.general.deprecated\"/>."
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
-msgstr "Además, revise <xref linkend=\"sec.general.deprecated\"/>."
+msgstr "Además, revise <xref linkend=\"sec.package\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:220
@@ -432,6 +444,7 @@ msgstr "Actualizar desde openSUSE Leap 42.3"
 #: xml/release-notes.xml:225
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
 msgstr ""
+"Postfix Admin usa una estructura de directorios incompatible hacia atrás"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:226
@@ -440,24 +453,30 @@ msgid ""
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
+"Empezando con la versión 3.2, que viene con openSUSE Leap 15.0, Postfix "
+"Admin (paquete <package>postfixadmin</package> usa una estructura de "
+"directorios nueva que no es compatible hacia atrás:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:233
 msgid ""
 "The configuration files moved to <filename>/etc/postfixadmin</filename>."
 msgstr ""
+"Los ficheros de configuración se han movido a "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:238
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
 msgstr ""
+"El código PHP se ha movido a <filename>/usr/share/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:243
-#, fuzzy
-#| msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgid "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
-msgstr "Opcionalmente, borre <filename>/mnt/var/cache.old</filename>:"
+msgstr ""
+"La caché de Smarty se ha movido a "
+"<filename>/var/cache/postfixadmin</filename>."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:248
@@ -466,19 +485,19 @@ msgid ""
 "locations and the configuration is not migrated automatically. Therefore, "
 "you need to migrate the following items manually:"
 msgstr ""
+"Postfix Admin ya no lee los archivos de configuración de sus antiguas "
+"ubicaciones y la configuración no se reubica automáticamente. Por tanto, "
+"debe hacer la migración de los siguientes elementos manualmente:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:255
-#, fuzzy
-#| msgid ""
-#| "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</"
-#| "filename> to <filename>/etc/fstab</filename>."
 msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
 msgstr ""
-"Añadir todos los puntos de montaje desde <filename>/etc/samba/cifstab."
-"rpmsave</filename> a <filename>/etc/fstab</filename>."
+"Mueva <filename>config.local.php</filename> de "
+"<filename>/srv/www/htdocs/postfixadmin</filename> a "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:262
@@ -488,6 +507,9 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
+"Si ha hecho modificaciones a <filename>config.inc.php</filename>, lo ideal "
+"es fusionarlas en <filename>/etc/postfixadmin/config.local.php</filename>. "
+"Se recomienda mantener <filename>config.inc.php</filename> sin modificar."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:270
@@ -495,11 +517,15 @@ msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
 msgstr ""
+"En la configuración de Apache, añada o habilite el alias "
+"<literal>/postfixadmin</literal>:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "To make the alias available on all virtual hosts, run:"
 msgstr ""
+"Para que hacer que el alias esté disponible en todos los nodos virtuales, "
+"ejecute:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:279
@@ -513,11 +539,13 @@ msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
 msgstr ""
+"Para hacer que el alias esté disponible solo en un nodo virtual específico, "
+"añada el alias a la configuración de dicho nodo virtual."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:296
 msgid "Packaging Changes"
-msgstr ""
+msgstr "Cambios en el empaquetado"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:299
@@ -526,22 +554,16 @@ msgstr "Paquetes obsoletos"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:300
-#, fuzzy
-#| msgid ""
-#| "The following packages are still shipped as part of the distribution but "
-#| "are deprecated. The packages exist to aid migration, but their use is "
-#| "discouraged and they may not receive updates. The packages will be "
-#| "removed in the next version of the distribution."
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"Los siguientes paquetes aún se distribuyen como parte de la distribución "
-"aunque estén obsoletos. Existen para ayudar con la migración, pero se "
-"desaconseja su uso y puede que no reciban actualizaciones. Los paquetes "
-"serán eliminados en la próxima versión de la distribución."
+"Los paquetes obsoletos aún se incluyen como parte de la distribución pero su "
+"eliminación está planificada para la próxima versión de openSUSE Leap. "
+"Dichos paquetes existen para ayudar con la migración, pero su uso está "
+"desaconsejado y puede que no reciban actualizaciones."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:316
@@ -563,23 +585,20 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:343
 msgid "Desktop"
-msgstr ""
+msgstr "Escritorio"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:345
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#| "match any other category."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
 msgstr ""
-"Esta sección muestra aspectos generales de openSUSE Leap 15.0 que no encajan "
-"en otras categorías."
+"Esta sección muestra cuestiones y cambios del escritorio en openSUSE Leap "
+"15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:351
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
 msgstr ""
+"KDE bajo Wayland no tiene soporte con el controlador propietario de Nvidia"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:352
@@ -588,6 +607,9 @@ msgid ""
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
 "the X session."
 msgstr ""
+"Las sesiones de KDE Plasma bajo Wayland no tienen soporte con el controlador "
+"propietario de Nvidia. Si usa KDE y el controlador propietario de Nvidia, "
+"siga usando sesiones X."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:361
@@ -715,6 +737,8 @@ msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
 msgstr ""
+"Use <command>update-alternatives</command> para establecer el gestor de "
+"sesiones y la sesión de escritorio"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
@@ -725,28 +749,31 @@ msgid ""
 "defined using <filename>/etc/sysconfig</filename> anymore but with the "
 "alternatives system."
 msgstr ""
+"Anteriormente, se podía usar <filename>/etc/sysconfig</filename> o el módulo "
+"de YaST <guimenu>/etc/sysconfig Editor</guimenu> para definir el gestor de "
+"sesiones y la sesión de escritorio. A partir de openSUSE 15.0, los valores "
+"ya no se definen usando <filename>/etc/sysconfig</filename> sino con el "
+"sistema de alternativas."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:432
-#, fuzzy
-#| msgid "These release notes cover the following areas:"
 msgid "To change the defaults, use the following alternatives:"
-msgstr "Estas notas de versión cubren los siguientes aspectos:"
+msgstr "Para cambiar los valores por omisión, use las siguientes alternativas:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
 msgid "Login manager: <literal>default-displaymanager</literal>"
-msgstr ""
+msgstr "Gestor de sesiones: <literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:442
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
-msgstr ""
+msgstr "Sesión Wayland: <literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:447
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
-msgstr ""
+msgstr "Sesión de escritorio X: <literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
@@ -754,6 +781,8 @@ msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
 msgstr ""
+"Por ejemplo, para comprobar el valor de <literal>default-"
+"displaymanager</literal>, use:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:456
@@ -767,6 +796,8 @@ msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
 msgstr ""
+"Para cambiar el <literal>default-displaymanager</literal> a "
+"<command>xdm</command>, use:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:461
@@ -783,6 +814,9 @@ msgid ""
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
 "<package>yast2-alternatives</package>."
 msgstr ""
+"Para habilitar la gestión gráfica de alternativas, use el módulo de YaST "
+"<guimenu>Alternatives</guimenu> que puede instalarse con el paquete "
+"<package>yast2-alternatives</package>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:471
@@ -851,6 +885,7 @@ msgstr "Reiniciar."
 #: xml/release-notes.xml:515
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
 msgstr ""
+"Escalado de la interfaz de usuario de SDDM en pantallas de alta densidad"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:516
@@ -860,6 +895,11 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"El gestor de sesiones por omisión para KDE, SDDM, no escala por defecto su "
+"interfaz de usuario en pantallas de alta densidad. Si tiene un ordenador con "
+"pantalla de alta densidad, puede hacer que SDDM escale automáticamente su "
+"interfaz de usuario para la pantalla usando el archivo de configuración "
+"<filename>/etc/sddm.conf</filename>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:523
@@ -878,11 +918,15 @@ msgid ""
 "value, such as <literal>192</literal>. For best scaling results, use a DPI "
 "value that is a multiple of the default 96 DPI."
 msgstr ""
+"Cambie <replaceable>DPI_SETTING</replaceable> por el valor de PPP adecuado, "
+"algo como <literal>192</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:537
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
 msgstr ""
+"Escalado de la interfaz de usuario de YaST en sistemas con pantalla de alta "
+"densidad"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:538
@@ -892,11 +936,17 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"YaST no escala por defecto su interfaz de usuario en pantallas de alta "
+"densidad. Si tiene un ordenador con pantalla de alta densidad, puede hacer "
+"que YaST escale automáticamente su interfaz de usuario para la pantalla. "
+"Para esto, establezca la variable de entorno "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:548
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
 msgstr ""
+"La compartición de pantalla no funciona en Firefox o Chromium bajo Wayland"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:549
@@ -906,6 +956,10 @@ msgid ""
 "application windows. This functionality is currently not supported in either "
 "browser when using a Wayland session."
 msgstr ""
+"Normalmente, Firefox y Chromium permiten que herramientas web como "
+"aplicaciones de videoconferencia compartan toda la pantalla o ventanas de "
+"aplicaciones individuales. Esta funcionalidad no está disponible actualmente "
+"para ninguno de los navegadores en una sesión Wayland."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:555
@@ -913,6 +967,7 @@ msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
 msgstr ""
+"Para poder compartir la pantalla en Firefox o Chromium, use una sesión X."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:562
@@ -980,7 +1035,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:595
 msgid "FreeType Font Rendering Changes"
-msgstr ""
+msgstr "Cambios en la representación de fuentes de FreeType"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:596
@@ -991,6 +1046,11 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
+"FreeType 2.6.4 tiene un nuevo intérprete de «hinting» de glifos por defecto ("
+"versión 38) que se asemeja más al de otros sistemas operativos pero que "
+"puede parecer <quote>mas difuminado</quote> para algunos. Para restaurar el "
+"anterior comportamiento de FreeType, establezca la siguiente variable de "
+"entorno a cualquier nivel (sistema, usuario o programa) a su elección:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:603
@@ -1001,7 +1061,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:608
 msgid "Enabling KDE Plasma Browser Integration"
-msgstr ""
+msgstr "Habilitar la integración del navegador con Plasma de KDE"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:609
@@ -1010,6 +1070,10 @@ msgid ""
 "multimedia and downloads using KDE system tools and gives quick access to "
 "tabs via the <guimenu>Run Command</guimenu> bar of the KDE Plasma desktop."
 msgstr ""
+"La integración del navegador con Plasma para Firefox y Chromium/Chrome "
+"permite la monitorización de multimedia y descargas usando herramientas del "
+"sistema KDE y da un acceso rápido a pestañas mediante la barra <guimenu>"
+"Búsqueda de Plasma</guimenu> del escritorio Plasma de KDE."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:615
@@ -1017,6 +1081,8 @@ msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
 msgstr ""
+"La funcionalidad de la integración con el navegador consta de dos partes que "
+"deben trabajar juntas:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:621
@@ -1024,6 +1090,8 @@ msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
 msgstr ""
+"La parte del escritorio que puede instalarse usando el paquete del sistema "
+"<package>plasma-browser-integration</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:627
@@ -1031,6 +1099,8 @@ msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
 msgstr ""
+"La parte del navegador que puede instalarse desde la tienda de complementos "
+"de su navegador:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:633
@@ -1052,6 +1122,8 @@ msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
 msgstr ""
+"Tenga en cuenta que esta funcionalidad aún está oficialmente en desarrollo y "
+"openSUSE Leap 15.0 incluye una versión temprana de ella."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:654
@@ -1060,12 +1132,6 @@ msgstr "Cargando el módulo <literal>psgml</literal> de Emacs"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:655
-#, fuzzy
-#| msgid ""
-#| "Because of conflicts with Emacs modules from the default installation, "
-#| "openSUSE Leap openSUSE Leap 15.0 can no longer load the <literal>psgml</"
-#| "literal> module automatically. For more information, see the file "
-#| "<filename>README</filename> from the package <package>psgml</package>."
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
@@ -1080,12 +1146,14 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:686
 msgid "Security"
-msgstr ""
+msgstr "Seguridad"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:688
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr ""
+"En esta sección se enumeran los cambios en las funciones de seguridad de "
+"openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:694
@@ -1181,7 +1249,7 @@ msgstr "Cuestiones técnicas"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:749
 msgid "Updated Btrfs Subvolume Layout"
-msgstr ""
+msgstr "Estructura actualizada de subvolúmenes de Btrfs"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:750
@@ -1189,16 +1257,19 @@ msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
 msgstr ""
+"openSUSE 15.0 presenta una nueva estructura predeterminada de subvolúmenes "
+"de Btrfs que aspira a lo siguiente:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:756
+#, fuzzy
 msgid "Simplified snapshots and rollbacks"
-msgstr ""
+msgstr "Imágenes y restauraciones simplificadas"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:761
 msgid "Prevention of accidental data loss"
-msgstr ""
+msgstr "Prevención de pérdida de datos accidental"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:766
@@ -1206,6 +1277,8 @@ msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
 msgstr ""
+"Mejor rendimiento de bases de datos e imágenes de máquinas virtuales "
+"alojadas en <filename>/var</filename>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:772
@@ -1215,6 +1288,10 @@ msgid ""
 "for all of <filename>/var</filename>. This new subvolume has copy-on-write "
 "functionality disabled."
 msgstr ""
+"En vez de usar varios subvolúmenes de Btrfs para distintos directorios de "
+"<filename>/var</filename>, openSUSE Leap 15.0 llega con un solo subvolumen "
+"para todo <filename>/var</filename>. Este nuevo subvolumen tiene la "
+"funcionalidad copy-on-write deshabilitada."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:778
@@ -1223,19 +1300,20 @@ msgid ""
 "Therefore, if you want to take advantage of it, make sure to freshly install "
 "openSUSE Leap 15.0 instead of upgrading."
 msgstr ""
+"No hay una forma definida para actualizarse a esta nueva estructura de "
+"subvolúmenes de Btrfs. Por tanto, si quiere tomar ventaja de ella, asegúrese "
+"de hacer una instalación completa de openSUSE Leap 15.0 en vez de una "
+"actualización."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:783
-#, fuzzy
-#| msgid ""
-#| "For more information about upgrading to a current openSUSE version, see "
-#| "<link xlink:href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 msgstr ""
-"Para más información sobre cómo actualizar a la versión actual de openSUSE, "
-"vea <link href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
+"Para más información sobre la estructura de subvolúmenes por defecto de "
+"Btrfs antes y después del cambio, vea <link xlink:href=\""
+"https://en.opensuse.org/SDB:BTRFS\"/>."
 
 # CER: no estoy seguro de la traducción de Feedback. Tiene el sentido de comentarios de los usuarios hacia los desarrolladores o la distro.
 #. (itstool) path: sect1/title
