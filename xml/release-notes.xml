@@ -740,11 +740,54 @@ EnableHiDPI=true
   </sect2>
  </sect1>
 
- <!-- <sect1 xml:id="technical">
+ <sect1 xml:id="technical">
   <title>Technical</title>
   <para/>
 
- </sect1> -->
+  <sect2 xml:id="sec.technical.btrfs-layout">
+   <!-- boo#1085628 -->
+   <title>Updated Btrfs Subvolume Layout</title>
+   <para>
+    &thisflavor; 15.0 introduces a new default Btrfs subvolume layout that
+    aims for the following:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      Simplified snapshots and rollbacks
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Prevention of accidental data loss
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Better performance of databases and VM images stored in
+      <filename>/var</filename>
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    Instead of using multiple Btrfs subvolumes for different subdirectories of
+    <filename>/var</filename>, &thisversion; ships with a single subvolume
+    for all of <filename>/var</filename>. This new subvolume has
+    copy-on-write functionality disabled.
+   </para>
+   <para>
+    There is no defined way of upgrading to this new Btrfs subvolume layout.
+    Therefore, if you want to take advantage of it, make sure to freshly
+    install &thisversion; instead of upgrading.
+   </para>
+   <para>
+    For more information on the default Btrfs subvolume layout before and
+    after this change, see
+    <link xlink:href="https://en.opensuse.org/SDB:BTRFS"/>.
+   </para>
+  </sect2>
+
+ </sect1>
  <!-- <sect1 xml:id="misc">
   <title>Miscellaneous</title>
   <para/>
