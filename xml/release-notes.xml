@@ -88,6 +88,111 @@
    <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html"/>.
   </para>
 
+  <sect2 xml:id="sec.install.transactional-server-role">
+   <title>Using Atomic Updates With the New System Role <emphasis>Transactional Server</emphasis></title>
+   <!-- boo#1092953, boo#1093098 -->
+   <para>
+    The installer now supports a new system role
+    <emphasis>Transactional Server</emphasis> that is an outcome of the
+    &kubic; effort. This system role features a new update system that
+    applies updates atomically (as a single operation) and makes them easy to
+    revert should that become necessary.
+    These features are based on the package management tools that all
+    other &suse; and &osuse; distributions also rely on. This means that RPM
+    packages that work with other system roles of &thisversion; also work
+    with the system role <emphasis>Transactional Server</emphasis>.
+   </para>
+   <para>
+    To provide these features, this update system relies on:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <formalpara>
+      <title>Btrfs snapshots</title>
+      <para>
+       Before a system updates is started, a new Btrfs snapshot of the root
+       file system is created. Then, all the changes from the update are
+       installed into that Btrfs snapshot. To complete the update, you can
+       then restart the system into the new snapshot.
+      </para>
+     </formalpara>
+     <para>
+      To revert the update, simply boot from the previous snapshot instead.
+     </para>
+    </listitem>
+    <listitem>
+     <formalpara>
+      <title>A read-only root file system</title>
+      <para>
+       To avoid issues with and data loss because of updates, the root file
+       system must not be written to otherwise. Therefore, the root file
+       system is mounted read-only during normal operation.
+      </para>
+     </formalpara>
+     <para>
+      To make this setup work, two additional changes to the file system
+      needed to be made: To allow writing user configuration in
+      <filename>/etc</filename>, this directory is automatically configured
+      to use OverlayFS. <filename>/var</filename> is now a separate subvolume
+      which can be written to by processes.
+     </para>
+    </listitem>
+   </itemizedlist>
+   <important>
+    <title><emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space</title>
+    <para>
+     The system role <emphasis>Transactional Server</emphasis> needs a disk
+     size of at least 12 GB to accommodate Btrfs snapshots.
+    </para>
+   </important>
+   <para>
+    To work with transactional updates, always use the command
+    <command>transactional-update</command> instead of &yast; and Zypper for
+    all software management:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      Update the system:
+      <command>transactional-update up</command>
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Install a package:
+      <command>transactional-update pkg in <replaceable>PACKAGE_NAME</replaceable></command>
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Remove a package:
+      <command>transactional-update pkg rm <replaceable>PACKAGE_NAME</replaceable></command>
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      To revert the last snapshot, that is the last set of changes to the
+      root file system, make sure your system is booted into the next to last
+      snapshot and run:
+      <command>transactional-update rollback</command>
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    When using this system role, by default, the system will perform a daily
+    update and reboot between 03:30 am and 05:00 am. Both of these actions
+    are systemd-based and if necessary can be disabled using
+    <command>systemctl</command>:
+   </para>
+   <screen>systemctl disable --now transactional-update.timer rebootmgr.service</screen>
+   <para>
+    For more information about transactional updates, see the &kubic; blog posts
+    <link xlink:href="https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/"/>
+    and
+    <link xlink:href="https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/"/>.
+   </para>
+  </sect2>
+
   <sect2 xml:id="sec.install.minimalinstall">
    <!-- https://bugzilla.suse.com/show_bug.cgi?id=947712 -->
    <!-- https://bugzilla.opensuse.org/show_bug.cgi?id=951866 -->
