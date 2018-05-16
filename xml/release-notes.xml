@@ -486,21 +486,10 @@ setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_
     </step>
     <step>
      <para>
-      Open &yast; and from it, open
-      <menuchoice><guimenu>/etc/sysconfig Manager</guimenu></menuchoice>.
+      Set GDM as the display manager:
      </para>
-    </step>
-    <step>
-     <para>
-      Navigate to <menuchoice><guimenu>Desktop</guimenu><guimenu>Display
-      manager</guimenu> <guimenu>DISPLAYMANAGER</guimenu></menuchoice>.
-     </para>
-    </step>
-    <step>
-     <para>
-      In the text box, specify <literal>gdm</literal>. To save, click
-      <guimenu>OK</guimenu>.
-     </para>
+<screen>sudo update-alternatives --set default-displaymanager \
+  /usr/lib/X11/displaymanagers/gdm</screen>
     </step>
     <step>
      <para>
