@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-15 22:44+0000\n"
+"PO-Revision-Date: 2018-05-17 22:55+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ja/>\n"
@@ -198,7 +198,7 @@ msgstr ""
 msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
-msgstr ""
+msgstr "新しいシステムの役割 <emphasis>トランザクション型サーバ</emphasis> を利用した一括更新について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -212,13 +212,16 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"新しいインストーラでは、 openSUSE Kubic プロジェクトの成果の 1 つとして、 "
+"<emphasis>トランザクション型サーバ</emphasis> と呼ばれる新しい役割が追加されています。このシステムの役割は、更新を一括 "
+"(単一の操作) で適用し、必要であれば後から以前の状態に戻すことができるようにする仕組みです。この機能は、 SUSE や openSUSE "
+"ディストリビューションの依存するパッケージ管理システムをベースにして動作しているものですので、 openSUSE Leap 15.0 "
+"に対応する大多数のパッケージが、 <emphasis>トランザクション型サーバ</emphasis> でも利用できることになります。"
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "廃止予定のパッケージについて"
+msgstr "非互換のパッケージについて"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -227,16 +230,19 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"RPM パッケージ内の <literal>%post</literal> スクリプト内で、 <filename>/var</filename> や "
+"<filename>/srv</filename> の内容を書き換えるパッケージがそれに該当します。これらのパッケージは互換性のないパッケージですので、そ"
+"のようなパッケージを見つけた場合には、バグ報告をお願いいたします。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "これらの機能を提供するため、この更新システムは下記の仕組みを利用しています:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "btrfs スナップショット"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -246,18 +252,18 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"システムの更新を開始する前に、ルートファイルシステムに対して新しい btrfs スナップショットを作成します。その後、必要な全ての更新内容をそのスナップシ"
+"ョット内に保存します。更新を完了するには、システムを再起動して新しいスナップショットを利用するようにします。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
-msgstr ""
+msgstr "更新を元に戻すには、以前に採取したスナップショットから起動するだけです。"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
-#, fuzzy
-#| msgid "Mount the initial root file system:"
 msgid "A read-only root file system"
-msgstr "まずはルートファイルシステムをマウントします:"
+msgstr "読み込み専用のルートファイルシステム"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -266,6 +272,8 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"更新による問題やデータ損失を防ぐため、ルートファイルシステムには不用意な書き込みを発生させてはなりません。そのため、通常動作時には、ルートファイルシステム"
+"を読み込み専用にしてマウントします。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -275,12 +283,16 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"このような仕組みを動作させるため、ファイルシステムに対して追加で 2 種類の変更が行なわれます: 利用者側での "
+"<filename>/etc</filename> への設定書き込みを許可するため、このディレクトリは OverlayFS "
+"を使用するように自動設定されます。また、 <filename>/var</filename> "
+"はプロセス側で書き込みができるよう、個別のサブボリュームが設定されます。"
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
-msgstr ""
+msgstr "<emphasis>トランザクション型サーバ</emphasis> に対するディスク領域の要件について (最低 12 GB)"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
@@ -288,6 +300,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"システムの役割である <emphasis>トランザクション型サーバ</emphasis> では、 btrfs "
+"のスナップショットを保存する必要があることから、最小でも 12 GB のディスクサイズが必要となります。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
@@ -296,11 +310,13 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"トランザクション型更新を行なう場合、ソフトウエア管理にあたっては YaST や Zypper ではなく、必ず <command"
+">transactional-update</command> コマンドをお使いください:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "システムの更新: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -308,6 +324,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"パッケージのインストール: <command>transactional-update pkg in "
+"<replaceable>パッケージ名</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -315,6 +333,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"パッケージの削除: <command>transactional-update pkg rm "
+"<replaceable>パッケージ名</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -323,13 +343,16 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"直近に採取したスナップショット (ルートファイルシステムに対して、更新を適用する前の状態) "
+"に戻すには、次回の再起動でそのスナップショットを利用するよう、下記のコマンドを実行します: <command>transactional-update "
+"rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
 msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
-msgstr ""
+msgstr "必要であれば、コマンドの末尾にスナップショット ID を追加して、特定の時点の状態に戻すこともできます。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -339,29 +362,29 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"このシステムの役割を利用している場合、既定では午前 03:30 から午前 05:00 までの間に、システムは自動で更新を実施して再起動します。"
+"これらの動作は systemd を利用して実現しているものであり、不要であれば<command>systemctl</command> "
+"を利用して無効化することができます:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr ""
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"詳しくは <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=996520\"/> と <link xlink:href=\"https://bugzilla.opensuse.org/show_bug."
-"cgi?id=853019\"/> をお読みください。"
+"トランザクション型更新について、詳しくは openSUSE Kubic プロジェクトのブログ投稿 <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> および <"
+"link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/> "
+"(いずれも英語) をお読みください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
@@ -399,7 +422,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "12 GB 未満のハードディスクにインストールする際の問題について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -409,6 +432,9 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"インストーラ側では、ハードディスクのサイズが 12 GB "
+"よりも大きい場合にのみパーティション方法を提案します。たとえば小さな仮想マシンイメージなどを作成する目的で、 12 GB "
+"未満のディスクをお使いの場合は、ガイド付き設定をお使いのうえ、パーティション設定を行なってください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
@@ -1038,20 +1064,17 @@ msgstr ""
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "GDM をディスプレイマネージャとして設定します:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
 "sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
@@ -1078,12 +1101,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[XDisplay]\n"
-#| "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
-#| "EnableHiDPI=true\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1091,9 +1109,9 @@ msgid ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgstr ""
 "\n"
-"[XDisplay]\n"
-"ServerArguments=-dpi <replaceable>DPI_設定</replaceable>\n"
+"[X11]\n"
 "EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI 設定</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
