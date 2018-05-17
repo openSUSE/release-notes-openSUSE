@@ -628,10 +628,10 @@ setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_
 <screen>
 [X11]
 EnableHiDPI=true
-ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>
+ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>
 </screen>
    <para>
-    Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI
+    Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI
     value, such as <literal>192</literal>. For best scaling results, use a
     DPI value that is a multiple of the default 96 DPI.
    </para>
@@ -646,6 +646,68 @@ ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>
     its UI automatically for the display. To do so, set the environment
     variable <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>.
    </para>
+  </sect2>
+
+  <sect2 xml:id="sec.desktop.qt-hidpi">
+   <!-- boo#1091103 -->
+   <title>Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/Regular-DPI Monitors</title>
+   <para>
+    Qt supports automatic per-monitor scaling on X. It uses the DPI value of
+    the virtual X screen to calculate the font size for the primary monitor.
+    By default, this value is 96 DPI. It uses the relative DPI of the primary
+    monitor to derive font DPI for all other monitors.
+   </para>
+   <para>
+    Two widely used desktops will override this behavior of Qt, therefore this
+    note does not apply to them:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      GNOME will set <literal>Xft.dpi</literal> to the configured multiple of
+      96 DPI.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      KDE Plasma disables the automatic scaling of Qt and uses a manual
+      scaling configuration.
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    On other desktops, this behavior of Qt can lead to undesirable situations
+    such as the following: If the primary display is High-DPI
+    (&gt;= 144 DPI), fonts in Qt applications that request scaling, such as
+    VLC, are effectively scaled to half the desired size on all monitors.
+    Applications which do not request scaling, such as &yast; (with default
+    settings), use the same DPI value on all monitors. Hence, they will look
+    smaller on the High-DPI monitor.
+   </para>
+   <para>
+    You can use one of the following workarounds for this issue:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      Use a monitor with a regular DPI value as the primary monitor.
+      Applications that request scaling are then scaled appropriately on the
+      High-DPI monitor.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Set an appropriate font DPI (<literal>Xft.dpi</literal>). You can do so
+      either with the configuration utility of your desktop. Alternatively,
+      after every login run the following command:
+     </para>
+     <screen>echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</screen>
+     <para>
+      Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI
+      value for the primary monitor.
+     </para>
+    </listitem>
+   </itemizedlist>
   </sect2>
 
   <sect2 xml:id="sec.desktop.browser-wayland-screen">
