@@ -616,7 +616,7 @@ setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_
   </sect2>
 
   <sect2 xml:id="sec.desktop.sddm-hidpi">
-   <!-- boo#1083873 -->
+   <!-- boo#1083873, boo#1091103 -->
    <title>Scaling the SDDM UI on Computers with High-DPI Displays</title>
    <para>
     The default login manager for KDE, SDDM, does not scale its UI for High-DPI
@@ -626,9 +626,9 @@ setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_
     <filename>/etc/sddm.conf</filename>:
    </para>
 <screen>
-[XDisplay]
-ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>
+[X11]
 EnableHiDPI=true
+ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>
 </screen>
    <para>
     Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI
