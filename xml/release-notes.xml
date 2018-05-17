@@ -98,10 +98,20 @@
     applies updates atomically (as a single operation) and makes them easy to
     revert should that become necessary.
     These features are based on the package management tools that all
-    other &suse; and &osuse; distributions also rely on. This means that RPM
+    other &suse; and &osuse; distributions also rely on. This means that the
+    vast majority of RPM
     packages that work with other system roles of &thisversion; also work
     with the system role <emphasis>Transactional Server</emphasis>.
    </para>
+   <note>
+    <title>Incompatible Packages</title>
+    <para>
+     Some packages modify the contents of <filename>/var</filename> or
+     <filename>/srv</filename> in their RPM <literal>%post</literal> scripts.
+     These packages are incompatible. If you happen upon such package, file a
+     bug report.
+    </para>
+   </note>
    <para>
     To provide these features, this update system relies on:
    </para>
@@ -110,7 +120,7 @@
      <formalpara>
       <title>Btrfs snapshots</title>
       <para>
-       Before a system updates is started, a new Btrfs snapshot of the root
+       Before a system update is started, a new Btrfs snapshot of the root
        file system is created. Then, all the changes from the update are
        installed into that Btrfs snapshot. To complete the update, you can
        then restart the system into the new snapshot.
@@ -175,6 +185,10 @@
       root file system, make sure your system is booted into the next to last
       snapshot and run:
       <command>transactional-update rollback</command>
+     </para>
+     <para>
+      Optionally, add a snapshot ID to the end of the command to rollback to
+      a specific ID.
      </para>
     </listitem>
    </itemizedlist>
