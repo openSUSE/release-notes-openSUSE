@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-16 09:55+0000\n"
+"PO-Revision-Date: 2018-05-17 22:29+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/nl/>\n"
@@ -196,6 +196,8 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
+"Atomisch bijwerken met de nieuwe systeemrol <emphasis>Transactionele "
+"server</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -209,13 +211,21 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"Het installatieprogramma ondersteunt nu een nieuwe systeemrol <emphasis>"
+"Transactionele server</emphasis> die voortkomt uit de openSUSE Kubic "
+"inspanning. Deze systeemrol levert een nieuw systeem voor bijwerken dat het "
+"bijwerken atomisch (als een enkele bewerking) toepast en het gemakkelijker "
+"maakt ze terug te draaien als dat noodzakelijk wordt. Deze functies zijn "
+"gebaseerd op de hulpmiddelen voor pakketbeheer waar alle andere SUSE en "
+"openSUSE distributies ook van afhankelijk zijn. Dit betekent dat de grootste "
+"hoeveelheid RPM-pakketten die werken met andere systeemrollen van openSUSE "
+"Leap 15.0 ook werken met de systeemrol <emphasis>Transactionele "
+"server</emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "Verouderde pakketten"
+msgstr "Incompatibele pakketten"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -224,16 +234,20 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Sommige pakketten modificeren de inhoud van <filename>/var</filename> of "
+"<filename>/srv</filename> in hun RPM <literal>%post</literal> scripts. Deze "
+"pakketten zijn incompatibel. Als u op zo'n pakket stuit, stuur dan een "
+"bugrapport."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "Om deze functies te leveren, hangt dit systeem voor bijwerken af van:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Btrfs snapshots"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -243,18 +257,22 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Voordat het bijwerken van een systeem start, wordt een nieuw Btrfs snapshot "
+"van het root-bestandssysteem gemaakt. Daarna worden alle wijzigingen uit het "
+"bijwerken geïnstalleerd in die Btrfs snapshot. Om het bijwerken te voltooien "
+"kunt u dan het systeem in de nieuwe snapshot opnieuw starten."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Om het bijwerken ongedaan te maken, boot in plaats daarvan opnieuw vanaf de "
+"vorige snapshot."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
-#, fuzzy
-#| msgid "Mount the initial root file system:"
 msgid "A read-only root file system"
-msgstr "Koppel het aanvankelijke root bestandssysteem aan:"
+msgstr "Een alleen-lezen root-bestandssysteem"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -263,6 +281,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Om problemen met en gegevensverlies te vermijden vanwege het bijwerken, moet "
+"er in het root-bestandssysteem niet meer geschreven worden. Daarom wordt het "
+"root-bestandssysteem alleen-lezen aangekoppeld gedurende het normale werk."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -272,12 +293,19 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Om deze opzet te laten werken moeten er twee extra wijzigingen aan het "
+"bestandssysteem gemaakt worden: om schrijven naar de gebruikersconfiguratie "
+"in <filename>/etc</filename> toe te staan, wordt deze map automatisch "
+"geconfigureerd om OverlayFS te gebruiken. <filename>/var</filename> is nu "
+"een apart subvolume dat door processen beschreven kan worden."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"<emphasis>Transactionele server</emphasis> heeft minstens 12 GB schijfruimte "
+"nodig"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
@@ -285,6 +313,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"De systeemrol <emphasis>Transactionele server</emphasis> heeft minstens 12 "
+"GB nodig om Btrfs snapshots te kunnen bevatten."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
@@ -293,11 +323,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Om te werken met transactioneel bijwerken, moet u altijd het commando "
+"<command>transactional-update</command> gebruiken in plaats van YaST en "
+"Zypper voor alle beheer van software:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Het systeem bijwerken: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -305,6 +338,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Een pakket installeren: <command>transactional-update pkg in "
+"<replaceable>PAKKETNAAM</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -312,6 +347,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Een pakket verwijderen: <command>transactional-update pkg rm "
+"<replaceable>PAKKETNAAM</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -320,6 +357,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Om de laatste snapshot terug te draaien, dat is de laatste set wijzigingen "
+"naar het root-bestandssysteem, ga na dat uw systeem wordt geboot in de een "
+"na laatste snapshot en voer uit: <command>transactional-update "
+"rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
@@ -327,6 +368,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Voeg als optie een snapshot-ID toe aan het eind van het commando om terug te "
+"draaien naar een specifieke ID."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -336,30 +379,30 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Bij gebruik van deze systeemrol zal het systeem standaard dagelijks zichzelf "
+"bijwerken en opnieuw opstarten tussen 03:30 am en 05:00 am. Beide acties "
+"zijn gebaseerd op systemd en kan, indien nodig, uitgeschakeld worden met "
+"<command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
-#, fuzzy, no-wrap
-#| msgid "systemctl disable NetworkManager.service"
+#, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr "systemctl disable NetworkManager.service"
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"Voor meer informatie, zie <link xlink:href=\"https://bugzilla.opensuse.org/"
-"show_bug.cgi?id=996520\"> en <link xlink:href=\"https://bugzilla.opensuse."
-"org/show_bug.cgi?id=853019</>."
+"Voor meer informatie over transactioneel bijwerken, zie de openSUSE Kubic "
+"blog posts <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> en <"
+"link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
@@ -396,7 +439,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Installeren op vaste schijven met een capaciteit van minder dan 12 GB"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -406,6 +449,11 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Het installatieprogramma zal alleen een partitioneringsschema voorstellen "
+"als de beschikbare grootte op de vaste schijf groter is dan 12 GB. Als u het "
+"wilt opzetten, bijvoorbeeld, op erg kleine images van virtuele machines, "
+"gebruik dan het begeleide partitioneringsprogramma om "
+"partitioneringsparameters handmatig in te stellen."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
@@ -1030,20 +1078,17 @@ msgstr "Ga na dat het pakket <package>gdm</package> is geïnstalleerd."
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "Stel GDM in als de schermbeheerder:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
 "sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
@@ -1070,12 +1115,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[XDisplay]\n"
-#| "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
-#| "EnableHiDPI=true\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1083,9 +1123,10 @@ msgid ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgstr ""
 "\n"
-"[XDisplay]\n"
-"ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
+"[X11]\n"
 "EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_INSTELLING</replaceable>"
+"\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
