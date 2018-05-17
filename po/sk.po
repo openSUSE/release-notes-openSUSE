@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-05-15 19:43+0200\n"
-"PO-Revision-Date: 2018-05-16 08:06+0000\n"
+"PO-Revision-Date: 2018-05-17 09:05+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/sk/>\n"
@@ -713,6 +713,8 @@ msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
 msgstr ""
+"Použite <command>update-alternatives</command> pre nastavenie správcu "
+"prihlásenia a desktopového sedenia"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
@@ -723,26 +725,31 @@ msgid ""
 "defined using <filename>/etc/sysconfig</filename> anymore but with the "
 "alternatives system."
 msgstr ""
+"V minulosti by ste mohli použiť <filename>/etc/sysconfig</filename> alebo "
+"YaST modul <guimenu>/etc/sysconfig Editor</guimenu> na definovanie správcu "
+"prihlásenia a desktopového sedenia. Počínajúc openSUSE Leap 15.0 hodnoty už "
+"nie sú definované pomocou <filename>/etc/sysconfig</filename>, ale s "
+"alternatívnym systémom."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:432
 msgid "To change the defaults, use the following alternatives:"
-msgstr ""
+msgstr "Ak chcete zmeniť predvolené hodnoty, použite nasledujúce alternatívy:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
 msgid "Login manager: <literal>default-displaymanager</literal>"
-msgstr ""
+msgstr "Správca prihlásenia: <literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:442
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
-msgstr ""
+msgstr "Wayland sedenie: <literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:447
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
-msgstr ""
+msgstr "X desktop sedenie: <literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
@@ -750,12 +757,14 @@ msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
 msgstr ""
+"Napríklad na kontrolu hodnoty <literal>default-displaymanager</literal> "
+"použite:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:456
 #, no-wrap
 msgid "sudo update-alternatives --display default-displaymanager"
-msgstr ""
+msgstr "sudo update-alternatives --display default-displaymanager"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:457
@@ -763,6 +772,8 @@ msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
 msgstr ""
+"Ak chcete prepnúť <literal>default-displaymanager</literal> na "
+"<command>xdm</command>, použite:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:461
@@ -771,6 +782,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:463
@@ -779,6 +792,9 @@ msgid ""
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
 "<package>yast2-alternatives</package>."
 msgstr ""
+"Ak chcete povoliť grafickú správu alternatív, použite modul YaST "
+"<guimenu>Alternatives</guimenu>, ktorý môže byť nainštalovaný z balíka "
+"<package>yast2-alternatives</package>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:471
@@ -846,6 +862,8 @@ msgstr "Reštartovať."
 #: xml/release-notes.xml:515
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
 msgstr ""
+"Prispôsobenie rozmerov používateľského rozhrania SDDM na počítačoch s "
+"displejmi s vysokým DPI"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:516
@@ -855,6 +873,11 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"Predvolený správca prihlásenia pre KDE, SDDM, v predvolenom nastavení "
+"neprispôsobuje používateľské rozhranie pre displeje s vysokým DPI. Ak máte "
+"počítač s displejom s vysokým DPI, môžete nastaviť SDDM tak, aby sa "
+"automaticky prispôsobilo používateľské rozhranie pre displej pomocou "
+"konfiguračného súboru <filename>/etc/sddm.conf</filename>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:523
@@ -865,6 +888,10 @@ msgid ""
 "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
 "EnableHiDPI=true\n"
 msgstr ""
+"\n"
+"[XDisplay]\n"
+"ServerArguments=-dpi <replaceable> 1DPI_SETTING</replaceable> 2\n"
+"EnableHiDPI=true\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:528
@@ -873,11 +900,17 @@ msgid ""
 "value, such as <literal>192</literal>. For best scaling results, use a DPI "
 "value that is a multiple of the default 96 DPI."
 msgstr ""
+"Nahraďte <replaceable>DPI_SETTING</replaceable> s príslušnou hodnotou DPI, "
+"ako napr. <literal>192</literal>. Ak chcete dosiahnuť najlepšie výsledky "
+"prispôsobenia rozmerov, použite hodnotu DPI, ktorá je násobkom predvolenej "
+"hodnoty 96 DPI."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:537
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
 msgstr ""
+"Prispôsobenie rozmerov používateľského rozhrania YaST na počítačoch s "
+"displejmi s vysokým DPI"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:538
@@ -887,11 +920,16 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"YaST v predvolenom nastavení neprispôsobuje svoje používateľské rozhranie "
+"pre displeje s vysokým rozlíšením. Ak máte počítač s displejom s vysokým "
+"DPI, môžete nastaviť YaST tak, aby sa rozmery jeho používateľského rozhrania "
+"automaticky prispôsobili displeju. Ak to chcete urobiť, nastavte premennú "
+"prostredia <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:548
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
-msgstr ""
+msgstr "Zdieľanie obrazovky nefunguje pre Firefox alebo Chromium na Waylande"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:549
@@ -901,6 +939,10 @@ msgid ""
 "application windows. This functionality is currently not supported in either "
 "browser when using a Wayland session."
 msgstr ""
+"Firefox a Chromium obvykle umožňujú, aby webovo založené aplikácie, ako "
+"napríklad videokonferenčné aplikácie, zdieľali celú obrazovku alebo "
+"individuálne okná aplikácií. Táto funkcia momentálne nie je podporovaná v "
+"žiadnom prehliadači pri používaní sedenia Wayland."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:555
@@ -908,6 +950,8 @@ msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
 msgstr ""
+"Ak chcete byť schopní zdieľať svoju obrazovku pre Firefox alebo Chromium, "
+"použite namiesto toho sedenie X."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:562
