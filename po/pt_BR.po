@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-17 20:35+0000\n"
-"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
+"PO-Revision-Date: 2018-05-17 21:31+0000\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects"
 "/release-notes-opensuse/leap-15_0/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -195,8 +195,8 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
-"Usando Atualizações Atômicas com a Nova Função do Sistema <emphasis>Servidor "
-"Transacional</emphasis>"
+"Usando atualizações atômicas com a nova função do sistema <emphasis>Servidor "
+"transacional</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -210,16 +210,16 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
-"O instalador agora suporta uma nova função do sistema <emphasis> Servidor "
-"Transacional </emphasis> que é um resultado do esforço do openSUSE Kubic. "
+"O instalador agora suporta uma nova função do sistema <emphasis>Servidor "
+"Transacional</emphasis> que é um resultado do esforço do openSUSE Kubic. "
 "Essa função do sistema apresenta um novo sistema de atualização que aplica "
 "as atualizações de forma automática (como uma única operação) e facilita a "
 "reversão, caso isso seja necessário. Esses recursos são baseados nas "
 "ferramentas de gerenciamento de pacotes das quais todas as outras "
 "distribuições do SUSE e do openSUSE também dependem. Isso significa que a "
 "grande maioria dos pacotes RPM que funcionam com outras funções do sistema "
-"do openSUSE Leap 15.0 também funcionam com a função do sistema <emphasis> "
-"Servidor Transacional </emphasis>."
+"do openSUSE Leap 15.0 também funcionam com a função do sistema <emphasis>"
+"Servidor Transacional</emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
@@ -233,6 +233,10 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Alguns pacotes modificam o conteúdo do <filename>/var</filename> ou "
+"<filename>/srv</filename> em seus scripts <literal>%post</literal> do RPM. "
+"Estes pacotes são incompatíveis. Caso você se depare com este tipo de "
+"pacote, preencha um relatório de erro."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -242,7 +246,7 @@ msgstr "Para fornecer esses recursos, este sistema de atualização depende:"
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr "Btrfs instantâneos"
+msgstr "Instantâneos do Btrfs"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -267,7 +271,7 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
 msgid "A read-only root file system"
-msgstr "Um sistema de arquivos root somente leitura"
+msgstr "Um sistema de arquivos raiz somente leitura"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -288,12 +292,19 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Para fazer esta configuração funcionar, duas alterações adicionais no "
+"sistema de arquivos devem ser feitas: Permitir gravar configurações do "
+"usuário no <filename>/etc</filename>, este diretório é automaticamente "
+"configurado para usar o  OverlayFS. O <filename>/var</filename> é agora um "
+"subvolume separado que pode ser escrito pelos processos."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"O <emphasis>Servidor transacional</emphasis> necessita de pelo menos 12 GB "
+"de espaço em disco"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
@@ -301,6 +312,9 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"A função do sistema <emphasis>Servidor transacional</emphasis> necessite de "
+"um espaço em disco de pelo menos 12 GB para acomodar os instantâneos do "
+"Btrfs."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
@@ -309,11 +323,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Para trabalhar com as atualizações transacionais, sempre use o comando "
+"<command>transactional-update</command> ao invés do YaST e Zypper para todo "
+"o gerenciamento de software:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Atualizar o sistema: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -321,6 +338,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Instalar um pacote: <command>transactional-update pkg in "
+"<replaceable>NOME_DO_PACOTE</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -328,6 +347,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Remover um pacote: <command>transactional-update pkg rm "
+"<replaceable>NOME_DO_PACOTE</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -336,6 +357,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Para reverter para o último instantâneo, ou seja, o último conjunto de "
+"alterações no sistema de arquivos raiz, certifique-se de seu sistema seja "
+"iniciado no próximo ao último instantâneo e execute: <command>transactional-"
+"update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
@@ -343,8 +368,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
-"Opcionalmente, adicione um ID de captura instantânea ao final do comando "
-"para reverter para um ID específico."
+"Opcionalmente, adicione um ID do instantâneo ao final do comando para "
+"reverter para um ID específico."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -354,6 +379,10 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Quando usar esta função do sistema, por padrão, o sistema irá executar uma "
+"atualização diária e reiniciará entre as 03:30 e 05:00. Ambas ações são "
+"baseadas no sistema e se necessário podem ser desabilitadas usando o  "
+"<command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
@@ -371,8 +400,8 @@ msgid ""
 msgstr ""
 "Para mais informações sobre atualizações transacionais, veja as postagens do "
 "blog do openSUSE Kubic <link xlink:href=\""
-"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> and <"
-"link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> e <link "
+"xlink:href=\""
 "https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
@@ -601,7 +630,7 @@ msgstr ""
 "de alto DPI por padrão. Se você tiver um computador com um monitor de alto "
 "DPI, poderá definir o YaST para dimensionar sua interface do usuário "
 "automaticamente para a exibição. Para fazer isso, adicione o parâmetro "
-"<literal> QT_AUTO_SCREEN_SCALE_FACTOR = 1 </literal> à linha de comando do "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR = 1</literal> à linha de comando do "
 "carregador de inicialização."
 
 #. (itstool) path: sect1/title
@@ -636,8 +665,7 @@ msgstr "Atualizando a partir do openSUSE Leap 42.3"
 #: xml/release-notes.xml:355
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
 msgstr ""
-"O Admin do Postfix usa o layout de diretório incompatível com versões "
-"anteriores"
+"O Postfix Admin usa o layout de diretório incompatível com versões anteriores"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:356
@@ -647,8 +675,8 @@ msgid ""
 "backwards-incompatible directory layout:"
 msgstr ""
 "Começando com a versão 3.2, como é fornecido no openSUSE Leap 15.0, o "
-"Postfix Admin (pacote <package> postfixadmin </package>) usa um novo layout "
-"de diretório incompatível com versões anteriores:"
+"Postfix Admin (pacote <package>postfixadmin</package>) usa um novo layout de "
+"diretório incompatível com versões anteriores:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:363
@@ -661,7 +689,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:368
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
-msgstr "O código PHP movido para <filename>/usr/share/postfixadmin</filename>."
+msgstr ""
+"O código PHP foi movido para <filename>/usr/share/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:373
@@ -687,8 +716,9 @@ msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
 msgstr ""
-"Movido <filename>config.local.php</filename> de <filename>/srv/www/htdocs/"
-"postfixadmin</filename> para <filename>/etc/postfixadmin</filename>."
+"<filename>config.local.php</filename> movido de "
+"<filename>/srv/www/htdocs/postfixadmin</filename> para "
+"<filename>/etc/postfixadmin</filename>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:392
@@ -698,10 +728,10 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
-"Se você fez customizações em <filename> config.inc.php </filename>, "
-"idealmente mescle estas customizações em <filename> /etc/postfixadmin/config."
-"local.php </filename>. Nós recomendamos manter <filename> config.inc.php </"
-"filename> não modificado."
+"Se você fez customizações em <filename>config.inc.php</filename>, idealmente "
+"mescle estas customizações em "
+"<filename>/etc/postfixadmin/config.local.php</filename>. Nós recomendamos "
+"manter <filename>config.inc.php</filename> não modificado."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:400
@@ -855,12 +885,12 @@ msgid ""
 "[...]"
 msgstr ""
 "[...]\n"
-"!! Terceiro exemplo: Mude para a direita a tecla Control para a tecla Compose.\n"
-"!! Para compor Character, pressione esta tecla e depois dois\n"
-"!! caracteres (por exemplo, `a 'e` ^' para obter 342).\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
 "!remove  Control  = Control_R\n"
 "!keysym Control_R = Multi_key\n"
-"!adicionar     Control  = Control_R\n"
+"!add     Control  = Control_R\n"
 "[...]"
 
 #. (itstool) path: listitem/para
@@ -1083,12 +1113,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[XDisplay]\n"
-#| "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
-#| "EnableHiDPI=true\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1096,9 +1121,9 @@ msgid ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgstr ""
 "\n"
-"[XDisplay]\n"
-"ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
+"[X11]\n"
 "EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>VALOR_DPI</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
@@ -1136,7 +1161,7 @@ msgstr ""
 #: xml/release-notes.xml:667
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
 msgstr ""
-"O compartilhamento de tela não funciona no Firefox ou no Chromium on Wayland"
+"O compartilhamento de tela não funciona no Firefox ou Chromium no Wayland"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:668
@@ -1482,7 +1507,7 @@ msgid ""
 msgstr ""
 "Ao invés de usar vários subvolumes Btrfs para diferentes diretórios "
 "<filename>/var</filename>, o openSUSE Leap 15.0 vem com um único subvolume "
-"para todos os <filename>/var</filename>. Este novo subvolume tem A "
+"para todos os <filename>/var</filename>. Este novo subvolume tem a "
 "funcionalidade de cópia na gravação está desativada."
 
 #. (itstool) path: sect2/para
