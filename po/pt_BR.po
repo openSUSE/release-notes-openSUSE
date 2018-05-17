@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-12 11:05+0000\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_0/pt_BR/>\n"
+"PO-Revision-Date: 2018-05-17 20:35+0000\n"
+"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects"
+"/release-notes-opensuse/leap-15_0/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -195,6 +195,8 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
+"Usando Atualizações Atômicas com a Nova Função do Sistema <emphasis>Servidor "
+"Transacional</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -208,13 +210,21 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"O instalador agora suporta uma nova função do sistema <emphasis> Servidor "
+"Transacional </emphasis> que é um resultado do esforço do openSUSE Kubic. "
+"Essa função do sistema apresenta um novo sistema de atualização que aplica "
+"as atualizações de forma automática (como uma única operação) e facilita a "
+"reversão, caso isso seja necessário. Esses recursos são baseados nas "
+"ferramentas de gerenciamento de pacotes das quais todas as outras "
+"distribuições do SUSE e do openSUSE também dependem. Isso significa que a "
+"grande maioria dos pacotes RPM que funcionam com outras funções do sistema "
+"do openSUSE Leap 15.0 também funcionam com a função do sistema <emphasis> "
+"Servidor Transacional </emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "Pacotes descontinuados"
+msgstr "Pacotes incompatíveis"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -227,12 +237,12 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "Para fornecer esses recursos, este sistema de atualização depende:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Btrfs instantâneos"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -242,18 +252,22 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Antes que uma atualização do sistema seja iniciada, um novo instantâneo do "
+"Btrfs do sistema de arquivos raiz é criado. Em seguida, todas as alterações "
+"da atualização são instaladas nesse instantâneo do Btrfs. Para concluir a "
+"atualização, você pode reiniciar o sistema no novo instantâneo."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Para reverter a atualização, basta inicializar a partir do instantâneo "
+"anterior."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
-#, fuzzy
-#| msgid "Mount the initial root file system:"
 msgid "A read-only root file system"
-msgstr "Monte o sistema de arquivos root inicial:"
+msgstr "Um sistema de arquivos root somente leitura"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -262,6 +276,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Para evitar problemas e perda de dados devido a atualizações, o sistema de "
+"arquivos raiz não deve ser gravado de outra forma. Portanto, o sistema de "
+"arquivos raiz é montado somente para leitura durante a operação normal."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -326,6 +343,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Opcionalmente, adicione um ID de captura instantânea ao final do comando "
+"para reverter para um ID específico."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -338,27 +357,23 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
-#, fuzzy, no-wrap
-#| msgid "systemctl disable NetworkManager.service"
+#, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr "systemctl disable NetworkManager.service"
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"Para mais informações, veja <link xlink:href=\"https://bugzilla.opensuse.org/"
-"show_bug.cgi?id=996520\"/> e <link xlink:href=\"https://bugzilla.opensuse."
-"org/show_bug.cgi?id=853019\"/>."
+"Para mais informações sobre atualizações transacionais, veja as postagens do "
+"blog do openSUSE Kubic <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> and <"
+"link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
@@ -395,7 +410,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Instalando em discos rígidos com menos de 12 GB de capacidade"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -405,6 +420,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"O instalador proporá apenas um esquema de particionamento se o tamanho do "
+"disco rígido disponível for maior que 12 GB. Se você deseja configurar, por "
+"exemplo, imagens muito pequenas de máquinas virtuais, use o particionador "
+"orientado para ajustar os parâmetros de particionamento manualmente."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
@@ -1024,20 +1043,17 @@ msgstr "Certifique-se de que o pacote <package>gdm</package> está instalado."
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "Defina o GDM como o gerenciador de exibição:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
 "sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
@@ -1426,7 +1442,7 @@ msgstr "Técnico"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:868
 msgid "Updated Btrfs Subvolume Layout"
-msgstr ""
+msgstr "Estrutura atualizada de subvolumes do Btrfs"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:869
@@ -1434,16 +1450,18 @@ msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
 msgstr ""
+"O openSUSE 15.0 apresenta uma nova estrutura padrão de sub volumes do Btrfs "
+"que aspira ao seguinte:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:875
 msgid "Simplified snapshots and rollbacks"
-msgstr ""
+msgstr "Instantâneos e reversões simplificados"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:880
 msgid "Prevention of accidental data loss"
-msgstr ""
+msgstr "Prevenção de perda acidental de dados"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:885
@@ -1451,6 +1469,8 @@ msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
 msgstr ""
+"Melhor desempenho de bancos de dados e imagens de máquinas virtuais "
+"hospedadas em <filename>/var</filename>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:891
@@ -1460,6 +1480,10 @@ msgid ""
 "for all of <filename>/var</filename>. This new subvolume has copy-on-write "
 "functionality disabled."
 msgstr ""
+"Ao invés de usar vários subvolumes Btrfs para diferentes diretórios "
+"<filename>/var</filename>, o openSUSE Leap 15.0 vem com um único subvolume "
+"para todos os <filename>/var</filename>. Este novo subvolume tem A "
+"funcionalidade de cópia na gravação está desativada."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:897
@@ -1468,20 +1492,20 @@ msgid ""
 "Therefore, if you want to take advantage of it, make sure to freshly install "
 "openSUSE Leap 15.0 instead of upgrading."
 msgstr ""
+"Não há uma maneira definitiva de atualizar para essa nova estrutura de sub-"
+"volume do Btrfs. Portanto, se você quiser tirar proveito disso, certifique-"
+"se de fazer uma instalação completa do openSUSE Leap 15.0 em vez de uma "
+"atualização."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:902
-#, fuzzy
-#| msgid ""
-#| "For more information about upgrading to a current openSUSE version, see "
-#| "<link xlink:href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 msgstr ""
-"Para mais informações sobre atualizar para uma versão atual do openSUSE, "
-"veja\n"
-"<link xlink:href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
+"Para obter mais informações sobre a estrutura de subvolume padrão do Btrfs "
+"antes e depois da alteração, consulte <link xlink:href=\""
+"https://en.opensuse.org/SDB:BTRFS\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:916
