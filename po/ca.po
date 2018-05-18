@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-15 18:57+0000\n"
+"PO-Revision-Date: 2018-05-18 11:00+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ca/>\n"
@@ -192,6 +192,8 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
+"Usar les actualitzacions atòmiques amb el rol de sistema nou de <emphasis>"
+"Servidor transaccional</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -205,13 +207,20 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"Ara l'instal·lador admet un rol de sistema nou, el <emphasis>Servidor "
+"transaccional</emphasis>, que és un producte de l'esforç de l'openSUSE "
+"Kubic. Aquest rol de sistema presenta un sistema d'actualització nou que "
+"aplica les actualitzacions  atòmicament (com una única operació) i fa que "
+"sigui fàcil revertir-les si esdevé necessari. Aquestes funcionalitats estan "
+"basades en les eines de gestió de paquets en què es basen totes les altres "
+"distribucions de SUSE i d'openSUSE. Això vol dir que una àmplia majoria de "
+"paquets RPM que funcionen amb altres rols de sistema de l'openSUSE Leap 15.0 "
+"també funcionen amb el rol de <emphasis>Servidor transaccional</emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "Paquets obsolets"
+msgstr "Paquets no compatibles"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -220,16 +229,22 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Alguns paquets modifiquen els continguts  de <filename>/var</filename> o "
+"<filename>/srv</filename> als scripts d'RPM <literal>%post</literal>. "
+"Aquests paquets no són compatibles. Si us en trobeu un, tramiteu un informe "
+"d'error."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
 msgstr ""
+"Per proporcionar aquestes funcionalitats, aquest sistema d'actualització "
+"confia en el següent:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Instantànies de Btrfs"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -239,18 +254,22 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Abans de començar una actualització de sistema, es crea una instantània de "
+"Btrfs del sistema de fitxers d'arrel. Aleshores, tots els canvis de "
+"l'actualització s'instal·len a la instantània de Btrfs. Per completar "
+"l'actualització, reinicieu el sistema i entreu a la instantània nova."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Per revertir l'actualització, simplement arrenqueu des de la instantània "
+"anterior."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
-#, fuzzy
-#| msgid "Mount the initial root file system:"
 msgid "A read-only root file system"
-msgstr "Munteu el sistema de fitxers d'arrel inicial:"
+msgstr "Un sistema de fitxers d'arrel només de lectura"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -259,6 +278,10 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Per evitar problemes amb les dades i la pèrdua de dades a causa de les "
+"actualitzacions, al sistema de fitxers d'arrel no s'hi ha d'escriure. Per "
+"tant, el sistema de fitxers d'arrel es munta com a només de lectura durant "
+"l'operativitat normal."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -268,12 +291,19 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Per fer funcionar aquesta configuració, calen fer dos canvis addicionals al "
+"sistema de fitxers: per permetre escriure la configuració d'usuari a "
+"<filename>/etc</filename>, aquest directori es configura automàticament per "
+"usar OverlayFS. Ara <filename>/var</filename> és un subvolum separat en què "
+"els processos poden escriure."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"El <emphasis>Servidor transaccional</emphasis> necessita com a mínim 12 GB "
+"d'espai de disc"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
@@ -281,6 +311,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"El rol de sistema <emphasis>Servidor transaccional</emphasis> necessita com "
+"a mínim 12 GB d'espai de disc per a les instantànies de Btrfs."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
@@ -289,11 +321,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Per treballar amb les actualitzacions transaccionals, useu sempre l'ordre "
+"<command>transactional-update</command> en comptes del YaST o el Zypper per "
+"a totes les gestions de programari:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Actualitzar el sistema: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -301,6 +336,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Instal·lar un paquet: <command>transactional-update pkg in "
+"<replaceable>NOM_DEL_PAQUET_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -308,6 +345,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Eliminar un paquet: <command>transactional-update pkg rm "
+"<replaceable>NOM_DEL_PAQUET</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -316,6 +355,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Per revertir la darrera instantània, que és l'últim conjunt de canvis del "
+"sistema de fitxers d'arrel, assegureu-vos que el sistema s'hagi arrencat amb "
+"amb la penúltima instantània i executeu el següent: <command>transactional-"
+"update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
@@ -323,6 +366,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Opcionalment, afegiu un identificador d'instantània al final de l'ordre per "
+"revertir a una instantània concreta."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -332,29 +377,30 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Quan s'usa aquest rol de sistema, per defecte, el sistema farà una "
+"actualització i un reinici dirari entre les 03:30 am i les 05:00 am. "
+"Aquestes dues accions estan basades en systemd i, si cal, es poden "
+"inhabilitar usant <command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr ""
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"Per a més informació, vegeu <link xlink:href=\"https://bugzilla.opensuse.org/"
-"show_bug.cgi?id=996520\"/> i <link xlink:href=\"https://bugzilla.opensuse."
-"org/show_bug.cgi?id=853019\"/>."
+"Per a més informació sobre les actualitzacions transaccionals, vegeu els "
+"apunts del blog de l'openSUSE Kubic <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> i <link "
+"xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
@@ -391,7 +437,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Instal·lar en discs durs de menys de 12 GB de capacitat"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -401,6 +447,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"L'instal·lador només proposarà un esquema de particions si l'espai de disc "
+"dur disponible és superior a 12 GB. Si voleu establir, per exemple, imatges "
+"de màquines virtuals molt petites, useu el partidor guiat per ajustar els "
+"paràmetres de les particions manualment."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
@@ -1023,20 +1073,17 @@ msgstr "Assegureu-vos que el paquet <package>gdm</package> estigui instal·lat."
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "Establir el GDM com a gestor de pantalla:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
 "sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
@@ -1065,12 +1112,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[XDisplay]\n"
-#| "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
-#| "EnableHiDPI=true\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1078,9 +1120,9 @@ msgid ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgstr ""
 "\n"
-"[XDisplay]\n"
-"ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
+"[X11]\n"
 "EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
