@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-17 09:05+0000\n"
+"PO-Revision-Date: 2018-05-18 10:06+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/sk/>\n"
@@ -189,6 +189,8 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
+"Použitie atomických aktualizácií s novou systémovou rolou <emphasis>"
+"Transactional Server</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -202,13 +204,20 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"Inštalátor teraz podporuje novú systémovú rolu <emphasis>Transactional "
+"Server</emphasis>, ktorý je výsledkom snahy openSUSE Kubic. Táto systémová "
+"rola obsahuje nový aktualizačný systém, ktorý aplikuje aktualizácie atomicky "
+"(ako jedna operácia) a umožňuje ľahko sa vrátiť, ak to bude potrebné. Tieto "
+"funkcie sú založené na nástrojoch na správu balíkov, na ktoré sa tiež "
+"spoliehajú všetky ostatné distribúcie SUSE a openSUSE. To znamená, že drvivá "
+"väčšina balíkov RPM, ktoré pracujú s inými systémovými rolami openSUSE Leap "
+"15.0, pracujú aj so systémovou rolou <emphasis>Transactional "
+"Server</emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "Zastarané balíky"
+msgstr "Nekompatibilné balíky"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -217,16 +226,21 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Niektoré balíky upravujú obsah súboru <filename>/var</filename> alebo "
+"<filename>/srv</filename> vo svojich RPM <literal>%post</literal> skriptoch. "
+"Tieto balíky nie sú kompatibilné. Ak naďabíte na takýto balík, podajte "
+"správu o chybe."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
 msgstr ""
+"Na poskytovanie týchto funkcií sa tento systém aktualizácií spolieha na:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Snímky Btrfs"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -236,18 +250,22 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Pred spustením aktualizácie systému sa vytvorí nová snímka Btrfs koreňového "
+"súborového systému. Potom sú všetky zmeny z aktualizácie nainštalované do "
+"tejto snímky Btrfs. Ak chcete dokončiť aktualizáciu, môžete potom systém "
+"reštartovať do novej snímky."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Ak chcete vrátiť aktualizáciu, jednoducho spustite systém z predchádzajúcej "
+"snímky."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
-#, fuzzy
-#| msgid "Mount the initial root file system:"
 msgid "A read-only root file system"
-msgstr "Pripojiť počiatočný koreňový súborový systém:"
+msgstr "Koreňový súborový systém len na čítanie"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -256,6 +274,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Aby nedošlo k problémom so stratou údajov kvôli aktualizáciám, koreňový "
+"súborový systém nesmie byť inak zapísaný. Preto je koreňový súborový systém "
+"pri normálnej prevádzke pripojený len na čítanie."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -265,12 +286,19 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Aby toto nastavenie pracovalo, museli sa vykonať dve dodatočné zmeny "
+"súborového systému: Umožniť zapisovanie konfigurácie používateľa v "
+"<filename>/etc</filename>, tento adresár je automaticky konfigurovaný na "
+"použitie OverlayFS. <filename>/var</filename> je teraz samostatný podzväzok, "
+"do ktorého možno zapisovať procesmi."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"<emphasis>Transactional Server</emphasis> Vyžaduje najmenej 12 GB miesta na "
+"disku"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
@@ -278,6 +306,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Systémová rola <emphasis>Transactional Server</emphasis> potrebuje veľkosť "
+"disku najmenej 12 GB na prijatie snímok Btrfs."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
@@ -286,11 +316,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Ak chcete pracovať s transakčnými aktualizáciami, vždy použite príkaz "
+"<command>transactional-update</command> namiesto YaST a Zypper pre celú "
+"správu softvéru:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Aktualizovať systém: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -298,6 +331,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Inštalovať balík: <command> transactional-update pkg in "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -305,6 +340,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Odstrániť balík: <command>transactional-update pkg rm "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -313,6 +350,9 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Ak chcete vrátiť poslednú snímku, teda poslednú sadu zmien v koreňovom "
+"súborovom systéme, uistite sa, že váš systém je spustený do ďalšej k "
+"poslednej snímke a spustite: <command>transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
@@ -320,6 +360,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Voliteľne pridajte ID snímky na koniec príkazu na vrátenie sa na konkrétne "
+"ID."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -338,20 +380,17 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"Viac informácií nájdete na <link xlink:href=\"https://bugzilla.opensuse.org/"
-"show_bug.cgi?id=996520\"/> a <link xlink:href=\"https://bugzilla.opensuse."
-"org/show_bug.cgi?id=853019\"/>."
+"Viac informácií o transakčných aktualizáciách nájdete v príspevkoch blogu "
+"openSUSE Kubic <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> a <link "
+"xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 # https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #. (itstool) path: sect2/title
@@ -1017,16 +1056,13 @@ msgstr ""
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
 "sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
@@ -1056,12 +1092,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[XDisplay]\n"
-#| "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
-#| "EnableHiDPI=true\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1069,9 +1100,9 @@ msgid ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgstr ""
 "\n"
-"[XDisplay]\n"
-"ServerArguments=-dpi <replaceable> 1DPI_SETTING</replaceable> 2\n"
+"[X11]\n"
 "EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
