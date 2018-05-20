@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-11 21:02+0000\n"
-"Last-Translator: Vinzenz Vietzke <vinz@vinzv.de>\n"
+"PO-Revision-Date: 2018-05-20 17:02+0000\n"
+"Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/de/>\n"
 "Language: de\n"
@@ -201,6 +201,8 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
+"Verwendung Atomarer Updates Mit der Neuen Systemrolle <emphasis>Transaktions-"
+"Server</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -214,13 +216,20 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"Der Installer unterstützt jetzt eine neue Systemrolle <emphasis>Transaktions-"
+"Server</emphasis>, was ein Resultat der Bemühungen aus openSUSE Kubic ist. "
+"Diese Systemrollen-Features sind ein neues Update-System, das Updates atomar "
+"(als eine einzige Operation) einspielt und es einfach macht diese wieder - "
+"falls notwendig - rückgängig zu machen. Diese Features basieren auf den "
+"Paketmanagement-Tools, denen alle anderen SUSE und openSUSE-Distributionen "
+"vertrauen. Das bedeutet, dass die umfangreiche Mehrheit an RPM-Paketen, die "
+"mit anderen Systemrollen von openSUSE Leap 15.0 arbeiten, auch mit mit der "
+"Systemrolle <emphasis>Transaktions-Server</emphasis> funktionieren."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "Veraltete Pakete"
+msgstr "Inkompatible Pakete"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -229,6 +238,10 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Manche Pakete modifizieren die Inhalte von <filename>/var</filename> oder "
+"<filename>/srv</filename> in ihren RPM-<literal>%post</literal>-Skripten. "
+"Diese Pakete sind inkompatibel. Wenn Sie zufällig auf so ein Paket treffen, "
+"erstellen Sie einen Bug-Report."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -238,7 +251,7 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Btrfs-Snapshots"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -256,10 +269,8 @@ msgstr ""
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
-#, fuzzy
-#| msgid "Mount the initial root file system:"
 msgid "A read-only root file system"
-msgstr "Das ursprüngliche root-Dateisystem mounten:"
+msgstr "Ein nur-lesbares root-Dateisystem"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -344,27 +355,22 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
-#, fuzzy, no-wrap
-#| msgid "systemctl disable NetworkManager.service"
+#, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr "systemctl disable NetworkManager.service"
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"Details finden sie unter <link xlink:href=\"https://bugzilla.opensuse.org/"
-"show_bug.cgi?id=996520\"/> und <link xlink:href=\"https://bugzilla.opensuse."
-"org/show_bug.cgi?id=853019\"/>."
+"Weitere Informationen zu transaktionalen Updates finden sie unter <link "
+"xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/"
+"\"/> und <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
@@ -1044,16 +1050,13 @@ msgstr ""
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
 "sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
@@ -1081,12 +1084,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[XDisplay]\n"
-#| "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
-#| "EnableHiDPI=true\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1094,9 +1092,10 @@ msgid ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgstr ""
 "\n"
-"[XDisplay]\n"
-"ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
+"[X11]\n"
 "EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_EINSTELLUNG</replaceable>"
+"\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
