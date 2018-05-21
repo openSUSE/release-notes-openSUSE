@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-21 09:02+0000\n"
+"PO-Revision-Date: 2018-05-21 18:08+0000\n"
 "Last-Translator: Antoine Belvire <antoine.belvire@opensuse.org>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/fr/>\n"
@@ -209,6 +209,16 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"L'installateur propose désormais un nouveau rôle système, <emphasis>serveur "
+"transactionnel</emphasis>, qui est le résultat de l'effort produit dans le "
+"cadre d'openSUSE Kubic. Ce rôle système inclut un nouveau système de mise à "
+"jour qui est capable d'appliquer les mises à jour de manière atomique (en "
+"une seule opération) et qui permet de facilement les annuler si cela devient "
+"nécessaire. Ces fonctionnalités sont basées sur les outils de gestion de "
+"paquets sur lesquels les autres distributions openSUSE et SUSE reposent. "
+"Cela signifie que la vaste majorité des paquets RPM qui fonctionnent avec "
+"d'autres rôles système fonctionnent aussi avec le nouveau rôle <emphasis>"
+"serveur transactionnel</emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
@@ -270,6 +280,10 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Pour éviter les problèmes et la perte de données à cause des mises à jour, "
+"le système de fichiers racine ne doit pas être écrit autrement. Par "
+"conséquent, le système de fichiers racine est monté en lecture seule pendant "
+"le fonctionnement normal."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -344,6 +358,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Pour annuler le dernier instantané, c'est-à-dire les derniers changements "
+"effectués sur le système de fichiers, assurez-vous que votre système est "
+"démarré sur l'avant-dernier instantané et lancez : <command>transactional-"
+"update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
@@ -351,6 +369,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"En option, ajoutez un ID d'instantané à la fin de la commande pour revenir à "
+"un ID spécifique."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -373,20 +393,17 @@ msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"Pour plus d'informations, voir <link xlink:href=\"https://bugzilla.opensuse."
-"org/show_bug.cgi?id=996520\"/> et <link xlink:href=\"https://bugzilla."
-"opensuse.org/show_bug.cgi?id=853019\"/>."
+"Pour plus d'informations sur les mises à jour transactionnelles, voir les "
+"posts du blog d'openSUSE Kubic <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> et <"
+"link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
@@ -433,6 +450,11 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"L'installateur proposera un schéma de partitionnement seulement si l'espace "
+"disponible sur le disque dur est plus grand que 12 Go. Si vous voulez "
+"installer, par exemple, de très petites images de machines virtuelles, "
+"utilisez le partitionneur guidé pour régler manuellement les paramètres de "
+"partitionnement."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
@@ -1454,7 +1476,7 @@ msgstr "Aspects techniques"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:868
 msgid "Updated Btrfs Subvolume Layout"
-msgstr ""
+msgstr "Nouveau partitionnement Btrfs"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:869
@@ -1462,16 +1484,18 @@ msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
 msgstr ""
+"openSUSE Leap 15.0 introduit un nouveau partitionnement Btrfs avec pour "
+"missions :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:875
 msgid "Simplified snapshots and rollbacks"
-msgstr ""
+msgstr "Des instantanés et des annulations simplifiés"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:880
 msgid "Prevention of accidental data loss"
-msgstr ""
+msgstr "La prévention de la perte accidentelle de données"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:885
@@ -1502,20 +1526,18 @@ msgid ""
 "Therefore, if you want to take advantage of it, make sure to freshly install "
 "openSUSE Leap 15.0 instead of upgrading."
 msgstr ""
+"Il n'y a pas de façon officiellement supportée de migrer vers ce nouveau "
+"partitionnement Btrfs. Ainsi, si vous voulez en profiter, préférez une "
+"nouvelle installation plutôt qu'une mise à niveau."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:902
-#, fuzzy
-#| msgid ""
-#| "For more information about upgrading to a current openSUSE version, see "
-#| "<link xlink:href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 msgstr ""
-"Pour plus d'informations sur la mise à niveau vers la version actuelle "
-"d'openSUSE, consultez <link xlink:href=\"http://en.opensuse.org/SDB:"
-"Distribution-Upgrade\"/>."
+"Pour plus d'informations sur le nouveau partitionnement Btrfs, rendez-vous "
+"sur <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:916
