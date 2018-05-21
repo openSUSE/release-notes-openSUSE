@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-15 22:06+0000\n"
-"Last-Translator: jc sl <trcs@gmx.com>\n"
+"PO-Revision-Date: 2018-05-21 09:06+0000\n"
+"Last-Translator: Ioannes Andreas <ioannes@tuta.io>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/es/>\n"
 "Language: es\n"
@@ -205,6 +205,8 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
+"Usando las actualizaciones atómicas con la nueva función del sistema "
+"<emphasis>Servidor transaccional</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -218,6 +220,16 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"El servidor ahora soporta una nueva función del sistema <emphasis>Servidor "
+"Transaccional</emphasis> que es resultado del esfuerzo de openSUSE Kubic. "
+"Esta función del sistema presenta una nueva actualización para éste que "
+"aplica las actualizaciones automáticamente (como una única operación) y "
+"facilita su reversión en caso de ser necesario. Estos recursos están basados "
+"en las herramientas de gestión de paquetes de las que otras distribuciones "
+"de SUSE y openSUSE dependen. Esto significa que la gran mayoría de los "
+"paquetes RPM que trabajan con otras funciones del sistema de openSUSE Leap "
+"15.0 también trabajan con la función del sistema <emphasis>Servidor "
+"Transaccional</emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
@@ -233,16 +245,22 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Algunos paquetes modifican el contenido de <filename>/var</filename> o "
+"<filename>/srv</filename> en sus «scripts» <literal>%post</literal> de RPM. "
+"Estos paquetes son incompatibles. Si se encuentra con este tipo de paquete, "
+"elabore un informe de error."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
 msgstr ""
+"Para proporcionar estas características, este sistema de actualización se "
+"basa en:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Instantáneas de Btrfs"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -252,11 +270,18 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Antes de iniciar una actualización del sistema, es creada una nueva "
+"instantánea de Btrfs del sistema de archivo «root». A continuación, todos "
+"los cambios de la actualización son instaladas en la instantánea de Btrfs. "
+"Para completar la actualización, usted puede reiniciar el sistema en la "
+"nueva instantánea."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Para revertir la actualización, simplemente inicie desde la instantánea "
+"anterior."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
