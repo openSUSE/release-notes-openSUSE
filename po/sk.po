@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-18 10:06+0000\n"
+"PO-Revision-Date: 2018-05-21 10:05+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/sk/>\n"
@@ -371,12 +371,16 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Pri používaní tejto systémovej roly systém v predvolenom nastavení vykoná "
+"dennú aktualizáciu a reštartuje sa medzi 03:30 a 05:00. Obe tieto akcie sú "
+"založené na systemd a v prípade potreby môžu byť zakázané pomocou "
+"<command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr ""
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
@@ -428,7 +432,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Inštalácia na pevných diskoch s kapacitou menej ako 12 GB"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -438,6 +442,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Inštalátor navrhne schému rozdelenia disku iba vtedy, ak je dostupná veľkosť "
+"pevného disku väčšia ako 12 GB. Ak chcete nastaviť napríklad veľmi malé "
+"obrazy virtuálnych strojov, použite sprevádzané rozdelenie disku na "
+"vyladenie parametrov rozdelenia ručne."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
@@ -1052,7 +1060,7 @@ msgstr "Uistite sa, že je nainštalovaný balík <package>gdm</package>."
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "Nastaviť GDM ako správcu displeja:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
@@ -1229,7 +1237,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:714
 msgid "FreeType Font Rendering Changes"
-msgstr ""
+msgstr "Zmeny vykresľovania pre FreeType Font"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:715
@@ -1240,17 +1248,23 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
+"FreeType 2.6.4 má novú predvolenú naznačujúcu glyph interpretáciu (verzia 38)"
+", ktorá sa viac zhoduje s inými operačnými systémami, ale môže vyzerať "
+"<quote>viac fuzzy</quote> pre niekoho. Ak chcete obnoviť predchádzajúce "
+"správanie FreeType, nastavte nasledujúcu premennú prostredia na ľubovoľnej "
+"úrovni (systémovej, používateľsky špecifickej alebo programovo špecifickej) "
+"svojej voľby:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:722
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
-msgstr ""
+msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:727
 msgid "Enabling KDE Plasma Browser Integration"
-msgstr ""
+msgstr "Povolenie integrácie prehliadača KDE Plasma"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:728
@@ -1259,6 +1273,10 @@ msgid ""
 "multimedia and downloads using KDE system tools and gives quick access to "
 "tabs via the <guimenu>Run Command</guimenu> bar of the KDE Plasma desktop."
 msgstr ""
+"Integrácia Plasma prehliadača pre Firefox a Chromium/Chrome umožňuje "
+"sledovanie multimédií a sťahovaní pomocou systémových nástrojov KDE a "
+"umožňuje rýchly prístup k záložkám cez panel <guimenu>Spustiť "
+"príkaz</guimenu> desktopu KDE Plasma."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:734
@@ -1266,6 +1284,8 @@ msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
 msgstr ""
+"Funkčnosť integrácie prehliadača pozostáva z dvoch častí, ktoré musia "
+"spolupracovať:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:740
@@ -1273,6 +1293,8 @@ msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
 msgstr ""
+"Desktopová časť, ktorú je možné nainštalovať pomocou systémového balíka "
+"<package>plasma-browser-integration</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:746
@@ -1280,6 +1302,8 @@ msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
 msgstr ""
+"Časti prehliadača, ktorú je potrebné nainštalovať z obchodu doplnkov vášho "
+"prehliadača:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:752
@@ -1287,6 +1311,8 @@ msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
 msgstr ""
+"Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
+"integration/\"/>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:757
@@ -1294,6 +1320,8 @@ msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 msgstr ""
+"Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/detail"
+"/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:764
@@ -1301,6 +1329,8 @@ msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
 msgstr ""
+"Treba poznamenať, že táto funkcia je oficiálne stále vo vývoji a openSUSE "
+"Leap 15.0 sa dodáva s jej skorou verziou."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:773
@@ -1323,12 +1353,14 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:805
 msgid "Security"
-msgstr ""
+msgstr "Bezpečnosť"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:807
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr ""
+"V tejto sekcii sú uvedené zmeny pre bezpečnostné vlastnosti v openSUSE Leap "
+"15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:813
@@ -1422,7 +1454,7 @@ msgstr "Technické"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:868
 msgid "Updated Btrfs Subvolume Layout"
-msgstr ""
+msgstr "Aktualizované rozloženie podzväzku Btrfs"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:869
@@ -1430,23 +1462,25 @@ msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
 msgstr ""
+"openSUSE Leap 15.0 predstavuje nové predvolené rozloženie podzväzku Btrfs, "
+"ktoré sa zameriava na nasledovné:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:875
 msgid "Simplified snapshots and rollbacks"
-msgstr ""
+msgstr "Zjednodušené snímky a vrátenia sa"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:880
 msgid "Prevention of accidental data loss"
-msgstr ""
+msgstr "Predchádzanie náhodnej strate údajov"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:885
 msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
-msgstr ""
+msgstr "Lepší výkon databáz a obrazov VM uložených v <filename>/var</filename>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:891
