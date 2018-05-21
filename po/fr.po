@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-17 19:42+0000\n"
-"Last-Translator: Benoît Monin <benoit.monin@gmx.fr>\n"
+"PO-Revision-Date: 2018-05-21 09:02+0000\n"
+"Last-Translator: Antoine Belvire <antoine.belvire@opensuse.org>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/fr/>\n"
 "Language: fr\n"
@@ -194,6 +194,8 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
+"Utiliser les mises à jour atomiques avec le nouveau rôle système <emphasis>"
+"serveur transactionnel</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -210,10 +212,8 @@ msgstr ""
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "Paquets obsolètes"
+msgstr "Paquets incompatibles"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -222,16 +222,21 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Certains paquets modifient le contenu de <filename>/var</filename> ou de "
+"<filename>/srv</filename> dans leurs scripts RPM <literal>%post</literal>. "
+"Ces paquets sont incompatibles. Si vous tombez sur un tel paquet, merci de "
+"remplir un rapport de bug."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
 msgstr ""
+"Afin de fournir ces fonctionnalités, le système de mise à jour repose sur :"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "les instantanés Btrfs"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -241,11 +246,17 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Avant que la mise à jour du système démarre, un nouvel instantané Btrfs du "
+"système de fichiers racine est créé. Ensuite, tous les changements de la "
+"mise à jour sont installés sur cet instantané. Pour compléter la mise à "
+"jour, il suffit de redémarrer le système sur le nouvel instantané."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Pour annuler cette mise à jour, démarrer simplement sur le précédent "
+"instantané."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
@@ -268,12 +279,20 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Afin que cette configuration fonctionne, deux changements supplémentaires au "
+"niveau du système de fichiers ont été nécessaires : afin de pouvoir écrire "
+"la configuration utilisateur dans <filename>/etc</filename>, ce répertoire "
+"est automatiquement configuré pour utiliser OverlayFS ; "
+"<filename>/var</filename> est maintenant un sous-volume séparé qui peut être "
+"écrit par les programmes."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"Un <emphasis>serveur transactionnel</emphasis> a besoin d'au moins 12 Go "
+"d'espace disque"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
@@ -281,6 +300,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Le rôle <emphasis>serveur transactionnel</emphasis> a besoin d'au moins 12 "
+"Go d'espace disque afin d'accueillir les instantanés Btrfs."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
@@ -289,11 +310,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Pour travailler avec les mises à jour transactionnelles, veuillez toujours "
+"utiliser la commande <command>transactional-update</command> au lieu de YaST "
+"et Zypper pour toute la gestion des logiciels :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Mettre à jour le système :<command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -301,6 +325,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Installer un paquet : <command>transactional-update pkg in "
+"<replaceable>NOM_DU_PAQUET</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -308,6 +334,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Supprimer un paquet : <command>transactional-update pkg rm "
+"<replaceable>NOM_DU_PAQUET</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -332,12 +360,16 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Avec ce rôle, par défaut le système effectuera une mise à jour quotidienne "
+"et un redémarrage entre 3 h 30 et 5 h 00 du matin. Ces deux actions sont "
+"basées sur systemd et peuvent être désactivées si nécessaire en utilisant "
+"<command>systemctl</command> :"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr ""
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
@@ -391,7 +423,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Installation sur des disques dur avec moins de 12 Go de capacité"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -1028,20 +1060,17 @@ msgstr "Assurez vous que le paquet <package>gdm</package> est installé."
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "Définissez GDM comme gestionnaire de session :"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
 "sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
@@ -1071,12 +1100,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[XDisplay]\n"
-#| "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
-#| "EnableHiDPI=true\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1084,9 +1108,9 @@ msgid ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgstr ""
 "\n"
-"[XDisplay]\n"
-"ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
+"[X11]\n"
 "EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>PARAMÈTRE_DPI</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
@@ -1455,6 +1479,8 @@ msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
 msgstr ""
+"De meilleures performances pour les bases de données et les images de "
+"machines virtuelles stockées dans <filename>/var</filename>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:891
@@ -1464,6 +1490,10 @@ msgid ""
 "for all of <filename>/var</filename>. This new subvolume has copy-on-write "
 "functionality disabled."
 msgstr ""
+"Au lieu d'utiliser plusieurs sous-volumes Btrfs pour différents répertoires "
+"de <filename>/var</filename>, openSUSE Leap 15.0 définit un seul sous-volume "
+"pour tout <filename>/var</filename>. Ce nouveau sous-volume a la "
+"fonctionnalité de copie sur écriture désactivée."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:897
