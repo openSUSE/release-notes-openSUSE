@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-20 17:02+0000\n"
+"PO-Revision-Date: 2018-05-21 22:23+0000\n"
 "Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/de/>\n"
@@ -247,6 +247,8 @@ msgstr ""
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
 msgstr ""
+"Um diese Features anzubieten, ist dieses Update-System auf folgendes "
+"angewiesen:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
@@ -261,11 +263,17 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Bevor ein System-Update gestartet wird, wird ein neuer Btrfs-Snapshot vom "
+"root-Dateisystem erstellt. Dann werden alle Änderungen aus dem Update in "
+"diesen Btrfs-Snapshot installiert. Um das Update abzuschließen, können Sie "
+"dann das System in diesem neuen Snapshot neu starten."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Um das Update wieder rückgängig zu machen, booten Sie einfach stattdessen "
+"aus dem vorherigen Snapshot."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
@@ -279,6 +287,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Um Probleme mit und Datenverlust wegen Updates zu verhindern, darf das root-"
+"Dateisystem nicht woanders geschrieben werden. Deshalb ist das root-"
+"Dateisystem nur lesbar während der normalen Operation gemountet."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -288,12 +299,20 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Um dieses Setup funktionierend zu machen, müssen zwei zusätzliche Änderungen "
+"am Dateisystem durchgeführt werden: Um zu erlauben die Benutzerkonfiguration "
+"in <filename>/etc</filename> zu schreiben, ist dieses Verzeichnis "
+"automatisch konfiguriert OverlayFS zu verwenden. <filename>/var</filename> "
+"ist jetzt ein separates Subvolume, wo von Prozessen hingeschrieben werden "
+"kann."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"<emphasis>Transaktionaler Server</emphasis> Benötigt Mindestens 12 GB "
+"Festplattenplatz"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
@@ -301,6 +320,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Die Systemrolle <emphasis>Transaktionaler Server</emphasis> benötigt eine "
+"Mindest-Festplattengröße von 12 GB um Btrfs-Snapshots unterzubringen."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
