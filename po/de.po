@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-21 22:23+0000\n"
-"Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
+"PO-Revision-Date: 2018-05-21 23:12+0000\n"
+"Last-Translator: Steven Seifried <steven.seifried@canox.net>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/de/>\n"
 "Language: de\n"
@@ -28,10 +28,10 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Übersetzer-Credits: Michael Skiba <trans@michael-skiba.de>, 2007-2009; Marko "
-"Schugardt <mail.sapex@gmx.de>, 2008-2009; Hermann-Josef Beckers <hj."
-"beckers@web.de>; Christian Boltz <opensuse@cboltz.de>, 2009; Sarah Julia "
+"Schugardt <mail.sapex@gmx.de>, 2008-2009; Hermann-Josef Beckers "
+"<hj.beckers@web.de>; Christian Boltz <opensuse@cboltz.de>, 2009; Sarah Julia "
 "Kriesch <sarah-julia.kriesch@gmx.de>, Vinzenz Vietzke <vinz@vinzv.de>, "
-"2013-2018"
+"Steven Seifried <steven.seifried@canox.net>, 2013-2018"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -201,7 +201,7 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
-"Verwendung Atomarer Updates Mit der Neuen Systemrolle <emphasis>Transaktions-"
+"Verwendung Atomarer Updates mit der neuen Systemrolle <emphasis>Transaktions-"
 "Server</emphasis>"
 
 #. (itstool) path: sect2/para
@@ -218,13 +218,14 @@ msgid ""
 msgstr ""
 "Der Installer unterstützt jetzt eine neue Systemrolle <emphasis>Transaktions-"
 "Server</emphasis>, was ein Resultat der Bemühungen aus openSUSE Kubic ist. "
-"Diese Systemrollen-Features sind ein neues Update-System, das Updates atomar "
-"(als eine einzige Operation) einspielt und es einfach macht diese wieder - "
-"falls notwendig - rückgängig zu machen. Diese Features basieren auf den "
-"Paketmanagement-Tools, denen alle anderen SUSE und openSUSE-Distributionen "
-"vertrauen. Das bedeutet, dass die umfangreiche Mehrheit an RPM-Paketen, die "
-"mit anderen Systemrollen von openSUSE Leap 15.0 arbeiten, auch mit mit der "
-"Systemrolle <emphasis>Transaktions-Server</emphasis> funktionieren."
+"Die Features  dieser Systemrolle sind ein neues Update-System, das Updates "
+"atomar (als eine einzige Operation) einspielt und es einfach macht diese "
+"wieder - falls notwendig - rückgängig zu machen. Diese Features basieren auf "
+"den Paketmanagement-Tools, denen alle anderen SUSE und openSUSE-"
+"Distributionen vertrauen. Das bedeutet, dass die umfangreiche Mehrheit an "
+"RPM-Paketen, die mit anderen Systemrollen von openSUSE Leap 15.0 arbeiten, "
+"auch mit mit der Systemrolle <emphasis>Transaktions-Server</emphasis> "
+"funktionieren."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
@@ -263,8 +264,8 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
-"Bevor ein System-Update gestartet wird, wird ein neuer Btrfs-Snapshot vom "
-"root-Dateisystem erstellt. Dann werden alle Änderungen aus dem Update in "
+"Bevor ein System-Update gestartet wird, wird ein neuer Btrfs-Snapshot des "
+"root-Dateisystems erstellt. Dann werden alle Änderungen aus dem Update in "
 "diesen Btrfs-Snapshot installiert. Um das Update abzuschließen, können Sie "
 "dann das System in diesem neuen Snapshot neu starten."
 
@@ -273,7 +274,7 @@ msgstr ""
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
 "Um das Update wieder rückgängig zu machen, booten Sie einfach stattdessen "
-"aus dem vorherigen Snapshot."
+"den vorherigen oder einen früheren Snapshot."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
@@ -330,11 +331,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Um mit Transaktionsaktualisierungen zu arbeiten, verwenden Sie immer den "
+"Befehl <command>transactional-update</command> anstelle von YaST und Zypper "
+"für die gesamte Softwareverwaltung:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Aktualisiere das System: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -342,6 +346,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Installiere ein Paket: <command>transactional-update pkg in "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -349,6 +355,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Entferne ein Paket: <command>transactional-update pkg rm "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -357,6 +365,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Um den letzten Snapshot wiederherzustellen, also die Änderungen am Root-"
+"Dateisystem, vergewissern Sie sich, dass Ihr System von denm vorletzten "
+"Snapshot gestartet und ausgeführt wird: <command>transactional-update "
+"rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
@@ -364,6 +376,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Fügen Sie optional eine Snapshot-ID am Ende des Befehls hinzu, um zu einem "
+"bestimmten Snapshot zurückzukehren."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -373,6 +387,10 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Wenn Sie diese Systemrolle verwenden, führt das System standardmäßig eine "
+"tägliche Aktualisierung und einen Neustart zwischen 03:30 und 05:00 Uhr "
+"durch. Beide Aktionen sind systemd-basiert und können bei Bedarf mit "
+"<command>systemctl</command> deaktiviert werden"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
@@ -396,7 +414,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
 msgid "Minimal System Installation"
-msgstr "Minimalinstallation des Systems"
+msgstr "Minimale Installation des Systems"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:215
@@ -428,7 +446,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Installation auf Festplatten mit weniger als 12 GB Kapazität"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -438,6 +456,11 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Das Installationsprogramm schlägt nur dann ein Partitionierungsschema vor, "
+"wenn die verfügbare Festplattengröße größer als 12 GB ist. Wenn Sie "
+"beispielsweise sehr kleine Images virtueller Maschinen einrichten möchten, "
+"verwenden Sie die geführte Partitionierung, um die Partitionierungsparameter "
+"manuell einzustellen."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
@@ -494,7 +517,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:273
 msgid "UEFI, GPT, and MS-DOS Partitions"
-msgstr "UEFI, GPT, und MS-DOS-Partitionen"
+msgstr "UEFI, GPT und MS-DOS-Partitionen"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:274
@@ -1067,7 +1090,7 @@ msgstr ""
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "Setze GDM (Gnome Display Manager) als Display Manager"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
@@ -1462,7 +1485,7 @@ msgstr "Technische Aspekte"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:868
 msgid "Updated Btrfs Subvolume Layout"
-msgstr ""
+msgstr "Aktualisiertes Btrfs Subvolume Layout"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:869
@@ -1470,16 +1493,18 @@ msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
 msgstr ""
+"openSUSE Leap 15.0 führt ein neues Standard-Btrfs-Subvolume-Layout ein, "
+"welches auf folgendes abzielt:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:875
 msgid "Simplified snapshots and rollbacks"
-msgstr ""
+msgstr "Vereinfachte Snapshots und Rollbacks"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:880
 msgid "Prevention of accidental data loss"
-msgstr ""
+msgstr "Verhinderung von versehentlichem Datenverlust"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:885
@@ -1487,6 +1512,7 @@ msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
 msgstr ""
+"Bessere Leistung von Datenbanken und VM-Images in <filename>/var</filename>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:891
@@ -1496,6 +1522,10 @@ msgid ""
 "for all of <filename>/var</filename>. This new subvolume has copy-on-write "
 "functionality disabled."
 msgstr ""
+"Anstatt mehrere Btrfs-Subvolumes für verschiedene Unterverzeichnisse von "
+"<filename>/var</filename>, openSUSE Leap 15.0 nutzt ein einziges Subvolumen "
+"für alle in <filename>/var</filename>. In diesem neuen Subvolume ist die "
+"copy-on-write Funktion deaktiviert."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:897
@@ -1504,20 +1534,19 @@ msgid ""
 "Therefore, if you want to take advantage of it, make sure to freshly install "
 "openSUSE Leap 15.0 instead of upgrading."
 msgstr ""
+"Es gibt keinen definierten Weg für ein Upgrade auf dieses neue Btrfs-"
+"Subvolume-Layout. Wenn Sie also davon profitieren möchten, stellen Sie "
+"sicher, dass Sie openSUSE Leap 15.0 neu installieren, anstatt es zu "
+"aktualisieren."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:902
-#, fuzzy
-#| msgid ""
-#| "For more information about upgrading to a current openSUSE version, see "
-#| "<link xlink:href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 msgstr ""
-"Für weitere Informationen zum Upgrade auf eine momentane Version von "
-"openSUSE siehe <link xlink:href=\"http://de.opensuse.org/SDB:Distribution-"
-"Upgrade\"/>."
+"Für weitere Informationen zum Upgrade auf die momentane Version von openSUSE "
+"siehe <link xlink:href=\"http://de.opensuse.org/SDB:Distribution-Upgrade\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:916
@@ -1549,7 +1578,7 @@ msgstr "rpm --changelog -qp <replaceable>DATEINAME</replaceable>.rpm"
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Ersetzen Sie <replaceable>DATEINAME</replaceable> durch den Namen des "
-"gewünschten RPMs."
+"gewünschten RPM Paketess."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:934
