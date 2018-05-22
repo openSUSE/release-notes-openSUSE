@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-21 09:06+0000\n"
-"Last-Translator: Ioannes Andreas <ioannes@tuta.io>\n"
+"PO-Revision-Date: 2018-05-22 18:35+0000\n"
+"Last-Translator: jc sl <trcs@gmx.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/es/>\n"
 "Language: es\n"
@@ -233,10 +233,8 @@ msgstr ""
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "Paquetes obsoletos"
+msgstr "Paquetes incompatibles"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -285,10 +283,8 @@ msgstr ""
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
-#, fuzzy
-#| msgid "Mount the initial root filesystem:"
 msgid "A read-only root file system"
-msgstr "Monte el sistema incial de archivos raíz:"
+msgstr "Un sistema de archivos raíz de solo lectura"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -297,6 +293,10 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Para evitar problemas y pérdida de datos a causa de las actualizaciones, no "
+"se debe escribir en el sistema de archivos raíz de otras formas. Por tanto, "
+"el sistema de ficheros raíz se monta sólo para lectura durante el "
+"funcionamiento normal."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -306,12 +306,19 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Para hacer que funcione está configuración, es necesario hacer dos cambios "
+"más al sistema de archivos: para poder escribir la configuración del usuario "
+"en <filename>/etc</filename>, este directorio se configura automáticamente "
+"para usar OverlayFS. <filename>/var</filename> es ahora un subvolumen "
+"separado que puede ser escrito por los procesos."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"<emphasis>Servidor transaccional</emphasis> Necesita al menos 12 GB de "
+"espacio en disco"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
@@ -319,6 +326,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"El rol de sistema <emphasis>Servidor transaccional</emphasis> necesita un "
+"tamaño de disco de al menos 12 GB para acomodar las instantáneas de Btrfs."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
@@ -327,11 +336,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Para trabajar con actualizaciones transaccionales, use siempre la orden "
+"<command>transactional-update</command> en vez de YaST y Zypper para toda la "
+"gestión del software:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Actualizar el sistema: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -339,6 +351,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Instalar un paquete: <command>transactional-update pkg in "
+"<replaceable>NOMBRE_DE_PAQUETE</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -346,6 +360,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Borrar un paquete: <command>transactional-update pkg rm "
+"<replaceable>NOMBRE_DE_PAQUETE</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -354,6 +370,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Para deshacer la última instantánea, que es el último conjunto de cambios "
+"del sistema de archivos raíz, asegúrese de que el sistema arranca en la "
+"penúltima instantánea y ejecute: <command>transactional-update "
+"rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
@@ -361,6 +381,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"De modo opcional, añada un identificador de instantánea al final de la orden "
+"para volver a un identificador específico."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -370,30 +392,30 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Al usar este rol de sistema, por defecto, el sistema efectuará una "
+"actualización diaria y un reinicio entre las 03:30 am y las 05:00 am. Ambas "
+"acciones se basan en systemd y si es necesario pueden deshabilitarse usando "
+"<command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
-#, fuzzy, no-wrap
-#| msgid "systemctl disable NetworkManager.service"
+#, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr "systemctl disable NetworkManager.service"
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"Para más información, lea los reportes de fallos en: <link xlink:href="
-"\"https://bugzilla.opensuse.org/show_bug.cgi?id=996520\"/> y <link xlink:"
-"href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>."
+"Para obtener más información sobre actualizaciones transaccionales, vea las "
+"publicaciones del blog de openSUSE Kubic <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> y <link "
+"xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
@@ -430,7 +452,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Instalación en discos duros con menos de 12 GB de capacidad"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -440,6 +462,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"El instalador solo propone esquemas de particiones si el espacio disponible "
+"en el disco duro es mayor que 12 GB. Si quiere configurar, por ejemplo, "
+"imágenes muy pequeñas de máquinas virtuales, use el particionador guiado y "
+"ajuste los parámetros de las particiones manualmente."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
@@ -740,7 +766,7 @@ msgstr ""
 #: xml/release-notes.xml:409
 #, no-wrap
 msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
-msgstr ""
+msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:412
@@ -997,7 +1023,7 @@ msgstr ""
 #: xml/release-notes.xml:586
 #, no-wrap
 msgid "sudo update-alternatives --display default-displaymanager"
-msgstr ""
+msgstr "sudo update-alternatives --display default-displaymanager"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:587
@@ -1015,6 +1041,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:593
@@ -1060,7 +1088,7 @@ msgstr "Asegúrese de que el paquete <package>gdm</package> esté instalado."
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "Establecer GDM como el gestor de pantalla:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
@@ -1069,6 +1097,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
@@ -1104,6 +1134,10 @@ msgid ""
 "EnableHiDPI=true\n"
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgstr ""
+"\n"
+"[X11]\n"
+"EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
@@ -1250,7 +1284,7 @@ msgstr ""
 #: xml/release-notes.xml:722
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
-msgstr ""
+msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:727
@@ -1302,6 +1336,8 @@ msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
 msgstr ""
+"Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
+"integration/\"/>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:757
@@ -1309,6 +1345,8 @@ msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 msgstr ""
+"Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/detail"
+"/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:764
@@ -1456,9 +1494,8 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:875
-#, fuzzy
 msgid "Simplified snapshots and rollbacks"
-msgstr "Imágenes y restauraciones simplificadas"
+msgstr "Instantáneas y restauraciones simplificadas"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:880
