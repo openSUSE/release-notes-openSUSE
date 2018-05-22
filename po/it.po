@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-17 14:46+0000\n"
+"PO-Revision-Date: 2018-05-22 14:03+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/it/>\n"
@@ -232,10 +232,8 @@ msgstr ""
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "Pacchetti deprecati"
+msgstr "Pacchetti incompatibili"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -244,16 +242,22 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Alcuni pacchetti modificano i contenuti di <filename>/var</filename> o "
+"<filename>/srv</filename> nei <literal>%post</literal> script all'interno "
+"del relativo RPM. Questi pacchetti sono incompatili. Qualora si dovesse "
+"rinvenire un pacchetto del genere, compilare una segnalazione d'errore."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
 msgstr ""
+"Per fornire queste funzionalità, questo aggiornamento del sistema fa "
+"affidamento su:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Istantanee Btrfs"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -263,11 +267,18 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Prima dell'avvio del sistema, viene creata una nuova istantanea Btrfs del "
+"file system radice. Successivamente, tutte le modifiche effettuate con "
+"l'aggiornamento vengono installate in tale istantanea. Per completare "
+"l'aggiornamento, è quindi possibile riavviare il sistema sulla nuova "
+"istantanea."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Per annullare l'aggiornamento, basta avviare il sistema dall'istantanea "
+"precedente."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
@@ -281,6 +292,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Per evitare problemi di aggiornamento e conseguente perdita di dati, il file "
+"system radice non deve essere scritto in nessuma maniera. Pertanto, il file "
+"system radice è montato in sola lettura durante la normale operazione."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
