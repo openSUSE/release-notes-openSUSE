@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.fi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-02-22 15:31+0000\n"
+"PO-Revision-Date: 2018-05-22 12:02+0000\n"
 "Last-Translator: Tommi Nieminen <software@legisign.org>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/fi/>\n"
@@ -86,22 +86,15 @@ msgstr ""
 #. (itstool) path: bugtracker/url
 #: xml/release-notes.xml:30
 msgid "https://bugzilla.opensuse.org/enter_bug.cgi"
-msgstr ""
+msgstr "https://bugzilla.opensuse.org/enter_bug.cgi"
 
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:33
 msgid "sknorr@suse.com"
-msgstr ""
+msgstr "sknorr@suse.com"
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:38
-#, fuzzy
-#| msgid ""
-#| "The release notes are under constant development. To find out about the "
-#| "latest updates, see the online version at <ulink url=\"https://doc."
-#| "opensuse.org/release-notes\"/>. The English release notes are updated "
-#| "whenever need arises. Translated language versions can temporarily be "
-#| "incomplete."
 msgid ""
 "The release notes are under constant development. To find out about the "
 "latest updates, see the online version at <link xlink:href=\"https://doc."
@@ -109,11 +102,11 @@ msgid ""
 "whenever need arises. Translated language versions can temporarily be "
 "incomplete."
 msgstr ""
-"Julkaisutietoja kehitetään jatkuvasti. Saadaksesi tietoa viimeisimmistä "
-"päivityksistä katso verkkoversiota osoitteessa <ulink url=\"https://doc."
-"opensuse.org/release-notes\"/>. Englanninkielisiä julkaisutietoja "
-"päivitetään aina tarpeen tullen. Käännökset voivat väliaikaisesti olla "
-"epätäydellisiä."
+"Julkaisutietoja kehitetään jatkuvasti. Saat lisätietoa viimeisimmistä "
+"päivityksistä verkkoversiosta osoitteessa <link xlink:href=\""
+"https://doc.opensuse.org/release-notes\"/>. Englanninkielisiä "
+"julkaisutietoja päivitetään aina tarpeen tullen. Käännökset voivat "
+"väliaikaisesti olla epätäydellisiä."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:46
@@ -138,10 +131,8 @@ msgstr "Asennus"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:59
-#, fuzzy
-#| msgid "UEFI&mdash;Unified Extensible Firmware Interface"
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI &ndash; Unified Extensible Firmware Interface"
+msgstr "UEFI – Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:60
@@ -270,7 +261,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:137
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr ""
+msgstr "<command>systemctl stop apparmor</command> ei toimi"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:138
@@ -279,6 +270,9 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"Aiemmin saattoi esiintyä hämmennystä samantapaisesti nimettyjen "
+"<command>systemctl</command>-alikomentojen <literal>reload</literal> ja "
+"<literal>restart</literal> erosta AppArmorille:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -287,6 +281,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> latasi kaikki AppArmor-"
+"profiilit uudelleen oikein. (Tämä oli ja on yhä suositeltu tapa AppArmor-"
+"profiilien lataamiseksi uudelleen.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -296,6 +293,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> tarkoittaa, että AppArmor "
+"ensin keskeytetään, jolloin kaikki AppArmor-profiilit unohdetaan, ja sitten "
+"käynnistetään uudelleen, jolloin olemassa olevat prosessit jäivät "
+"rajoittamatta. Vain uusia prosesseja rajoitetaan."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -304,6 +305,8 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"Valitettavasti <systemitem>systemd</systemitem>:n yksikkötiedostomuoto ei "
+"tarjoa ratkaisua <literal>restart</literal>-tilanteen aiheuttamaan ongelmaan."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -312,6 +315,9 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"AppArmor 2.12:sta alkaen <command>systemctl stop apparmor</command> -komento "
+"ei toimi. Tästä seuraa, että <command>systemctl restart apparmor</command> "
+"lataa nyt kaikki AppArmor-profiilit uudelleen oikein."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -332,7 +338,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Ei oletusarvoista Compose-näppäinyhdistelmää"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -343,6 +349,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"Aiemmissa openSUSEn versioissa Compose-näppäimellä saattoi kirjoittaa "
+"tavalliseen näppäimistöasetteluun kuulumattomia merkkejä; esimerkiksi "
+"<quote>å</quote> oli mahdollista tehdä painamalla <keycombo><keycap function="
+"\"shift\"/><keycap>oikea Ctrl</keycap></keycombo> ja kahdesti "
+"<keycap>a</keycap>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -358,6 +369,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Voit asettaa järjestelmänlaajuisen Compose-näppäimen etsimällä "
+"<filename>/etc/X11/Xmodmap</filename>-tiedostosta rivit:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -372,6 +385,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:215
@@ -380,6 +401,9 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Rivit voi ottaa käyttöön poistamalla <literal>!</literal>-merkit rivien "
+"alusta. Huomaa kuitenkin, että <filename>Xmodmap</filename>-asetukset "
+"korvataan, jos käytät<command>setxkbmap</command>iä."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -388,6 +412,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Käyttäjäkohtaisen Compose-näppäimen voit asettaa työpöytäsi "
+"näppäimistöasetuksista tai "
+"<command>setxkbmap</command>-komentorivityökalulla:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:228
@@ -397,6 +424,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[…]</replaceable> -option compose:<replaceable"
+">COMPOSE-NÄPPÄIN</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -406,6 +437,9 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"Aseta <replaceable>COMPOSE-NÄPPÄIN</replaceable> haluamaksesi näppäimeksi: "
+"<literal>ralt</literal>, <literal>lwin</literal>, <literal>rwin</literal>, "
+"<literal>menu</literal>, <literal>rctl</literal> tai <literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:240
@@ -413,6 +447,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"Vaihtoehtoisesti voit IBus-menetelmällä kirjoittaa merkkejä Compose-"
+"näppäimettä."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:263
