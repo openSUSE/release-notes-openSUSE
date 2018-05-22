@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.fi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-16 23:02+0000\n"
+"PO-Revision-Date: 2018-05-22 12:02+0000\n"
 "Last-Translator: Tommi Nieminen <software@legisign.org>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/fi/>\n"
@@ -244,16 +244,20 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Jotkin paketit muokkaavat <filename>/var</filename>- tai "
+"<filename>/srv</filename>-kansioiden sisältöä RPM:iensä "
+"<literal>%post</literal>-skripteissä. Nämä paketit ovat epäyhteensopivia. "
+"Jos kohtaat sellaisen paketin, ilmoita virheestä."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "Tarjotakseen nämä ominaisuudet päivitysjärjestelmä luottaa seuraaviin:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Btrfs-tilannekuvat"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -263,16 +267,22 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Ennen järjestelmäpäivityksen käynnistämistä juuritiedostojärjestelmästä "
+"luodaan uusi Btrfs-tilannekuva. Kaikki päivityksen muutokset asennetaan "
+"sitten siihen. Päivityksen voi viimeistellä käynnistämällä järjestelmä "
+"uuteen tilannekuvaan."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Päivityksen voi kumota yksinkertaisesti käynnistämällä järjestelmä aiempaan "
+"tilannekuvaan."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
 msgid "A read-only root file system"
-msgstr ""
+msgstr "Vain luettava juuritiedostojärjestelmä"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -281,6 +291,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Päivitysten aiheuttamien tiedonmenetysten ja ongelmien välttämiseksi "
+"juuritiedostojärjestelmään ei kirjoiteta muulloin. Tavallisessa käytössä "
+"juuritiedostojärjestelmä liitetään vain luettavana."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -290,6 +303,11 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Jotta asennus toimisi, tiedostojärjestelmään on tehtävä kaksi lisämuutosta: "
+"Jotta käyttäjän asetukset voisi kirjoittaa <filename>/etc</filename>-"
+"kansioon, se asetetaan automaattisesti käyttämään OverlayFS:ää. "
+"<filename>/var</filename> on nyt erillinen alitaltio, johon prosessit voivat "
+"kirjoittaa."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
@@ -428,7 +446,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI (Unified Extensible Firmware Interface)"
+msgstr "UEFI – Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:248
@@ -886,7 +904,8 @@ msgid ""
 "     "
 msgstr ""
 "\n"
-"setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE-NÄPPÄIN</replaceable>\n"
+"setxkbmap <replaceable>[…]</replaceable> -option compose:<replaceable"
+">COMPOSE-NÄPPÄIN</replaceable>\n"
 "     "
 
 #. (itstool) path: listitem/para
@@ -1367,7 +1386,7 @@ msgid ""
 msgstr ""
 "<command>systemctl restart apparmor</command> tarkoittaa, että AppArmor "
 "ensin keskeytetään, jolloin kaikki AppArmor-profiilit unohdetaan, ja sitten "
-"käynnistetään uudelleen, jolloin olemassa olevat prosessit jäävät "
+"käynnistetään uudelleen, jolloin olemassa olevat prosessit jäivät "
 "rajoittamatta. Vain uusia prosesseja rajoitetaan."
 
 #. (itstool) path: sect2/para
