@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-21 13:01+0000\n"
-"Last-Translator: Peter Pan <pan93412@gmail.com>\n"
+"PO-Revision-Date: 2018-05-24 18:01+0000\n"
+"Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap-15_0/zh_TW/>\n"
 "Language: zh_TW\n"
@@ -178,7 +178,7 @@ msgstr ""
 msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
-msgstr ""
+msgstr "使用新系統角色<emphasis>交易型伺服器</emphasis>所提供的原子升級"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -192,13 +192,15 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"安裝程式現在可支援新的系統角色<emphasis>交易型伺服器 (Transactional Server)</emphasis>，這是 "
+"openSUSE Kubic 專案的努力成果。該角色具備一個新的升級系統，能夠以原子方式套用更新 (視為單一操作)，並且當需要時也可以輕易地回復上一動作。"
+"這個功能是基於 SUSE 與 openSUSE 發行版本所仰賴的套件管理工具來完成。這代表大部分可在 openSUSE Leap 15.0 "
+"其他系統角色裡運作的 RPM 套件也可運作在<emphasis>交易型伺服器</emphasis>系統角色中。"
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "不建議的套件"
+msgstr "不相容的套件"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:108
@@ -207,16 +209,18 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"一些套件會在它們的 RPM <literal>%post</literal> 腳本中修改 <filename>/var</filename> 或是 "
+"</filename>/srv</filename> 的內容。這些套件是不相容的。如果您遇到這些套件，請回報錯誤。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "升級系統依賴以下特性以提供這些功能 ："
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Btrfs 快照"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:122
@@ -226,18 +230,18 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"在系統更新開始前，一個新 root 檔案系統的 Btrfs 快照會被建立。然後所有來自該更新的修改會安裝在這個 Btrfs "
+"快照中。要完成這項更新，您可以重啟系統以使用該快照。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:129
 msgid "To revert the update, simply boot from the previous snapshot instead."
-msgstr ""
+msgstr "要取消這項更新，只需從前一個快照開機即可。"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:135
-#, fuzzy
-#| msgid "Mount the initial root filesystem:"
 msgid "A read-only root file system"
-msgstr "掛載初始 root 檔案系統："
+msgstr "唯讀 root 檔案系統"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:136
@@ -245,7 +249,7 @@ msgid ""
 "To avoid issues with and data loss because of updates, the root file system "
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
-msgstr ""
+msgstr "為了避免因為更新造成的問題與資料遺失，root 檔案系統必須禁止寫入。是故 root 檔案系統在正常操作下是以唯讀方式掛載。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -255,19 +259,21 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"要讓該設定得以運作，需要加入另外二項檔案系統的變更：要允許在 <filename>/etc</filename> 寫入使用者設定檔，該目錄自動設定成使用 "
+"OverlayFS。<filename>/var</filename> 現在則變成分離的子卷以供其他行程寫入。"
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
-msgstr ""
+msgstr "<emphasis>交易型伺服器</emphasis>需要至少 12 GB 的磁碟空間"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
 msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
-msgstr ""
+msgstr "系統角色<emphasis>交易型伺服器</emphasis>需要至少 12 GB 的磁碟大小以容納 Btrfs 快照。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
@@ -276,11 +282,13 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"要使用交易型更新，使用指令 <command>transactional-update</command> 而非 YaST 與 Zypper "
+"來進行套件管理："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "更新系統：<command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -288,6 +296,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"安裝套件：<command>transactional-update pkg in "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -295,6 +305,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"移除套件：<command>transactional-update pkg rm "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -303,13 +315,15 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"要取消最後一個快照對 root 檔案系統所做的變更，請先確認您的系統是使用最後一個快照之前的快照開機，然後執行：\n"
+"<command>transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
 msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
-msgstr ""
+msgstr "或者，在指令最後加上快照 ID 以回復至特定的快照。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -319,30 +333,27 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"當使用該系統角色時，系統預設會執行每日更新並且在早上 03:30 與下午 05:00 間重新啟動。這些動作皆是由 systemd 觸發，"
+"若有需要也可以使用 <command>systemctl</command> 指令關閉："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
-#, fuzzy, no-wrap
-#| msgid "systemctl disable NetworkManager.service"
+#, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr "systemctl disable NetworkManager.service"
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"請見 <link xlink:href=\"https://bugs.freedesktop.org/show_bug.cgi?"
-"id=996520\"/> 與 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug."
-"cgi?id=853019\"/> 以了解更多細節。"
+"要了解更多關於交易型更新的細節，請見 openSUSE Kubic 部落格文章 <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> 以及 <"
+"link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
@@ -354,26 +365,26 @@ msgstr "最小系統安裝"
 msgid ""
 "The minimal system installation lacks certain functionality that is often "
 "taken for granted:"
-msgstr ""
+msgstr "最小系統安裝缺少一些被認為理所當然的功能："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:221
 msgid ""
 "It does not contain a software firewall front-end. You can install the "
 "package <package>firewalld</package> additionally."
-msgstr ""
+msgstr "不包括軟體防火牆前端介面。您可以另外安裝 <package>firewalld</package> 套件。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:227
 msgid ""
 "It does not contain a YaST. You can install the pattern <package>patterns-"
 "yast-yast2_basis</package> additionally."
-msgstr ""
+msgstr "不包括 YaST。您可以另外安裝 <package>patterns-yast-yast2_basis</package> 樣式。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "安裝在空間少於 12 GB 的硬碟"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -383,6 +394,7 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"只有當硬碟空間大於 12 GB 時，安裝程式才會建議磁碟分割規劃。若您想要設定空間非常小的虛擬機器映象檔，請使用引導式磁碟分割程式來自行調整分割參數。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
@@ -535,7 +547,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:326
 msgid "Scaling the Installer UI on Computers with High-DPI Displays"
-msgstr ""
+msgstr "在配備有高 DPI 螢幕的電腦上縮放安裝程式使用介面"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:327
@@ -1351,14 +1363,14 @@ msgstr "更多資訊與反饋"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:919
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr "閱讀安裝介質上的 <filename>README</filename> 文件"
+msgstr "請閱讀安裝媒體上的 <filename>README</filename> 文件。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:924
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
-msgstr "從其軟體包的 RPM 檢視某個套件詳細的變動歷史資訊："
+msgstr "從套件 RPM 檢視某個套件詳細的變動歷史資訊："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:928
@@ -1377,14 +1389,14 @@ msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
-"請查看在安裝介質的最上層目錄下的 <filename>ChangeLog</filename> 檔案以了解所更新套件的變動歷史（按時間先後排序）。"
+"請查看在安裝媒體最上層目錄下的 <filename>ChangeLog</filename> 檔案以了解所更新套件的變動歷史（按時間先後排序）。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:940
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
-msgstr "在安裝介質中的 <filename>docu</filename> 目錄可找到更多的資訊。"
+msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:946
