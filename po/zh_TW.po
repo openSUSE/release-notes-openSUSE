@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-17 21:43+0200\n"
-"PO-Revision-Date: 2018-05-24 18:01+0000\n"
+"PO-Revision-Date: 2018-05-25 14:01+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap-15_0/zh_TW/>\n"
@@ -210,7 +210,7 @@ msgid ""
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
 "一些套件會在它們的 RPM <literal>%post</literal> 腳本中修改 <filename>/var</filename> 或是 "
-"</filename>/srv</filename> 的內容。這些套件是不相容的。如果您遇到這些套件，請回報錯誤。"
+"<filename>/srv</filename> 的內容。這些套件是不相容的。如果您遇到這些套件，請回報錯誤。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -282,7 +282,7 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
-"要使用交易型更新，使用指令 <command>transactional-update</command> 而非 YaST 與 Zypper "
+"要使用交易型更新，請使用指令 <command>transactional-update</command> 而非 YaST 與 Zypper "
 "來進行套件管理："
 
 #. (itstool) path: listitem/para
@@ -547,7 +547,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:326
 msgid "Scaling the Installer UI on Computers with High-DPI Displays"
-msgstr "在配備有高 DPI 螢幕的電腦上縮放安裝程式使用介面"
+msgstr "在配備有高 DPI 螢幕的電腦上縮放安裝程式使用者介面"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:327
@@ -558,6 +558,8 @@ msgid ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> to the bootloader command "
 "line."
 msgstr ""
+"YaST 安裝程式預設不會替高 DPI 螢幕縮放其使用者介面。若您擁有配備高 DPI 螢幕的電腦，您可以設定 YaST 自動縮放其使用者介面。若要設定，"
+"請在開機引導程式命令列加入參數 <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:338
@@ -578,10 +580,8 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:345
-#, fuzzy
-#| msgid "Additionally, check <xref linkend=\"sec.general.deprecated\"/>."
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
-msgstr "另外，請查閱 <xref linkend=\"sec.general.deprecated\"/> 小節的說明。"
+msgstr "另外，請見 <xref linkend=\"sec.package\"/> 的說明。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:350
@@ -591,7 +591,7 @@ msgstr "從 openSUSE Leap 42.3 升級"
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:355
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
-msgstr ""
+msgstr "Postfix Admin 使用無法向後相容的目錄布局"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:356
@@ -600,24 +600,24 @@ msgid ""
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
+"從 openSUSE Leap 15.0 所收錄的 3.2 版開始，Postfix Admin "
+"(<package>postfixadmin</package> 套件) 使用了一個新的且無法向後相容的目錄布局："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:363
 msgid ""
 "The configuration files moved to <filename>/etc/postfixadmin</filename>."
-msgstr ""
+msgstr "設定檔移至 <filename>/etc/postfixadmin</filename>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:368
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
-msgstr ""
+msgstr "PHP 程式碼移至 <filename>/usr/share/postfixadmin</filename>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:373
-#, fuzzy
-#| msgid "Optionally, remove <filename>/mnt/var/cache.old</filename>:"
 msgid "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
-msgstr "作為可選擇的步驟，將 <filename>/mnt/var/cache.old</filename> 移除："
+msgstr "Smarty 快取移至 <filename>/var/cache/postfixadmin</filename>。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:378
@@ -625,20 +625,17 @@ msgid ""
 "Postfix Admin no longer reads configuration files from their previous "
 "locations and the configuration is not migrated automatically. Therefore, "
 "you need to migrate the following items manually:"
-msgstr ""
+msgstr "Postfix Admin 不再從之前的路徑讀取設定檔，且設定檔不會被自動轉換。故您需要手動轉換以下項目："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:385
-#, fuzzy
-#| msgid ""
-#| "Append all your mount points from <filename>/etc/samba/cifstab.rpmsave</"
-#| "filename> to <filename>/etc/fstab</filename>."
 msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
 msgstr ""
-"將所有您設定在 <filename>/etc/samba/cifstab.rpmsave</filename> 的掛載點新增"
-"到 <filename>/etc/fstab</filename>。"
+"將 <filename>config.local.php</filename> 從 "
+"<filename>/srv/www/htdocs/postfixadmin</filename> 搬移到 "
+"<filename>/etc/postfixadmin</filename>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:392
@@ -648,36 +645,39 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
+"若您在 <filename>config.inc.php</filename> 中有自訂的修改，理想狀況下可以將這些修改合併回 "
+"<filename>/etc/postfixadmin/config.local.php</filename>。不過我們建議不要修改 "
+"<filename>config.inc.php</filename>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:400
 msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
-msgstr ""
+msgstr "在 Apache 設定檔中，加入或啟用 <literal>/postfixadmin</literal> 別名："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:406
 msgid "To make the alias available on all virtual hosts, run:"
-msgstr ""
+msgstr "要在所有虛擬主機上使用別名，請執行："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:409
 #, no-wrap
 msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
-msgstr ""
+msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:412
 msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
-msgstr ""
+msgstr "若只要在特定的虛擬主機上使用別名，請將該別名加入虛擬主機的設定即可。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:426
 msgid "Packaging Changes"
-msgstr ""
+msgstr "套件變動"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:429
@@ -686,21 +686,14 @@ msgstr "不建議的套件"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:430
-#, fuzzy
-#| msgid ""
-#| "The following packages are still shipped as part of the distribution but "
-#| "are deprecated. The packages exist to aid migration, but their use is "
-#| "discouraged and they may not receive updates. The packages will be "
-#| "removed in the next version of the distribution."
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"以下的這些不建議的套件還是包裝為發行版的一部分，這些套件存在的原因是幫助版本"
-"遷移，但不建議您繼續使用，而且它們應該不會再有更新，下一個發行版本會移除這些"
-"套件。"
+"不建議的套件還是會收錄為發行版的一部分，並且在下一版 openSUSE Leap "
+"中會被移除。這些套件存在的原因是為了幫助版本遷移，但不建議使用，而且它們不會再有更新。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:446
@@ -721,21 +714,17 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:473
 msgid "Desktop"
-msgstr ""
+msgstr "桌面環境"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:475
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#| "match any other category."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
-msgstr "這個小節列出 openSUSE Leap 15.0 無法歸類的一般問題。"
+msgstr "這個小節列出 openSUSE Leap 15.0 關於桌面環境的問題與變動。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:481
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
-msgstr ""
+msgstr "專有 Nvidia 驅動程式不支援在 Wayland 上執行 KDE"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:482
@@ -744,6 +733,8 @@ msgid ""
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
 "the X session."
 msgstr ""
+"KDE Plasma Wayland 執行階段不支援專屬 Nvidia 驅動程式。若您正在使用 KDE 與專有 Nvidia 驅動程式，請繼續使用 X "
+"執行階段。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:491
@@ -866,7 +857,7 @@ msgstr ""
 msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
-msgstr ""
+msgstr "使用 <command>update-alternatives</command> 設定登入管理員與桌面環境執行階段"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:555
@@ -877,39 +868,42 @@ msgid ""
 "defined using <filename>/etc/sysconfig</filename> anymore but with the "
 "alternatives system."
 msgstr ""
+"在過去，您可以使用 <filename>/etc/sysconfig</filename> 或是 YaST 模組 <guimenu>etc/"
+"sysconfig 編輯器</guimenu> 來定義登入管理員與桌面環境執行階段。從 openSUSE Leap 15.0 "
+"開始，<filename>/etc/sysconfig</filename> 已不再定義這些設定值，而是改採用 alternatives 系統。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:562
 msgid "To change the defaults, use the following alternatives:"
-msgstr ""
+msgstr "要變更預設值，請使用以下 alternatives："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:567
 msgid "Login manager: <literal>default-displaymanager</literal>"
-msgstr ""
+msgstr "登入管理員：<literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:572
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
-msgstr ""
+msgstr "Wayland 執行階段：<literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:577
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
-msgstr ""
+msgstr "X 桌面環境執行階段：<literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:582
 msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
-msgstr ""
+msgstr "例如，要查看 <literal>default-displaymanager</literal> 的值，請使用："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:586
 #, no-wrap
 msgid "sudo update-alternatives --display default-displaymanager"
-msgstr ""
+msgstr "sudo update-alternatives --display default-displaymanager"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:587
@@ -917,6 +911,7 @@ msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
 msgstr ""
+"要切換 <literal>default-displaymanager</literal> 到 <command>xdm</command>，請使用："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:591
@@ -925,6 +920,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:593
@@ -933,6 +930,8 @@ msgid ""
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
 "<package>yast2-alternatives</package>."
 msgstr ""
+"要啟用 alternatives 的圖形管理介面，請使用 YaST 模組 <guimenu>Alternatives</guimenu> (可安裝 "
+"<package>yast2-alternatives</package> 套件)。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:601
@@ -964,7 +963,7 @@ msgstr "請確認已安裝 <package>gdm</package> 套件。"
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "設定 GDM 為顯示管理員："
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
@@ -973,6 +972,8 @@ msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
+"sudo update-alternatives --set default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
@@ -982,7 +983,7 @@ msgstr "重新啟動系統。"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:634
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
-msgstr ""
+msgstr "在配備高 DPI 螢幕的電腦上縮放 SDDM 使用介面"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:635
@@ -992,6 +993,8 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"KDE 的預設登入管理員 SDDM 預設不會為高 DPI 螢幕縮放其使用者介面。若您擁有配備高 DPI 螢幕的電腦，您可以使用 "
+"<filename>/etc/sddm.conf</filename> 來設定 SDDM 自動縮放使用者介面："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
@@ -1002,6 +1005,10 @@ msgid ""
 "EnableHiDPI=true\n"
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgstr ""
+"\n"
+"[X11]\n"
+"EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
@@ -1010,11 +1017,13 @@ msgid ""
 "value, such as <literal>192</literal>. For best scaling results, use a DPI "
 "value that is a multiple of the default 96 DPI."
 msgstr ""
+"請將 <replaceable>DPI_SETTING</replaceable> 代換為合適的 DPI 值，如 "
+"<literal>192</literal>。要取得最佳的縮放效果，DPI 值請使用預設值 96 DPI 的倍數。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:656
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
-msgstr ""
+msgstr "在配備高 DPI 螢幕的電腦上縮放 YaST 使用者介面"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:657
@@ -1024,11 +1033,13 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"YaST 預設不會為高 DPI 螢幕縮放其使用者介面。若您擁有配備高 DPI 螢幕的電腦，您可以設定 YaST 自動縮放使用者介面。若要如此，"
+"請設定環境變數 <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:667
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
-msgstr ""
+msgstr "螢幕共享無法在 Wayland 下的 Firefox 或 Chromium 運作"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:668
@@ -1038,13 +1049,15 @@ msgid ""
 "application windows. This functionality is currently not supported in either "
 "browser when using a Wayland session."
 msgstr ""
+"Firefox 與 Chromium 通常允許以網頁為基礎的工具 (如視訊會議應用程式) 啟動全螢幕或是單獨應用程式視窗的共享。在 Wayland "
+"執行階段下，不管使用那個瀏覽器，這個功能目前並不支援。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:674
 msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
-msgstr ""
+msgstr "要能夠在 Firefox 或 Chromium 下共享您的螢幕，請改用 X 執行階段。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:681
@@ -1106,7 +1119,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:714
 msgid "FreeType Font Rendering Changes"
-msgstr ""
+msgstr "FreeType 字型渲染變動"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:715
