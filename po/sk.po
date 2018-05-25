@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
-"POT-Creation-Date: 2018-05-17 21:43+0200\n"
+"POT-Creation-Date: 2018-05-25 17:33+0200\n"
 "PO-Revision-Date: 2018-05-22 05:27+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
@@ -189,8 +189,8 @@ msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr ""
-"Použitie atomických aktualizácií s novou systémovou rolou <emphasis>"
-"Transactional Server</emphasis>"
+"Použitie atomických aktualizácií s novou systémovou rolou "
+"<emphasis>Transactional Server</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -211,8 +211,8 @@ msgstr ""
 "funkcie sú založené na nástrojoch na správu balíkov, na ktoré sa tiež "
 "spoliehajú všetky ostatné distribúcie SUSE a openSUSE. To znamená, že drvivá "
 "väčšina balíkov RPM, ktoré pracujú s inými systémovými rolami openSUSE Leap "
-"15.0, pracujú aj so systémovou rolou <emphasis>Transactional "
-"Server</emphasis>."
+"15.0, pracujú aj so systémovou rolou <emphasis>Transactional Server</"
+"emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
@@ -391,10 +391,9 @@ msgid ""
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
 "Viac informácií o transakčných aktualizáciách nájdete v príspevkoch blogu "
-"openSUSE Kubic <link xlink:href=\""
-"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> a <link "
-"xlink:href=\""
-"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
+"openSUSE Kubic <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
+"transactionalupdates/\"/> a <link xlink:href=\"https://kubic.opensuse.org/"
+"blog/2018-04-20-transactionalupdates2/\"/>."
 
 # https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #. (itstool) path: sect2/title
@@ -1100,12 +1099,17 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\n"
+#| "[X11]\n"
+#| "EnableHiDPI=true\n"
+#| "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
 msgid ""
 "\n"
 "[X11]\n"
 "EnableHiDPI=true\n"
-"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>\n"
 msgstr ""
 "\n"
 "[X11]\n"
@@ -1114,10 +1118,15 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
+#, fuzzy
+#| msgid ""
+#| "Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI "
+#| "value, such as <literal>192</literal>. For best scaling results, use a "
+#| "DPI value that is a multiple of the default 96 DPI."
 msgid ""
-"Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI "
-"value, such as <literal>192</literal>. For best scaling results, use a DPI "
-"value that is a multiple of the default 96 DPI."
+"Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
+"such as <literal>192</literal>. For best scaling results, use a DPI value "
+"that is a multiple of the default 96 DPI."
 msgstr ""
 "Nahraďte <replaceable>DPI_SETTING</replaceable> s príslušnou hodnotou DPI, "
 "ako napr. <literal>192</literal>. Ak chcete dosiahnuť najlepšie výsledky "
@@ -1147,11 +1156,95 @@ msgstr ""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:667
+msgid ""
+"Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
+"Regular-DPI Monitors"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:668
+msgid ""
+"Qt supports automatic per-monitor scaling on X. It uses the DPI value of the "
+"virtual X screen to calculate the font size for the primary monitor. By "
+"default, this value is 96 DPI. It uses the relative DPI of the primary "
+"monitor to derive font DPI for all other monitors."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:674
+msgid ""
+"Two widely used desktops will override this behavior of Qt, therefore this "
+"note does not apply to them:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:680
+msgid ""
+"GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
+"96 DPI."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:686
+msgid ""
+"KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
+"configuration."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:692
+msgid ""
+"On other desktops, this behavior of Qt can lead to undesirable situations "
+"such as the following: If the primary display is High-DPI (&gt;= 144 DPI), "
+"fonts in Qt applications that request scaling, such as VLC, are effectively "
+"scaled to half the desired size on all monitors. Applications which do not "
+"request scaling, such as YaST (with default settings), use the same DPI "
+"value on all monitors. Hence, they will look smaller on the High-DPI monitor."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:701
+msgid "You can use one of the following workarounds for this issue:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:706
+msgid ""
+"Use a monitor with a regular DPI value as the primary monitor. Applications "
+"that request scaling are then scaled appropriately on the High-DPI monitor."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:713
+msgid ""
+"Set an appropriate font DPI (<literal>Xft.dpi</literal>). You can do so "
+"either with the configuration utility of your desktop. Alternatively, after "
+"every login run the following command:"
+msgstr ""
+
+#. (itstool) path: listitem/screen
+#: xml/release-notes.xml:718
+#, no-wrap
+msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:719
+#, fuzzy
+#| msgid ""
+#| "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
+msgid ""
+"Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
+"for the primary monitor."
+msgstr "Nahraďte <replaceable>FILENAME</replaceable> s názvom RPM."
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:729
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
 msgstr "Zdieľanie obrazovky nefunguje pre Firefox alebo Chromium na Waylande"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:668
+#: xml/release-notes.xml:730
 msgid ""
 "Firefox and Chromium normally allow Web-based tools such as "
 "videoconferencing applications to share the entire screen or individual "
@@ -1164,7 +1257,7 @@ msgstr ""
 "žiadnom prehliadači pri používaní sedenia Wayland."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:674
+#: xml/release-notes.xml:736
 msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
@@ -1173,12 +1266,12 @@ msgstr ""
 "použite namiesto toho sedenie X."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:681
+#: xml/release-notes.xml:743
 msgid "Playing MP3 Media Files"
 msgstr "Prehrávanie mediálnych súborov MP3"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:682
+#: xml/release-notes.xml:744
 msgid ""
 "The codecs to play MP3 media files are shipped as part of the standard "
 "repository."
@@ -1187,7 +1280,7 @@ msgstr ""
 "štandardného repozitára."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:686
+#: xml/release-notes.xml:748
 msgid ""
 "To use this decoder in gstreamer-based applications and frameworks, such as "
 "Rhythmbox or Totem, install the package <literal>gstreamer-plugins-ugly</"
@@ -1198,12 +1291,12 @@ msgstr ""
 "<literal>gstreamer-plugins-ugly</literal>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:694
+#: xml/release-notes.xml:756
 msgid "No Support for Type-1 Fonts in LibreOffice"
 msgstr "Žiadna podpora pre písmo Type-1 v LibreOffice"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:695
+#: xml/release-notes.xml:757
 msgid ""
 "LibreOffice 5.3 and higher do not support legacy Type-1 fonts (file "
 "extensions <filename>.afm</filename> and <filename>.pfb</filename>) anymore. "
@@ -1218,7 +1311,7 @@ msgstr ""
 "otf</filename>) formátoch."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:702
+#: xml/release-notes.xml:764
 msgid ""
 "If you are affected by this, convert Type-1 fonts to a supported format, "
 "such as TrueType and then use the converted fonts. Conversion is possible "
@@ -1235,12 +1328,12 @@ msgstr ""
 "\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:714
+#: xml/release-notes.xml:776
 msgid "FreeType Font Rendering Changes"
 msgstr "Zmeny vykresľovania pre FreeType Font"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:715
+#: xml/release-notes.xml:777
 msgid ""
 "FreeType 2.6.4 has a new default glyph hinting interpreter (version 38) that "
 "more closely matches other operating systems but may look <quote>more fuzzy</"
@@ -1248,26 +1341,26 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
-"FreeType 2.6.4 má novú predvolenú naznačujúcu glyph interpretáciu (verzia 38)"
-", ktorá sa viac zhoduje s inými operačnými systémami, ale môže vyzerať "
+"FreeType 2.6.4 má novú predvolenú naznačujúcu glyph interpretáciu (verzia "
+"38), ktorá sa viac zhoduje s inými operačnými systémami, ale môže vyzerať "
 "<quote>viac fuzzy</quote> pre niekoho. Ak chcete obnoviť predchádzajúce "
 "správanie FreeType, nastavte nasledujúcu premennú prostredia na ľubovoľnej "
 "úrovni (systémovej, používateľsky špecifickej alebo programovo špecifickej) "
 "svojej voľby:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:722
+#: xml/release-notes.xml:784
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:727
+#: xml/release-notes.xml:789
 msgid "Enabling KDE Plasma Browser Integration"
 msgstr "Povolenie integrácie prehliadača KDE Plasma"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:728
+#: xml/release-notes.xml:790
 msgid ""
 "Plasma browser integration for Firefox and Chromium/Chrome allows monitoring "
 "multimedia and downloads using KDE system tools and gives quick access to "
@@ -1275,11 +1368,11 @@ msgid ""
 msgstr ""
 "Integrácia Plasma prehliadača pre Firefox a Chromium/Chrome umožňuje "
 "sledovanie multimédií a sťahovaní pomocou systémových nástrojov KDE a "
-"umožňuje rýchly prístup k záložkám cez panel <guimenu>Spustiť "
-"príkaz</guimenu> desktopu KDE Plasma."
+"umožňuje rýchly prístup k záložkám cez panel <guimenu>Spustiť príkaz</"
+"guimenu> desktopu KDE Plasma."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:734
+#: xml/release-notes.xml:796
 msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
@@ -1288,7 +1381,7 @@ msgstr ""
 "spolupracovať:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:740
+#: xml/release-notes.xml:802
 msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
@@ -1297,7 +1390,7 @@ msgstr ""
 "<package>plasma-browser-integration</package>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:746
+#: xml/release-notes.xml:808
 msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
@@ -1306,7 +1399,7 @@ msgstr ""
 "prehliadača:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:752
+#: xml/release-notes.xml:814
 msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
@@ -1315,16 +1408,16 @@ msgstr ""
 "integration/\"/>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:757
+#: xml/release-notes.xml:819
 msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 msgstr ""
-"Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/detail"
-"/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
+"Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
+"detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:764
+#: xml/release-notes.xml:826
 msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
@@ -1333,12 +1426,12 @@ msgstr ""
 "Leap 15.0 sa dodáva s jej skorou verziou."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:773
+#: xml/release-notes.xml:835
 msgid "Loading the Emacs <literal>psgml</literal> Module"
 msgstr "Načítanie modulu Emacs <literal>psgml</literal>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:774
+#: xml/release-notes.xml:836
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
@@ -1351,24 +1444,24 @@ msgstr ""
 "<package>psgml</package>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:805
+#: xml/release-notes.xml:867
 msgid "Security"
 msgstr "Bezpečnosť"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:807
+#: xml/release-notes.xml:869
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr ""
 "V tejto sekcii sú uvedené zmeny pre bezpečnostné vlastnosti v openSUSE Leap "
 "15.0."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:813
+#: xml/release-notes.xml:875
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
 msgstr "<command>systemctl stop apparmor</command> nefunguje"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:814
+#: xml/release-notes.xml:876
 msgid ""
 "In the past, there could be confusion over the difference between how the "
 "very similarly named <command>systemctl</command> subcommands "
@@ -1379,7 +1472,7 @@ msgstr ""
 "<literal>restart</literal> fungovali pre AppArmor:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:822
+#: xml/release-notes.xml:884
 msgid ""
 "<command>systemctl reload apparmor</command> properly reloaded all AppArmor "
 "profiles. (It was and continues to be the recommended way of reloading "
@@ -1390,7 +1483,7 @@ msgstr ""
 "profilov AppArmor.)"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:829
+#: xml/release-notes.xml:891
 msgid ""
 "<command>systemctl restart apparmor</command> meant that AppArmor would "
 "stop, thereby unloading all AppArmor profiles and then restart which left "
@@ -1403,7 +1496,7 @@ msgstr ""
 "neobmedzené. Iba nové procesy by sa potom znova obmedzili."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:837
+#: xml/release-notes.xml:899
 msgid ""
 "Unfortunately, <systemitem>systemd</systemitem> does not provide a solution "
 "within its unit file format for the issue posed by the <literal>restart</"
@@ -1414,7 +1507,7 @@ msgstr ""
 "<literal>restart</literal>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:842
+#: xml/release-notes.xml:904
 msgid ""
 "Starting with AppArmor 2.12, the command <command>systemctl stop apparmor</"
 "command> will not work. As a consequence, <command>systemctl restart "
@@ -1425,7 +1518,7 @@ msgstr ""
 "teraz správne opätovne načítavať profily AppArmor."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:848
+#: xml/release-notes.xml:910
 msgid ""
 "To unload all AppArmor profiles, use the new command <command>aa-teardown</"
 "command> instead which matches the previous behavior of <command>systemctl "
@@ -1436,7 +1529,7 @@ msgstr ""
 "správaniu <command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:853
+#: xml/release-notes.xml:915
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
@@ -1447,17 +1540,17 @@ msgstr ""
 "org/show_bug.cgi?id=853019\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:863
+#: xml/release-notes.xml:925
 msgid "Technical"
 msgstr "Technické"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:868
+#: xml/release-notes.xml:930
 msgid "Updated Btrfs Subvolume Layout"
 msgstr "Aktualizované rozloženie podzväzku Btrfs"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:869
+#: xml/release-notes.xml:931
 msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
@@ -1466,24 +1559,24 @@ msgstr ""
 "ktoré sa zameriava na nasledovné:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:875
+#: xml/release-notes.xml:937
 msgid "Simplified snapshots and rollbacks"
 msgstr "Zjednodušené snímky a vrátenia sa"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:880
+#: xml/release-notes.xml:942
 msgid "Prevention of accidental data loss"
 msgstr "Predchádzanie náhodnej strate údajov"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:885
+#: xml/release-notes.xml:947
 msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
 msgstr "Lepší výkon databáz a obrazov VM uložených v <filename>/var</filename>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:891
+#: xml/release-notes.xml:953
 msgid ""
 "Instead of using multiple Btrfs subvolumes for different subdirectories of "
 "<filename>/var</filename>, openSUSE Leap 15.0 ships with a single subvolume "
@@ -1496,7 +1589,7 @@ msgstr ""
 "kopírovať pri zápise zakázanú."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:897
+#: xml/release-notes.xml:959
 msgid ""
 "There is no defined way of upgrading to this new Btrfs subvolume layout. "
 "Therefore, if you want to take advantage of it, make sure to freshly install "
@@ -1507,7 +1600,7 @@ msgstr ""
 "namiesto zvýšenia verzie čerstvo nainštalujete openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:902
+#: xml/release-notes.xml:964
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
@@ -1517,35 +1610,35 @@ msgstr ""
 
 # bnc#809347
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:916
+#: xml/release-notes.xml:978
 msgid "More Information and Feedback"
 msgstr "Ďalšie informácie a spätná väzba"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:919
+#: xml/release-notes.xml:981
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Prečítajte si dokumenty <filename>README</filename> na médiu."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:924
+#: xml/release-notes.xml:986
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Získajte podrobné informácie o zmenách konkrétneho balíka z jeho RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:928
+#: xml/release-notes.xml:990
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:929
+#: xml/release-notes.xml:991
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>FILENAME</replaceable> s názvom RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:934
+#: xml/release-notes.xml:996
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1555,7 +1648,7 @@ msgstr ""
 "úrovni média."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:940
+#: xml/release-notes.xml:1002
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1563,7 +1656,7 @@ msgstr ""
 "Ďalšie informácie nájdete na médiu v adresári <filename>docu</filename>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:946
+#: xml/release-notes.xml:1008
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1572,7 +1665,7 @@ msgstr ""
 "\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:952
+#: xml/release-notes.xml:1014
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1581,7 +1674,7 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:959
+#: xml/release-notes.xml:1021
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
 
