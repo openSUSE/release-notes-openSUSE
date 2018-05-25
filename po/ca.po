@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-05-25 17:33+0200\n"
-"PO-Revision-Date: 2018-05-23 18:01+0000\n"
+"PO-Revision-Date: 2018-05-25 22:59+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ca/>\n"
@@ -1111,12 +1111,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[X11]\n"
-#| "EnableHiDPI=true\n"
-#| "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1126,23 +1121,18 @@ msgstr ""
 "\n"
 "[X11]\n"
 "EnableHiDPI=true\n"
-"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI "
-#| "value, such as <literal>192</literal>. For best scaling results, use a "
-#| "DPI value that is a multiple of the default 96 DPI."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
 "that is a multiple of the default 96 DPI."
 msgstr ""
-"Canvieu <replaceable>DPI_SETTING</replaceable> amb el valor de DPI adequat, "
-"com ara <literal>192</literal>. Per als millors resultats, useu un valor de "
-"DPI que sigui múltiple del valor per defecte de 96 DPI."
+"Canvieu <replaceable>DPI_VALUE</replaceable> pel valor de DPI adequat, com "
+"ara <literal>192</literal>. Per als millors resultats, useu un valor de DPI "
+"que sigui múltiple del valor per defecte de 96 DPI."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:656
@@ -1170,6 +1160,8 @@ msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
 msgstr ""
+"Usar l'escalatge automàtic a les aplicacions Qt en configuracions en què es "
+"barregen monitors de DPI d'alta definició i de regulars"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:668
@@ -1179,6 +1171,11 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
+"Qt permet l'escalatge automàtic per monitor a X. Utilitza el valor DPI de la "
+"pantalla X virtual per calcular la mida de la lletra per al monitor "
+"principal. Per defecte, aquest valor és de 96 DPI. Utilitza el DPI relatiu "
+"del monitor principal per obtenir la lletra DPI per a tots els altres "
+"monitors."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:674
@@ -1186,6 +1183,8 @@ msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
 msgstr ""
+"Dos escriptoris usats àmpliament anul·laran aquest comportament de Qt, per "
+"tant, aquesta nota no s'hi aplica:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:680
@@ -1193,6 +1192,8 @@ msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
 msgstr ""
+"El GNOME establirà <literal>Xft.dpi</literal> al múltiple configurat de 96 "
+"DPI."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:686
@@ -1200,6 +1201,8 @@ msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
 msgstr ""
+"El KDE Plasma desactiva l'escalatge automàtic de Qt i utilitza una "
+"configuració d'escalatge manual."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:692
@@ -1211,11 +1214,19 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
+"En altres equips d'escriptori, aquest comportament de Qt pot portar a "
+"situacions no desitjades com ara les següents: si la pantalla principal és "
+"DPI d'alta resolució (&gt;= 144 DPI), les fonts en Qt que sol·liciten "
+"l'escalatge, com ara el VLC, tenen una escala efectiva a la meitat de la "
+"mida desitjada en tots els monitors. Les aplicacions que no sol·liciten "
+"l'escalatge, com ara el YaST (amb la configuració predeterminada), utilitzen "
+"el mateix valor DPI a tots els monitors. Per tant, es veuran més petites als "
+"monitors DPI d'alta resolució."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:701
 msgid "You can use one of the following workarounds for this issue:"
-msgstr ""
+msgstr "Podeu utilitzar una de les següents solucions per a aquest problema:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:706
@@ -1223,6 +1234,9 @@ msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
 msgstr ""
+"Utilitzeu un monitor amb un valor DPI regular com a monitor principal. Les "
+"aplicacions que sol·liciten l'escalatge s'escalen adequadament al monitor "
+"DPI d'alta resolució."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:713
@@ -1231,23 +1245,24 @@ msgid ""
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
+"Establiu una font apropiada de DPI (<literal> Xft.dpi </literal>). Podeu fer-"
+"ho amb la utilitat de configuració del vostre escriptori. D'altra banda, "
+"després de cada inici de sessió, executeu l'ordre següent:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:718
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
-msgstr ""
+msgstr "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:719
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
 msgstr ""
-"Reemplaceu <replaceable>NOMDELFITXER</replaceable> amb el nom de l'RPM."
+"Substituïu <replaceable>DPI_VALUE</replaceable> per un valor de DPI adequat "
+"per al monitor principal."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:729
