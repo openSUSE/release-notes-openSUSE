@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-25 17:33+0200\n"
 "PO-Revision-Date: 2018-05-26 22:33+0000\n"
-"Last-Translator: H. Zeng <zhx@cnzhx.net>\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap-15_0/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -181,7 +181,7 @@ msgstr ""
 msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
-msgstr ""
+msgstr "使用新系统角色<emphasis>事务服务器</emphasis>所带来的原子更新"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:94
@@ -195,6 +195,10 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
+"安装程序现在支持新的系统角色<emphasis>事务服务器</emphasis>，它是 openSUSE Kubic "
+"工作的结果。此系统角色装有新的更新系统功能，可以（以单个操作）自动应用更新，而且如有需要可以很轻松地还原。这些功能基于所有其他 SUSE 和 "
+"openSUSE 发行版都依赖的包管理工具。这就意味着，openSUSE Leap 15.0 其他系统角色上能工作的绝大多数 RPM "
+"软件包，也能够在<emphasis>事务服务器</emphasis>上工作。"
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:107
@@ -208,11 +212,13 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"有些软件包在它们的 RPM <literal>%post</literal> 脚本修改了 <filename>/var</filename> 或 "
+"<filename>/srv</filename> 里的内容。这些软件包都是不兼容的。如果你发现这种软件包，请提交缺陷报告。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "要提供这些功能，此更新系统依赖于："
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:121
@@ -247,7 +253,7 @@ msgid ""
 "To avoid issues with and data loss because of updates, the root file system "
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
-msgstr ""
+msgstr "为了避免因更新带来的数据丢失问题，根文件系统必须不能写入。因此，根文件系统在通常操作时以只读挂载。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:142
@@ -257,19 +263,21 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"要让此安装设置工作，需要对文件系统做两个额外的更改：要允许写入 <filename>/etc</filename> 里的用户配置，此目录自动配置为使用 "
+"OverlayFS。<filename>/var</filename> 现在是独立的子卷，可以被进程写入。"
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:152
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
-msgstr ""
+msgstr "<emphasis>事务服务器</emphasis>需要至少 12 GB 的磁盘空间"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:153
 msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
-msgstr ""
+msgstr "系统角色<emphasis>事务服务器</emphasis>需要至少 12 GB 的磁盘大小来容纳 Btrfs 快照。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:158
@@ -278,11 +286,13 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"要使用事务更新，软件的全部管理要始终使用命令 <command>transactional-update</command> 来代替 YaST 和 "
+"Zypper："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:165
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "更新系统：<command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -290,6 +300,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"安装软件包：<command>transactional-update pkg in "
+"<replaceable>软件包名称</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -297,6 +309,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"移除软件包：<command>transactional-update pkg rm "
+"<replaceable>软件包名称</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -305,13 +319,15 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"要还原最近的快照，即最近一次对根文件系统所做的更改，请确保你的系统已启动到最近快照的下一个，然后运行：<command>transactional-"
+"update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
 msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
-msgstr ""
+msgstr "或者，在命令的末尾添加一个快照的 ID 以回滚到指定的 ID。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -321,30 +337,27 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"使用此系统角色时，按默认，系统会执行日常更新并在上午 3:00 和 5:00 之间重启。这两个操作都是基于 systemd 而且如有必要可用 "
+"<command>systemctl</command> 禁用："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:201
-#, fuzzy, no-wrap
-#| msgid "systemctl disable NetworkManager.service"
+#, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr "systemctl disable NetworkManager.service"
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"细节请参考 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=996520\"/>  和 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug."
-"cgi?id=853019\"/>。"
+"更多关于事务更新的信息，请参阅 openSUSE Kubic 博客文章 <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> 和 <link "
+"xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:214
@@ -378,7 +391,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:236
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "正在安装到容量低于 12 GB 的硬盘"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:238
@@ -387,12 +400,12 @@ msgid ""
 "disk size is larger than 12 GB. If you want to set up, for example, very "
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
-msgstr ""
+msgstr "安装程序只在磁盘可用大小超过 12 GB 时会建议分区方案。如果你想建立，例如很小的虚拟机器映像，请使用指导分区程序来手动调整分区参数。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:247
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI—统一可扩展固件接口"
+msgstr "UEFI——统一可扩展固件接口"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:248
@@ -665,7 +678,7 @@ msgstr "要使别名仅在特定虚拟主机上可用，请将该别名添加到
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:426
 msgid "Packaging Changes"
-msgstr "打包更改历史"
+msgstr "打包更改"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:429
@@ -954,25 +967,22 @@ msgstr "确保软件包 <package>gdm</package> 已安装。"
 #. (itstool) path: step/para
 #: xml/release-notes.xml:618
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "设定 GDM 为显示管理器："
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:621
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm"
 msgstr ""
 "sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:625
 msgid "Reboot."
-msgstr "重新启动系统。"
+msgstr "重新启动。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:634
@@ -993,12 +1003,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[XDisplay]\n"
-#| "ServerArguments=-dpi <replaceable>DPI_SETTING</replaceable>\n"
-#| "EnableHiDPI=true\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1006,23 +1011,18 @@ msgid ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>\n"
 msgstr ""
 "\n"
-"[XDisplay]\n"
-"ServerArguments=-dpi <replaceable>设置的 DPI</replaceable>\n"
+"[X11]\n"
 "EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_值</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI "
-#| "value, such as <literal>192</literal>. For best scaling results, use a "
-#| "DPI value that is a multiple of the default 96 DPI."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
 "that is a multiple of the default 96 DPI."
 msgstr ""
-"将 <replaceable>DPI_SETTING</replaceable> 替换为一个合适的 DPI 值，例如 "
+"将 <replaceable>DPI_值</replaceable> 替换为一个合适的 DPI 值，例如 "
 "<literal>192</literal>。要获得最好的缩放结果，请使用默认 DPI 96 的倍数。"
 
 #. (itstool) path: sect2/title
@@ -1047,7 +1047,7 @@ msgstr ""
 msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
-msgstr ""
+msgstr "在混合高/常规 DPI 监视器设置下的 Qt 应用程序里使用自动缩放"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:668
@@ -1057,27 +1057,29 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
+"Qt 支持在 X 上自动对每个监视器分别缩放。它使用虚拟 X 屏幕的 DPI 值来计算主监视器的字体大小。此值默认为 96 DPI。使用主监视器的相对 "
+"DPI 来导出其他全部监视器的字体 DPI。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:674
 msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
-msgstr ""
+msgstr "有两个广泛使用的桌面会覆盖掉 Qt 的这个行为，因此该说明对它们不适用："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:680
 msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
-msgstr ""
+msgstr "GNOME 会设定 <literal>Xft.dpi</literal> 为 96 DPI 的配置倍数。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:686
 msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
-msgstr ""
+msgstr "KDE Plasma 禁用 Qt 的自动缩放并使用手动缩放配置。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:692
@@ -1089,18 +1091,21 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
+"其他桌面上，该 Qt 行为会引起不良效果，比如下列情况：如果主显示器为高 DPI（&gt;= 144 DPI），请求缩放的 Qt 应用程序里的字体，例如 "
+"VLC，在所有监视器上实际只能缩放到预想大小的一半。没有请求缩放的应用程序，例如 YaST（以默认设置），在所有监视器上使用同个 DPI。因此，它们在高 "
+"DPI 监视器上看起来很小。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:701
 msgid "You can use one of the following workarounds for this issue:"
-msgstr ""
+msgstr "对这个问题，你可以使用以下临时的解决方法："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:706
 msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
-msgstr ""
+msgstr "使用常规 DPI 的监视器作为主监视器。请求缩放的应用程序就能在高 DPI 监视上正确缩放。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:713
@@ -1109,22 +1114,20 @@ msgid ""
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
+"设定合适的字体 DPI（<literal>Xft.dpi</literal>）。你可以用你桌面的配置工具来完成。也可以在每次登录后运行下面的命令："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:718
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
-msgstr ""
+msgstr "echo Xft.dpi:<replaceable>DPI_值</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:719
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
-msgstr "将 <replaceable>FILENAME</replaceable> 替换为 RPM 的名称。"
+msgstr "将 <replaceable>DPI_值</replaceable> 替换为对主监视器合适的 DPI 值。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:729
@@ -1393,9 +1396,9 @@ msgid ""
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"细节请参考 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=996520\"/>  和 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug."
-"cgi?id=853019\"/>。"
+"要获取更多信息，请参阅 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"996520\"/> 和 <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:925
@@ -1405,31 +1408,31 @@ msgstr "技术"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:930
 msgid "Updated Btrfs Subvolume Layout"
-msgstr ""
+msgstr "更新的 Btrfs 子卷布局"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:931
 msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
-msgstr ""
+msgstr "openSUSE Leap 15.0 引入了新的默认 Btrfs 子卷布局，目的是为了："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:937
 msgid "Simplified snapshots and rollbacks"
-msgstr ""
+msgstr "简化快照和回滚"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:942
 msgid "Prevention of accidental data loss"
-msgstr ""
+msgstr "防止意外的数据丢失"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:947
 msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
-msgstr ""
+msgstr "存储在 <filename>/var</filename> 里的数据库和 VM 映像的更佳性能"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:953
@@ -1439,6 +1442,8 @@ msgid ""
 "for all of <filename>/var</filename>. This new subvolume has copy-on-write "
 "functionality disabled."
 msgstr ""
+"openSUSE Leap 15.0 把全部的 <filename>/var</filename> 装进单个子卷，而不是对 "
+"<filename>/var</filename> 里的不同子目录使用多个 Btrfs 子卷。这个新子卷禁用了写时复制的功能。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:959
@@ -1447,19 +1452,16 @@ msgid ""
 "Therefore, if you want to take advantage of it, make sure to freshly install "
 "openSUSE Leap 15.0 instead of upgrading."
 msgstr ""
+"没有明确的方法可以升级到这个新的 Btrfs 子卷布局。因此，如果你想享受它的好处，请全新安装 openSUSE Leap 15.0 而不是升级。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:964
-#, fuzzy
-#| msgid ""
-#| "For more information about upgrading to a current openSUSE version, see "
-#| "<link xlink:href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 msgstr ""
-"了解更多有关如何升级到当前的 openSUSE 版本，请见 <link xlink:href=\"https://"
-"zh.opensuse.org/SDB:系统升级\"/>。"
+"要了解更多关于默认 Btrfs 子卷布局此次更改前后的信息，请参阅 <link xlink:href=\""
+"https://en.opensuse.org/SDB:BTRFS\"/>。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:978
