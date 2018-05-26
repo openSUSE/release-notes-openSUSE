@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-25 17:33+0200\n"
-"PO-Revision-Date: 2018-05-25 14:01+0000\n"
+"PO-Revision-Date: 2018-05-26 05:01+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap-15_0/zh_TW/>\n"
@@ -888,10 +888,9 @@ msgid ""
 "defined using <filename>/etc/sysconfig</filename> anymore but with the "
 "alternatives system."
 msgstr ""
-"在過去，您可以使用 <filename>/etc/sysconfig</filename> 或是 YaST 模組 "
-"<guimenu>etc/sysconfig 編輯器</guimenu> 來定義登入管理員與桌面環境執行階段。"
-"從 openSUSE Leap 15.0 開始，<filename>/etc/sysconfig</filename> 已不再定義這"
-"些設定值，而是改採用 alternatives 系統。"
+"在過去，您可以使用 <filename>/etc/sysconfig</filename> 或是 YaST 模組 <guimenu>/etc/"
+"sysconfig 編輯器</guimenu> 來定義登入管理員與桌面環境執行階段。從 openSUSE Leap 15.0 "
+"開始，<filename>/etc/sysconfig</filename> 已不再定義這些設定值，而是改採用 alternatives 系統。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:562
@@ -1021,12 +1020,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[X11]\n"
-#| "EnableHiDPI=true\n"
-#| "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1036,23 +1030,17 @@ msgstr ""
 "\n"
 "[X11]\n"
 "EnableHiDPI=true\n"
-"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI "
-#| "value, such as <literal>192</literal>. For best scaling results, use a "
-#| "DPI value that is a multiple of the default 96 DPI."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
 "that is a multiple of the default 96 DPI."
 msgstr ""
-"請將 <replaceable>DPI_SETTING</replaceable> 代換為合適的 DPI 值，如 "
-"<literal>192</literal>。要取得最佳的縮放效果，DPI 值請使用預設值 96 DPI 的倍"
-"數。"
+"請將 <replaceable>DPI_VALUE</replaceable> 代換為合適的 DPI 值，如 "
+"<literal>192</literal>。要取得最佳的縮放效果，DPI 值請使用預設值 96 DPI 的倍數。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:656
@@ -1076,7 +1064,7 @@ msgstr ""
 msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
-msgstr ""
+msgstr "在混合高 DPI 與一般 DPI 螢幕環境下在 Qt 應用程式中使用自動縮放"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:668
@@ -1086,27 +1074,29 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
+"Qt 在 X 環境下支援個別螢幕的自動縮放。它使用虛擬 X screen 的 DPI 值來計算主要螢幕所需的字體大小。該值預設為 96 DPI。"
+"它使用主要螢幕的相對 DPI 來推算出其他螢幕的字體 DPI 值。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:674
 msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
-msgstr ""
+msgstr "以下二種廣泛使用的桌面環境會覆蓋 Qt 的行為，故本事項對它們不適用："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:680
 msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
-msgstr ""
+msgstr "GNOME 會設定 <literal>Xft.dpi</literal> 為組態所設定的 96 DPI 的倍數。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:686
 msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
-msgstr ""
+msgstr "KDE Plasma 會關閉 Qt 自動縮放而改用它自己的縮放組態。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:692
