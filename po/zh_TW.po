@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-25 17:33+0200\n"
-"PO-Revision-Date: 2018-05-26 05:01+0000\n"
+"PO-Revision-Date: 2018-05-26 07:11+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap-15_0/zh_TW/>\n"
@@ -1108,18 +1108,21 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
+"在其他桌面環境，Qt 的行為會導致以下不預期的情況發生：若主要螢幕為高 DPI (&gt;= 144 DPI)，有需要縮放的 Qt 應用程式 (如 "
+"VLC) 裡的字體，會實際上在所有螢幕都被縮放為只有預期大小的一半。不需縮放的應用程式如 YaST (使用預設設定) 則會在所有螢幕使用相同的 DPI "
+"值。如此，它們在高 DPI 螢幕裡看起來會更小。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:701
 msgid "You can use one of the following workarounds for this issue:"
-msgstr ""
+msgstr "您可以使用以下其中之一個暫時解套方案來處理這個問題："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:706
 msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
-msgstr ""
+msgstr "使用一般 DPI 的螢幕做為主要螢幕。需要縮放的應用程式就能夠在高 DPI 螢幕上正確縮放。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:713
@@ -1128,22 +1131,21 @@ msgid ""
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
+"設定適當的字體 DPI "
+"(<literal>Xft.dpi</literal>)。您可以使用您的桌面環境所提供的組態工具來設定。或者是在每次登入後，執行以下指令："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:718
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
-msgstr ""
+msgstr "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:719
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
-msgstr "替換 <replaceable>FILENAME</replaceable> 為 RPM 名稱"
+msgstr "替換 <replaceable>DPI_VALUE</replaceable> 為適合主要螢幕的 DPI 值。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:729
@@ -1240,17 +1242,20 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
+"FreeType 2.6.4 有一個新的預設字形微調解析器 (版本 38) "
+"與其他作業系統的行為更接近，但在一些系統上看起來<quote>更模糊</quote>。要回復以前的 FreeType 行為，您可以選擇在任意層級 "
+"(系統全域、使用者特定，或程式特定) 設定以下環境變數："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:784
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
-msgstr ""
+msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:789
 msgid "Enabling KDE Plasma Browser Integration"
-msgstr ""
+msgstr "啟用 KDE Plasma 瀏覽器整合"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:790
@@ -1259,27 +1264,29 @@ msgid ""
 "multimedia and downloads using KDE system tools and gives quick access to "
 "tabs via the <guimenu>Run Command</guimenu> bar of the KDE Plasma desktop."
 msgstr ""
+"Firefox 與 Chromium/Chrome 的 Plasma 瀏覽器整合允許使用 KDE 系統工具來監控多媒體與下載，並且在 KDE "
+"Plasma 桌面環境的 <guimenu>Run Command</guimenu> 工具列提供快速存取分頁的功能。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:796
 msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
-msgstr ""
+msgstr "瀏覽器整合功能包含了需要協同運作的二個部分："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:802
 msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
-msgstr ""
+msgstr "桌面環境部分可以安裝 <package>plasma-browser-integration</package> 系統套件。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:808
 msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
-msgstr ""
+msgstr "瀏覽器部分則需要從您的瀏覽器附加元件商店安裝："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:814
@@ -1287,6 +1294,8 @@ msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
 msgstr ""
+"Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
+"integration/\"/>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:819
@@ -1294,13 +1303,15 @@ msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 msgstr ""
+"Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/detail"
+"/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:826
 msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
-msgstr ""
+msgstr "請注意此功能仍處於開發階段，openSUSE Leap 15.0 僅收錄了其早期版本。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:835
@@ -1309,31 +1320,24 @@ msgstr "載入 Emacs <literal>psgml</literal> 模組"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:836
-#, fuzzy
-#| msgid ""
-#| "Because of conflicts with Emacs modules from the default installation, "
-#| "openSUSE Leap openSUSE Leap 15.0 can no longer load the <literal>psgml</"
-#| "literal> module automatically. For more information, see the file "
-#| "<filename>README</filename> from the package <package>psgml</package>."
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
 "automatically. For more information, see the file <filename>README</"
 "filename> from the package <package>psgml</package>."
 msgstr ""
-"由於和來自 Emacs 預設安裝的模組相衝突，openSUSE Leap 15.0 無法自動載入 "
-"<literal>psgml</literal> 模組。欲了解詳情，請見 <package>psgml</package> 套件"
-"中的 <filename>README</filename> 檔案。"
+"由於和來自 Emacs 預設安裝的模組相衝突，openSUSE Leap 15.0 無法自動載入 <literal>psgml</literal> "
+"模組。欲了解詳情，請見 <package>psgml</package> 套件中的 <filename>README</filename> 檔案。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:867
 msgid "Security"
-msgstr ""
+msgstr "安全性"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:869
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
-msgstr ""
+msgstr "這個小節列出 openSUSE Leap 15.0 安全性功能方面的變動。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:875
@@ -1422,31 +1426,31 @@ msgstr "技術議題"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:930
 msgid "Updated Btrfs Subvolume Layout"
-msgstr ""
+msgstr "更新後的 Btrfs 子卷布局"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:931
 msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
-msgstr ""
+msgstr "openSUSE Leap 15.0 導入一個新的 Btrfs 子卷預設布局，主要為了以下考量："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:937
 msgid "Simplified snapshots and rollbacks"
-msgstr ""
+msgstr "簡化快照與回復"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:942
 msgid "Prevention of accidental data loss"
-msgstr ""
+msgstr "避免意外的資料遺失"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:947
 msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
-msgstr ""
+msgstr "對於儲存於 <filename>/var/</filename> 的資料庫與虛擬機器映象檔有更好的效能"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:953
@@ -1456,6 +1460,8 @@ msgid ""
 "for all of <filename>/var</filename>. This new subvolume has copy-on-write "
 "functionality disabled."
 msgstr ""
+"不同於過去對於 <filename>/var</filename> 下的子目錄使用多個 Btrfs 子卷的方式，openSUSE Leap 15.0 "
+"對所有 <filename>/var</filename> 的內容皆使用單一子卷。這個子卷取消了「寫時複製」的功能。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:959
@@ -1464,19 +1470,16 @@ msgid ""
 "Therefore, if you want to take advantage of it, make sure to freshly install "
 "openSUSE Leap 15.0 instead of upgrading."
 msgstr ""
+"沒有方法能夠用升級的方式轉移到新的 Btrfs 子卷布局。是故若您想要使用該功能，請確保是全新安裝 openSUSE Leap 15.0 而非升級系統。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:964
-#, fuzzy
-#| msgid ""
-#| "For more information about upgrading to a current openSUSE version, see "
-#| "<link xlink:href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 msgstr ""
-"有關升級到當前 openSUSE 的詳細資訊，請造訪 <link xlink:href=\"http://en."
-"opensuse.org/SDB:Distribution-Upgrade\"/>。"
+"有關變更前/後 Btrfs 預設子卷布局的詳細資訊，請造訪 <link xlink:href=\"https://en.opensuse.org/SDB:"
+"BTRFS\"/>。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:978
@@ -1527,9 +1530,7 @@ msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
-msgstr ""
-"有關其他或更新的文檔，請參閱 <link xlink:href=\"https://doc.opensuse.org/\"/"
-">。"
+msgstr "有關其他或更新的文件，請參閱 <link xlink:href=\"https://doc.opensuse.org/\"/>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1014
