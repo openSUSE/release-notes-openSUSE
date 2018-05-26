@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2018-05-25 17:33+0200\n"
-"PO-Revision-Date: 2018-05-21 04:03+0000\n"
+"PO-Revision-Date: 2018-05-26 10:42+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ja/>\n"
@@ -1121,12 +1121,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[X11]\n"
-#| "EnableHiDPI=true\n"
-#| "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1136,23 +1131,18 @@ msgstr ""
 "\n"
 "[X11]\n"
 "EnableHiDPI=true\n"
-"ServerArguments=-nolisten tcp -dpi <replaceable>DPI 設定</replaceable>\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_値</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI "
-#| "value, such as <literal>192</literal>. For best scaling results, use a "
-#| "DPI value that is a multiple of the default 96 DPI."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
 "that is a multiple of the default 96 DPI."
 msgstr ""
-"なお、 <replaceable>DPI_設定</replaceable> の箇所には、設定したい DPI 値 "
-"(例: <literal>192</literal>) を指定してください。最適な縮尺で表示したい場合"
-"は、既定の 96 DPI の整数倍の値を指定してお使いください。"
+"なお、 <replaceable>DPI_値</replaceable> の箇所には、設定したい DPI 値 (例: "
+"<literal>192</literal>) を指定してください。最適な縮尺で表示したい場合は、既定の 96 DPI "
+"の整数倍の値を指定してお使いください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:656
@@ -1178,7 +1168,7 @@ msgstr ""
 msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
-msgstr ""
+msgstr "高 DPI モニタと通常 DPI モニタの混在する環境での Qt アプリケーションの自動縮尺設定について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:668
@@ -1188,27 +1178,30 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
+"Qt では X の各モニタに対して、自動的に縮尺を設定する機能が提供されています。プライマリモニタに対しては、仮想 X スクリーンに対する DPI "
+"値を使用してフォントサイズを計算します。既定では、この値は 96 DPI になっています。それ以外のモニタに対しては、プライマリモニタの DPI "
+"値からの相対値を使用して、フォントサイズを計算します。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:674
 msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
-msgstr ""
+msgstr "最もよく使用されている 2 種類のデスクトップをお使いの場合は、このような Qt の動作を下記のようにして無視するようになっています:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:680
 msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
-msgstr ""
+msgstr "GNOME では <literal>Xft.dpi</literal> 変数を設定して、 96 DPI の倍数になるようにしています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:686
 msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
-msgstr ""
+msgstr "KDE Plasma では Qt の自動縮尺設定を無効化し、 KDE 側で縮尺を設定しています。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:692
@@ -1220,11 +1213,15 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
+"それ以外のデスクトップの場合、このような Qt の動作は時として問題となる場合があります: たとえばプライマリモニタが高 DPI 環境 (&gt;= "
+"144 DPI) である場合、縮尺機能を使用している Qt アプリケーション (例: VLC) "
+"は全てのモニタに対して適切なサイズとなるようフォントのサイズを調整しますが、縮尺機能を使用していないアプリケーション (例: 既定の設定で動作させた "
+"YaST) は全てのモニタに対して同じ DPI 値を使用するため、高 DPI モニタでは小さく表示されてしまいます。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:701
 msgid "You can use one of the following workarounds for this issue:"
-msgstr ""
+msgstr "この問題を回避するには、下記の回避策の中からいずれか 1 つを実施してください:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:706
@@ -1232,6 +1229,7 @@ msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
 msgstr ""
+"プライマリモニタとして通常 DPI のモニタを使用する。縮尺機能を必要とするアプリケーションは、高 DPI モニタでも適切に表示されるようになります。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:713
@@ -1240,24 +1238,21 @@ msgid ""
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
+"フォントの DPI (<literal>Xft.dpi</literal>) を適切に設定する。お使いのデスクトップ環境で提供されている設定ユーティリティ"
+"をお使いいただいて設定するほか、ログイン時に下記のコマンドを実行してもかまいません:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:718
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
-msgstr ""
+msgstr "echo Xft.dpi:<replaceable>DPI_値</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:719
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
-msgstr ""
-"<replaceable>ファイル名</replaceable> の箇所を RPM の名前に置き換えてお使いく"
-"ださい。"
+msgstr "<replaceable>DPI_値</replaceable> の箇所をプライマリモニタの DPI 値に置き換えてお使いください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:729
