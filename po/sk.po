@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-05-25 17:33+0200\n"
-"PO-Revision-Date: 2018-05-22 05:27+0000\n"
+"PO-Revision-Date: 2018-05-28 09:05+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/sk/>\n"
@@ -1099,12 +1099,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:642
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[X11]\n"
-#| "EnableHiDPI=true\n"
-#| "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1114,22 +1109,17 @@ msgstr ""
 "\n"
 "[X11]\n"
 "EnableHiDPI=true\n"
-"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:647
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI "
-#| "value, such as <literal>192</literal>. For best scaling results, use a "
-#| "DPI value that is a multiple of the default 96 DPI."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
 "that is a multiple of the default 96 DPI."
 msgstr ""
-"Nahraďte <replaceable>DPI_SETTING</replaceable> s príslušnou hodnotou DPI, "
-"ako napr. <literal>192</literal>. Ak chcete dosiahnuť najlepšie výsledky "
+"Nahraďte <replaceable>DPI_VALUE</replaceable> s príslušnou hodnotou DPI, ako "
+"napr. <literal>192</literal>. Ak chcete dosiahnuť najlepšie výsledky "
 "prispôsobenia rozmerov, použite hodnotu DPI, ktorá je násobkom predvolenej "
 "hodnoty 96 DPI."
 
@@ -1160,6 +1150,8 @@ msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
 msgstr ""
+"Použitie automatického prispôsobenia rozmerov v Qt aplikáciách v "
+"nastaveniach, ktoré miešajú monitory s vysokým/bežným DPI"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:668
@@ -1169,6 +1161,11 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
+"Qt podporuje automatické prispôsobenie rozmerov na monitor na X. Na "
+"vypočítanie veľkosti písma pre primárny monitor používa hodnotu DPI "
+"virtuálnej obrazovky X. V predvolenom nastavení je táto hodnota 96 DPI. "
+"Použije relatívne DPI primárneho monitora na odvodenie DPI písma pre všetky "
+"ostatné monitory."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:674
@@ -1176,6 +1173,8 @@ msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
 msgstr ""
+"Dva široko používané desktopy toto správanie Qt neberú do úvahy, preto sa "
+"táto poznámka nevzťahuje na ne:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:680
@@ -1183,6 +1182,8 @@ msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
 msgstr ""
+"GNOME bude nastavovať <literal>Xft.dpi</literal> ku konfigurovanému násobku "
+"96 DPI."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:686
@@ -1190,6 +1191,8 @@ msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
 msgstr ""
+"KDE Plasma zakazuje automatické prispôsobenie rozmerov Qt a používa manuálnu "
+"konfiguráciu prispôsobenia."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:692
@@ -1201,11 +1204,18 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
+"Na desktopoch môže toto správanie Qt viesť k nežiaducim situáciám, ako "
+"napríklad: Ak primárny displej má vysoké DPI (&gt;= 144 DPI), písma v "
+"aplikáciách Qt, ktoré vyžadujú prispôsobenie rozmerov, napríklad VLC, sú "
+"efektívne zmenené na polovicu požadovanej veľkosti na všetkých monitoroch. "
+"Aplikácie, ktoré nevyžadujú prispôsobenie rozmerov, napríklad YaST (s "
+"predvolenými nastaveniami), používajú rovnakú hodnotu DPI na všetkých "
+"monitoroch. Preto budú na monitore s vysokým DPI vyzerať menšie."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:701
 msgid "You can use one of the following workarounds for this issue:"
-msgstr ""
+msgstr "Na tento problém môžete použiť jedno z nasledujúcich riešení:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:706
@@ -1213,6 +1223,9 @@ msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
 msgstr ""
+"Používajte monitor s bežnou hodnotou DPI ako primárny monitor. Aplikácie, "
+"ktoré vyžadujú prispôsobenie rozmerov, sa potom primerane prispôsobia na "
+"monitore s vysokým DPI."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:713
@@ -1221,22 +1234,24 @@ msgid ""
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
+"Nastavte príslušné DPI písma (<literal>Xft.dpi</literal>). Môžete to urobiť "
+"buď pomocou konfiguračného nástroja vašej pracovnej plochy. Prípadne po "
+"každom prihlásení spustite nasledujúci príkaz:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:718
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
-msgstr ""
+msgstr "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:719
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
-msgstr "Nahraďte <replaceable>FILENAME</replaceable> s názvom RPM."
+msgstr ""
+"Nahraďte <replaceable>DPI_VALUE</replaceable> s príslušnou hodnotou DPI pre "
+"primárny monitor."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:729
