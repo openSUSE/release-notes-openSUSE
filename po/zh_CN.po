@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2018-05-25 17:33+0200\n"
+"POT-Creation-Date: 2018-05-30 15:09+0200\n"
 "PO-Revision-Date: 2018-05-27 04:01+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
@@ -159,13 +159,26 @@ msgstr ""
 "要提交此发布版本的错误报告，请使用 openSUSE Bugzilla。详情请见 <link xlink:"
 "href=\"https://zh.opensuse.org/openSUSE:提交错误报告\"/>。"
 
+#. (itstool) path: article/para
+#: xml/release-notes.xml:81
+#, fuzzy
+#| msgid ""
+#| "For the latest product news, from openSUSE, visit <link xlink:href="
+#| "\"https://www.opensuse.org\"/>."
+msgid ""
+"Major new features of openSUSE Leap 15.0 are also listed at <link xlink:href="
+"\"https://en.opensuse.org/Features_15.0\"/>."
+msgstr ""
+"获取 openSUSE 的最新产品新闻，请访问 <link xlink:href=\"https://www.opensuse."
+"org\"/>。"
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:83
+#: xml/release-notes.xml:87
 msgid "Installation"
 msgstr "安装"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:85
+#: xml/release-notes.xml:89
 msgid ""
 "This section contains installation-related notes. For detailed upgrade "
 "instructions, see the documentation at <link xlink:href=\"https://doc."
@@ -176,15 +189,20 @@ msgstr ""
 "\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse."
 "startup/part.basics.html\"/>。"
 
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:94 xml/release-notes.xml:327
+msgid "Make sure to also review <xref linkend=\"sec.driver\"/>."
+msgstr ""
+
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:92
+#: xml/release-notes.xml:99
 msgid ""
 "Using Atomic Updates With the New System Role <emphasis>Transactional "
 "Server</emphasis>"
 msgstr "使用新系统角色<emphasis>事务服务器</emphasis>所带来的原子更新"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:94
+#: xml/release-notes.xml:101
 msgid ""
 "The installer now supports a new system role <emphasis>Transactional Server</"
 "emphasis> that is an outcome of the openSUSE Kubic effort. This system role "
@@ -195,38 +213,41 @@ msgid ""
 "RPM packages that work with other system roles of openSUSE Leap 15.0 also "
 "work with the system role <emphasis>Transactional Server</emphasis>."
 msgstr ""
-"安装程序现在支持新的系统角色<emphasis>事务服务器</emphasis>，这是 openSUSE Kubic "
-"工作的成果。此系统角色装有新的更新系统功能，可以（以单个操作）自动应用更新，而且如有需要可以很轻松地还原这些更新。这些功能基于所有其他 SUSE 和 "
-"openSUSE 发行版一同依赖的包管理工具。这就意味着，openSUSE Leap 15.0 其他系统角色上能工作的绝大多数 RPM "
-"软件包，也能够在<emphasis>事务服务器</emphasis>上工作。"
+"安装程序现在支持新的系统角色<emphasis>事务服务器</emphasis>，这是 openSUSE "
+"Kubic 工作的成果。此系统角色装有新的更新系统功能，可以（以单个操作）自动应用"
+"更新，而且如有需要可以很轻松地还原这些更新。这些功能基于所有其他 SUSE 和 "
+"openSUSE 发行版一同依赖的包管理工具。这就意味着，openSUSE Leap 15.0 其他系统"
+"角色上能工作的绝大多数 RPM 软件包，也能够在<emphasis>事务服务器</emphasis>上"
+"工作。"
 
 #. (itstool) path: note/title
-#: xml/release-notes.xml:107
+#: xml/release-notes.xml:114
 msgid "Incompatible Packages"
 msgstr "不兼容的软件包"
 
 #. (itstool) path: note/para
-#: xml/release-notes.xml:108
+#: xml/release-notes.xml:115
 msgid ""
 "Some packages modify the contents of <filename>/var</filename> or <filename>/"
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
-"有些软件包在它们的 RPM <literal>%post</literal> 脚本里修改了 <filename>/var</filename> 或 "
-"<filename>/srv</filename> 里的内容。这些软件包都是不兼容的。如果你发现这种软件包，请提交缺陷报告。"
+"有些软件包在它们的 RPM <literal>%post</literal> 脚本里修改了 <filename>/var</"
+"filename> 或 <filename>/srv</filename> 里的内容。这些软件包都是不兼容的。如果"
+"你发现这种软件包，请提交缺陷报告。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:115
+#: xml/release-notes.xml:122
 msgid "To provide these features, this update system relies on:"
 msgstr "要提供这些功能，此更新系统依赖于："
 
 #. (itstool) path: formalpara/title
-#: xml/release-notes.xml:121
+#: xml/release-notes.xml:128
 msgid "Btrfs snapshots"
 msgstr "Btrfs 快照"
 
 #. (itstool) path: formalpara/para
-#: xml/release-notes.xml:122
+#: xml/release-notes.xml:129
 msgid ""
 "Before a system update is started, a new Btrfs snapshot of the root file "
 "system is created. Then, all the changes from the update are installed into "
@@ -238,141 +259,147 @@ msgstr ""
 "用该快照。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:129
+#: xml/release-notes.xml:136
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr "要撤销更新，只要从前一个快照重新启动系统即可。"
 
 #. (itstool) path: formalpara/title
-#: xml/release-notes.xml:135
+#: xml/release-notes.xml:142
 msgid "A read-only root file system"
 msgstr "只读根文件系统"
 
 #. (itstool) path: formalpara/para
-#: xml/release-notes.xml:136
+#: xml/release-notes.xml:143
 msgid ""
 "To avoid issues with and data loss because of updates, the root file system "
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
-msgstr "为了避免因更新带来的数据丢失问题，根文件系统必须不能写入。因此，根文件系统在通常操作时以只读挂载。"
+msgstr ""
+"为了避免因更新带来的数据丢失问题，根文件系统必须不能写入。因此，根文件系统在"
+"通常操作时以只读挂载。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:142
+#: xml/release-notes.xml:149
 msgid ""
 "To make this setup work, two additional changes to the file system needed to "
 "be made: To allow writing user configuration in <filename>/etc</filename>, "
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
-"要让此安装设置工作，需要对文件系统做两个额外的更改：要允许写入 <filename>/etc</filename> 里的用户配置，此目录自动配置为使用 "
-"OverlayFS。<filename>/var</filename> 现在是独立的子卷，可以被进程写入。"
+"要让此安装设置工作，需要对文件系统做两个额外的更改：要允许写入 <filename>/"
+"etc</filename> 里的用户配置，此目录自动配置为使用 OverlayFS。<filename>/var</"
+"filename> 现在是独立的子卷，可以被进程写入。"
 
 #. (itstool) path: important/title
-#: xml/release-notes.xml:152
+#: xml/release-notes.xml:159
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr "<emphasis>事务服务器</emphasis>需要至少 12 GB 的磁盘空间"
 
 #. (itstool) path: important/para
-#: xml/release-notes.xml:153
+#: xml/release-notes.xml:160
 msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
-msgstr "系统角色<emphasis>事务服务器</emphasis>需要至少 12 GB 的磁盘大小来容纳 Btrfs 快照。"
+msgstr ""
+"系统角色<emphasis>事务服务器</emphasis>需要至少 12 GB 的磁盘大小来容纳 Btrfs "
+"快照。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:158
+#: xml/release-notes.xml:165
 msgid ""
 "To work with transactional updates, always use the command "
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
-"要使用事务更新，软件的全部管理要始终使用命令 <command>transactional-update</command> 来代替 YaST 和 "
-"Zypper："
+"要使用事务更新，软件的全部管理要始终使用命令 <command>transactional-update</"
+"command> 来代替 YaST 和 Zypper："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:165
+#: xml/release-notes.xml:172
 msgid "Update the system: <command>transactional-update up</command>"
 msgstr "更新系统：<command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:171
+#: xml/release-notes.xml:178
 msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
-"安装软件包：<command>transactional-update pkg in "
-"<replaceable>软件包名称</replaceable></command>"
+"安装软件包：<command>transactional-update pkg in <replaceable>软件包名称</"
+"replaceable></command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:177
+#: xml/release-notes.xml:184
 msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
-"移除软件包：<command>transactional-update pkg rm "
-"<replaceable>软件包名称</replaceable></command>"
+"移除软件包：<command>transactional-update pkg rm <replaceable>软件包名称</"
+"replaceable></command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:183
+#: xml/release-notes.xml:190
 msgid ""
 "To revert the last snapshot, that is the last set of changes to the root "
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
-"要还原最近的快照，即最近一次对根文件系统所做的更改，请确保你的系统已启动到最近快照的下一个，然后运行：<command>transactional-"
-"update rollback</command>"
+"要还原最近的快照，即最近一次对根文件系统所做的更改，请确保你的系统已启动到最"
+"近快照的下一个，然后运行：<command>transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:189
+#: xml/release-notes.xml:196
 msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr "或者，在命令的末尾添加一个快照的 ID 以回滚到指定的 ID。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:195
+#: xml/release-notes.xml:202
 msgid ""
 "When using this system role, by default, the system will perform a daily "
 "update and reboot between 03:30 am and 05:00 am. Both of these actions are "
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
-"使用此系统角色时，按默认，系统会执行日常更新并在上午 3:00 和 5:00 之间重启。这两个操作都是基于 systemd 而且如有必要可用 "
-"<command>systemctl</command> 禁用："
+"使用此系统角色时，按默认，系统会执行日常更新并在上午 3:00 和 5:00 之间重启。"
+"这两个操作都是基于 systemd 而且如有必要可用 <command>systemctl</command> 禁"
+"用："
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:201
+#: xml/release-notes.xml:208
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
 msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:202
+#: xml/release-notes.xml:209
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"更多关于事务更新的信息，请参阅 openSUSE Kubic 博客文章 <link xlink:href=\""
-"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> 和 <link "
-"xlink:href=\""
-"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
+"更多关于事务更新的信息，请参阅 openSUSE Kubic 博客文章 <link xlink:href="
+"\"https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/\"/> 和 "
+"<link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-20-"
+"transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:214
+#: xml/release-notes.xml:221
 msgid "Minimal System Installation"
 msgstr "最小化系统安装"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:215
+#: xml/release-notes.xml:222
 msgid ""
 "The minimal system installation lacks certain functionality that is often "
 "taken for granted:"
 msgstr "最小安装的系统缺乏通常被认为是理所当然的某些功能："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:221
+#: xml/release-notes.xml:228
 msgid ""
 "It does not contain a software firewall front-end. You can install the "
 "package <package>firewalld</package> additionally."
@@ -380,7 +407,7 @@ msgstr ""
 "它不包含软件防火墙前端，你可以另行安装软件包 <package>firewalld</package>。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:227
+#: xml/release-notes.xml:234
 msgid ""
 "It does not contain a YaST. You can install the pattern <package>patterns-"
 "yast-yast2_basis</package> additionally."
@@ -389,26 +416,28 @@ msgstr ""
 "package>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:236
+#: xml/release-notes.xml:243
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
 msgstr "安装到容量低于 12 GB 的硬盘"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:238
+#: xml/release-notes.xml:245
 msgid ""
 "The installer will only propose a partitioning scheme if the available hard "
 "disk size is larger than 12 GB. If you want to set up, for example, very "
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
-msgstr "安装程序只在磁盘可用大小超过 12 GB 时会建议分区方案。如果你想安装，例如很小的虚拟机器映像，请使用指导分区程序来手动调整分区参数。"
+msgstr ""
+"安装程序只在磁盘可用大小超过 12 GB 时会建议分区方案。如果你想安装，例如很小的"
+"虚拟机器映像，请使用指导分区程序来手动调整分区参数。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:247
+#: xml/release-notes.xml:254
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI——统一可扩展固件接口"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:248
+#: xml/release-notes.xml:255
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
@@ -421,7 +450,7 @@ msgstr ""
 "Windows 8 及更新版本 是表明您计算机使用 UEFI 引导的一个明显标志。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:255
+#: xml/release-notes.xml:262
 msgid ""
 "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it "
 "to break if too much data gets written to the UEFI storage area. However, "
@@ -431,7 +460,7 @@ msgstr ""
 "写入过多的数据时损坏。但是并没有清晰的数据来界定多少为<quote>过多</quote>。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:260
+#: xml/release-notes.xml:267
 msgid ""
 "openSUSE minimizes the risk by not writing more than the bare minimum "
 "required to boot the OS. The minimum means telling the UEFI firmware about "
@@ -447,12 +476,12 @@ msgstr ""
 "而还是推荐安装硬件制造商推荐的任何固件更新。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:273
+#: xml/release-notes.xml:280
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI、GPT 和 MS-DOS 分区"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:274
+#: xml/release-notes.xml:281
 msgid ""
 "Together with the EFI/UEFI specification, a new style of partitioning "
 "arrived: GPT (GUID Partition Table). This new schema uses globally unique "
@@ -463,7 +492,7 @@ msgstr ""
 "使用全局唯一标识符（128 位值显示成 32 个十六进制数字）来识别设备和分区类型。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:280
+#: xml/release-notes.xml:287
 msgid ""
 "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) "
 "partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically "
@@ -478,7 +507,7 @@ msgstr ""
 "代前一个项的新项。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:288
+#: xml/release-notes.xml:295
 msgid ""
 "Modern firmware has a garbage collector that collects deleted entries and "
 "frees the memory reserved for old entries. A problem arises when faulty "
@@ -489,67 +518,17 @@ msgstr ""
 "搜集并释放这些项时就会导致问题。这可能致使系统无法引导。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:294
+#: xml/release-notes.xml:301
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "规避方法很简单：将传统的 MBR 分区转换成新的 GPT 分区来避免此问题。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:301
-msgid "Installing the Nvidia Driver Manually"
-msgstr "手动安装 Nvidia 驱动程序"
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:302
-msgid ""
-"On openSUSE Leap 15.0, you need to uninstall the package <package>drm-kmp-"
-"default</package> first, before you can manually install Nvidia drivers "
-"using the <filename>.run</filename> shell script archive:"
-msgstr ""
-"openSUSE Leap 15.0 中，在你手动安装 Nvidia 驱动程序之前，你需要卸载"
-"<package>drm-kmp-default</package>软件包，然后使用<filename>.run</filename>命"
-"令行脚本存档："
-
-#. (itstool) path: sect2/screen
-#: xml/release-notes.xml:307
-#, no-wrap
-msgid "zypper rm drm-kmp-default"
-msgstr "zypper rm drm-kmp-default"
-
-#. (itstool) path: sect2/para
 #: xml/release-notes.xml:308
-msgid ""
-"If you install the RPMs provided by Nvidia, you will not be affected by this "
-"issue, because in that case, the package <package>drm-kmp-default</package> "
-"is replaced during the driver installation automatically."
-msgstr ""
-"如果安装由 Nvidia 提供的 RPM 软件包，将不会被这个问题影响，因为这些软件包在安"
-"装时已自动将 <package>drm-kmp-default</package> 替换。"
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:314
-msgid ""
-"If you decide to uninstall Nvidia's driver later, make sure to reinstall the "
-"package <package>drm-kmp-default</package>."
-msgstr ""
-"如果你决定卸载 Nvidia 的驱动程序，请务必重新安装<package>drm-kmp-default</"
-"package>。"
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:318
-msgid ""
-"For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-"show_bug.cgi?id=1044816\"/>."
-msgstr ""
-"如需了解更多信息，请见 <link xlink:href=\"https://bugzilla.suse.com/show_bug."
-"cgi?id=1044816\"/>。"
-
-#. (itstool) path: sect2/title
-#: xml/release-notes.xml:326
 msgid "Scaling the Installer UI on Computers with High-DPI Displays"
 msgstr "在带有高 DPI 显示器的电脑上缩放安装工具 UI"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:327
+#: xml/release-notes.xml:309
 msgid ""
 "The YaST installer does not scale its UI for High-DPI displays by default. "
 "If you have a computer with a high-DPI display, you can set YaST to scale "
@@ -562,12 +541,12 @@ msgstr ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> 到引导程序的命令行。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:338
+#: xml/release-notes.xml:320
 msgid "System Upgrade"
 msgstr "系统升级"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:340
+#: xml/release-notes.xml:322
 msgid ""
 "This section lists notes related to upgrading the system. For detailed "
 "upgrade instructions, see the documentation at <link xlink:href=\"https://"
@@ -579,22 +558,22 @@ msgstr ""
 "startup/cha.update.osuse.html\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:345
+#: xml/release-notes.xml:330
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
 msgstr "如需了解更多信息，请见 <xref linkend=\"sec.package\"/>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:350
+#: xml/release-notes.xml:335
 msgid "Upgrading from openSUSE Leap 42.3"
 msgstr "从 openSUSE Leap 42.3 升级"
 
 #. (itstool) path: sect3/title
-#: xml/release-notes.xml:355
+#: xml/release-notes.xml:340
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
 msgstr "Postfix Admin 使用向后不兼容的目录布局"
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:356
+#: xml/release-notes.xml:341
 msgid ""
 "Starting with the version 3.2, as shipped in openSUSE Leap 15.0, "
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
@@ -604,23 +583,23 @@ msgstr ""
 "<package>postfixadmin</package>）使用了一个新的向后不兼容的目录布局："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:363
+#: xml/release-notes.xml:348
 msgid ""
 "The configuration files moved to <filename>/etc/postfixadmin</filename>."
 msgstr "配置文件移动到了 <filename>/etc/postfixadmin</filename>。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:368
+#: xml/release-notes.xml:353
 msgid "The PHP code moved to <filename>/usr/share/postfixadmin</filename>."
 msgstr "PHP 代码移动到了 <filename>/usr/share/postfixadmin</filename>。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:373
+#: xml/release-notes.xml:358
 msgid "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
 msgstr "Smarty 缓存移动到了 <filename>/var/cache/postfixadmin</filename>。"
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:378
+#: xml/release-notes.xml:363
 msgid ""
 "Postfix Admin no longer reads configuration files from their previous "
 "locations and the configuration is not migrated automatically. Therefore, "
@@ -630,7 +609,7 @@ msgstr ""
 "要手动迁移以下项目："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:385
+#: xml/release-notes.xml:370
 msgid ""
 "Move <filename>config.local.php</filename> from <filename>/srv/www/htdocs/"
 "postfixadmin</filename> to <filename>/etc/postfixadmin</filename>."
@@ -639,7 +618,7 @@ msgstr ""
 "local.php</filename> 移动到 <filename>/etc/postfixadmin</filename>。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:392
+#: xml/release-notes.xml:377
 msgid ""
 "If you made customizations to <filename>config.inc.php</filename>, ideally "
 "merge these customizations into <filename>/etc/postfixadmin/config.local."
@@ -651,42 +630,42 @@ msgstr ""
 "议保持 <filename>config.inc.php</filename> 未经修改。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:400
+#: xml/release-notes.xml:385
 msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
 msgstr "在 Apache 配置中，添加或启用别名 <literal>/postfixadmin</literal>："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:406
+#: xml/release-notes.xml:391
 msgid "To make the alias available on all virtual hosts, run:"
 msgstr "要在所有虚拟主机上使用别名，请运行："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:409
+#: xml/release-notes.xml:394
 #, no-wrap
 msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
 msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:412
+#: xml/release-notes.xml:397
 msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
 msgstr "要使别名仅在特定虚拟主机上可用，请将该别名添加到该虚拟主机的配置中。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:426
+#: xml/release-notes.xml:411
 msgid "Packaging Changes"
 msgstr "打包更改"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:429
+#: xml/release-notes.xml:414
 msgid "Deprecated Packages"
 msgstr "弃用的软件包"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:430
+#: xml/release-notes.xml:415
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -697,7 +676,7 @@ msgstr ""
 "这些软件包存在是为了方面迁移，但不鼓励使用它们且它们可能不会再收到更新。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:446
+#: xml/release-notes.xml:431
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -707,28 +686,99 @@ msgstr ""
 "openSUSE</package> 软件包，再执行如下命令："
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:451
+#: xml/release-notes.xml:436
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:473
-msgid "Desktop"
-msgstr "桌面"
-
-#. (itstool) path: sect1/para
-#: xml/release-notes.xml:475
-msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
-msgstr "此章节列出了 openSUSE Leap 15.0 上的桌面问题和更改。"
+#: xml/release-notes.xml:458
+msgid "Drivers and Hardware"
+msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:481
+#: xml/release-notes.xml:463
+msgid "Hang on Machines with Nvidia GPUs and Hybrid Graphics"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:464
+msgid ""
+"With the kernel shipped in openSUSE Leap 15.0 GM, the Nouveau driver for "
+"Nvidia graphics card may hang at reboot, shutdown, or during runtime power "
+"management actions. This bug occurs primarily on system with hybrid "
+"graphics, such as laptops that include integrated Intel graphics and a "
+"discrete Nvidia graphics card."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:471
+msgid ""
+"The bug will be fixed in a maintenance update for the kernel. However, as "
+"the installation image does not receive updates, this issue may occur during "
+"installation or first boot even after that update has shipped. In that case, "
+"as a temporary workaround, boot with the option <literal>nouveau.modeset=1</"
+"literal>. After the updated kernel including the fix is installed, you can "
+"remove this option again."
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:483
+msgid "Installing the Nvidia Driver Manually"
+msgstr "手动安装 Nvidia 驱动程序"
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:484
+msgid ""
+"On openSUSE Leap 15.0, you need to uninstall the package <package>drm-kmp-"
+"default</package> first, before you can manually install Nvidia drivers "
+"using the <filename>.run</filename> shell script archive:"
+msgstr ""
+"openSUSE Leap 15.0 中，在你手动安装 Nvidia 驱动程序之前，你需要卸载"
+"<package>drm-kmp-default</package>软件包，然后使用<filename>.run</filename>命"
+"令行脚本存档："
+
+#. (itstool) path: sect2/screen
+#: xml/release-notes.xml:489
+#, no-wrap
+msgid "zypper rm drm-kmp-default"
+msgstr "zypper rm drm-kmp-default"
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:490
+msgid ""
+"If you install the RPMs provided by Nvidia, you will not be affected by this "
+"issue, because in that case, the package <package>drm-kmp-default</package> "
+"is replaced during the driver installation automatically."
+msgstr ""
+"如果安装由 Nvidia 提供的 RPM 软件包，将不会被这个问题影响，因为这些软件包在安"
+"装时已自动将 <package>drm-kmp-default</package> 替换。"
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:496
+msgid ""
+"If you decide to uninstall Nvidia's driver later, make sure to reinstall the "
+"package <package>drm-kmp-default</package>."
+msgstr ""
+"如果你决定卸载 Nvidia 的驱动程序，请务必重新安装<package>drm-kmp-default</"
+"package>。"
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:500
+msgid ""
+"For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=1044816\"/>."
+msgstr ""
+"如需了解更多信息，请见 <link xlink:href=\"https://bugzilla.suse.com/show_bug."
+"cgi?id=1044816\"/>。"
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:508
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
 msgstr "专有 Nvidia 驱动不支持在 Wayland 上运行 KDE"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:509
 msgid ""
 "The KDE Plasma Wayland session is not supported with the proprietary Nvidia "
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
@@ -737,13 +787,23 @@ msgstr ""
 "KDE Plasma Wayland 会话不支持专有的 Nvidia 驱动程序。如果你使用 KDE 及专有 "
 "Nvidia 驱动，请停留在 X 会话。"
 
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:519
+msgid "Desktop"
+msgstr "桌面"
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:521
+msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
+msgstr "此章节列出了 openSUSE Leap 15.0 上的桌面问题和更改。"
+
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:491
+#: xml/release-notes.xml:527
 msgid "No Default Compose Key Combination"
 msgstr "没有默认的 Compose 组合键"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:492
+#: xml/release-notes.xml:528
 msgid ""
 "In previous versions of openSUSE, the compose key combination allowed typing "
 "characters that were not part of the regular keyboard layout. For example, "
@@ -757,7 +817,7 @@ msgstr ""
 "keycap> 两次。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:499
+#: xml/release-notes.xml:535
 msgid ""
 "In openSUSE Leap 15.0, there is no longer a predefined compose key "
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
@@ -768,7 +828,7 @@ msgstr ""
 "键。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:507
+#: xml/release-notes.xml:543
 msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
@@ -777,7 +837,7 @@ msgstr ""
 "filename> 中的如下行："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:511
+#: xml/release-notes.xml:547
 #, no-wrap
 msgid ""
 "[...]\n"
@@ -799,7 +859,7 @@ msgstr ""
 "[...]"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:519
+#: xml/release-notes.xml:555
 msgid ""
 "To uncomment the example code, remove the <literal>!</literal> characters at "
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
@@ -810,7 +870,7 @@ msgstr ""
 "中的配置将会被覆盖。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:527
+#: xml/release-notes.xml:563
 msgid ""
 "To define a user-specific compose key combination, use your desktop's "
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
@@ -820,7 +880,7 @@ msgstr ""
 "<command>setxkbmap</command>命令行工具："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:532
+#: xml/release-notes.xml:568
 #, no-wrap
 msgid ""
 "\n"
@@ -828,12 +888,11 @@ msgid ""
 "     "
 msgstr ""
 "\n"
-"setxkbmap <replaceable>[...]</replaceable> -option "
-"compose:<replaceable>COMPOSE_键</replaceable>\n"
+"setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_键</replaceable>\n"
 "     "
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:535
+#: xml/release-notes.xml:571
 msgid ""
 "For the variable <replaceable>COMPOSE_KEY</replaceable>, use your preferred "
 "character, for example <literal>ralt</literal>, <literal>lwin</literal>, "
@@ -842,19 +901,19 @@ msgid ""
 msgstr ""
 "其中的 <replaceable>COMPOSE_键</replaceable>，可以替换成您喜欢的键号如 "
 "<literal>ralt</literal>（右 Alt 键）、<literal>lwin</literal>（左 Windows "
-"键）、<literal>rwin</literal>（右 Windows "
-"键）、<literal>menu</literal>（菜单键）、<literal>rctl</literal>（右 Ctrl 键）或者 "
-"<literal>caps</literal>（大写锁定键）。"
+"键）、<literal>rwin</literal>（右 Windows 键）、<literal>menu</literal>（菜单"
+"键）、<literal>rctl</literal>（右 Ctrl 键）或者 <literal>caps</literal>（大写"
+"锁定键）。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:544
+#: xml/release-notes.xml:580
 msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr "除此以外，使用 IBus 输入法也可输入特殊字符而不需要使用 Compose 键。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:554
+#: xml/release-notes.xml:590
 msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
@@ -862,7 +921,7 @@ msgstr ""
 "使用 <command>update-alternatives</command> 命令设置登陆管理器和桌面会话"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:555
+#: xml/release-notes.xml:591
 msgid ""
 "In the past, you could use <filename>/etc/sysconfig</filename> or the YaST "
 "module <guimenu>/etc/sysconfig Editor</guimenu> to define the login manager "
@@ -876,40 +935,40 @@ msgstr ""
 "义，需使用 alternatives 系统。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:562
+#: xml/release-notes.xml:598
 msgid "To change the defaults, use the following alternatives:"
 msgstr "请使用以下代替品变更默认："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:567
+#: xml/release-notes.xml:603
 msgid "Login manager: <literal>default-displaymanager</literal>"
 msgstr "登陆管理器：<literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:572
+#: xml/release-notes.xml:608
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
 msgstr "Wayland 会话：<literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:577
+#: xml/release-notes.xml:613
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
 msgstr "X 桌面会话：<literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:582
+#: xml/release-notes.xml:618
 msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
 msgstr "例如，要检查 <literal>default-displaymanager</literal> 的值，请使用："
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:586
+#: xml/release-notes.xml:622
 #, no-wrap
 msgid "sudo update-alternatives --display default-displaymanager"
 msgstr "sudo update-alternatives --display default-displaymanager"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:587
+#: xml/release-notes.xml:623
 msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
@@ -918,7 +977,7 @@ msgstr ""
 "请使用："
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:591
+#: xml/release-notes.xml:627
 #, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
@@ -928,7 +987,7 @@ msgstr ""
 "  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:593
+#: xml/release-notes.xml:629
 msgid ""
 "To enable graphical management of alternatives, use the YaST module "
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
@@ -939,12 +998,12 @@ msgstr ""
 "alternatives</package>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:601
+#: xml/release-notes.xml:637
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "当使用 GNOME Shell 但不使用 GDM 时，屏幕锁定不起作用"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:602
+#: xml/release-notes.xml:638
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -954,24 +1013,24 @@ msgstr ""
 "不会清空或锁定。除此之外，也无法在不退出登录的情况下切换用户。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:607
+#: xml/release-notes.xml:643
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
 msgstr "若要在 GNOME Shell 中使用屏幕锁定，在你的登录管理器中启用 GDM："
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:613
+#: xml/release-notes.xml:649
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "确保软件包 <package>gdm</package> 已安装。"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:618
+#: xml/release-notes.xml:654
 msgid "Set GDM as the display manager:"
 msgstr "设定 GDM 为显示管理器："
 
 #. (itstool) path: step/screen
-#: xml/release-notes.xml:621
+#: xml/release-notes.xml:657
 #, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
@@ -981,17 +1040,17 @@ msgstr ""
 "  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:625
+#: xml/release-notes.xml:661
 msgid "Reboot."
 msgstr "重新启动系统。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:634
+#: xml/release-notes.xml:670
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
 msgstr "在带有高 DPI 显示器的电脑上缩放 SDDM UI"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:635
+#: xml/release-notes.xml:671
 msgid ""
 "The default login manager for KDE, SDDM, does not scale its UI for High-DPI "
 "displays by default. If you have a computer with a high-DPI display, you can "
@@ -1003,7 +1062,7 @@ msgstr ""
 "置 SDDM 成为显示器自动缩放它的 UI："
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:642
+#: xml/release-notes.xml:678
 #, no-wrap
 msgid ""
 "\n"
@@ -1017,7 +1076,7 @@ msgstr ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_值</replaceable>\n"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:647
+#: xml/release-notes.xml:683
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
@@ -1027,12 +1086,12 @@ msgstr ""
 "<literal>192</literal>。要获得最好的缩放结果，请使用默认 DPI 96 的倍数。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:656
+#: xml/release-notes.xml:692
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
 msgstr "在带有高 DPI 显示器的电脑上缩放 YaST UI"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:657
+#: xml/release-notes.xml:693
 msgid ""
 "YaST does not scale its UI for High-DPI displays by default. If you have a "
 "computer with a high-DPI display, you can set YaST to scale its UI "
@@ -1044,46 +1103,47 @@ msgstr ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:667
+#: xml/release-notes.xml:703
 msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
 msgstr "在混合高/常规 DPI 监视器设置下的 Qt 应用程序里使用自动缩放"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:668
+#: xml/release-notes.xml:704
 msgid ""
 "Qt supports automatic per-monitor scaling on X. It uses the DPI value of the "
 "virtual X screen to calculate the font size for the primary monitor. By "
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
-"Qt 支持在 X 上自动对每个监视器分别缩放。它使用虚拟 X 屏幕的 DPI 值来计算主监视器的字体大小。此值默认为 96 DPI。使用主监视器的相对 "
-"DPI 来导出其他全部监视器的字体 DPI。"
+"Qt 支持在 X 上自动对每个监视器分别缩放。它使用虚拟 X 屏幕的 DPI 值来计算主监"
+"视器的字体大小。此值默认为 96 DPI。使用主监视器的相对 DPI 来导出其他全部监视"
+"器的字体 DPI。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:674
+#: xml/release-notes.xml:710
 msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
 msgstr "有两个广泛使用的桌面会覆盖掉 Qt 的这个行为，因此该说明对它们不适用："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:680
+#: xml/release-notes.xml:716
 msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
 msgstr "GNOME 会设定 <literal>Xft.dpi</literal> 为 96 DPI 的配置倍数。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:686
+#: xml/release-notes.xml:722
 msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
 msgstr "KDE Plasma 禁用 Qt 的自动缩放并使用手动缩放配置。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:692
+#: xml/release-notes.xml:728
 msgid ""
 "On other desktops, this behavior of Qt can lead to undesirable situations "
 "such as the following: If the primary display is High-DPI (&gt;= 144 DPI), "
@@ -1092,51 +1152,55 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
-"其他桌面上，该 Qt 行为会引起不良效果，比如下列情况：如果主显示器为高 DPI（&gt;= 144 DPI），请求缩放的 Qt 应用程序里的字体，例如 "
-"VLC，在所有监视器上实际只能缩放到预想大小的一半。没有请求缩放的应用程序，例如 YaST（以默认设置），在所有监视器上使用同个 DPI。因此，它们在高 "
-"DPI 监视器上看起来很小。"
+"其他桌面上，该 Qt 行为会引起不良效果，比如下列情况：如果主显示器为高 "
+"DPI（&gt;= 144 DPI），请求缩放的 Qt 应用程序里的字体，例如 VLC，在所有监视器"
+"上实际只能缩放到预想大小的一半。没有请求缩放的应用程序，例如 YaST（以默认设"
+"置），在所有监视器上使用同个 DPI。因此，它们在高 DPI 监视器上看起来很小。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:701
+#: xml/release-notes.xml:737
 msgid "You can use one of the following workarounds for this issue:"
 msgstr "对这个问题，你可以使用以下临时的解决方法："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:706
+#: xml/release-notes.xml:742
 msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
-msgstr "使用常规 DPI 的监视器作为主监视器。请求缩放的应用程序就能在高 DPI 监视上正确缩放。"
+msgstr ""
+"使用常规 DPI 的监视器作为主监视器。请求缩放的应用程序就能在高 DPI 监视上正确"
+"缩放。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:713
+#: xml/release-notes.xml:749
 msgid ""
 "Set an appropriate font DPI (<literal>Xft.dpi</literal>). You can do so "
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
-"设定合适的字体 DPI（<literal>Xft.dpi</literal>）。你可以用你桌面的配置工具来完成。也可以在每次登录后运行下面的命令："
+"设定合适的字体 DPI（<literal>Xft.dpi</literal>）。你可以用你桌面的配置工具来"
+"完成。也可以在每次登录后运行下面的命令："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:718
+#: xml/release-notes.xml:754
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
 msgstr "echo Xft.dpi:<replaceable>DPI_值</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:719
+#: xml/release-notes.xml:755
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
 msgstr "将 <replaceable>DPI_值</replaceable> 替换为对主监视器合适的 DPI 值。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:729
+#: xml/release-notes.xml:765
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
 msgstr "在 Wayland 下 Firefox 或 Chromium 无法进行屏幕共享"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:730
+#: xml/release-notes.xml:766
 msgid ""
 "Firefox and Chromium normally allow Web-based tools such as "
 "videoconferencing applications to share the entire screen or individual "
@@ -1147,26 +1211,26 @@ msgstr ""
 "或单个应用程序窗口。在 Wayland 下，这两种浏览器都不支持此功能。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:736
+#: xml/release-notes.xml:772
 msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
 msgstr "为了能够在 Firefox 或 Chromium 中共享您的屏幕，请改用 X。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:743
+#: xml/release-notes.xml:779
 msgid "Playing MP3 Media Files"
 msgstr "播放 MP3 媒体文件"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:744
+#: xml/release-notes.xml:780
 msgid ""
 "The codecs to play MP3 media files are shipped as part of the standard "
 "repository."
 msgstr "用于播放 MP3 媒体文件的解码器现已由标准仓库提供。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:748
+#: xml/release-notes.xml:784
 msgid ""
 "To use this decoder in gstreamer-based applications and frameworks, such as "
 "Rhythmbox or Totem, install the package <literal>gstreamer-plugins-ugly</"
@@ -1176,12 +1240,12 @@ msgstr ""
 "装 <literal>gstreamer-plugins-ugly</literal> 软件包。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:756
+#: xml/release-notes.xml:792
 msgid "No Support for Type-1 Fonts in LibreOffice"
 msgstr "LibreOffice 不再支持 Type-1 字体"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:757
+#: xml/release-notes.xml:793
 msgid ""
 "LibreOffice 5.3 and higher do not support legacy Type-1 fonts (file "
 "extensions <filename>.afm</filename> and <filename>.pfb</filename>) anymore. "
@@ -1195,7 +1259,7 @@ msgstr ""
 "filename>）以及 OpenType（<filename>.otf</filename>）格式。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:764
+#: xml/release-notes.xml:800
 msgid ""
 "If you are affected by this, convert Type-1 fonts to a supported format, "
 "such as TrueType and then use the converted fonts. Conversion is possible "
@@ -1210,12 +1274,12 @@ msgstr ""
 "href=\"https://fontforge.github.io/en-US/documentation/scripting/\"/>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:776
+#: xml/release-notes.xml:812
 msgid "FreeType Font Rendering Changes"
 msgstr "FreeType 字体渲染变更"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:777
+#: xml/release-notes.xml:813
 msgid ""
 "FreeType 2.6.4 has a new default glyph hinting interpreter (version 38) that "
 "more closely matches other operating systems but may look <quote>more fuzzy</"
@@ -1228,18 +1292,18 @@ msgstr ""
 "为，请在您选择的任何级别（系统范围，用户特定或程序特定）设置以下环境变量："
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:784
+#: xml/release-notes.xml:820
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:789
+#: xml/release-notes.xml:825
 msgid "Enabling KDE Plasma Browser Integration"
 msgstr "启用 KDE Plasma 浏览器集成"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:790
+#: xml/release-notes.xml:826
 msgid ""
 "Plasma browser integration for Firefox and Chromium/Chrome allows monitoring "
 "multimedia and downloads using KDE system tools and gives quick access to "
@@ -1250,28 +1314,28 @@ msgstr ""
 "速访问。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:796
+#: xml/release-notes.xml:832
 msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
 msgstr "浏览器集成功能由两部分组成，需要协同工作："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:802
+#: xml/release-notes.xml:838
 msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
 msgstr "桌面部分可以安装软件包 <package>plasma-browser-integration</package>。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:808
+#: xml/release-notes.xml:844
 msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
 msgstr "浏览器部分可以在浏览器附加商店中安装："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:814
+#: xml/release-notes.xml:850
 msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
@@ -1280,7 +1344,7 @@ msgstr ""
 "integration/\"/>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:819
+#: xml/release-notes.xml:855
 msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
@@ -1289,45 +1353,46 @@ msgstr ""
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:826
+#: xml/release-notes.xml:862
 msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
 msgstr "请注意，此功能尚处于开发阶段，openSUSE Leap 15.0 仅附带了其早期版本。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:835
+#: xml/release-notes.xml:871
 msgid "Loading the Emacs <literal>psgml</literal> Module"
 msgstr "载入 Emacs <literal>psgml</literal> 模块"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:836
+#: xml/release-notes.xml:872
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
 "automatically. For more information, see the file <filename>README</"
 "filename> from the package <package>psgml</package>."
 msgstr ""
-"因为与来自 Emacs 默认安装的模块相冲突，openSUSE Leap 15.0 无法再自动载入 <literal>psgml</literal> "
-"模块。欲了解详情，请查阅软件包 <package>psgml</package> 中的 <filename>README</filename> 文件。"
+"因为与来自 Emacs 默认安装的模块相冲突，openSUSE Leap 15.0 无法再自动载入 "
+"<literal>psgml</literal> 模块。欲了解详情，请查阅软件包 <package>psgml</"
+"package> 中的 <filename>README</filename> 文件。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:867
+#: xml/release-notes.xml:903
 msgid "Security"
 msgstr "安全"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:869
+#: xml/release-notes.xml:905
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr "本节列出了 openSUSE Leap 15.0 中安全特性的变更。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:875
+#: xml/release-notes.xml:911
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
 msgstr "<command>systemctl stop apparmor</command> 不工作"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:876
+#: xml/release-notes.xml:912
 msgid ""
 "In the past, there could be confusion over the difference between how the "
 "very similarly named <command>systemctl</command> subcommands "
@@ -1337,7 +1402,7 @@ msgstr ""
 "令 <literal>reload</literal> 和 <literal>restart</literal> 可能经常让人混淆："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:884
+#: xml/release-notes.xml:920
 msgid ""
 "<command>systemctl reload apparmor</command> properly reloaded all AppArmor "
 "profiles. (It was and continues to be the recommended way of reloading "
@@ -1347,7 +1412,7 @@ msgstr ""
 "文件。（这个命令一直都是推荐的重新加载 AppArmor 规则文件的方式。）"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:891
+#: xml/release-notes.xml:927
 msgid ""
 "<command>systemctl restart apparmor</command> meant that AppArmor would "
 "stop, thereby unloading all AppArmor profiles and then restart which left "
@@ -1359,7 +1424,7 @@ msgstr ""
 "程都会失去限制。只有新启动的进程会再次受限。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:899
+#: xml/release-notes.xml:935
 msgid ""
 "Unfortunately, <systemitem>systemd</systemitem> does not provide a solution "
 "within its unit file format for the issue posed by the <literal>restart</"
@@ -1369,7 +1434,7 @@ msgstr ""
 "以解决 <literal>restart</literal> 应用场景带来的问题。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:904
+#: xml/release-notes.xml:940
 msgid ""
 "Starting with AppArmor 2.12, the command <command>systemctl stop apparmor</"
 "command> will not work. As a consequence, <command>systemctl restart "
@@ -1380,7 +1445,7 @@ msgstr ""
 "载 AppArmor 配置文件。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:910
+#: xml/release-notes.xml:946
 msgid ""
 "To unload all AppArmor profiles, use the new command <command>aa-teardown</"
 "command> instead which matches the previous behavior of <command>systemctl "
@@ -1390,52 +1455,52 @@ msgstr ""
 "指令与之前的 <command>systemctl stop apparmor</command> 命令的效果一致。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:915
+#: xml/release-notes.xml:951
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"要获取更多信息，请参阅 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
-"996520\"/> 和 <link xlink:href=\""
-"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>。"
+"要获取更多信息，请参阅 <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=996520\"/> 和 <link xlink:href=\"https://bugzilla.opensuse."
+"org/show_bug.cgi?id=853019\"/>。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:925
+#: xml/release-notes.xml:961
 msgid "Technical"
 msgstr "技术"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:930
+#: xml/release-notes.xml:966
 msgid "Updated Btrfs Subvolume Layout"
 msgstr "更新的 Btrfs 子卷布局"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:931
+#: xml/release-notes.xml:967
 msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
 msgstr "openSUSE Leap 15.0 引入了新的默认 Btrfs 子卷布局，目的是为了："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:937
+#: xml/release-notes.xml:973
 msgid "Simplified snapshots and rollbacks"
 msgstr "简化快照和回滚"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:942
+#: xml/release-notes.xml:978
 msgid "Prevention of accidental data loss"
 msgstr "防止意外的数据丢失"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:947
+#: xml/release-notes.xml:983
 msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
 msgstr "存储在 <filename>/var</filename> 里的数据库和 VM 映像的更佳性能"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:953
+#: xml/release-notes.xml:989
 msgid ""
 "Instead of using multiple Btrfs subvolumes for different subdirectories of "
 "<filename>/var</filename>, openSUSE Leap 15.0 ships with a single subvolume "
@@ -1443,56 +1508,172 @@ msgid ""
 "functionality disabled."
 msgstr ""
 "openSUSE Leap 15.0 把全部的 <filename>/var</filename> 装进单个子卷，而不是对 "
-"<filename>/var</filename> 里的不同子目录使用多个 Btrfs 子卷。这个新子卷禁用了写时复制的功能。"
+"<filename>/var</filename> 里的不同子目录使用多个 Btrfs 子卷。这个新子卷禁用了"
+"写时复制的功能。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:959
+#: xml/release-notes.xml:995
 msgid ""
 "There is no defined way of upgrading to this new Btrfs subvolume layout. "
 "Therefore, if you want to take advantage of it, make sure to freshly install "
 "openSUSE Leap 15.0 instead of upgrading."
 msgstr ""
-"没有明确的方法可以升级到这个新的 Btrfs 子卷布局。因此，如果你想享受它的好处，请全新安装 openSUSE Leap 15.0 而不是升级。"
+"没有明确的方法可以升级到这个新的 Btrfs 子卷布局。因此，如果你想享受它的好处，"
+"请全新安装 openSUSE Leap 15.0 而不是升级。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:964
+#: xml/release-notes.xml:1000
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 msgstr ""
-"要了解更多关于默认 Btrfs 子卷布局此次更改前后的信息，请参阅 <link xlink:href=\""
-"https://en.opensuse.org/SDB:BTRFS\"/>。"
+"要了解更多关于默认 Btrfs 子卷布局此次更改前后的信息，请参阅 <link xlink:href="
+"\"https://en.opensuse.org/SDB:BTRFS\"/>。"
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:1009
+msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:1010
+msgid ""
+"RFC 4361 updates the <literal>client-id</literal> defined in RFC 2132, "
+"section 9.14 to be compatible with DHCP 6 <literal>client-id</literal> "
+"(<literal>duid</literal>). The use of an RFC 4361 is mandatory on Infiniband "
+"(RFC 4390) and is also required to perform DNS record updates in the same "
+"zone for DHCP 4 and DHCP 6 addresses also on Ethernet."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:1018
+#, fuzzy
+#| msgid "openSUSE Leap"
+msgid "In openSUSE Leap 15.0:"
+msgstr "openSUSE Leap"
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:1021
+msgid ""
+"ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:1026
+msgid ""
+"Wicked provides an option to send such a <literal>client-id</literal> and to "
+"automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
+"(used on Infiniband)."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:1033
+msgid ""
+"To send the <literal>client-id</literal> during the installation, use "
+"<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
+"org/SDB:Linuxrc\"/>) with the following <literal>ifcfg</literal>:"
+msgstr ""
+
+#. (itstool) path: sect2/screen
+#: xml/release-notes.xml:1039
+#, no-wrap
+msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:1040
+msgid ""
+"For more information, see the documentation for the options <literal>dhcp4 "
+"\"create-cid\"</literal>, <literal>dhcp6 \"default-duid\"</literal> in "
+"<literal>man 5 wicked-config</literal>, <literal>wicked duid --help</"
+"literal>, and <literal>wicked iaid --help</literal>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:1048
+msgid ""
+"The traditionally used RFC 2132 DHCPv4 <literal>client-id</literal> on "
+"Ethernet is constructed from the hardware type (<literal>01</literal> for "
+"Ethernet) and followed by the hardware address (the MAC address), for "
+"example:"
+msgstr ""
+
+#. (itstool) path: sect2/screen
+#: xml/release-notes.xml:1054
+#, no-wrap
+msgid "01:52:54:00:02:c2:67"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:1055
+msgid ""
+"The RFC 4361 <literal>client-id</literal> starts with <literal>0xff</"
+"literal> (instead of the hardware type), followed by the DHCPv6 IAID (the "
+"interface-address association ID that describes the interface on the "
+"machine), followed by the DHCPv6 DUID (<literal>client-id</literal> which "
+"identifies the machine)."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:1062
+msgid ""
+"Using the above hardware type-based and hardware address-based DUID (LLT "
+"type used by default), the new RFC 4361 DHCPv4 <literal>client-id</literal> "
+"would be:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:1069
+msgid ""
+"Using the last bytes of the MAC address as the IAID: <literal>ff:00:02:"
+"c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:1075
+msgid ""
+"When the IAID is a simple incremented number: <literal>ff:00:00:00:01:00:01:"
+"xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:1081
+msgid ""
+"The <literal>xx:xx:xx:xx</literal> in the DUID-LLT is a creation timestamp. "
+"A DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) "
+"does not have a timestamp."
+msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:978
+#: xml/release-notes.xml:1097
 msgid "More Information and Feedback"
 msgstr "更多信息和反馈"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:981
+#: xml/release-notes.xml:1100
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "请阅读安装介质上的 <filename>README</filename> 文档。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:986
+#: xml/release-notes.xml:1105
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "从 RPM 中获取关于某特定软件包的详细修订历史信息："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:990
+#: xml/release-notes.xml:1109
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>文件名</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:991
+#: xml/release-notes.xml:1110
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "将 <replaceable>文件名</replaceable> 替换为 RPM 的名称。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:996
+#: xml/release-notes.xml:1115
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1501,14 +1682,14 @@ msgstr ""
 "软件包更新历史。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1002
+#: xml/release-notes.xml:1121
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1008
+#: xml/release-notes.xml:1127
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1517,7 +1698,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1014
+#: xml/release-notes.xml:1133
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1526,7 +1707,7 @@ msgstr ""
 "org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:1021
+#: xml/release-notes.xml:1140
 msgid "Copyright © SUSE LLC"
 msgstr "版权所有 © SUSE LLC"
 
