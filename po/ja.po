@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2018-05-30 15:09+0200\n"
-"PO-Revision-Date: 2018-05-26 10:42+0000\n"
+"PO-Revision-Date: 2018-05-31 01:03+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ja/>\n"
@@ -177,16 +177,12 @@ msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:81
-#, fuzzy
-#| msgid ""
-#| "For the latest product news, from openSUSE, visit <link xlink:href="
-#| "\"https://www.opensuse.org\"/>."
 msgid ""
 "Major new features of openSUSE Leap 15.0 are also listed at <link xlink:href="
 "\"https://en.opensuse.org/Features_15.0\"/>."
 msgstr ""
-"また、 openSUSE からの最新の製品ニュースについては、 <link xlink:href="
-"\"https://www.opensuse.org\"/> をご覧ください。"
+"また、 openSUSE 15.0 における主な新機能については、 <link xlink:href=\""
+"https://ja.opensuse.org/Features_15.0\"/>. をご覧ください。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:87
@@ -209,7 +205,7 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:94 xml/release-notes.xml:327
 msgid "Make sure to also review <xref linkend=\"sec.driver\"/>."
-msgstr ""
+msgstr "なお、 <xref linkend=\"sec.driver\"/> もお読みください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -776,12 +772,12 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:458
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "ドライバとハードウエア"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:463
 msgid "Hang on Machines with Nvidia GPUs and Hybrid Graphics"
-msgstr ""
+msgstr "nVidia GPU を含む複数のグラフィックカードが搭載されたマシンでのハングアップ現象について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:464
@@ -792,6 +788,9 @@ msgid ""
 "graphics, such as laptops that include integrated Intel graphics and a "
 "discrete Nvidia graphics card."
 msgstr ""
+"openSUSE Leap 15.0 GM に同梱されているカーネルを利用した場合、 nVidia グラフィックカード用の nouveau "
+"ドライバを使用すると、再起動やシャットダウン時のほか、何らかの電源管理機能の処理を行なった場合にハングアップしてしまうことがあります。このバグは主に、"
+"内蔵の Intel グラフィックカードと専用の nVidia グラフィックカードの両方を搭載したラップトップで発生します。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:471
@@ -803,6 +802,10 @@ msgid ""
 "literal>. After the updated kernel including the fix is installed, you can "
 "remove this option again."
 msgstr ""
+"このバグはカーネルのメンテナンス更新で修正される予定ですが、インストールイメージにはその更新が含まれていません。そのため、更新が提供された後であっても、イ"
+"ンストールの際やインストール後の初回の起動で、この問題が発生する場合があります。この問題が発生した場合は、起動時のオプションに "
+"<literal>nouveau.modeset=1</literal> "
+"を設定して回避してください。更新済みのカーネルをインストールした後は、このオプションを外してかまいません。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
@@ -1698,7 +1701,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:1009
 msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
-msgstr ""
+msgstr "Wicked: イーサネットにおける RFC 4361 DHCPv4 <literal>クライアント ID</literal> の使用について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1010
@@ -1709,19 +1712,22 @@ msgid ""
 "(RFC 4390) and is also required to perform DNS record updates in the same "
 "zone for DHCP 4 and DHCP 6 addresses also on Ethernet."
 msgstr ""
+"RFC 4361 では、 RFC 2132 のセクション 9.14 で規定されている <literal>クライアント ID</literal> "
+"が更新され、 DHCP 6 の <literal>クライアント ID</literal> (<literal>duid</literal>) "
+"と互換性が保たれるようになっています。  RFC 4361 の適用は Infiniband (RFC 4390) では必須となっているほか、"
+"イーサネット上で DHCP 4 と DHCP 6 のアドレスに対して、同じゾーンを更新するように設定されている DNS "
+"レコードを運用するにあたっても、必要な機能となっています。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1018
-#, fuzzy
-#| msgid "openSUSE Leap"
 msgid "In openSUSE Leap 15.0:"
-msgstr "openSUSE Leap"
+msgstr "openSUSE Leap 15.0 では、下記のようになっています:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1021
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
-msgstr ""
+msgstr "ISC DHCP 4.3.x サーバは新しい RFC 4361 に対応しています (DNS の更新を行なうために必要となるため)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1026
@@ -1730,6 +1736,8 @@ msgid ""
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
 "(used on Infiniband)."
 msgstr ""
+"Wicked 側では <literal>クライアント ID</literal> を送信したり、 DHCPv6 ベースの <literal>クライアント "
+"ID</literal> を DHCPv4 で自動的に使用したりするためのオプション (Infiniband で使用します) が提供されています。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1033
@@ -1738,12 +1746,17 @@ msgid ""
 "<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
 "org/SDB:Linuxrc\"/>) with the following <literal>ifcfg</literal>:"
 msgstr ""
+"インストール時に <literal>クライアント ID</literal> を送信するには、 <literal>linuxrc</literal> ("
+"詳しくは <link xlink:href=\"https://ja.opensuse.org/SDB:Linuxrc\"/> をお読みください) の "
+"<literal>ifcfg</literal> に下記の例のような内容を設定します:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1039
 #, no-wrap
 msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 msgstr ""
+"ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_I"
+"D=00:03:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1040
@@ -1753,6 +1766,10 @@ msgid ""
 "<literal>man 5 wicked-config</literal>, <literal>wicked duid --help</"
 "literal>, and <literal>wicked iaid --help</literal>."
 msgstr ""
+"詳しい情報については、 <literal>man 5 wicked-config</literal>, <literal>wicked duid "
+"--help</literal>, <literal>wicked iaid --help</literal> 内の <literal>dhcp4 \""
+"create-cid\"</literal>, <literal>dhcp6 \"default-duid\"</literal> "
+"オプションに対する説明をお読みください。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1048
@@ -1762,12 +1779,15 @@ msgid ""
 "Ethernet) and followed by the hardware address (the MAC address), for "
 "example:"
 msgstr ""
+"RFC 2132 の DHCPv4 におけるイーサネット上の <literal>クライアント ID</literal> は、ハードウエアの種類 ("
+"イーサネットの場合 <literal>01</literal>) とハードウエアアドレス (MAC アドレス) "
+"を続けて記述することで作成していました。たとえば下記のようになります:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1054
 #, no-wrap
 msgid "01:52:54:00:02:c2:67"
-msgstr ""
+msgstr "01:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1055
@@ -1778,6 +1798,10 @@ msgid ""
 "machine), followed by the DHCPv6 DUID (<literal>client-id</literal> which "
 "identifies the machine)."
 msgstr ""
+"RFC 4361 の <literal>クライアント ID</literal> は、 (ハードウエアの種類の代わりに) "
+"<literal>0xff</literal> から始まり、その後に DHCPv6 の IAID ("
+"マシン内でのインターフェイス情報を記述するハードウエアアドレス関連 ID) と DHCPv6 DUID (マシンの識別情報となる <literal>"
+"クライアント ID</literal>) を続けます。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1062
@@ -1786,6 +1810,8 @@ msgid ""
 "type used by default), the new RFC 4361 DHCPv4 <literal>client-id</literal> "
 "would be:"
 msgstr ""
+"上述のハードウエア種類とハードウエアアドレスをベースにした DUID (既定で使用される LLT タイプ) を使用する場合、新しい RFC 4361 "
+"DHCPv4 の <literal>クライアント ID</literal> は、下記のようになります:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1069
@@ -1793,6 +1819,8 @@ msgid ""
 "Using the last bytes of the MAC address as the IAID: <literal>ff:00:02:"
 "c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"IAID として MAC アドレスの後ろ側を埋め込む方法: "
+"<literal>ff:00:02:c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1075
@@ -1800,6 +1828,8 @@ msgid ""
 "When the IAID is a simple incremented number: <literal>ff:00:00:00:01:00:01:"
 "xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"IAID にシンプルな順序番号を埋め込む方法: "
+"<literal>ff:00:00:00:01:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1081
@@ -1808,6 +1838,9 @@ msgid ""
 "A DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) "
 "does not have a timestamp."
 msgstr ""
+"DUID-LLT 内での <literal>xx:xx:xx:xx</literal> は、作成した時点でのタイムスタンプを表わします。 DUID-LL "
+"(<literal>00:03:00:01:<replaceable>MAC アドレス</replaceable></literal>) "
+"にはタイムスタンプが含まれません。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:1097
