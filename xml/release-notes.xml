@@ -87,6 +87,9 @@
    instructions, see the documentation at
    <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part.basics.html"/>.
   </para>
+  <para>
+   Make sure to also review <xref linkend="sec.driver"/>.
+  </para>
 
   <sect2 xml:id="sec.install.transactional-server-role">
    <title>Using Atomic Updates With the New System Role <emphasis>Transactional Server</emphasis></title>
@@ -296,31 +299,6 @@
    </para>
   </sect2>
 
-  <!-- text via boo#1045124, underlying issue: boo#1044816 -->
-  <sect2 xml:id="sec.install.nouveau-extra">
-   <title>Installing the Nvidia Driver Manually</title>
-   <para>
-    On &thisversion;, you need to uninstall the package
-    <package>drm-kmp-default</package> first, before you can manually install
-    Nvidia drivers using the <filename>.run</filename> shell script archive:
-   </para>
-   <screen>zypper rm drm-kmp-default</screen>
-   <para>
-    If you install the RPMs provided by Nvidia, you will not be affected by
-    this issue, because in that case, the package
-    <package>drm-kmp-default</package> is replaced during the driver
-    installation automatically.
-   </para>
-   <para>
-    If you decide to uninstall Nvidia's driver later,
-    make sure to reinstall the package <package>drm-kmp-default</package>.
-   </para>
-   <para>
-    For more information, see
-    <link xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=1044816"/>.
-   </para>
-  </sect2>
-
   <sect2 xml:id="sec.install.hidpi">
    <!-- boo#1090240 -->
    <title>Scaling the Installer UI on Computers with High-DPI Displays</title>
@@ -341,6 +319,9 @@
    This section lists notes related to upgrading the system. For detailed
    upgrade instructions, see the documentation at
    <link xlink:href="https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html"/>.
+  </para>
+  <para>
+   Make sure to also review <xref linkend="sec.driver"/>.
   </para>
   <para>
    Additionally, check <xref linkend="sec.package"/>.
@@ -469,12 +450,54 @@
 
  </sect1>
 
- <sect1 xml:id="general">
-  <title>Desktop</title>
+ <sect1 xml:id="sec.driver">
+  <title>Drivers and Hardware</title>
+  <para/>
 
-  <para>
-   This section lists desktop issues and changes in &thisversion;.
-  </para>
+  <sect2 xml:id="sec.driver.nvidia-hybrid">
+   <!-- boo#1094834 -->
+   <title>Hang on Machines with Nvidia GPUs and Hybrid Graphics</title>
+   <para>
+    With the kernel shipped in &thisflavor; 15.0 GM, the Nouveau driver for
+    Nvidia graphics card may hang at reboot, shutdown, or during runtime power
+    management actions. This bug occurs primarily on system with hybrid
+    graphics, such as laptops that include integrated Intel graphics and a
+    discrete Nvidia graphics card.
+   </para>
+   <para>
+    The bug will be fixed in a maintenance update for the kernel. However, as
+    the installation image does not receive updates, this issue may occur
+    during installation or first boot even after that update has shipped.
+    In that case, as a temporary workaround, boot with the option
+    <literal>nouveau.modeset=1</literal>. After the updated kernel
+    including the fix is installed, you can remove this option again.
+   </para>
+  </sect2>
+
+  <sect2 xml:id="sec.install.nouveau-extra">
+   <!-- text via boo#1045124, underlying issue: boo#1044816 -->
+   <title>Installing the Nvidia Driver Manually</title>
+   <para>
+    On &thisversion;, you need to uninstall the package
+    <package>drm-kmp-default</package> first, before you can manually install
+    Nvidia drivers using the <filename>.run</filename> shell script archive:
+   </para>
+   <screen>zypper rm drm-kmp-default</screen>
+   <para>
+    If you install the RPMs provided by Nvidia, you will not be affected by
+    this issue, because in that case, the package
+    <package>drm-kmp-default</package> is replaced during the driver
+    installation automatically.
+   </para>
+   <para>
+    If you decide to uninstall Nvidia's driver later,
+    make sure to reinstall the package <package>drm-kmp-default</package>.
+   </para>
+   <para>
+    For more information, see
+    <link xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=1044816"/>.
+   </para>
+  </sect2>
 
   <sect2 xml:id="sec.desktop.kde-wayland-nvidia">
    <!-- boo#1090382 -->
@@ -485,6 +508,15 @@
     driver, stay with the X session.
    </para>
   </sect2>
+
+ </sect1>
+
+ <sect1 xml:id="general">
+  <title>Desktop</title>
+
+  <para>
+   This section lists desktop issues and changes in &thisversion;.
+  </para>
 
   <!--  boo#1059438, boo#1062550 -->
   <sect2 xml:id="sec.general.compose-key">
@@ -921,7 +953,7 @@ ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>
   </sect2>
  </sect1>
 
- <sect1 xml:id="technical">
+ <sect1 xml:id="sec.technical">
   <title>Technical</title>
   <para/>
 
