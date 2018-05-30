@@ -1004,7 +1004,90 @@ ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>
    </para>
   </sect2>
 
+  <sect2 xml:id="sec.technical.wicked-rfc4361">
+   <!-- requested via boo#1095111, copy of FATE#323576 -->
+   <title>Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet</title>
+   <para>
+    RFC 4361 updates the <literal>client-id</literal> defined in RFC 2132,
+    section 9.14 to be compatible with DHCP 6
+    <literal>client-id</literal> (<literal>duid</literal>).
+    The use of an RFC 4361 is mandatory on Infiniband (RFC 4390) and is also
+    required to perform DNS record updates in the same zone for DHCP 4 and
+    DHCP 6 addresses also on Ethernet.
+   </para>
+   <para>In &thisversion;:</para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Wicked provides an option to send such a
+      <literal>client-id</literal> and to automatically use a DHCPv6-based
+      <literal>client-id</literal> in DHCPv4 (used on Infiniband).
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    To send the <literal>client-id</literal> during the installation, use
+    <literal>linuxrc</literal> (also see
+    <link xlink:href="https://en.opensuse.org/SDB:Linuxrc"/>)
+    with the following <literal>ifcfg</literal>:
+   </para>
+   <screen>ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67</screen>
+   <para>
+    For more information, see the documentation for the options
+    <literal>dhcp4 &quot;create-cid&quot;</literal>,
+    <literal>dhcp6 &quot;default-duid&quot;</literal> in
+    <literal>man 5 wicked-config</literal>,
+    <literal>wicked duid --help</literal>, and
+    <literal>wicked iaid --help</literal>.
+   </para>
+   <para>
+    The traditionally used RFC 2132 DHCPv4 <literal>client-id</literal>
+    on Ethernet is constructed from the hardware type (<literal>01</literal>
+    for Ethernet) and followed by the hardware address (the MAC address), for
+    example:
+   </para>
+   <screen>01:52:54:00:02:c2:67</screen>
+   <para>
+     The RFC 4361 <literal>client-id</literal> starts with
+     <literal>0xff</literal> (instead of the hardware type), followed by the
+     DHCPv6 IAID (the interface-address association ID that describes the
+     interface on the machine), followed by the DHCPv6 DUID
+     (<literal>client-id</literal> which identifies the machine).
+   </para>
+   <para>
+    Using the above hardware type-based and hardware address-based DUID (LLT
+    type used by default), the new RFC 4361 DHCPv4
+    <literal>client-id</literal> would be:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      Using the last bytes of the MAC address as the IAID:
+      <literal>ff:00:02:c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      When the IAID is a simple incremented number:
+      <literal>ff:00:00:00:01:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    The <literal>xx:xx:xx:xx</literal> in the DUID-LLT is a creation
+    timestamp. A DUID-LL
+    (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) does not
+    have a timestamp.
+   </para>
+  </sect2>
+
  </sect1>
+
  <!-- <sect1 xml:id="misc">
   <title>Miscellaneous</title>
   <para/>
