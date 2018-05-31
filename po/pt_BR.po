@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-05-30 15:09+0200\n"
-"PO-Revision-Date: 2018-05-18 00:05+0000\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_0/pt_BR/>\n"
+"PO-Revision-Date: 2018-05-31 17:53+0000\n"
+"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects"
+"/release-notes-opensuse/leap-15_0/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -173,16 +173,12 @@ msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:81
-#, fuzzy
-#| msgid ""
-#| "For the latest product news, from openSUSE, visit <link xlink:href="
-#| "\"https://www.opensuse.org\"/>."
 msgid ""
 "Major new features of openSUSE Leap 15.0 are also listed at <link xlink:href="
 "\"https://en.opensuse.org/Features_15.0\"/>."
 msgstr ""
-"Para saber das últimas novidades do openSUSE, visite <link xlink:href="
-"\"https://www.opensuse.org\"/>."
+"Os principais novos recursos do openSUSE Leap 15.0 também estão listados em <"
+"link xlink:href=\"https://en.opensuse.org/Features_15.0\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:87
@@ -205,7 +201,7 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:94 xml/release-notes.xml:327
 msgid "Make sure to also review <xref linkend=\"sec.driver\"/>."
-msgstr ""
+msgstr "Certifique-se de rever também <xref linkend=\"sec.driver\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -770,12 +766,12 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:458
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "Drivers e Hardware"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:463
 msgid "Hang on Machines with Nvidia GPUs and Hybrid Graphics"
-msgstr ""
+msgstr "Pendure em máquinas com GPUs Nvidia e gráficos híbridos"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:464
@@ -786,6 +782,11 @@ msgid ""
 "graphics, such as laptops that include integrated Intel graphics and a "
 "discrete Nvidia graphics card."
 msgstr ""
+"Com o kernel lançado no openSUSE Leap 15.0 GM, o driver Nouveau da placa de "
+"vídeo Nvidia pode travar durante a reinicialização, o desligamento ou "
+"durante as ações de gerenciamento de energia em tempo de execução. Esse bug "
+"ocorre principalmente no sistema com gráficos híbridos, como laptops que "
+"incluem gráficos Intel integrados e uma placa gráfica Nvidia discreta."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:471
@@ -797,6 +798,13 @@ msgid ""
 "literal>. After the updated kernel including the fix is installed, you can "
 "remove this option again."
 msgstr ""
+"O bug será corrigido em uma atualização de manutenção para o kernel. No "
+"entanto, como a imagem de instalação não recebe atualizações, esse problema "
+"pode ocorrer durante a instalação ou a primeira inicialização, mesmo após o "
+"envio dessa atualização. Nesse caso, como uma solução temporária, inicialize "
+"com a opção <literal>nouveau.modeset=1</literal>. Depois que o kernel "
+"atualizado, incluindo a correção, estiver instalado, você poderá remover "
+"essa opção novamente."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
@@ -1160,12 +1168,7 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:678
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "[X11]\n"
-#| "EnableHiDPI=true\n"
-#| "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_SETTING</replaceable>\n"
+#, no-wrap
 msgid ""
 "\n"
 "[X11]\n"
@@ -1179,11 +1182,6 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:683
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>DPI_SETTING</replaceable> with an appropriate DPI "
-#| "value, such as <literal>192</literal>. For best scaling results, use a "
-#| "DPI value that is a multiple of the default 96 DPI."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
@@ -1220,6 +1218,8 @@ msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
 msgstr ""
+"Use o escalonamento automático em aplicativos Qt, em configurações que "
+"combinam monitores HD DPI e definição regular"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:704
@@ -1229,6 +1229,10 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
+"Qt suporta escalonamento automático para monitor em X. Ele usa o valor de "
+"DPI da tela virtual X para calcular o tamanho da fonte para o monitor "
+"principal. Por padrão, esse valor é 96 DPI. Use o DPI relativo do monitor "
+"principal para derivar a fonte DPI em todos os outros monitores."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:710
@@ -1236,6 +1240,8 @@ msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
 msgstr ""
+"Dois desktops amplamente utilizados irão anular este comportamento do Qt, "
+"portanto, esta nota não se aplica a eles:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:716
@@ -1243,6 +1249,8 @@ msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
 msgstr ""
+"O GNOME definirá <literal>Xft.dpi</literal> para o múltiplo configurado de "
+"96 DPI."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:722
@@ -1250,6 +1258,8 @@ msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
 msgstr ""
+"O KDE Plasma desabilita o dimensionamento automático de QT e usa uma "
+"configuração de escala manual."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:728
@@ -1261,11 +1271,18 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
+"Em outros desktops, esse comportamento do Qt pode levar a situações "
+"indesejáveis, como as seguintes: Se a exibição principal for alta DPI (&gt;= "
+"144 DPI), fontes em aplicações Qt que solicitam escala, como VLC, são "
+"efetivamente dimensionadas para metade do tamanho desejado em todos os "
+"monitores. Aplicativos que não solicitam dimensionamento, como o YaST (com "
+"configurações padrão), usam o mesmo valor de DPI em todos os monitores. "
+"Assim, eles parecerão menores no monitor de alta DPI."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:737
 msgid "You can use one of the following workarounds for this issue:"
-msgstr ""
+msgstr "Você pode usar uma das seguintes soluções para esse problema:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:742
@@ -1273,6 +1290,9 @@ msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
 msgstr ""
+"Use um monitor com um valor de DPI regular como o monitor principal. "
+"Aplicativos que solicitam dimensionamento são dimensionados adequadamente no "
+"monitor DPI de alta resolução."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:749
@@ -1281,24 +1301,24 @@ msgid ""
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
+"Definir uma fonte DPI apropriada (<literal>Xft.dpi</literal>). Você pode "
+"fazer isso com o utilitário de configuração da sua área de trabalho. Como "
+"alternativa, após cada login, execute o seguinte comando:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:754
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
-msgstr ""
+msgstr "echo Xft.dpi:<replaceable>VALOR DPI</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:755
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
 msgstr ""
-"Substitua <replaceable>NOME_DO_ARQUIVO</replaceable> com o nome do arquivo "
-"RPM."
+"Substitua <replaceable>VALOR_DPI</replaceable> com um valor apropriado para "
+"o monitor principal."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:765
@@ -1679,6 +1699,7 @@ msgstr ""
 #: xml/release-notes.xml:1009
 msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
 msgstr ""
+"Wicked: Usando o RFC 4361 DHCPv4 <literal>client-id</literal> na Ethernet"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1010
@@ -1689,19 +1710,24 @@ msgid ""
 "(RFC 4390) and is also required to perform DNS record updates in the same "
 "zone for DHCP 4 and DHCP 6 addresses also on Ethernet."
 msgstr ""
+"RFC 4361 atualiza o <literal>client-id</literal> definido no RFC 2132, seção "
+"9.14 para ser compatível com o DHCP 6 <literal>client-id</literal> "
+"(<literal>duid</literal>). O uso de um RFC 4361 é obrigatório no Infiniband ("
+"RFC 4390) e também é necessário para executar atualizações de registro de "
+"DNS na mesma zona para endereços DHCP 4 e DHCP 6 também na Ethernet."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1018
-#, fuzzy
-#| msgid "openSUSE Leap"
 msgid "In openSUSE Leap 15.0:"
-msgstr "openSUSE Leap"
+msgstr "Em openSUSE Leap 15.0:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1021
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
 msgstr ""
+"O servidor ISC DHCP 4.3.x suporta o novo RFC 4361 (necessário para "
+"atualização de DNS)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1026
@@ -1710,6 +1736,9 @@ msgid ""
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
 "(used on Infiniband)."
 msgstr ""
+"Wicked fornece uma opção para enviar tal <literal>client-id</literal> e para "
+"usar automaticamente um baseado em DHCPv6 <literal>client-id</literal> em "
+"DHCPv4 (usado no Infiniband)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1033
@@ -1718,12 +1747,18 @@ msgid ""
 "<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
 "org/SDB:Linuxrc\"/>) with the following <literal>ifcfg</literal>:"
 msgstr ""
+"Para enviar o <literal>client-id</literal> durante a instalação, use "
+"<literal>linuxrc</literal> (Veja também <link xlink:href=\""
+"https://en.opensuse.org/SDB:Linuxrc\"/>) com o seguinte "
+"<literal>ifcfg</literal>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1039
 #, no-wrap
 msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 msgstr ""
+"ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_I"
+"D=00:03:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1040
@@ -1733,6 +1768,10 @@ msgid ""
 "<literal>man 5 wicked-config</literal>, <literal>wicked duid --help</"
 "literal>, and <literal>wicked iaid --help</literal>."
 msgstr ""
+"Para mais informações, consulte a documentação das opções <literal>dhcp4 \""
+"create-cid\"</literal>, <literal>dhcp6 \"default-duid\"</literal> em "
+"<literal>man 5 wicked-config</literal>, <literal>wicked duid --help</literal>"
+", e <literal>wicked iaid --help</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1048
@@ -1742,12 +1781,16 @@ msgid ""
 "Ethernet) and followed by the hardware address (the MAC address), for "
 "example:"
 msgstr ""
+"O tradicionalmente usado RFC 2132 DHCPv4 <literal>client-id</literal> na "
+"Ethernet é construído a partir do tipo de hardware (<literal>01</literal> "
+"para Ethernet) e seguido pelo endereço de hardware (o endereço MAC), por "
+"exemplo:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1054
 #, no-wrap
 msgid "01:52:54:00:02:c2:67"
-msgstr ""
+msgstr "01:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1055
@@ -1758,6 +1801,10 @@ msgid ""
 "machine), followed by the DHCPv6 DUID (<literal>client-id</literal> which "
 "identifies the machine)."
 msgstr ""
+"A RFC 4361 <literal>client-id</literal> começa com <literal>0xff</literal> ("
+"em vez do tipo de hardware), seguido pelo IAID do DHCPv6 (o ID de associação "
+"do endereço da interface que descreve a interface na máquina), seguido pelo "
+"DUID do DHCPv6 (<literal>client-id</literal> que identifica a máquina)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1062
@@ -1766,6 +1813,9 @@ msgid ""
 "type used by default), the new RFC 4361 DHCPv4 <literal>client-id</literal> "
 "would be:"
 msgstr ""
+"Usando o DUID baseado em tipo de hardware e baseado em endereço de hardware ("
+"tipo LLT usado por padrão), o novo RFC 4361 DHCPv4 <literal>client-"
+"id</literal> seria:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1069
@@ -1773,6 +1823,8 @@ msgid ""
 "Using the last bytes of the MAC address as the IAID: <literal>ff:00:02:"
 "c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"Usando os últimos bytes do endereço MAC como o IAID: "
+"<literal>ff:00:02:c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1075
@@ -1780,6 +1832,8 @@ msgid ""
 "When the IAID is a simple incremented number: <literal>ff:00:00:00:01:00:01:"
 "xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"Quando o IAID é um número incrementado simples: "
+"<literal>ff:00:00:00:01:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1081
@@ -1788,6 +1842,9 @@ msgid ""
 "A DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) "
 "does not have a timestamp."
 msgstr ""
+"O <literal>xx:xx:xx:xx</literal> no DUID-LLT é um timestamp de criação. Um "
+"DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) não "
+"possui um registro de data e hora."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:1097
