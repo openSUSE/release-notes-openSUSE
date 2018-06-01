@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-06-01 14:58+0200\n"
-"PO-Revision-Date: 2018-05-26 06:03+0000\n"
-"Last-Translator: Ioannes Andreas <ioannes@tuta.io>\n"
+"PO-Revision-Date: 2018-06-01 17:45+0000\n"
+"Last-Translator: jc sl <trcs@gmx.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/es/>\n"
 "Language: es\n"
@@ -183,16 +183,12 @@ msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:81
-#, fuzzy
-#| msgid ""
-#| "For the latest product news, from openSUSE, visit <link xlink:href="
-#| "\"https://www.opensuse.org\"/>."
 msgid ""
 "Major new features of openSUSE Leap 15.0 are also listed at <link xlink:href="
 "\"https://en.opensuse.org/Features_15.0\"/>."
 msgstr ""
-"Para obtener novedades sobre los productos de openSUSE, visite: <link xlink:"
-"href=\"https://www.opensuse.org\"/>."
+"Las principales nuevas características de Leap 15.0 también se enumeran en <"
+"link xlink:href=\"https://en.opensuse.org/Features_15.0\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:87
@@ -215,7 +211,7 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:94 xml/release-notes.xml:327
 msgid "Make sure to also review <xref linkend=\"sec.driver\"/>."
-msgstr ""
+msgstr "Asegúrese de comprobar también <xref linkend=\"sec.driver\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -784,12 +780,12 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:458
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "Controladores y hardware"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:463
 msgid "Hang on Machines with Nvidia GPUs and Hybrid Graphics"
-msgstr ""
+msgstr "Bloqueos en máquinas con GPU Nvidia y gráficos híbridos"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:464
@@ -800,6 +796,11 @@ msgid ""
 "graphics, such as laptops that include integrated Intel graphics and a "
 "discrete Nvidia graphics card."
 msgstr ""
+"Con el kernel entregado con openSUSE Leap 15.0 GM, el controlador Nouveau "
+"para tarjetas gráficas Nvidia puede causar bloqueos al reiniciar, apagar o "
+"durante acciones de gestión de energía. Este fallo ocurre principalmente en "
+"sistemas con gráficos híbridos, tales como portátiles que incluyen gráficas "
+"Intel integradas y tarjetas gráficas Nvidia independiente."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:471
@@ -811,6 +812,13 @@ msgid ""
 "literal>. After the updated kernel including the fix is installed, you can "
 "remove this option again."
 msgstr ""
+"El fallo será corregido en una actualización de mantenimiento del kernel. "
+"Sin embargo, ya que la imagen de instalación no recibe actualizaciones, el "
+"problema puede aparecer durante la instalación o primer arranque incluso "
+"antes que la actualización se haya distribuido. En ese caso, como solución "
+"temporal, arranque con la opción <literal>nouveau.modeset=0</literal>. "
+"Después de que la actualización del kernel que incluya la corrección sea "
+"instalada, puede eliminar esta opción de nuevo."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
@@ -1653,7 +1661,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:984
 msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
-msgstr ""
+msgstr "Wicked: Usando RFC 4361 DHCPv4 <literal>client-id</literal> en Ethernet"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:985
@@ -1664,19 +1672,24 @@ msgid ""
 "(RFC 4390) and is also required to perform DNS record updates in the same "
 "zone for DHCP 4 and DHCP 6 addresses also on Ethernet."
 msgstr ""
+"RFC 4361 actualiza el <literal>client-id</literal> definido en el RFC 2132, "
+"sección 9.14, para ser compatible con el <literal>client-id</literal> DHCP 6 "
+"(<literal>duid</literal>). El uso de un RFC 4361 es obligatorio para "
+"Infiniband (RFC 4390) y también para realizar actualizaciones del registro "
+"DNS en la misma zona para direcciones DHCP 4 y DHCP 6 también en Ethernet."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:993
-#, fuzzy
-#| msgid "openSUSE Leap"
 msgid "In openSUSE Leap 15.0:"
-msgstr "openSUSE Leap"
+msgstr "En openSUSE Leap 15.0:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:996
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
 msgstr ""
+"El servidor ISC DHCP 4.3.x admite el nuevo RFC 4361 (obligatorio para "
+"actualización de DNS)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1001
@@ -1685,6 +1698,9 @@ msgid ""
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
 "(used on Infiniband)."
 msgstr ""
+"Wicked proporciona una opción para enviar dicho <literal>client-id</literal> "
+"y para usar automáticamente un <literal>client-id</literal> basado en DHCPv6 "
+"en DHCPv4 (usado en Infiniband)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1008
@@ -1693,12 +1709,18 @@ msgid ""
 "<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
 "org/SDB:Linuxrc\"/>) with the following <literal>ifcfg</literal>:"
 msgstr ""
+"Para enviar el <literal>client-id</literal> durante la instalación, use "
+"<literal>linuxrc</literal> (vea también <link xlink:href=\""
+"https://en.opensuse.org/SDB:Linuxrc\"/>) con el siguiente "
+"<literal>ifcfg</literal>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1014
 #, no-wrap
 msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 msgstr ""
+"ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_I"
+"D=00:03:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1015
@@ -1708,6 +1730,10 @@ msgid ""
 "<literal>man 5 wicked-config</literal>, <literal>wicked duid --help</"
 "literal>, and <literal>wicked iaid --help</literal>."
 msgstr ""
+"Para obtener más información, vea la documentación para las opciones "
+"<literal>dhcp4 \"create-cid\"</literal>, <literal>dhcp6 \"default-duid\""
+"</literal> en <literal>man 5 wicked-config</literal>, <literal>wicked duid "
+"--help</literal> y <literal>wicked iaid --help</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1023
@@ -1717,12 +1743,16 @@ msgid ""
 "Ethernet) and followed by the hardware address (the MAC address), for "
 "example:"
 msgstr ""
+"El <literal>client-id</literal> RFC 2132 DHCPv4 usado tradicionalmente en "
+"Ethernet se construye a partir de tipo de hardware (<literal>01</literal> "
+"para Ethernet) seguido por la dirección hardware (la dirección MAC), por "
+"ejemplo:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1029
 #, no-wrap
 msgid "01:52:54:00:02:c2:67"
-msgstr ""
+msgstr "01:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1030
@@ -1733,6 +1763,11 @@ msgid ""
 "machine), followed by the DHCPv6 DUID (<literal>client-id</literal> which "
 "identifies the machine)."
 msgstr ""
+"El <literal>client-id</literal> del  RFC 4361 empieza por "
+"<literal>0xff</literal> (en vez de por el tipo de hardware), seguido por el "
+"IAID de DHPCv6 (el ID de asociación interfaz-dirección que describe la "
+"interfaz en la máquina), seguido por el DUID de DHCPv6 (<literal>client-"
+"id</literal> que identifica la máquina)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1037
@@ -1741,6 +1776,9 @@ msgid ""
 "type used by default), the new RFC 4361 DHCPv4 <literal>client-id</literal> "
 "would be:"
 msgstr ""
+"Usando el antes mencionado DUID basado en el tipo de hardware y basado en "
+"dirección hardware (tipo LLT usado por omisión), el nuevo <literal>client-"
+"id</literal> de RFC 4361 DHCPv4 podría ser:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1044
@@ -1748,6 +1786,8 @@ msgid ""
 "Using the last bytes of the MAC address as the IAID: <literal>ff:00:02:"
 "c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"Usando los últimos bytes de la dirección MAC como el IAID: "
+"<literal>ff:00:02:c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1050
@@ -1755,6 +1795,8 @@ msgid ""
 "When the IAID is a simple incremented number: <literal>ff:00:00:00:01:00:01:"
 "xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"Cuando el IAID es un simple número incrementado: "
+"<literal>ff:00:00:00:01:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1056
@@ -1763,6 +1805,10 @@ msgid ""
 "A DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) "
 "does not have a timestamp."
 msgstr ""
+"El <literal>xx:xx:xx:xx</literal> en el DUID-LLT es una marca de tiempo de "
+"creación. Un DUID-LL "
+"<literal>00:03:00:01:<replaceable>MAC</replaceable></literal> no tiene una "
+"marca de tiempo."
 
 # CER: no estoy seguro de la traducción de Feedback. Tiene el sentido de comentarios de los usuarios hacia los desarrolladores o la distro.
 #. (itstool) path: sect1/title
