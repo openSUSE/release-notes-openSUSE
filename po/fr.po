@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
-"POT-Creation-Date: 2018-05-30 15:09+0200\n"
+"POT-Creation-Date: 2018-06-01 14:58+0200\n"
 "PO-Revision-Date: 2018-05-31 22:02+0000\n"
 "Last-Translator: Antoine Belvire <antoine.belvire@opensuse.org>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
@@ -799,11 +799,19 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:471
+#, fuzzy
+#| msgid ""
+#| "The bug will be fixed in a maintenance update for the kernel. However, as "
+#| "the installation image does not receive updates, this issue may occur "
+#| "during installation or first boot even after that update has shipped. In "
+#| "that case, as a temporary workaround, boot with the option "
+#| "<literal>nouveau.modeset=1</literal>. After the updated kernel including "
+#| "the fix is installed, you can remove this option again."
 msgid ""
 "The bug will be fixed in a maintenance update for the kernel. However, as "
 "the installation image does not receive updates, this issue may occur during "
 "installation or first boot even after that update has shipped. In that case, "
-"as a temporary workaround, boot with the option <literal>nouveau.modeset=1</"
+"as a temporary workaround, boot with the option <literal>nouveau.modeset=0</"
 "literal>. After the updated kernel including the fix is installed, you can "
 "remove this option again."
 msgstr ""
@@ -811,69 +819,18 @@ msgstr ""
 "Cependant, comme l'image d'installation n'est pas mise à jour, ce problème "
 "peut se produire lors de l'installation ou du premier démarrage, même après "
 "le déploiement de cette mise à jour. Dans ce cas, en guise de solution de "
-"contournement temporaire, démarrez avec l'option "
-"<literal>nouveau.modeset=1</literal>. Une fois le noyau incluant le "
-"correctif installé, vous pourrez supprimer cette option à nouveau."
+"contournement temporaire, démarrez avec l'option <literal>nouveau.modeset=1</"
+"literal>. Une fois le noyau incluant le correctif installé, vous pourrez "
+"supprimer cette option à nouveau."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
-msgid "Installing the Nvidia Driver Manually"
-msgstr "Installation manuelle des pilotes Nvidia"
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:484
-msgid ""
-"On openSUSE Leap 15.0, you need to uninstall the package <package>drm-kmp-"
-"default</package> first, before you can manually install Nvidia drivers "
-"using the <filename>.run</filename> shell script archive:"
-msgstr ""
-"Sur openSUSE Leap 15.0, vous devez désinstaller le paquet <package>drm-kmp-"
-"default</package> en premier, avant de pouvoir installer les pilotes Nvidia "
-"manuellement en utilisant le script shell <filename>.run</filename> :"
-
-#. (itstool) path: sect2/screen
-#: xml/release-notes.xml:489
-#, no-wrap
-msgid "zypper rm drm-kmp-default"
-msgstr "zypper rm drm-kmp-default"
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:490
-msgid ""
-"If you install the RPMs provided by Nvidia, you will not be affected by this "
-"issue, because in that case, the package <package>drm-kmp-default</package> "
-"is replaced during the driver installation automatically."
-msgstr ""
-"Si vous installez les RPMs fournis par Nvidia,vous n'aurez pas ce problème, "
-"puisque dans ce cas, le paquet <package>drm-kmp-default</package> est "
-"remplacé pendant l'installation automatique du pilote."
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:496
-msgid ""
-"If you decide to uninstall Nvidia's driver later, make sure to reinstall the "
-"package <package>drm-kmp-default</package>."
-msgstr ""
-"Si, plus tard, vous décidez de désinstaller le pilote Nvidia assurez-vous de "
-"réinstaller le paquet <package>drm-kmp-default</package>."
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:500
-msgid ""
-"For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-"show_bug.cgi?id=1044816\"/>."
-msgstr ""
-"Pour plus d'informations, consultez <link xlink:href=\"https://bugzilla.suse."
-"com/show_bug.cgi?id=1044816\"/>."
-
-#. (itstool) path: sect2/title
-#: xml/release-notes.xml:508
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
 msgstr ""
 "KDE sur Wayland n'est pas compatible avec le pilote propriétaire Nvidia"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:509
+#: xml/release-notes.xml:484
 msgid ""
 "The KDE Plasma Wayland session is not supported with the proprietary Nvidia "
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
@@ -884,24 +841,24 @@ msgstr ""
 "restez avec la session X."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:519
+#: xml/release-notes.xml:494
 msgid "Desktop"
 msgstr "Bureau"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:521
+#: xml/release-notes.xml:496
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
 msgstr ""
 "Cette section liste les problèmes et les changements liés au environnement "
 "de bureau dans openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:527
+#: xml/release-notes.xml:502
 msgid "No Default Compose Key Combination"
 msgstr "Pas de touche Compose par défaut"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:528
+#: xml/release-notes.xml:503
 msgid ""
 "In previous versions of openSUSE, the compose key combination allowed typing "
 "characters that were not part of the regular keyboard layout. For example, "
@@ -916,7 +873,7 @@ msgstr ""
 "keycap></keycombo> puis appuyer sur <keycap>a</keycap> deux fois."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:535
+#: xml/release-notes.xml:510
 msgid ""
 "In openSUSE Leap 15.0, there is no longer a predefined compose key "
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
@@ -927,7 +884,7 @@ msgstr ""
 "ne fonctionne plus comme avant."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:543
+#: xml/release-notes.xml:518
 msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
@@ -937,7 +894,7 @@ msgstr ""
 "suivantes :"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:547
+#: xml/release-notes.xml:522
 #, no-wrap
 msgid ""
 "[...]\n"
@@ -959,7 +916,7 @@ msgstr ""
 "[...]"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:555
+#: xml/release-notes.xml:530
 msgid ""
 "To uncomment the example code, remove the <literal>!</literal> characters at "
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
@@ -971,7 +928,7 @@ msgstr ""
 "<command>setxkbmap</command>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:563
+#: xml/release-notes.xml:538
 msgid ""
 "To define a user-specific compose key combination, use your desktop's "
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
@@ -982,7 +939,7 @@ msgstr ""
 "commande <command>setxkbmap</command> :"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:568
+#: xml/release-notes.xml:543
 #, no-wrap
 msgid ""
 "\n"
@@ -994,7 +951,7 @@ msgstr ""
 "     "
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:571
+#: xml/release-notes.xml:546
 msgid ""
 "For the variable <replaceable>COMPOSE_KEY</replaceable>, use your preferred "
 "character, for example <literal>ralt</literal>, <literal>lwin</literal>, "
@@ -1007,7 +964,7 @@ msgstr ""
 "<literal>Ctrl droit</literal> ou <literal>Verr maj</literal>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:580
+#: xml/release-notes.xml:555
 msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
@@ -1016,7 +973,7 @@ msgstr ""
 "caractères dont vous avez besoin sans touche Compose."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:590
+#: xml/release-notes.xml:565
 msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
@@ -1025,7 +982,7 @@ msgstr ""
 "gestionnaire de connexion et la session de bureau"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:591
+#: xml/release-notes.xml:566
 msgid ""
 "In the past, you could use <filename>/etc/sysconfig</filename> or the YaST "
 "module <guimenu>/etc/sysconfig Editor</guimenu> to define the login manager "
@@ -1040,28 +997,28 @@ msgstr ""
 "filename> mais par le système d'alternatives."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:598
+#: xml/release-notes.xml:573
 msgid "To change the defaults, use the following alternatives:"
 msgstr ""
 "Pour changer les réglages par défaut, utilisez les alternatives suivantes :"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:603
+#: xml/release-notes.xml:578
 msgid "Login manager: <literal>default-displaymanager</literal>"
 msgstr "Gestionnaire de connexion : <literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:608
+#: xml/release-notes.xml:583
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
 msgstr "Session Wayland : <literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:613
+#: xml/release-notes.xml:588
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
 msgstr "Session de bureau X : <literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:618
+#: xml/release-notes.xml:593
 msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
@@ -1070,13 +1027,13 @@ msgstr ""
 "literal>, utilisez :"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:622
+#: xml/release-notes.xml:597
 #, no-wrap
 msgid "sudo update-alternatives --display default-displaymanager"
 msgstr "sudo update-alternatives --display default-displaymanager"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:623
+#: xml/release-notes.xml:598
 msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
@@ -1085,7 +1042,7 @@ msgstr ""
 "command>, utilisez :"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:627
+#: xml/release-notes.xml:602
 #, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
@@ -1095,7 +1052,7 @@ msgstr ""
 "  /usr/lib/X11/displaymanagers/xdm"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:629
+#: xml/release-notes.xml:604
 msgid ""
 "To enable graphical management of alternatives, use the YaST module "
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
@@ -1106,12 +1063,12 @@ msgstr ""
 "<package>yast2-alternatives</package>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:637
+#: xml/release-notes.xml:612
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "Pas de verrouillage d'écran en utilisant GNOME Shell sans GDM"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:638
+#: xml/release-notes.xml:613
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1123,7 +1080,7 @@ msgstr ""
 "possible."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:643
+#: xml/release-notes.xml:618
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -1132,17 +1089,17 @@ msgstr ""
 "gestionnaire de connexion :"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:649
+#: xml/release-notes.xml:624
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "Assurez vous que le paquet <package>gdm</package> est installé."
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:654
+#: xml/release-notes.xml:629
 msgid "Set GDM as the display manager:"
 msgstr "Définissez GDM comme gestionnaire de session :"
 
 #. (itstool) path: step/screen
-#: xml/release-notes.xml:657
+#: xml/release-notes.xml:632
 #, no-wrap
 msgid ""
 "sudo update-alternatives --set default-displaymanager \\\n"
@@ -1152,19 +1109,19 @@ msgstr ""
 "  /usr/lib/X11/displaymanagers/gdm"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:661
+#: xml/release-notes.xml:636
 msgid "Reboot."
 msgstr "Redémarrez."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:670
+#: xml/release-notes.xml:645
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
 msgstr ""
 "Mise à l'échelle de SDDM pour les ordinateurs avec des écrans haute "
 "résolution"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:671
+#: xml/release-notes.xml:646
 msgid ""
 "The default login manager for KDE, SDDM, does not scale its UI for High-DPI "
 "displays by default. If you have a computer with a high-DPI display, you can "
@@ -1178,7 +1135,7 @@ msgstr ""
 "configuration <filename>/etc/sddm.conf</filename> :"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:678
+#: xml/release-notes.xml:653
 #, no-wrap
 msgid ""
 "\n"
@@ -1192,7 +1149,7 @@ msgstr ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>VALEUR_DPI</replaceable>\n"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:683
+#: xml/release-notes.xml:658
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
@@ -1204,14 +1161,14 @@ msgstr ""
 "défaut de 96 DPI."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:692
+#: xml/release-notes.xml:667
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
 msgstr ""
 "Mise à l'échelle de YaST pour les ordinateurs avec des écrans haute "
 "résolution"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:693
+#: xml/release-notes.xml:668
 msgid ""
 "YaST does not scale its UI for High-DPI displays by default. If you have a "
 "computer with a high-DPI display, you can set YaST to scale its UI "
@@ -1225,7 +1182,7 @@ msgstr ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:703
+#: xml/release-notes.xml:678
 msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
@@ -1235,7 +1192,7 @@ msgstr ""
 "normale"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:704
+#: xml/release-notes.xml:679
 msgid ""
 "Qt supports automatic per-monitor scaling on X. It uses the DPI value of the "
 "virtual X screen to calculate the font size for the primary monitor. By "
@@ -1249,7 +1206,7 @@ msgstr ""
 "tous les autres moniteurs."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:710
+#: xml/release-notes.xml:685
 msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
@@ -1258,7 +1215,7 @@ msgstr ""
 "remarque ne s'applique pas à eux :"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:716
+#: xml/release-notes.xml:691
 msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
@@ -1266,7 +1223,7 @@ msgstr ""
 "GNOME définit <literal>Xft.dpi</literal> sur le multiple configuré de 96 DPI."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:722
+#: xml/release-notes.xml:697
 msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
@@ -1275,7 +1232,7 @@ msgstr ""
 "configuration de mise à l'échelle manuelle."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:728
+#: xml/release-notes.xml:703
 msgid ""
 "On other desktops, this behavior of Qt can lead to undesirable situations "
 "such as the following: If the primary display is High-DPI (&gt;= 144 DPI), "
@@ -1295,14 +1252,14 @@ msgstr ""
 "résolution."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:737
+#: xml/release-notes.xml:712
 msgid "You can use one of the following workarounds for this issue:"
 msgstr ""
 "Vous pouvez utiliser l'une des solutions de contournement suivantes pour ce "
 "problème :"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:742
+#: xml/release-notes.xml:717
 msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
@@ -1312,7 +1269,7 @@ msgstr ""
 "l'échelle de manière appropriée sur le moniteur haute résolution."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:749
+#: xml/release-notes.xml:724
 msgid ""
 "Set an appropriate font DPI (<literal>Xft.dpi</literal>). You can do so "
 "either with the configuration utility of your desktop. Alternatively, after "
@@ -1323,13 +1280,13 @@ msgstr ""
 "après chaque connexion, exécutez la commande suivante :"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:754
+#: xml/release-notes.xml:729
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
 msgstr "echo Xft.dpi:<replaceable>VALEUR_DPI</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:755
+#: xml/release-notes.xml:730
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
@@ -1338,13 +1295,13 @@ msgstr ""
 "appropriée pour le moniteur principal."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:765
+#: xml/release-notes.xml:740
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
 msgstr ""
 "Le partage d'écran ne fonctionne pas avec Firefox ou Chromium sous Wayland"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:766
+#: xml/release-notes.xml:741
 msgid ""
 "Firefox and Chromium normally allow Web-based tools such as "
 "videoconferencing applications to share the entire screen or individual "
@@ -1357,7 +1314,7 @@ msgstr ""
 "gérée par ces navigateurs lors d'une session Wayland."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:772
+#: xml/release-notes.xml:747
 msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
@@ -1366,12 +1323,12 @@ msgstr ""
 "session X à la place."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:779
+#: xml/release-notes.xml:754
 msgid "Playing MP3 Media Files"
 msgstr "Lecture des fichiers multimédia MP3"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:780
+#: xml/release-notes.xml:755
 msgid ""
 "The codecs to play MP3 media files are shipped as part of the standard "
 "repository."
@@ -1379,7 +1336,7 @@ msgstr ""
 "Les codecs pour lire les fichiers MP3 sont distribués dans le dépôt standard."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:784
+#: xml/release-notes.xml:759
 msgid ""
 "To use this decoder in gstreamer-based applications and frameworks, such as "
 "Rhythmbox or Totem, install the package <literal>gstreamer-plugins-ugly</"
@@ -1390,12 +1347,12 @@ msgstr ""
 "<literal>gstreamer-plugins-ugly</literal>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:792
+#: xml/release-notes.xml:767
 msgid "No Support for Type-1 Fonts in LibreOffice"
 msgstr "Polices Type-1 non gérées dans LibreOffice"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:793
+#: xml/release-notes.xml:768
 msgid ""
 "LibreOffice 5.3 and higher do not support legacy Type-1 fonts (file "
 "extensions <filename>.afm</filename> and <filename>.pfb</filename>) anymore. "
@@ -1411,7 +1368,7 @@ msgstr ""
 "filename>)."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:800
+#: xml/release-notes.xml:775
 msgid ""
 "If you are affected by this, convert Type-1 fonts to a supported format, "
 "such as TrueType and then use the converted fonts. Conversion is possible "
@@ -1428,12 +1385,12 @@ msgstr ""
 "fontforge.github.io/en-US/documentation/scripting/\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:812
+#: xml/release-notes.xml:787
 msgid "FreeType Font Rendering Changes"
 msgstr "Changements de rendu des polices FreeType"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:813
+#: xml/release-notes.xml:788
 msgid ""
 "FreeType 2.6.4 has a new default glyph hinting interpreter (version 38) that "
 "more closely matches other operating systems but may look <quote>more fuzzy</"
@@ -1448,18 +1405,18 @@ msgstr ""
 "suivante au niveau (système, utilisateur ou application) de votre choix :"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:820
+#: xml/release-notes.xml:795
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:825
+#: xml/release-notes.xml:800
 msgid "Enabling KDE Plasma Browser Integration"
 msgstr "Activation de l'intégration des navigateurs avec KDE Plasma"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:826
+#: xml/release-notes.xml:801
 msgid ""
 "Plasma browser integration for Firefox and Chromium/Chrome allows monitoring "
 "multimedia and downloads using KDE system tools and gives quick access to "
@@ -1471,7 +1428,7 @@ msgstr ""
 "commande</guimenu> du bureau KDE Plasma."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:832
+#: xml/release-notes.xml:807
 msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
@@ -1480,7 +1437,7 @@ msgstr ""
 "devant travailler ensemble :"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:838
+#: xml/release-notes.xml:813
 msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
@@ -1489,7 +1446,7 @@ msgstr ""
 "browser-integration</package>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:844
+#: xml/release-notes.xml:819
 msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
@@ -1498,7 +1455,7 @@ msgstr ""
 "complémentaires de votre navigateur :"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:850
+#: xml/release-notes.xml:825
 msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
@@ -1507,7 +1464,7 @@ msgstr ""
 "integration/\"/>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:855
+#: xml/release-notes.xml:830
 msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
@@ -1516,7 +1473,7 @@ msgstr ""
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:862
+#: xml/release-notes.xml:837
 msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
@@ -1525,12 +1482,12 @@ msgstr ""
 "développement et qu'openSUSE Leap 15.0 en fournit une version préliminaire."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:871
+#: xml/release-notes.xml:846
 msgid "Loading the Emacs <literal>psgml</literal> Module"
 msgstr "Chargement du module <literal>psgml</literal> d'Emacs"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:872
+#: xml/release-notes.xml:847
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
@@ -1543,24 +1500,24 @@ msgstr ""
 "filename> du paquet <package>psgml</package>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:903
+#: xml/release-notes.xml:878
 msgid "Security"
 msgstr "Sécurité"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:905
+#: xml/release-notes.xml:880
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr ""
 "Cette section liste les changements des fonctions de sécurité d'openSUSE "
 "Leap 15.0."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:911
+#: xml/release-notes.xml:886
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
 msgstr "<command>systemctl stop apparmor</command> ne fonctionne pas"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:912
+#: xml/release-notes.xml:887
 msgid ""
 "In the past, there could be confusion over the difference between how the "
 "very similarly named <command>systemctl</command> subcommands "
@@ -1571,7 +1528,7 @@ msgstr ""
 "<command>systemctl</command> pour AppArmor :"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:920
+#: xml/release-notes.xml:895
 msgid ""
 "<command>systemctl reload apparmor</command> properly reloaded all AppArmor "
 "profiles. (It was and continues to be the recommended way of reloading "
@@ -1582,7 +1539,7 @@ msgstr ""
 "recharger les profils AppArmor.)"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:927
+#: xml/release-notes.xml:902
 msgid ""
 "<command>systemctl restart apparmor</command> meant that AppArmor would "
 "stop, thereby unloading all AppArmor profiles and then restart which left "
@@ -1595,7 +1552,7 @@ msgstr ""
 "d'AppArmor étaient confinés."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:935
+#: xml/release-notes.xml:910
 msgid ""
 "Unfortunately, <systemitem>systemd</systemitem> does not provide a solution "
 "within its unit file format for the issue posed by the <literal>restart</"
@@ -1606,7 +1563,7 @@ msgstr ""
 "posé par le scénario du <literal>restart</literal>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:940
+#: xml/release-notes.xml:915
 msgid ""
 "Starting with AppArmor 2.12, the command <command>systemctl stop apparmor</"
 "command> will not work. As a consequence, <command>systemctl restart "
@@ -1617,7 +1574,7 @@ msgstr ""
 "apparmor</command> ne recharge plus correctement les profils AppArmor."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:946
+#: xml/release-notes.xml:921
 msgid ""
 "To unload all AppArmor profiles, use the new command <command>aa-teardown</"
 "command> instead which matches the previous behavior of <command>systemctl "
@@ -1628,7 +1585,7 @@ msgstr ""
 "<command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:951
+#: xml/release-notes.xml:926
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
@@ -1639,17 +1596,17 @@ msgstr ""
 "opensuse.org/show_bug.cgi?id=853019\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:961
+#: xml/release-notes.xml:936
 msgid "Technical"
 msgstr "Aspects techniques"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:966
+#: xml/release-notes.xml:941
 msgid "Updated Btrfs Subvolume Layout"
 msgstr "Nouveau partitionnement Btrfs"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:967
+#: xml/release-notes.xml:942
 msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
@@ -1658,17 +1615,17 @@ msgstr ""
 "missions :"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:973
+#: xml/release-notes.xml:948
 msgid "Simplified snapshots and rollbacks"
 msgstr "Des instantanés et des annulations simplifiés"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:978
+#: xml/release-notes.xml:953
 msgid "Prevention of accidental data loss"
 msgstr "La prévention de la perte accidentelle de données"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:983
+#: xml/release-notes.xml:958
 msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
@@ -1677,7 +1634,7 @@ msgstr ""
 "machines virtuelles stockées dans <filename>/var</filename>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:989
+#: xml/release-notes.xml:964
 msgid ""
 "Instead of using multiple Btrfs subvolumes for different subdirectories of "
 "<filename>/var</filename>, openSUSE Leap 15.0 ships with a single subvolume "
@@ -1690,7 +1647,7 @@ msgstr ""
 "fonctionnalité de copie sur écriture désactivée."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:995
+#: xml/release-notes.xml:970
 msgid ""
 "There is no defined way of upgrading to this new Btrfs subvolume layout. "
 "Therefore, if you want to take advantage of it, make sure to freshly install "
@@ -1701,7 +1658,7 @@ msgstr ""
 "nouvelle installation plutôt qu'une mise à niveau."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1000
+#: xml/release-notes.xml:975
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
@@ -1710,12 +1667,12 @@ msgstr ""
 "sur <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:1009
+#: xml/release-notes.xml:984
 msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1010
+#: xml/release-notes.xml:985
 msgid ""
 "RFC 4361 updates the <literal>client-id</literal> defined in RFC 2132, "
 "section 9.14 to be compatible with DHCP 6 <literal>client-id</literal> "
@@ -1725,18 +1682,18 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1018
+#: xml/release-notes.xml:993
 msgid "In openSUSE Leap 15.0:"
 msgstr "Dans openSUSE Leap 15.0 :"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1021
+#: xml/release-notes.xml:996
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1026
+#: xml/release-notes.xml:1001
 msgid ""
 "Wicked provides an option to send such a <literal>client-id</literal> and to "
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
@@ -1744,7 +1701,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1033
+#: xml/release-notes.xml:1008
 msgid ""
 "To send the <literal>client-id</literal> during the installation, use "
 "<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
@@ -1752,15 +1709,13 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:1039
+#: xml/release-notes.xml:1014
 #, no-wrap
 msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
-msgstr ""
-"ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_I"
-"D=00:03:52:54:00:02:c2:67"
+msgstr "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1040
+#: xml/release-notes.xml:1015
 msgid ""
 "For more information, see the documentation for the options <literal>dhcp4 "
 "\"create-cid\"</literal>, <literal>dhcp6 \"default-duid\"</literal> in "
@@ -1769,7 +1724,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1048
+#: xml/release-notes.xml:1023
 msgid ""
 "The traditionally used RFC 2132 DHCPv4 <literal>client-id</literal> on "
 "Ethernet is constructed from the hardware type (<literal>01</literal> for "
@@ -1778,13 +1733,13 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:1054
+#: xml/release-notes.xml:1029
 #, no-wrap
 msgid "01:52:54:00:02:c2:67"
 msgstr "01:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1055
+#: xml/release-notes.xml:1030
 msgid ""
 "The RFC 4361 <literal>client-id</literal> starts with <literal>0xff</"
 "literal> (instead of the hardware type), followed by the DHCPv6 IAID (the "
@@ -1794,7 +1749,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1062
+#: xml/release-notes.xml:1037
 msgid ""
 "Using the above hardware type-based and hardware address-based DUID (LLT "
 "type used by default), the new RFC 4361 DHCPv4 <literal>client-id</literal> "
@@ -1802,21 +1757,21 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1069
+#: xml/release-notes.xml:1044
 msgid ""
 "Using the last bytes of the MAC address as the IAID: <literal>ff:00:02:"
 "c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1075
+#: xml/release-notes.xml:1050
 msgid ""
 "When the IAID is a simple incremented number: <literal>ff:00:00:00:01:00:01:"
 "xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1081
+#: xml/release-notes.xml:1056
 msgid ""
 "The <literal>xx:xx:xx:xx</literal> in the DUID-LLT is a creation timestamp. "
 "A DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) "
@@ -1824,19 +1779,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:1097
+#: xml/release-notes.xml:1072
 msgid "More Information and Feedback"
 msgstr "Plus d'informations et de retours"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1100
+#: xml/release-notes.xml:1075
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 "Veuillez lire les documents <filename>README</filename> sur le support de "
 "stockage."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1105
+#: xml/release-notes.xml:1080
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1845,19 +1800,19 @@ msgstr ""
 "paquet particulier à partir de RPM :"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:1109
+#: xml/release-notes.xml:1084
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NOM_DU_PAQUET</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1110
+#: xml/release-notes.xml:1085
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Remplacez <replaceable>NOM_DU_PAQUET</replaceable> par le nom du paquet RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1115
+#: xml/release-notes.xml:1090
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1867,7 +1822,7 @@ msgstr ""
 "apportées aux paquets mis à jours."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1121
+#: xml/release-notes.xml:1096
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1876,7 +1831,7 @@ msgstr ""
 "le support de stockage."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1127
+#: xml/release-notes.xml:1102
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1885,7 +1840,7 @@ msgstr ""
 "href=\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1133
+#: xml/release-notes.xml:1108
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1894,9 +1849,48 @@ msgstr ""
 "www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:1140
+#: xml/release-notes.xml:1115
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
+
+#~ msgid "Installing the Nvidia Driver Manually"
+#~ msgstr "Installation manuelle des pilotes Nvidia"
+
+#~ msgid ""
+#~ "On openSUSE Leap 15.0, you need to uninstall the package <package>drm-kmp-"
+#~ "default</package> first, before you can manually install Nvidia drivers "
+#~ "using the <filename>.run</filename> shell script archive:"
+#~ msgstr ""
+#~ "Sur openSUSE Leap 15.0, vous devez désinstaller le paquet <package>drm-"
+#~ "kmp-default</package> en premier, avant de pouvoir installer les pilotes "
+#~ "Nvidia manuellement en utilisant le script shell <filename>.run</"
+#~ "filename> :"
+
+#~ msgid "zypper rm drm-kmp-default"
+#~ msgstr "zypper rm drm-kmp-default"
+
+#~ msgid ""
+#~ "If you install the RPMs provided by Nvidia, you will not be affected by "
+#~ "this issue, because in that case, the package <package>drm-kmp-default</"
+#~ "package> is replaced during the driver installation automatically."
+#~ msgstr ""
+#~ "Si vous installez les RPMs fournis par Nvidia,vous n'aurez pas ce "
+#~ "problème, puisque dans ce cas, le paquet <package>drm-kmp-default</"
+#~ "package> est remplacé pendant l'installation automatique du pilote."
+
+#~ msgid ""
+#~ "If you decide to uninstall Nvidia's driver later, make sure to reinstall "
+#~ "the package <package>drm-kmp-default</package>."
+#~ msgstr ""
+#~ "Si, plus tard, vous décidez de désinstaller le pilote Nvidia assurez-vous "
+#~ "de réinstaller le paquet <package>drm-kmp-default</package>."
+
+#~ msgid ""
+#~ "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
+#~ "show_bug.cgi?id=1044816\"/>."
+#~ msgstr ""
+#~ "Pour plus d'informations, consultez <link xlink:href=\"https://bugzilla."
+#~ "suse.com/show_bug.cgi?id=1044816\"/>."
 
 #~ msgid ""
 #~ "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"

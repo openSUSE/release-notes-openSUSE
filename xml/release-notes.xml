@@ -473,33 +473,8 @@
     the installation image does not receive updates, this issue may occur
     during installation or first boot even after that update has shipped.
     In that case, as a temporary workaround, boot with the option
-    <literal>nouveau.modeset=1</literal>. After the updated kernel
+    <literal>nouveau.modeset=0</literal>. After the updated kernel
     including the fix is installed, you can remove this option again.
-   </para>
-  </sect2>
-
-  <sect2 xml:id="sec.install.nouveau-extra">
-   <!-- text via boo#1045124, underlying issue: boo#1044816 -->
-   <title>Installing the Nvidia Driver Manually</title>
-   <para>
-    On &thisversion;, you need to uninstall the package
-    <package>drm-kmp-default</package> first, before you can manually install
-    Nvidia drivers using the <filename>.run</filename> shell script archive:
-   </para>
-   <screen>zypper rm drm-kmp-default</screen>
-   <para>
-    If you install the RPMs provided by Nvidia, you will not be affected by
-    this issue, because in that case, the package
-    <package>drm-kmp-default</package> is replaced during the driver
-    installation automatically.
-   </para>
-   <para>
-    If you decide to uninstall Nvidia's driver later,
-    make sure to reinstall the package <package>drm-kmp-default</package>.
-   </para>
-   <para>
-    For more information, see
-    <link xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=1044816"/>.
    </para>
   </sect2>
 
