@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-06-01 14:58+0200\n"
-"PO-Revision-Date: 2018-05-25 15:07+0000\n"
+"PO-Revision-Date: 2018-06-02 20:34+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ru/>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.18\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -171,16 +171,12 @@ msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:81
-#, fuzzy
-#| msgid ""
-#| "For the latest product news, from openSUSE, visit <link xlink:href="
-#| "\"https://www.opensuse.org\"/>."
 msgid ""
 "Major new features of openSUSE Leap 15.0 are also listed at <link xlink:href="
 "\"https://en.opensuse.org/Features_15.0\"/>."
 msgstr ""
-"Последние новости от openSUSE по адресу <link xlink:href=\"https://www."
-"opensuse.org\"/>."
+"Основные новые возможности openSUSE Leap 15.0 также перечислены по адресу <"
+"link xlink:href=\"https://en.opensuse.org/Features_15.0\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:87
@@ -203,7 +199,7 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:94 xml/release-notes.xml:327
 msgid "Make sure to also review <xref linkend=\"sec.driver\"/>."
-msgstr ""
+msgstr "Изучите также <xref linkend=\"sec.driver\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -753,12 +749,12 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:458
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "Драйверы и оборудование"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:463
 msgid "Hang on Machines with Nvidia GPUs and Hybrid Graphics"
-msgstr ""
+msgstr "Зависание машин с картами Nvidia и гибридной графикой"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:464
@@ -769,6 +765,11 @@ msgid ""
 "graphics, such as laptops that include integrated Intel graphics and a "
 "discrete Nvidia graphics card."
 msgstr ""
+"С ядром, поставляемым в openSUSE Leap 15.0 GM, драйвер Nouveau для видеокарт "
+"Nvidia может зависнуть при перезагрузке, выключении или при выполнении "
+"действий по управлению питанием. Эта ошибка происходит в основном на "
+"системах с гибридной графикой, например, ноутбуках с интегрированной картой "
+"Intel и дискретной картой Nvidia."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:471
@@ -780,6 +781,13 @@ msgid ""
 "literal>. After the updated kernel including the fix is installed, you can "
 "remove this option again."
 msgstr ""
+"Эта ошибка будет исправлена в обновлении для ядра. Тем не менее, поскольку "
+"установочный образ обновлён не будет, эта ошибка может случиться при "
+"установке или первой загрузке даже после выпуска обновления. В этом случае в "
+"качестве временной меры можно загрузиться с параметром "
+"<literal>nouveau.modeset=0</literal>. После установки обновления с "
+"исправлением для ядра можно будет удалить этот параметр и снова загружаться "
+"без него."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
@@ -1081,6 +1089,10 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"Менеджер входа в KDE по умолчанию, SDDM, не масштабирует по умолчанию свой "
+"интерфейс для экранов с высоким DPI. Если у вас HiDPI-экран, то вы можете "
+"настроить SDDM на корректное масштабирование с помощью конфигурационного "
+"файла <filename>/etc/sddm.conf</filename>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:653
@@ -1091,6 +1103,10 @@ msgid ""
 "EnableHiDPI=true\n"
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>\n"
 msgstr ""
+"\n"
+"[X11]\n"
+"EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>ЗНАЧЕНИЕ_DPI</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:658
@@ -1099,11 +1115,14 @@ msgid ""
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
 "that is a multiple of the default 96 DPI."
 msgstr ""
+"Замените <replaceable>ЗНАЧЕНИЕ_DPI</replaceable> на подходящее значение, "
+"например, <literal>192</literal>. Для наилучшего масштабирования используйте "
+"значение DPI, кратное 96."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:667
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
-msgstr ""
+msgstr "Масштабирование интерфейса YaST на компьютерах с HiDPI-экранами"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:668
@@ -1113,6 +1132,10 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"YaST не масштабирует по умолчанию свой интерфейс для экранов с высоким DPI. "
+"Если у вас HiDPI-экран, то вы можете настроить YaST на корректное "
+"масштабирование. Чтобы сделать это, задайте переменную окружения "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:678
@@ -1120,6 +1143,8 @@ msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
 msgstr ""
+"Использование автоматического масштабирования приложений на Qt в установках "
+"со смесью HiDPI и обычных мониторов"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:679
@@ -1129,6 +1154,11 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
+"Qt поддерживает автоматическое помониторное масштабирование в X. Для "
+"вычисления размера шрифта основного монитора используется значение DPI "
+"виртуального экрана X. По умолчанию это 96 DPI. Для вычисления размеров "
+"шрифтов на остальных мониторах используется относительный DPI основного "
+"монитора."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:685
@@ -1136,6 +1166,8 @@ msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
 msgstr ""
+"Два широко используемых окружения рабочего стола принудительно обходят такое "
+"поведение Qt, так что этот пункт к ним не относится:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:691
@@ -1143,6 +1175,8 @@ msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
 msgstr ""
+"GNOME задаёт в <literal>Xft.dpi</literal> настроенное значение, кратное 96 "
+"DPI."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:697
@@ -1150,6 +1184,8 @@ msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
 msgstr ""
+"KDE Plasma отключает автоматическое масштабирование Qt и использует "
+"настройки ручного масштабирования."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:703
@@ -1161,11 +1197,18 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
+"В других окружениях рабочего стола такое поведение Qt может привести к "
+"нежелательным результатам, например: если у основного монитора высокий DPI "
+"(&gt;= 144 DPI), то шрифты Qt-приложений, требующих мастабирования, типа "
+"VLC, уменьшаются до половины желаемого размера на всех мониторах. "
+"Приложения, не требующие масштабирования, типа YaST с настройками по "
+"умолчанию, будут использовать одинаковое значение DPI на всех мониторах. То "
+"есть будут выглядеть меньше на HiDPI-экране."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:712
 msgid "You can use one of the following workarounds for this issue:"
-msgstr ""
+msgstr "Для обхода этой проблемы можно использовать один из этих способов:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:717
@@ -1173,6 +1216,8 @@ msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
 msgstr ""
+"Используйте в качестве основного монитор с обычным DPI. Тогда приложения, "
+"требующие масштабирования, будут корректно отображаться на HiDPI-мониторе."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:724
@@ -1181,27 +1226,30 @@ msgid ""
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
+"Задайте подходящий DPI для шрифтов (<literal>Xft.dpi</literal>). Это можно "
+"сделать с помощью утилиты настройки вашего рабочего стола. Либо после "
+"каждого входа запускайте следующую команду:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:729
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
 msgstr ""
+"echo Xft.dpi:<replaceable>ЗНАЧЕНИЕ_DPI</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:730
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
-msgstr "Замените <replaceable>ИМЯ_ФАЙЛА</replaceable> на имя пакета RPM."
+msgstr ""
+"Замените <replaceable>ЗНАЧЕНИЕ_DPI</replaceable> на подходящее для основного "
+"монитора значение."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:740
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
-msgstr ""
+msgstr "Общий доступ к экрану в Firefox или Chromium не работает на Wayland"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:741
@@ -1211,6 +1259,10 @@ msgid ""
 "application windows. This functionality is currently not supported in either "
 "browser when using a Wayland session."
 msgstr ""
+"Firefox и Chromium позволяют веб-инструментам, например, приложениям для "
+"видеоконференций, получить доступ ко всему экрану или отдельным окнам "
+"приложений. Эта функциональность в настоящее время не поддерживается ни "
+"одним браузером при использовании сеанса Wayland."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:747
@@ -1218,6 +1270,8 @@ msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
 msgstr ""
+"Чтобы позволить общий доступ к экрану в Firefox или Chromium, используйте "
+"X-сеанс."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:754
@@ -1284,7 +1338,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:787
 msgid "FreeType Font Rendering Changes"
-msgstr ""
+msgstr "Изменения в рендеринге шрифтов FreeType"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:788
@@ -1295,17 +1349,23 @@ msgid ""
 "environment variable at any level (system-wide, user-specific, or program-"
 "specific) of your choice:"
 msgstr ""
+"У FreeType 2.6.4 появился новый интерпретатор хинтинга для глифов (версия 38)"
+", результат работы которого больше соответствует другим операционным "
+"системам, но некоторым может показаться <quote>более размытым</quote>. Чтобы "
+"восстановить предыдущее поведение FreeType, задайте следующую переменную "
+"окружения на любом выбранном уровне (системном, пользовательском или для "
+"конкретной программы):"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:795
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
-msgstr ""
+msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:800
 msgid "Enabling KDE Plasma Browser Integration"
-msgstr ""
+msgstr "Включение интеграции браузеров в KDE Plasma"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:801
@@ -1314,13 +1374,17 @@ msgid ""
 "multimedia and downloads using KDE system tools and gives quick access to "
 "tabs via the <guimenu>Run Command</guimenu> bar of the KDE Plasma desktop."
 msgstr ""
+"Интеграция браузеров в Plasma для Firefox и Chromium/Chrome позволяет "
+"отслеживать воспроизведение и загрузки с помощью системных инструментов KDE "
+"и предоставлять быстрый доступ к вкладкам из панели <guimenu>Запуск "
+"команд</guimenu> KDE Plasma."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:807
 msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
-msgstr ""
+msgstr "Интеграция браузеров состоит из двух компонентов, работающих совместно:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:813
@@ -1328,6 +1392,8 @@ msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
 msgstr ""
+"Компонент для рабочего стола можно установить с помощью системного пакета "
+"<package>plasma-browser-integration</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:819
@@ -1335,6 +1401,8 @@ msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
 msgstr ""
+"Компонент для браузера следует установить из магазина дополнений вашего "
+"браузера:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:825
@@ -1342,6 +1410,8 @@ msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
 msgstr ""
+"Для Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon"
+"/plasma-integration/\"/>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:830
@@ -1349,6 +1419,9 @@ msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 msgstr ""
+"Для Chromium/Chrome: <link xlink:href=\""
+"https://chrome.google.com/webstore/detail/plasma-integration/"
+"cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:837
@@ -1356,11 +1429,13 @@ msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
 msgstr ""
+"Учтите, что эта функция ещё в разработке и в openSUSE Leap 15.0 поставляется "
+"её ранняя версия."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:846
 msgid "Loading the Emacs <literal>psgml</literal> Module"
-msgstr ""
+msgstr "Загрузка модуля Emacs <literal>psgml</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:847
@@ -1370,16 +1445,22 @@ msgid ""
 "automatically. For more information, see the file <filename>README</"
 "filename> from the package <package>psgml</package>."
 msgstr ""
+"Из-за конфликтов с модулями Emacs в установке по умолчанию openSUSE Leap "
+"15.0 больше не может автоматически загружать модуль <literal>psgml</literal>"
+". Более подробные сведения приведены в файле <filename>README</filename> из "
+"пакета <package>psgml</package>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:878
 msgid "Security"
-msgstr ""
+msgstr "Безопасность"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:880
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr ""
+"В этом разделе приведены изменения в возможностях безопасности openSUSE Leap "
+"15.0."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:886
@@ -1474,7 +1555,7 @@ msgstr "Технические данные"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:941
 msgid "Updated Btrfs Subvolume Layout"
-msgstr ""
+msgstr "Обновлённая раскладка подтомов btrfs"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:942
@@ -1482,16 +1563,18 @@ msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
 msgstr ""
+"openSUSE Leap 15.0 представляет новую раскладку подтомов Btrfs, стремящуюся "
+"к следующему:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:948
 msgid "Simplified snapshots and rollbacks"
-msgstr ""
+msgstr "Упрощение снимков и откатов"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:953
 msgid "Prevention of accidental data loss"
-msgstr ""
+msgstr "Предотвращение случайной потери данных"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:958
@@ -1499,6 +1582,8 @@ msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
 msgstr ""
+"Улучшение производительности баз данных и образов ВМ, хранящихся в "
+"<filename>/var</filename>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:964
@@ -1508,6 +1593,10 @@ msgid ""
 "for all of <filename>/var</filename>. This new subvolume has copy-on-write "
 "functionality disabled."
 msgstr ""
+"Вместо использования множества подтомов для разных подкаталогов "
+"<filename>/var</filename>, openSUSE Leap 15.0 использует один подтом для "
+"всего <filename>/var</filename>. Функция копирования при записи на этом "
+"подтоме отключена."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:970
@@ -1516,24 +1605,27 @@ msgid ""
 "Therefore, if you want to take advantage of it, make sure to freshly install "
 "openSUSE Leap 15.0 instead of upgrading."
 msgstr ""
+"Не существует предопределённого способа обновиться на новую раскладку "
+"подтомов. Так что если вы захотите воспользоваться предоставляемыми ей "
+"преимуществами, то убедитесь, что устанавливаете openSUSE Leap 15.0 начисто, "
+"а не обновляетесь."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:975
-#, fuzzy
-#| msgid ""
-#| "For more information about upgrading to a current openSUSE version, see "
-#| "<link xlink:href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 msgstr ""
-"Больше сведений о переходе на новую версию openSUSE приведено по адресу "
-"<link xlink:href=\"http://en.opensuse.org/SDB:Distribution-Upgrade\"/>."
+"Больше сведений о раскладке подтомов Btrfs по умолчанию до и после этого "
+"изменения приведено по адресу <link xlink:href=\"https://en.opensuse.org/SDB:"
+"BTRFS\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:984
 msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
 msgstr ""
+"Wicked: Использование DHCPv4 <literal>client-id</literal> из RFC 4361 в "
+"Ethernet"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:985
@@ -1544,19 +1636,24 @@ msgid ""
 "(RFC 4390) and is also required to perform DNS record updates in the same "
 "zone for DHCP 4 and DHCP 6 addresses also on Ethernet."
 msgstr ""
+"RFC 4361 обновляет <literal>client-id</literal>, определённый в разделе 9.14 "
+"RFC 2132, для совместимости с DHCP 6 <literal>client-id</literal> "
+"(<literal>duid</literal>). использование RFC 4361 обязательно для Infiniband "
+"(RFC 4390), а также требуется для выполнения обновлений записей DNS в той же "
+"зоне для адресов DHCP 4 и DHCP 6 по Ethernet."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:993
-#, fuzzy
-#| msgid "openSUSE Leap"
 msgid "In openSUSE Leap 15.0:"
-msgstr "openSUSE Leap"
+msgstr "В openSUSE Leap 15.0:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:996
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
 msgstr ""
+"Сервер ISC DHCP 4.3.x поддерживает новый RFC 4361 (требуется для обновления "
+"DNS)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1001
@@ -1565,6 +1662,9 @@ msgid ""
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
 "(used on Infiniband)."
 msgstr ""
+"Wicked предоставляет возможность отправки такого <literal>client-id</literal>"
+" и автоматического использования <literal>client-id</literal> из DHCPv6 в "
+"DHCPv4 (используется в Infiniband)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1008
@@ -1573,12 +1673,18 @@ msgid ""
 "<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
 "org/SDB:Linuxrc\"/>) with the following <literal>ifcfg</literal>:"
 msgstr ""
+"Чтобы отправить <literal>client-id</literal> во время установки, используйте "
+"<literal>linuxrc</literal> (см. также <link xlink:href=\""
+"https://en.opensuse.org/SDB:Linuxrc\"/>) со следующим "
+"<literal>ifcfg</literal>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1014
 #, no-wrap
 msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 msgstr ""
+"ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:76,DHCLIENT6_CLIENT_I"
+"D=00:03:52:54:00:02:c2:76"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1015
@@ -1588,6 +1694,10 @@ msgid ""
 "<literal>man 5 wicked-config</literal>, <literal>wicked duid --help</"
 "literal>, and <literal>wicked iaid --help</literal>."
 msgstr ""
+"Больше сведений приведено в документации по параметрам <literal>dhcp4 \""
+"create-cid\"</literal>, <literal>dhcp6 \"default-duid\"</literal> в <literal>"
+"man 5 wicked-config</literal>, <literal>wicked duid --help</literal> и "
+"<literal>wicked iaid --help</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1023
@@ -1597,12 +1707,15 @@ msgid ""
 "Ethernet) and followed by the hardware address (the MAC address), for "
 "example:"
 msgstr ""
+"Традиционно используемый DHCPv4 <literal>client-id</literal> по RFC 2132 "
+"составляется из кода типа оборудования (<literal>01</literal> для Ethernet) "
+"и аппаратного адреса (MAC-адреса), например:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1029
 #, no-wrap
 msgid "01:52:54:00:02:c2:67"
-msgstr ""
+msgstr "01:52:54:00:02:c2:76"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1030
@@ -1613,6 +1726,10 @@ msgid ""
 "machine), followed by the DHCPv6 DUID (<literal>client-id</literal> which "
 "identifies the machine)."
 msgstr ""
+"<literal>client-id</literal> по RFC 4361 начинается с <literal>0xff</literal>"
+" (вместо кода типа оборудования), затем идёт DHCPv6 IAID (interface-address "
+"association ID, идентификатор интерфейса машины), затем DHCPv6 DUID (<literal"
+">client-id</literal>, идентифицирующий машину)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1037
@@ -1621,6 +1738,9 @@ msgid ""
 "type used by default), the new RFC 4361 DHCPv4 <literal>client-id</literal> "
 "would be:"
 msgstr ""
+"При использовании DUID на основе типа и адреса оборудования выше ("
+"используемый по умолчанию тип LLT), новый DHCPv4 <literal>client-id</literal>"
+" по RFC 4361 будет таким:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1044
@@ -1628,6 +1748,8 @@ msgid ""
 "Using the last bytes of the MAC address as the IAID: <literal>ff:00:02:"
 "c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"При использовании в качестве IAID последних байтов MAC-адреса: "
+"<literal>ff:00:02:c2:76:00:01:xx:xx:xx:xx:52:54:00:02:c2:76</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1050
@@ -1635,6 +1757,8 @@ msgid ""
 "When the IAID is a simple incremented number: <literal>ff:00:00:00:01:00:01:"
 "xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"При использовании в качестве IAID просто инкрементируемого числа: "
+"<literal>ff:00:00:00:01:00:01:xx:xx:xx:xx:52:54:00:02:c2:76</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1056
@@ -1643,6 +1767,9 @@ msgid ""
 "A DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) "
 "does not have a timestamp."
 msgstr ""
+"<literal>xx:xx:xx:xx</literal> в DUID-LLT — это метка времени создания. В "
+"DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) нет "
+"метки времени."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:1072
