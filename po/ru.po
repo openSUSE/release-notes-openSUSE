@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-05-25 13:05+0000\n"
+"PO-Revision-Date: 2018-06-02 20:52+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/master/ru/>\n"
@@ -23,13 +23,11 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#, fuzzy
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Переводчики:\n"
-"Александр Мелентьев <minton@opensuse.org>, 2008-2017"
+"Александр Мелентьев <minton@opensuse.org>, 2008-2018"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -214,12 +212,6 @@ msgstr "Система с зашифрованным LUKS разделом не 
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:128
-#, fuzzy
-#| msgid ""
-#| "In some cases, Plymouth does not display the passphrase prompt properly. "
-#| "To fix this, add <literal>plymouth.enable=0</literal> to the kernel "
-#| "command line. See also <ulink url=\"https://bugzilla.opensuse.org/"
-#| "show_bug.cgi?id=966255\"/>."
 msgid ""
 "In some cases, Plymouth does not display the passphrase prompt properly. To "
 "fix this, add <literal>plymouth.enable=0</literal> to the kernel command "
@@ -228,13 +220,13 @@ msgid ""
 msgstr ""
 "В некоторых случаях Plymouth не отображает запрос пароля. Чтобы избежать "
 "этого, добавьте <literal>plymouth.enable=0</literal> к строке параметров "
-"ядра. См. также <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=966255\"/>."
+"ядра. См. также <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:137
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr ""
+msgstr "Команда <command>systemctl stop apparmor</command> не работает"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:138
@@ -243,6 +235,9 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"В прошлом было легко запутаться и не заметить разницу между тем, как сходно "
+"названные подкоманды <command>systemctl</command> <literal>reload</literal> "
+"и <literal>restart</literal> работали для AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -251,6 +246,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> корректно перезагружала все "
+"профили AppArmor (это было и остаётся рекомендованным способом перезагрузки "
+"профилей AppArmor.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -260,6 +258,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> приводила к остановке AppArmor "
+"и выгрузке всех профилей, что оставляло все существующие процессы без "
+"ограничений. Т.е. ограничения применялись только к вновь запущенным "
+"процессам."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -268,6 +270,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"Увы, <systemitem>systemd</systemitem> не предоставляет решения в рамках "
+"формата своих unit-файлов для проблемы, создаваемой сценарием "
+"<literal>restart</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -276,6 +281,10 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"Начиная с AppArmor 2.12, команда <command>systemctl stop apparmor</command> "
+"работать не будет. В качестве одного из последствий команда <command>"
+"systemctl restart apparmor</command> теперь будет корректно перезагружать "
+"профили AppArmor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -284,25 +293,25 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Для выгрузки всех профилей AppArmor используйте новую команду <command>aa-"
+"teardown</command>, соответствующую старому поведению <command>systemctl "
+"stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
-#, fuzzy
-#| msgid ""
-#| "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-#| "id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"Подробнее см. <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+"Подробнее см. <link xlink:href=\""
+"https://bugzilla.opensuse.org/show_bug.cgi?id=996520\"/> и <link xlink:href="
+"\"https://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Нет клавиши Compose по умолчанию"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -313,6 +322,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"В предыдущих версиях openSUSE клавиша compose позволяла набирать символы, не "
+"входящие в состав обычной раскладки клавиатуры. Например, чтобы набрать "
+"<quote>å</quote>, можно было нажать и отпустить <keycombo><keycap function=\""
+"shift\"/><keycap>Правый Ctrl</keycap></keycombo>, а затем дважды нажать "
+"<keycap>a</keycap>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -321,6 +335,10 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"В openSUSE Tumbleweed больше нет предопределённого сочетания клавиш для "
+"функции compose, поскольку сочетание клавиш <keycombo><keycap function=\""
+"shift\"/><keycap>Правый Ctrl</keycap></keycombo> перестало работать как "
+"раньше."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:203
@@ -328,6 +346,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Для назначения общесистемного сочетания клавиш для compose воспользуйтесь "
+"следующими строчками в файле <filename>/etc/X11/Xmodmap</filename>:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -342,6 +362,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:215
@@ -350,6 +378,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Чтобы раскомментировать код примера, удалите символы <literal>!</literal> в "
+"начале каждой строки. Обратите внимание, что настройки из файла "
+"<filename>Xmodmap</filename> будут перезаписаны, если вы воспользуетесь "
+"командой <command>setxkbmap</command>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -358,6 +390,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Чтобы определить сочетание клавиш для compose индивидуально для "
+"пользователя, используйте утилиту настройки клавиатуры его рабочего стола "
+"или утилиту командной строки <command>setxkbmap</command>:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:228
@@ -367,6 +402,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -option "
+"compose:<replaceable>КЛАВИША_COMPOSE</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -376,6 +415,10 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"В переменной <replaceable>КЛАВИША_COMPOSE</replaceable> используйте "
+"предпочитаемую кнопку, например, <literal>ralt</literal>, "
+"<literal>lwin</literal>, <literal>rwin</literal>, <literal>menu</literal>, "
+"<literal>rctl</literal> или <literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:240
@@ -383,6 +426,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"В качестве альтернативы можно использовать метод ввода IBus, позволяющий "
+"набирать нужные символы без использования клавиши Compose."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:263
@@ -392,88 +437,65 @@ msgstr "Дополнительные сведения и обратная свя
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:266
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Читать файлы <filename>README</filename> на установочном носителе."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:271
-#, fuzzy
-#| msgid ""
-#| "Get detailed changelog information about a particular package from the "
-#| "RPM:"
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
-msgstr "Получить подробный журнал изменений конкретного пакета с помощью RPM:"
+msgstr "Просмотреть подробный журнал изменений конкретного пакета из его RPM:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:275
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp &lt;FILENAME&gt;.rpm"
+#, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr "rpm --changelog -qp &lt;ИМЯ_ФАЙЛА&gt;.rpm"
+msgstr "rpm --changelog -qp <replaceable>ИМЯ_ФАЙЛА</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "Замените <replaceable>ИМЯ_ФАЙЛА</replaceable> на имя пакета RPM."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:281
-#, fuzzy
-#| msgid ""
-#| "Check the <filename>ChangeLog</filename> file in the top level of the DVD "
-#| "for a chronological log of all changes made to the updated packages."
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
 "Хронологический журнал всех изменений в обновлённых пакетах приведён в файле "
-"<filename>ChangeLog</filename> на верхнем уровне DVD."
+"<filename>ChangeLog</filename> на верхнем уровне диска."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:287
-#, fuzzy
-#| msgid ""
-#| "Find more information in the <filename>docu</filename> directory on the "
-#| "DVD."
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
-"Больше сведений вы найдёте в каталоге <filename>docu</filename> на DVD."
+"Больше сведений вы найдёте в каталоге <filename>docu</filename> на диске."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:293
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <ulink url=\"https://doc."
-#| "opensuse.org/\"/>."
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
 msgstr ""
-"Дополнительная и обновлённая документация доступна на сайте <ulink url="
-"\"https://doc.opensuse.org/\"/>."
+"Дополнительная и обновлённая документация по адресу <link xlink:href=\""
+"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:299
-#, fuzzy
-#| msgid ""
-#| "For the latest news from openSUSE, see <ulink url=\"https://www.opensuse."
-#| "org\"/>."
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
-"Последние новости об openSUSE на сайте <ulink url=\"https://www.opensuse.org"
-"\"/>."
+"Последние новости от openSUSE по адресу <link xlink:href=\""
+"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:306
-#, fuzzy
-#| msgid "Copyright © 2015 SUSE LLC"
 msgid "Copyright © SUSE LLC"
-msgstr "Авторские права © 2015 SUSE LLC"
+msgstr "Авторские права © SUSE LLC"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:310
