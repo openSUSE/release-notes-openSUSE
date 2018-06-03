@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-06-01 14:58+0200\n"
-"PO-Revision-Date: 2018-05-27 04:01+0000\n"
+"PO-Revision-Date: 2018-06-03 11:22+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap-15_0/zh_CN/>\n"
@@ -161,16 +161,12 @@ msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:81
-#, fuzzy
-#| msgid ""
-#| "For the latest product news, from openSUSE, visit <link xlink:href="
-#| "\"https://www.opensuse.org\"/>."
 msgid ""
 "Major new features of openSUSE Leap 15.0 are also listed at <link xlink:href="
 "\"https://en.opensuse.org/Features_15.0\"/>."
 msgstr ""
-"获取 openSUSE 的最新产品新闻，请访问 <link xlink:href=\"https://www.opensuse."
-"org\"/>。"
+"openSUSE Leap 15.0 主要的新特性也在 <link xlink:href=\""
+"https://en.opensuse.org/Features_15.0\"/> 上列出。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:87
@@ -192,7 +188,7 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:94 xml/release-notes.xml:327
 msgid "Make sure to also review <xref linkend=\"sec.driver\"/>."
-msgstr ""
+msgstr "请务必查阅 <xref linkend=\"sec.driver\"/>。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -694,12 +690,12 @@ msgstr "zypper lifecycle"
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:458
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "驱动与硬件"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:463
 msgid "Hang on Machines with Nvidia GPUs and Hybrid Graphics"
-msgstr ""
+msgstr "采用 Nvidia GPU 和混合显卡机器的挂起问题"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:464
@@ -710,6 +706,9 @@ msgid ""
 "graphics, such as laptops that include integrated Intel graphics and a "
 "discrete Nvidia graphics card."
 msgstr ""
+"随着 openSUSE Leap 15.0 GM 搭载的内核，Nvidia 显卡 的 Nouveau "
+"驱动可能会在重启、关机或运行时电源管理操作期间挂起。这个问题主要发生在使用混合显卡的系统，例如包含 Intel 集成显卡和 Nvidia "
+"独立显卡的笔记本电脑。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:471
@@ -721,6 +720,8 @@ msgid ""
 "literal>. After the updated kernel including the fix is installed, you can "
 "remove this option again."
 msgstr ""
+"此缺陷将在内核的维护更新中修复。但是因为安装映像不会收到更新，这个问题在安装期间甚至是装完后的首次启动时都可能发生。在这种情况下，有个临时的解决方法是以 "
+"<literal>nouveau.modeset=0</literal> 选项启动。在安装了包含修复的内核后，你就可以移除这个选项了。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
@@ -1483,7 +1484,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:984
 msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
-msgstr ""
+msgstr "Wicked：正在以太网上使用 RFC 4361 DHCPv4 <literal>client-id</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:985
@@ -1494,19 +1495,20 @@ msgid ""
 "(RFC 4390) and is also required to perform DNS record updates in the same "
 "zone for DHCP 4 and DHCP 6 addresses also on Ethernet."
 msgstr ""
+"RFC 4361 更新了 RFC 2132 章节 9.14 定义的 <literal>client-id</literal> 以兼容于 DHCP 6 "
+"<literal>client-id</literal> （<literal>duid</literal>）。在 Infiniband (RFC "
+"4390) 上必须使用 RFC 4361，在 DHCP 4 和 DHCP 6 的同个区域或以太网上执行 DNS 记录更新的操作也需要它。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:993
-#, fuzzy
-#| msgid "openSUSE Leap"
 msgid "In openSUSE Leap 15.0:"
-msgstr "openSUSE Leap"
+msgstr "在 openSUSE Leap 15.0 中："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:996
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
-msgstr ""
+msgstr "ISC DHCP 4.3.x 服务器支持新的 RFC 4361（需要用于 DNS 更新）"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1001
@@ -1515,6 +1517,8 @@ msgid ""
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
 "(used on Infiniband)."
 msgstr ""
+"Wicked 提供了个选项用于发送 <literal>client-id</literal> 并自动在 DHCPv4 里使用基于 DHCPv6 的 "
+"<literal>client-id</literal>（使用于 Infiniband）。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1008
@@ -1523,12 +1527,17 @@ msgid ""
 "<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
 "org/SDB:Linuxrc\"/>) with the following <literal>ifcfg</literal>:"
 msgstr ""
+"要在安装期间发送该 <literal>client-id</literal>，请使用 <literal>linuxrc</literal>（另见 <"
+"link xlink:href=\"https://en.opensuse.org/SDB:Linuxrc\"/>）并采用以下 "
+"<literal>ifcfg</literal>："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1014
 #, no-wrap
 msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 msgstr ""
+"ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_I"
+"D=00:03:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1015
@@ -1538,6 +1547,9 @@ msgid ""
 "<literal>man 5 wicked-config</literal>, <literal>wicked duid --help</"
 "literal>, and <literal>wicked iaid --help</literal>."
 msgstr ""
+"更多信息，请在 <literal>man 5 wicked-config</literal>、<literal>wicked duid "
+"--help</literal> 和 <literal>wicked iaid --help</literal> 里查看 <literal>dhcp4 "
+"\"create-cid\"</literal>、<literal>dhcp6 \"default-duid\"</literal> 选项的文档。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1023
@@ -1547,12 +1559,14 @@ msgid ""
 "Ethernet) and followed by the hardware address (the MAC address), for "
 "example:"
 msgstr ""
+"在以太网上传统使用的 RFC 2132 DHCPv4 <literal>client-id</literal> "
+"从硬件类型（<literal>01</literal> 用于以太网）构建，然后接硬件地址（MAC 地址），示例："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1029
 #, no-wrap
 msgid "01:52:54:00:02:c2:67"
-msgstr ""
+msgstr "01:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1030
@@ -1563,6 +1577,9 @@ msgid ""
 "machine), followed by the DHCPv6 DUID (<literal>client-id</literal> which "
 "identifies the machine)."
 msgstr ""
+"以 <literal>0xff</literal>（而不是硬件类型）开头的 RFC 4361 <literal>client-id</literal> ，"
+"后接 DHCPv6 IAID（描述机器上的接口地址组合 ID）, 后接 DHCPv6 DUID（标识机器的 <literal>client-"
+"id</literal>）。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1037
@@ -1571,6 +1588,8 @@ msgid ""
 "type used by default), the new RFC 4361 DHCPv4 <literal>client-id</literal> "
 "would be:"
 msgstr ""
+"使用上述基于硬件类型和基于硬件地址的 DUID（默认使用 LLT 类型），新的 RFC 4361 DHCPv4 <literal>client-"
+"id</literal> 将为："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1044
@@ -1578,6 +1597,8 @@ msgid ""
 "Using the last bytes of the MAC address as the IAID: <literal>ff:00:02:"
 "c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"使用 MAC 地址的最后一个字节作为 "
+"IAID：<literal>ff:00:02:c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1050
@@ -1585,6 +1606,8 @@ msgid ""
 "When the IAID is a simple incremented number: <literal>ff:00:00:00:01:00:01:"
 "xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"当 IAID 是个简单的递增数字：<literal>ff:00:00:00:01:00:01:xx:xx:xx:xx:52:54:00:02:c2:67<"
+"/literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1056
@@ -1593,6 +1616,8 @@ msgid ""
 "A DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) "
 "does not have a timestamp."
 msgstr ""
+"DUID-LLT 里的 <literal>xx:xx:xx:xx</literal> 是创建时间戳。DUID-"
+"LL（<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>）不包含时间戳。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:1072
