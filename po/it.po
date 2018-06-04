@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2018-06-01 14:58+0200\n"
-"PO-Revision-Date: 2018-06-04 10:03+0000\n"
+"PO-Revision-Date: 2018-06-04 16:03+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/it/>\n"
@@ -1691,6 +1691,12 @@ msgid ""
 "(RFC 4390) and is also required to perform DNS record updates in the same "
 "zone for DHCP 4 and DHCP 6 addresses also on Ethernet."
 msgstr ""
+"L'RFC 4361 aggiorna il <literal>client-id</literal> definito nell'RFC 2132, "
+"sezione 9.14 per essere compatibile con il <literal>client-id</literal> di "
+"DHCP 6 (<literal>duid</literal>). L'uso dell'RFC 4361 è obbligatorio su "
+"Infiniband (RFC 4390) ed è anche necessario per effettuare l'aggiornamento "
+"dei record DNS all'interno della stessa zona anche su Ethernet per indirizzi "
+"DHCP 4 e DHCP 6."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:993
@@ -1702,6 +1708,8 @@ msgstr "In openSUSE Leap 15.0:"
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
 msgstr ""
+"Il server DHCP 4.3.x ISC suppota la nuova RFC 4361 (richiesta per "
+"l'aggiornamento dei DNS)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1001
@@ -1710,6 +1718,9 @@ msgid ""
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
 "(used on Infiniband)."
 msgstr ""
+"Wicked fornisce un'opzione per inviare tale <literal>client-id</literal> e "
+"utilizzare automaticamente un <literal>client-id</literal> basato su DHCPv6 "
+"su DHCPv4 (usato su Infiniband)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1008
@@ -1718,12 +1729,18 @@ msgid ""
 "<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
 "org/SDB:Linuxrc\"/>) with the following <literal>ifcfg</literal>:"
 msgstr ""
+"Per inviare il <literal>client-id</literal> durante l'installazione, usare "
+"<literal>linuxrc</literal> (si veda anche <link xlink:href=\""
+"https://en.opensuse.org/SDB:Linuxrc\"/>) con il seguente "
+"<literal>ifcfg</literal>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1014
 #, no-wrap
 msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 msgstr ""
+"ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_I"
+"D=00:03:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1015
@@ -1733,6 +1750,10 @@ msgid ""
 "<literal>man 5 wicked-config</literal>, <literal>wicked duid --help</"
 "literal>, and <literal>wicked iaid --help</literal>."
 msgstr ""
+"Per maggiori informazioni, consultare la documentazione per le opzioni "
+"<literal>dhcp4 \"create-cid\"</literal>, <literal>dhcp6 \"default-duid\""
+"</literal> in <literal>man 5 wicked-config</literal>, <literal>wicked duid "
+"--help</literal> e <literal>wicked iaid --help</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1023
@@ -1742,12 +1763,16 @@ msgid ""
 "Ethernet) and followed by the hardware address (the MAC address), for "
 "example:"
 msgstr ""
+"Su ethernet il <literal>client-id</literal> DHCPv4 di RFC 2132, "
+"tradizionalmente usato, è costruito a partire dal tipo di hardware "
+"(<literal>01</literal> per ethernet) e seguito dall'indirizzo hardware ("
+"l'indirizzo MAC), per esempio:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1029
 #, no-wrap
 msgid "01:52:54:00:02:c2:67"
-msgstr ""
+msgstr "01:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1030
@@ -1758,6 +1783,11 @@ msgid ""
 "machine), followed by the DHCPv6 DUID (<literal>client-id</literal> which "
 "identifies the machine)."
 msgstr ""
+"Il <literal>client-id</literal> di RFC 4361 comincia con "
+"<literal>0xff</literal> (invece del tipo di hardware), seguito dall'IAID "
+"DHCPv6 (l'ID di associazione all'indirizzo di interfaccia, che descrive "
+"l'interfaccia sulla macchina), seguito dal DUID DHCPv6 (<literal>client-"
+"id</literal>, che identifica la macchina)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1037
