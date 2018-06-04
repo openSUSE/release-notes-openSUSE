@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2018-06-01 14:58+0200\n"
-"PO-Revision-Date: 2018-06-01 17:03+0000\n"
+"PO-Revision-Date: 2018-06-04 10:03+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/it/>\n"
@@ -1209,6 +1209,11 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
+"Qt supporta l'adattamento automatico per monitor su X. Usa il valore di DPI "
+"dello schermo virtuale X per calcolare la dimensione dei caratteri per il "
+"monitor principale. 96 DPI è il valore predefinito. Usa poi i DPI relativi "
+"del monitor principale per derivare i DPI dei caratteri di tutti gli altri "
+"monitor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:685
@@ -1216,6 +1221,8 @@ msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
 msgstr ""
+"Due dei desktop più utilizzati bypassano questo comportamento di Qt, "
+"pertanto questa nota non si applica ad essi:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:691
@@ -1223,6 +1230,8 @@ msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
 msgstr ""
+"GNOME imposta <literal>Xft.dpi</literal> come il configurato multiplo di 96 "
+"DPI."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:697
@@ -1230,6 +1239,8 @@ msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
 msgstr ""
+"KDE Plasma disabilita l'adattamento automatico di Qt e usa una "
+"configurazione di adattamento manuale."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:703
@@ -1241,11 +1252,18 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
+"Su altri desktop questo comportamento di Qt può portare a situazioni "
+"inopportune come le seguenti: se lo schermo principale è ad alta risoluzione "
+"(&gt; 1= 144 DPI), i caratteri nelle applicazioni Qt che richiedono "
+"adattamento, come VLC, sono effettivamente scalati a metà della dimensione "
+"desiderata su tutti i monitor. Applicazioni che non richiedono adattamento, "
+"come YaST (con le impostazioni predefinite), usano gli stessi DPI su tutti i "
+"monitor. Quindi appariranno più piccole su monitor ad alta risoluzione."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:712
 msgid "You can use one of the following workarounds for this issue:"
-msgstr ""
+msgstr "È possibile usare uno dei seguenti stratagemmi per questo problema:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:717
@@ -1253,6 +1271,9 @@ msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
 msgstr ""
+"Usare un monitor con un normale valore di DPI come monitor principale. Le "
+"applicazioni che richiedono adattamento sono poi scalate in maniera "
+"appropriata sul monitor ad alta risoluzione."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:724
@@ -1261,12 +1282,15 @@ msgid ""
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
+"Impostare un valore di DPI per i caratteri (<literal>Xft.dpi</literal>). È "
+"possibile farlo anche con l'utilità di configurazione del desktop. In "
+"alternativa, dopo ogni accesso eseguire il seguente comando:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:729
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
-msgstr ""
+msgstr "echo Xft.dpi:<replaceable>VALORE_DPI</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:730
