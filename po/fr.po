@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-06-01 14:58+0200\n"
-"PO-Revision-Date: 2018-05-31 22:02+0000\n"
+"PO-Revision-Date: 2018-06-06 06:10+0000\n"
 "Last-Translator: Antoine Belvire <antoine.belvire@opensuse.org>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/fr/>\n"
@@ -799,14 +799,6 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:471
-#, fuzzy
-#| msgid ""
-#| "The bug will be fixed in a maintenance update for the kernel. However, as "
-#| "the installation image does not receive updates, this issue may occur "
-#| "during installation or first boot even after that update has shipped. In "
-#| "that case, as a temporary workaround, boot with the option "
-#| "<literal>nouveau.modeset=1</literal>. After the updated kernel including "
-#| "the fix is installed, you can remove this option again."
 msgid ""
 "The bug will be fixed in a maintenance update for the kernel. However, as "
 "the installation image does not receive updates, this issue may occur during "
@@ -819,9 +811,9 @@ msgstr ""
 "Cependant, comme l'image d'installation n'est pas mise à jour, ce problème "
 "peut se produire lors de l'installation ou du premier démarrage, même après "
 "le déploiement de cette mise à jour. Dans ce cas, en guise de solution de "
-"contournement temporaire, démarrez avec l'option <literal>nouveau.modeset=1</"
-"literal>. Une fois le noyau incluant le correctif installé, vous pourrez "
-"supprimer cette option à nouveau."
+"contournement temporaire, démarrez avec l'option "
+"<literal>nouveau.modeset=0</literal>. Une fois le noyau incluant le "
+"correctif installé, vous pourrez supprimer cette option à nouveau."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
@@ -1670,6 +1662,8 @@ msgstr ""
 #: xml/release-notes.xml:984
 msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
 msgstr ""
+"Wicked : Utiliser le <literal>client-id</literal> DHCPv4 de la RFC 4361 sur "
+"de l'Ethernet"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:985
@@ -1680,6 +1674,12 @@ msgid ""
 "(RFC 4390) and is also required to perform DNS record updates in the same "
 "zone for DHCP 4 and DHCP 6 addresses also on Ethernet."
 msgstr ""
+"La RFC 4361 met à jour le <literal>client-id</literal> défini dans la RFC "
+"2132, section 9.14, afin d'être compatible avec le <literal>client-"
+"id</literal> DHCP 6 (<literal>duid</literal>). L'utilisation de la RFC 4361 "
+"est obligatoire sur Infiniband (RFC 4390) et est également requise sur "
+"Ethernet pour mettre à jour les enregistrements DNS pour des adresses IP "
+"DHCP 4 et DHCP 6 dans la même zone."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:993
@@ -1691,6 +1691,8 @@ msgstr "Dans openSUSE Leap 15.0 :"
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
 msgstr ""
+"Le serveur ISC DHCP 4.3.x prend en charge la nouvelle RFC 4361 (requise pour "
+"la mise à jour des DNS)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1001
@@ -1699,6 +1701,9 @@ msgid ""
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
 "(used on Infiniband)."
 msgstr ""
+"Wicked fournit une option pour envoyer un tel <literal>client-id</literal> "
+"et pour utiliser automatiquement en DHCPv4 un <literal>client-id</literal> "
+"basé DHCPv6 (utilisé sur Infiniband)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1008
@@ -1707,6 +1712,10 @@ msgid ""
 "<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
 "org/SDB:Linuxrc\"/>) with the following <literal>ifcfg</literal>:"
 msgstr ""
+"Pour envoyer le <literal>client-id</literal> pendant l'installation, "
+"utilisez <literal>linuxrc</literal> (voir aussi <link xlink:href=\""
+"https://en.opensuse.org/SDB:Linuxrc\"/>) avec l'<literal>ifcfg</literal> "
+"suivant :"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1014
@@ -1722,6 +1731,10 @@ msgid ""
 "<literal>man 5 wicked-config</literal>, <literal>wicked duid --help</"
 "literal>, and <literal>wicked iaid --help</literal>."
 msgstr ""
+"Pour plus d'informations, consultez la documentation pour les options "
+"<literal>dhcp4 \"create-cid\"</literal> et <literal>dhcp6 \"default-duid\""
+"</literal> dans <literal>man 5 wicked-config</literal>, <literal>wicked duid "
+"--help</literal> et <literal>wicked iaid --help</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1023
@@ -1731,6 +1744,10 @@ msgid ""
 "Ethernet) and followed by the hardware address (the MAC address), for "
 "example:"
 msgstr ""
+"Le <literal>client-id</literal> utilisé traditionnellement en DHCPv4 sur "
+"Ethernet dans le cadre de la RFC 2132 est construit à partir du type de "
+"matériel (<literal>01</literal> pour de l'Ethernet) et de l'adresse "
+"matérielle (l'adresse MAC). Par exemple :"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:1029
@@ -1747,6 +1764,11 @@ msgid ""
 "machine), followed by the DHCPv6 DUID (<literal>client-id</literal> which "
 "identifies the machine)."
 msgstr ""
+"Le <literal>client-id</literal> de la RFC 4361 commence par "
+"<literal>0xff</literal> au lieu du type de matériel et est suivi de l'IAID "
+"DHCPv6 (l'ID d'association interface-adresse qui décrit l'interface sur la "
+"machine) puis du DUID DHCPv6 (le <literal>client-id</literal> qui identifie "
+"la machine)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1037
@@ -1755,6 +1777,9 @@ msgid ""
 "type used by default), the new RFC 4361 DHCPv4 <literal>client-id</literal> "
 "would be:"
 msgstr ""
+"En utilisant le DUID (de type LLT par défaut), basé sur le type de matériel "
+"et sur l'adresse matérielle, le <literal>client-id</literal> DHCPv4 de la "
+"nouvelle RFC 4361 serait :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1044
@@ -1762,6 +1787,8 @@ msgid ""
 "Using the last bytes of the MAC address as the IAID: <literal>ff:00:02:"
 "c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"En utilisant les derniers octets de l'adresse MAC comme IAID : "
+"<literal>ff:00:02:c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1050
@@ -1769,6 +1796,8 @@ msgid ""
 "When the IAID is a simple incremented number: <literal>ff:00:00:00:01:00:01:"
 "xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 msgstr ""
+"Quand l'IAID est un simple nombre incrémenté : "
+"<literal>ff:00:00:00:01:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1056
@@ -1777,6 +1806,10 @@ msgid ""
 "A DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) "
 "does not have a timestamp."
 msgstr ""
+"Le <literal>xx:xx:xx:xx</literal> dans le DUID-LLT est l'horodatage de "
+"création. Un DUID-LL "
+"(<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) ne contient "
+"pas d'horodatage."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:1072
