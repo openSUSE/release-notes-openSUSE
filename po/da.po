@@ -3,10 +3,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2018-06-01 14:58+0200\n"
-"PO-Revision-Date: 2018-03-20 21:02+0000\n"
+"PO-Revision-Date: 2018-06-08 13:01+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap_15_0/da/>\n"
+"opensuse/leap-15_0/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -723,7 +723,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:502
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Ingen standard Compose-tastekombination"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:503
@@ -734,6 +734,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"I tidligere versioner af openSUSE, gav compose-tastekombinationen mulighed "
+"for at skrive tegn som ikke var del af det almindelige tastaturlayout. For "
+"f.eks. at få <quote>å</quote>, kunne du trykke på og slippe <keycombo><"
+"keycap function=\"shift\"/><keycap>Højre Ctrl</keycap></keycombo> og så "
+"trykke på <keycap>a</keycap> to gange."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:510
@@ -749,6 +754,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Brug <filename>/etc/X11/Xmodmap</filename>-filen til at definere en "
+"systembred tilpasset compose-tastekombination og kig efter følgende linjer:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:522
@@ -763,6 +770,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:530
@@ -771,6 +786,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Fjern <literal>!</literal>-tegnene i begyndelsen af linjerne for at "
+"afkommentere eksempelkoden. Bemærk dog at opsætningen til "
+"<filename>Xmodmap</filename> overskrives hvis du bruger "
+"<command>setxkbmap</command>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
@@ -779,6 +798,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Brug dit skrivebords tastaturkonfigurationsværktøj eller "
+"kommandolinjeværktøjet <command>setxkbmap</command> til at definere en "
+"brugertilpasset compose-tastekombination:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:543
@@ -788,6 +810,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_TAST</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:546
@@ -797,6 +823,10 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"Brug dit foretrukne tegn til <replaceable>COMPOSE_TAST</replaceable>-"
+"variablen, f.eks. <literal>ralt</literal>, <literal>lwin</literal>, "
+"<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal> "
+"eller <literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:555
@@ -804,6 +834,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"Som alternativ kan du bruge en IBus-inputmetode som giver dig mulighed for "
+"at skrive de tegn du har brug for uden en Compose-tast."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:565
@@ -1230,6 +1262,9 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"Der kunne før i tiden være forvirring over hvordan forskellen mellem de "
+"meget enslydende navngivne <command>systemctl</command>-underkommandoer "
+"<literal>reload</literal> og <literal>restart</literal> virker for AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:895
@@ -1238,6 +1273,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> udfører ordentlig genindlæsning "
+"af alle AppArmor-profiler. (Den var og bliver ved med at være den anbefalede "
+"måde til at genindlæse AppArmor-profiler)."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:902
@@ -1247,6 +1285,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> betød at AppArmor ville "
+"stoppe, hvorved alle AppArmor-profiler blev afindlæst og så genstartet, "
+"hvilket efterlod alle eksisterende processer ukonfigureret. Kun nyligt "
+"startede processer blev konfigureret igen."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:910
@@ -1255,6 +1297,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"Desværre giver <systemitem>systemd</systemitem> ikke en løsning til "
+"problemstillingen i sit unit-filformat som udgøres af "
+"<literal>restart</literal>-scenariet."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:915
@@ -1263,6 +1308,9 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"Fra AppArmor 2.12, virker kommandoen <command>systemctl stop "
+"apparmor</command> ikke. Som en konsekvens heraf genindlæser <command>"
+"systemctl restart apparmor</command> nu AppArmor-profiler korrekt."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:921
@@ -1271,6 +1319,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Brug i stedet den nye kommando <command>aa-teardown</command> til at "
+"afindlæse alle AppArmor-profiler, hvilket matcher den tidligere opførsel af "
+"<command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:926
