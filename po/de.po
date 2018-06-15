@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-06-01 14:58+0200\n"
-"PO-Revision-Date: 2018-06-02 13:02+0000\n"
+"PO-Revision-Date: 2018-06-15 23:02+0000\n"
 "Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/de/>\n"
@@ -207,7 +207,7 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:94 xml/release-notes.xml:327
 msgid "Make sure to also review <xref linkend=\"sec.driver\"/>."
-msgstr ""
+msgstr "Stellen Sie sicher auch  <xref linkend=\"sec.driver\"/> zu überprüfen."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -402,9 +402,9 @@ msgid ""
 "command>:"
 msgstr ""
 "Wenn Sie diese Systemrolle verwenden, führt das System standardmäßig eine "
-"tägliche Aktualisierung und einen Neustart zwischen 03:30 und 05:00 Uhr "
+"tägliche Aktualisierung und einen Neustart zwischen 03:30 Uhr und 05:00 Uhr "
 "durch. Beide Aktionen sind systemd-basiert und können bei Bedarf mit "
-"<command>systemctl</command> deaktiviert werden"
+"<command>systemctl</command> deaktiviert werden:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:208
@@ -785,7 +785,7 @@ msgstr "Treiber und Hardware"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:463
 msgid "Hang on Machines with Nvidia GPUs and Hybrid Graphics"
-msgstr ""
+msgstr "Aufhängung der Maschinen mit Nvidia GPUs und Hybrid Grafiken"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:464
@@ -796,6 +796,11 @@ msgid ""
 "graphics, such as laptops that include integrated Intel graphics and a "
 "discrete Nvidia graphics card."
 msgstr ""
+"Mit dem mitgelieferten Kernel in openSUSE Leap 15.0 GM kann der Nouveau-"
+"Treiber für Nvidia-Grafikkarten beim Neustart oder bei Laufzeit-Stom-"
+"Management-Aktionen hängen bleiben. Dieser Bug tritt primär auf Systemen mit "
+"Hybrid-Grafiken, wie Laptops mit integrierten Intel-Grafikkarten und einer "
+"separaten Nvidia-Grafikkarte, auf."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:471
@@ -807,6 +812,13 @@ msgid ""
 "literal>. After the updated kernel including the fix is installed, you can "
 "remove this option again."
 msgstr ""
+"Der Bug wird in einem Maintenance-Update für den Kernel gefixt. Allerdings "
+"erhält das Installations-Image keine Updates, weshalb dieser Issue bei der "
+"Installation oder dem ersten Bootvorgang, sogar nachdem dieses Update "
+"geliefert wurde, noch auftreten kann. In diesem Fall booten Sie, als "
+"temporären Workaround, mit der Option <literal>nouveau.modeset=0</literal>. "
+"Nach dem aktualisierten Kernel, womit der Fix installiert ist, können Sie "
+"diese Option wieder löschen."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
@@ -1082,7 +1094,7 @@ msgstr ""
 #. (itstool) path: step/para
 #: xml/release-notes.xml:629
 msgid "Set GDM as the display manager:"
-msgstr "Setze GDM (Gnome Display Manager) als Display Manager"
+msgstr "GDM (Gnome Display Manager) als Display Manager setzen:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:632
@@ -1181,6 +1193,11 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
+"Qt unterstützt automatisch über-Monitor-Skalierung auf X. Das verwendet den "
+"DPI-Wert des virtuellen X-Bildschirm zur Kalkulation der Schriftgröße für "
+"den Haupt-Monitor. Standardmäßig ist dieser Wert 96 DPI. Das verwendet den "
+"relativen DPI des Haupt-Monitors um die Schrift-DPI für alle anderen "
+"Monitore abzuleiten."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:685
@@ -1197,6 +1214,8 @@ msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
 msgstr ""
+"GNOME wird <literal>Xft.dpi</literal> auf das konfigurierte Vielfache von 96 "
+"DPI setzen."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:697
@@ -1204,6 +1223,8 @@ msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
 msgstr ""
+"KDE Plasma deaktiviert die automatische Skalierung von Qt und verwendet eine "
+"manuelle Skalierungs-Konfiguration."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:703
@@ -1240,7 +1261,7 @@ msgstr ""
 #: xml/release-notes.xml:729
 #, no-wrap
 msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
-msgstr ""
+msgstr "echo Xft.dpi:<replaceable>DPI_WERT</replaceable> | xrdb -nocpp -merge"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:730
@@ -1643,10 +1664,8 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:993
-#, fuzzy
-#| msgid "openSUSE Leap"
 msgid "In openSUSE Leap 15.0:"
-msgstr "openSUSE Leap"
+msgstr "In openSUSE Leap 15.0:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:996
