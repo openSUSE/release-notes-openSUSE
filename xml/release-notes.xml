@@ -404,6 +404,35 @@
     </itemizedlist>
    </sect3>
 
+   <sect3 xml:id="sec.upgrade.encrypted-disk">
+    <!-- boo#1097811, boo#1094963 -->
+    <title>Offline Upgrade Fails When Encrypted Disks Are Mapped by Name</title>
+    <para>
+     Using the offline upgrade feature of the installation medium on a
+     computer with an encrypted data partition, such as
+     <filename>/home</filename>, can crash the &yast; installer when
+     selecting the previous installation.
+    </para>
+    <para>
+     This happens when the encrypted data partition is listed in
+     <filename>/etc/fstab</filename> by device mapper name, such as
+     <filename>/dev/mapper/cr_home</filename>. In the installation
+     environment, &yast; cannot associate that path with an automatically
+     detected volume.
+    </para>
+    <para>
+     To be able to use the offline upgrade functionality, before starting the
+     upgrade, change <filename>/etc/fstab</filename> to use device UUIDs
+     instead of device names. To determine the correct device UUIDs, use the
+     following command:
+    </para>
+    <screen>blkid | grep "<replaceable>DEVICE_MAPPER_NAME</replaceable>"</screen>
+    <para>
+     The output of this command will contain a quoted UUID after the string
+     <literal>UUID=</literal>.
+    </para>
+   </sect3>
+
    <sect3 xml:id="sec.upgrade.gpg-database">
     <!-- boo#1093982 -->
     <title>GPG Has New Key Database Format</title>
