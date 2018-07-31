@@ -403,6 +403,24 @@
      </listitem>
     </itemizedlist>
    </sect3>
+
+   <sect3 xml:id="sec.upgrade.gpg-database">
+    <!-- boo#1093982 -->
+    <title>GPG Has New Key Database Format</title>
+    <para>
+     &thisflavor; 42.3 shipped with GPG 2.0, while &thisversion; includes
+     GPG 2.2. In between these GPG versions, a new key database format was
+     introduced. GPG 2.2 will automatically upgrade your key ring to the new
+     format. However, the upgraded key ring cannot be used by older versions
+     of GPG anymore.
+    </para>
+    <para>
+     If you need to keep the older version of your key database available,
+     back up the directory <filename>~/.gnupg</filename> before starting the
+     upgrade to &thisversion;.
+    </para>
+   </sect3>
+
   </sect2>
 
  </sect1>
