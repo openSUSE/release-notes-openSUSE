@@ -899,6 +899,99 @@ ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>
    This section lists changes to security features in &thisversion;.
   </para>
 
+  <sect2 xml:id="sec.package.gpg-key">
+   <!-- boo#1102191 -->
+   <!-- http://dominique.leuenberger.net/blog/2017/03/zypper-and-rpm-says-warning-unsupported-version-of-key-v3/ -->
+   <title>GPG Does Not Support GPG V3 Keys Anymore, Resulting in Zypper/<command>rpm</command> Warnings</title>
+   <para>
+    &thisflavor; 42.3 shipped with GPG 2.0, while &thisversion; includes GPG
+    2.2. In between these GPG versions, support for GPG V3 keys was removed.
+    If your system's key database still contains GPG V3 keys, you may
+    receive warnings about this when executing Zypper or
+    <command>rpm</command> commands, as these commands are checking the
+    integrity of the package database. These warnings take the
+    form <literal>warning: Unsupported version of key: V3</literal>.
+   </para>
+   <para>
+    Usually, these warnings are benign, as these keys may have been used for
+    repositories that are no longer enabled on the system or that have
+    since had key updates. However, if these keys are still in active
+    use by the upstream repository, they must be replaced as soon as possible:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      Package management tools in &thisversion; can no longer use them to
+      verify package integrity.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      The keys in themselves are insecure. Hence, even though older package
+      management tools will use them to verify integrity of packages, the
+      result of this check cannot be trusted anymore.
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    To delete such keys, perform the following:
+   </para>
+   <procedure>
+    <step>
+     <para>
+      Run an <command>rpm</command> command with high verbosity and check its
+      output:
+     </para>
+<screen>
+<prompt>tux@linux &gt; </prompt><command>rpm -vv -qf /etc</command>
+ufdio: 1 reads, 18883 total bytes in 0.000006 secs
+[...]
+D: read h# 168 Header sanity check: OK
+warning: Unsupported version of key: V3
+[...]
+</screen>
+     <para>
+      In the example, header 168 is associated with an outdated
+      key&mdash;the warning appears directly after the message that this
+      specific header is being checked.
+     </para>
+    </step>
+    <step>
+     <para>
+      Find out the key number associated with the header:
+     </para>
+     <screen><prompt>tux@linux &gt; </prompt>rpm -q --querybynumber <replaceable>HEADER</replaceable></screen>
+     <para>
+      Replace <replaceable>HEADER</replaceable> with the required header
+      number. In the example, that would be <literal>168</literal>.
+     </para>
+     <para>
+      This command returns a key identifier starting with
+      <literal>gpg-pubkey-</literal>.
+     </para>
+    </step>
+    <step performance="optional">
+     <para>
+      Use the key identifier (<replaceable>KEY_ID</replaceable>) to learn
+      more about the key:
+     </para>
+     <screen><prompt>tux@linux &gt; </prompt>rpm -qi <replaceable>KEY_ID</replaceable></screen>
+    </step>
+    <step>
+     <para>
+      Remove the key from the system:
+     </para>
+     <screen><prompt>tux@linux &gt; </prompt>sudo rpm -e <replaceable>KEY_ID</replaceable></screen>
+    </step>
+    <step>
+     <para>
+      If you continue to see warnings on subsequent uses of package
+      management tools, repeat the procedure.
+     </para>
+    </step>
+   </procedure>
+  </sect2>
+
   <sect2 xml:id="sec.general.apparmor-restart">
    <!-- boo#1074097 -->
    <title><command>systemctl stop apparmor</command> Does Not Work</title>
