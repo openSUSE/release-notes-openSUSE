@@ -335,11 +335,34 @@
    <title>Upgrading from &opensuseleap; 42.3</title>
    <para/>
 
+   <sect3 xml:id="sec.upgrade.cryptconfig">
+    <!-- boo#1099004, boo#1095657, FATE#323541 -->
+    <title><package>cryptconfig</package> Has Been Removed</title>
+    <para>
+     Previous versions of &thisflavor; supported encrypting home directories
+     individually via <package>cryptconfig</package>. This feature and the
+     <package>cryptconfig</package> package are not available anymore in
+     &thisversion;.
+    </para>
+    <para>
+     To encrypt user data on &thisversion;, encrypt the whole partition or
+     volume which contains the home directories.
+    </para>
+    <tip>
+     <title>Decrypt Before Upgrading</title>
+     <para>
+      Before performing an upgrade from &thisflavor; 42.3, encrypted home
+      directory images need to be decrypted. Otherwise, users will not have
+      access to them after the upgrade.
+     </para>
+    </tip>
+   </sect3>
+
    <sect3 xml:id="sec.server.postfix-directory">
     <!-- boo#1091866 -->
     <title>Postfix Admin Uses Backwards-Incompatible Directory Layout</title>
     <para>
-     Starting with the version 3.2, as shipped in &thisflavor; 15.0,
+     Starting with the version 3.2, as shipped in &thisversion;,
      Postfix Admin (package <package>postfixadmin</package>) uses a new and
      backwards-incompatible directory layout:
     </para>
@@ -490,6 +513,14 @@
    </para>
 
    <itemizedlist>
+    <listitem>
+     <para>
+      <!-- boo#1099004 -->
+      <package>cryptconfig</package>: Was not maintained anymore. Use
+      partition encryption instead. For more information, see
+      <xref linkend="sec.upgrade.cryptconfig"/>.
+     </para>
+    </listitem>
     <listitem>
      <para>
       <!-- boo#1100005 -->
