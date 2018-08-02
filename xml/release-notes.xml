@@ -205,7 +205,7 @@
     are systemd-based and if necessary can be disabled using
     <command>systemctl</command>:
    </para>
-   <screen>systemctl disable --now transactional-update.timer rebootmgr.service</screen>
+   <screen><prompt>tux@linux &gt; </prompt><command>sudo systemctl disable --now transactional-update.timer rebootmgr.service</command></screen>
    <para>
     For more information about transactional updates, see the &kubic; blog posts
     <link xlink:href="https://kubic.opensuse.org/blog/2018-04-04-transactionalupdates/"/>
@@ -427,7 +427,7 @@
         <para>
          To make the alias available on all virtual hosts, run:
         </para>
-        <screen>a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart</screen>
+        <screen><prompt>tux@linux &gt; </prompt><command>sudo a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart</command></screen>
        </listitem>
        <listitem>
         <para>
@@ -462,7 +462,7 @@
      instead of device names. To determine the correct device UUIDs, use the
      following command:
     </para>
-    <screen>blkid | grep "<replaceable>DEVICE_MAPPER_NAME</replaceable>"</screen>
+    <screen><prompt>tux@linux &gt; </prompt><command>blkid | grep "<replaceable>DEVICE_MAPPER_NAME</replaceable>"</command></screen>
     <para>
      The output of this command will contain a quoted UUID after the string
      <literal>UUID=</literal>.
@@ -516,7 +516,7 @@
     that <package>lifecycle-data-openSUSE</package> is installed, then use
     the command:
    </para>
-   <screen>zypper lifecycle</screen>
+   <screen><prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command></screen>
   </sect2>
 
   <sect2 xml:id="sec.package.removed">
@@ -643,7 +643,7 @@
       <command>setxkbmap</command>:
      </para>
      <screen>
-setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>
+<prompt>tux@linux &gt; </prompt><command>setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable></command>
      </screen>
      <para>
       For the variable <replaceable>COMPOSE_KEY</replaceable>, use your
@@ -696,13 +696,13 @@ setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_
     For example, to check the value of
     <literal>default-displaymanager</literal>, use:
    </para>
-<screen>sudo update-alternatives --display default-displaymanager</screen>
+<screen><prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display default-displaymanager</command></screen>
    <para>
     To switch the <literal>default-displaymanager</literal> to
     <command>xdm</command>, use:
    </para>
-<screen>sudo update-alternatives --set default-displaymanager \
-  /usr/lib/X11/displaymanagers/xdm</screen>
+<screen><prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \
+  /usr/lib/X11/displaymanagers/xdm</command></screen>
    <para>
     To enable graphical management of alternatives, use the &yast; module
     <guimenu>Alternatives</guimenu> that can be installed from the package
@@ -731,8 +731,8 @@ setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_
      <para>
       Set GDM as the display manager:
      </para>
-<screen>sudo update-alternatives --set default-displaymanager \
-  /usr/lib/X11/displaymanagers/gdm</screen>
+<screen><prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \
+  /usr/lib/X11/displaymanagers/gdm</command></screen>
     </step>
     <step>
      <para>
@@ -828,7 +828,7 @@ ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>
       either with the configuration utility of your desktop. Alternatively,
       after every login run the following command:
      </para>
-     <screen>echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</screen>
+     <screen><prompt>tux@linux &gt; </prompt><command>echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command></screen>
      <para>
       Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI
       value for the primary monitor.
@@ -962,7 +962,7 @@ ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>
     <para>
      Enable the <literal>openSUSE-Leap-42.3-Non-Oss</literal> repository using
      YaST or on the command line using zypper:
-     <screen>zypper mr -e repo-non-oss</screen>
+     <screen><prompt>tux@linux &gt; </prompt><command>sudo zypper mr -e repo-non-oss</command></screen>
     </para>
    </sect2> -->
  </sect1>
@@ -1044,7 +1044,7 @@ warning: Unsupported version of key: V3
      <para>
       Find out the key number associated with the header:
      </para>
-     <screen><prompt>tux@linux &gt; </prompt>rpm -q --querybynumber <replaceable>HEADER</replaceable></screen>
+     <screen><prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber <replaceable>HEADER</replaceable></command></screen>
      <para>
       Replace <replaceable>HEADER</replaceable> with the required header
       number. In the example, that would be <literal>168</literal>.
@@ -1059,13 +1059,13 @@ warning: Unsupported version of key: V3
       Use the key identifier (<replaceable>KEY_ID</replaceable>) to learn
       more about the key:
      </para>
-     <screen><prompt>tux@linux &gt; </prompt>rpm -qi <replaceable>KEY_ID</replaceable></screen>
+     <screen><prompt>tux@linux &gt; </prompt><command>rpm -qi <replaceable>KEY_ID</replaceable></command></screen>
     </step>
     <step>
      <para>
       Remove the key from the system:
      </para>
-     <screen><prompt>tux@linux &gt; </prompt>sudo rpm -e <replaceable>KEY_ID</replaceable></screen>
+     <screen><prompt>tux@linux &gt; </prompt><command>sudo rpm -e <replaceable>KEY_ID</replaceable></command></screen>
     </step>
     <step>
      <para>
@@ -1206,7 +1206,7 @@ warning: Unsupported version of key: V3
     <link xlink:href="https://en.opensuse.org/SDB:Linuxrc"/>)
     with the following <literal>ifcfg</literal>:
    </para>
-   <screen>ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67</screen>
+   <screen><?dbsuse-fo font-size="0.65em"?>ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67</screen>
    <para>
     For more information, see the documentation for the options
     <literal>dhcp4 &quot;create-cid&quot;</literal>,
@@ -1276,7 +1276,7 @@ warning: Unsupported version of key: V3
      View a detailed changelog information about a particular package from its
      RPM:
     </para>
-    <screen>rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm</screen>
+    <screen><prompt>tux@linux &gt; </prompt><command>rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm</command></screen>
     <para>
      Replace <replaceable>FILENAME</replaceable> with the name of the RPM.
     </para>
