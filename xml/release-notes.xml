@@ -335,6 +335,19 @@
    <title>Upgrading from &opensuseleap; 42.3</title>
    <para/>
 
+   <sect3 xml:id="sec.upgrade.package-downgrade">
+    <!-- boo#1095597 -->
+    <title>Package Downgrades During System Upgrade</title>
+    <para>
+     The RPM package information of packages shipped in &thisversion; contain
+     an added &thisflavor; version string. For this reason, packages that
+     contain the same upstream version of software as shipped in
+     &thisflavor; 42.3 will be displayed as downgrades, even though they
+     actually contain the same software but compiled for a newer operating
+     system.
+    </para>
+   </sect3>
+
    <sect3 xml:id="sec.upgrade.cryptconfig">
     <!-- boo#1099004, boo#1095657, FATE#323541 -->
     <title><package>cryptconfig</package> Has Been Removed</title>
