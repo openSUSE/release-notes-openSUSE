@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2018-08-02 21:20+0200\n"
-"PO-Revision-Date: 2018-06-02 02:36+0000\n"
+"PO-Revision-Date: 2018-08-03 01:03+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ja/>\n"
@@ -401,10 +401,11 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:208
-#, fuzzy, no-wrap
-#| msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo systemctl disable --now transactional-update.timer rebootmgr.service</command>"
-msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo systemctl disable --now "
+"transactional-update.timer rebootmgr.service</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:209
@@ -630,7 +631,7 @@ msgstr "openSUSE Leap 42.3 からのアップグレード"
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:340
 msgid "Package Downgrades During System Upgrade"
-msgstr ""
+msgstr "システムアップグレード時のパッケージのダウングレードについて"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:341
@@ -641,11 +642,15 @@ msgid ""
 "Leap 42.3 will be displayed as downgrades, even though they actually contain "
 "the same software but compiled for a newer operating system."
 msgstr ""
+"openSUSE Leap 15.0 に同梱されている RPM パッケージの情報には、 openSUSE Leap "
+"のバージョン文字列が含まれるようになっています。そのため、 openSUSE Leap 42.3 で同梱されているものと同じ提供元バージョンを、 "
+"openSUSE Leap 15.0 でも公開しているパッケージについては、実際には新しいオペレーティングシステム向けに同じソフトウエアを構築し直している"
+"にもかかわらず、ダウングレードとして表示してしまいます。"
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:353
 msgid "<package>cryptconfig</package> Has Been Removed"
-msgstr ""
+msgstr "<package>cryptconfig</package> の削除について"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:354
@@ -655,6 +660,9 @@ msgid ""
 "<package>cryptconfig</package> package are not available anymore in openSUSE "
 "Leap 15.0."
 msgstr ""
+"以前のバージョンの openSUSE Leap では、 <package>cryptconfig</package> "
+"で個別に暗号化されたホームディレクトリに対応していました。ですが、 openSUSE Leap 15.0 では、この機能と "
+"<package>cryptconfig</package> が利用できなくなっています。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:360
@@ -662,11 +670,12 @@ msgid ""
 "To encrypt user data on openSUSE Leap 15.0, encrypt the whole partition or "
 "volume which contains the home directories."
 msgstr ""
+"openSUSE Leap 15.0 でユーザデータを暗号化するには、ホームディレクトリを含むパーティションまたはボリュームの全体を暗号化してください。"
 
 #. (itstool) path: tip/title
 #: xml/release-notes.xml:365
 msgid "Decrypt Before Upgrading"
-msgstr ""
+msgstr "アップグレード前の暗号解除について"
 
 #. (itstool) path: tip/para
 #: xml/release-notes.xml:366
@@ -675,6 +684,8 @@ msgid ""
 "directory images need to be decrypted. Otherwise, users will not have access "
 "to them after the upgrade."
 msgstr ""
+"openSUSE Leap 42.3 からアップグレードを実施する前に、暗号化されたホームディレクトリのイメージがある場合、暗号を解除する必要があります。"
+"これを行なわないと、アップグレード後にユーザがアクセスできなくなってしまいます。"
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:376
@@ -685,19 +696,14 @@ msgstr ""
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:377
-#, fuzzy
-#| msgid ""
-#| "Starting with the version 3.2, as shipped in openSUSE Leap 15.0, "
-#| "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
-#| "backwards-incompatible directory layout:"
 msgid ""
 "Starting with the version 3.2, as shipped in openSUSE Leap 15.0, "
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
-"openSUSE Leap 15.0 で同梱されるようになったバージョン 3.2 では、 Postfix "
-"Admin (<package>postfixadmin</package> パッケージ) は、新しく後方互換性のない"
-"ディレクトリレイアウトを使用するようになっています。"
+"openSUSE Leap 15.0 で同梱されるようになったバージョン 3.2 では、 Postfix Admin "
+"(<package>postfixadmin</package> パッケージ) "
+"は、新しく後方互換性のないディレクトリレイアウトを使用するようになっています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:384
@@ -771,10 +777,11 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:430
-#, fuzzy, no-wrap
-#| msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart</command>"
-msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo a2enflag POSTFIXADMIN "
+"&amp;&amp; rcapache2 restart</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:433
@@ -788,7 +795,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:445
 msgid "Offline Upgrade Fails When Encrypted Disks Are Mapped by Name"
-msgstr ""
+msgstr "暗号化されたディスクが名前でマップされている場合にオフラインアップグレードが失敗する問題について"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:446
@@ -797,6 +804,9 @@ msgid ""
 "with an encrypted data partition, such as <filename>/home</filename>, can "
 "crash the YaST installer when selecting the previous installation."
 msgstr ""
+"暗号化されたデータパーティション (たとえば <filename>/home</filename> など) "
+"が存在する状態で、コンピュータをインストールメディア経由でオフラインアップグレードすると、以前のバージョンのインストールを選択する際、 YaST "
+"がクラッシュしてしまいます。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:452
@@ -806,6 +816,9 @@ msgid ""
 "cr_home</filename>. In the installation environment, YaST cannot associate "
 "that path with an automatically detected volume."
 msgstr ""
+"これは、対象のデータパーティションが <filename>/etc/fstab</filename> 内でデバイスマッパーの名前で記載されている (例: "
+"<filename>/dev/mapper/cr_home</filename>) 場合に発生します。 YaST "
+"ではこれらのパスを、自動検出されたボリュームに関連づけることができません。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:459
@@ -815,25 +828,29 @@ msgid ""
 "of device names. To determine the correct device UUIDs, use the following "
 "command:"
 msgstr ""
+"オフラインアップグレードの機能を利用できるようにするには、アップグレードを実施する前に <filename>/etc/fstab</filename> "
+"の内容を編集して、デバイス名ではなくデバイスの UUID を使用するように変更してください。なお、デバイスの UUID "
+"を表示するには、下記のコマンドを使用します:"
 
 #. (itstool) path: sect3/screen
 #: xml/release-notes.xml:465
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>blkid | grep \"<replaceable>DEVICE_MAPPER_NAME</replaceable>\"</command>"
-msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>blkid | grep \""
+"<replaceable>DEVICE_MAPPER_NAME</replaceable>\"</command>"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:466
 msgid ""
 "The output of this command will contain a quoted UUID after the string "
 "<literal>UUID=</literal>."
-msgstr ""
+msgstr "上記のコマンドを実行すると、 <literal>UUID=</literal> の後ろに引用符で括られた UUID が表示されます。"
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:474
 msgid "GPG Has New Key Database Format"
-msgstr ""
+msgstr "GPG における新しい鍵データベース形式について"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:475
@@ -844,6 +861,10 @@ msgid ""
 "format. However, the upgraded key ring cannot be used by older versions of "
 "GPG anymore."
 msgstr ""
+"openSUSE Leap 42.3 では GPG 2.0 が同梱されていましたが、 openSUSE Leap 15.0 では GPG 2.2 "
+"が同梱されるようになっています。 GPG 2.2 では、新しい鍵データベース形式が提供されるようになり、 GPG 2.2 "
+"を利用することで自動的に新しい形式にアップグレードされるようになっています。ただし、アップグレード後は古いバージョンの GPG "
+"では利用できなくなってしまいます。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:482
@@ -852,6 +873,8 @@ msgid ""
 "up the directory <filename>~/.gnupg</filename> before starting the upgrade "
 "to openSUSE Leap 15.0."
 msgstr ""
+"古い鍵データベース形式のまま利用したい場合は、 openSUSE Leap 15.0 にアップグレードする前に、 "
+"<filename>~/.gnupg</filename> ディレクトリをバックアップしておいてください。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:494
@@ -891,19 +914,17 @@ msgstr ""
 #: xml/release-notes.xml:519
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
-msgstr ""
+msgstr "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:523
-#, fuzzy
-#| msgid "Removed and Replaced Packages"
 msgid "Removed Packages"
-msgstr "削除または置換されたパッケージ"
+msgstr "削除されたパッケージ"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:524
 msgid "Removed packages are not shipped as part of the distribution anymore."
-msgstr ""
+msgstr "削除されたパッケージとは、ディストリビューションに同梱されなくなったパッケージを表わしています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:530
@@ -912,13 +933,16 @@ msgid ""
 "encryption instead. For more information, see <xref linkend=\"sec.upgrade."
 "cryptconfig\"/>."
 msgstr ""
+"<package>cryptconfig</package>: "
+"メンテナンスが行なわれなくなっています。暗号化を必要とする場合は、パーティションの暗号化をお使いください。詳しくは <xref linkend=\""
+"sec.upgrade.cryptconfig\"/> をお読みください。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
 msgid ""
 "<package>git-annex</package>: Has been removed because the package is not "
 "maintained anymore."
-msgstr ""
+msgstr "<package>git-annex</package>: メンテナンスが行なわれなくなっているため、削除されています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:545
@@ -929,6 +953,11 @@ msgid ""
 "\"https://doc.opensuse.org/documentation/leap/security/html/book.security/"
 "cha.security.firewall.html#sec.security.firewall.firewalld\"/>."
 msgstr ""
+"<package>SuSEfirewall2</package>: <package>firewalld</package> に置き換えられました。 "
+"<package>firewalld</package> への移行方法について、詳しくは <link xlink:href=\""
+"https://ja.opensuse.org/Firewalld\"/> や <link xlink:href=\"https://doc.opensu"
+"se.org/documentation/leap/security/html/book.security/cha.security.firewall.h"
+"tml#sec.security.firewall.firewalld\"/> をお読みください。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:560
@@ -1091,18 +1120,16 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:645
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
-#| "     "
+#, no-wrap
 msgid ""
 "\n"
 "<prompt>tux@linux &gt; </prompt><command>setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable></command>\n"
 "     "
 msgstr ""
 "\n"
-"setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
+"<prompt>tux@linux &gt; </prompt><command>setxkbmap "
+"<replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_KEY</replaceable></command>\n"
 "     "
 
 #. (itstool) path: listitem/para
@@ -1182,10 +1209,11 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:699
-#, fuzzy, no-wrap
-#| msgid "sudo update-alternatives --display default-displaymanager"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display default-displaymanager</command>"
-msgstr "sudo update-alternatives --display default-displaymanager"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display "
+"default-displaymanager</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:700
@@ -1198,16 +1226,14 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:704
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm</command>"
 msgstr ""
-"sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set "
+"default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:706
@@ -1262,16 +1288,14 @@ msgstr "GDM をディスプレイマネージャとして設定します:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:734
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/gdm"
+#, no-wrap
 msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm</command>"
 msgstr ""
-"sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/gdm"
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set "
+"default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/gdm</command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:738
@@ -1434,10 +1458,11 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:831
-#, fuzzy, no-wrap
-#| msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command>"
-msgstr "echo Xft.dpi:<replaceable>DPI_値</replaceable> | xrdb -nocpp -merge"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>echo "
+"Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:832
