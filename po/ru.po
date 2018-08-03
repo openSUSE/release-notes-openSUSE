@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2018-06-29 20:40+0200\n"
+"POT-Creation-Date: 2018-08-03 10:55+0200\n"
 "PO-Revision-Date: 2018-06-02 20:34+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
@@ -690,36 +690,55 @@ msgstr ""
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:371
+#, fuzzy
+#| msgid "Removed and Replaced Packages"
+msgid "Removed Packages"
+msgstr "Удалённые и заменённые пакеты"
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:372
+msgid "Removed packages are not shipped as part of the distribution anymore."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:378
+msgid ""
+"<package>git-annex</package>: Has been removed because the package is not "
+"maintained anymore."
+msgstr ""
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:466
+#: xml/release-notes.xml:467
 msgid "More Information and Feedback"
 msgstr "Дополнительные сведения и обратная связь"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:469
+#: xml/release-notes.xml:470
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Читать файлы <filename>README</filename> на установочном носителе."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:474
+#: xml/release-notes.xml:475
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Просмотреть подробный журнал изменений конкретного пакета из его RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:478
+#: xml/release-notes.xml:479
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>ИМЯ_ФАЙЛА</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:479
+#: xml/release-notes.xml:480
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Замените <replaceable>ИМЯ_ФАЙЛА</replaceable> на имя пакета RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:484
+#: xml/release-notes.xml:485
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -728,7 +747,7 @@ msgstr ""
 "<filename>ChangeLog</filename> на верхнем уровне диска."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:490
+#: xml/release-notes.xml:491
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -736,7 +755,7 @@ msgstr ""
 "Больше сведений вы найдёте в каталоге <filename>docu</filename> на диске."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:496
+#: xml/release-notes.xml:497
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -745,7 +764,7 @@ msgstr ""
 "\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:502
+#: xml/release-notes.xml:503
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -754,7 +773,7 @@ msgstr ""
 "opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:509
+#: xml/release-notes.xml:510
 msgid "Copyright © SUSE LLC"
 msgstr "Авторские права © SUSE LLC"
 
@@ -971,11 +990,13 @@ msgstr "Авторские права © SUSE LLC"
 
 #~ msgid ""
 #~ "\n"
-#~ "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
+#~ "setxkbmap <replaceable>[...]</replaceable> -option compose:"
+#~ "<replaceable>COMPOSE_KEY</replaceable>\n"
 #~ "     "
 #~ msgstr ""
 #~ "\n"
-#~ "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>КЛАВИША_COMPOSE</replaceable>\n"
+#~ "setxkbmap <replaceable>[...]</replaceable> -option compose:"
+#~ "<replaceable>КЛАВИША_COMPOSE</replaceable>\n"
 #~ "     "
 
 #~ msgid ""
@@ -1120,7 +1141,8 @@ msgstr "Авторские права © SUSE LLC"
 #~ "\n"
 #~ "[X11]\n"
 #~ "EnableHiDPI=true\n"
-#~ "ServerArguments=-nolisten tcp -dpi <replaceable>ЗНАЧЕНИЕ_DPI</replaceable>\n"
+#~ "ServerArguments=-nolisten tcp -dpi <replaceable>ЗНАЧЕНИЕ_DPI</"
+#~ "replaceable>\n"
 
 #~ msgid ""
 #~ "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI "
@@ -1222,8 +1244,10 @@ msgstr "Авторские права © SUSE LLC"
 #~ "можно сделать с помощью утилиты настройки вашего рабочего стола. Либо "
 #~ "после каждого входа запускайте следующую команду:"
 
-#~ msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
-#~ msgstr "echo Xft.dpi:<replaceable>ЗНАЧЕНИЕ_DPI</replaceable> | xrdb -nocpp -merge"
+#~ msgid ""
+#~ "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
+#~ msgstr ""
+#~ "echo Xft.dpi:<replaceable>ЗНАЧЕНИЕ_DPI</replaceable> | xrdb -nocpp -merge"
 
 #~ msgid ""
 #~ "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI "
@@ -1575,8 +1599,12 @@ msgstr "Авторские права © SUSE LLC"
 #~ "\"https://en.opensuse.org/SDB:Linuxrc\"/>) со следующим <literal>ifcfg</"
 #~ "literal>:"
 
-#~ msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
-#~ msgstr "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:76,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:76"
+#~ msgid ""
+#~ "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,"
+#~ "DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
+#~ msgstr ""
+#~ "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:76,"
+#~ "DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:76"
 
 #~ msgid ""
 #~ "For more information, see the documentation for the options "
@@ -1772,9 +1800,6 @@ msgstr "Авторские права © SUSE LLC"
 
 #~ msgid "Upgrading from openSUSE Leap 42.2"
 #~ msgstr "Обновление с openSUSE Leap 42.2"
-
-#~ msgid "Removed and Replaced Packages"
-#~ msgstr "Удалённые и заменённые пакеты"
 
 #~ msgid ""
 #~ "The following packages have been removed or replaced compared to openSUSE "
