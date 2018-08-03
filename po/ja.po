@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2018-08-02 21:20+0200\n"
-"PO-Revision-Date: 2018-08-03 01:03+0000\n"
+"PO-Revision-Date: 2018-08-03 04:03+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ja/>\n"
@@ -934,15 +934,15 @@ msgid ""
 "cryptconfig\"/>."
 msgstr ""
 "<package>cryptconfig</package>: "
-"メンテナンスが行なわれなくなっています。暗号化を必要とする場合は、パーティションの暗号化をお使いください。詳しくは <xref linkend=\""
-"sec.upgrade.cryptconfig\"/> をお読みください。"
+"メンテナンスが行なわれなくなっているため、削除されました。暗号化を必要とする場合は、パーティションの暗号化をお使いください。詳しくは <xref "
+"linkend=\"sec.upgrade.cryptconfig\"/> をお読みください。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
 msgid ""
 "<package>git-annex</package>: Has been removed because the package is not "
 "maintained anymore."
-msgstr "<package>git-annex</package>: メンテナンスが行なわれなくなっているため、削除されています。"
+msgstr "<package>git-annex</package>: メンテナンスが行なわれなくなっているため、削除されました。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:545
@@ -1462,7 +1462,7 @@ msgstr ""
 msgid "<prompt>tux@linux &gt; </prompt><command>echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command>"
 msgstr ""
 "<prompt>tux@linux &gt; </prompt><command>echo "
-"Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command>"
+"Xft.dpi:<replaceable>DPI_値</replaceable> | xrdb -nocpp -merge</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:832
@@ -1700,6 +1700,7 @@ msgid ""
 "GPG Does Not Support GPG V3 Keys Anymore, Resulting in Zypper/<command>rpm</"
 "command> Warnings"
 msgstr ""
+"GPG が GPG V3 の鍵をサポートしなくなったことによって Zypper/<command>rpm</command> が警告を発する問題について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:990
@@ -1712,6 +1713,11 @@ msgid ""
 "database. These warnings take the form <literal>warning: Unsupported version "
 "of key: V3</literal>."
 msgstr ""
+"openSUSE Leap 42.3 では GPG 2.0 が同梱されていましたが、 openSUSE Leap 15.0 では GPG 2.2 "
+"が同梱されるようになっています。 GPG 2.2 では GPG V3 鍵のサポートが削除されているため、お使いのシステムの鍵データベース内に GPG "
+"V3 の鍵が存在すると、 zypper や <command>rpm</command> などのコマンドを実行した際に、これらがパッケージデータベースの一"
+"貫性をチェックするため、警告メッセージが表示されるようになっています。警告メッセージは下記のように出力されます: <literal>warning: "
+"Unsupported version of key: V3</literal> 。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:999
@@ -1721,13 +1727,15 @@ msgid ""
 "key updates. However, if these keys are still in active use by the upstream "
 "repository, they must be replaced as soon as possible:"
 msgstr ""
+"このような警告メッセージが表示されたとしても、通常はシステムで既に使用していないリポジトリであったり、鍵を更新して置き換え済みのものであったりするため、特"
+"に問題にはなりません。ただし、提供元のリポジトリで今もこのバージョンの鍵を使用している場合は、できる限り早急に鍵を置き換えなければなりません:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1007
 msgid ""
 "Package management tools in openSUSE Leap 15.0 can no longer use them to "
 "verify package integrity."
-msgstr ""
+msgstr "openSUSE Leap 15.0 のパッケージ管理ツールでは、これらの鍵を利用してパッケージを検証することができなくなっています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1013
@@ -1736,18 +1744,20 @@ msgid ""
 "management tools will use them to verify integrity of packages, the result "
 "of this check cannot be trusted anymore."
 msgstr ""
+"その鍵自身も、もはや安全とは呼べなくなっています。そのため、古いパッケージ管理ツールがそれらの鍵を利用して、パッケージの検証を行なっている場合も、検証結果"
+"が信頼に足るものとは言えなくなっています。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1020
 msgid "To delete such keys, perform the following:"
-msgstr ""
+msgstr "これらの鍵を削除するには、下記の通り実施してください:"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1025
 msgid ""
 "Run an <command>rpm</command> command with high verbosity and check its "
 "output:"
-msgstr ""
+msgstr "まずは <command>rpm</command> コマンドを詳細出力を行なうモードで実行し、出力結果を確認します:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1029
@@ -1761,6 +1771,13 @@ msgid ""
 "warning: Unsupported version of key: V3\n"
 "[...]\n"
 msgstr ""
+"\n"
+"<prompt>tux@linux &gt; </prompt><command>rpm -vv -qf /etc</command>\n"
+"ufdio: 1 reads, 18883 total bytes in 0.000006 secs\n"
+"[...]\n"
+"D: read h# 168 Header sanity check: OK\n"
+"warning: Unsupported version of key: V3\n"
+"[...]\n"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1037
@@ -1768,70 +1785,71 @@ msgid ""
 "In the example, header 168 is associated with an outdated key—the warning "
 "appears directly after the message that this specific header is being "
 "checked."
-msgstr ""
+msgstr "上記の例では、ヘッダ 168 に古い鍵が存在していることになります (警告メッセージがそのヘッダのチェック直後に表示されているためです) 。"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1044
 msgid "Find out the key number associated with the header:"
-msgstr ""
+msgstr "次にヘッダ番号から鍵を探します:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1047
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber <replaceable>HEADER</replaceable></command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber "
+"<replaceable>ヘッダ番号</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1048
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>enp5s0</replaceable> with the name of your network "
-#| "interface."
 msgid ""
 "Replace <replaceable>HEADER</replaceable> with the required header number. "
 "In the example, that would be <literal>168</literal>."
 msgstr ""
-"なお、上記の <replaceable>enp5s0</replaceable> を、お使いの環境のネットワーク"
-"インターフェイス名に置き換えてください。"
+"ここで、 <replaceable>ヘッダ番号</replaceable> にはヘッダの番号を指定します。上記の例では "
+"<literal>168</literal> になります。"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1052
 msgid ""
 "This command returns a key identifier starting with <literal>gpg-pubkey-</"
 "literal>."
-msgstr ""
+msgstr "すると、このコマンドは <literal>gpg-pubkey-</literal> で始まる鍵の識別子を返します。"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1058
 msgid ""
 "Use the key identifier (<replaceable>KEY_ID</replaceable>) to learn more "
 "about the key:"
-msgstr ""
+msgstr "表示された鍵の識別子 (<replaceable>鍵_ID</replaceable>) をもとに、鍵に関する情報を取得します:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1062
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -qi <replaceable>KEY_ID</replaceable></command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm -qi "
+"<replaceable>鍵_ID</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1065
 msgid "Remove the key from the system:"
-msgstr ""
+msgstr "あとはシステムから鍵を削除します:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1068
-#, fuzzy, no-wrap
-#| msgid "Install a package: <command>transactional-update pkg in <replaceable>PACKAGE_NAME</replaceable></command>"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo rpm -e <replaceable>KEY_ID</replaceable></command>"
-msgstr "パッケージのインストール: <command>transactional-update pkg in <replaceable>パッケージ名</replaceable></command>"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo rpm -e "
+"<replaceable>鍵_ID</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1071
 msgid ""
 "If you continue to see warnings on subsequent uses of package management "
 "tools, repeat the procedure."
-msgstr ""
+msgstr "鍵を削除してもパッケージ管理ツールが警告メッセージを表示し続ける場合は、上記までの手順を繰り返してください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:1081
@@ -2160,10 +2178,11 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:1279
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm</command>"
-msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm --changelog -qp "
+"<replaceable>FILENAME</replaceable>.rpm</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1280
