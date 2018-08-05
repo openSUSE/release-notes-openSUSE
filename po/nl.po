@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-08-04 15:01+0000\n"
+"PO-Revision-Date: 2018-08-05 09:25+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/nl/>\n"
@@ -804,6 +804,10 @@ msgid ""
 "with an encrypted data partition, such as <filename>/home</filename>, can "
 "crash the YaST installer when selecting the previous installation."
 msgstr ""
+"De offline functie voor opwaarderen vanaf het installatiemedium op een "
+"computer met een versleutelde gegevenspartitie, zoals "
+"<filename>/home</filename>, kan het YaST installatieprogramma laten crashen "
+"wanneer de vorige installatie wordt geselecteerd."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:452
@@ -813,6 +817,10 @@ msgid ""
 "cr_home</filename>. In the installation environment, YaST cannot associate "
 "that path with an automatically detected volume."
 msgstr ""
+"Dit gebeurt wanneer de versleutelde gegevenspartitie in de lijst staat in "
+"<filename>/etc/fstab</filename> met naam van de device-mapper, zoals "
+"<filename>/dev/mapper/cr_home</filename>. In de installatie-omgeving kan "
+"YaST dit pad niet associëren met een automatisch gedetecteerd volume."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:459
@@ -822,6 +830,10 @@ msgid ""
 "of device names. To determine the correct device UUIDs, use the following "
 "command:"
 msgstr ""
+"Om in staat te zijn de functie offline opwaarderen te gebruiken, alvorens "
+"het opwaarderen te starten, wijzig <filename>/etc/fstab</filename> om de "
+"apparaat UUID's te gebruiken in plaats van apparaatnamen. Om de juiste "
+"apparaat UUID's te bepalen, gebruik het volgende commando:"
 
 #. (itstool) path: sect3/screen
 #: xml/release-notes.xml:465
@@ -852,6 +864,11 @@ msgid ""
 "format. However, the upgraded key ring cannot be used by older versions of "
 "GPG anymore."
 msgstr ""
+"openSUSE Leap 42.3 is geleverd met GPG 2.0, terwijl openSUSE Leap 15.0 GPG "
+"2.2 bevat. Tussen deze GPG versies, is een nieuw databaseformaat voor "
+"sleutels geïntroduceerd. GPG 2.2 zal automatisch uw sleutelring naar het "
+"nieuw formaat opwaarderen. De opgewaardeerde sleutelring kan niet langer "
+"gebruikt worden door oudere versies van GPG."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:482
@@ -860,6 +877,9 @@ msgid ""
 "up the directory <filename>~/.gnupg</filename> before starting the upgrade "
 "to openSUSE Leap 15.0."
 msgstr ""
+"Als u de oude versie van uw sleuteldatabase beschikbaar wilt houden, maak "
+"dan een reservekopie van de map <filename>~/.gnupg</filename> voordat u de "
+"opwaardering naar openSUSE Leap 15.0 start."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:494
@@ -933,6 +953,11 @@ msgid ""
 "\"https://doc.opensuse.org/documentation/leap/security/html/book.security/"
 "cha.security.firewall.html#sec.security.firewall.firewalld\"/>."
 msgstr ""
+"<package>SuSEfirewall2</package>: vervangen door <package>firewalld</package>"
+". Voor informatie over migratie naar <package>firewalld</package>, zie <link "
+"xlink:href=\"https://en.opensuse.org/Firewalld\"/> en <link xlink:href=\"http"
+"s://doc.opensuse.org/documentation/leap/security/html/book.security/cha.secur"
+"ity.firewall.html#sec.security.firewall.firewalld\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:553
@@ -1660,6 +1685,8 @@ msgid ""
 "GPG Does Not Support GPG V3 Keys Anymore, Resulting in Zypper/<command>rpm</"
 "command> Warnings"
 msgstr ""
+"GPG ondersteunt niet langer GPG V3 sleutels, wat resulteert in "
+"zypper/<command>rpm</command> waarschuwingen"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:983
@@ -1672,6 +1699,14 @@ msgid ""
 "database. These warnings take the form <literal>warning: Unsupported version "
 "of key: V3</literal>."
 msgstr ""
+"openSUSE Leap 42.3 geleverd met GPG 2.0, terwijl openSUSE Leap 15.0 GPG 2.2 "
+"bevat. Tussen deze GPG versies, is ondersteuning voor GPG V3 sleutels "
+"verwijderd. Als uw de sleuteldatabase van uw systeem nog steeds GPG V3 "
+"sleutels bevat, dan zou u hier waarschuwingen over kunnen ontvangen bij "
+"uitvoeren van zypper of <command>rpm</command> commando's, omdat deze "
+"commando's de integriteit van de pakketdatabase controleren. Deze "
+"waarschuwingen hebben de vorm <literal>warning: Unsupported version of key: "
+"V3</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:992
@@ -1681,6 +1716,11 @@ msgid ""
 "key updates. However, if these keys are still in active use by the upstream "
 "repository, they must be replaced as soon as possible:"
 msgstr ""
+"Deze waarschuwingen zijn onschuldig, omdat deze sleutels gebruikt kunnen "
+"zijn voor opslagruimten die niet langer zijn ingeschakeld op het systeem of "
+"die sinds die tijd bijgewerkte sleutels hebben ontvangen. Als deze sleutels "
+"nog steeds actief in gebruik zijn in de bovenliggende opslagruimten, moeten "
+"ze zo snel mogelijk vervangen worden:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1000
@@ -1688,6 +1728,8 @@ msgid ""
 "Package management tools in openSUSE Leap 15.0 can no longer use them to "
 "verify package integrity."
 msgstr ""
+"Hulpmiddelen voor pakketbeheer in openSUSE Leap 15.0 kunnen ze niet langer "
+"gebruiken om integriteit van pakketten te verifiëren."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1006
@@ -1696,6 +1738,9 @@ msgid ""
 "management tools will use them to verify integrity of packages, the result "
 "of this check cannot be trusted anymore."
 msgstr ""
+"De sleutels zelf zijn onveilig. Dus zelfs als oudere hulpmiddelen voor "
+"pakketbeheer ze zullen gebruiken om de integriteit van pakketten te "
+"verifiëren, kan het resultaat van deze controle niet langer vertrouwd worden."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1013
@@ -1723,6 +1768,13 @@ msgid ""
 "warning: Unsupported version of key: V3\n"
 "[...]\n"
 msgstr ""
+"\n"
+"<prompt>tux@linux &gt; </prompt><command>rpm -vv -qf /etc</command>\n"
+"ufdio: 1 reads, 18883 total bytes in 0.000006 secs\n"
+"[...]\n"
+"D: read h# 168 Header sanity check: OK\n"
+"warning: Unsupported version of key: V3\n"
+"[...]\n"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1030
@@ -1731,11 +1783,14 @@ msgid ""
 "appears directly after the message that this specific header is being "
 "checked."
 msgstr ""
+"In het voorbeeld wordt header 168 geassocieerd met een verouderde sleutel—de "
+"waarschuwing verschijnt direct na het bericht dat deze specifieke header "
+"wordt gecontroleerd."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1037
 msgid "Find out the key number associated with the header:"
-msgstr ""
+msgstr "Zoek het sleutelnummer geassocieerd met de header:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1040
@@ -1758,6 +1813,8 @@ msgid ""
 "This command returns a key identifier starting with <literal>gpg-pubkey-</"
 "literal>."
 msgstr ""
+"Dit commando geeft een sleutel-identifier terug die begint met <literal>gpg-"
+"pubkey-</literal>."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1051
@@ -1765,12 +1822,16 @@ msgid ""
 "Use the key identifier (<replaceable>KEY_ID</replaceable>) to learn more "
 "about the key:"
 msgstr ""
+"Gebruik de sleutel-identifier (<replaceable>KEY_ID</replaceable>) om meer te "
+"weten te komen over de sleutel:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1055
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -qi <replaceable>KEY_ID</replaceable></command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm -qi "
+"<replaceable>KEY_ID</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1058
@@ -1789,6 +1850,8 @@ msgid ""
 "If you continue to see warnings on subsequent uses of package management "
 "tools, repeat the procedure."
 msgstr ""
+"Als u waarschuwingen blijft zien tijden volgend gebruik van hulpmiddelen "
+"voor pakketbeheer, herhaal dan de procedure."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:1074
