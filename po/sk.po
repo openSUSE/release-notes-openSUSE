@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-08-12 12:28+0000\n"
+"PO-Revision-Date: 2018-08-13 14:49+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/sk/>\n"
@@ -1696,6 +1696,13 @@ msgid ""
 "database. These warnings take the form <literal>warning: Unsupported version "
 "of key: V3</literal>."
 msgstr ""
+"openSUSE Leap 42.3 bolo dodávané s GPG 2.0, zatiaľ čo openSUSE Leap 15.0  "
+"obsahuje GPG 2.2. Medzi týmito verziami GPG bola odstránená podpora kľúčov "
+"GPG V3.Ak databáza kľúčov vášho systému stále obsahuje kľúče GPG V3, môžete "
+"o tom dostať varovania pri vykonávaní príkazov Zypper alebo "
+"<command>rpm</command>, pretože tieto príkazy kontrolujú integritu databázy "
+"balíkov. Tieto varovania majú podobu <literal>varovanie: Nepodporovaná "
+"verzia kľúča: V3</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:992
@@ -1705,6 +1712,10 @@ msgid ""
 "key updates. However, if these keys are still in active use by the upstream "
 "repository, they must be replaced as soon as possible:"
 msgstr ""
+"Zvyčajne sú tieto upozornenia neškodné, pretože tieto kľúče mohli byť "
+"použité v repozitároch, ktoré už nie sú v systéme povolené, alebo ktoré už "
+"majú k dispozícii aktualizácie kľúčov. Ak sú však tieto kľúče aktívne "
+"používané v repozitári pôvodného vývoja, musia byť nahradené čo najskôr:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1000
@@ -1712,6 +1723,8 @@ msgid ""
 "Package management tools in openSUSE Leap 15.0 can no longer use them to "
 "verify package integrity."
 msgstr ""
+"Nástroje na správu balíkov v openSUSE Leap 15.0 už ich nemôžu používať na "
+"overovanie integrity balíkov."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1006
@@ -1720,11 +1733,14 @@ msgid ""
 "management tools will use them to verify integrity of packages, the result "
 "of this check cannot be trusted anymore."
 msgstr ""
+"Samotné kľúče nie sú bezpečné. Preto, aj keď staršie nástroje na správu "
+"balíkov ich použijú na overovanie integrity balíkov, výsledok tejto kontroly "
+"už nemôže byť dôveryhodný."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1013
 msgid "To delete such keys, perform the following:"
-msgstr ""
+msgstr "Ak chcete takéto kľúče odstrániť, vykonajte nasledovné:"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1018
@@ -1732,6 +1748,8 @@ msgid ""
 "Run an <command>rpm</command> command with high verbosity and check its "
 "output:"
 msgstr ""
+"Spustite príkaz <command>rpm</command> s vysokými podrobnosťami a "
+"kontrolujte jeho výstup:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1022
@@ -1760,11 +1778,13 @@ msgid ""
 "appears directly after the message that this specific header is being "
 "checked."
 msgstr ""
+"V príklade je hlavička 168 spojená so zastaraným kľúčom—upozornenie sa "
+"zobrazí priamo po správe, že sa kontroluje táto konkrétna hlavička."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1037
 msgid "Find out the key number associated with the header:"
-msgstr ""
+msgstr "Zistite číslo kľúča pridruženého k hlavičke:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1040
@@ -1789,6 +1809,8 @@ msgid ""
 "This command returns a key identifier starting with <literal>gpg-pubkey-</"
 "literal>."
 msgstr ""
+"Tento príkaz vráti identifikátor kľúča začínajúci na <literal>gpg-"
+"pubkey-</literal>."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1051
@@ -1826,6 +1848,8 @@ msgid ""
 "If you continue to see warnings on subsequent uses of package management "
 "tools, repeat the procedure."
 msgstr ""
+"Ak bude pokračovať zobrazovanie upozornení pri následných použitiach "
+"nástrojov na správu balíkov, zopakujte postup."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:1074
