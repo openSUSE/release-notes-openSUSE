@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-08-07 20:02+0000\n"
+"PO-Revision-Date: 2018-08-29 18:02+0000\n"
 "Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/de/>\n"
@@ -683,11 +683,13 @@ msgid ""
 "To encrypt user data on openSUSE Leap 15.0, encrypt the whole partition or "
 "volume which contains the home directories."
 msgstr ""
+"Um Benutzerdaten auf openSUSE Leap 15.0 zu verschlüsseln, verschlüsseln Sie "
+"die ganze Partition oder Volume, das die Home-Verzeichnisse beinhaltet."
 
 #. (itstool) path: tip/title
 #: xml/release-notes.xml:365
 msgid "Decrypt Before Upgrading"
-msgstr ""
+msgstr "Entschlüsselung Vor Dem Upgrade"
 
 #. (itstool) path: tip/para
 #: xml/release-notes.xml:366
@@ -696,6 +698,9 @@ msgid ""
 "directory images need to be decrypted. Otherwise, users will not have access "
 "to them after the upgrade."
 msgstr ""
+"Bevor ein Upgrade von openSUSE Leap 42.3 durchgeführt werden kann, müssen "
+"verschlüsselte Home-Verzeichnisse entschlüsselt werden. Ansonsten werden die "
+"Benutzer keinen Zugriff darauf nach dem Upgrade haben."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:376
@@ -804,6 +809,8 @@ msgstr ""
 #: xml/release-notes.xml:445
 msgid "Offline Upgrade Fails When Encrypted Disks Are Mapped by Name"
 msgstr ""
+"Offline-Upgrades Schlagen Fehl Wenn Verschlüsselte Festplatten Von einem "
+"Namen Abgebildet Sind"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:446
@@ -812,6 +819,10 @@ msgid ""
 "with an encrypted data partition, such as <filename>/home</filename>, can "
 "crash the YaST installer when selecting the previous installation."
 msgstr ""
+"Die Verwendung des Offline-Upgrade-Features eines Installationsmediums auf "
+"einem Computer mit einer verschlüsselten Daten-Partition, wie z.B. "
+"<filename>/home</filename>, kann den YaST-Installer bei der Auswahl der "
+"vorherigen Installation zerstören."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:452
@@ -821,6 +832,11 @@ msgid ""
 "cr_home</filename>. In the installation environment, YaST cannot associate "
 "that path with an automatically detected volume."
 msgstr ""
+"Das passiert, wennn die verschlüsselte Daten-Partition in "
+"<filename>/etc/fstab</filename> durch den Device-Mapper-Namen, wie z.B. "
+"<filename>/dev/mapper/cr_home</filename>, mit aufgelistet ist. In der "
+"Installationsumgebung kann YaST nicht den Pfad mit dem automatisch erkannten "
+"Volume verbinden."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:459
@@ -830,6 +846,10 @@ msgid ""
 "of device names. To determine the correct device UUIDs, use the following "
 "command:"
 msgstr ""
+"Um die Offline-Upgrade-Funktionalität verwenden zu können, ändern Sie vor "
+"dem Start des Upgrades die <filename>/etc/fstab</filename> um das Device "
+"UUIDs an Stelle von Device-Namen zu verwenden. Um das richtige Device UUIDs "
+"zu bestimmen, verwenden Sie den folgenden Befehl:"
 
 #. (itstool) path: sect3/screen
 #: xml/release-notes.xml:465
@@ -843,11 +863,13 @@ msgid ""
 "The output of this command will contain a quoted UUID after the string "
 "<literal>UUID=</literal>."
 msgstr ""
+"Der Output dieses Befehls wird eine angegebene UUID nach dem String "
+"<literal>UUID=</literal> beinhalten."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:474
 msgid "GPG Has New Key Database Format"
-msgstr ""
+msgstr "GPG Hat Neues Schlüssel-Datenbank-Format"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:475
@@ -858,6 +880,11 @@ msgid ""
 "format. However, the upgraded key ring cannot be used by older versions of "
 "GPG anymore."
 msgstr ""
+"openSUSE Leap 42.3 wird mit GPG 2.0 geliefert, während openSUSE Leap 15.0 "
+"GPG 2.2 beinhaltet. Zwischen diesen GPG-Versionen wurde ein neues Schlüssel-"
+"Datenbank-Format eingeführt. GPG 2.2 wird Ihren Key-Ring automatisch zum "
+"neuen Format upgraden. Allerdings kann der aktualisierte Key-Ring nicht mehr "
+"von älteren GPG-Versionen verwendet werden."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:482
@@ -866,6 +893,9 @@ msgid ""
 "up the directory <filename>~/.gnupg</filename> before starting the upgrade "
 "to openSUSE Leap 15.0."
 msgstr ""
+"Wenn Sie die ältere Version Ihrer Schlüssel-Datenbank behalten wollen, "
+"sichern Sie sich das Verzeichnis <filename>~/.gnupg</filename> vor dem Start "
+"des Upgrades auf openSUSE Leap 15.0."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:494
@@ -905,7 +935,7 @@ msgstr ""
 #: xml/release-notes.xml:519
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
-msgstr ""
+msgstr "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:523
@@ -916,6 +946,7 @@ msgstr "Gelöschte Pakete"
 #: xml/release-notes.xml:524
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr ""
+"Gelöschte Pakete werden nicht mehr als Teil der Distribution mitgeliefert."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:530
@@ -924,6 +955,9 @@ msgid ""
 "encryption instead. For more information, see <xref linkend=\"sec.upgrade."
 "cryptconfig\"/>."
 msgstr ""
+"<package>cryptconfig</package>: Wurde nicht mehr betreut. Verwenden Sie "
+"stattdessen Partitions-Verschlüsselung. Für mehr Informationen, siehe <xref "
+"linkend=\"sec.upgrade.cryptconfig\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
@@ -934,6 +968,11 @@ msgid ""
 "\"https://doc.opensuse.org/documentation/leap/security/html/book.security/"
 "cha.security.firewall.html#sec.security.firewall.firewalld\"/>."
 msgstr ""
+"<package>SuSEfirewall2</package>: Ersetzt durch <package>firewalld</package>"
+". Für Informationen über die Migration zu <package>firewalld</package>, "
+"siehe <link xlink:href=\"https://en.opensuse.org/Firewalld\"/> und <link "
+"xlink:href=\"https://doc.opensuse.org/documentation/leap/security/html/book.s"
+"ecurity/cha.security.firewall.html#sec.security.firewall.firewalld\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:553
@@ -1404,7 +1443,7 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:807
 msgid "You can use one of the following workarounds for this issue:"
-msgstr ""
+msgstr "Sie können einen der folgenden Workarounds für diesen Fehler verwenden:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:812
@@ -1412,6 +1451,9 @@ msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
 msgstr ""
+"Verwenden Sie einen Monitor mit einem regulären DPI-Wert als primären "
+"Monitor. Anwendungen, die eine Skalierung anfordern, werden dann "
+"dementsprechend auf den High-DPI-Monitor skaliert."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:819
