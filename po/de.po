@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-09-04 13:02+0000\n"
-"Last-Translator: Marcel Kuehlhorn <tux93@opensuse.org>\n"
+"PO-Revision-Date: 2018-09-24 18:02+0000\n"
+"Last-Translator: Joachim Wagner <jwagner@computing.dcu.ie>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/de/>\n"
 "Language: de\n"
@@ -1398,11 +1398,11 @@ msgid ""
 "default, this value is 96 DPI. It uses the relative DPI of the primary "
 "monitor to derive font DPI for all other monitors."
 msgstr ""
-"Qt unterstützt automatisch über-Monitor-Skalierung auf X. Das verwendet den "
-"DPI-Wert des virtuellen X-Bildschirm zur Kalkulation der Schriftgröße für "
-"den Haupt-Monitor. Standardmäßig ist dieser Wert 96 DPI. Das verwendet den "
-"relativen DPI des Haupt-Monitors um die Schrift-DPI für alle anderen "
-"Monitore abzuleiten."
+"Qt unterstützt automatische Skalierung pro Bildschirm mit X. Sie verwendet "
+"den DPI-Wert des virtuellen X-Bildschirms um die Schriftgröße für den "
+"Hauptbildschirm zu berechnen. Standardmäßig ist dieser Wert 96 DPI. Die "
+"Skalierung verwendet die relativen DPI des Hauptbildschirms um die Schrift-"
+"DPI für alle anderen Bildschirme abzuleiten."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:780
@@ -1410,8 +1410,8 @@ msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
 msgstr ""
-"Zwei weit verbreitete Desktops werden dieses Verhalten von Qt nicht "
-"berücksichtigen, weshalb diese Notitz nicht für diese gilt:"
+"Zwei weit verbreitete Desktops berücksichtigen dieses Verhalten von Qt "
+"nicht, weshalb diese Notitz für diese nicht gilt:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:786
@@ -1419,8 +1419,8 @@ msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
 msgstr ""
-"GNOME wird <literal>Xft.dpi</literal> auf das konfigurierte Vielfache von "
-"96 DPI setzen."
+"GNOME setzt <literal>Xft.dpi</literal> auf das konfigurierte Vielfache von "
+"96 DPI."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:792
@@ -1441,6 +1441,12 @@ msgid ""
 "request scaling, such as YaST (with default settings), use the same DPI "
 "value on all monitors. Hence, they will look smaller on the High-DPI monitor."
 msgstr ""
+"Mit anderen Desktop kann das Qt-Verhalten unerwünschte Wirkungen haben, wie "
+"zum Beispiel dass Qt-Anwendungen wie VLC, die eine Skalierung anfordern, im "
+"Ergebnis auf allen Bildschirmen zur halben der gewünschten Größe skaliert "
+"werden. Anwednungen wie YaST (in den Standardeinstellungen), die keine "
+"Skalierung anfordern, verwenden den selben DPI Wert auf allen Bildschirmen. "
+"Daher erscheinen sie kleiner auf dem Hoch-DPI-Bildschirm."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:807
@@ -1464,6 +1470,9 @@ msgid ""
 "either with the configuration utility of your desktop. Alternatively, after "
 "every login run the following command:"
 msgstr ""
+"Stellen Sie angemessene Font-DPI (<literal>Xft.dpi</literal>) ein, zum "
+"Beispiel in der Konfigurationanwendung Ihres Desktops oder nach jedem "
+"Anmelden mit dem folgenden Befehl:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:824
@@ -1708,6 +1717,8 @@ msgid ""
 "GPG Does Not Support GPG V3 Keys Anymore, Resulting in Zypper/<command>rpm</"
 "command> Warnings"
 msgstr ""
+"Wegfall der GPG-Unterstütztung von GPG V3 Schlüsseln verursacht "
+"<command>rpm</command> Warnungen in Zypper"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:983
@@ -1720,6 +1731,13 @@ msgid ""
 "database. These warnings take the form <literal>warning: Unsupported version "
 "of key: V3</literal>."
 msgstr ""
+"openSUSE Leap 42.3 wurde mit GPG 2.0 ausgeliefert, wohingegen openSUSE Leap "
+"15.0 GPG 2.2 enthält. Zwischen diesen GPG Versionen wurde die Unterstützung "
+"von GPG V3 Schlüsseln entfernt. Wenn die Schlüsseldatenbank Ihres Systems "
+"noch GPG V3 Schlüssel enthält, könnten deswegen Warnungen beim Ausführen von "
+"Zypper oder <command>rpm</command> Befehlen erscheinen, da diese Befehle die "
+"Vollständigkeit der Paketdatenbank prüfen. Diese Warnungen lauten "
+"<literal>warning: Unsupported version of key: V3</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:992
