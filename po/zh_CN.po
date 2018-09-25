@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-06-03 11:22+0000\n"
+"PO-Revision-Date: 2018-09-25 06:59+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
 "notes-opensuse/leap-15_0/zh_CN/>\n"
@@ -365,10 +365,11 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:208
-#, fuzzy, no-wrap
-#| msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo systemctl disable --now transactional-update.timer rebootmgr.service</command>"
-msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo systemctl disable --now "
+"transactional-update.timer rebootmgr.service</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:209
@@ -567,7 +568,7 @@ msgstr "从 openSUSE Leap 42.3 升级"
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:340
 msgid "Package Downgrades During System Upgrade"
-msgstr ""
+msgstr "系统升级期间出现软件包降级的情况"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:341
@@ -578,11 +579,13 @@ msgid ""
 "Leap 42.3 will be displayed as downgrades, even though they actually contain "
 "the same software but compiled for a newer operating system."
 msgstr ""
+"openSUSE Leap 15.0 搭载软件包的 RPM 包信息包含了附加的 openSUSE Leap 版本字符串。因此，那些在 openSUSE "
+"Leap 42.3 中所搭载的软件上游版本相同的软件包将显示为降级，尽管它们实际上包含的都是同个软件，只是对不同操作系统的编译而已。"
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:353
 msgid "<package>cryptconfig</package> Has Been Removed"
-msgstr ""
+msgstr "<package>cryptconfig</package> 软件包已移除"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:354
@@ -592,18 +595,20 @@ msgid ""
 "<package>cryptconfig</package> package are not available anymore in openSUSE "
 "Leap 15.0."
 msgstr ""
+"之前版本的 openSUSE Leap 支持通过 <package>cryptconfig</package> 对主目录进行单独加密。此功能和 "
+"<package>cryptconfig</package> 软件包在openSUSE Leap 15.0 上已不再支持。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:360
 msgid ""
 "To encrypt user data on openSUSE Leap 15.0, encrypt the whole partition or "
 "volume which contains the home directories."
-msgstr ""
+msgstr "要在 openSUSE Leap 15.0 上加密用户数据，请加密包含主目录的这个分区或子卷。"
 
 #. (itstool) path: tip/title
 #: xml/release-notes.xml:365
 msgid "Decrypt Before Upgrading"
-msgstr ""
+msgstr "升级前先解密"
 
 #. (itstool) path: tip/para
 #: xml/release-notes.xml:366
@@ -611,7 +616,7 @@ msgid ""
 "Before performing an upgrade from openSUSE Leap 42.3, encrypted home "
 "directory images need to be decrypted. Otherwise, users will not have access "
 "to them after the upgrade."
-msgstr ""
+msgstr "在从 openSUSE Leap 42.3 进行升级前，需要先解密加密过的主目录映像。否则，在升级过后用户将不能访问它们。"
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:376
@@ -620,11 +625,6 @@ msgstr "Postfix Admin 使用向后不兼容的目录布局"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:377
-#, fuzzy
-#| msgid ""
-#| "Starting with the version 3.2, as shipped in openSUSE Leap 15.0, "
-#| "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
-#| "backwards-incompatible directory layout:"
 msgid ""
 "Starting with the version 3.2, as shipped in openSUSE Leap 15.0, "
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
@@ -694,10 +694,11 @@ msgstr "要在所有虚拟主机上使用别名，请运行："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:430
-#, fuzzy, no-wrap
-#| msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart</command>"
-msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo a2enflag POSTFIXADMIN "
+"&amp;&amp; rcapache2 restart</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:433
@@ -709,7 +710,7 @@ msgstr "要使别名仅在特定虚拟主机上可用，请将该别名添加到
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:445
 msgid "Offline Upgrade Fails When Encrypted Disks Are Mapped by Name"
-msgstr ""
+msgstr "当加密过的磁盘以名称映射时，离线升级将失败"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:446
@@ -718,6 +719,8 @@ msgid ""
 "with an encrypted data partition, such as <filename>/home</filename>, can "
 "crash the YaST installer when selecting the previous installation."
 msgstr ""
+"使用安装介质的离线升级功能时，如果电脑包含加密过的数据分区，比如 <filename>/home</filename>，选择之前安装的系统会使得 "
+"YaST 安装程序崩溃。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:452
@@ -727,6 +730,8 @@ msgid ""
 "cr_home</filename>. In the installation environment, YaST cannot associate "
 "that path with an automatically detected volume."
 msgstr ""
+"这个情况发生在列于 <filename>/etc/fstab</filename> 的加密数据分区以设备名映射，比如 "
+"<filename>/dev/mapper/cr_home</filename>。在安装环境中，YaST 无法关联该路径到自动检测到的卷。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:459
@@ -736,25 +741,28 @@ msgid ""
 "of device names. To determine the correct device UUIDs, use the following "
 "command:"
 msgstr ""
+"要成功地使用离线升级功能，请在升级开始之前，更改 <filename>/etc/fstab</filename> 以使用设备 UUID 来代替设备名。"
+"要确认设备的 UUID，请使用以下命令："
 
 #. (itstool) path: sect3/screen
 #: xml/release-notes.xml:465
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>blkid | grep \"<replaceable>DEVICE_MAPPER_NAME</replaceable>\"</command>"
-msgstr "rpm --changelog -qp <replaceable>文件名</replaceable>.rpm"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>blkid | grep \""
+"<replaceable>DEVICE_MAPPER_NAME</replaceable>\"</command>"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:466
 msgid ""
 "The output of this command will contain a quoted UUID after the string "
 "<literal>UUID=</literal>."
-msgstr ""
+msgstr "此命令的输出将在字符串 <literal>UUID=</literal> 后包含一个括起来的 UUID。"
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:474
 msgid "GPG Has New Key Database Format"
-msgstr ""
+msgstr "GPG 有了新的密钥数据库格式"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:475
@@ -765,6 +773,8 @@ msgid ""
 "format. However, the upgraded key ring cannot be used by older versions of "
 "GPG anymore."
 msgstr ""
+"openSUSE Leap 42.3 搭载了 GPG 2.0，而 openSUSE Leap 15.0 包含了 GPG 2.2。在这些 GPG "
+"版本中，引入了新的密钥数据库格式。GPG 2.2 将自动升级您的密钥环到新的格式。但是，升级过的密钥环在旧版本 GPG 上无法再使用。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:482
@@ -773,6 +783,8 @@ msgid ""
 "up the directory <filename>~/.gnupg</filename> before starting the upgrade "
 "to openSUSE Leap 15.0."
 msgstr ""
+"如果您要保持您的旧版密钥数据库依旧可用，请在升级至 openSUSE Leap 15.0 之前备份目录 "
+"<filename>~/.gnupg</filename>。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:494
@@ -809,19 +821,17 @@ msgstr ""
 #: xml/release-notes.xml:519
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
-msgstr ""
+msgstr "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:523
-#, fuzzy
-#| msgid "Removed and Replaced Packages"
 msgid "Removed Packages"
-msgstr "被移除和替换的软件包"
+msgstr "已移除的软件包"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:524
 msgid "Removed packages are not shipped as part of the distribution anymore."
-msgstr ""
+msgstr "已移除的软件包不再作为发行版的一部分搭载。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:530
@@ -830,6 +840,8 @@ msgid ""
 "encryption instead. For more information, see <xref linkend=\"sec.upgrade."
 "cryptconfig\"/>."
 msgstr ""
+"<package>cryptconfig</package>：已不再维护。请使用分区加密代替。更多信息，请查看 <xref linkend=\""
+"sec.upgrade.cryptconfig\"/>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
@@ -840,6 +852,11 @@ msgid ""
 "\"https://doc.opensuse.org/documentation/leap/security/html/book.security/"
 "cha.security.firewall.html#sec.security.firewall.firewalld\"/>."
 msgstr ""
+"<package>SuSEfirewall2</package>：已替换为 <package>firewalld</package>。更多迁移至 "
+"<package>firewalld</package> 的信息，请查看 <link xlink:href=\""
+"https://en.opensuse.org/Firewalld\"/> 和 <link xlink:href=\"https://doc.opensu"
+"se.org/documentation/leap/security/html/book.security/cha.security.firewall.h"
+"tml#sec.security.firewall.firewalld\"/>。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:553
@@ -988,18 +1005,16 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:638
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
-#| "     "
+#, no-wrap
 msgid ""
 "\n"
 "<prompt>tux@linux &gt; </prompt><command>setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable></command>\n"
 "     "
 msgstr ""
 "\n"
-"setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_键</replaceable>\n"
+"<prompt>tux@linux &gt; </prompt><command>setxkbmap "
+"<replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_KEY</replaceable></command>\n"
 "     "
 
 #. (itstool) path: listitem/para
@@ -1074,10 +1089,11 @@ msgstr "例如，要检查 <literal>default-displaymanager</literal> 的值，�
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:692
-#, fuzzy, no-wrap
-#| msgid "sudo update-alternatives --display default-displaymanager"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display default-displaymanager</command>"
-msgstr "sudo update-alternatives --display default-displaymanager"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display "
+"default-displaymanager</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:693
@@ -1090,16 +1106,14 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:697
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm</command>"
 msgstr ""
-"sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set "
+"default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:699
@@ -1146,16 +1160,14 @@ msgstr "设定 GDM 为显示管理器："
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:727
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/gdm"
+#, no-wrap
 msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm</command>"
 msgstr ""
-"sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/gdm"
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set "
+"default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/gdm</command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:731
@@ -1301,10 +1313,11 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:824
-#, fuzzy, no-wrap
-#| msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command>"
-msgstr "echo Xft.dpi:<replaceable>DPI_值</replaceable> | xrdb -nocpp -merge"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>echo "
+"Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:825
@@ -1510,7 +1523,7 @@ msgstr "本节列出了 openSUSE Leap 15.0 中安全特性的变更。"
 msgid ""
 "GPG Does Not Support GPG V3 Keys Anymore, Resulting in Zypper/<command>rpm</"
 "command> Warnings"
-msgstr ""
+msgstr "GPG 不再支持 GPG V3 密钥，导致 Zypper <command>rpm</command> 出现警告"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:983
@@ -1523,6 +1536,11 @@ msgid ""
 "database. These warnings take the form <literal>warning: Unsupported version "
 "of key: V3</literal>."
 msgstr ""
+"openSUSE Leap 42.3 搭载了 GPG 2.0，而 openSUSE Leap 15.0 包含了 GPG 2.2。在这些 GPG 版本之间，"
+"移除了对 GPG V3 密钥的支持。如果您的系统密钥数据库仍包含 GPG V3 密钥，您可能会在执行 Zypper 或 "
+"<command>rpm</command> "
+"命令时接收到关于此信息的警告，因为这些命令正在检查软件包数据库的完整性。这些警告的形式为：<literal>warning: Unsupported "
+"version of key: V3</literal>。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:992
@@ -1532,13 +1550,15 @@ msgid ""
 "key updates. However, if these keys are still in active use by the upstream "
 "repository, they must be replaced as soon as possible:"
 msgstr ""
+"通常，这些警告为良性的，因为这些密钥可能用于系统上不再启用的存储库或者存储库已经更新了密钥。无论怎样，如果这些密钥仍然由上流存储库激活着，它们就必须被尽快"
+"地替换："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1000
 msgid ""
 "Package management tools in openSUSE Leap 15.0 can no longer use them to "
 "verify package integrity."
-msgstr ""
+msgstr "openSUSE Leap 15.0 里的软件包管理工具无法再使用它们来验证软件包完整性。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1006
@@ -1546,19 +1566,19 @@ msgid ""
 "The keys in themselves are insecure. Hence, even though older package "
 "management tools will use them to verify integrity of packages, the result "
 "of this check cannot be trusted anymore."
-msgstr ""
+msgstr "密钥本身是不安全的。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1013
 msgid "To delete such keys, perform the following:"
-msgstr ""
+msgstr "要删除这类密钥，请执行以下的："
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1018
 msgid ""
 "Run an <command>rpm</command> command with high verbosity and check its "
 "output:"
-msgstr ""
+msgstr "运行一个"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1022
@@ -1572,6 +1592,13 @@ msgid ""
 "warning: Unsupported version of key: V3\n"
 "[...]\n"
 msgstr ""
+"\n"
+"<prompt>tux@linux &gt; </prompt><command>rpm -vv -qf /etc</command>\n"
+"ufdio: 1 reads, 18883 total bytes in 0.000006 secs\n"
+"[...]\n"
+"D: read h# 168 Header sanity check: OK\n"
+"warning: Unsupported version of key: V3\n"
+"[...]\n"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1030
@@ -1579,68 +1606,70 @@ msgid ""
 "In the example, header 168 is associated with an outdated key—the warning "
 "appears directly after the message that this specific header is being "
 "checked."
-msgstr ""
+msgstr "示例中，首部 168 关联于一个过期的密钥——检测到此特定的首部时警告将在消息后直接显示。"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1037
 msgid "Find out the key number associated with the header:"
-msgstr ""
+msgstr "查找首部关联的密钥号码："
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1040
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber <replaceable>HEADER</replaceable></command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber "
+"<replaceable>HEADER</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1041
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>enp5s0</replaceable> with the name of your network "
-#| "interface."
 msgid ""
 "Replace <replaceable>HEADER</replaceable> with the required header number. "
 "In the example, that would be <literal>168</literal>."
-msgstr "请将 <replaceable>enp5s0</replaceable> 替换为您的网络接口名称。"
+msgstr ""
+"替换 <replaceable>HEADER</replaceable> 为需要的首部号码。示例中，应为 <literal>168</literal>。"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1045
 msgid ""
 "This command returns a key identifier starting with <literal>gpg-pubkey-</"
 "literal>."
-msgstr ""
+msgstr "此命令返回以 <literal>gpg-pubkey-</literal> 开头的密钥标识符。"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1051
 msgid ""
 "Use the key identifier (<replaceable>KEY_ID</replaceable>) to learn more "
 "about the key:"
-msgstr ""
+msgstr "使用密钥标识符（<replaceable>KEY_ID</replaceable>）来了解关于密钥的更多消息："
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1055
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -qi <replaceable>KEY_ID</replaceable></command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm -qi "
+"<replaceable>密钥_ID</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1058
 msgid "Remove the key from the system:"
-msgstr ""
+msgstr "从系统移除密钥："
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1061
-#, fuzzy, no-wrap
-#| msgid "Install a package: <command>transactional-update pkg in <replaceable>PACKAGE_NAME</replaceable></command>"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo rpm -e <replaceable>KEY_ID</replaceable></command>"
-msgstr "安装软件包：<command>transactional-update pkg in <replaceable>软件包名称</replaceable></command>"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo rpm -e "
+"<replaceable>密钥_ID</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1064
 msgid ""
 "If you continue to see warnings on subsequent uses of package management "
 "tools, repeat the procedure."
-msgstr ""
+msgstr "如果您仍在随后的软件包管理工具使用中看到警告，请重复处理过程。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:1074
@@ -1944,10 +1973,11 @@ msgstr "从 RPM 中获取关于某特定软件包的详细修订历史信息："
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:1272
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm</command>"
-msgstr "rpm --changelog -qp <replaceable>文件名</replaceable>.rpm"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm --changelog -qp "
+"<replaceable>文件名</replaceable>.rpm</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1273
