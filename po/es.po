@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-10-06 03:07+0000\n"
+"PO-Revision-Date: 2018-10-06 08:29+0000\n"
 "Last-Translator: Ioannes Andreas <ioannes@tuta.io>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/es/>\n"
@@ -412,10 +412,11 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:208
-#, fuzzy, no-wrap
-#| msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo systemctl disable --now transactional-update.timer rebootmgr.service</command>"
-msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo systemctl disable --now "
+"transactional-update.timer rebootmgr.service</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:209
@@ -709,19 +710,14 @@ msgstr ""
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:377
-#, fuzzy
-#| msgid ""
-#| "Starting with the version 3.2, as shipped in openSUSE Leap 15.0, "
-#| "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
-#| "backwards-incompatible directory layout:"
 msgid ""
 "Starting with the version 3.2, as shipped in openSUSE Leap 15.0, "
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
-"Desde la versión 3.2, que viene con openSUSE Leap 15.0, Postfix Admin "
-"(paquete <package>postfixadmin</package> usa una estructura de directorios "
-"nueva que no es retrocompatible:"
+"Desde la versión 3.2, que viene con openSUSE Leap 15.0, Postfix Admin ("
+"paquete <package>postfixadmin</package> usa una estructura de directorios "
+"nueva que es incompatible con versiones anteriores:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:384
@@ -794,10 +790,11 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:430
-#, fuzzy, no-wrap
-#| msgid "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart</command>"
-msgstr "a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo a2enflag POSTFIXADMIN "
+"&amp;&amp; rcapache2 restart</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:433
@@ -848,13 +845,18 @@ msgid ""
 "of device names. To determine the correct device UUIDs, use the following "
 "command:"
 msgstr ""
+"Para poder usar la función de actualización sin conexión, antes de "
+"ejecutarla, cambie <filename>/etc/fstab</filename> para usar los UUIDs del "
+"dispositivo en vez de nombres de dispositivos. Para determinar los UUIDs del "
+"dispositivo correcto, use el siguiente comando:"
 
 #. (itstool) path: sect3/screen
 #: xml/release-notes.xml:465
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>blkid | grep \"<replaceable>DEVICE_MAPPER_NAME</replaceable>\"</command>"
-msgstr "rpm --changelog -qp <replaceable>NOMBRE_DEL_ARCHIVO</replaceable>.rpm"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>blkid | grep \""
+"<replaceable>DEVICE_MAPPER_NAME</replaceable>\"</command>"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:466
@@ -862,11 +864,13 @@ msgid ""
 "The output of this command will contain a quoted UUID after the string "
 "<literal>UUID=</literal>."
 msgstr ""
+"La salida de este comando contendrá un UUID entre comillas después de la "
+"cadena <literal>UUID=</literal>."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:474
 msgid "GPG Has New Key Database Format"
-msgstr ""
+msgstr "GPG tiene un nuevo formato de base de datos de clave"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:475
@@ -877,6 +881,11 @@ msgid ""
 "format. However, the upgraded key ring cannot be used by older versions of "
 "GPG anymore."
 msgstr ""
+"openSUSE Leap 42.3 se lanzó con GPG 2.0, mientras que openSUSE Leap 15.0 "
+"incluye GPG 2.2. Entre estas versiones de GPG, fue introducido un nuevo "
+"formato de base de datos de claves. GPG 2.2 actualizará automáticamente su "
+"anillo de claves al nuevo formato. No obstante, el anillo de claves "
+"actualizado no podrá ser usado por versiones antiguas de GPG."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:482
@@ -885,6 +894,10 @@ msgid ""
 "up the directory <filename>~/.gnupg</filename> before starting the upgrade "
 "to openSUSE Leap 15.0."
 msgstr ""
+"Si necesita mantener la versión antigua de su base de datos de claves "
+"disponible, haga una copia de seguridad del directorio "
+"<filename>~/.gnupg</filename> antes de comenzar la actualización a openSUSE "
+"Leap 15.0."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:494
@@ -924,19 +937,18 @@ msgstr ""
 #: xml/release-notes.xml:519
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
-msgstr ""
+msgstr "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:523
-#, fuzzy
-#| msgid "Removed and Replaced Packages"
 msgid "Removed Packages"
-msgstr "Paquetes eliminados o reemplazados"
+msgstr "Paquetes eliminados"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:524
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr ""
+"Los paquetes eliminados ya no se incluyen como parte de la distribución."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:530
@@ -945,6 +957,9 @@ msgid ""
 "encryption instead. For more information, see <xref linkend=\"sec.upgrade."
 "cryptconfig\"/>."
 msgstr ""
+"<package>cryptconfig</package>: ya no es mantenido. Use el cifrado de la "
+"partición en su lugar. Para más información, vea <xref linkend=\"sec.upgrade."
+"cryptconfig\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
@@ -955,6 +970,12 @@ msgid ""
 "\"https://doc.opensuse.org/documentation/leap/security/html/book.security/"
 "cha.security.firewall.html#sec.security.firewall.firewalld\"/>."
 msgstr ""
+"<package>SuSEfirewall2</package>: reemplazado por "
+"<package>firewalld</package>. Para más información sobre cómo migrar a "
+"<package>firewalld</package>, vea <link xlink:href=\"https://en.opensuse.org/"
+"Firewalld\"/> y <link xlink:href=\"https://doc.opensuse.org/documentation/lea"
+"p/security/html/book.security/cha.security.firewall.html#sec.security.firewal"
+"l.firewalld\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:553
@@ -1116,18 +1137,16 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:638
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\n"
-#| "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
-#| "     "
+#, no-wrap
 msgid ""
 "\n"
 "<prompt>tux@linux &gt; </prompt><command>setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable></command>\n"
 "     "
 msgstr ""
 "\n"
-"setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>TECLA_COMPONER</replaceable>\n"
+"<prompt>tux@linux &gt; </prompt><command>setxkbmap "
+"<replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_KEY</replaceable></command>\n"
 "     "
 
 #. (itstool) path: listitem/para
@@ -1207,10 +1226,11 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:692
-#, fuzzy, no-wrap
-#| msgid "sudo update-alternatives --display default-displaymanager"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display default-displaymanager</command>"
-msgstr "sudo update-alternatives --display default-displaymanager"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display "
+"default-displaymanager</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:693
@@ -1223,16 +1243,14 @@ msgstr ""
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:697
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/xdm"
+#, no-wrap
 msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm</command>"
 msgstr ""
-"sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/xdm"
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set "
+"default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:699
@@ -1282,16 +1300,14 @@ msgstr "Establecer GDM como el gestor de pantalla:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:727
-#, fuzzy, no-wrap
-#| msgid ""
-#| "sudo update-alternatives --set default-displaymanager \\\n"
-#| "  /usr/lib/X11/displaymanagers/gdm"
+#, no-wrap
 msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm</command>"
 msgstr ""
-"sudo update-alternatives --set default-displaymanager \\\n"
-"  /usr/lib/X11/displaymanagers/gdm"
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set "
+"default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/gdm</command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:731
@@ -1460,10 +1476,11 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:824
-#, fuzzy, no-wrap
-#| msgid "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command>"
-msgstr "echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>echo "
+"Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:825
@@ -1697,6 +1714,8 @@ msgid ""
 "GPG Does Not Support GPG V3 Keys Anymore, Resulting in Zypper/<command>rpm</"
 "command> Warnings"
 msgstr ""
+"GPG ya no soporta claves de GPG V3, resultando en advertencias de Zypper "
+"/<command>rpm</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:983
@@ -1709,6 +1728,13 @@ msgid ""
 "database. These warnings take the form <literal>warning: Unsupported version "
 "of key: V3</literal>."
 msgstr ""
+"openSUSE Leap 42.3 se lanzó con GPG 2.0, mientras que openSUSE Leap 15.0 "
+"incluye GPG 2.2. Entre estas versiones de GPG, el soporte para claves GPG V3 "
+"fue eliminado. Si la base de datos de claves de su sistema sigue conteniendo "
+"claves de GPG V3, podría recibir advertencias sobre esto cuando ejecute "
+"Zypper o comandos <command>rpm</command>, ya que estos comandos comprueban "
+"la integridad de la base de datos de los paquetes. Estas advertencias tienen "
+"la forma <literal> advertencia: Versión de clave no soportada: V3</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:992
@@ -1718,6 +1744,11 @@ msgid ""
 "key updates. However, if these keys are still in active use by the upstream "
 "repository, they must be replaced as soon as possible:"
 msgstr ""
+"Generalmente, estas advertencias son benignas, ya que estas claves pueden "
+"estar siendo usadas por repositorios que ya no están habilitados en el "
+"sistema o que ya han sido actualizadas desde entonces. No obstante, si estas "
+"claves siguen estando en uso por el repositorio del proyecto original, "
+"deberán ser reemplazadas lo más pronto posible:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1000
@@ -1725,6 +1756,8 @@ msgid ""
 "Package management tools in openSUSE Leap 15.0 can no longer use them to "
 "verify package integrity."
 msgstr ""
+"Las herramientas de gestión de paquetes en openSUSE Leap 15.0 ya no pueden "
+"usarlas para verificar la integridad del paquete."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1006
@@ -1733,11 +1766,15 @@ msgid ""
 "management tools will use them to verify integrity of packages, the result "
 "of this check cannot be trusted anymore."
 msgstr ""
+"Las claves son inseguras en sí mismas. Por lo tanto, a pesar de que las "
+"herramientas de gestión de paquetes anteriores las usaran para verificar la "
+"integridad de los paquetes, el resultado de esta verificación ya no es "
+"confiable."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1013
 msgid "To delete such keys, perform the following:"
-msgstr ""
+msgstr "Para suprimir estas claves, haga lo siguiente:"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1018
@@ -1745,6 +1782,8 @@ msgid ""
 "Run an <command>rpm</command> command with high verbosity and check its "
 "output:"
 msgstr ""
+"Ejecute un comando <command>rpm</command> con la salida detallada y "
+"compruébela:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1022
@@ -1758,6 +1797,13 @@ msgid ""
 "warning: Unsupported version of key: V3\n"
 "[...]\n"
 msgstr ""
+"\n"
+"<prompt>tux@linux &gt; </prompt><command>rpm -vv -qf /etc</command>\n"
+"ufdio: 1 reads, 18883 total bytes in 0.000006 secs\n"
+"[...]\n"
+"D: read h# 168 Header sanity check: OK\n"
+"warning: Unsupported version of key: V3\n"
+"[...]\n"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1030
@@ -1766,29 +1812,31 @@ msgid ""
 "appears directly after the message that this specific header is being "
 "checked."
 msgstr ""
+"En el ejemplo, el encabezado 168 está asociado con una clave obsoleta - la "
+"advertencia aparece directamente después del mensaje de que se está "
+"comprobando este encabezado específico."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1037
 msgid "Find out the key number associated with the header:"
-msgstr ""
+msgstr "Encuentre el número de clave asociado con el encabezado:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1040
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber <replaceable>HEADER</replaceable></command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber "
+"<replaceable>ENCABEZADO</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1041
-#, fuzzy
-#| msgid ""
-#| "Replace <replaceable>enp5s0</replaceable> with the name of your network "
-#| "interface."
 msgid ""
 "Replace <replaceable>HEADER</replaceable> with the required header number. "
 "In the example, that would be <literal>168</literal>."
 msgstr ""
-"Reemplace <replaceable>enp5s0</replaceable> con el nombre su interfaz de red."
+"Reemplace <replaceable>ENCABEZADO</replaceable> con el número de encabezado "
+"solicitado. En el ejemplo, eso sería <literal>168</literal>."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1045
@@ -1796,6 +1844,8 @@ msgid ""
 "This command returns a key identifier starting with <literal>gpg-pubkey-</"
 "literal>."
 msgstr ""
+"Este comando retorna un identificador de clave que comienza con <literal>gpg-"
+"pubkey-</literal>."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1051
@@ -1803,24 +1853,29 @@ msgid ""
 "Use the key identifier (<replaceable>KEY_ID</replaceable>) to learn more "
 "about the key:"
 msgstr ""
+"Use el identificador de clave (<replaceable>KEY_ID</replaceable> para "
+"aprender más sobre la clave:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1055
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -qi <replaceable>KEY_ID</replaceable></command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm -qi "
+"<replaceable>KEY_ID</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1058
 msgid "Remove the key from the system:"
-msgstr ""
+msgstr "Elimine la clave del sistema:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1061
-#, fuzzy, no-wrap
-#| msgid "Install a package: <command>transactional-update pkg in <replaceable>PACKAGE_NAME</replaceable></command>"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo rpm -e <replaceable>KEY_ID</replaceable></command>"
-msgstr "Instalar un paquete: <command>transactional-update pkg in <replaceable>NOMBRE_DE_PAQUETE</replaceable></command>"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo rpm -e "
+"<replaceable>KEY_ID</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1064
@@ -1828,6 +1883,8 @@ msgid ""
 "If you continue to see warnings on subsequent uses of package management "
 "tools, repeat the procedure."
 msgstr ""
+"Si continúa viendo advertencias en usos posteriores de las herramientas de "
+"gestión de paquetes, repita el procedimiento."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:1074
@@ -2160,10 +2217,11 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:1272
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+#, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm</command>"
-msgstr "rpm --changelog -qp <replaceable>NOMBRE_DEL_ARCHIVO</replaceable>.rpm"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm --changelog -qp "
+"<replaceable>NOMBRE_DEL_ARCHIVO</replaceable>.rpm</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1273
