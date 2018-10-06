@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-06-09 02:07+0000\n"
+"PO-Revision-Date: 2018-10-06 03:07+0000\n"
 "Last-Translator: Ioannes Andreas <ioannes@tuta.io>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/es/>\n"
@@ -640,7 +640,7 @@ msgstr "Actualización desde openSUSE Leap 42.3"
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:340
 msgid "Package Downgrades During System Upgrade"
-msgstr ""
+msgstr "Regresión de paquetes durante la actualización del sistema"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:341
@@ -651,11 +651,17 @@ msgid ""
 "Leap 42.3 will be displayed as downgrades, even though they actually contain "
 "the same software but compiled for a newer operating system."
 msgstr ""
+"La información del paquete RPM de los paquetes enviados a openSUSE Leap 15.0 "
+"contienen una cadena de versión agregada de openSUSE Leap. Por esta razón, "
+"los paquetes que contengan la misma versión de origen que la incluida en "
+"openSUSE Leap 42.3, se mostrarán como regresiones, aunque en realidad "
+"incorporen el mismo software pero hayan sido compilados para un sistema "
+"operativo reciente."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:353
 msgid "<package>cryptconfig</package> Has Been Removed"
-msgstr ""
+msgstr "<package>cryptconfig</package> ha sido eliminado"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:354
@@ -665,6 +671,10 @@ msgid ""
 "<package>cryptconfig</package> package are not available anymore in openSUSE "
 "Leap 15.0."
 msgstr ""
+"Las versiones anteriores de openSUSE Leap soportaban el cifrado de "
+"directorios personales de manera individual a través de "
+"<package>cryptconfig</package>. Esta característica y el paquete "
+"<package>cryptconfig</package> ya no están disponibles en openSUSE Leap 15.0."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:360
@@ -672,11 +682,13 @@ msgid ""
 "To encrypt user data on openSUSE Leap 15.0, encrypt the whole partition or "
 "volume which contains the home directories."
 msgstr ""
+"Para cifrar datos de usuario en openSUSE Leap 15.0, cifre toda la partición "
+"o volumen que contenga los directorios del usuario."
 
 #. (itstool) path: tip/title
 #: xml/release-notes.xml:365
 msgid "Decrypt Before Upgrading"
-msgstr ""
+msgstr "Descifrar antes de actualizar"
 
 #. (itstool) path: tip/para
 #: xml/release-notes.xml:366
@@ -685,6 +697,9 @@ msgid ""
 "directory images need to be decrypted. Otherwise, users will not have access "
 "to them after the upgrade."
 msgstr ""
+"Antes de ejecutar un actualización desde openSUSE Leap 42.3, descifre las "
+"imágenes del directorio «home» cifrado. Caso contrario, los usuarios no "
+"tendrán acceso a ellas después de la actualización."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:376
@@ -797,6 +812,8 @@ msgstr ""
 #: xml/release-notes.xml:445
 msgid "Offline Upgrade Fails When Encrypted Disks Are Mapped by Name"
 msgstr ""
+"La actualización sin conexión falla cuando los discos cifrados están "
+"mapeados por nombre"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:446
@@ -805,6 +822,10 @@ msgid ""
 "with an encrypted data partition, such as <filename>/home</filename>, can "
 "crash the YaST installer when selecting the previous installation."
 msgstr ""
+"Al usar la función de actualización sin conexión del medio de instalación en "
+"un ordenador con una partición de datos cifrada, como "
+"<filename>/home</filename>, puede fallar el instalador YaST al seleccionar "
+"la instalación anterior."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:452
@@ -814,6 +835,10 @@ msgid ""
 "cr_home</filename>. In the installation environment, YaST cannot associate "
 "that path with an automatically detected volume."
 msgstr ""
+"Esto sucede cuando la partición cifrada de datos está listada en "
+"<filename>/etc/fstab</filename> por el nombre del mapeador de dispositivo, "
+"como <filename>/dev/mapper/cr_home</filename>. En el entorno de instalación, "
+"YaST no puede asociar esta ruta con un volumen detectado automáticamente."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:459
