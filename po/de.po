@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-10-11 11:02+0000\n"
+"PO-Revision-Date: 2018-10-11 19:02+0000\n"
 "Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/de/>\n"
@@ -1814,11 +1814,14 @@ msgid ""
 "appears directly after the message that this specific header is being "
 "checked."
 msgstr ""
+"In diesem Beispiel wird der Header 168 mit einem nicht aktuellem Schlüssel "
+"assoziiert—die Warnung passiert direkt nach der Nachricht, dass dieser "
+"spezielle Header überprüft wurde."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1037
 msgid "Find out the key number associated with the header:"
-msgstr ""
+msgstr "Finden Sie die Schlüssel-Nummer, der zum Header gehört, raus:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1040
@@ -1843,6 +1846,8 @@ msgid ""
 "This command returns a key identifier starting with <literal>gpg-pubkey-</"
 "literal>."
 msgstr ""
+"Dieser Schlüssel gibt einen Schlüsselbezeichner, der mit <literal>gpg-"
+"pubkey-</literal> beginnt, zurück."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1051
@@ -1850,17 +1855,22 @@ msgid ""
 "Use the key identifier (<replaceable>KEY_ID</replaceable>) to learn more "
 "about the key:"
 msgstr ""
+"Verwenden Sie den Schlüsselbezeichner "
+"(<replaceable>SCHLÜSSEL_ID</replaceable>) um mehr über den Schlüssel zu "
+"lernen:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1055
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -qi <replaceable>KEY_ID</replaceable></command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm -qi "
+"<replaceable>SCHLÜSSEL_ID</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1058
 msgid "Remove the key from the system:"
-msgstr ""
+msgstr "Entfernen Sie den Schlüssel vom System:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1061
@@ -1876,11 +1886,13 @@ msgid ""
 "If you continue to see warnings on subsequent uses of package management "
 "tools, repeat the procedure."
 msgstr ""
+"Wenn Sie anschließend weiterhin Warnungen bei der Verwendung von "
+"Paketmanagement-Tools sehen, wiederholen Sie die Prozedur."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:1074
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr "<command>systemctl stop apparmor</command> funktioniert nicht"
+msgstr "<command>systemctl stop apparmor</command> Funktioniert Nicht"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1075
@@ -2029,13 +2041,15 @@ msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
 msgstr ""
-"Für weitere Informationen zum Upgrade auf die momentane Version von openSUSE "
-"siehe <link xlink:href=\"http://de.opensuse.org/SDB:Distribution-Upgrade\"/>."
+"Zu weiteren Informationen zum Layout des Standard-Btrfs-Subvolumes vor und "
+"nach dieser Änderung, siehe <link xlink:href=\"https://en.opensuse.org/SDB:"
+"BTRFS\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:1172
 msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
 msgstr ""
+"Wicked: Verwendet RFC 4361 DHCPv4 <literal>Client-ID</literal> im Ethernet"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1173
@@ -2046,6 +2060,12 @@ msgid ""
 "(RFC 4390) and is also required to perform DNS record updates in the same "
 "zone for DHCP 4 and DHCP 6 addresses also on Ethernet."
 msgstr ""
+"RFC 4361 aktualisiert die <literal>Client-ID</literal>, die im RFC 2132, "
+"Absatz 9.14 definiert ist, so, dass sie mit der DHCP 6 <literal>Client-"
+"ID</literal> (<literal>duid</literal>) kompatibel ist. Die Verwendung eines "
+"RFC 4361 ist verbindlich zu Infiniband (RFC 4390) und wird zur Durchführung "
+"von Aktualisierungen für DNS-Records in der gleichen Zone für Adressen in "
+"den Formaten DHCP 4 und DHCP 6 auch im Ethernet benötigt."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1181
@@ -2057,6 +2077,8 @@ msgstr "In openSUSE Leap 15.0:"
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
 msgstr ""
+"Der ISC DHCP 4.3.x Server unterstützt das neue RFC 4361 (benötigt für DNS-"
+"Update)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1189
@@ -2065,6 +2087,9 @@ msgid ""
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
 "(used on Infiniband)."
 msgstr ""
+"Wicked bietet eine Option an so eine <literal>Client-ID</literal> zu senden "
+"und  automatisch eine DHCPv6-basierte <literal>Client-ID</literal> in DHCPv4 "
+"(verwendet auf Infiniband) zu verwenden."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1196
@@ -2079,6 +2104,8 @@ msgstr ""
 #, no-wrap
 msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 msgstr ""
+"ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_I"
+"D=00:03:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1203
@@ -2102,7 +2129,7 @@ msgstr ""
 #: xml/release-notes.xml:1217
 #, no-wrap
 msgid "01:52:54:00:02:c2:67"
-msgstr ""
+msgstr "01:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1218
