@@ -20,8 +20,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-10-09 18:01+0000\n"
-"Last-Translator: Aleš Kastner <alkas@volny.cz>\n"
+"PO-Revision-Date: 2018-10-15 23:01+0000\n"
+"Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/cs/>\n"
 "Language: cs\n"
@@ -279,11 +279,17 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Před započetím aktualizace systému je vytvořen nový Btrfs snímek kořenového "
+"souborového systému. Poté jsou všechny změny v aktualizaci nainstalovány do "
+"tohoto Btrfs snímku. Pro dokončení této aktualizace můžete poté restartovat "
+"systém do tohoto nového snímku."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:136
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Pro návrat z této aktualizace jednoduše místo toho spusťte systém z "
+"předchozího snímku."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:142
@@ -297,6 +303,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Abyste předešli chybám s aktualizacemi a ztrátou dat kvůli aktualizacím, do "
+"kořenového souborového systému nesmí být proveden zápis. Proto je během "
+"běžného provozu kořenový souborový systém připojen jako „pouze pro čtení“."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:149
@@ -306,6 +315,11 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Aby toto nastavení fungovalo, je třeba provést dvě dodatečné změny do "
+"souborového systému: Povolit zápis v uživatelské konfigurace v "
+"<filename>/etc</filename>, tento adresář je automaticky nastaven tak, aby "
+"používal OverlayFS. <filename>/var</filename> je nyní zvláštní oddělený "
+"podsvazek,  do kterého mohou mít zápis procesy."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:159
