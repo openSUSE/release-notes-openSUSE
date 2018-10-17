@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-10-15 23:01+0000\n"
+"PO-Revision-Date: 2018-10-17 16:01+0000\n"
 "Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/cs/>\n"
@@ -326,6 +326,7 @@ msgstr ""
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"<emphasis>Transakční server</emphasis> vyžaduje alespoň 12 GB místa na disku"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:160
@@ -333,6 +334,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Systémová role <emphasis>Transakční server</emphasis> vyžaduje alespoň 12 GB "
+"místa na disku, aby bylo možné zřizovat snímky Btrfs."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:165
@@ -341,11 +344,13 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Pro práci s transakčními aktualizacemi vždy pro správu softwaru používejte "
+"příkaz <command>transactional-update</command> místo nástrojů YaST a Zypper:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:172
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Aktualizovat systém: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:178
@@ -353,6 +358,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Nainstalovat balíček: <command>transactional-update pkg in "
+"<replaceable>NAZEV_BALICKU</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:184
@@ -360,6 +367,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Odstranit balíček: <command>transactional-update pkg rm "
+"<replaceable>NAZEV_BALICKU</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:190
@@ -368,6 +377,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Pro návrat do posledního snímku, který je posledním v sadě změn ke "
+"kořenovému souborovému systému, ujistěte se, že váš systém je zaveden do "
+"předposledního snímku a spusťte: <command>transactional-update "
+"rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:196
@@ -375,6 +388,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Volitelně, pokud se chcete vrátit ke konkrétnímu ID, přidejte na konec "
+"příkazu ID snímku."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:202
@@ -384,6 +399,10 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Při používání této systémové role ve výchozím stavu systém provádí denní "
+"aktualizaci a restart v čase mezi 3:30 a 5:00. Obě tyto akce jsou založené "
+"na systemd a pokud je to potřeba, je možné je zakázat pomocí "
+"<command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:208
@@ -420,6 +439,8 @@ msgid ""
 "The minimal system installation lacks certain functionality that is often "
 "taken for granted:"
 msgstr ""
+"Minimální instalace systému postrádá určitou funkcionalitu, která je často "
+"považovány jako samozřejmé:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:228
@@ -427,6 +448,8 @@ msgid ""
 "It does not contain a software firewall front-end. You can install the "
 "package <package>firewalld</package> additionally."
 msgstr ""
+"Neobsahuje softwarové rozhraní pro firewall. Můžete si dodatečně "
+"nainstalovat balíček<package>firewalld</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:234
@@ -434,11 +457,13 @@ msgid ""
 "It does not contain a YaST. You can install the pattern <package>patterns-"
 "yast-yast2_basis</package> additionally."
 msgstr ""
+"Neobsahuje YaST. Můžete si dodatečně nainstalovat vzorek <package>patterns-"
+"yast-yast2_basis</package>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:243
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Instalace na pevných discích s kapacitou menší než 12 GB"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:245
@@ -448,6 +473,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Instalátor nabídne schéma diskových oddílů pouze pokud je k dispozici "
+"velikost pevného disku větší než 12 GB. Pokud si chcete sestavit například "
+"velmi malý obraz virtuálního stroje, použijte řízený nástroj pro dělení "
+"disku, abyste si mohli ručně vyladit parametry dělení disku."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:254
@@ -557,6 +586,8 @@ msgstr ""
 #: xml/release-notes.xml:308
 msgid "Scaling the Installer UI on Computers with High-DPI Displays"
 msgstr ""
+"Změna měřítka uživatelského rozhraní instalátoru na počítačích s obrazovkami "
+"s vysokým rozlišením (High-DPI)"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:309
@@ -567,6 +598,11 @@ msgid ""
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> to the bootloader command "
 "line."
 msgstr ""
+"Instalátor YaST ve výchozím stavu neprovádí úpravu měřítka pro obrazovky s "
+"vysokým rozlišením. Pokud máte počítač s obrazovkou High-DPI, můžete "
+"nastavit YaST tak, aby automaticky změnil měřítko uživatelského rozhraní. "
+"Přidejte do příkazové řádky zavaděče parametr "
+"<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:320
@@ -599,7 +635,7 @@ msgstr "Zvýšení verze systému z openSUSE Leap 42.3"
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:340
 msgid "Package Downgrades During System Upgrade"
-msgstr ""
+msgstr "Ponižování balíčků během povýšení systému"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:341
@@ -610,11 +646,16 @@ msgid ""
 "Leap 42.3 will be displayed as downgrades, even though they actually contain "
 "the same software but compiled for a newer operating system."
 msgstr ""
+"Informace RPM balíčků dodaných v openSUSE Leap 15.0 obsahují přidaný řetězec "
+"verze openSUSE Leapu. Z tohoto důvodu balíčky, které obsahují stejnou verzi "
+"softwaru z upstreamu dodané již v openSUSE Leap 42.3, budou označeny jako "
+"ponižované, ačkoliv ve skutečnosti obsahují stejný software, který je "
+"zkompilovaný pro novější operační systém."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:353
 msgid "<package>cryptconfig</package> Has Been Removed"
-msgstr ""
+msgstr "<package>cryptconfig</package> je odstraněn"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:354
@@ -624,6 +665,9 @@ msgid ""
 "<package>cryptconfig</package> package are not available anymore in openSUSE "
 "Leap 15.0."
 msgstr ""
+"Předchozí verze openSUSE Leapu podporovaly individuální šifrování domovských "
+"adresářů pomocí <package>cryptconfig</package>u. Tato funkce a balíček "
+"<package>cryptconfig</package> již v openSUSE Leap 15.0 nejsou k dispozici."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:360
@@ -631,11 +675,13 @@ msgid ""
 "To encrypt user data on openSUSE Leap 15.0, encrypt the whole partition or "
 "volume which contains the home directories."
 msgstr ""
+"Pro šifrování uživatelských dat na openSUSE Leapu 15.0 zašifrujte buď celý "
+"oddíl nebo svazek, který obsahuje domovské adresáře."
 
 #. (itstool) path: tip/title
 #: xml/release-notes.xml:365
 msgid "Decrypt Before Upgrading"
-msgstr ""
+msgstr "Rozšifrujte před povýšením"
 
 #. (itstool) path: tip/para
 #: xml/release-notes.xml:366
@@ -644,11 +690,14 @@ msgid ""
 "directory images need to be decrypted. Otherwise, users will not have access "
 "to them after the upgrade."
 msgstr ""
+"Před provedením povýšení systému z openSUSE Leap 42.3 rozšifrujte šifrované "
+"obrazy domovských adresářů. Jinak po povýšení systému k nim nebudou mít "
+"uživatelé přístup."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:376
 msgid "Postfix Admin Uses Backwards-Incompatible Directory Layout"
-msgstr ""
+msgstr "Postfix Admin používá zpětně nekompatibilní rozvržení adresářů"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:377
@@ -657,6 +706,9 @@ msgid ""
 "Postfix Admin (package <package>postfixadmin</package>) uses a new and "
 "backwards-incompatible directory layout:"
 msgstr ""
+"Počínaje verzí 3.2, která je součástí openSUSE Leap 15.0, Postfix Admin ("
+"balíček <package>postfixadmin</package>) používá nové zpětně nekompatibilní "
+"rozvržení adresářů:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:384
@@ -684,6 +736,9 @@ msgid ""
 "locations and the configuration is not migrated automatically. Therefore, "
 "you need to migrate the following items manually:"
 msgstr ""
+"Postfix Admin již nadále nečte konfigurační soubory z jejich předchozího "
+"umístění a konfigurace není automaticky zmigrována. Proto je potřeba, abyste "
+"ručně zmigrovali následující položky:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:406
@@ -702,6 +757,9 @@ msgid ""
 "php</filename>. We recommended keeping <filename>config.inc.php</filename> "
 "unmodified."
 msgstr ""
+"Pokud jste provedli úpravy v <filename>config.inc.php</filename>, ideálně "
+"slučte tyto změny do <filename>/etc/postfixadmin/config.local.php</filename>"
+". Soubor <filename>config.inc.php</filename> nedoporučujeme upravovat."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:421
@@ -709,17 +767,21 @@ msgid ""
 "In the Apache configuration, add or enable the alias <literal>/postfixadmin</"
 "literal>:"
 msgstr ""
+"V konfiguraci Apache přidejte nebo povolte alias "
+"<literal>/postfixadmin</literal>:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:427
 msgid "To make the alias available on all virtual hosts, run:"
-msgstr ""
+msgstr "Aby byl tento alias dostupný na všech virtuálních hostech, spusťte:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:430
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo a2enflag POSTFIXADMIN &amp;&amp; rcapache2 restart</command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo a2enflag POSTFIXADMIN "
+"&amp;&amp; rcapache2 restart</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:433
@@ -727,11 +789,13 @@ msgid ""
 "To make the alias available only on a specific virtual host only, add the "
 "alias to the config of that virtual host."
 msgstr ""
+"Abyste alias zpřístupnili pouze na určitém virtuálním hostu, přidejte alias "
+"do konfigurace daného virtuálního hosta."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:445
 msgid "Offline Upgrade Fails When Encrypted Disks Are Mapped by Name"
-msgstr ""
+msgstr "Offline povýšení selže pokud jsou šifrované disky mapovány podle názvu"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:446
@@ -740,6 +804,9 @@ msgid ""
 "with an encrypted data partition, such as <filename>/home</filename>, can "
 "crash the YaST installer when selecting the previous installation."
 msgstr ""
+"Použitím funkce offline povýšení z instalačního média na počítači se "
+"zašifrovaným datovým oddílem, jako je <filename>/home</filename>, může při "
+"výběru předchozí instalace spadnout instalátor YaST."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:452
