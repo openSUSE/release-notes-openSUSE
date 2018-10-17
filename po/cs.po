@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-03 10:51+0200\n"
-"PO-Revision-Date: 2018-10-17 16:01+0000\n"
+"PO-Revision-Date: 2018-10-17 21:01+0000\n"
 "Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/cs/>\n"
@@ -816,6 +816,10 @@ msgid ""
 "cr_home</filename>. In the installation environment, YaST cannot associate "
 "that path with an automatically detected volume."
 msgstr ""
+"Toto se stává, když je ve souboru <filename>/etc/fstab</filename> zapsán "
+"šifrovaný diskový oddíl pomocí mapovacího názvu zařízení, jako je např. "
+"<filename>/dev/mapper/cr_home</filename>. V instalačním prostředí nemůže "
+"YaST tuto cestu asociovat s automaticky detekovaným svazkem."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:459
@@ -825,6 +829,10 @@ msgid ""
 "of device names. To determine the correct device UUIDs, use the following "
 "command:"
 msgstr ""
+"Abyste mohli použít funkcionalitu offline povýšení systému, ještě zahájením "
+"povýšení změňte v souboru <filename>/etc/fstab</filename> názvy zařízení na "
+"identifikátory zařízení UUID. Pro zjištění správných UUID zařízení použijte "
+"následující příkaz:"
 
 #. (itstool) path: sect3/screen
 #: xml/release-notes.xml:465
@@ -839,11 +847,13 @@ msgid ""
 "The output of this command will contain a quoted UUID after the string "
 "<literal>UUID=</literal>."
 msgstr ""
+"Výstup tohoto příkazu bude mít v uvozovkách uvedený identifikátor UUID "
+"následující po řetězci <literal>UUID=</literal>."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:474
 msgid "GPG Has New Key Database Format"
-msgstr ""
+msgstr "GPG má nový formát databáze klíčů"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:475
@@ -854,6 +864,10 @@ msgid ""
 "format. However, the upgraded key ring cannot be used by older versions of "
 "GPG anymore."
 msgstr ""
+"openSUSE Leap 42.3 byl vydán s GPG 2.0, zatímco openSUSE Leap 15.0 zahrnuje "
+"GPG 2.2. Mezi těmito verzemi GPG byl uveden nový formát databáze klíčů. GPG "
+"2.2 automaticky povýší vaši klíčenku na nový formát. Avšak takto povýšená "
+"klíčenka již poté nelze použít staršími verzemi GPG."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:482
@@ -862,11 +876,14 @@ msgid ""
 "up the directory <filename>~/.gnupg</filename> before starting the upgrade "
 "to openSUSE Leap 15.0."
 msgstr ""
+"Pokud si chcete ponechat k dispozici starší verzi databáze klíčů, "
+"zazálohujte si adresář <filename>~/.gnupg</filename> před tím, než spustíte "
+"povýšení systému na openSUSE Leap 15.0."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:494
 msgid "Packaging Changes"
-msgstr ""
+msgstr "Změny v balíčkování"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:497
@@ -907,7 +924,7 @@ msgstr ""
 #: xml/release-notes.xml:519
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
-msgstr ""
+msgstr "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:523
@@ -919,7 +936,7 @@ msgstr "Odstraněné a nahrazené balíčky"
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:524
 msgid "Removed packages are not shipped as part of the distribution anymore."
-msgstr ""
+msgstr "Odstraněné balíčky, které již nadále nejsou součástí distribuce."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:530
@@ -928,6 +945,9 @@ msgid ""
 "encryption instead. For more information, see <xref linkend=\"sec.upgrade."
 "cryptconfig\"/>."
 msgstr ""
+"<package>cryptconfig</package>: Již nebyl udržován. Místo něj použijte "
+"šifrování diskového oddílu. Pro více informací vizte <xref linkend=\""
+"sec.upgrade.cryptconfig\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
@@ -938,16 +958,22 @@ msgid ""
 "\"https://doc.opensuse.org/documentation/leap/security/html/book.security/"
 "cha.security.firewall.html#sec.security.firewall.firewalld\"/>."
 msgstr ""
+"<package>SuSEfirewall2</package>: Byl nahrazen balíčkem "
+"<package>firewalld</package>. Pro informace o migraci na "
+"<package>firewalld</package> vizte <link xlink:href=\""
+"https://en.opensuse.org/Firewalld\"/> a <link xlink:href=\"https://doc.opensu"
+"se.org/documentation/leap/security/html/book.security/cha.security.firewall.h"
+"tml#sec.security.firewall.firewalld\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:553
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "Ovladače a hardware"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:558
 msgid "Hang on Machines with Nvidia GPUs and Hybrid Graphics"
-msgstr ""
+msgstr "Zamrzání na strojích s GPU Nvidia a hybridních grafických kartách"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
@@ -958,6 +984,11 @@ msgid ""
 "graphics, such as laptops that include integrated Intel graphics and a "
 "discrete Nvidia graphics card."
 msgstr ""
+"S jádrem dodaném v openSUSE Leapu 15.0 GM se může ovladač Nouveau pro "
+"grafické karty Nvidia zaseknout při restartu, vypnutí nebo za běhu při "
+"akcích správy napájení. Tato chyba primárně nastává na systémech s "
+"hybridními grafickými kartami, jako jsou notebooky obsahující integrované "
+"grafické karty Intel a oddělené grafické karty Nvidia."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:566
@@ -969,11 +1000,18 @@ msgid ""
 "literal>. After the updated kernel including the fix is installed, you can "
 "remove this option again."
 msgstr ""
+"Tato chyba bude opravena v údržbové aktualizaci jádra. Avšak vzhledem k "
+"tomu, že instalační obraz nedostává aktualizace, může se tato závada objevit "
+"během instalace nebo během prvního spuštění dokonce i poté, co byla tato "
+"aktualizace vydána. V takovém případě lze dočasně tuto chybu obejít "
+"spuštěním systému s volbou zavaděče <literal>nouveau.modeset=0</literal>. Po "
+"instalaci aktualizovaného jádra s opravou této chyby je možné tuto volbu "
+"opět odstranit."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:578
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
-msgstr ""
+msgstr "KDE na Waylandu není podporováno s proprietárním ovladačem Nvidia"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:579
@@ -982,11 +1020,14 @@ msgid ""
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
 "the X session."
 msgstr ""
+"KDE Plasma na sezení Wayland není podporováno s proprietárním ovladačem "
+"Nvidia. Pokud používáte KDE a proprietární ovladač Nvidia, zůstaňte u sezení "
+"X."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:589
 msgid "Desktop"
-msgstr ""
+msgstr "Pracovní plocha"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:591
@@ -1131,6 +1172,8 @@ msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
 msgstr ""
+"Použijte příkaz <command>update-alternatives</command> pro nastavení správce "
+"přihlášení a sezení pracovní plochy"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:661
@@ -1141,6 +1184,11 @@ msgid ""
 "defined using <filename>/etc/sysconfig</filename> anymore but with the "
 "alternatives system."
 msgstr ""
+"V minulosti jste mohli pro nastavení správce přihlášení a sezení pracovní "
+"plochy použít soubor <filename>/etc/sysconfig</filename> nebo modul YaSTu "
+"<guimenu>Editor /etc/sysconfig</guimenu>. Počínaje openSUSE Leap 15.0 nejsou "
+"tyto hodnoty definovány pomocí <filename>/etc/sysconfig</filename>, ale "
+"systémem alternativ."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:668
@@ -1152,17 +1200,17 @@ msgstr "Tyto poznámky jsou děleny do následujících okruhů:"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:673
 msgid "Login manager: <literal>default-displaymanager</literal>"
-msgstr ""
+msgstr "Správce přihlášení: <literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:678
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
-msgstr ""
+msgstr "Sezení Wayland: <literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:683
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
-msgstr ""
+msgstr "Sezení pracovní plochy X: <literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:688
@@ -1170,12 +1218,16 @@ msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
 msgstr ""
+"Například pro kontrolu hodnoty <literal>default-displaymanager</literal> "
+"použijte:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:692
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display default-displaymanager</command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display "
+"default-displaymanager</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:693
@@ -1183,6 +1235,8 @@ msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
 msgstr ""
+"Pro přepnutí <literal>default-displaymanager</literal> na "
+"<command>xdm</command> použijte:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:697
@@ -1191,6 +1245,9 @@ msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/xdm</command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set "
+"default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/xdm</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:699
@@ -1199,6 +1256,9 @@ msgid ""
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
 "<package>yast2-alternatives</package>."
 msgstr ""
+"Pro správu alternativ v grafickém režimu je možné použít modul YaSTu "
+"<guimenu>Alternativy</guimenu>, který si nainstalujete z balíčku "
+"<package>yast2-alternatives</package>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:707
@@ -1233,7 +1293,7 @@ msgstr "Ujistěte se, že balíček <package>gdm</package> je nainstalován."
 #. (itstool) path: step/para
 #: xml/release-notes.xml:724
 msgid "Set GDM as the display manager:"
-msgstr ""
+msgstr "Nastavení GDM jako správce obrazovky:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:727
@@ -1242,6 +1302,9 @@ msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
 "  /usr/lib/X11/displaymanagers/gdm</command>"
 msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set "
+"default-displaymanager \\\n"
+"  /usr/lib/X11/displaymanagers/gdm</command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:731
@@ -1252,6 +1315,8 @@ msgstr "Restartujte."
 #: xml/release-notes.xml:740
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
 msgstr ""
+"Změna měřítka uživatelského rozhraní SDDM na počítačích s obrazovkami s "
+"vysokým rozlišením"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:741
@@ -1261,6 +1326,11 @@ msgid ""
 "set SDDM to scale its UI automatically for the display using the "
 "configuration file <filename>/etc/sddm.conf</filename>:"
 msgstr ""
+"Výchozí správce přihlášení pro KDE, SDDM, ve výchozím nastavení nemění "
+"velikost uživatelského rozhraní na obrazovkách s vysokým rozlišením. Pokud "
+"máte počítač s obrazovkou High-DPI, můžete nastavit SDDM tak, aby pro tyto "
+"obrazovky změnil velikost uživatelského rozhraní automaticky pomocí "
+"konfiguračního souboru <filename>/etc/sddm.conf</filename>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:748
@@ -1271,6 +1341,10 @@ msgid ""
 "EnableHiDPI=true\n"
 "ServerArguments=-nolisten tcp -dpi <replaceable>DPI_VALUE</replaceable>\n"
 msgstr ""
+"\n"
+"[X11]\n"
+"EnableHiDPI=true\n"
+"ServerArguments=-nolisten tcp -dpi <replaceable>HODNOTA_DPI</replaceable>\n"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:753
@@ -1279,11 +1353,16 @@ msgid ""
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
 "that is a multiple of the default 96 DPI."
 msgstr ""
+"Nahraďte <replaceable>HODNOTA_DPI</replaceable> odpovídající hodnotou DPI, "
+"jako například <literal>192</literal>. Pro lepší výsledky zvětšení použijte "
+"hodnoty DPI, které jsou násobky výchozích 96 DPI."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:762
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
 msgstr ""
+"Změna velikosti uživatelského rozhraní YaSTu na počítačích s obrazovkami s "
+"vysokým rozlišením"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:763
@@ -1293,6 +1372,11 @@ msgid ""
 "automatically for the display. To do so, set the environment variable "
 "<literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 msgstr ""
+"YaST ve výchozím nastavení neupravuje zvětšení svého uživatelského rozhraní "
+"pro obrazovky s vysokým rozlišením. Pokud máte počítač s obrazovkou High-"
+"DPI, můžete nastavit YaST tak, aby změnil velikost uživatelského rozhraní "
+"automaticky pro danou obrazovku. Abyste tak učinili, nastavte proměnnou "
+"prostředí <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:773
