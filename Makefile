@@ -62,6 +62,7 @@ XSLTPROC_COMMAND = xsltproc \
 --stringparam variablelist.as.blocks 1 \
 --stringparam toc.max.depth 3 \
 --stringparam show.comments 0 \
+--stringparam generate.consistent.ids 1 \
 --xinclude --nonet
 
 # Fetch correct Report Bug link values, so translations get the correct
@@ -130,13 +131,15 @@ translatedxml: xml/release-notes.xml xml/release-notes.ent $(XML_FILES)
 pdf: $(PDF_FILES)
 $(PDF_FILES): po/LINGUAS translatedxml
 	lang=$(LANG_COMMAND) ; \
-	$(DAPS_COMMAND) pdf PROFCONDITION="general\;$(LIFECYCLE)"
+	$(DAPS_COMMAND) pdf PROFCONDITION="general\;$(LIFECYCLE)" \
+	--param "generate.consistent.ids=1"
 
 single-html: $(SINGLE_HTML_FILES)
 $(SINGLE_HTML_FILES): po/LINGUAS translatedxml
 	lang=$(LANG_COMMAND) ; \
 	$(DAPS_COMMAND) html --single \
 	--stringparam "homepage='https://www.opensuse.org'" \
+	--param "generate.consistent.ids=1" \
 	PROFCONDITION="general\;$(LIFECYCLE)"
 
 yast-html: | $(DIRS) $(YAST_HTML_FILES)
