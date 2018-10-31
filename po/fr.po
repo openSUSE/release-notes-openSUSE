@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2018-10-23 19:31+0200\n"
-"PO-Revision-Date: 2018-08-26 11:02+0000\n"
+"PO-Revision-Date: 2018-10-31 06:40+0000\n"
 "Last-Translator: Antoine Belvire <antoine.belvire@opensuse.org>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/fr/>\n"
@@ -636,6 +636,8 @@ msgstr "Mise à niveau depuis openSUSE Leap 42.3"
 #: xml/release-notes.xml:340
 msgid "Package Downgrades During System Upgrade"
 msgstr ""
+"Mises à jour de paquets vers des versions inférieures lors de la mise à "
+"niveau du système"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:341
@@ -646,6 +648,12 @@ msgid ""
 "Leap 42.3 will be displayed as downgrades, even though they actually contain "
 "the same software but compiled for a newer operating system."
 msgstr ""
+"Les paquets RPM d'openSUSE Leap 15.0 contiennent une information "
+"supplémentaire indiquant la version d'openSUSE Leap. Pour cette raison, les "
+"paquets qui contiennent la même version logicielle qu'openSUSE Leap 42.3 "
+"seront affichés comme des mises à jour vers une version inférieure, même "
+"s'ils contiennent le même logiciel mais compilé avec un système "
+"d'exploitation plus récent."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:353
@@ -803,6 +811,10 @@ msgid ""
 "with an encrypted data partition, such as <filename>/home</filename>, can "
 "crash the YaST installer when selecting the previous installation."
 msgstr ""
+"L'utilisation de la mise à niveau hors-ligne sur un ordinateur avec une "
+"partition de données chiffrée, telle que <filename>/home</filename>, peut "
+"faire crasher l'installateur YaST lors de la sélection de l'installation "
+"existante."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:452
@@ -812,6 +824,11 @@ msgid ""
 "cr_home</filename>. In the installation environment, YaST cannot associate "
 "that path with an automatically detected volume."
 msgstr ""
+"Cela arrive quand la partition de données chiffrée est listée dans "
+"<filename>/etc/fstab</filename> par nom du mappeur de périphérique, tel que "
+"<filename>/dev/mapper/cr_home</filename>. Dans l'environnement "
+"d'installation, YaST ne peut pas associer ce chemin avec un volume "
+"automatiquement détecté."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:459
@@ -821,6 +838,10 @@ msgid ""
 "of device names. To determine the correct device UUIDs, use the following "
 "command:"
 msgstr ""
+"Afin de pouvoir utiliser la fonctionnalité de mise à niveau hors ligne, "
+"avant de démarrer la mise à niveau, modifiez <filename>/etc/fstab</filename> "
+"pour utiliser des UUID au lieu des noms de périphériques. Afin de déterminer "
+"les UUID corrects, utilisez la commande suivante :"
 
 #. (itstool) path: sect3/screen
 #: xml/release-notes.xml:465
@@ -951,6 +972,8 @@ msgid ""
 "<package>php7-imap</package>: The optional IMAP PHP extension is no longer "
 "shipped as the UW IMAP reference implementation is no longer maintained."
 msgstr ""
+"<package>php7-imap</package> : l'extension optionnelle PHP d'IMAP n'est plus "
+"distribuée car l'implémentation de référence UW IMAP n'est plus maintenue."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:561
@@ -1788,20 +1811,22 @@ msgid ""
 "appears directly after the message that this specific header is being "
 "checked."
 msgstr ""
-"Dans cet exemple, le header 168 est associé avec une clé obsolète – "
-"l'avertissement apparaît directement après le message indiquant que cet "
-"header est en train d'être vérifié."
+"Dans cet exemple, l'en-tête 168 est associé avec une clé obsolète – "
+"l'avertissement apparaît directement après le message indiquant que cet en-"
+"tête est en train d'être vérifié."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1045
 msgid "Find out the key number associated with the header:"
-msgstr "Trouvez le numéro de la clé associée à cet header :"
+msgstr "Trouvez le numéro de la clé associée à cet en-tête :"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1048
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber <replaceable>HEADER</replaceable></command>"
-msgstr "<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber <replaceable>HEADER</replaceable></command>"
+msgstr ""
+"<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber <replaceable"
+">EN-TÊTE</replaceable></command>"
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1049
@@ -1809,8 +1834,8 @@ msgid ""
 "Replace <replaceable>HEADER</replaceable> with the required header number. "
 "In the example, that would be <literal>168</literal>."
 msgstr ""
-"Remplacez <replaceable>HEADER</replaceable> avec le numéro du header. Dans "
-"cet exemple, ce serait <literal>168</literal>."
+"Remplacez <replaceable>EN-TÊTE</replaceable> avec le numéro de l'en-tête "
+"Dans cet exemple, ce serait <literal>168</literal>."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1053
