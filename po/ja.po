@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2018-11-05 17:13+0100\n"
-"PO-Revision-Date: 2018-10-23 22:34+0000\n"
+"PO-Revision-Date: 2018-11-05 22:51+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ja/>\n"
@@ -888,7 +888,7 @@ msgstr ""
 #: xml/release-notes.xml:491
 msgid ""
 "<systemitem class=\"daemon\">ntpd</systemitem> Has Been Replaced With Chrony"
-msgstr ""
+msgstr "<systemitem class=\"daemon\">ntpd</systemitem> の chrony への置き換えについて"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:492
@@ -896,6 +896,8 @@ msgid ""
 "The time server synchronization daemon <systemitem class=\"daemon\">ntpd</"
 "systemitem> has been replaced with the more modern daemon Chrony."
 msgstr ""
+"時刻同期デーモンである <systemitem class=\"daemon\">ntpd</systemitem> は、より新しいデーモンである "
+"chrony に置き換えられています。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:497
@@ -906,6 +908,11 @@ msgid ""
 "<link xlink:href=\"https://doc.opensuse.org/projects/autoyast/#Configuration."
 "Network.Ntp\"/>."
 msgstr ""
+"この変更により、 AutoYaST のプロファイルを設定する際、 <literal>ntp_client</literal> "
+"セクション内を新しい形式に更新する必要が生じています。 AutoYaST の <literal>ntp_client</literal> "
+"セクションに関する詳細は、 <link xlink:href=\""
+"https://doc.opensuse.org/projects/autoyast/#Configuration.Network.Ntp\"/> "
+"をお読みください。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:504
@@ -921,6 +928,14 @@ msgid ""
 "class=\"daemon\">ntpd</systemitem> in it will be replaced by <systemitem "
 "class=\"daemon\">chrony</systemitem> references."
 msgstr ""
+"時刻を定期的に同期させる場合、 YaST では cron の設定ファイルを作成して対応しています。 openSUSE Leap 15.0 では、"
+"この設定ファイルは <package>yast2-ntp-client</package> パッケージが所有しています "
+"(従来のバージョンでは、パッケージとしては管理していませんでした) 。また、設定ファイルは <filename>novell.ntp-"
+"synchronization</filename> から <filename>suse-ntp_synchronization</filename> "
+"という名前に変更され、他の cron 設定ファイルと調和が図られるようになっています。なお、。従来のバージョンの openSUSE Leap "
+"からアップグレードした場合、この処理は自動的に行なわれます。具体的には、古いファイル名のファイルが存在すると、ファイル名が変更されて <"
+"systemitem class=\"daemon\">ntpd</systemitem> への参照が <systemitem class=\""
+"daemon\">chrony</systemitem> への参照に置き換えられるようになっています。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:524
