@@ -486,6 +486,36 @@
     </para>
    </sect3>
 
+   <sect3>
+    <!-- Lightly edited copy of FATE#323432, v/ boo#1113694 -->
+    <title><systemitem class="daemon">ntpd</systemitem> Has Been Replaced With Chrony</title>
+    <para>
+     The time server synchronization daemon
+     <systemitem class="daemon">ntpd</systemitem> has been replaced with the
+     more modern daemon Chrony.
+    </para>
+    <para>
+     This change means that AutoYaST files with an
+     <literal>ntp_client</literal> section need to be updated to a new format
+     for this section. For more information about the new AutoYaST
+     <literal>ntp_client</literal> format, see
+     <link xlink:href="https://doc.opensuse.org/projects/autoyast/#Configuration.Network.Ntp"/>.
+    </para>
+    <para>
+     To synchronize time in intervals, YaST sets up a cron configuration
+     file. From &thisflavor; 15.0 on, the configuration file used for this is
+     owned by the package <package>yast2-ntp-client</package> (previously no
+     package owned it). The configuration file has been renamed from
+     <filename>novell.ntp-synchronization</filename> to
+     <filename>suse-ntp_synchronization</filename> to be consistent with other
+     cron configuration files. The upgrade from previous versions of
+     &thisflavor; is performed automatically: If a file with the old name is
+     found, it will be renamed and references to
+     <systemitem class="daemon">ntpd</systemitem> in it will be replaced by
+     <systemitem class="daemon">chrony</systemitem> references.
+    </para>
+   </sect3>
+
   </sect2>
 
  </sect1>
