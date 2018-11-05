@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-23 19:31+0200\n"
+"POT-Creation-Date: 2018-11-05 17:13+0100\n"
 "PO-Revision-Date: 2018-10-31 23:01+0000\n"
 "Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
@@ -207,9 +207,9 @@ msgid ""
 "basics.html\"/>."
 msgstr ""
 "Tato sekce obsahuje poznámky ohledně instalace. Detailní informace ohledně "
-"postupu upgradu najdete v dokumentaci na <link xlink:href=\"https://doc.opens"
-"use.org/documentation/leap/startup/html/book.opensuse.startup/part.basics."
-"html\"/>."
+"postupu upgradu najdete v dokumentaci na <link xlink:href=\"https://doc."
+"opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part."
+"basics.html\"/>."
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:94 xml/release-notes.xml:327
@@ -874,18 +874,56 @@ msgstr ""
 "zazálohujte si adresář <filename>~/.gnupg</filename> před tím, než spustíte "
 "povýšení systému na openSUSE Leap 15.0."
 
+#. (itstool) path: sect3/title
+#: xml/release-notes.xml:491
+msgid ""
+"<systemitem class=\"daemon\">ntpd</systemitem> Has Been Replaced With Chrony"
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:492
+msgid ""
+"The time server synchronization daemon <systemitem class=\"daemon\">ntpd</"
+"systemitem> has been replaced with the more modern daemon Chrony."
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:497
+msgid ""
+"This change means that AutoYaST files with an <literal>ntp_client</literal> "
+"section need to be updated to a new format for this section. For more "
+"information about the new AutoYaST <literal>ntp_client</literal> format, see "
+"<link xlink:href=\"https://doc.opensuse.org/projects/autoyast/#Configuration."
+"Network.Ntp\"/>."
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:504
+msgid ""
+"To synchronize time in intervals, YaST sets up a cron configuration file. "
+"From openSUSE Leap 15.0 on, the configuration file used for this is owned by "
+"the package <package>yast2-ntp-client</package> (previously no package owned "
+"it). The configuration file has been renamed from <filename>novell.ntp-"
+"synchronization</filename> to <filename>suse-ntp_synchronization</filename> "
+"to be consistent with other cron configuration files. The upgrade from "
+"previous versions of openSUSE Leap is performed automatically: If a file "
+"with the old name is found, it will be renamed and references to <systemitem "
+"class=\"daemon\">ntpd</systemitem> in it will be replaced by <systemitem "
+"class=\"daemon\">chrony</systemitem> references."
+msgstr ""
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:494
+#: xml/release-notes.xml:524
 msgid "Packaging Changes"
 msgstr "Změny v balíčkování"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:497
+#: xml/release-notes.xml:527
 msgid "Deprecated Packages"
 msgstr "Zastaralé balíčky"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:498
+#: xml/release-notes.xml:528
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -898,7 +936,7 @@ msgstr ""
 "opravy."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:514
+#: xml/release-notes.xml:544
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -909,23 +947,23 @@ msgstr ""
 "příkaz:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:519
+#: xml/release-notes.xml:549
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
 msgstr "<prompt>tux@linux &gt; </prompt><command>zypper lifecycle</command>"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:523
+#: xml/release-notes.xml:553
 msgid "Removed Packages"
 msgstr "Odstraněné balíčky"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:524
+#: xml/release-notes.xml:554
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "Odstraněné balíčky, které již nadále nejsou součástí distribuce."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:530
+#: xml/release-notes.xml:560
 msgid ""
 "<package>cryptconfig</package>: Was not maintained anymore. Use partition "
 "encryption instead. For more information, see <xref linkend=\"sec.upgrade."
@@ -936,7 +974,7 @@ msgstr ""
 "upgrade.cryptconfig\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:538
+#: xml/release-notes.xml:568
 msgid ""
 "<package>SuSEfirewall2</package>: Replaced by <package>firewalld</package>. "
 "For information about migrating to <package>firewalld</package>, see <link "
@@ -951,7 +989,7 @@ msgstr ""
 "cha.security.firewall.html#sec.security.firewall.firewalld\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:548
+#: xml/release-notes.xml:578
 msgid ""
 "<package>php7-imap</package>: The optional IMAP PHP extension is no longer "
 "shipped as the UW IMAP reference implementation is no longer maintained."
@@ -960,17 +998,17 @@ msgstr ""
 "dodáváno, protože referenční implementace UW IMAP už není udržována."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:561
+#: xml/release-notes.xml:591
 msgid "Drivers and Hardware"
 msgstr "Ovladače a hardware"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:566
+#: xml/release-notes.xml:596
 msgid "Hang on Machines with Nvidia GPUs and Hybrid Graphics"
 msgstr "Zamrzání na strojích s GPU Nvidia a hybridních grafických kartách"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:567
+#: xml/release-notes.xml:597
 msgid ""
 "With the kernel shipped in openSUSE Leap 15.0 GM, the Nouveau driver for "
 "Nvidia graphics card may hang at reboot, shutdown, or during runtime power "
@@ -985,7 +1023,7 @@ msgstr ""
 "grafické karty Intel a oddělené grafické karty Nvidia."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:574
+#: xml/release-notes.xml:604
 msgid ""
 "The bug will be fixed in a maintenance update for the kernel. However, as "
 "the installation image does not receive updates, this issue may occur during "
@@ -1003,12 +1041,12 @@ msgstr ""
 "opět odstranit."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:586
+#: xml/release-notes.xml:616
 msgid "KDE on Wayland Is Not Supported with Proprietary Nvidia Driver"
 msgstr "KDE na Waylandu není podporováno s proprietárním ovladačem Nvidia"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:587
+#: xml/release-notes.xml:617
 msgid ""
 "The KDE Plasma Wayland session is not supported with the proprietary Nvidia "
 "driver. If you are using KDE and the proprietary Nvidia driver, stay with "
@@ -1019,22 +1057,22 @@ msgstr ""
 "X."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:597
+#: xml/release-notes.xml:627
 msgid "Desktop"
 msgstr "Pracovní plocha"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:599
+#: xml/release-notes.xml:629
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
 msgstr "Tato sekce uvádí změny a problémy v openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:605
+#: xml/release-notes.xml:635
 msgid "No Default Compose Key Combination"
 msgstr "Není výchozí kombinace kláves"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:606
+#: xml/release-notes.xml:636
 msgid ""
 "In previous versions of openSUSE, the compose key combination allowed typing "
 "characters that were not part of the regular keyboard layout. For example, "
@@ -1049,7 +1087,7 @@ msgstr ""
 "<keycap>a</keycap>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:613
+#: xml/release-notes.xml:643
 msgid ""
 "In openSUSE Leap 15.0, there is no longer a predefined compose key "
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
@@ -1060,7 +1098,7 @@ msgstr ""
 "keycombo> již nefunguje podle očekávání."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:621
+#: xml/release-notes.xml:651
 msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
@@ -1069,7 +1107,7 @@ msgstr ""
 "soubor <filename>/etc/X11/Xmodmap</filename> a najděte v něm řádky:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:625
+#: xml/release-notes.xml:655
 #, no-wrap
 msgid ""
 "[...]\n"
@@ -1094,7 +1132,7 @@ msgstr ""
 "[...]"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:633
+#: xml/release-notes.xml:663
 msgid ""
 "To uncomment the example code, remove the <literal>!</literal> characters at "
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
@@ -1105,7 +1143,7 @@ msgstr ""
 "bude přepsáno, když použijete <command>setxkbmap</command>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:641
+#: xml/release-notes.xml:671
 msgid ""
 "To define a user-specific compose key combination, use your desktop's "
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
@@ -1116,7 +1154,7 @@ msgstr ""
 "command>:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:646
+#: xml/release-notes.xml:676
 #, no-wrap
 msgid ""
 "\n"
@@ -1128,7 +1166,7 @@ msgstr ""
 "     "
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:649
+#: xml/release-notes.xml:679
 msgid ""
 "For the variable <replaceable>COMPOSE_KEY</replaceable>, use your preferred "
 "character, for example <literal>ralt</literal>, <literal>lwin</literal>, "
@@ -1142,7 +1180,7 @@ msgstr ""
 "<literal>caps</literal> (uzamykač)."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:658
+#: xml/release-notes.xml:688
 msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
@@ -1151,7 +1189,7 @@ msgstr ""
 "bez použití předřadné klávesy."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:668
+#: xml/release-notes.xml:698
 msgid ""
 "Use <command>update-alternatives</command> to Set Login Manager and Desktop "
 "Session"
@@ -1160,7 +1198,7 @@ msgstr ""
 "přihlášení a sezení pracovní plochy"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:669
+#: xml/release-notes.xml:699
 msgid ""
 "In the past, you could use <filename>/etc/sysconfig</filename> or the YaST "
 "module <guimenu>/etc/sysconfig Editor</guimenu> to define the login manager "
@@ -1175,27 +1213,27 @@ msgstr ""
 "systémem alternativ."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:676
+#: xml/release-notes.xml:706
 msgid "To change the defaults, use the following alternatives:"
 msgstr "Pro změnu výchozích hodnot použijte tyto alternativy:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:681
+#: xml/release-notes.xml:711
 msgid "Login manager: <literal>default-displaymanager</literal>"
 msgstr "Správce přihlášení: <literal>default-displaymanager</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:686
+#: xml/release-notes.xml:716
 msgid "Wayland session: <literal>default-waylandsession.desktop</literal>"
 msgstr "Sezení Wayland: <literal>default-waylandsession.desktop</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:691
+#: xml/release-notes.xml:721
 msgid "X desktop session: <literal>default-xsession.desktop</literal>"
 msgstr "Sezení pracovní plochy X: <literal>default-xsession.desktop</literal>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:696
+#: xml/release-notes.xml:726
 msgid ""
 "For example, to check the value of <literal>default-displaymanager</"
 "literal>, use:"
@@ -1204,13 +1242,13 @@ msgstr ""
 "použijte:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:700
+#: xml/release-notes.xml:730
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display default-displaymanager</command>"
 msgstr "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --display default-displaymanager</command>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:701
+#: xml/release-notes.xml:731
 msgid ""
 "To switch the <literal>default-displaymanager</literal> to <command>xdm</"
 "command>, use:"
@@ -1219,7 +1257,7 @@ msgstr ""
 "command> použijte:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:705
+#: xml/release-notes.xml:735
 #, no-wrap
 msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
@@ -1229,7 +1267,7 @@ msgstr ""
 "  /usr/lib/X11/displaymanagers/xdm</command>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:707
+#: xml/release-notes.xml:737
 msgid ""
 "To enable graphical management of alternatives, use the YaST module "
 "<guimenu>Alternatives</guimenu> that can be installed from the package "
@@ -1240,12 +1278,12 @@ msgstr ""
 "<package>yast2-alternatives</package>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:715
+#: xml/release-notes.xml:745
 msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 msgstr "Zámek obrazovky není dostupný používáte-li GNOME Shell, ale ne GDM"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:716
+#: xml/release-notes.xml:746
 msgid ""
 "When using GNOME Shell together with a login manager other than GDM, such as "
 "SDDM or LightDM, the screen will not blank or lock. Additionally, switching "
@@ -1256,7 +1294,7 @@ msgstr ""
 "není možné přepnout uživatele bez odhlášení."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:721
+#: xml/release-notes.xml:751
 msgid ""
 "To be able to lock the screen from GNOME Shell, enable GDM as your login "
 "manager:"
@@ -1265,17 +1303,17 @@ msgstr ""
 "přihlášení:"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:727
+#: xml/release-notes.xml:757
 msgid "Make sure that the package <package>gdm</package> is installed."
 msgstr "Ujistěte se, že balíček <package>gdm</package> je nainstalován."
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:732
+#: xml/release-notes.xml:762
 msgid "Set GDM as the display manager:"
 msgstr "Nastavení GDM jako správce obrazovky:"
 
 #. (itstool) path: step/screen
-#: xml/release-notes.xml:735
+#: xml/release-notes.xml:765
 #, no-wrap
 msgid ""
 "<prompt>tux@linux &gt; </prompt><command>sudo update-alternatives --set default-displaymanager \\\n"
@@ -1285,19 +1323,19 @@ msgstr ""
 "  /usr/lib/X11/displaymanagers/gdm</command>"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:739
+#: xml/release-notes.xml:769
 msgid "Reboot."
 msgstr "Restartujte."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:748
+#: xml/release-notes.xml:778
 msgid "Scaling the SDDM UI on Computers with High-DPI Displays"
 msgstr ""
 "Změna měřítka uživatelského rozhraní SDDM na počítačích s obrazovkami s "
 "vysokým rozlišením"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:749
+#: xml/release-notes.xml:779
 msgid ""
 "The default login manager for KDE, SDDM, does not scale its UI for High-DPI "
 "displays by default. If you have a computer with a high-DPI display, you can "
@@ -1311,7 +1349,7 @@ msgstr ""
 "konfiguračního souboru <filename>/etc/sddm.conf</filename>:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:756
+#: xml/release-notes.xml:786
 #, no-wrap
 msgid ""
 "\n"
@@ -1325,7 +1363,7 @@ msgstr ""
 "ServerArguments=-nolisten tcp -dpi <replaceable>HODNOTA_DPI</replaceable>\n"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:761
+#: xml/release-notes.xml:791
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value, "
 "such as <literal>192</literal>. For best scaling results, use a DPI value "
@@ -1336,14 +1374,14 @@ msgstr ""
 "hodnoty DPI, které jsou násobky výchozích 96 DPI."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:770
+#: xml/release-notes.xml:800
 msgid "Scaling the YaST UI on Computers with High-DPI Displays"
 msgstr ""
 "Změna velikosti uživatelského rozhraní YaSTu na počítačích s obrazovkami s "
 "vysokým rozlišením"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:771
+#: xml/release-notes.xml:801
 msgid ""
 "YaST does not scale its UI for High-DPI displays by default. If you have a "
 "computer with a high-DPI display, you can set YaST to scale its UI "
@@ -1357,7 +1395,7 @@ msgstr ""
 "prostředí <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:781
+#: xml/release-notes.xml:811
 msgid ""
 "Using Automatic Scaling in Qt Applications in Setups Which Mix High-DPI/"
 "Regular-DPI Monitors"
@@ -1366,7 +1404,7 @@ msgstr ""
 "DPI, používám automatické škálování"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:782
+#: xml/release-notes.xml:812
 msgid ""
 "Qt supports automatic per-monitor scaling on X. It uses the DPI value of the "
 "virtual X screen to calculate the font size for the primary monitor. By "
@@ -1379,7 +1417,7 @@ msgstr ""
 "primárního monitoru k odvození DPI řezu písma pro všechny ostatní monitory."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:788
+#: xml/release-notes.xml:818
 msgid ""
 "Two widely used desktops will override this behavior of Qt, therefore this "
 "note does not apply to them:"
@@ -1388,7 +1426,7 @@ msgstr ""
 "poznámka na ně nevztahuje:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:794
+#: xml/release-notes.xml:824
 msgid ""
 "GNOME will set <literal>Xft.dpi</literal> to the configured multiple of "
 "96 DPI."
@@ -1396,7 +1434,7 @@ msgstr ""
 "GNOME nastaví <literal>Xft.dpi</literal> na konfigurovaný násobek 96 DPI."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:800
+#: xml/release-notes.xml:830
 msgid ""
 "KDE Plasma disables the automatic scaling of Qt and uses a manual scaling "
 "configuration."
@@ -1405,7 +1443,7 @@ msgstr ""
 "škálování."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:806
+#: xml/release-notes.xml:836
 msgid ""
 "On other desktops, this behavior of Qt can lead to undesirable situations "
 "such as the following: If the primary display is High-DPI (&gt;= 144 DPI), "
@@ -1423,12 +1461,12 @@ msgstr ""
 "na monitoru s vysokým DPI vypadat okna takových aplikací menší."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:815
+#: xml/release-notes.xml:845
 msgid "You can use one of the following workarounds for this issue:"
 msgstr "Tento problém lze obejít jedním z těchto způsobů:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:820
+#: xml/release-notes.xml:850
 msgid ""
 "Use a monitor with a regular DPI value as the primary monitor. Applications "
 "that request scaling are then scaled appropriately on the High-DPI monitor."
@@ -1437,7 +1475,7 @@ msgstr ""
 "škálování budou pak na monitoru s vysokým DPI vypadat adekvátně."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:827
+#: xml/release-notes.xml:857
 msgid ""
 "Set an appropriate font DPI (<literal>Xft.dpi</literal>). You can do so "
 "either with the configuration utility of your desktop. Alternatively, after "
@@ -1448,13 +1486,13 @@ msgstr ""
 "příkazu po každém přihlášení:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:832
+#: xml/release-notes.xml:862
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>echo Xft.dpi:<replaceable>DPI_VALUE</replaceable> | xrdb -nocpp -merge</command>"
 msgstr "<prompt>tux@linux &gt; </prompt><command>echo Xft.dpi:<replaceable>HODNOTA_DPI</replaceable> | xrdb -nocpp -merge</command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:833
+#: xml/release-notes.xml:863
 msgid ""
 "Replace <replaceable>DPI_VALUE</replaceable> with an appropriate DPI value "
 "for the primary monitor."
@@ -1463,12 +1501,12 @@ msgstr ""
 "hlavního monitoru."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:843
+#: xml/release-notes.xml:873
 msgid "Screen Sharing Does Not Work in Firefox or Chromium on Wayland"
 msgstr "Sdílení obrazovek nefunguje ve Firefoxu a Chromiu na Waylandu"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:844
+#: xml/release-notes.xml:874
 msgid ""
 "Firefox and Chromium normally allow Web-based tools such as "
 "videoconferencing applications to share the entire screen or individual "
@@ -1481,7 +1519,7 @@ msgstr ""
 "relací Weyland."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:850
+#: xml/release-notes.xml:880
 msgid ""
 "To be able to share your screen in Firefox or Chromium, use an X session "
 "instead."
@@ -1489,12 +1527,12 @@ msgstr ""
 "Abyste mohli sdílet svou obrazovku ve Firefoxu či Chromiu, použijte X-relaci."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:857
+#: xml/release-notes.xml:887
 msgid "Playing MP3 Media Files"
 msgstr "Prehrávání mediálních souborů MP3"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:858
+#: xml/release-notes.xml:888
 msgid ""
 "The codecs to play MP3 media files are shipped as part of the standard "
 "repository."
@@ -1503,7 +1541,7 @@ msgstr ""
 "standardního repozitáře."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:862
+#: xml/release-notes.xml:892
 msgid ""
 "To use this decoder in gstreamer-based applications and frameworks, such as "
 "Rhythmbox or Totem, install the package <literal>gstreamer-plugins-ugly</"
@@ -1514,12 +1552,12 @@ msgstr ""
 "<literal>gstreamer-plugins-ugly</literal>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:870
+#: xml/release-notes.xml:900
 msgid "No Support for Type-1 Fonts in LibreOffice"
 msgstr "Pro písmo Type-1 v LibreOffice není podpora"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:871
+#: xml/release-notes.xml:901
 msgid ""
 "LibreOffice 5.3 and higher do not support legacy Type-1 fonts (file "
 "extensions <filename>.afm</filename> and <filename>.pfb</filename>) anymore. "
@@ -1534,7 +1572,7 @@ msgstr ""
 "(<filename>.otf</filename>)."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:878
+#: xml/release-notes.xml:908
 msgid ""
 "If you are affected by this, convert Type-1 fonts to a supported format, "
 "such as TrueType and then use the converted fonts. Conversion is possible "
@@ -1550,12 +1588,12 @@ msgstr ""
 "\"https://fontforge.github.io/en-US/documentation/scripting/\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:890
+#: xml/release-notes.xml:920
 msgid "FreeType Font Rendering Changes"
 msgstr "Změny vykreslování pro řez písma FreeType"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:891
+#: xml/release-notes.xml:921
 msgid ""
 "FreeType 2.6.4 has a new default glyph hinting interpreter (version 38) that "
 "more closely matches other operating systems but may look <quote>more fuzzy</"
@@ -1570,18 +1608,18 @@ msgstr ""
 "uživatelské, programové) dle Vaší volby:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:898
+#: xml/release-notes.xml:928
 #, no-wrap
 msgid "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 msgstr "FREETYPE_PROPERTIES=\"truetype:interpreter-version=35\""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:903
+#: xml/release-notes.xml:933
 msgid "Enabling KDE Plasma Browser Integration"
 msgstr "Povolení integrace prohlížeče KDE Plasma"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:904
+#: xml/release-notes.xml:934
 msgid ""
 "Plasma browser integration for Firefox and Chromium/Chrome allows monitoring "
 "multimedia and downloads using KDE system tools and gives quick access to "
@@ -1593,7 +1631,7 @@ msgstr ""
 "Plasma."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:910
+#: xml/release-notes.xml:940
 msgid ""
 "The browser integration functionality consists of two parts that need to "
 "work together:"
@@ -1601,7 +1639,7 @@ msgstr ""
 "Integrace prohlížeče se skládá ze dvou částí, které musí spolupracovat:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:916
+#: xml/release-notes.xml:946
 msgid ""
 "The desktop part that can be installed using the system package "
 "<package>plasma-browser-integration</package>."
@@ -1610,14 +1648,14 @@ msgstr ""
 "<package>plasma-browser-integration</package>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:922
+#: xml/release-notes.xml:952
 msgid ""
 "The browser part that needs to be installed from the add-on store of your "
 "browser:"
 msgstr "Část, kterou je nutno instalovat ze sortimentu doplňků prohlížeče:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:928
+#: xml/release-notes.xml:958
 msgid ""
 "Firefox: <link xlink:href=\"https://addons.mozilla.org/firefox/addon/plasma-"
 "integration/\"/>"
@@ -1626,7 +1664,7 @@ msgstr ""
 "plasma-integration/\"/>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:933
+#: xml/release-notes.xml:963
 msgid ""
 "Chromium/Chrome: <link xlink:href=\"https://chrome.google.com/webstore/"
 "detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
@@ -1635,7 +1673,7 @@ msgstr ""
 "webstore/detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai\"/>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:940
+#: xml/release-notes.xml:970
 msgid ""
 "Note that this functionality is officially still in development and openSUSE "
 "Leap 15.0 ships with an early version of it."
@@ -1644,12 +1682,12 @@ msgstr ""
 "dodává s její předběžnou verzí."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:949
+#: xml/release-notes.xml:979
 msgid "Loading the Emacs <literal>psgml</literal> Module"
 msgstr "Načítání <literal>psgml</literal> modulu Emacsu"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:950
+#: xml/release-notes.xml:980
 msgid ""
 "Because of conflicts with Emacs modules from the default installation, "
 "openSUSE Leap 15.0 can no longer load the <literal>psgml</literal> module "
@@ -1662,17 +1700,17 @@ msgstr ""
 "package>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:981
+#: xml/release-notes.xml:1011
 msgid "Security"
 msgstr "Zabezpečení"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:983
+#: xml/release-notes.xml:1013
 msgid "This section lists changes to security features in openSUSE Leap 15.0."
 msgstr "Tato část uvádí změny funkcí zabezpečení v openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:990
+#: xml/release-notes.xml:1020
 msgid ""
 "GPG Does Not Support GPG V3 Keys Anymore, Resulting in Zypper/<command>rpm</"
 "command> Warnings"
@@ -1681,7 +1719,7 @@ msgstr ""
 "command> Zypperu výstrahy"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:991
+#: xml/release-notes.xml:1021
 msgid ""
 "openSUSE Leap 42.3 shipped with GPG 2.0, while openSUSE Leap 15.0 includes "
 "GPG 2.2. In between these GPG versions, support for GPG V3 keys was removed. "
@@ -1699,7 +1737,7 @@ msgstr ""
 "<literal>výstraha: Nepodporovaná verze klíče: V3</literal>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1000
+#: xml/release-notes.xml:1030
 msgid ""
 "Usually, these warnings are benign, as these keys may have been used for "
 "repositories that are no longer enabled on the system or that have since had "
@@ -1712,7 +1750,7 @@ msgstr ""
 "úložišti původního vývoje, musí být nahrazeny co nejdříve:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1008
+#: xml/release-notes.xml:1038
 msgid ""
 "Package management tools in openSUSE Leap 15.0 can no longer use them to "
 "verify package integrity."
@@ -1721,7 +1759,7 @@ msgstr ""
 "ověřování integrity balíčků."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1014
+#: xml/release-notes.xml:1044
 msgid ""
 "The keys in themselves are insecure. Hence, even though older package "
 "management tools will use them to verify integrity of packages, the result "
@@ -1732,12 +1770,12 @@ msgstr ""
 "klíče k ověření integrity balíčků."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1021
+#: xml/release-notes.xml:1051
 msgid "To delete such keys, perform the following:"
 msgstr "Chcete-li takové klíče odstranit, proveďte:"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:1026
+#: xml/release-notes.xml:1056
 msgid ""
 "Run an <command>rpm</command> command with high verbosity and check its "
 "output:"
@@ -1745,7 +1783,7 @@ msgstr ""
 "Příkaz <command>rpm</command> s podrobným výstupem, který zkontrolujte:"
 
 #. (itstool) path: step/screen
-#: xml/release-notes.xml:1030
+#: xml/release-notes.xml:1060
 #, no-wrap
 msgid ""
 "\n"
@@ -1767,7 +1805,7 @@ msgstr ""
 "[...]\n"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:1038
+#: xml/release-notes.xml:1068
 msgid ""
 "In the example, header 168 is associated with an outdated key—the warning "
 "appears directly after the message that this specific header is being "
@@ -1777,18 +1815,18 @@ msgstr ""
 "zprávou o kontrole tohoto záhlaví se vypíše varování."
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:1045
+#: xml/release-notes.xml:1075
 msgid "Find out the key number associated with the header:"
 msgstr "Najděte číslo klíče sdruženého se záhlavím:"
 
 #. (itstool) path: step/screen
-#: xml/release-notes.xml:1048
+#: xml/release-notes.xml:1078
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber <replaceable>HEADER</replaceable></command>"
 msgstr "<prompt>tux@linux &gt; </prompt><command>rpm -q --querybynumber <replaceable>ZÁHLAVÍ</replaceable></command>"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:1049
+#: xml/release-notes.xml:1079
 msgid ""
 "Replace <replaceable>HEADER</replaceable> with the required header number. "
 "In the example, that would be <literal>168</literal>."
@@ -1797,7 +1835,7 @@ msgstr ""
 "tomto příkladu to bude <literal>168</literal>."
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:1053
+#: xml/release-notes.xml:1083
 msgid ""
 "This command returns a key identifier starting with <literal>gpg-pubkey-</"
 "literal>."
@@ -1805,7 +1843,7 @@ msgstr ""
 "Příkaz oznámí identifikátor klíče, začínající <literal>gpg-pubkey-</literal>."
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:1059
+#: xml/release-notes.xml:1089
 msgid ""
 "Use the key identifier (<replaceable>KEY_ID</replaceable>) to learn more "
 "about the key:"
@@ -1814,24 +1852,24 @@ msgstr ""
 "dalších údajů o klíči:"
 
 #. (itstool) path: step/screen
-#: xml/release-notes.xml:1063
+#: xml/release-notes.xml:1093
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm -qi <replaceable>KEY_ID</replaceable></command>"
 msgstr "<prompt>tux@linux &gt; </prompt><command>rpm -qi <replaceable>ID_KLÍČE</replaceable></command>"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:1066
+#: xml/release-notes.xml:1096
 msgid "Remove the key from the system:"
 msgstr "Odstraňte klíč ze systému:"
 
 #. (itstool) path: step/screen
-#: xml/release-notes.xml:1069
+#: xml/release-notes.xml:1099
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>sudo rpm -e <replaceable>KEY_ID</replaceable></command>"
 msgstr "<prompt>tux@linux &gt; </prompt><command>sudo rpm -e <replaceable>ID_KLÍČE</replaceable></command>"
 
 #. (itstool) path: step/para
-#: xml/release-notes.xml:1072
+#: xml/release-notes.xml:1102
 msgid ""
 "If you continue to see warnings on subsequent uses of package management "
 "tools, repeat the procedure."
@@ -1840,12 +1878,12 @@ msgstr ""
 "balíčků, opakujte předchozí postup."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:1082
+#: xml/release-notes.xml:1112
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
 msgstr "<command>systemctl stop apparmor</command> Nefunguje"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1083
+#: xml/release-notes.xml:1113
 msgid ""
 "In the past, there could be confusion over the difference between how the "
 "very similarly named <command>systemctl</command> subcommands "
@@ -1856,7 +1894,7 @@ msgstr ""
 "<literal>restart</literal> na AppArmor:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1091
+#: xml/release-notes.xml:1121
 msgid ""
 "<command>systemctl reload apparmor</command> properly reloaded all AppArmor "
 "profiles. (It was and continues to be the recommended way of reloading "
@@ -1867,7 +1905,7 @@ msgstr ""
 "AppArmor.)"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1098
+#: xml/release-notes.xml:1128
 msgid ""
 "<command>systemctl restart apparmor</command> meant that AppArmor would "
 "stop, thereby unloading all AppArmor profiles and then restart which left "
@@ -1880,7 +1918,7 @@ msgstr ""
 "jen nově spuštěné procesy."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1106
+#: xml/release-notes.xml:1136
 msgid ""
 "Unfortunately, <systemitem>systemd</systemitem> does not provide a solution "
 "within its unit file format for the issue posed by the <literal>restart</"
@@ -1890,7 +1928,7 @@ msgstr ""
 "nenabízí řešení problémů vyvolaných scénářem <literal>restart</literal>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1111
+#: xml/release-notes.xml:1141
 msgid ""
 "Starting with AppArmor 2.12, the command <command>systemctl stop apparmor</"
 "command> will not work. As a consequence, <command>systemctl restart "
@@ -1901,7 +1939,7 @@ msgstr ""
 "restart apparmor</command> nyní korektně znovuzavede profily AppArmor."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1117
+#: xml/release-notes.xml:1147
 msgid ""
 "To unload all AppArmor profiles, use the new command <command>aa-teardown</"
 "command> instead which matches the previous behavior of <command>systemctl "
@@ -1912,7 +1950,7 @@ msgstr ""
 "<command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1122
+#: xml/release-notes.xml:1152
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
@@ -1923,17 +1961,17 @@ msgstr ""
 "show_bug.cgi?id=853019\"</>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:1132
+#: xml/release-notes.xml:1162
 msgid "Technical"
 msgstr "Technické"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:1137
+#: xml/release-notes.xml:1167
 msgid "Updated Btrfs Subvolume Layout"
 msgstr "Aktualizované rozložení podsvazku Btrfs"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1138
+#: xml/release-notes.xml:1168
 msgid ""
 "openSUSE Leap 15.0 introduces a new default Btrfs subvolume layout that aims "
 "for the following:"
@@ -1941,17 +1979,17 @@ msgstr ""
 "openSUSE Leap 15.0 zavádí nový výchozí rozvrh podsvazku Btrfs sloužící k:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1144
+#: xml/release-notes.xml:1174
 msgid "Simplified snapshots and rollbacks"
 msgstr "zjednodušení snímků stavu a obnov"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1149
+#: xml/release-notes.xml:1179
 msgid "Prevention of accidental data loss"
 msgstr "zábraně náhodné ztráty dat"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1154
+#: xml/release-notes.xml:1184
 msgid ""
 "Better performance of databases and VM images stored in <filename>/var</"
 "filename>"
@@ -1960,7 +1998,7 @@ msgstr ""
 "filename>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1160
+#: xml/release-notes.xml:1190
 msgid ""
 "Instead of using multiple Btrfs subvolumes for different subdirectories of "
 "<filename>/var</filename>, openSUSE Leap 15.0 ships with a single subvolume "
@@ -1973,7 +2011,7 @@ msgstr ""
 "write (zápis s kopií)."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1166
+#: xml/release-notes.xml:1196
 msgid ""
 "There is no defined way of upgrading to this new Btrfs subvolume layout. "
 "Therefore, if you want to take advantage of it, make sure to freshly install "
@@ -1984,7 +2022,7 @@ msgstr ""
 "instalaci openSUSE Leap 15.0."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1171
+#: xml/release-notes.xml:1201
 msgid ""
 "For more information on the default Btrfs subvolume layout before and after "
 "this change, see <link xlink:href=\"https://en.opensuse.org/SDB:BTRFS\"/>."
@@ -1993,13 +2031,13 @@ msgstr ""
 "viz <link xlink:href=\"http://en.opensuse.org/SDB:BTFRS\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:1180
+#: xml/release-notes.xml:1210
 msgid "Wicked: Using RFC 4361 DHCPv4 <literal>client-id</literal> on Ethernet"
 msgstr ""
 "Wicked: Použití RFC 4361 DHCPv4 <literal>client-id</literal> na Ethernetu"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1181
+#: xml/release-notes.xml:1211
 msgid ""
 "RFC 4361 updates the <literal>client-id</literal> defined in RFC 2132, "
 "section 9.14 to be compatible with DHCP 6 <literal>client-id</literal> "
@@ -2014,12 +2052,12 @@ msgstr ""
 "a DHCP 6 i na síti Ethernet."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1189
+#: xml/release-notes.xml:1219
 msgid "In openSUSE Leap 15.0:"
 msgstr "V openSUSE Leap 15.0:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1192
+#: xml/release-notes.xml:1222
 msgid ""
 "ISC DHCP 4.3.x server supports the new RFC 4361 (required for DNS update)"
 msgstr ""
@@ -2027,7 +2065,7 @@ msgstr ""
 "DNS)"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1197
+#: xml/release-notes.xml:1227
 msgid ""
 "Wicked provides an option to send such a <literal>client-id</literal> and to "
 "automatically use a DHCPv6-based <literal>client-id</literal> in DHCPv4 "
@@ -2038,7 +2076,7 @@ msgstr ""
 "používán v Infiniband)."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1204
+#: xml/release-notes.xml:1234
 msgid ""
 "To send the <literal>client-id</literal> during the installation, use "
 "<literal>linuxrc</literal> (also see <link xlink:href=\"https://en.opensuse."
@@ -2049,13 +2087,13 @@ msgstr ""
 "org/SDB:Linuxrc\"/>) s následným <literal>ifcfg</literal>:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:1210
+#: xml/release-notes.xml:1240
 #, no-wrap
 msgid "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 msgstr "ifcfg=eth0=dhcp,DHCLIENT_CLIENT_ID=01:03:52:54:00:02:c2:67,DHCLIENT6_CLIENT_ID=00:03:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1211
+#: xml/release-notes.xml:1241
 msgid ""
 "For more information, see the documentation for the options <literal>dhcp4 "
 "\"create-cid\"</literal>, <literal>dhcp6 \"default-duid\"</literal> in "
@@ -2068,7 +2106,7 @@ msgstr ""
 "<literal>wicked iaid --help</literal>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1219
+#: xml/release-notes.xml:1249
 msgid ""
 "The traditionally used RFC 2132 DHCPv4 <literal>client-id</literal> on "
 "Ethernet is constructed from the hardware type (<literal>01</literal> for "
@@ -2080,13 +2118,13 @@ msgstr ""
 "Ethernet), který je následován hardwarovou adresou (MAC adresa), např.:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:1225
+#: xml/release-notes.xml:1255
 #, no-wrap
 msgid "01:52:54:00:02:c2:67"
 msgstr "01:52:54:00:02:c2:67"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1226
+#: xml/release-notes.xml:1256
 msgid ""
 "The RFC 4361 <literal>client-id</literal> starts with <literal>0xff</"
 "literal> (instead of the hardware type), followed by the DHCPv6 IAID (the "
@@ -2100,7 +2138,7 @@ msgstr ""
 "id</literal>, který identifikuje stroj)."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1233
+#: xml/release-notes.xml:1263
 msgid ""
 "Using the above hardware type-based and hardware address-based DUID (LLT "
 "type used by default), the new RFC 4361 DHCPv4 <literal>client-id</literal> "
@@ -2111,7 +2149,7 @@ msgstr ""
 "DHCPv4 RFC4361:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1240
+#: xml/release-notes.xml:1270
 msgid ""
 "Using the last bytes of the MAC address as the IAID: <literal>ff:00:02:"
 "c2:67:00:01:xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
@@ -2120,7 +2158,7 @@ msgstr ""
 "xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1246
+#: xml/release-notes.xml:1276
 msgid ""
 "When the IAID is a simple incremented number: <literal>ff:00:00:00:01:00:01:"
 "xx:xx:xx:xx:52:54:00:02:c2:67</literal>"
@@ -2129,7 +2167,7 @@ msgstr ""
 "xx:52:54:00:02:c2:67</literal>"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:1252
+#: xml/release-notes.xml:1282
 msgid ""
 "The <literal>xx:xx:xx:xx</literal> in the DUID-LLT is a creation timestamp. "
 "A DUID-LL (<literal>00:03:00:01:<replaceable>MAC</replaceable></literal>) "
@@ -2140,17 +2178,17 @@ msgstr ""
 "literal>) nemá časové razítko."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:1268
+#: xml/release-notes.xml:1298
 msgid "More Information and Feedback"
 msgstr "Více informací a zpětná vazba"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1271
+#: xml/release-notes.xml:1301
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Čtěte dokumenty <filename>README</filename> z média."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1276
+#: xml/release-notes.xml:1306
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -2158,18 +2196,18 @@ msgstr ""
 "Zobrazte si podrobné údaje o změnách určeného balíčku z jeho souboru RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:1280
+#: xml/release-notes.xml:1310
 #, no-wrap
 msgid "<prompt>tux@linux &gt; </prompt><command>rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm</command>"
 msgstr "<prompt>tux@linux &gt; </prompt><command>rpm --changelog -qp <replaceable>NÁZEV_SOUBORU</replaceable>.rpm</command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1281
+#: xml/release-notes.xml:1311
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>NÁZEV_SOUBORU</replaceable> názvem souboru RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1286
+#: xml/release-notes.xml:1316
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -2178,14 +2216,14 @@ msgstr ""
 "souboru <filename>ChangeLog</filename> v kořenovém adresáři tohoto média."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1292
+#: xml/release-notes.xml:1322
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "Další informace najdete na médiu v adresáři <filename>docu</filename>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1298
+#: xml/release-notes.xml:1328
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -2194,7 +2232,7 @@ msgstr ""
 "doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:1304
+#: xml/release-notes.xml:1334
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -2203,7 +2241,7 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:1311
+#: xml/release-notes.xml:1341
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
 
