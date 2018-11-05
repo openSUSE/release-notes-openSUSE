@@ -20,8 +20,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-05 17:13+0100\n"
-"PO-Revision-Date: 2018-10-31 23:01+0000\n"
-"Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
+"PO-Revision-Date: 2018-11-05 16:43+0000\n"
+"Last-Translator: Aleš Kastner <alkas@volny.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/cs/>\n"
 "Language: cs\n"
@@ -878,7 +878,7 @@ msgstr ""
 #: xml/release-notes.xml:491
 msgid ""
 "<systemitem class=\"daemon\">ntpd</systemitem> Has Been Replaced With Chrony"
-msgstr ""
+msgstr "<systemitem class=\"daemon\">ntpd</systemitem> byl nahrazen Chrony"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:492
@@ -886,6 +886,8 @@ msgid ""
 "The time server synchronization daemon <systemitem class=\"daemon\">ntpd</"
 "systemitem> has been replaced with the more modern daemon Chrony."
 msgstr ""
+"Služba synchronizace se serverem času <systemitem class=\"daemon\""
+">ntpd</systemitem> byla nahrazena modernější službou Chrony."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:497
@@ -896,6 +898,10 @@ msgid ""
 "<link xlink:href=\"https://doc.opensuse.org/projects/autoyast/#Configuration."
 "Network.Ntp\"/>."
 msgstr ""
+"To znamená, že soubory AutoYaST se sekcí <literal>ntp_client</literal> je "
+"třeba aktualizovat novým formátem této sekce. Další informace o novém "
+"formátu AutoYaST <literal>ntp_client</literal> viz <link xlink:href=\""
+"https://doc.opensuse.org/projects/autoyast/#Configuration.Network.Ntp\"/>."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:504
@@ -911,6 +917,16 @@ msgid ""
 "class=\"daemon\">ntpd</systemitem> in it will be replaced by <systemitem "
 "class=\"daemon\">chrony</systemitem> references."
 msgstr ""
+"Pro synchronizaci času v intervalech nastaví YaST konfigurační soubor pro "
+"cron. Od openSUSE Leap 15.0 je příslušný konfigurační soubor vlastněn "
+"balíčkem <package>yast2-ntp-client</package> (předtím žádným balíčkem). "
+"Konfigurační soubor byl přejmenován z <filename>novell.ntp-"
+"synchronization</filename> na <filename>suse-ntp_synchronization</filename>, "
+"aby byl konzistentní s jinými konfiguračními soubory pro cron. Aktualizace z "
+"předchozích verzí openSUSE Leap se provádějí automaticky: je-li nalezen "
+"soubor se starým jménem, je přejmenován a odkazy z něj na <systemitem class="
+"\"daemon\">ntpd</systemitem> se nahradí odkazy <systemitem class=\"daemon\""
+">chrony</systemitem>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:524
