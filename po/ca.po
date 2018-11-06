@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-11-05 17:13+0100\n"
-"PO-Revision-Date: 2018-10-24 16:07+0000\n"
+"PO-Revision-Date: 2018-11-06 09:22+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/ca/>\n"
@@ -885,6 +885,7 @@ msgstr ""
 msgid ""
 "<systemitem class=\"daemon\">ntpd</systemitem> Has Been Replaced With Chrony"
 msgstr ""
+"<systemitem class=\"daemon\">ntpd</systemitem> s'ha reemplaçat per Chrony"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:492
@@ -892,6 +893,8 @@ msgid ""
 "The time server synchronization daemon <systemitem class=\"daemon\">ntpd</"
 "systemitem> has been replaced with the more modern daemon Chrony."
 msgstr ""
+"El dimoni de sincronització de l'hora <systemitem class=\"daemon\""
+">ntpd</systemitem> s'ha reemplaçat pel dimoni més modern Chrony."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:497
@@ -902,6 +905,11 @@ msgid ""
 "<link xlink:href=\"https://doc.opensuse.org/projects/autoyast/#Configuration."
 "Network.Ntp\"/>."
 msgstr ""
+"Aquest canvi significa que els fitxers de l'AutoYaST amb una secció "
+"<literal>ntp_client</literal> s'han d'actualitzar al format nou en aquesta "
+"secció. Per a més informació sobre el nou format de l'AutoYaST per a "
+"<literal>ntp_client</literal>, vegeu <link xlink:href=\""
+"https://doc.opensuse.org/projects/autoyast/#Configuration.Network.Ntp\"/>."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:504
@@ -917,6 +925,18 @@ msgid ""
 "class=\"daemon\">ntpd</systemitem> in it will be replaced by <systemitem "
 "class=\"daemon\">chrony</systemitem> references."
 msgstr ""
+"Per sincronitar intervals de temps, el YaST estableix un fitxer de "
+"configuració cron. Des de l'openSUSE Leap 15.0 endavant, el fitxer de "
+"configuració usat per a això pertany al paquet <package>yast2-ntp-"
+"client</package> (abans no pertanyia a cap paquet). El fitxer de "
+"configuració ha canviat de nom, de <filename>novell.ntp-"
+"synchronization</filename> a <filename>suse-ntp_synchronization</filename> "
+"per ser consistent respecte d'altres fitxers de configuració cron. "
+"L'actualització des d'altres versions anteriors de l'openSUSE Leap es fa "
+"automàticament: si es troba un fitxer amb el nom antic, se'n canviarà el nom "
+"i les referències a <systemitem class=\"daemon\">ntpd</systemitem> que hi "
+"hagi se substituiran per referències de  <systemitem class=\"daemon\""
+">chrony</systemitem>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:524
