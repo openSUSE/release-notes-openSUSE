@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2018-11-05 17:13+0100\n"
-"PO-Revision-Date: 2018-10-23 17:04+0000\n"
+"PO-Revision-Date: 2018-11-26 20:03+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/it/>\n"
@@ -823,15 +823,15 @@ msgstr ""
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:446
-#, fuzzy
 msgid ""
 "Using the offline upgrade feature of the installation medium on a computer "
 "with an encrypted data partition, such as <filename>/home</filename>, can "
 "crash the YaST installer when selecting the previous installation."
 msgstr ""
-"Usando la funzionalità di avanzamento di versione offline da supporto di "
-"installazione su un computer con una partizione dati cifrata, come "
-"<filename>/home</filename>, l'installatore YaST"
+"Usando la funzionalità di aggiornamento offline da supporto di installazione "
+"su un computer con una partizione dati cifrata, come "
+"<filename>/home</filename>, l'installatore YaST può andare in crash nel "
+"momento in cui si seleziona l'installazione precedente."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:452
@@ -841,6 +841,11 @@ msgid ""
 "cr_home</filename>. In the installation environment, YaST cannot associate "
 "that path with an automatically detected volume."
 msgstr ""
+"Ciò succede quando la partizione con dati cifrati è elencata in "
+"<filename>/etc/fstab</filename> per nome del mappatore del dispositivo, come "
+"ad esempio <filename>/dev/mapper/cr_home</filename>. Nell'ambiente di "
+"installazione, YaST non riesce ad associare a quel percorso un volume "
+"rilevato automaticamente."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:459
@@ -850,6 +855,10 @@ msgid ""
 "of device names. To determine the correct device UUIDs, use the following "
 "command:"
 msgstr ""
+"Al fine di utilizzare la funzionalità di aggiornamento offline, prima di "
+"avviare l'aggiornamento, modificare <filename>/etc/fstab</filename> per "
+"usare gli UUID di dispositivo invece dei nomi di dispositivo. Per "
+"determinare gli UUID di dispositivo corretti, eseguire il comando seguente:"
 
 #. (itstool) path: sect3/screen
 #: xml/release-notes.xml:465
@@ -863,11 +872,13 @@ msgid ""
 "The output of this command will contain a quoted UUID after the string "
 "<literal>UUID=</literal>."
 msgstr ""
+"L'esito di questo comando conterrà un UUID tra virgolette dopo la stringa "
+"<literal>UUID=</literal>."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:474
 msgid "GPG Has New Key Database Format"
-msgstr ""
+msgstr "GPG ha un nuovo formato del database delle chiavi"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:475
@@ -1793,6 +1804,8 @@ msgid ""
 "Run an <command>rpm</command> command with high verbosity and check its "
 "output:"
 msgstr ""
+"Eseguire un comando <command>rpm</command> con verbosità elevate a "
+"controllarne l'esito:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1060
@@ -1821,11 +1834,14 @@ msgid ""
 "appears directly after the message that this specific header is being "
 "checked."
 msgstr ""
+"Nell'esempio, l'header 168 è associato con una chiave obsoleta—l'avviso "
+"appare immediatamente dopo il messaggio che quello specifico header è in "
+"procinto di essere verificato."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1075
 msgid "Find out the key number associated with the header:"
-msgstr ""
+msgstr "Scoprire il numero di chiave associato con l'header:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1078
@@ -1848,6 +1864,8 @@ msgid ""
 "This command returns a key identifier starting with <literal>gpg-pubkey-</"
 "literal>."
 msgstr ""
+"Questo comando restituisce un identificativo di chiave che inizia con "
+"<literal>gpg-pubkey-</literal>."
 
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1089
@@ -1855,6 +1873,8 @@ msgid ""
 "Use the key identifier (<replaceable>KEY_ID</replaceable>) to learn more "
 "about the key:"
 msgstr ""
+"Usare l'identificativo di chiave (<replaceable>ID_CHIAVE</replaceable>) per "
+"sapere di più sulla chiave:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1093
@@ -1865,7 +1885,7 @@ msgstr "<prompt>tux@linux &gt; </prompt><command>rpm -qi <replaceable>ID_CHIAVE<
 #. (itstool) path: step/para
 #: xml/release-notes.xml:1096
 msgid "Remove the key from the system:"
-msgstr ""
+msgstr "Rimuovere la chiave dal sistema:"
 
 #. (itstool) path: step/screen
 #: xml/release-notes.xml:1099
