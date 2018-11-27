@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2018-11-05 17:13+0100\n"
-"PO-Revision-Date: 2018-11-27 14:03+0000\n"
+"PO-Revision-Date: 2018-11-27 15:09+0000\n"
 "Last-Translator: Alessio Adamo <alessio.adamo@gmail.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_0/it/>\n"
@@ -116,8 +116,8 @@ msgstr ""
 "Le note di rilascio sono in costante aggiornamento. Per scoprire di più "
 "sulle ultime novità, si faccia riferimento alla versione online su <link "
 "xlink:href=\"https://doc.opensuse.org/release-notes\"/>. Le note di rilascio "
-"in inglese sono aggiornate quando necessario. Le versioni tradotte "
-"potrebbero essere temporaneamente incomplete."
+"in inglese sono aggiornate tempo per tempo, ogni volta che è necessario. Le "
+"versioni tradotte potrebbero essere temporaneamente incomplete."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:48
@@ -953,6 +953,18 @@ msgid ""
 "class=\"daemon\">ntpd</systemitem> in it will be replaced by <systemitem "
 "class=\"daemon\">chrony</systemitem> references."
 msgstr ""
+"Per sincronizzare l'orario ad intervalli regolari, YaST predispone un file "
+"di configurazione di cron. A partire da openSUSE Leap 15.0, il file di "
+"configurazione usato per questo scopo è detenuto dal pacchetto <package>yast2"
+"-ntp-client</package> (precedentemente non apparteneva ad alcun pacchetto). "
+"Il file di configurazione è stato rinominato da <filename>novell.ntp-"
+"synchronization</filename> a <filename>suse-ntp_synchronization</filename> "
+"per mantenere la coerenza con altri file di configurazione di cron. "
+"L'aggiornamento da versioni precedenti di openSUSE Leap è effettuato in "
+"maniera automatica: se rinvenuto un file con la vecchia denominazione, "
+"questo sarà rinominato e i riferimenti a <systemitem class=\"daemon\""
+">ntpd</systemitem> saranno sostituiti da riferimenti a <systemitem class=\""
+"daemon\">chrony</systemitem>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:524
@@ -1791,6 +1803,14 @@ msgid ""
 "database. These warnings take the form <literal>warning: Unsupported version "
 "of key: V3</literal>."
 msgstr ""
+"openSUSE Leap 42.3 veniva distribuita con GPG 2.0, mentre openSUSE Leap 15.0 "
+"include GPG 2.2. Nell'intervallo compreso tra queste due versioni di GPG, è "
+"stato rimosso il supporto alle chiavi GPG V3. Qualora il database delle "
+"chiavi presente nel sistema contenga chiavi GPG V3, durante l'esecuzione dei "
+"comandi Zypper o <command>rpm</command> si potrebbe ricevere degli avvisi a "
+"tal riguardo, in quanto questi comandi verificano l'integrità del database "
+"dei pacchetti. Questi avvisi sono nella forma <literal>warning: Unsupported "
+"version of key: V3</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1030
@@ -1800,6 +1820,11 @@ msgid ""
 "key updates. However, if these keys are still in active use by the upstream "
 "repository, they must be replaced as soon as possible:"
 msgstr ""
+"Solitamente questi avvisi sono benigni, poiché queste chiavi potrebbero "
+"essere state usate per repository non più abilitati nel sistema oppure "
+"repository le cui chiavi sono state in seguito aggiornate. Tuttavia, qualora "
+"queste chiavi risultassero ancora in uso da parte di un repository, "
+"dovrebbero essere sostituite il prima possibile:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:1038
@@ -1817,6 +1842,10 @@ msgid ""
 "management tools will use them to verify integrity of packages, the result "
 "of this check cannot be trusted anymore."
 msgstr ""
+"Sono le chiavi stesse ad essere insicure. Pertanto, anche se gli strumenti "
+"di gestione dei pacchetti più vecchi le usassero per verificare l'integrità "
+"dei pacchetti, sarebbe opportuno non riporre fiducia nei risultati di tali "
+"verifiche."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:1051
@@ -1924,6 +1953,8 @@ msgid ""
 "If you continue to see warnings on subsequent uses of package management "
 "tools, repeat the procedure."
 msgstr ""
+"Qualora gli avvisi persistessero ai successivi utilizzi degli strumenti di "
+"gestione dei pacchetti, ripetere la procedura."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:1112
