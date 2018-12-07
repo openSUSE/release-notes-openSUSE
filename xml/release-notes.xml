@@ -454,14 +454,41 @@
  </sect1> -->
 
 
- <!-- <sect1 xml:id="sec.security">
+ <sect1 xml:id="sec.security">
   <title>Security</title>
 
   <para>
    This section lists changes to security features in &thisversion;.
   </para>
 
- </sect1> -->
+  <sect2 xml:id="sec.security.amanda">
+   <!-- boo#1116922 -->
+   <title>Users and Groups Associated with AMANDA Backup Utility</title>
+   <para>
+    AMANDA (<emphasis>Advanced Maryland Automatic Network Disk
+    Archiver</emphasis>) is a backup solution that allows setting up a master
+    backup server to back up multiple hosts over network to tape
+    drives/changers or disks or optical media. This tool is shipped in
+    &osuse; within the package <package>amanda</package>.
+   </para>
+   <para>
+    The execution of the binaries in this package is restricted to the group
+    <systemitem class="groupname">amanda</systemitem>. However, some of those
+    binaries use the attribute <literal>setuid</literal> to gain
+    <systemitem class="username">root</systemitem> rights. As the
+    implementation of at least some of these binaries is problematic, the user
+    <systemitem class="username">amanda</systemitem> and members of the group
+    <systemitem class="groupname">amanda</systemitem> are effectively
+    privileged users whose rights are equivalent to those of
+    <systemitem class="username">root</systemitem>.
+   </para>
+   <para>
+    Hence, carefully consider who you allow access to either the user account
+    or the group.
+   </para>
+  </sect2>
+
+ </sect1>
 
 
  <!-- <sect1 xml:id="sec.technical">
