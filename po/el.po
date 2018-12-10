@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Greek (release-notes-openSUSE)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-23 19:30+0200\n"
+"POT-Creation-Date: 2018-12-10 15:56+0100\n"
 "PO-Revision-Date: 2018-05-01 19:02+0000\n"
 "Last-Translator: Konstantina Tsolakoglou <konstantina@accountant.com>\n"
 "Language-Team: Greek <https://l10n.opensuse.org/projects/release-notes-"
@@ -671,17 +671,69 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:479
+#: xml/release-notes.xml:458
+msgid "Security"
+msgstr ""
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:460
+#, fuzzy
+#| msgid ""
+#| "This section lists general issues with openSUSE Leap 15.0 that do not "
+#| "match any other category."
+msgid "This section lists changes to security features in openSUSE Leap 15.1."
+msgstr ""
+"Αυτό το τμήμα καταγράφει γενικά θέματα με το openSUSE Leap 15.0 που δεν "
+"ταυτίζονται με κάποια άλλη κατηγορία."
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:466
+msgid "Users and Groups Associated with AMANDA Backup Utility"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:467
+msgid ""
+"AMANDA (<emphasis>Advanced Maryland Automatic Network Disk Archiver</"
+"emphasis>) is a backup solution that allows setting up a master backup "
+"server to back up multiple hosts over network to tape drives/changers or "
+"disks or optical media. This tool is shipped in openSUSE within the package "
+"<package>amanda</package>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:474
+msgid ""
+"The execution of the binaries in this package is restricted to the group "
+"<systemitem class=\"groupname\">amanda</systemitem>. However, some of those "
+"binaries use the attribute <literal>setuid</literal> to gain <systemitem "
+"class=\"username\">root</systemitem> rights. As the implementation of at "
+"least some of these binaries is problematic, the user <systemitem class="
+"\"username\">amanda</systemitem> and members of the group <systemitem class="
+"\"groupname\">amanda</systemitem> are effectively privileged users whose "
+"rights are equivalent to those of <systemitem class=\"username\">root</"
+"systemitem>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:485
+msgid ""
+"Hence, carefully consider who you allow access to either the user account or "
+"the group."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:506
 msgid "More Information and Feedback"
 msgstr "Περισσότερες πληροφορίες και ανατροφοδότηση"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:509
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Διαβάστε τα αρχείο <filename>README</filename> στο μέσο εγκατάστασης."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:487
+#: xml/release-notes.xml:514
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -690,19 +742,19 @@ msgstr ""
 "συγκεκριμένο πακέτο από το RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:491
+#: xml/release-notes.xml:518
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:492
+#: xml/release-notes.xml:519
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Αντικαταστήστε το <replaceable>FILENAME</replaceable> με το όνομα του RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:497
+#: xml/release-notes.xml:524
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -712,7 +764,7 @@ msgstr ""
 "στα ενημερωμένα πακέτα."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:503
+#: xml/release-notes.xml:530
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -721,7 +773,7 @@ msgstr ""
 "μέσο εγκατάστασης."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:509
+#: xml/release-notes.xml:536
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -730,7 +782,7 @@ msgstr ""
 "doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:542
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -739,7 +791,7 @@ msgstr ""
 "διεύθυνση <link xlink:href=\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:522
+#: xml/release-notes.xml:549
 msgid "Copyright © SUSE LLC"
 msgstr "Πνευματική ιδιοκτησία © SUSE LLC"
 
@@ -765,15 +817,6 @@ msgstr "Πνευματική ιδιοκτησία © SUSE LLC"
 #~ msgstr ""
 #~ "Προσθέστε όλα τα σημεία προσάρτησής σας από το <filename>/etc/samba/"
 #~ "cifstab.rpmsave</filename> στο <filename>/etc/fstab</filename>."
-
-#, fuzzy
-#~| msgid ""
-#~| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#~| "match any other category."
-#~ msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
-#~ msgstr ""
-#~ "Αυτό το τμήμα καταγράφει γενικά θέματα με το openSUSE Leap 15.0 που δεν "
-#~ "ταυτίζονται με κάποια άλλη κατηγορία."
 
 #~ msgid "No Default Compose Key Combination"
 #~ msgstr "Δεν υπάρχει προεπιλεγμένος συνδυασμός πλήκτρων"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-10-23 19:30+0200\n"
+"POT-Creation-Date: 2018-12-10 15:56+0100\n"
 "PO-Revision-Date: 2017-03-11 09:35+0000\n"
 "Last-Translator: hayyan rostami <hayyan71@yahoo.com>\n"
 "Language-Team: Persian <https://l10n.opensuse.org/projects/release-notes-"
@@ -674,17 +674,69 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:479
+#: xml/release-notes.xml:458
+msgid "Security"
+msgstr ""
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:460
+#, fuzzy
+#| msgid ""
+#| "This section lists general issues with openSUSE Leap 42.2 that do not "
+#| "match any other category."
+msgid "This section lists changes to security features in openSUSE Leap 15.1."
+msgstr ""
+"این قسمت مشکلات عمومی openSUSE Leap 42.2 که در هیچ طبقه ی دیگر قرار نمیگیرند "
+"را لیست میکند."
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:466
+msgid "Users and Groups Associated with AMANDA Backup Utility"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:467
+msgid ""
+"AMANDA (<emphasis>Advanced Maryland Automatic Network Disk Archiver</"
+"emphasis>) is a backup solution that allows setting up a master backup "
+"server to back up multiple hosts over network to tape drives/changers or "
+"disks or optical media. This tool is shipped in openSUSE within the package "
+"<package>amanda</package>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:474
+msgid ""
+"The execution of the binaries in this package is restricted to the group "
+"<systemitem class=\"groupname\">amanda</systemitem>. However, some of those "
+"binaries use the attribute <literal>setuid</literal> to gain <systemitem "
+"class=\"username\">root</systemitem> rights. As the implementation of at "
+"least some of these binaries is problematic, the user <systemitem class="
+"\"username\">amanda</systemitem> and members of the group <systemitem class="
+"\"groupname\">amanda</systemitem> are effectively privileged users whose "
+"rights are equivalent to those of <systemitem class=\"username\">root</"
+"systemitem>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:485
+msgid ""
+"Hence, carefully consider who you allow access to either the user account or "
+"the group."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:506
 msgid "More Information and Feedback"
 msgstr "اطلاعات بیشتر و بازخورد"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:509
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "مستندات <filename>README</filename> بر روی رسانه را بخوانید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:487
+#: xml/release-notes.xml:514
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -692,19 +744,19 @@ msgstr ""
 "اطلاعات دقیقتر راجع به تغییرات یک بسته را از پرونده ی RPM آن بسته ببینید:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:491
+#: xml/release-notes.xml:518
 #, fuzzy, no-wrap
 #| msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:492
+#: xml/release-notes.xml:519
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "<replaceable>نام فایل</replaceable> را با نام RPM جایگزین کنید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:497
+#: xml/release-notes.xml:524
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -713,14 +765,14 @@ msgstr ""
 "گزارش تمامی تغییرات اعمال شده در بسته های به روز شده را مطالعه کنید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:503
+#: xml/release-notes.xml:530
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "در فهرست <filename>docu</filename>در رسانه اطلاعات بیشتری را بیابید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:509
+#: xml/release-notes.xml:536
 #, fuzzy
 #| msgid ""
 #| "To report bugs against this release, use the openSUSE Bugzilla. For more "
@@ -735,7 +787,7 @@ msgstr ""
 "<link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/> را ببینید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:542
 #, fuzzy
 #| msgid ""
 #| "To report bugs against this release, use the openSUSE Bugzilla. For more "
@@ -750,7 +802,7 @@ msgstr ""
 "<link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/> را ببینید."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:522
+#: xml/release-notes.xml:549
 #, fuzzy
 #| msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgid "Copyright © SUSE LLC"
@@ -767,15 +819,6 @@ msgstr "کپی رایت © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 #~ "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
 #~ msgstr ""
 #~ "به صورت اختیاری، <filename>/mnt/var/cache.old</filename> را حذف کنید:"
-
-#, fuzzy
-#~| msgid ""
-#~| "This section lists general issues with openSUSE Leap 42.2 that do not "
-#~| "match any other category."
-#~ msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
-#~ msgstr ""
-#~ "این قسمت مشکلات عمومی openSUSE Leap 42.2 که در هیچ طبقه ی دیگر قرار "
-#~ "نمیگیرند را لیست میکند."
 
 #~ msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 #~ msgstr "بدون قفل صفحه نمایش در هنگام استفاده از Gnome Shell و نه GDM"
