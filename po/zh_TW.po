@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2018-10-23 19:30+0200\n"
+"POT-Creation-Date: 2018-12-10 15:56+0100\n"
 "PO-Revision-Date: 2018-06-07 19:01+0000\n"
 "Last-Translator: Peter Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
@@ -679,35 +679,84 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:479
+#: xml/release-notes.xml:458
+msgid "Security"
+msgstr "安全性"
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:460
+#, fuzzy
+#| msgid ""
+#| "This section lists changes to security features in openSUSE Leap 15.0."
+msgid "This section lists changes to security features in openSUSE Leap 15.1."
+msgstr "這個小節列出 openSUSE Leap 15.0 安全性功能方面的變動。"
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:466
+msgid "Users and Groups Associated with AMANDA Backup Utility"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:467
+msgid ""
+"AMANDA (<emphasis>Advanced Maryland Automatic Network Disk Archiver</"
+"emphasis>) is a backup solution that allows setting up a master backup "
+"server to back up multiple hosts over network to tape drives/changers or "
+"disks or optical media. This tool is shipped in openSUSE within the package "
+"<package>amanda</package>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:474
+msgid ""
+"The execution of the binaries in this package is restricted to the group "
+"<systemitem class=\"groupname\">amanda</systemitem>. However, some of those "
+"binaries use the attribute <literal>setuid</literal> to gain <systemitem "
+"class=\"username\">root</systemitem> rights. As the implementation of at "
+"least some of these binaries is problematic, the user <systemitem class="
+"\"username\">amanda</systemitem> and members of the group <systemitem class="
+"\"groupname\">amanda</systemitem> are effectively privileged users whose "
+"rights are equivalent to those of <systemitem class=\"username\">root</"
+"systemitem>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:485
+msgid ""
+"Hence, carefully consider who you allow access to either the user account or "
+"the group."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:506
 msgid "More Information and Feedback"
 msgstr "更多資訊與反饋"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:509
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "請閱讀安裝媒體上的 <filename>README</filename> 文件。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:487
+#: xml/release-notes.xml:514
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "從套件 RPM 檢視某個套件詳細的變動歷史資訊："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:491
+#: xml/release-notes.xml:518
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:492
+#: xml/release-notes.xml:519
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "將 <replaceable>FILENAME</replaceable> 代換為 RPM 名稱。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:497
+#: xml/release-notes.xml:524
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -716,14 +765,14 @@ msgstr ""
 "新套件的變動歷史（按時間先後排序）。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:503
+#: xml/release-notes.xml:530
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:509
+#: xml/release-notes.xml:536
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -732,7 +781,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:542
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -741,7 +790,7 @@ msgstr ""
 "opensuse.org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:522
+#: xml/release-notes.xml:549
 msgid "Copyright © SUSE LLC"
 msgstr "版權所有 © SUSE LLC"
 
@@ -1322,13 +1371,6 @@ msgstr "版權所有 © SUSE LLC"
 #~ "由於和來自 Emacs 預設安裝的模組相衝突，openSUSE Leap 15.0 無法自動載入 "
 #~ "<literal>psgml</literal> 模組。欲了解詳情，請見 <package>psgml</package> "
 #~ "套件中的 <filename>README</filename> 檔案。"
-
-#~ msgid "Security"
-#~ msgstr "安全性"
-
-#~ msgid ""
-#~ "This section lists changes to security features in openSUSE Leap 15.0."
-#~ msgstr "這個小節列出 openSUSE Leap 15.0 安全性功能方面的變動。"
 
 #~ msgid "<command>systemctl stop apparmor</command> Does Not Work"
 #~ msgstr "<command>systemctl stop apparmor</command> 沒有作用"

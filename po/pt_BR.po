@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2018-10-23 19:30+0200\n"
+"POT-Creation-Date: 2018-12-10 15:56+0100\n"
 "PO-Revision-Date: 2018-06-01 19:09+0000\n"
 "Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
@@ -737,17 +737,68 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:479
+#: xml/release-notes.xml:458
+msgid "Security"
+msgstr "Segurança"
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:460
+#, fuzzy
+#| msgid ""
+#| "This section lists changes to security features in openSUSE Leap 15.0."
+msgid "This section lists changes to security features in openSUSE Leap 15.1."
+msgstr ""
+"Esta seção lista as alterações nos recursos de segurança no openSUSE Leap "
+"15.0."
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:466
+msgid "Users and Groups Associated with AMANDA Backup Utility"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:467
+msgid ""
+"AMANDA (<emphasis>Advanced Maryland Automatic Network Disk Archiver</"
+"emphasis>) is a backup solution that allows setting up a master backup "
+"server to back up multiple hosts over network to tape drives/changers or "
+"disks or optical media. This tool is shipped in openSUSE within the package "
+"<package>amanda</package>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:474
+msgid ""
+"The execution of the binaries in this package is restricted to the group "
+"<systemitem class=\"groupname\">amanda</systemitem>. However, some of those "
+"binaries use the attribute <literal>setuid</literal> to gain <systemitem "
+"class=\"username\">root</systemitem> rights. As the implementation of at "
+"least some of these binaries is problematic, the user <systemitem class="
+"\"username\">amanda</systemitem> and members of the group <systemitem class="
+"\"groupname\">amanda</systemitem> are effectively privileged users whose "
+"rights are equivalent to those of <systemitem class=\"username\">root</"
+"systemitem>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:485
+msgid ""
+"Hence, carefully consider who you allow access to either the user account or "
+"the group."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:506
 msgid "More Information and Feedback"
 msgstr "Mais informações e comentários"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:509
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Leia os documentos <filename>README</filename> disponíveis na mídia."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:487
+#: xml/release-notes.xml:514
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -756,20 +807,20 @@ msgstr ""
 "particular a partir do seu RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:491
+#: xml/release-notes.xml:518
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NOME_DO_ARQUIVO</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:492
+#: xml/release-notes.xml:519
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Substitua <replaceable>NOME_DO_ARQUIVO</replaceable> com o nome do arquivo "
 "RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:497
+#: xml/release-notes.xml:524
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -779,7 +830,7 @@ msgstr ""
 "pacotes atualizados."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:503
+#: xml/release-notes.xml:530
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -787,7 +838,7 @@ msgstr ""
 "Encontre mais informação no diretório <filename>docu</filename> na mídia."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:509
+#: xml/release-notes.xml:536
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -796,7 +847,7 @@ msgstr ""
 "\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:542
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -805,7 +856,7 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:522
+#: xml/release-notes.xml:549
 msgid "Copyright © SUSE LLC"
 msgstr "Direitos autorais © SUSE LLC"
 
@@ -1461,15 +1512,6 @@ msgstr "Direitos autorais © SUSE LLC"
 #~ "openSUSE Leap 15.0 não pode mais carregar o módulo <literal>psgml</"
 #~ "literal> automaticamente. Para mais informações, veja o arquivo "
 #~ "<filename>README</filename> do pacote <package>psgml</package>."
-
-#~ msgid "Security"
-#~ msgstr "Segurança"
-
-#~ msgid ""
-#~ "This section lists changes to security features in openSUSE Leap 15.0."
-#~ msgstr ""
-#~ "Esta seção lista as alterações nos recursos de segurança no openSUSE Leap "
-#~ "15.0."
 
 #~ msgid "<command>systemctl stop apparmor</command> Does Not Work"
 #~ msgstr "<command>systemctl stop apparmor</command> não funciona"
