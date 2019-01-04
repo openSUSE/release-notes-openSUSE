@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-11-05 17:13+0100\n"
-"PO-Revision-Date: 2018-10-27 18:36+0000\n"
+"PO-Revision-Date: 2019-01-12 21:19+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
-"Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_0/ru/>\n"
+"Language-Team: Russian <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_0/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -858,7 +858,7 @@ msgstr ""
 #: xml/release-notes.xml:491
 msgid ""
 "<systemitem class=\"daemon\">ntpd</systemitem> Has Been Replaced With Chrony"
-msgstr ""
+msgstr "<systemitem class=\"daemon\">ntpd</systemitem> заменён на Chrony"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:492
@@ -866,6 +866,8 @@ msgid ""
 "The time server synchronization daemon <systemitem class=\"daemon\">ntpd</"
 "systemitem> has been replaced with the more modern daemon Chrony."
 msgstr ""
+"Демон синхронизации времени <systemitem class=\"daemon\">ntpd</systemitem> "
+"был заменён на более современный демон Chrony."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:497
@@ -876,6 +878,11 @@ msgid ""
 "<link xlink:href=\"https://doc.opensuse.org/projects/autoyast/#Configuration."
 "Network.Ntp\"/>."
 msgstr ""
+"Это изменение означает, что файлы AutoYaST с разделом "
+"<literal>ntp_client</literal> должны быть обновлены с учётом нового формата "
+"для этого раздела. Больше сведений о новом формате AutoYaST "
+"<literal>ntp_client</literal> приведено по ссылке <link xlink:href=\""
+"https://doc.opensuse.org/projects/autoyast/#Configuration.Network.Ntp\"/>."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:504
@@ -891,6 +898,17 @@ msgid ""
 "class=\"daemon\">ntpd</systemitem> in it will be replaced by <systemitem "
 "class=\"daemon\">chrony</systemitem> references."
 msgstr ""
+"Чтобы синхронизировать время через определённые интервалы, YaST производт "
+"настройку cron через специальный файл. Начиная с openSUSE Leap 15.0, "
+"используемый для этого файл принадлежит пакету <package>yast2-ntp-"
+"client</package> (ранее этот файл не принадлежал ни одному пакету). "
+"Конфигурационный файл был переименован из <filename>novell.ntp-"
+"synchronization</filename> в <filename>suse-ntp_synchronization</filename>, "
+"чтобы соответствовать остальным конфигурационным файлам cron. Обновление с "
+"предыдущих версий openSUSE Leap осуществляется автоматически: если "
+"обнаруживается файл со старым именем, то он переименовывается и содержащиеся "
+"в нём упоминания <systemitem class=\"daemon\">ntpd</systemitem> заменяются "
+"на <systemitem class=\"daemon\">chrony</systemitem>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:524
