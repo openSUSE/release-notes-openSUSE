@@ -364,9 +364,15 @@
     <tip>
      <title>Decrypt Before Upgrading</title>
      <para>
-      Before performing an upgrade from &thisflavor; 42.3, encrypted home
-      directory images need to be decrypted. Otherwise, users will not have
-      access to them after the upgrade.
+      We encourage you to decrypt encrypted home directories before performing
+      an upgrade from &thisflavor; 42.3. While under &thisversion;, existing
+      encrypted home directories can still be used (the underlying technology,
+      <package>pam_mount</package>, is still available), there may not be an
+      easy upgrade path in the future.
+     </para>
+     <para>
+      There is also no way to individually encrypt the home directories of
+      users added after the upgrade to &thisversion;.
      </para>
     </tip>
    </sect3>
