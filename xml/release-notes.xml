@@ -301,6 +301,18 @@
     To work around this problem, convert the legacy MBR partition to GPT.
    </para>
   </sect2>
+
+  <sect2 xml:id="sec.install.hidpi">
+   <!-- boo#1090240 -->
+   <title>Scaling the Installer UI on Computers with High-DPI Displays</title>
+   <para>
+    The YaST installer does not scale its UI for High-DPI displays by default.
+    If you have a computer with a high-DPI display, you can set YaST to scale
+    its UI automatically for the display. To do so, add the parameter
+    <literal>QT_AUTO_SCREEN_SCALE_FACTOR=1</literal> to the bootloader
+    command line.
+   </para>
+  </sect2>
  </sect1>
 
  <sect1 xml:id="upgrade">
