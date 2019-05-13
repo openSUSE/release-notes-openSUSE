@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: Indonesian (release-notes-openSUSE)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-26 12:31+0200\n"
-"PO-Revision-Date: 2019-04-25 06:42+0000\n"
-"Last-Translator: M. Edwin Zakaria <medwin@opensuse.org>\n"
-"Language-Team: Indonesian <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_1/id/>\n"
+"PO-Revision-Date: 2019-05-13 19:16+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_1/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,8 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Penerjemah\n"
-"M. Edwin Zakaria <medwin@opensuse.org>, 2016, 2018, 2019"
+"M. Edwin Zakaria <medwin@opensuse.org>, 2016, 2018, 2019\n"
+"Andika Triwidada <andika@gmail.com>, 2019"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -216,13 +217,19 @@ msgid ""
 "openSUSE Leap 15.1 also work with the system role <emphasis>Transactional "
 "Server</emphasis>."
 msgstr ""
+"Pemasang mendukung peran sistem <emphasis>Peladen Transaksional</emphasis>. "
+"Peran sistem ini menampilkan sistem pembaruan yang menerapkan pembaruan "
+"secara atomis (sebagai operasi tunggal) dan membuat mereka mudah "
+"dikembalikan sekiranya dibutuhkan. Fitur-fitur ini didasarkan pada alat "
+"bantu manajemen paket yang juga diandalkan oleh semua distribusi SUSE dan "
+"openSUSE lainnya. Ini berarti bahwa sebagian besar paket RPM yang bekerja "
+"dengan peran sistem lain dari openSUSE Leap 15.1 juga bekerja dengan peran "
+"sistem <emphasis>Peladen Transaksional</emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:113
-#, fuzzy
-#| msgid "Deprecated Packages"
 msgid "Incompatible Packages"
-msgstr "Paket-paket yang TIdak Dipakai Lagi"
+msgstr "Paket-paket yang Tidak Kompatibel"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:114
@@ -231,16 +238,20 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you happen upon such package, file a bug report."
 msgstr ""
+"Beberapa paket memodifikasi isi dari <filename>/var</filename> atau "
+"<filename>/srv</filename> dalam RPM <literal>%post</literal> skripnya. Paket-"
+"paket ini tidak kompatibel. Jika kamu berada dalam kondisi itu, ajukan "
+"laporan bug/kutu."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:121
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "Untuk menyediakan fitur-fitur ini, sistem pembaruanbergantung pada:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:127
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Snapshot Btrfs"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:128
@@ -250,18 +261,20 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Sebelum pembaruan sistem dimulai, snapshot Btrfs baru dari sistem berkas "
+"root dibuat. Kemudian, semua perubahan dari pembaruan diinstal ke dalam "
+"snapshot Btrfs itu. Untuk menyelesaikan pembaruan, Anda dapat me-restart "
+"sistem ke snapshot baru."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:135
 msgid "To revert the update, simply boot from the previous snapshot instead."
-msgstr ""
+msgstr "Untuk mengembalikan pembaruan, cukup boot dari snapshot sebelumnya."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:141
-#, fuzzy
-#| msgid "Mount the initial root file system:"
 msgid "A read-only root file system"
-msgstr "Kaitkan sistem berkas root awal:"
+msgstr "Sistem berkas root baca-saja"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:142
@@ -270,6 +283,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Untuk menghindari masalah dan kehilangan data karena pembaruan, sistem "
+"berkas root tidak boleh ditulis sebaliknya. Oleh karena itu, sistem berkas "
+"root di-mount hanya-baca selama operasi normal."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:148
@@ -279,12 +295,19 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Untuk membuat pengaturan ini berfungsi, dua perubahan tambahan pada sistem "
+"berkas perlu dilakukan: Untuk memungkinkan penulisan konfigurasi pengguna di "
+"<filename>/ etc</filename>, direktori ini secara otomatis dikonfigurasikan "
+"untuk menggunakan OverlayFS. <filename>/ var</filename> sekarang menjadi "
+"subvolume terpisah yang dapat ditulis oleh proses."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:158
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"<emphasis>Peladen Transaksional</emphasis> Membutuhkan ruang diska sekurang-"
+"kurangnya 12 GB"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:159
@@ -292,6 +315,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Peran sistem <emphasis>Peladen Transaksional</emphasis> membutuhkan ukuran "
+"disk setidaknya 12 GB untuk mengakomodasi snapshot Btrfs."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:164
@@ -300,11 +325,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Untuk bekerja dengan pembaruan transaksional, selalu gunakan perintah "
+"<command>transactional-update</command> bukannya YaST dan Zypper untuk semua "
+"manajemen perangkat lunak:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Pembaruan sistem: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:177
@@ -312,6 +340,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Memasang sebuah paket: <command>transactional-update pkg in "
+"<replaceable>NAMA_PAKET</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:183
@@ -319,6 +349,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Hapus paket: <command>transactional-update pkg rm "
+"<replaceable>NAMA_PAKET</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:189
@@ -327,6 +359,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Untuk mengembalikan snapshot terakhir, yang merupakan kumpulan perubahan "
+"terakhir pada sistem berkas root, pastikan sistem Anda di-boot ke snapshot "
+"berikutnya terhadap yang terakhir dan jalankan: <command>transactional-"
+"update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:195
@@ -334,6 +370,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Secara opsional, tambahkan ID snapshot ke akhir perintah untuk mengembalikan "
+"ke ID tertentu."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:201
@@ -343,29 +381,29 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Saat menggunakan aturan sistem ini, secara default, sistem akan melakukan "
+"pembaruan harian dan reboot antara pukul 03:30 hingga 05:00. Kedua tindakan "
+"ini berbasis systemd dan jika perlu dapat dinonaktifkan menggunakan "
+"<command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:207
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr ""
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:208
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"Untuk informasi lebih jauh, lihat <link xlink:href=\"https://bugzilla.suse."
-"com/show_bug.cgi?id=996520\"/> dan <link xlink:href=\"https://bugzilla."
-"opensuse.org/show_bug.cgi?id=853019\"/>."
+"Untuk informasi lebih jauh tentang pembaruan transaksional, lihat tulisan "
+"pada blog openSUSE Kubic <link xlink:href=\"https://kubic.opensuse.org/blog/"
+"2018-04-04-transactionalupdates/\"/> dan <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 # https://bugzilla.opensuse.org/show_bug.cgi?id=951866
 #. (itstool) path: sect2/title
@@ -379,6 +417,8 @@ msgid ""
 "The minimal system installation lacks certain functionality that is often "
 "taken for granted:"
 msgstr ""
+"Instalasi sistem minimal tidak memiliki fungsionalitas tertentu yang sering "
+"dianggap biasa:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:227
@@ -386,6 +426,8 @@ msgid ""
 "It does not contain a software firewall front-end. You can install the "
 "package <package>firewalld</package> additionally."
 msgstr ""
+"Ini tidak mengandung perangkat lunak sisi muka. Sebagai tambahan Anda dapat "
+"memasang paket <package> firewalld </package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:233
@@ -393,11 +435,13 @@ msgid ""
 "It does not contain a YaST. You can install the pattern <package>patterns-"
 "yast-yast2_basis</package> additionally."
 msgstr ""
+"Itu tidak mengandung YaST. Anda dapat menginstal pola <package>Pattern-yast-"
+"yast2_basis</package> sebagai tambahan."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:242
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Memasang pada diska keras dengan kapasitas kurang dari 12 GB"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:244
@@ -407,11 +451,17 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Penginstal hanya akan mengusulkan sebuah skema pemartisian jika ukuran hard "
+"disk yang tersedia lebih besar dari 12 GB. Jika kamu ingin mempersiapkan, "
+"misalnya image mesin virtual yang sangat kecil, gunakanlah pemartisi "
+"berpandu untuk menala parameter pemartisian secara manual."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:253
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI—Unified Extensible Firmware Interface"
+msgstr ""
+"UEFI—Unified Extensible Firmware Interface/Antarmuka Firmware Extensible "
+"Terpadu"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:254
@@ -537,41 +587,31 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:317
-#, fuzzy
-#| msgid "Additionally, check <xref linkend=\"sec.general.deprecated\"/>."
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
-msgstr ""
-"Sebagai tambahan, periksa juga <xref linkend=\"sec.general.deprecated\"/>."
+msgstr "Sebagai tambahan, periksa <xref linkend=\"sec.package\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:330
 msgid "Packaging Changes"
-msgstr ""
+msgstr "Perubahan Pemaketan"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:333
 msgid "Deprecated Packages"
-msgstr "Paket-paket yang TIdak Dipakai Lagi"
+msgstr "Paket-paket Usang"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:334
-#, fuzzy
-#| msgid ""
-#| "The following packages are still shipped as part of the distribution but "
-#| "are deprecated. The packages exist to aid migration, but their use is "
-#| "discouraged and they may not receive updates. The packages will be "
-#| "removed in the next version of the distribution."
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"Paket-paket berikut tetap diikutkan sebagai bagian dari distribusi tetapi "
-"sudah tidak dipakai lagi. Paket-paket ini disediakan untuk membantu migrasi, "
-"tetapi penggunaannya tidak disarankan dan mungkin saja tidak akan menerima "
-"pembaharuan. Paket-paket tersebut akan dihapus pada distribusi versi "
-"berikutnya."
+"Paket-paket usang tetap diikutkan sebagai bagian dari distribusi tetapi "
+"dijadwalkan akan dikeluarkan pada versi openSUSE Leap berikutnya. Paket-"
+"paket ini disediakan untuk membantu migrasi, tetapi penggunaannya tidak "
+"disarankan dan mungkin saja tidak akan menerima pembaruan."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:350
@@ -592,15 +632,14 @@ msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:359
-#, fuzzy
-#| msgid "Removed and Replaced Packages"
 msgid "Removed Packages"
-msgstr "Membuang dan Mengganti Paket-Paket"
+msgstr "Paket-Paket yang Dihapus"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:360
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr ""
+"Paket-paket yang dihapus tidak dikirim sebagai bagian dari distribusi lagi."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:366
@@ -608,13 +647,13 @@ msgid ""
 "<package>git-annex</package>: Has been removed because the package is not "
 "maintained anymore."
 msgstr ""
+"<package>git-annex</package>: Telah dihapus karena paket ini tidak lagi "
+"dipelihara."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:373
-#, fuzzy
-#| msgid "<package>castor</package>: Fails to build on 42.3."
 msgid "<package>erlang-rebar</package>: Did not build anymore"
-msgstr "<package>castor</package>: Gagal dibangun pada 42.3."
+msgstr "<package>erlang-rebarr</package>: Tidak dibangun lagi"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:379
@@ -622,6 +661,8 @@ msgid ""
 "<package>iksemel</package>: Has been removed because the package is not "
 "maintained anymore."
 msgstr ""
+"<package>iksemel</package>: Sudah dikeluarkan karena paket ini tidak lagi "
+"dipelihara."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:385
@@ -629,20 +670,18 @@ msgid ""
 "<package>mozaddon-bugmenot</package>: Has been removed because the add-on is "
 "no longer compatible with current versions of Firefox."
 msgstr ""
+"<package>mozaddon-bugmenot</package>: Telah dikeluarkan karena add-on ini "
+"tidak lagi kompatibel dengan Firefox versi kini."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:391
-#, fuzzy
-#| msgid "<package>castor</package>: Fails to build on 42.3."
 msgid "<package>piglit</package>: Did not build anymore"
-msgstr "<package>castor</package>: Gagal dibangun pada 42.3."
+msgstr "<package>piglit</package>: Tidak dibangun lagi"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:397
-#, fuzzy
-#| msgid "<package>castor</package>: Fails to build on 42.3."
 msgid "<package>python-dns-lexicon</package>: Did not build anymore"
-msgstr "<package>castor</package>: Gagal dibangun pada 42.3."
+msgstr "<package>python-dns-lexicon</package>: Tidak dibangun lagi"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:402
@@ -650,27 +689,24 @@ msgid ""
 "<package>yast2-fonts</package>: Has been removed because the package is not "
 "maintained anymore."
 msgstr ""
+"<package>yast2-fonts</package>: Sudah dikeluarkan karena paket tersebut "
+"tidak lagi dipelihara."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:470
 msgid "Security"
-msgstr ""
+msgstr "Keamanan"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:472
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#| "match any other category."
 msgid "This section lists changes to security features in openSUSE Leap 15.1."
 msgstr ""
-"Bagian ini berisi isu-isu umum pada openSUSE Leap 15.0 yang tidak masuk ke "
-"kategori lain."
+"Bagian ini berisi daftar perubahan fitur keamanan dalam openSUSE Leap 15.1."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:478
 msgid "Users and Groups Associated with AMANDA Backup Utility"
-msgstr ""
+msgstr "Pengguna dan Grup Terkait dengan AMANDA Backup Utility"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:479
@@ -681,6 +717,11 @@ msgid ""
 "disks or optical media. This tool is shipped in openSUSE within the package "
 "<package>amanda</package>."
 msgstr ""
+"AMANDA (<emphasis>Advanced Maryland Automatic Network Disk "
+"Archiver</emphasis>) adalah solusi cadangan yang memungkinkan pengaturan "
+"peladen cadangan master untuk mencadangkan beberapa host melalui jaringan ke "
+"tape drive / changer atau diska atau media optik. Alat bantu ini dikirimkan "
+"dalam openSUSE dengan paket <package>amanda</package>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:486
@@ -695,6 +736,14 @@ msgid ""
 "rights are equivalent to those of <systemitem class=\"username\">root</"
 "systemitem>."
 msgstr ""
+"Pengeksekusian biner dalam paket ini terbatas untuk grup <systemitem class=\""
+"groupname\">amanda</systemitem>. Meskipun demikian, beberapa biner tersebut "
+"menggunakan atribut <literal>setuid</literal> untuk mendapatkan hak <"
+"systemitem class=\"username\">root</systemitem>. Sebagai penerapan "
+"setidaknya beberapa biner tersebut adalah problematik, pengguna <systemitem "
+"class=\"username\">amanda</systemitem> dan anggota grup <systemitem class=\""
+"groupname\">amanda</systemitem> secara efektif pengguna istimewa yang haknya "
+"setara dengan <systemitem class=\"username\">root</systemitem>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:497
@@ -702,6 +751,8 @@ msgid ""
 "Hence, carefully consider who you allow access to either the user account or "
 "the group."
 msgstr ""
+"Oleh karena itu, pertimbangkan dengan cermat siapa yang kamu perbolehkan "
+"mengakses akun pengguna atau grup."
 
 # bnc#809347
 #. (itstool) path: sect1/title
@@ -712,27 +763,25 @@ msgstr "Informasi Lebih Lanjut dan Umpan Balik"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:521
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr "Bacalah dokumen <filename>README</filename>  yang terdapa pada media."
+msgstr "Baca dokumen <filename>README</filename> pada media."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:526
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
-msgstr ""
-"Perhatikan informasi detail changelog mengenai paket tertentu dari RPMnya:"
+msgstr "Melihat informasi perubahan detail tentang paket tertentu dari RPM:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:530
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <placeholder-1/>.rpm"
+#, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
+msgstr "rpm --changelog -qp <replaceable>NAMABERKAS</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:531
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr "Ganti <replaceable>FILENAME</replaceable> dengan nama RPM."
+msgstr "Ganti <replaceable>FILENAME</replaceable> dengan nama dari RPM."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:536
@@ -740,9 +789,9 @@ msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
-"Periksa berkas <filename>ChangeLog</filename> pada level teratas dari media "
-"untuk catatan kronologis semua perubahan yang terjadi pada paket yang "
-"diperbarui."
+"Periksa berkas <filename>ChangeLog</filename> pada level atas dari media "
+"untuk log kronologis dari setiap perubahan yang terjadi terhadap paket yang "
+"diperbaharui."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:542
@@ -751,40 +800,30 @@ msgid ""
 "medium."
 msgstr ""
 "Dapatkan informasi lebih banyak pada direktori <filename>docu</filename> "
-"pada media."
+"dalam media."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:548
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <link href=\"https://doc."
-#| "opensuse.org/\"/>."
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
 msgstr ""
-"Sebagai dokumentasi tambahan atau terbaru, lihat <link href=\"https://doc."
-"opensuse.org/\"/>."
+"Untuk dokumentasi tambahan atau terbaru, lihat <link xlink:href=\""
+"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:554
-#, fuzzy
-#| msgid ""
-#| "For the latest product news, from openSUSE, visit <link href=\"https://"
-#| "www.opensuse.org\"/>."
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
-"Untuk berita produk terbaru, dari openSUSE, kunjungi <link href=\"https://"
-"www.opensuse.org\"/>."
+"Untuk berita produk terbaru, dari openSUSE, kunjungi <link xlink:href=\""
+"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:561
-#, fuzzy
-#| msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgid "Copyright © SUSE LLC"
-msgstr "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
+msgstr "Hak Cipta © SUSE LLC"
 
 #~ msgid "15.0"
 #~ msgstr "15.0"
