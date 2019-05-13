@@ -6,11 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2019-04-26 12:31+0200\n"
+"POT-Creation-Date: 2019-05-13 21:17+0200\n"
 "PO-Revision-Date: 2019-05-13 19:16+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_1/zh_CN/>\n"
+"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
+"notes-opensuse/leap-15_1/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -217,10 +217,16 @@ msgstr "不兼容的软件包"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:114
+#, fuzzy
+#| msgid ""
+#| "Some packages modify the contents of <filename>/var</filename> or "
+#| "<filename>/srv</filename> in their RPM <literal>%post</literal> scripts. "
+#| "These packages are incompatible. If you happen upon such package, file a "
+#| "bug report."
 msgid ""
 "Some packages modify the contents of <filename>/var</filename> or <filename>/"
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
-"are incompatible. If you happen upon such package, file a bug report."
+"are incompatible. If find such a package, file a bug report."
 msgstr ""
 "有些软件包在它们的 RPM <literal>%post</literal> 脚本里修改了 <filename>/var</"
 "filename> 或 <filename>/srv</filename> 里的内容。这些软件包都是不兼容的。如果"
@@ -291,7 +297,9 @@ msgstr "<emphasis>事务服务器</emphasis>需要至少 12 GB 的磁盘空间"
 msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
-msgstr "系统角色<emphasis>事务服务器</emphasis>需要至少 12 GB 的磁盘大小来容纳 Btrfs 快照。"
+msgstr ""
+"系统角色<emphasis>事务服务器</emphasis>需要至少 12 GB 的磁盘大小来容纳 Btrfs "
+"快照。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:164
@@ -351,8 +359,9 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
-"使用此系统角色时，按默认，系统会执行日常更新并在上午 3:00 和 5:00 之间重启。这两个操作都是基于 systemd 而且如有必要可用 "
-"<command>systemctl</command> 禁用："
+"使用此系统角色时，按默认，系统会执行日常更新并在上午 3:00 和 5:00 之间重启。"
+"这两个操作都是基于 systemd 而且如有必要可用 <command>systemctl</command> 禁"
+"用："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:207
@@ -414,7 +423,9 @@ msgid ""
 "disk size is larger than 12 GB. If you want to set up, for example, very "
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
-msgstr "安装程序只在磁盘可用大小超过 12 GB 时会建议分区方案。如果你想安装，例如很小的虚拟机器映像，请使用指导分区程序来手动调整分区参数。"
+msgstr ""
+"安装程序只在磁盘可用大小超过 12 GB 时会建议分区方案。如果你想安装，例如很小的"
+"虚拟机器映像，请使用指导分区程序来手动调整分区参数。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:253
@@ -616,28 +627,39 @@ msgstr "<package>python-dns-lexicon</package>：已无法构建"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:402
+#, fuzzy
+#| msgid ""
+#| "<package>iksemel</package>: Has been removed because the package is not "
+#| "maintained anymore."
+msgid ""
+"<package>susedoc-buildbook</package>: Has been removed because the package "
+"is not maintained anymore."
+msgstr "<package>iksemel</package>：因为无人维护已经被移除。"
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:408
 msgid ""
 "<package>yast2-fonts</package>: Has been removed because the package is not "
 "maintained anymore."
 msgstr "<package>yast2-fonts</package>：因为无人维护已经被移除。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:470
+#: xml/release-notes.xml:476
 msgid "Security"
 msgstr "安全"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:472
+#: xml/release-notes.xml:478
 msgid "This section lists changes to security features in openSUSE Leap 15.1."
 msgstr "本节列出了 openSUSE Leap 15.1 中安全特性的变更。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:478
+#: xml/release-notes.xml:484
 msgid "Users and Groups Associated with AMANDA Backup Utility"
 msgstr "与 AMANDA 备份工具相关的用户和组"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:479
+#: xml/release-notes.xml:485
 msgid ""
 "AMANDA (<emphasis>Advanced Maryland Automatic Network Disk Archiver</"
 "emphasis>) is a backup solution that allows setting up a master backup "
@@ -651,7 +673,7 @@ msgstr ""
 "<package>amanda</package>软件包中。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:486
+#: xml/release-notes.xml:492
 msgid ""
 "The execution of the binaries in this package is restricted to the group "
 "<systemitem class=\"groupname\">amanda</systemitem>. However, some of those "
@@ -672,42 +694,42 @@ msgstr ""
 "\">root</systemitem> 的权限。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:497
+#: xml/release-notes.xml:503
 msgid ""
 "Hence, carefully consider who you allow access to either the user account or "
 "the group."
 msgstr "所以，请谨慎考虑允许哪些用户访问该用户或组。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:518
+#: xml/release-notes.xml:524
 msgid "More Information and Feedback"
 msgstr "更多信息和反馈"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:521
+#: xml/release-notes.xml:527
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "请阅读安装介质上的 <filename>README</filename> 文档。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:526
+#: xml/release-notes.xml:532
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "从 RPM 中获取关于某特定软件包的详细修订历史信息："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:530
+#: xml/release-notes.xml:536
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>文件名</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:531
+#: xml/release-notes.xml:537
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "将 <replaceable>文件名</replaceable> 替换为 RPM 的名称。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:536
+#: xml/release-notes.xml:542
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -716,14 +738,14 @@ msgstr ""
 "软件包更新历史。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:542
+#: xml/release-notes.xml:548
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:548
+#: xml/release-notes.xml:554
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -732,7 +754,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:554
+#: xml/release-notes.xml:560
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -741,7 +763,7 @@ msgstr ""
 "org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:561
+#: xml/release-notes.xml:567
 msgid "Copyright © SUSE LLC"
 msgstr "版权所有 © SUSE LLC"
 
