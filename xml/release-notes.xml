@@ -439,14 +439,27 @@
 
  <!-- </sect1> -->
 
- <!-- <sect1 xml:id="general">
+ <sect1 xml:id="general">
   <title>Desktop</title>
 
   <para>
    This section lists desktop issues and changes in &thisversion;.
   </para>
+  
 
- </sect1> -->
+  <sect2 xml:id="sec.general.ypbind">
+   <!-- boo#1129587 -->
+   <title>NIS/ypbind and Networkmanager</title>
+   <para>
+     Workstations using NIS for authentication are recommended to
+     use <package>wicked</package> instead of
+     <package>NetworkManager</package> for managing network
+     interfaces as <package>ypbind</package> doesn't integrate well
+     with NetworkManager.
+   </para>
+  </sect2>
+
+ </sect1>
 
 
  <!-- <sect1 xml:id="sec.server">
