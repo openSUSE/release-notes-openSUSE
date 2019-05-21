@@ -19,11 +19,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 16:52+0200\n"
+"POT-Creation-Date: 2019-05-21 11:58+0200\n"
 "PO-Revision-Date: 2019-05-21 09:57+0000\n"
 "Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
-"Language-Team: Czech <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_1/cs/>\n"
+"Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_1/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -247,10 +247,16 @@ msgstr "Nekompatibilní balíčky"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:114
+#, fuzzy
+#| msgid ""
+#| "Some packages modify the contents of <filename>/var</filename> or "
+#| "<filename>/srv</filename> in their RPM <literal>%post</literal> scripts. "
+#| "These packages are incompatible. If find such a package, file a bug "
+#| "report."
 msgid ""
 "Some packages modify the contents of <filename>/var</filename> or <filename>/"
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
-"are incompatible. If find such a package, file a bug report."
+"are incompatible. If you find such a package, file a bug report."
 msgstr ""
 "Některé balíčky upravují obsah souboru <filename>/var</filename> nebo "
 "<filename>/srv</filename> ve svých RPM <literal>%post</literal> skriptech. "
@@ -418,44 +424,12 @@ msgstr ""
 "blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:220
-msgid "Minimal System Installation"
-msgstr "Instalace minimálního systému"
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:221
-msgid ""
-"The minimal system installation lacks certain functionality that is often "
-"taken for granted:"
-msgstr ""
-"Minimální instalace systému postrádá určitou funkcionalitu, která je často "
-"považována za samozřejmou:"
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:227
-msgid ""
-"It does not contain a software firewall front-end. You can install the "
-"package <package>firewalld</package> additionally."
-msgstr ""
-"Neobsahuje softwarové rozhraní pro firewall. Můžete si dodatečně "
-"nainstalovat balíček<package>firewalld</package>."
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:233
-msgid ""
-"It does not contain a YaST. You can install the pattern <package>patterns-"
-"yast-yast2_basis</package> additionally."
-msgstr ""
-"Neobsahuje YaST. Můžete si dodatečně nainstalovat vzorek <package>patterns-"
-"yast-yast2_basis</package>."
-
-#. (itstool) path: sect2/title
-#: xml/release-notes.xml:242
+#: xml/release-notes.xml:217
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
 msgstr "Instaluje se na pevných discích s kapacitou menší než 12 GB"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:244
+#: xml/release-notes.xml:219
 msgid ""
 "The installer will only propose a partitioning scheme if the available hard "
 "disk size is larger than 12 GB. If you want to set up, for example, very "
@@ -468,12 +442,12 @@ msgstr ""
 "ručně vyladit parametry rozdělení disku."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:253
+#: xml/release-notes.xml:228
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI—Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:254
+#: xml/release-notes.xml:229
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
@@ -488,7 +462,7 @@ msgstr ""
 "to silná indicie, že váš systém UEFI používá."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:261
+#: xml/release-notes.xml:236
 msgid ""
 "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it "
 "to break if too much data gets written to the UEFI storage area. However, "
@@ -499,7 +473,7 @@ msgstr ""
 "dat. Nikdo však ve skutečnosti neví, kolik je to <quote>příliš mnoho</quote>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:266
+#: xml/release-notes.xml:241
 msgid ""
 "openSUSE minimizes the risk by not writing more than the bare minimum "
 "required to boot the OS. The minimum means telling the UEFI firmware about "
@@ -518,12 +492,12 @@ msgstr ""
 "doporučuje."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:279
+#: xml/release-notes.xml:254
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT a oddíly MS-DOSu"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:280
+#: xml/release-notes.xml:255
 msgid ""
 "Together with the EFI/UEFI specification, a new style of partitioning "
 "arrived: GPT (GUID Partition Table). This new schema uses globally unique "
@@ -536,7 +510,7 @@ msgstr ""
 "hodnoty zobrazené jako 32 šestnáctkových číslic)."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:286
+#: xml/release-notes.xml:261
 msgid ""
 "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) "
 "partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically "
@@ -553,7 +527,7 @@ msgstr ""
 "původní."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:294
+#: xml/release-notes.xml:269
 msgid ""
 "Modern firmware has a garbage collector that collects deleted entries and "
 "frees the memory reserved for old entries. A problem arises when faulty "
@@ -566,18 +540,18 @@ msgstr ""
 "nezaveditelným systémem."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:300
+#: xml/release-notes.xml:275
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr ""
 "Abyste se tomuto problému vyhnuli, zkonvertujte starší oddíly MBR na GPT."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:307
+#: xml/release-notes.xml:282
 msgid "System Upgrade"
 msgstr "Aktualizace systému"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:309
+#: xml/release-notes.xml:284
 msgid ""
 "This section lists notes related to upgrading the system. For supported "
 "scenarios and detailed upgrade instructions, see the documentation at:"
@@ -586,22 +560,22 @@ msgstr ""
 "podrobné instrukce jak postupovat při povýšení najdete v dokumentaci na:"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:329
+#: xml/release-notes.xml:304
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
 msgstr "Zkontrolujte ještě <xref linkend=\"sec.package\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:342
+#: xml/release-notes.xml:317
 msgid "Packaging Changes"
 msgstr "Změny v balíčkování"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:345
+#: xml/release-notes.xml:320
 msgid "Deprecated Packages"
 msgstr "Zastaralé balíčky"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:346
+#: xml/release-notes.xml:321
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -614,7 +588,7 @@ msgstr ""
 "opravy."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:362
+#: xml/release-notes.xml:337
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -625,23 +599,23 @@ msgstr ""
 "příkaz:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:367
+#: xml/release-notes.xml:342
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "životní cyklus zypper"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:371
+#: xml/release-notes.xml:346
 msgid "Removed Packages"
 msgstr "Odstraněné balíčky"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:372
+#: xml/release-notes.xml:347
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "Odstraněné balíčky, které již nadále nejsou součástí distribuce."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:378
+#: xml/release-notes.xml:353
 msgid ""
 "<package>git-annex</package>: Has been removed because the package is not "
 "maintained anymore."
@@ -650,12 +624,12 @@ msgstr ""
 "udržován."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:385
+#: xml/release-notes.xml:360
 msgid "<package>erlang-rebar</package>: Did not build anymore"
 msgstr "<package>erlang-rebar</package>: Už se nevytváří"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:391
+#: xml/release-notes.xml:366
 msgid ""
 "<package>iksemel</package>: Has been removed because the package is not "
 "maintained anymore."
@@ -663,7 +637,7 @@ msgstr ""
 "<package>iksemel</package>: Byl odstraněn, protože balíček již není udržován."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:397
+#: xml/release-notes.xml:372
 msgid ""
 "<package>mozaddon-bugmenot</package>: Has been removed because the add-on is "
 "no longer compatible with current versions of Firefox."
@@ -672,17 +646,17 @@ msgstr ""
 "není kompatibilní se současnými verzemi Firefoxu."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:403
+#: xml/release-notes.xml:378
 msgid "<package>piglit</package>: Did not build anymore"
 msgstr "<package>piglit</package>: Už se nesestavuje"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:409
+#: xml/release-notes.xml:384
 msgid "<package>python-dns-lexicon</package>: Did not build anymore"
 msgstr "<package>python-dns-lexicon</package>: Už se nesestavuje"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:414
+#: xml/release-notes.xml:389
 msgid ""
 "<package>susedoc-buildbook</package>: Has been removed because the package "
 "is not maintained anymore."
@@ -691,7 +665,7 @@ msgstr ""
 "není udržován."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:420
+#: xml/release-notes.xml:395
 msgid ""
 "<package>yast2-fonts</package>: Has been removed because the package is not "
 "maintained anymore."
@@ -700,22 +674,49 @@ msgstr ""
 "udržován."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:488
+#: xml/release-notes.xml:443
+msgid "Desktop"
+msgstr ""
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:445
+#, fuzzy
+#| msgid ""
+#| "This section lists changes to security features in openSUSE Leap 15.1."
+msgid "This section lists desktop issues and changes in openSUSE Leap 15.1."
+msgstr "Tato sekce uvádí změny bezpečnostních vlastností openSUSE Leap 15.1."
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:452
+msgid "NIS/ypbind and NetworkManager"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:453
+msgid ""
+"If you use NIS for authentication on your workstation, we recommend using "
+"<package>wicked</package> instead of <package>NetworkManager</package> for "
+"managing network interfaces, as <package>ypbind</package> does not integrate "
+"well with NetworkManager."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:476
 msgid "Security"
 msgstr "Zabezpečení"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:490
+#: xml/release-notes.xml:478
 msgid "This section lists changes to security features in openSUSE Leap 15.1."
 msgstr "Tato sekce uvádí změny bezpečnostních vlastností openSUSE Leap 15.1."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:496
+#: xml/release-notes.xml:484
 msgid "Users and Groups Associated with AMANDA Backup Utility"
 msgstr "Uživatelé a skupiny spojené se zálohovacím nástrojem AMANDA"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:497
+#: xml/release-notes.xml:485
 msgid ""
 "AMANDA (<emphasis>Advanced Maryland Automatic Network Disk Archiver</"
 "emphasis>) is a backup solution that allows setting up a master backup "
@@ -731,7 +732,7 @@ msgstr ""
 "package>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:504
+#: xml/release-notes.xml:492
 msgid ""
 "The execution of the binaries in this package is restricted to the group "
 "<systemitem class=\"groupname\">amanda</systemitem>. However, some of those "
@@ -753,7 +754,7 @@ msgstr ""
 "(<systemitem class=\"username\">root</systemitem>)."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:503
 msgid ""
 "Hence, carefully consider who you allow access to either the user account or "
 "the group."
@@ -761,17 +762,17 @@ msgstr ""
 "Proto pečlivě zvažte, komu povolíte přístup k uživatelskému účtu a skupině."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:536
+#: xml/release-notes.xml:524
 msgid "More Information and Feedback"
 msgstr "Více informací a zpětná vazba"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:539
+#: xml/release-notes.xml:527
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Čtěte dokumenty <filename>README</filename> z média."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:544
+#: xml/release-notes.xml:532
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -779,18 +780,18 @@ msgstr ""
 "Zobrazte si podrobné údaje o změnách určeného balíčku z jeho souboru RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:548
+#: xml/release-notes.xml:536
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NÁZEV_SOUBORU</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:537
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>NÁZEV_SOUBORU</replaceable> názvem souboru RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:554
+#: xml/release-notes.xml:542
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -799,14 +800,14 @@ msgstr ""
 "souboru <filename>ChangeLog</filename> v kořenovém adresáři tohoto média."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:560
+#: xml/release-notes.xml:548
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "Další informace najdete na médiu v adresáři <filename>docu</filename>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:566
+#: xml/release-notes.xml:554
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -815,7 +816,7 @@ msgstr ""
 "doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:572
+#: xml/release-notes.xml:560
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -824,9 +825,33 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:579
+#: xml/release-notes.xml:567
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
+
+#~ msgid "Minimal System Installation"
+#~ msgstr "Instalace minimálního systému"
+
+#~ msgid ""
+#~ "The minimal system installation lacks certain functionality that is often "
+#~ "taken for granted:"
+#~ msgstr ""
+#~ "Minimální instalace systému postrádá určitou funkcionalitu, která je "
+#~ "často považována za samozřejmou:"
+
+#~ msgid ""
+#~ "It does not contain a software firewall front-end. You can install the "
+#~ "package <package>firewalld</package> additionally."
+#~ msgstr ""
+#~ "Neobsahuje softwarové rozhraní pro firewall. Můžete si dodatečně "
+#~ "nainstalovat balíček<package>firewalld</package>."
+
+#~ msgid ""
+#~ "It does not contain a YaST. You can install the pattern <package>patterns-"
+#~ "yast-yast2_basis</package> additionally."
+#~ msgstr ""
+#~ "Neobsahuje YaST. Můžete si dodatečně nainstalovat vzorek "
+#~ "<package>patterns-yast-yast2_basis</package>."
 
 #~ msgid "Scaling the Installer UI on Computers with High-DPI Displays"
 #~ msgstr ""

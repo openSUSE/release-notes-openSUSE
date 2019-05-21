@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2019-05-20 16:52+0200\n"
+"POT-Creation-Date: 2019-05-21 11:58+0200\n"
 "PO-Revision-Date: 2019-05-20 14:51+0000\n"
 "Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
@@ -246,10 +246,16 @@ msgstr "Inkompatible Pakete"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:114
+#, fuzzy
+#| msgid ""
+#| "Some packages modify the contents of <filename>/var</filename> or "
+#| "<filename>/srv</filename> in their RPM <literal>%post</literal> scripts. "
+#| "These packages are incompatible. If find such a package, file a bug "
+#| "report."
 msgid ""
 "Some packages modify the contents of <filename>/var</filename> or <filename>/"
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
-"are incompatible. If find such a package, file a bug report."
+"are incompatible. If you find such a package, file a bug report."
 msgstr ""
 "Manche Pakete modifizieren die Inhalte von <filename>/var</filename> oder "
 "<filename>/srv</filename> in ihren RPM-<literal>%post</literal>-Skripten. "
@@ -424,44 +430,12 @@ msgstr ""
 "transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:220
-msgid "Minimal System Installation"
-msgstr "Minimale Installation des Systems"
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:221
-msgid ""
-"The minimal system installation lacks certain functionality that is often "
-"taken for granted:"
-msgstr ""
-"Der Minimalinstallation des Systems mangelt es an bestimmter Funktionalität, "
-"die oft zur Genehmigung verwendet wird:"
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:227
-msgid ""
-"It does not contain a software firewall front-end. You can install the "
-"package <package>firewalld</package> additionally."
-msgstr ""
-"Es beinhaltet kein Software-Firewall-Frontend. Sie können das Paket "
-"<package>firewalld</package> zusätzlich installieren."
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:233
-msgid ""
-"It does not contain a YaST. You can install the pattern <package>patterns-"
-"yast-yast2_basis</package> additionally."
-msgstr ""
-"Es beinhaltet kein YaST. Sie können das Pattern <package>patterns-yast-"
-"yast2_basis</package> zusätzlich installieren."
-
-#. (itstool) path: sect2/title
-#: xml/release-notes.xml:242
+#: xml/release-notes.xml:217
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
 msgstr "Installation auf Festplatten mit weniger als 12 GB Kapazität"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:244
+#: xml/release-notes.xml:219
 msgid ""
 "The installer will only propose a partitioning scheme if the available hard "
 "disk size is larger than 12 GB. If you want to set up, for example, very "
@@ -475,12 +449,12 @@ msgstr ""
 "einzustellen."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:253
+#: xml/release-notes.xml:228
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI--Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:254
+#: xml/release-notes.xml:229
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
@@ -495,7 +469,7 @@ msgstr ""
 "ist oder aktueller ist ein starkes Indiz dafür, dass Ihr System UEFI nutzt."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:261
+#: xml/release-notes.xml:236
 msgid ""
 "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it "
 "to break if too much data gets written to the UEFI storage area. However, "
@@ -507,7 +481,7 @@ msgstr ""
 "darüber, wie viel <quote>zu viel</quote> ist."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:266
+#: xml/release-notes.xml:241
 msgid ""
 "openSUSE minimizes the risk by not writing more than the bare minimum "
 "required to boot the OS. The minimum means telling the UEFI firmware about "
@@ -527,12 +501,12 @@ msgstr ""
 "Hardwarehersteller empfohlen werden."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:279
+#: xml/release-notes.xml:254
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI, GPT und MS-DOS-Partitionen"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:280
+#: xml/release-notes.xml:255
 msgid ""
 "Together with the EFI/UEFI specification, a new style of partitioning "
 "arrived: GPT (GUID Partition Table). This new schema uses globally unique "
@@ -545,7 +519,7 @@ msgstr ""
 "32 hexadezimalen Ziffern), um Geräte und Partitionstypen zu identifizieren."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:286
+#: xml/release-notes.xml:261
 msgid ""
 "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) "
 "partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically "
@@ -563,7 +537,7 @@ msgstr ""
 "neuen Eintrags, der den ersten ersetzt."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:294
+#: xml/release-notes.xml:269
 msgid ""
 "Modern firmware has a garbage collector that collects deleted entries and "
 "frees the memory reserved for old entries. A problem arises when faulty "
@@ -577,19 +551,19 @@ msgstr ""
 "Das kann dazu führen, dass das System nicht mehr startet."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:300
+#: xml/release-notes.xml:275
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr ""
 "Konvertieren Sie die herkömmliche MBR-Partition in eine GPT-Partition, um "
 "das Problem gänzlich zu vermeiden."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:307
+#: xml/release-notes.xml:282
 msgid "System Upgrade"
 msgstr "System-Aktualisierung"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:309
+#: xml/release-notes.xml:284
 #, fuzzy
 #| msgid ""
 #| "This section lists notes related to upgrading the system. For detailed "
@@ -606,22 +580,22 @@ msgstr ""
 "startup/cha.update.osuse.html\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:329
+#: xml/release-notes.xml:304
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
 msgstr "Prüfen Sie zusätzlich <xref linkend=\"sec.package\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:342
+#: xml/release-notes.xml:317
 msgid "Packaging Changes"
 msgstr "Änderungen beim Paketieren"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:345
+#: xml/release-notes.xml:320
 msgid "Deprecated Packages"
 msgstr "Veraltete Pakete"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:346
+#: xml/release-notes.xml:321
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -634,7 +608,7 @@ msgstr ""
 "Verwendung wird abgeraten und sie erhalten möglicherweise keine Updates."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:362
+#: xml/release-notes.xml:337
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -645,24 +619,24 @@ msgstr ""
 "installiert ist. Dann verwenden Sie den Befehl:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:367
+#: xml/release-notes.xml:342
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:371
+#: xml/release-notes.xml:346
 msgid "Removed Packages"
 msgstr "Entfernte Pakete"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:372
+#: xml/release-notes.xml:347
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr ""
 "Entfernte Pakete werden nicht mehr als Teil dieser Distribution ausgeliefert."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:378
+#: xml/release-notes.xml:353
 msgid ""
 "<package>git-annex</package>: Has been removed because the package is not "
 "maintained anymore."
@@ -671,12 +645,12 @@ msgstr ""
 "gepflegt wird."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:385
+#: xml/release-notes.xml:360
 msgid "<package>erlang-rebar</package>: Did not build anymore"
 msgstr "<package>erlang-rebar</package>: Baute nicht mehr"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:391
+#: xml/release-notes.xml:366
 msgid ""
 "<package>iksemel</package>: Has been removed because the package is not "
 "maintained anymore."
@@ -685,7 +659,7 @@ msgstr ""
 "wird."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:397
+#: xml/release-notes.xml:372
 msgid ""
 "<package>mozaddon-bugmenot</package>: Has been removed because the add-on is "
 "no longer compatible with current versions of Firefox."
@@ -694,17 +668,17 @@ msgstr ""
 "mehr mit aktuellen Firefox-Versionen kompatibel ist."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:403
+#: xml/release-notes.xml:378
 msgid "<package>piglit</package>: Did not build anymore"
 msgstr "<package>piglit</package>: Baute nicht mehr"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:409
+#: xml/release-notes.xml:384
 msgid "<package>python-dns-lexicon</package>: Did not build anymore"
 msgstr "<package>python-dns-lexicon</package>: Baute nicht mehr"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:414
+#: xml/release-notes.xml:389
 msgid ""
 "<package>susedoc-buildbook</package>: Has been removed because the package "
 "is not maintained anymore."
@@ -713,7 +687,7 @@ msgstr ""
 "mehr gepflegt wird."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:420
+#: xml/release-notes.xml:395
 msgid ""
 "<package>yast2-fonts</package>: Has been removed because the package is not "
 "maintained anymore."
@@ -722,24 +696,52 @@ msgstr ""
 "gepflegt wird."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:488
+#: xml/release-notes.xml:443
+msgid "Desktop"
+msgstr "Desktop"
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:445
+#, fuzzy
+#| msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
+msgid "This section lists desktop issues and changes in openSUSE Leap 15.1."
+msgstr ""
+"Dieser Abschnitt listet Desktop-Probleme und Änderungen in openSUSE Leap "
+"15.0 auf."
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:452
+msgid "NIS/ypbind and NetworkManager"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:453
+msgid ""
+"If you use NIS for authentication on your workstation, we recommend using "
+"<package>wicked</package> instead of <package>NetworkManager</package> for "
+"managing network interfaces, as <package>ypbind</package> does not integrate "
+"well with NetworkManager."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:476
 msgid "Security"
 msgstr "Sicherheit"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:490
+#: xml/release-notes.xml:478
 msgid "This section lists changes to security features in openSUSE Leap 15.1."
 msgstr ""
 "Dieser Abschnitt listet Änderungen an Sicherheits-Features in openSUSE Leap "
 "15.1."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:496
+#: xml/release-notes.xml:484
 msgid "Users and Groups Associated with AMANDA Backup Utility"
 msgstr "Nutzer und Gruppen in mit AMANDA Backup Utility in Verbindung stehen"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:497
+#: xml/release-notes.xml:485
 msgid ""
 "AMANDA (<emphasis>Advanced Maryland Automatic Network Disk Archiver</"
 "emphasis>) is a backup solution that allows setting up a master backup "
@@ -754,7 +756,7 @@ msgstr ""
 "dem Paket <package>amanda</package> ausgeliefert."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:504
+#: xml/release-notes.xml:492
 msgid ""
 "The execution of the binaries in this package is restricted to the group "
 "<systemitem class=\"groupname\">amanda</systemitem>. However, some of those "
@@ -777,7 +779,7 @@ msgstr ""
 "<systemitem class=\"username\">root</systemitem> sind."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:503
 msgid ""
 "Hence, carefully consider who you allow access to either the user account or "
 "the group."
@@ -786,17 +788,17 @@ msgstr ""
 "auf die Gruppe Zugriff gewährt wird."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:536
+#: xml/release-notes.xml:524
 msgid "More Information and Feedback"
 msgstr "Weitere Informationen und Feedback"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:539
+#: xml/release-notes.xml:527
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Lesen Sie die <filename>README</filename>-Dokumente auf dem Medium."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:544
+#: xml/release-notes.xml:532
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -805,20 +807,20 @@ msgstr ""
 "Sie aus dem RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:548
+#: xml/release-notes.xml:536
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>DATEINAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:537
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Ersetzen Sie <replaceable>DATEINAME</replaceable> durch den Namen des "
 "gewünschten RPM Paketess."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:554
+#: xml/release-notes.xml:542
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -828,7 +830,7 @@ msgstr ""
 "aktualisierten Paketen gemacht wurden."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:560
+#: xml/release-notes.xml:548
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -837,7 +839,7 @@ msgstr ""
 "dem Medium."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:566
+#: xml/release-notes.xml:554
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -846,7 +848,7 @@ msgstr ""
 "\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:572
+#: xml/release-notes.xml:560
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -855,9 +857,33 @@ msgstr ""
 "href=\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:579
+#: xml/release-notes.xml:567
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
+
+#~ msgid "Minimal System Installation"
+#~ msgstr "Minimale Installation des Systems"
+
+#~ msgid ""
+#~ "The minimal system installation lacks certain functionality that is often "
+#~ "taken for granted:"
+#~ msgstr ""
+#~ "Der Minimalinstallation des Systems mangelt es an bestimmter "
+#~ "Funktionalität, die oft zur Genehmigung verwendet wird:"
+
+#~ msgid ""
+#~ "It does not contain a software firewall front-end. You can install the "
+#~ "package <package>firewalld</package> additionally."
+#~ msgstr ""
+#~ "Es beinhaltet kein Software-Firewall-Frontend. Sie können das Paket "
+#~ "<package>firewalld</package> zusätzlich installieren."
+
+#~ msgid ""
+#~ "It does not contain a YaST. You can install the pattern <package>patterns-"
+#~ "yast-yast2_basis</package> additionally."
+#~ msgstr ""
+#~ "Es beinhaltet kein YaST. Sie können das Pattern <package>patterns-yast-"
+#~ "yast2_basis</package> zusätzlich installieren."
 
 #~ msgid "Scaling the Installer UI on Computers with High-DPI Displays"
 #~ msgstr ""
@@ -1015,14 +1041,6 @@ msgstr "Copyright © SUSE LLC"
 #~ "Die KDE Plasma Wayland-Sitzung wird mit dem proprietären Nvidia-Treiber "
 #~ "nicht unterstützt. Wenn Sie KDE und den proprietären Nvidia-Treiber "
 #~ "verwenden, bleiben Sie bei der X-Sitzung."
-
-#~ msgid "Desktop"
-#~ msgstr "Desktop"
-
-#~ msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
-#~ msgstr ""
-#~ "Dieser Abschnitt listet Desktop-Probleme und Änderungen in openSUSE Leap "
-#~ "15.0 auf."
 
 #~ msgid "No Default Compose Key Combination"
 #~ msgstr "Keine Standard-Compose-Tastenkombination"

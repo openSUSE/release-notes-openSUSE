@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2019-05-20 16:52+0200\n"
+"POT-Creation-Date: 2019-05-21 11:58+0200\n"
 "PO-Revision-Date: 2019-05-20 14:51+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
@@ -218,10 +218,16 @@ msgstr "不相容的套件"
 
 #. (itstool) path: note/para
 #: xml/release-notes.xml:114
+#, fuzzy
+#| msgid ""
+#| "Some packages modify the contents of <filename>/var</filename> or "
+#| "<filename>/srv</filename> in their RPM <literal>%post</literal> scripts. "
+#| "These packages are incompatible. If find such a package, file a bug "
+#| "report."
 msgid ""
 "Some packages modify the contents of <filename>/var</filename> or <filename>/"
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
-"are incompatible. If find such a package, file a bug report."
+"are incompatible. If you find such a package, file a bug report."
 msgstr ""
 "一些套件會在它們的 RPM <literal>%post</literal> 腳本中修改 <filename>/var</"
 "filename> 或是 <filename>/srv</filename> 的內容。這些套件是不相容的。如果遇到"
@@ -379,41 +385,12 @@ msgstr ""
 "transactionalupdates2/\"/>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:220
-msgid "Minimal System Installation"
-msgstr "最小系統安裝"
-
-#. (itstool) path: sect2/para
-#: xml/release-notes.xml:221
-msgid ""
-"The minimal system installation lacks certain functionality that is often "
-"taken for granted:"
-msgstr "最小系統安裝缺少一些被認為理所當然的功能："
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:227
-msgid ""
-"It does not contain a software firewall front-end. You can install the "
-"package <package>firewalld</package> additionally."
-msgstr ""
-"不包括軟體防火牆前端介面。您可以另外安裝 <package>firewalld</package> 套件。"
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:233
-msgid ""
-"It does not contain a YaST. You can install the pattern <package>patterns-"
-"yast-yast2_basis</package> additionally."
-msgstr ""
-"不包括 YaST。您可以另外安裝 <package>patterns-yast-yast2_basis</package> 樣"
-"式。"
-
-#. (itstool) path: sect2/title
-#: xml/release-notes.xml:242
+#: xml/release-notes.xml:217
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
 msgstr "安裝在空間少於 12 GB 的硬碟"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:244
+#: xml/release-notes.xml:219
 msgid ""
 "The installer will only propose a partitioning scheme if the available hard "
 "disk size is larger than 12 GB. If you want to set up, for example, very "
@@ -424,12 +401,12 @@ msgstr ""
 "常小的虛擬機器映象檔，請使用引導式磁碟分割程式來自行調整分割參數。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:253
+#: xml/release-notes.xml:228
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI - 統一可延伸韌體介面"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:254
+#: xml/release-notes.xml:229
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
@@ -442,7 +419,7 @@ msgstr ""
 "更新的版本，通常就代表您的系統使用 UEFI 開機。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:261
+#: xml/release-notes.xml:236
 msgid ""
 "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it "
 "to break if too much data gets written to the UEFI storage area. However, "
@@ -453,7 +430,7 @@ msgstr ""
 "</quote>。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:266
+#: xml/release-notes.xml:241
 msgid ""
 "openSUSE minimizes the risk by not writing more than the bare minimum "
 "required to boot the OS. The minimum means telling the UEFI firmware about "
@@ -469,12 +446,12 @@ msgstr ""
 "用。無論如何，建議安裝任何硬體製造商建議的韌體更新。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:279
+#: xml/release-notes.xml:254
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr "UEFI，GPT 與 MS-DOS 磁碟分割區"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:280
+#: xml/release-notes.xml:255
 msgid ""
 "Together with the EFI/UEFI specification, a new style of partitioning "
 "arrived: GPT (GUID Partition Table). This new schema uses globally unique "
@@ -486,7 +463,7 @@ msgstr ""
 "置及分割區類型。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:286
+#: xml/release-notes.xml:261
 msgid ""
 "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) "
 "partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically "
@@ -501,7 +478,7 @@ msgstr ""
 "除舊的項目，以及創建一個新的項目以取代第一個項目。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:294
+#: xml/release-notes.xml:269
 msgid ""
 "Modern firmware has a garbage collector that collects deleted entries and "
 "frees the memory reserved for old entries. A problem arises when faulty "
@@ -514,19 +491,19 @@ msgstr ""
 "機。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:300
+#: xml/release-notes.xml:275
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr ""
 "簡單的替代解決方案是：轉換傳統的 MBR 分割區成為新的 GPT 分割區以完整的避免此"
 "問題。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:307
+#: xml/release-notes.xml:282
 msgid "System Upgrade"
 msgstr "系統升級"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:309
+#: xml/release-notes.xml:284
 #, fuzzy
 #| msgid ""
 #| "This section lists notes related to upgrading the system. For detailed "
@@ -542,22 +519,22 @@ msgstr ""
 "opensuse.startup/cha.update.osuse.html\"/> 的文件說明。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:329
+#: xml/release-notes.xml:304
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
 msgstr "另外，請見 <xref linkend=\"sec.package\"/> 的說明。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:342
+#: xml/release-notes.xml:317
 msgid "Packaging Changes"
 msgstr "套件變動"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:345
+#: xml/release-notes.xml:320
 msgid "Deprecated Packages"
 msgstr "不建議的套件"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:346
+#: xml/release-notes.xml:321
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -569,7 +546,7 @@ msgstr ""
 "新。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:362
+#: xml/release-notes.xml:337
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -579,42 +556,42 @@ msgstr ""
 "openSUSE</package> 套件，接著使用以下指令："
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:367
+#: xml/release-notes.xml:342
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:371
+#: xml/release-notes.xml:346
 msgid "Removed Packages"
 msgstr "移除的套件"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:372
+#: xml/release-notes.xml:347
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "移除的套件將不再隨發行版一起發布。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:378
+#: xml/release-notes.xml:353
 msgid ""
 "<package>git-annex</package>: Has been removed because the package is not "
 "maintained anymore."
 msgstr "<package>git-annex</package>：由於此套件不再維護而被移除。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:385
+#: xml/release-notes.xml:360
 msgid "<package>erlang-rebar</package>: Did not build anymore"
 msgstr "<package>erlang-rebar</package>：已無法建構"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:391
+#: xml/release-notes.xml:366
 msgid ""
 "<package>iksemel</package>: Has been removed because the package is not "
 "maintained anymore."
 msgstr "<package>iksemel</package>：由於此套件不再維護而被移除。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:397
+#: xml/release-notes.xml:372
 msgid ""
 "<package>mozaddon-bugmenot</package>: Has been removed because the add-on is "
 "no longer compatible with current versions of Firefox."
@@ -623,46 +600,72 @@ msgstr ""
 "而被移除。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:403
+#: xml/release-notes.xml:378
 msgid "<package>piglit</package>: Did not build anymore"
 msgstr "<package>piglit</package>：已無法建構"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:409
+#: xml/release-notes.xml:384
 msgid "<package>python-dns-lexicon</package>: Did not build anymore"
 msgstr "<package>python-dns-lexicon</package>：已無法建構"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:414
+#: xml/release-notes.xml:389
 msgid ""
 "<package>susedoc-buildbook</package>: Has been removed because the package "
 "is not maintained anymore."
 msgstr "<package>susedoc-buildbook</package>：由於此套件不再維護而被移除。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:420
+#: xml/release-notes.xml:395
 msgid ""
 "<package>yast2-fonts</package>: Has been removed because the package is not "
 "maintained anymore."
 msgstr "<package>yast2-fonts</package>：由於此套件不再維護而被移除。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:488
+#: xml/release-notes.xml:443
+msgid "Desktop"
+msgstr "桌面環境"
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:445
+#, fuzzy
+#| msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
+msgid "This section lists desktop issues and changes in openSUSE Leap 15.1."
+msgstr "這個小節列出 openSUSE Leap 15.0 關於桌面環境的問題與變動。"
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:452
+msgid "NIS/ypbind and NetworkManager"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:453
+msgid ""
+"If you use NIS for authentication on your workstation, we recommend using "
+"<package>wicked</package> instead of <package>NetworkManager</package> for "
+"managing network interfaces, as <package>ypbind</package> does not integrate "
+"well with NetworkManager."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:476
 msgid "Security"
 msgstr "安全性"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:490
+#: xml/release-notes.xml:478
 msgid "This section lists changes to security features in openSUSE Leap 15.1."
 msgstr "這個小節列出 openSUSE Leap 15.1 安全性功能方面的變動。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:496
+#: xml/release-notes.xml:484
 msgid "Users and Groups Associated with AMANDA Backup Utility"
 msgstr "與 AMANDA 備份工具相關的使用者與群組"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:497
+#: xml/release-notes.xml:485
 msgid ""
 "AMANDA (<emphasis>Advanced Maryland Automatic Network Disk Archiver</"
 "emphasis>) is a backup solution that allows setting up a master backup "
@@ -676,7 +679,7 @@ msgstr ""
 "<package>amanda</package> 套件中。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:504
+#: xml/release-notes.xml:492
 msgid ""
 "The execution of the binaries in this package is restricted to the group "
 "<systemitem class=\"groupname\">amanda</systemitem>. However, some of those "
@@ -697,42 +700,42 @@ msgstr ""
 "systemitem>。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:503
 msgid ""
 "Hence, carefully consider who you allow access to either the user account or "
 "the group."
 msgstr "是故，請謹慎考量要允許那些人能夠存取該使用者帳戶或是群組。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:536
+#: xml/release-notes.xml:524
 msgid "More Information and Feedback"
 msgstr "更多資訊與反饋"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:539
+#: xml/release-notes.xml:527
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "請閱讀安裝媒體上的 <filename>README</filename> 文件。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:544
+#: xml/release-notes.xml:532
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "從套件 RPM 檢視某個套件詳細的變動歷史資訊："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:548
+#: xml/release-notes.xml:536
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:537
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "將 <replaceable>FILENAME</replaceable> 代換為 RPM 名稱。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:554
+#: xml/release-notes.xml:542
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -741,14 +744,14 @@ msgstr ""
 "新套件的變動歷史（按時間先後排序）。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:560
+#: xml/release-notes.xml:548
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:566
+#: xml/release-notes.xml:554
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -757,7 +760,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:572
+#: xml/release-notes.xml:560
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -766,9 +769,31 @@ msgstr ""
 "opensuse.org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:579
+#: xml/release-notes.xml:567
 msgid "Copyright © SUSE LLC"
 msgstr "版權所有 © SUSE LLC"
+
+#~ msgid "Minimal System Installation"
+#~ msgstr "最小系統安裝"
+
+#~ msgid ""
+#~ "The minimal system installation lacks certain functionality that is often "
+#~ "taken for granted:"
+#~ msgstr "最小系統安裝缺少一些被認為理所當然的功能："
+
+#~ msgid ""
+#~ "It does not contain a software firewall front-end. You can install the "
+#~ "package <package>firewalld</package> additionally."
+#~ msgstr ""
+#~ "不包括軟體防火牆前端介面。您可以另外安裝 <package>firewalld</package> 套"
+#~ "件。"
+
+#~ msgid ""
+#~ "It does not contain a YaST. You can install the pattern <package>patterns-"
+#~ "yast-yast2_basis</package> additionally."
+#~ msgstr ""
+#~ "不包括 YaST。您可以另外安裝 <package>patterns-yast-yast2_basis</package> "
+#~ "樣式。"
 
 #~ msgid ""
 #~ "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk "
@@ -933,12 +958,6 @@ msgstr "版權所有 © SUSE LLC"
 #~ msgstr ""
 #~ "KDE Plasma Wayland 執行階段不支援專屬 Nvidia 驅動程式。若您正在使用 KDE 與"
 #~ "專有 Nvidia 驅動程式，請繼續使用 X 執行階段。"
-
-#~ msgid "Desktop"
-#~ msgstr "桌面環境"
-
-#~ msgid "This section lists desktop issues and changes in openSUSE Leap 15.0."
-#~ msgstr "這個小節列出 openSUSE Leap 15.0 關於桌面環境的問題與變動。"
 
 #~ msgid "No Default Compose Key Combination"
 #~ msgstr "沒有預設的 Compose 組合鍵"
