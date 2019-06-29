@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2019-02-08 20:26+0100\n"
-"PO-Revision-Date: 2019-03-01 18:19+0000\n"
+"PO-Revision-Date: 2019-06-29 11:50+0000\n"
 "Last-Translator: Antoine Belvire <antoine.belvire@opensuse.org>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_0/fr/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.3\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Poedit-Language: French\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -696,6 +696,12 @@ msgid ""
 "<package>pam_mount</package>, is still available), there may not be an easy "
 "upgrade path in the future."
 msgstr ""
+"Nous vous encourageons à déchiffrer les répertoires personnels chiffrés "
+"avant d'effectuer la mise à niveau depuis openSUSE Leap 42.3. Bien que les "
+"répertoires personnels chiffrés existants peuvent toujours être utilisés sur "
+"openSUSE Leap 15.0 (la technologie utilisée, <package>pam_mount</package>, "
+"est toujours disponible), ils pourraient compliquer une mise à niveau dans "
+"le futur."
 
 #. (itstool) path: tip/para
 #: xml/release-notes.xml:373
@@ -703,6 +709,9 @@ msgid ""
 "There is also no way to individually encrypt the home directories of users "
 "added after the upgrade to openSUSE Leap 15.0."
 msgstr ""
+"Il n'y a également aucun moyen de chiffrer individuellement les répertoires "
+"personnels des utilisateurs ajoutés après la mise à niveau vers openSUSE "
+"Leap 15.0."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:382
@@ -941,6 +950,17 @@ msgid ""
 "class=\"daemon\">ntpd</systemitem> in it will be replaced by <systemitem "
 "class=\"daemon\">chrony</systemitem> references."
 msgstr ""
+"Afin de synchroniser l'heure périodiquement, YaST installe un fichier de "
+"configuration cron. Depuis openSUSE Leap 15.0, ce fichier de configuration "
+"appartient au paquet <package>yast2-ntp-client</package> (alors que "
+"précédemment il n'appartenait à aucun paquet). Il a été renommé de "
+"<filename>novell.ntp-synchronization</filename> en <filename>suse-"
+"ntp_synchronization</filename> par souci de consistance vis-à-vis des autres "
+"fichiers de configuration cron. La mise à niveau depuis les précédentes "
+"versions d'openSUSE Leap est effectuée automatiquement : si un fichier avec "
+"l'ancien nom est trouvé, il sera renommé et ses références à <systemitem "
+"class=\"daemon\">ntpd</systemitem> seront remplacées par des références à <"
+"systemitem class=\"daemon\">chrony</systemitem>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:530
