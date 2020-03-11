@@ -25,11 +25,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.fi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-20 21:23+0100\n"
+"POT-Creation-Date: 2020-03-11 21:04+0100\n"
 "PO-Revision-Date: 2020-03-03 01:55+0000\n"
 "Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
-"Language-Team: Finnish <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_2/fi/>\n"
+"Language-Team: Finnish <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_2/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -206,8 +206,8 @@ msgid ""
 msgstr ""
 "Tässä osiossa on asennukseen liittyviä huomioita. Yksityiskohtaiset "
 "päivitysohjeet löytyvät osoitteesta <link xlink:href=\"https://doc.opensuse."
-"org/documentation/leap/startup/html/book.opensuse.startup/part-basics.html\""
-"/>."
+"org/documentation/leap/startup/html/book.opensuse.startup/part-basics.html\"/"
+">."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -579,25 +579,33 @@ msgstr ""
 "siirtämisessä, mutta niitä ei tulisi käyttää eivätkä ne saa päivityksiä."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:338
+#: xml/release-notes.xml:330
+#, fuzzy
+#| msgid ""
+#| "<package>libqt4</package>: Will neither receive updates nor security "
+#| "fixes. The package will be removed in the next version of openSUSE Leap."
 msgid ""
-"<package>libqt4</package>: Will neither receive updates nor security fixes. "
+"<package>libqt4</package>: Will receive neither updates nor security fixes. "
 "The package will be removed in the next version of openSUSE Leap."
 msgstr ""
 "<package>libqt4</package>: Ei saa päivityksiä eikä tietoturvakorjauksia. "
 "Paketti poistetaan openSUSE Leapin seuraavassa versiossa."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:342
+#: xml/release-notes.xml:336
+#, fuzzy
+#| msgid ""
+#| "<package>kdelibs4</package>: Will neither receive updates nor security "
+#| "fixes. The package will be removed in the next version of openSUSE Leap."
 msgid ""
-"<package>kdelibs4</package>: Will neither receive updates nor security "
+"<package>kdelibs4</package>: Will receive neither updates nor security "
 "fixes. The package will be removed in the next version of openSUSE Leap."
 msgstr ""
 "<package>kdelibs4</package>: Ei saa päivityksiä eikä tietoturvakorjauksia. "
 "Paketti poistetaan openSUSE Leapin seuraavassa versiossa."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:349
+#: xml/release-notes.xml:343
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -607,29 +615,150 @@ msgstr ""
 "<package>lifecycle-data-openSUSE</package> on asennettu ja käytä komentoa:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:354
+#: xml/release-notes.xml:348
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:358
+#: xml/release-notes.xml:352
 msgid "Removed Packages"
 msgstr "Poistetut paketit"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:359
+#: xml/release-notes.xml:353
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "Poistettuja paketteja ei enää toimiteta julkaisun osana."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:365
+#: xml/release-notes.xml:359
+msgid ""
+"<package>fate</package>: Removed because it uses insecure KDE4 and Qt4 "
+"libraries and <literal>features.opensuse.org</literal> is no longer used for "
+"feature requests."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:366
+msgid ""
+"<package>gstreamer-plugins-qt</package>, <package>gstreamer-plugins-qt5</"
+"package>, and <package>ktp-call-ui</package>: Removed because these packages "
+"are unmaintained and no longer build. The package <package>ktp-call-ui</"
+"package> depended on <package>gstreamer-plugins-qt</package>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:376
+#, fuzzy
+#| msgid ""
+#| "<package>iksemel</package>: Has been removed because the package is not "
+#| "maintained anymore."
+msgid ""
+"<package>H2rename</package>: Removed because the package is unmaintained."
+msgstr ""
+"<package>iksemel</package>: poistettu, koska pakettia ei enää ylläpidetä."
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:382
+#, fuzzy
+#| msgid ""
+#| "<package>lua51-luajit</package>: Replaced by <package>moonjit</package>."
+msgid ""
+"<package>jag-level-editor</package>: Replaced by <package>jag-editor</"
+"package>."
+msgstr "<package>lua51-luajit</package>: Korvattu <package>moonjit</package>."
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:388
+msgid ""
+"<package>jovie</package>: Removed because the package is no longer "
+"maintained upstream. See also <link xlink:href=\"https://kde.org/"
+"applications/unmaintained/org.kde.jovie\"/>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:395
+msgid ""
+"<package>kaccessible</package>, <package>kepas</package>, <package>konsole4</"
+"package>, <package>klinkstatus</package>, <package>kppp</package>, "
+"<package>kremotecontrol</package>, <package>kvpnc</package>, and "
+"<package>kvkbd</package>: Removed because these packages are no longer "
+"maintained upstream."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:404
+msgid ""
+"<package>kdesdk4-scripts</package>: Replaced by <package>kdesdk-scripts</"
+"package>."
+msgstr ""
+"<package>kdesdk4-scripts</package>: Korvattu <package>kdesdk-scripts</"
+"package>."
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:410
+#, fuzzy
+#| msgid ""
+#| "<package>libkdegames4</package>: Replaced by <package>libkdegames5</"
+#| "package>."
+msgid ""
+"<package>kdeuser</package>: Replaced by <package>kde-user-manager</package>."
+msgstr ""
+"<package>libkdegames4</package>: Korvattu <package>libkdegames5</package>."
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:416
+#, fuzzy
+#| msgid ""
+#| "<package>kdesdk4-scripts</package>: Replaced by <package>kdesdk-scripts</"
+#| "package>."
+msgid ""
+"<package>keepassx</package> and <package>kpassgen</package>: Replaced by "
+"<package>keepassxc</package>."
+msgstr ""
+"<package>kdesdk4-scripts</package>: Korvattu <package>kdesdk-scripts</"
+"package>."
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:422
+#, fuzzy
+#| msgid ""
+#| "<package>lua51-luajit</package>: Replaced by <package>moonjit</package>."
+msgid "<package>kile5</package>: Replaced by <package>kile</package>."
+msgstr "<package>lua51-luajit</package>: Korvattu <package>moonjit</package>."
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:428
+msgid ""
+"<package>libkdegames4</package>: Replaced by <package>libkdegames5</package>."
+msgstr ""
+"<package>libkdegames4</package>: Korvattu <package>libkdegames5</package>."
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:434
+msgid ""
+"<package>libkquoath</package>, <package>libjreen</package>, and "
+"<package>libqross</package>: Removed because the packages are no longer "
+"maintained upstream and use the insecure <command>libqt4</command>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:441
 msgid ""
 "<package>lua51-luajit</package>: Replaced by <package>moonjit</package>."
 msgstr "<package>lua51-luajit</package>: Korvattu <package>moonjit</package>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:371
+#: xml/release-notes.xml:447
+msgid ""
+"<package>mp3gain</package> and <package>wxmp3gain</package>: The package "
+"<package>mp3gain</package> was removed because it has a security issue and "
+"is no longer maintained upstream. The package <package>wxmp3gain</package> "
+"depended on <package>mp3gain</package>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:455
 msgid ""
 "<package>nodejs8</package>: Replaced by <package>nodejs10</package> and "
 "<package>nodejs12</package>."
@@ -638,7 +767,7 @@ msgstr ""
 "<package>nodejs12</package>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:378
+#: xml/release-notes.xml:462
 msgid ""
 "<package>python-django_compressor</package>: Replaced by <package>python-"
 "django-compressor</package>."
@@ -647,7 +776,7 @@ msgstr ""
 "compressor</package>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:384
+#: xml/release-notes.xml:468
 msgid ""
 "<package>python-pep8</package>: Replaced by <package>python-pycodestyle</"
 "package>."
@@ -656,49 +785,64 @@ msgstr ""
 "package>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:390
+#: xml/release-notes.xml:474
 msgid ""
-"<package>slapi-nis</package>: Removed as this module is not maintained "
+"<package>python-pyside</package> <package>python-pyside-tools</package>: "
+"Removed because it depends on the insecure <command>libqt4</command>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:481
+#, fuzzy
+#| msgid ""
+#| "<package>lua51-luajit</package>: Replaced by <package>moonjit</package>."
+msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
+msgstr "<package>lua51-luajit</package>: Korvattu <package>moonjit</package>."
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:486
+#, fuzzy
+#| msgid ""
+#| "<package>slapi-nis</package>: Removed as this module is not maintained "
+#| "outside of FreeIPA environments, and we do not ship FreeIPA."
+msgid ""
+"<package>slapi-nis</package>: Removed because this module is not maintained "
 "outside of FreeIPA environments, and we do not ship FreeIPA."
 msgstr ""
 "<package>slapi-nis</package>: Poistettu, koska tätä moduulia ei ylläpidetä "
 "FreeIPA-ympäristöjen ulkopuolella, emmekä toimita FreeIPA:ta."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:396
+#: xml/release-notes.xml:492
+#, fuzzy
+#| msgid ""
+#| "<package>git-annex</package>: Has been removed because the package is not "
+#| "maintained anymore."
 msgid ""
-"<package>libkdegames4</package>: Replaced by <package>libkdegames5</package>."
+"<package>tomahawk</package>: Removed because the package is no longer "
+"maintained upstream."
 msgstr ""
-"<package>libkdegames4</package>: Korvattu <package>libkdegames5</package>."
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:402
-msgid ""
-"<package>kdesdk4-scripts</package>: Replaced by <package>kdesdk-scripts</"
-"package>."
-msgstr ""
-"<package>kdesdk4-scripts</package>: Korvattu <package>kdesdk-"
-"scripts</package>."
+"<package>git-annex</package>: poistettu, koska pakettia ei enää ylläpidetä."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:440
+#: xml/release-notes.xml:530
 msgid "Desktop"
 msgstr "Työpöytä"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:441
+#: xml/release-notes.xml:531
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr ""
 "Tämä osio luettelee openSUSE Leap 15.2:n työpöytään liittyvät ongelmat ja "
 "muutokset."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:445
+#: xml/release-notes.xml:535
 msgid "KDE 4 and Qt 4 are unmaintained"
 msgstr "KDE 4 ja Qt4 ovat olleet ylläpitämättömiä"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:446
+#: xml/release-notes.xml:536
 msgid ""
 "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and "
 "Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt "
@@ -715,35 +859,35 @@ msgstr ""
 "joilla on samat tai ainakin samanlaiset toiminnot."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:532
+#: xml/release-notes.xml:622
 msgid "More Information and Feedback"
 msgstr "Lisätietoa ja palautemahdollisuus"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:535
+#: xml/release-notes.xml:625
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Lue <filename>README</filename>-tiedostot tietovälineeltä."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:540
+#: xml/release-notes.xml:630
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Löydät määräpaketin yksityiskohtaiset muutolokitiedot sen RPM:stä:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:544
+#: xml/release-notes.xml:634
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>TIEDOSTONIMI</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:545
+#: xml/release-notes.xml:635
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Korvaa <replaceable>TIEDOSTONIMI</replaceable> RPM:n nimellä."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:550
+#: xml/release-notes.xml:640
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -753,14 +897,14 @@ msgstr ""
 "tehdyistä muutoksista."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:556
+#: xml/release-notes.xml:646
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "Lisätietoa löytyy tietovälineen <filename>docu</filename>-kansiosta."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:562
+#: xml/release-notes.xml:652
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -769,7 +913,7 @@ msgstr ""
 "doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:568
+#: xml/release-notes.xml:658
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -778,28 +922,15 @@ msgstr ""
 "opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:575
+#: xml/release-notes.xml:665
 msgid "Copyright © SUSE LLC"
 msgstr "Tekijänoikeudet © SUSE LLC"
 
 #~ msgid "15.1"
 #~ msgstr "15.1"
 
-#~ msgid ""
-#~ "<package>git-annex</package>: Has been removed because the package is not "
-#~ "maintained anymore."
-#~ msgstr ""
-#~ "<package>git-annex</package>: poistettu, koska pakettia ei enää "
-#~ "ylläpidetä."
-
 #~ msgid "<package>erlang-rebar</package>: Did not build anymore"
 #~ msgstr "<package>erlang-rebar</package>: ei voitu enää koostaa"
-
-#~ msgid ""
-#~ "<package>iksemel</package>: Has been removed because the package is not "
-#~ "maintained anymore."
-#~ msgstr ""
-#~ "<package>iksemel</package>: poistettu, koska pakettia ei enää ylläpidetä."
 
 #~ msgid ""
 #~ "<package>mozaddon-bugmenot</package>: Has been removed because the add-on "
