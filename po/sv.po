@@ -10,25 +10,23 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2018-03-12 17:06+0000\n"
+"PO-Revision-Date: 2020-05-02 19:51+0000\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
-"Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/master/sv/>\n"
+"Language-Team: Swedish <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/master/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.6.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#, fuzzy
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Mattias Newzella <newzella@linux.se>, 2006\n"
-"Jonas Svensson <jks@ekhorva.se>, 2016"
+"Jonas Svensson <jks@ekhorva.se>, 2016, 2019"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -87,18 +85,13 @@ msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:46
-#, fuzzy
-#| msgid ""
-#| "To report bugs against this release, use the openSUSE Bugzilla. For more "
-#| "information, see <ulink url=\"https://en.opensuse.org/openSUSE:"
-#| "Submitting_bug_reports\"/>."
 msgid ""
 "To report bugs against this release, use the openSUSE Bugzilla. For more "
 "information, see <link xlink:href=\"https://en.opensuse.org/openSUSE:"
 "Submitting_bug_reports\"/>."
 msgstr ""
 "För att rapportera buggar i denna utgåva, använd openSUSE Bugzilla. För mer "
-"information se<ulink url=\"https://en.opensuse.org/openSUSE:"
+"information se<link xlink:href=\"https://en.opensuse.org/openSUSE:"
 "Submitting_bug_reports\"/>."
 
 #. (itstool) path: sect1/title
@@ -138,15 +131,15 @@ msgid ""
 "disabled by default. Nevertheless, it is recommended to install any firmware "
 "updates the hardware vendor recommends."
 msgstr ""
-"<emphasis>Bakgrund:</emphasis> UEFI är en modern ersättare för datorns BIOS "
-"och hanterar kommunikationen mellan datorns hårdvara och operativsystemet. "
-"UEFI kan även hantera datorns uppstart (boot). En del UEFI-firmware har en "
-"bugg som får datorn att krascha om operativsystemet skriver in för mycket "
-"data i UEFI:ets lagringsutrymme. OpenSUSE skriver in så lite data som "
-"möjligt i detta område för att minimera risken att utlösa buggen, bland "
-"annat har funktioner för att spara uppstartsloggar och kraschdata i UEFI-"
-"området stängts av (<literal>pstore</literal>). Men trots det bör du "
-"uppdatera ditt UFEI-firmware för att undvika eventuella problem."
+"<emphasis>Bakgrund:</emphasis> En del UEFI-firmware har en bugg som får "
+"datorn att krascha om för mycket data i skrivs in i UEFI:ets "
+"lagringsutrymme. Hur mycket \"för mycket\" är vet dock ingen och openSUSE "
+"försöker minimera risken genom att bara skriva in så mycket data som behövs "
+"för att starta operativsystemet. Till detta räknas positionen för openSUSEs "
+"bootloader. Funktioner i uppströms Linuxkärnor som använder UEFI området "
+"till att spara boot och kraschloggar (<literal>pstore</literal>) har stängts "
+"av. Trots det bör du ändå uppdatera ditt UFEI-firmware för att undvika "
+"eventuella problem."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:85
@@ -217,12 +210,6 @@ msgstr "System med LUKS-krypterad partition bootar inte"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:128
-#, fuzzy
-#| msgid ""
-#| "In some cases, Plymouth does not display the passphrase prompt properly. "
-#| "To fix this, add <literal>plymouth.enable=0</literal> to the kernel "
-#| "command line. See also <ulink url=\"https://bugzilla.opensuse.org/"
-#| "show_bug.cgi?id=966255\"/>."
 msgid ""
 "In some cases, Plymouth does not display the passphrase prompt properly. To "
 "fix this, add <literal>plymouth.enable=0</literal> to the kernel command "
@@ -231,13 +218,13 @@ msgid ""
 msgstr ""
 "I en del fall visar inte Plymouth lösenordsprompten korrekt. För att fixa "
 "detta lägg till <literal>plymouth.enable=0</literal> till kärnans "
-"kommandorad. Se också <ulink url=\"https://bugzilla.opensuse.org/show_bug."
-"cgi?id=966255\"/>."
+"kommandorad. Se också <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=966255\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:137
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr "<command> 1systemctl stop apparmor</command> 2 Fungerar inte"
+msgstr "<command>systemctl stop apparmor</command> Fungerar inte"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:138
@@ -246,9 +233,10 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
-"Tidigare rådde oklarhet om hur kommandot <command>systemctl</command> i "
-"kombination med de till namnet likartade underkommando "
-"<literal>reload</literal> och <literal>restart</literal> påverkade AppArmor:"
+"Tidigare kunde det råda oklarhet över hur kommandot "
+"<command>systemctl</command> i kombination med de till namnet likartade "
+"underkommando <literal>reload</literal> och <literal>restart</literal> "
+"påverkade AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -258,8 +246,8 @@ msgid ""
 "AppArmor profiles.)"
 msgstr ""
 "<command>systemctl reload apparmor</command> laddade om AppArmors profiler "
-"på ett korret sätt (och är fortfarande det rekommenderade sättet att utföra "
-"detta.)"
+"på ett korrekt sätt (och är fortfarande det rekommenderade sättet att utföra "
+"detta på.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -320,7 +308,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr "Ingen Default Compose Key kombination"
+msgstr "Ingen standard Compose-tangetkombination"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -332,8 +320,8 @@ msgid ""
 "<keycap>a</keycap> twice."
 msgstr ""
 "I tidigare versioner av openSUSE kunde man skriva bokstäver som inte finns i "
-"tangentbordslayouten med hjälp av compose key kombinationer. T.ex. för att "
-"skriva ett <quote>å</quote>, kunde man trycka ned och sedan släppa upp "
+"tangentbordslayouten med hjälp av Compose-tangentkombinationer. T.ex. för "
+"att skriva ett <quote>å</quote>, kunde man trycka ned och sedan släppa upp "
 "<keycombo><keycap function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> "
 "och sedan trycka ned <keycap>a</keycap> två gånger."
 
@@ -344,6 +332,9 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"I openSUSE Tumbleweed finns inte längre någon fördefinierad Compose-"
+"tangentkombination eftersom <keycombo><keycap function=\"shift\"/><keycap>"
+"Right Ctrl</keycap></keycombo> inte längre fungerar som förväntat."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:203
@@ -351,8 +342,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
-"För att definiera en systemomfattande compose key kombination, öppna filen "
-"<filename>/etc/X11/Xmodmap</filename> och sök efter följande rader:"
+"För att definiera en systemomfattande Compose-tangentkombination, öppna "
+"filen <filename>/etc/X11/Xmodmap</filename> och sök efter följande rader:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -395,7 +386,7 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
-"För att skapa en användardefinierad compose key kombination, använd det "
+"För att skapa en användardefinierad Compose-tangentkombination, använd det "
 "grafiska gränssnittets konfigurationsverktyg eller kommandoradsverktyget "
 "<command>setxkbmap</command>:"
 
@@ -433,7 +424,7 @@ msgid ""
 "you need without a Compose key."
 msgstr ""
 "Eller alternativt, använd en IBus inmatningsmetod som tillåter att du "
-"skriver i de bokstäver du behöver utan en compose key."
+"skriver i de bokstäver du behöver utan en Compose-tangent."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:263
