@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-27 15:33+0100\n"
-"PO-Revision-Date: 2020-05-11 08:31+0000\n"
+"PO-Revision-Date: 2020-05-26 14:40+0000\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_1/sv/>\n"
@@ -252,16 +252,19 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
+"Några paket ändrar innehållet i <filename>/var</filename> eller "
+"<filename>/srv</filename> i sina RPM <literal>%post</literal> script. Dessa "
+"paket är inte kompatibla. Lämna en buggrapport om du hittar ett sådant paket."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:121
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "Uppdateringssystemet bygger på följande tekniker:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:127
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Btrfs-ögonblicksbilder"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:128
@@ -271,18 +274,21 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Innan en systemuppdatering påbörjas skapas en ny Btfrs-ögonblicksbild av "
+"rotfilsystemet. Därefter installeras alla förändringar från uppdateringen på "
+"denna avbild. För att fullborda uppdateringen, starta om datorn med den nya "
+"avbilden."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:135
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"För att återställa en uppdatering, starta om med den gamla ögonblicksbilden."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:141
-#, fuzzy
-#| msgid "Mount the initial root filesystem:"
 msgid "A read-only root file system"
-msgstr "Montera det initiala root-filsystemet:"
+msgstr "Ett read-only rotfilsystem"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:142
@@ -291,6 +297,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"För att undvika problem med dataförluster vid uppdateringar får inte "
+"rotfilsystemet förändras av någon annan. Av den anledningen monteras "
+"rotfilsystemet skrivskyddat vid normal drift."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:148
@@ -300,12 +309,18 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"För att detta skall fungera måste två förändringar i filsystemet göras: För "
+"att kunna ändra inställningar i <filename>/etc</filename> konfigureras "
+"automatiskt denna katalog till att använda OverlayFS. "
+"<filename>/var</filename> är nu i en egen undervolym och kan skrivas till av "
+"processer."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:158
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"<emphasis>Transactional Server</emphasis> behöver minst 12 GB diskutrymme"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:159
@@ -313,6 +328,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Systemrollen <emphasis>Transactional Server</emphasis> behöver minst 12 GB "
+"ledigt diskutrymme för Btrfs-ögonblicksbilder."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:164
@@ -321,6 +338,9 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"För att arbeta med transaktionsuppdateringar, använd alltid kommandot "
+"<command>transactional-update</command> i stället för YaST och Zypper vid "
+"programhantering:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -334,7 +354,7 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
-"Installera ett paket med kommandot: <command>transactional-update pkg in "
+"Installera paket med kommandot: <command>transactional-update pkg in "
 "<replaceable>PAKET_NAMN</replaceable></command>"
 
 #. (itstool) path: listitem/para
@@ -343,7 +363,7 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
-"Ta bort ett paket med kommandot: <command>transactional-update pkg "
+"Ta bort paket med kommandot: <command>transactional-update pkg "
 "rm<replaceable>PAKET_NAMN</replaceable></command>"
 
 #. (itstool) path: listitem/para
@@ -353,6 +373,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"För att återställa den sista ögonblicksbilden, dvs. den avbild som "
+"innehåller förändringarna i rotfilsystemet, kontrollera att ditt system är "
+"startat med den näst sista ögonblicksbilden och kör kommandot: <command"
+">transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:195
@@ -360,6 +384,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Alternativt, lägg till ett ögonblicksbild-ID till slutet av kommandot för "
+"att återgå till ett specifikt ID."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:201
@@ -369,6 +395,9 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Den här systemrollen utför som standard en daglig omstart av systemet mellan "
+"03:30 och 05:00. Båda dessa åtgärder hanteras av systemd, och kan om "
+"nödvändigt inaktiveras med <command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:207
@@ -378,25 +407,21 @@ msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:208
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"För mer information, se <link xlink:href=\"https://bugzilla.opensuse.org/"
-"show_bug.cgi?id=996520\"/> och <link xlink:href=\"https://bugzilla.opensuse."
-"org/show_bug.cgi?id=853019\"/>."
+"För mer information om transaktionsuppdateringar, se openSUSE Kubic "
+"bloggposter <link xlink:href=\"https://kubic.opensuse.org/blog/"
+"2018-04-04-transactionalupdates/\"/> och <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:217
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Installation på hårddiskar med kapacitet mindre än 12 GB"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:219
@@ -406,6 +431,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Installationsprogrammet kommer bara att föreslå ett partitioneringsschema om "
+"den tillgängliga hårddiskstorleken är större än 12 GB. Om du t.ex. vill "
+"ställa in mycket små virtuella maskinbilder, använd den guidade "
+"partitionshanteraren."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:228
@@ -421,11 +450,11 @@ msgid ""
 "install such an update. A pre-installation of Windows 8 or later is a strong "
 "indication that your system boots using UEFI."
 msgstr ""
-"Om din dator använder UEFI-boot (vilket troligtvis är fallet om datorn "
-"levererades med Windows 8 eller senare) rekommenderar vi starkt att du om "
-"möjligt uppdaterar UEFI-firmwaret till senaste version. Firmware och "
-"instruktioner för detta hittar du på din dator- eller moderkortstillverkares "
-"hemsida."
+"Innan du installerar openSUSE på en dator som använder UEFI (Unified "
+"Extensible Firmware Interface) bör du kontrollera i fall det finns, och i så "
+"fall installera installera rekommenderade firmware-uppdateringar för din "
+"hårdvara. Att din dator levererats med Windows 8 eller senare är tecken på "
+"att datorn har UEFI boot."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:236
@@ -436,7 +465,7 @@ msgid ""
 msgstr ""
 "<emphasis>Bakgrund:</emphasis> En del UEFI-firmware har en bugg som får "
 "datorn att krascha om operativsystemet skriver in för mycket data i UEFI:ets "
-"lagringsutrymme. Men det går inte att förutsäga hur mycket som är <quote>för "
+"lagringsutrymme. Men det finns inget som berättar vad som är <quote>för "
 "mycket</quote>."
 
 #. (itstool) path: sect2/para
@@ -450,13 +479,12 @@ msgid ""
 "is recommended to install any firmware updates the hardware vendor "
 "recommends."
 msgstr ""
-"OpenSUSE minimerar denna risk genom att skriva in bara så mycket som behövs "
+"openSUSE minimerar denna risk genom att bara skriva in så mycket som behövs "
 "för att starta operativsystemet. Det som skrivs in är endast var UEFI-"
 "firmwaret skall leta efter openSUSE:s bootloader. Funktioner för att för att "
-"lagra uppstartsloggar och information om kraschar (<literal>pstore</"
-"literal>) i UEFI-området som uppströms Linuxkärnor har, är därför avstängd. "
-"Men trots det bör du uppdatera ditt UFEI-firmware för att undvika eventuella "
-"problem."
+"lagra uppstartsloggar och information om kraschar (<literal>pstore</literal>)"
+" i UEFI-området som uppströms Linuxkärnor har, är därför avstängd. Men trots "
+"det bör du uppdatera ditt UFEI-firmware för att undvika eventuella problem."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:254
@@ -518,20 +546,12 @@ msgstr "Systemuppdatering"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:284
-#, fuzzy
-#| msgid ""
-#| "This section lists notes related to upgrading the system. For detailed "
-#| "upgrade instructions, see the documentation at <link xlink:href=\"https://"
-#| "doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/"
-#| "cha.update.osuse.html\"/>."
 msgid ""
 "This section lists notes related to upgrading the system. For supported "
 "scenarios and detailed upgrade instructions, see the documentation at:"
 msgstr ""
 "Detta avsnitt innehåller viktig information om uppgradering av systemet. För "
-"detaljerade instruktioner om uppgradering, se: <link xlink:href=\"https://"
-"doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha."
-"update.osuse.html\"/>."
+"olika understödda scenario och detaljerade instruktioner om uppgradering, se:"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:304
@@ -541,7 +561,7 @@ msgstr "För ytterligare information, se <xref linkend=\"sec.package\"/>."
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:317
 msgid "Packaging Changes"
-msgstr ""
+msgstr "Paketändringar"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:320
@@ -550,22 +570,16 @@ msgstr "Föråldrade paket"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:321
-#, fuzzy
-#| msgid ""
-#| "The following packages are still shipped as part of the distribution but "
-#| "are deprecated. The packages exist to aid migration, but their use is "
-#| "discouraged and they may not receive updates. The packages will be "
-#| "removed in the next version of the distribution."
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"Följande paket levereras fortfarande som en del av distributionen, men är "
-"föråldrade. De finns med för att underlätta övergången, men du bör undvika "
-"att använda dem då de inte uppdateras. Paketen kommer att tas bort i nästa "
-"version."
+"Föråldrade paket levereras fortfarande som en del av distributionen, men "
+"kommer att plockas bort i nästa version av openSUSE. De finns med för att "
+"underlätta övergången, men du bör undvika att använda dem då de inte "
+"uppdateras."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:337
@@ -592,7 +606,7 @@ msgstr "Borttagna paket"
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:347
 msgid "Removed packages are not shipped as part of the distribution anymore."
-msgstr ""
+msgstr "Borttagna paket levereras inte längre som en del av distributionen."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:353
