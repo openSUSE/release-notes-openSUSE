@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 21:32+0200\n"
-"PO-Revision-Date: 2020-05-11 08:31+0000\n"
+"POT-Creation-Date: 2020-03-11 21:04+0100\n"
+"PO-Revision-Date: 2020-05-26 14:40+0000\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_2/sv/>\n"
@@ -82,7 +82,7 @@ msgid ""
 "openSUSE Leap 15.2."
 msgstr ""
 "Detta är en förhandsversion av versionsinformationen för kommande openSUSE "
-"15.2."
+"Leap 15.2."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:41
@@ -218,6 +218,14 @@ msgid ""
 "openSUSE Leap 15.2 also work with the system role <emphasis>Transactional "
 "Server</emphasis>."
 msgstr ""
+"Installationsprogrammet stödjer systemrollen <emphasis>Transactional "
+"Server</emphasis>. Denna systemroll har ett uppdateringssystem som tillämpar "
+"uppdateringar atomiskt (som en enda operation) och gör dem lätta att "
+"återställa om det skulle bli nödvändigt. Dessa funktioner baseras på samma "
+"pakethanteringsverktyg som alla andra SUSE- och openSUSE-distributioner "
+"använder sig av. Detta gör att de flesta RPM-paket som fungerar med andra "
+"systemroller i openSUSE Leap 15.2 också fungerar med systemrollen <emphasis> "
+"Transactional Server </emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:113
@@ -231,16 +239,19 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
+"Några paket ändrar innehållet i <filename>/var</filename> eller "
+"<filename>/srv</filename> i sina RPM <literal>%post</literal> script. Dessa "
+"paket är inte kompatibla. Lämna en buggrapport om du hittar ett sådant paket."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:121
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "Uppdateringssystemet bygger på följande tekniker:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:127
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Btrfs-ögonblicksbilder"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:128
@@ -250,18 +261,21 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Innan en systemuppdatering påbörjas skapas en ny Btfrs-ögonblicksbild av "
+"rotfilsystemet. Därefter installeras alla förändringar från uppdateringen på "
+"denna avbild. För att fullborda uppdateringen, starta om datorn med den nya "
+"avbilden."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:135
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"För att återställa en uppdatering, starta om med den gamla ögonblicksbilden."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:141
-#, fuzzy
-#| msgid "Mount the initial root filesystem:"
 msgid "A read-only root file system"
-msgstr "Montera det initiala root-filsystemet:"
+msgstr "Ett read-only rotfilsystem"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:142
@@ -270,6 +284,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"För att undvika problem med dataförluster vid uppdateringar får inte "
+"rotfilsystemet förändras av någon annan. Av den anledningen monteras "
+"rotfilsystemet skrivskyddat vid normal drift."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:148
@@ -279,12 +296,18 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"För att detta skall fungera måste två förändringar i filsystemet göras: För "
+"att kunna ändra inställningar i <filename>/etc</filename> konfigureras "
+"automatiskt denna katalog till att använda OverlayFS. "
+"<filename>/var</filename> är nu i en egen undervolym och kan skrivas till av "
+"processer."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:158
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"<emphasis>Transactional Server</emphasis> behöver minst 12 GB diskutrymme"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:159
@@ -292,6 +315,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Systemrollen <emphasis>Transactional Server</emphasis> behöver minst 12 GB "
+"ledigt diskutrymme för Btrfs-ögonblicksbilder."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:164
@@ -300,6 +325,9 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"För att arbeta med transaktionsuppdateringar, använd alltid kommandot "
+"<command>transactional-update</command> i stället för YaST och Zypper vid "
+"programhantering:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:171
@@ -313,7 +341,7 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
-"Installera ett paket med kommandot: <command>transactional-update pkg in "
+"Installera paket med kommandot: <command>transactional-update pkg in "
 "<replaceable>PAKET_NAMN</replaceable></command>"
 
 #. (itstool) path: listitem/para
@@ -322,7 +350,7 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
-"Ta bort ett paket med kommandot: <command>transactional-update pkg "
+"Ta bort paket med kommandot: <command>transactional-update pkg "
 "rm<replaceable>PAKET_NAMN</replaceable></command>"
 
 #. (itstool) path: listitem/para
@@ -332,6 +360,10 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"För att återställa den sista ögonblicksbilden, dvs. den avbild som "
+"innehåller förändringarna i rotfilsystemet, kontrollera att ditt system är "
+"startat med den näst sista ögonblicksbilden och kör kommandot: <command"
+">transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:195
@@ -339,6 +371,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Alternativt, lägg till ett ögonblicksbild-ID till slutet av kommandot för "
+"att återgå till ett specifikt ID."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:201
@@ -348,6 +382,9 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Den här systemrollen utför som standard en daglig omstart av systemet mellan "
+"03:30 och 05:00. Båda dessa åtgärder hanteras av systemd, och kan om "
+"nödvändigt inaktiveras med <command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:207
@@ -357,25 +394,21 @@ msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:208
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.opensuse."
-#| "org/show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=853019\"/>."
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
-"För mer information, se <link xlink:href=\"https://bugzilla.opensuse.org/"
-"show_bug.cgi?id=996520\"/> och <link xlink:href=\"https://bugzilla.opensuse."
-"org/show_bug.cgi?id=853019\"/>."
+"För mer information om transaktionsuppdateringar, se openSUSE Kubic "
+"bloggposter <link xlink:href=\"https://kubic.opensuse.org/blog/"
+"2018-04-04-transactionalupdates/\"/> och <link xlink:href=\""
+"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:217
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Installation på hårddiskar med kapacitet mindre än 12 GB"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:219
@@ -385,6 +418,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Installationsprogrammet kommer bara att föreslå ett partitioneringsschema om "
+"den tillgängliga hårddiskstorleken är större än 12 GB. Om du t.ex. vill "
+"ställa in mycket små virtuella maskinbilder, använd den guidade "
+"partitionshanteraren."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:228
@@ -400,11 +437,11 @@ msgid ""
 "install such an update. A pre-installation of Windows 8 or later is a strong "
 "indication that your system boots using UEFI."
 msgstr ""
-"Om din dator använder UEFI-boot (vilket troligtvis är fallet om datorn "
-"levererades med Windows 8 eller senare) rekommenderar vi starkt att du om "
-"möjligt uppdaterar UEFI-firmwaret till senaste version. Firmware och "
-"instruktioner för detta hittar du på din dator- eller moderkortstillverkares "
-"hemsida."
+"Innan du installerar openSUSE på en dator som använder UEFI (Unified "
+"Extensible Firmware Interface) bör du kontrollera i fall det finns, och i så "
+"fall installera installera rekommenderade firmware-uppdateringar för din "
+"hårdvara. Att din dator levererats med Windows 8 eller senare är tecken på "
+"att datorn har UEFI boot."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:236
@@ -415,7 +452,7 @@ msgid ""
 msgstr ""
 "<emphasis>Bakgrund:</emphasis> En del UEFI-firmware har en bugg som får "
 "datorn att krascha om operativsystemet skriver in för mycket data i UEFI:ets "
-"lagringsutrymme. Men det går inte att förutsäga hur mycket som är <quote>för "
+"lagringsutrymme. Men det finns inget som berättar vad som är <quote>för "
 "mycket</quote>."
 
 #. (itstool) path: sect2/para
@@ -429,13 +466,12 @@ msgid ""
 "is recommended to install any firmware updates the hardware vendor "
 "recommends."
 msgstr ""
-"OpenSUSE minimerar denna risk genom att skriva in bara så mycket som behövs "
+"openSUSE minimerar denna risk genom att bara skriva in så mycket som behövs "
 "för att starta operativsystemet. Det som skrivs in är endast var UEFI-"
 "firmwaret skall leta efter openSUSE:s bootloader. Funktioner för att för att "
-"lagra uppstartsloggar och information om kraschar (<literal>pstore</"
-"literal>) i UEFI-området som uppströms Linuxkärnor har, är därför avstängd. "
-"Men trots det bör du uppdatera ditt UFEI-firmware för att undvika eventuella "
-"problem."
+"lagra uppstartsloggar och information om kraschar (<literal>pstore</literal>)"
+" i UEFI-området som uppströms Linuxkärnor har, är därför avstängd. Men trots "
+"det bör du uppdatera ditt UFEI-firmware för att undvika eventuella problem."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:254
@@ -497,20 +533,12 @@ msgstr "Systemuppdatering"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:284
-#, fuzzy
-#| msgid ""
-#| "This section lists notes related to upgrading the system. For detailed "
-#| "upgrade instructions, see the documentation at <link xlink:href=\"https://"
-#| "doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/"
-#| "cha.update.osuse.html\"/>."
 msgid ""
 "This section lists notes related to upgrading the system. For supported "
 "scenarios and detailed upgrade instructions, see the documentation at:"
 msgstr ""
 "Detta avsnitt innehåller viktig information om uppgradering av systemet. För "
-"detaljerade instruktioner om uppgradering, se: <link xlink:href=\"https://"
-"doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha."
-"update.osuse.html\"/>."
+"olika understödda scenario och detaljerade instruktioner om uppgradering, se:"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:304
@@ -520,7 +548,7 @@ msgstr "För ytterligare information, se <xref linkend=\"sec.package\"/>."
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:317
 msgid "Packaging Changes"
-msgstr ""
+msgstr "Paketändringar"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:320
@@ -529,22 +557,16 @@ msgstr "Föråldrade paket"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:321
-#, fuzzy
-#| msgid ""
-#| "The following packages are still shipped as part of the distribution but "
-#| "are deprecated. The packages exist to aid migration, but their use is "
-#| "discouraged and they may not receive updates. The packages will be "
-#| "removed in the next version of the distribution."
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"Följande paket levereras fortfarande som en del av distributionen, men är "
-"föråldrade. De finns med för att underlätta övergången, men du bör undvika "
-"att använda dem då de inte uppdateras. Paketen kommer att tas bort i nästa "
-"version."
+"Föråldrade paket levereras fortfarande som en del av distributionen, men "
+"kommer att plockas bort i nästa version av openSUSE. De finns med för att "
+"underlätta övergången, men du bör undvika att använda dem då de inte "
+"uppdateras."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:330
@@ -552,6 +574,8 @@ msgid ""
 "<package>libqt4</package>: Will receive neither updates nor security fixes. "
 "The package will be removed in the next version of openSUSE Leap."
 msgstr ""
+"<package>libqt4</package>: Kommer inte att få några nya uppdateringar eller "
+"säkerhetsfixar. Paketet tas bort i nästa version av openSUSE Leap."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:336
@@ -559,6 +583,8 @@ msgid ""
 "<package>kdelibs4</package>: Will receive neither updates nor security "
 "fixes. The package will be removed in the next version of openSUSE Leap."
 msgstr ""
+"<package>kdelibs4</package>: Kommer inte att få några nya uppdateringar "
+"eller säkerhetsfixar. Paketet tas bort i nästa version av openSUSE Leap."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:343
@@ -585,7 +611,7 @@ msgstr "Borttagna paket"
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:353
 msgid "Removed packages are not shipped as part of the distribution anymore."
-msgstr ""
+msgstr "Borttagna paket levereras inte längre som en del av distributionen."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:359
@@ -608,6 +634,9 @@ msgid ""
 "libraries and <literal>features.opensuse.org</literal> is no longer used for "
 "feature requests."
 msgstr ""
+"<package>fate</package>: Borttaget eftersom det bygger på osäkra KDE4 och "
+"Qt4-bibliotek samt att <literal>features.opensuse.org</literal> inte längre "
+"används för feature requests."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:373
@@ -617,18 +646,18 @@ msgid ""
 "are unmaintained and no longer build. The package <package>ktp-call-ui</"
 "package> depended on <package>gstreamer-plugins-qt</package>."
 msgstr ""
+"<package>gstreamer-plugins-qt</package>, <package>gstreamer-plugins-"
+"qt5</package> och <package>ktp-call-ui</package>: Borttagna då dessa paket "
+"inte längre underhålls och byggs. Paketet <package>ktp-call-ui</package> är "
+"beroende av <package>gstreamer-plugins-qt</package>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:383
-#, fuzzy
-#| msgid ""
-#| "<package>dropbear</package>: Removed because there are no relevant "
-#| "advantages over <package>openssh</package>."
+#: xml/release-notes.xml:376
 msgid ""
 "<package>H2rename</package>: Removed because the package is unmaintained."
 msgstr ""
-"<package>dropbear</package>: Borttaget eftersom den inte finns några "
-"relevanta fördelar jämfört med <package>openssh</package>."
+"<package>H2rename</package>: Borttaget eftersom paketet inte längre "
+"underhålls."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:389
@@ -645,6 +674,9 @@ msgid ""
 "maintained upstream. See also <link xlink:href=\"https://kde.org/"
 "applications/unmaintained/org.kde.jovie\"/>."
 msgstr ""
+"<package>jovie</package>: Borttaget eftersom paketet inte längre underhålls "
+"uppströms. Se också <link xlink:href=\"https://kde.org/applications/"
+"unmaintained/org.kde.jovie\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:402
@@ -655,6 +687,11 @@ msgid ""
 "<package>kvkbd</package>: Removed because these packages are no longer "
 "maintained upstream."
 msgstr ""
+"<package>kaccessible</package>, <package>kepas</package>, "
+"<package>konsole4</package>, <package>klinkstatus</package>, "
+"<package>kppp</package>, <package>kremotecontrol</package>, "
+"<package>kvpnc</package> och <package>kvkbd</package>: Borttagna eftersom "
+"paketen inte längre underhålls uppströms."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:411
@@ -700,6 +737,9 @@ msgid ""
 "<package>libqross</package>: Removed because the packages are no longer "
 "maintained upstream and use the insecure <command>libqt4</command>."
 msgstr ""
+"<package>libkquoath</package>, <package>libjreen</package> och "
+"<package>libqross</package>: Borttagna eftersom paketen inte längre "
+"underhålls uppströms och använder osäkra <command>libqt4</command>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:448
@@ -715,6 +755,10 @@ msgid ""
 "is no longer maintained upstream. The package <package>wxmp3gain</package> "
 "depended on <package>mp3gain</package>."
 msgstr ""
+"<package>mp3gain</package> och <package>wxmp3gain</package>: Paketet "
+"<package>mp3gain</package> är borttaget eftersom det har säkerhetsproblem "
+"och inte längre underhålls uppströms. Paketet <package>wxmp3gain</package> "
+"har beroende till <package>mp3gain</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:462
@@ -749,6 +793,8 @@ msgid ""
 "<package>python-pyside</package> and <package>python-pyside-tools</package>: "
 "Removed because it depends on the insecure <command>libqt4</command>."
 msgstr ""
+"<package>python-pyside</package> and <package>python-pyside-tools</package>: "
+"Borttaget eftersom det har beroende till osäkra <command>libqt4</command>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:488
@@ -761,19 +807,17 @@ msgid ""
 "<package>slapi-nis</package>: Removed because this module is not maintained "
 "outside of FreeIPA environments, and we do not ship FreeIPA."
 msgstr ""
+"<package>slapi-nis</package>: Borttaget eftersom denna modul inte underhålls "
+"utanför FreeIPA-miljöer, och vi levererar inte FreeIPA."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:499
-#, fuzzy
-#| msgid ""
-#| "<package>dropbear</package>: Removed because there are no relevant "
-#| "advantages over <package>openssh</package>."
+#: xml/release-notes.xml:492
 msgid ""
 "<package>tomahawk</package>: Removed because the package is no longer "
 "maintained upstream."
 msgstr ""
-"<package>dropbear</package>: Borttaget eftersom den inte finns några "
-"relevanta fördelar jämfört med <package>openssh</package>."
+"<package>tomahawk</package>: Borttaget eftersom paketet inte längre "
+"underhålls uppströms."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:505
@@ -789,20 +833,15 @@ msgid "Desktop"
 msgstr "Skrivbord"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:544
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#| "match any other category."
+#: xml/release-notes.xml:531
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr ""
-"Denna sektion listar generella problem i openSUSE Leap 15.0 som inte faller "
-"in i någon annan kategori."
+"Denna sektion listar desktop-problem och förändringar i openSUSE Leap 15.2."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:548
 msgid "KDE 4 and Qt 4 are unmaintained"
-msgstr ""
+msgstr "KDE 4 och Qt 4 underhålls inte"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:549
@@ -814,6 +853,12 @@ msgid ""
 "replace all installed KDE 4 and Qt 4 packages with packages from Plasma 5 "
 "and Qt 5 providing the same or at least similar functionalities."
 msgstr ""
+"Uppdatering av KDE4 och Qt 4 till Plasma 5 och Qt 5 rekommenderas, då KDE4 "
+"och Qt 4 inte längre stöds. openSUSE Leap 15.2 innehåller fortfarande KDE4 "
+"och Qt 4 paket av kompatibilitetsskäl, men dessa paket kommer inte längre "
+"att få några uppdateringar eller säkerhetsfixar. Därför rekommenderas starkt "
+"att ersätta alla KDE4 och Qt 4 paket med paket från Plasma 5 och Qt 5 som "
+"ger samma eller åtminstone motsvarande funktionalitet."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:635
