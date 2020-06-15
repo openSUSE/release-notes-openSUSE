@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-11 21:04+0100\n"
+"POT-Creation-Date: 2020-06-15 14:08+0200\n"
 "PO-Revision-Date: 2020-05-26 14:40+0000\n"
 "Last-Translator: Jonas Svensson <jonas@ekhorva.se>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/release-notes-"
@@ -218,8 +218,8 @@ msgid ""
 "openSUSE Leap 15.2 also work with the system role <emphasis>Transactional "
 "Server</emphasis>."
 msgstr ""
-"Installationsprogrammet stödjer systemrollen <emphasis>Transactional "
-"Server</emphasis>. Denna systemroll har ett uppdateringssystem som tillämpar "
+"Installationsprogrammet stödjer systemrollen <emphasis>Transactional Server</"
+"emphasis>. Denna systemroll har ett uppdateringssystem som tillämpar "
 "uppdateringar atomiskt (som en enda operation) och gör dem lätta att "
 "återställa om det skulle bli nödvändigt. Dessa funktioner baseras på samma "
 "pakethanteringsverktyg som alla andra SUSE- och openSUSE-distributioner "
@@ -239,9 +239,9 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
-"Några paket ändrar innehållet i <filename>/var</filename> eller "
-"<filename>/srv</filename> i sina RPM <literal>%post</literal> script. Dessa "
-"paket är inte kompatibla. Lämna en buggrapport om du hittar ett sådant paket."
+"Några paket ändrar innehållet i <filename>/var</filename> eller <filename>/"
+"srv</filename> i sina RPM <literal>%post</literal> script. Dessa paket är "
+"inte kompatibla. Lämna en buggrapport om du hittar ett sådant paket."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:121
@@ -298,9 +298,8 @@ msgid ""
 msgstr ""
 "För att detta skall fungera måste två förändringar i filsystemet göras: För "
 "att kunna ändra inställningar i <filename>/etc</filename> konfigureras "
-"automatiskt denna katalog till att använda OverlayFS. "
-"<filename>/var</filename> är nu i en egen undervolym och kan skrivas till av "
-"processer."
+"automatiskt denna katalog till att använda OverlayFS. <filename>/var</"
+"filename> är nu i en egen undervolym och kan skrivas till av processer."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:158
@@ -362,8 +361,8 @@ msgid ""
 msgstr ""
 "För att återställa den sista ögonblicksbilden, dvs. den avbild som "
 "innehåller förändringarna i rotfilsystemet, kontrollera att ditt system är "
-"startat med den näst sista ögonblicksbilden och kör kommandot: <command"
-">transactional-update rollback</command>"
+"startat med den näst sista ögonblicksbilden och kör kommandot: "
+"<command>transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:195
@@ -401,9 +400,9 @@ msgid ""
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
 "För mer information om transaktionsuppdateringar, se openSUSE Kubic "
-"bloggposter <link xlink:href=\"https://kubic.opensuse.org/blog/"
-"2018-04-04-transactionalupdates/\"/> och <link xlink:href=\""
-"https://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
+"bloggposter <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
+"transactionalupdates/\"/> och <link xlink:href=\"https://kubic.opensuse.org/"
+"blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:217
@@ -469,9 +468,10 @@ msgstr ""
 "openSUSE minimerar denna risk genom att bara skriva in så mycket som behövs "
 "för att starta operativsystemet. Det som skrivs in är endast var UEFI-"
 "firmwaret skall leta efter openSUSE:s bootloader. Funktioner för att för att "
-"lagra uppstartsloggar och information om kraschar (<literal>pstore</literal>)"
-" i UEFI-området som uppströms Linuxkärnor har, är därför avstängd. Men trots "
-"det bör du uppdatera ditt UFEI-firmware för att undvika eventuella problem."
+"lagra uppstartsloggar och information om kraschar (<literal>pstore</"
+"literal>) i UEFI-området som uppströms Linuxkärnor har, är därför avstängd. "
+"Men trots det bör du uppdatera ditt UFEI-firmware för att undvika eventuella "
+"problem."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:254
@@ -646,13 +646,13 @@ msgid ""
 "are unmaintained and no longer build. The package <package>ktp-call-ui</"
 "package> depended on <package>gstreamer-plugins-qt</package>."
 msgstr ""
-"<package>gstreamer-plugins-qt</package>, <package>gstreamer-plugins-"
-"qt5</package> och <package>ktp-call-ui</package>: Borttagna då dessa paket "
-"inte längre underhålls och byggs. Paketet <package>ktp-call-ui</package> är "
+"<package>gstreamer-plugins-qt</package>, <package>gstreamer-plugins-qt5</"
+"package> och <package>ktp-call-ui</package>: Borttagna då dessa paket inte "
+"längre underhålls och byggs. Paketet <package>ktp-call-ui</package> är "
 "beroende av <package>gstreamer-plugins-qt</package>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:376
+#: xml/release-notes.xml:383
 msgid ""
 "<package>H2rename</package>: Removed because the package is unmaintained."
 msgstr ""
@@ -687,11 +687,11 @@ msgid ""
 "<package>kvkbd</package>: Removed because these packages are no longer "
 "maintained upstream."
 msgstr ""
-"<package>kaccessible</package>, <package>kepas</package>, "
-"<package>konsole4</package>, <package>klinkstatus</package>, "
-"<package>kppp</package>, <package>kremotecontrol</package>, "
-"<package>kvpnc</package> och <package>kvkbd</package>: Borttagna eftersom "
-"paketen inte längre underhålls uppströms."
+"<package>kaccessible</package>, <package>kepas</package>, <package>konsole4</"
+"package>, <package>klinkstatus</package>, <package>kppp</package>, "
+"<package>kremotecontrol</package>, <package>kvpnc</package> och "
+"<package>kvkbd</package>: Borttagna eftersom paketen inte längre underhålls "
+"uppströms."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:411
@@ -811,7 +811,7 @@ msgstr ""
 "utanför FreeIPA-miljöer, och vi levererar inte FreeIPA."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:492
+#: xml/release-notes.xml:499
 msgid ""
 "<package>tomahawk</package>: Removed because the package is no longer "
 "maintained upstream."
@@ -833,7 +833,7 @@ msgid "Desktop"
 msgstr "Skrivbord"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:531
+#: xml/release-notes.xml:544
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr ""
 "Denna sektion listar desktop-problem och förändringar i openSUSE Leap 15.2."
