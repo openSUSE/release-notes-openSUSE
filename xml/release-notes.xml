@@ -536,31 +536,24 @@
 
  </sect1>
 
- <!-- <sect1 xml:id="sec.driver">
+ <sect1 xml:id="sec.driver">
   <title>Drivers and Hardware</title>
   <para/> -->
 
-  <!-- <sect2 xml:id="sec.driver.nvidia-hybrid">
-   <!-/- boo#1094834 -/->
-   <title>Hang on Machines with Nvidia GPUs and Hybrid Graphics</title>
+  <sect2 xml:id="sec.driver.sig">
+   <!-/- bsc#173158 -/->
+   <title>Secure Boot: 3rd Party drivers need to be properly signed</title>
    <para>
-    With the kernel shipped in &thisflavor; 15.0 GM, the Nouveau driver for
-    Nvidia graphics card may hang at reboot, shutdown, or during runtime power
-    management actions. This bug occurs primarily on system with hybrid
-    graphics, such as laptops that include integrated Intel graphics and a
-    discrete Nvidia graphics card.
+     This is an important change for all users of 3rd party drivers using secureboot
+     (for example NVidia or AMD graphics drivers from the respective manufacturer's repositories).
+     The module signature check is turned on &thisflavor; 15.2 (CONFIG_MODULE_SIG=y). This wasn't the case for 15.1.
+     Unsigned modules will be tainted and will result in a warning message, but they will function.
+     Signed modules that fail to check will be blocked.
+     See more details at <link xlink:href="https://en.opensuse.org/SDB:NVIDIA_drivers"/>
    </para>
-   <para>
-    The bug will be fixed in a maintenance update for the kernel. However, as
-    the installation image does not receive updates, this issue may occur
-    during installation or first boot even after that update has shipped.
-    In that case, as a temporary workaround, boot with the option
-    <literal>nouveau.modeset=0</literal>. After the updated kernel
-    including the fix is installed, you can remove this option again.
-   </para>
-  </sect2> -->
+  </sect2>
 
- <!-- </sect1> -->
+ </sect1>
 
   <sect1 xml:id="general">
   <title>Desktop</title>
