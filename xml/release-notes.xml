@@ -357,14 +357,6 @@
    <itemizedlist>
     <listitem>
      <para>
-      <package>gcompris</package> (old gtk version): Removed because it is 
-      unmaintained and has been replaced by now <package>gcompris-qt</package>.
-      See
-      <link xlink:href="https://www.gcompris.net"/>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
       <package>artha</package>: Removed because it is unmaintained and has
       unpatched security issues. See
       <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1143860"/>.
@@ -375,6 +367,13 @@
       <package>fate</package>: Removed because it uses insecure KDE4 and Qt4
       libraries and <literal>features.opensuse.org</literal> is no longer
       used for feature requests.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <package>gcompris</package> (old GTK version): Removed because it is
+      unmaintained and has been replaced by now <package>gcompris-qt</package>.
+      See <link xlink:href="https://www.gcompris.net"/>.
      </para>
     </listitem>
     <listitem>
@@ -391,6 +390,13 @@
      <para>
       <package>H2rename</package>: Removed because the package
       is unmaintained.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      <package>ixpdimm_sw</package>, <package>invm-cim</package>,
+      <package>invm-cli</package>, and <package>invm-i18n</package>:
+      Replaced by <package>ipmctl</package>.
      </para>
     </listitem>
     <listitem>
@@ -520,14 +526,9 @@
       <package>bareftp</package>, <package>docky</package>,
       <package>fsharp</package>, <package>gnome-desktop-sharp2</package>,
       <package>gnome-sharp2</package>, <package>mono-debugger</package>,
-      <package>mono-upnp</package>, <package>pdfmod</package>,
-      <package>taglib-sharp</package>: Removed because does not work with Mono 6.x.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>ixpdimm_sw</package>, <package>invm-cim</package>,
-      <package>invm-cli</package>, <package>invm-i18n</package>: Packages were replaced by <package>ipmctl</package>.
+      <package>mono-upnp</package>, <package>pdfmod</package>, and
+      <package>taglib-sharp</package>: Removed because the packages do not
+      work with Mono 6.x.
      </para>
     </listitem>
    </itemizedlist>
@@ -542,14 +543,32 @@
 
   <sect2 xml:id="sec.driver.sig">
    <!-- bsc#173158 -->
-   <title>Secure Boot: 3rd Party drivers need to be properly signed</title>
+   <title>Secure Boot: Third-Party Drivers Need to Be Properly Signed</title>
    <para>
-     This is an important change for all users of 3rd party drivers using secureboot
-     (for example NVidia or AMD graphics drivers from the respective manufacturer's repositories).
-     The module signature check is turned on &thisflavor; 15.2 (CONFIG_MODULE_SIG=y). This wasn't the case for 15.1.
-     Unsigned modules will be tainted and will result in a warning message, but they will function.
-     Signed modules that fail to check will be blocked.
-     See more details at <link xlink:href="https://en.opensuse.org/SDB:NVIDIA_drivers"/>
+    When UEFI Secure Boot is enabled, &thisflavor; 15.2 now enables a kernel
+    module signature check for third-party drivers
+    (<literal>CONFIG_MODULE_SIG=y</literal>).
+    Importantly, this affects NVIDIA or AMD graphics drivers from the
+    manufacturer's repositories.
+    The signature check has the following behavior:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <para>
+      Kernel modules that are signed but fail the check will be blocked.
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      Kernel modules that are not signed will be treated as being
+      <quote>tainted</quote> and will result in a warning message, but they
+      will function.
+     </para>
+    </listitem>
+   </itemizedlist>
+   <para>
+    For more information, see
+    <link xlink:href="https://en.opensuse.org/SDB:NVIDIA_drivers"/>.
    </para>
   </sect2>
 
