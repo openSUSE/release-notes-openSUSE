@@ -547,7 +547,10 @@
    <para>
     &thisflavor; 15.2 now enables a kernel
     module signature check for third-party drivers
-    (<literal>CONFIG_MODULE_SIG=y</literal>). This may prevent third-party
+    (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important
+    security measure to avoid untrusted code running in the kernel.
+   </para>
+   <para>This may prevent third-party
     kernel modules from being loaded if UEFI Secure Boot is enabled.
     Importantly, this affects NVIDIA or AMD graphics drivers from the
     manufacturer's repositories. Kernel Module Packages (KMPs) from
