@@ -12,10 +12,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2020-06-23 23:00+0200\n"
-"PO-Revision-Date: 2020-06-23 19:14+0000\n"
+"PO-Revision-Date: 2020-06-25 14:03+0000\n"
 "Last-Translator: Sarah Kriesch <ada.lovelace@gmx.de>\n"
-"Language-Team: German <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_2/de/>\n"
+"Language-Team: German <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_2/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -659,19 +659,14 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:373
-#, fuzzy
-#| msgid ""
-#| "<package>artha</package>: Removed because it is unmaintained and has "
-#| "unpatched security issues. See <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=1143860\"/>."
 msgid ""
 "<package>gcompris</package> (old GTK version): Removed because it is "
 "unmaintained and has been replaced by now <package>gcompris-qt</package>. "
 "See <link xlink:href=\"https://www.gcompris.net\"/>."
 msgstr ""
-"<package>artha</package>: Entfernt, weil es ungepflegt ist und nicht "
-"gepatchte Security-Issues aha. Siehe <link xlink:href=\"https://bugzilla."
-"opensuse.org/show_bug.cgi?id=1143860\"/>."
+"<package>gcompris</package>:(alte GTK-Version) Entfernt, weil es ungepflegt "
+"ist und von jetzt an von <package>gcompris-qt</package> ersetzt ist. Siehe <"
+"link xlink:href=\"https://www.gcompris.net\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:380
@@ -695,17 +690,14 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:396
-#, fuzzy
-#| msgid ""
-#| "<package>keepassx</package> and <package>kpassgen</package>: Replaced by "
-#| "<package>keepassxc</package>."
 msgid ""
 "<package>ixpdimm_sw</package>, <package>invm-cim</package>, <package>invm-"
 "cli</package>, and <package>invm-i18n</package>: Replaced by "
 "<package>ipmctl</package>."
 msgstr ""
-"<package>keepassx</package> und <package>kpassgen</package>: Ersetzt durch "
-"<package>keepassxc</package>."
+"<package>ixpdimm_sw</package>, <package>invm-cim</package>, <package>invm-"
+"cli</package> und<package>invm-i18n</package>: Ersetzt durch "
+"<package>ipmctl</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:403
@@ -881,13 +873,6 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:525
-#, fuzzy
-#| msgid ""
-#| "<package>kaccessible</package>, <package>kepas</package>, "
-#| "<package>konsole4</package>, <package>klinkstatus</package>, "
-#| "<package>kppp</package>, <package>kremotecontrol</package>, "
-#| "<package>kvpnc</package>, and <package>kvkbd</package>: Removed because "
-#| "these packages are no longer maintained upstream."
 msgid ""
 "<package>bareftp</package>, <package>docky</package>, <package>fsharp</"
 "package>, <package>gnome-desktop-sharp2</package>, <package>gnome-sharp2</"
@@ -895,11 +880,11 @@ msgid ""
 "<package>pdfmod</package>, and <package>taglib-sharp</package>: Removed "
 "because the packages do not work with Mono 6.x."
 msgstr ""
-"<package>kaccessible</package>, <package>kepas</package>, <package>konsole4</"
-"package>, <package>klinkstatus</package>, <package>kppp</package>, "
-"<package>kremotecontrol</package>, <package>kvpnc</package> und "
-"<package>kvkbd</package>: Entfernt, weil diese Pakete upstream nicht länger "
-"gepflegt werden."
+"<package>bareftp</package>, <package>docky</package>, "
+"<package>fsharp</package>, <package>gnome-desktop-sharp2</package>, <package"
+">gnome-sharp2</package>, <package>mono-debugger</package>, <package>mono-"
+"upnp</package>, <package>pdfmod</package> und <package>taglib-"
+"sharp</package>: Entfernt, weil die Pakete nicht mit Mono 6.x funktionieren."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:541
@@ -909,7 +894,7 @@ msgstr "Treiber und Hardware"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:546
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
-msgstr ""
+msgstr "Secure Boot: Third-Party-Treiber müssen richtig signiert sein"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:547
@@ -920,11 +905,18 @@ msgid ""
 "or AMD graphics drivers from the manufacturer's repositories. The signature "
 "check has the following behavior:"
 msgstr ""
+"Wenn UEFI-Secure-Boot aktiviert ist, aktiviert jetzt openSUSE Leap 15.2 "
+"einen Kernelmodul-Signatur-Check für Third-Party-Treiber "
+"(<literal>CONFIG_MODUL_SIG=y</literal>). Wesentlich berifft das "
+"Grafiktreiber von NVIDIA oder AMD aus den Hersteller-Repositorys. Der "
+"Signatur-Check hat das folgende Verhalten:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:557
 msgid "Kernel modules that are signed but fail the check will be blocked."
 msgstr ""
+"Bei Kernelmodulen, die signiert sind, aber fehlschlagen, wird der Check "
+"blockiert."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:562
@@ -932,19 +924,18 @@ msgid ""
 "Kernel modules that are not signed will be treated as being <quote>tainted</"
 "quote> and will result in a warning message, but they will function."
 msgstr ""
+"Kernelmodule, die nicht signiert sind, werden wie <quote>unrein</quote> "
+"behandelt und wernden in einer Warnungs-Nachricht resultieren, aber sie "
+"werden funktionieren."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:569
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <link xlink:href=\"https://"
-#| "doc.opensuse.org/\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
 "NVIDIA_drivers\"/>."
 msgstr ""
-"Für mehr oder aktualisierte Informationen gehen Sie auf <link xlink:href="
-"\"https://doc.opensuse.org/\"/>."
+"Für weitere Informationen siehe <link xlink:href=\"https://en.opensuse.org/"
+"SDB:NVIDIA_drivers\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:578
