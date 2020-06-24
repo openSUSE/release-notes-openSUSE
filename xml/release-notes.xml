@@ -545,17 +545,25 @@
    <!-- bsc#173158 -->
    <title>Secure Boot: Third-Party Drivers Need to Be Properly Signed</title>
    <para>
-    When UEFI Secure Boot is enabled, &thisflavor; 15.2 now enables a kernel
+    &thisflavor; 15.2 now enables a kernel
     module signature check for third-party drivers
-    (<literal>CONFIG_MODULE_SIG=y</literal>).
+    (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important
+    security measure to avoid untrusted code running in the kernel.
+   </para>
+   <para>This may prevent third-party
+    kernel modules from being loaded if UEFI Secure Boot is enabled.
     Importantly, this affects NVIDIA or AMD graphics drivers from the
-    manufacturer's repositories.
+    manufacturer's repositories. Kernel Module Packages (KMPs) from
+    the official openSUSE repositories are not affected, because the
+    modules they contain are signed with the openSUSE key.
     The signature check has the following behavior:
    </para>
    <itemizedlist>
     <listitem>
      <para>
-      Kernel modules that are signed but fail the check will be blocked.
+      Kernel modules that are signed with a key that is either known as
+      untrusted, or can't be verified against the system's trusted key data
+      base, will be blocked.
      </para>
     </listitem>
     <listitem>
@@ -566,6 +574,13 @@
      </para>
     </listitem>
    </itemizedlist>
+   <para>
+     It is possible to generate a custom certificate, enroll it
+     into the system's Machine Owner Key (MOK) data base,
+     and sign locally compiled kernel modules with this certificate's key.
+     Modules signed in this manner will neither be blocked nor cause warnings.
+     See <link xlink:href="https://en.opensuse.org/openSUSE:UEFI"/>.
+   </para>
    <para>
     For more information, see
     <link xlink:href="https://en.opensuse.org/SDB:NVIDIA_drivers"/>.
