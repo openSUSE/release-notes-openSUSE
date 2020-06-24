@@ -20,10 +20,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-23 23:00+0200\n"
-"PO-Revision-Date: 2020-06-23 19:14+0000\n"
-"Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
-"Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_2/cs/>\n"
+"PO-Revision-Date: 2020-06-25 14:03+0000\n"
+"Last-Translator: Aleš Kastner <alkas@volny.cz>\n"
+"Language-Team: Czech <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_2/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -650,19 +650,14 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:373
-#, fuzzy
-#| msgid ""
-#| "<package>artha</package>: Removed because it is unmaintained and has "
-#| "unpatched security issues. See <link xlink:href=\"https://bugzilla."
-#| "opensuse.org/show_bug.cgi?id=1143860\"/>."
 msgid ""
 "<package>gcompris</package> (old GTK version): Removed because it is "
 "unmaintained and has been replaced by now <package>gcompris-qt</package>. "
 "See <link xlink:href=\"https://www.gcompris.net\"/>."
 msgstr ""
-"<package>artha</package>: Odebrán, protože už není udržován a má "
-"nezáplatované bezpečnostní chyb. Viz <link xlink:href=\"https://bugzilla."
-"opensuse.org/show_bug.cgi?id=1143860\"/>."
+"<package>gcompris</package>: (stará verze GTK): Odebrán, protože už není "
+"udržován a byl nyní nahrazen <package>gcompris-qt</package>. Viz <link "
+"xlink:href=\"https://www.gcompris.net\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:380
@@ -685,17 +680,14 @@ msgstr "<package>H2rename</package>: Odstraněn, protože již není udržován.
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:396
-#, fuzzy
-#| msgid ""
-#| "<package>keepassx</package> and <package>kpassgen</package>: Replaced by "
-#| "<package>keepassxc</package>."
 msgid ""
 "<package>ixpdimm_sw</package>, <package>invm-cim</package>, <package>invm-"
 "cli</package>, and <package>invm-i18n</package>: Replaced by "
 "<package>ipmctl</package>."
 msgstr ""
-"<package>keepassx</package> a <package>kpassgen</package>: Nahrazeny "
-"balíčkem <package>kpassgen</package>."
+"<package>xpdimm_sw</package>, <package>invm-cim</package>, <package>invm-"
+"cli</package> a <package>invm-i18n</package>:: Nahrazeny balíčkem "
+"<package>ipmctl</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:403
@@ -864,13 +856,6 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:525
-#, fuzzy
-#| msgid ""
-#| "<package>kaccessible</package>, <package>kepas</package>, "
-#| "<package>konsole4</package>, <package>klinkstatus</package>, "
-#| "<package>kppp</package>, <package>kremotecontrol</package>, "
-#| "<package>kvpnc</package>, and <package>kvkbd</package>: Removed because "
-#| "these packages are no longer maintained upstream."
 msgid ""
 "<package>bareftp</package>, <package>docky</package>, <package>fsharp</"
 "package>, <package>gnome-desktop-sharp2</package>, <package>gnome-sharp2</"
@@ -878,20 +863,21 @@ msgid ""
 "<package>pdfmod</package>, and <package>taglib-sharp</package>: Removed "
 "because the packages do not work with Mono 6.x."
 msgstr ""
-"<package>kaccessible</package>, <package>kepas</package>, <package>konsole4</"
-"package>, <package>klinkstatus</package>, <package>kppp</package>, "
-"<package>kremotecontrol</package>, <package>kvpnc</package> a "
-"<package>kvkbd</package>: Odstraněny, protože už nejsou udržovány."
+"<package>bareftp</package>, <package>docky</package>, "
+"<package>fsharp</package>, <package>gnome-desktop-sharp2</package>, <package"
+">gnome-sharp2</package>, <package>mono-debugger</package>, <package>mono-"
+"upnp</package>, <package>pdfmod</package> a <package>taglib-sharp</package>: "
+"Odstraněny, neboť nefungují s Mono 6.x."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:541
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "Ovladače a hardware"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:546
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
-msgstr ""
+msgstr "Bezpečný boot: Ovladače od třetích stran by měly být správně podepsány"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:547
@@ -902,11 +888,18 @@ msgid ""
 "or AMD graphics drivers from the manufacturer's repositories. The signature "
 "check has the following behavior:"
 msgstr ""
+"Je-li zapnut bezpečný boot UEFI, zapíná nyní openSUSE Leap 15.2 v modulu "
+"jádra kontrolu podpisu ovladačů od třetích stran "
+"(<literal>CONFIG_MODULE_SIG=y</literal>). Důležité: týká se ovladačů "
+"grafických adaptérů NVIDIA a AMD získaných z úložišť výrobců. Kontrola "
+"podpisu probíhá takto:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:557
 msgid "Kernel modules that are signed but fail the check will be blocked."
 msgstr ""
+"Moduly jádra, které jsou podepsány, ale neprojdou kontrolou, budou "
+"zablokovány."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:562
@@ -914,19 +907,17 @@ msgid ""
 "Kernel modules that are not signed will be treated as being <quote>tainted</"
 "quote> and will result in a warning message, but they will function."
 msgstr ""
+"Moduly jádra, které nejsou podepsány, se považují za <quote>kazové</quote> a "
+"způsobí varovnou zprávu, ale budou funkční."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:569
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <link xlink:href=\"https://"
-#| "doc.opensuse.org/\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
 "NVIDIA_drivers\"/>."
 msgstr ""
-"Další nebo aktualizovanou dokumentaci najdete na <link xlink:href=\"https://"
-"doc.opensuse.org/\"/>."
+"Další údaje najdete na <link xlink:href=\"https://en.opensuse.org/SDB:"
+"NVIDIA_drivers\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:578
