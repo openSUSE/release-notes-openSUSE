@@ -460,7 +460,7 @@
     </listitem>
     <listitem>
      <para>
-      <package>lilo</package>: Obsolete since a decade, replaced by
+      <package>lilo</package>: Has been obsolete for a decade, replaced by
       <package>grub2</package>.
      </para>
     </listitem>
@@ -556,11 +556,12 @@
     (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important
     security measure to avoid untrusted code running in the kernel.
    </para>
-   <para>This may prevent third-party
+   <para>
+    This may prevent third-party
     kernel modules from being loaded if UEFI Secure Boot is enabled.
     Importantly, this affects NVIDIA or AMD graphics drivers from the
     manufacturer's repositories. Kernel Module Packages (KMPs) from
-    the official openSUSE repositories are not affected, because the
+    the official &osuse; repositories are not affected, because the
     modules they contain are signed with the openSUSE key.
     The signature check has the following behavior:
    </para>
@@ -568,15 +569,15 @@
     <listitem>
      <para>
       Kernel modules that are signed with a key that is either known as
-      untrusted, or can't be verified against the system's trusted key data
-      base, will be blocked.
+      untrusted or cannot be verified against the system's trusted key data
+      base will be blocked.
      </para>
     </listitem>
     <listitem>
      <para>
       Kernel modules that are not signed will be treated as being
-      <quote>tainted</quote> and will result in a warning message, but they
-      will function.
+      <quote>tainted</quote>. Loading them will result in a warning message,
+      but they will function.
      </para>
     </listitem>
    </itemizedlist>
