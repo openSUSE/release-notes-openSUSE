@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-06-23 23:00+0200\n"
+"POT-Creation-Date: 2020-06-26 23:33+0200\n"
 "PO-Revision-Date: 2019-05-02 20:14+0000\n"
 "Last-Translator: Mohammad Rezaei Seresht <m_rezaei_seresht@hotmail.com>\n"
 "Language-Team: Persian <https://l10n.opensuse.org/projects/release-notes-"
@@ -761,13 +761,24 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:462
 #, fuzzy
+#| msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
+msgid ""
+"<package>lilo</package>: Has been obsolete for a decade, replaced by "
+"<package>grub2</package>."
+msgstr ""
+"<package>gnome-system-log</package>: با <package>gnome-logs</package>جایگزین "
+"شد."
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:468
+#, fuzzy
 #| msgid "<package>psi</package>: Replaced by <package>psi+</package>."
 msgid ""
 "<package>lua51-luajit</package>: Replaced by <package>moonjit</package>."
 msgstr "<package>psi</package>: با <package>psi+</package>جایگزین شد."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:468
+#: xml/release-notes.xml:474
 msgid ""
 "<package>mp3gain</package> and <package>wxmp3gain</package>: The package "
 "<package>mp3gain</package> was removed because it has a security issue and "
@@ -776,7 +787,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:476
+#: xml/release-notes.xml:482
 #, fuzzy
 #| msgid "<package>nodejs</package>: Renamed to <package>nodejs4</package>."
 msgid ""
@@ -785,7 +796,7 @@ msgid ""
 msgstr "<package>nodejs</package>: با <package>nodejs4</package>جایگزین شد."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:483
+#: xml/release-notes.xml:489
 #, fuzzy
 #| msgid ""
 #| "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
@@ -796,7 +807,7 @@ msgstr ""
 "<package>ksnapshot</package> با <package>spectacle</package> جایگزین شد."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:489
+#: xml/release-notes.xml:495
 #, fuzzy
 #| msgid ""
 #| "<package>ksnapshot</package>: Replaced by <package>spectacle</package>."
@@ -807,14 +818,14 @@ msgstr ""
 "<package>ksnapshot</package> با <package>spectacle</package> جایگزین شد."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:495
+#: xml/release-notes.xml:501
 msgid ""
 "<package>python-pyside</package> and <package>python-pyside-tools</package>: "
 "Removed because it depends on the insecure <command>libqt4</command>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:502
+#: xml/release-notes.xml:508
 #, fuzzy
 #| msgid "<package>hawk</package>: Replaced by <package>hawk2</package>."
 msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
@@ -823,14 +834,14 @@ msgstr ""
 "شد."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:507
+#: xml/release-notes.xml:513
 msgid ""
 "<package>slapi-nis</package>: Removed because this module is not maintained "
 "outside of FreeIPA environments, and we do not ship FreeIPA."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:513
+#: xml/release-notes.xml:519
 #, fuzzy
 #| msgid ""
 #| "<package>dropbear</package>: Removed because there are no relevant "
@@ -843,7 +854,7 @@ msgstr ""
 "<package>openssh</package>هیچ مزیت مناسبی ندارد."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:519
+#: xml/release-notes.xml:525
 #, fuzzy
 #| msgid ""
 #| "<package>ungifsicle</package>: Replaced by <package>gifsicle</package>."
@@ -854,7 +865,7 @@ msgstr ""
 "است."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:525
+#: xml/release-notes.xml:531
 msgid ""
 "<package>bareftp</package>, <package>docky</package>, <package>fsharp</"
 "package>, <package>gnome-desktop-sharp2</package>, <package>gnome-sharp2</"
@@ -864,39 +875,62 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:541
+#: xml/release-notes.xml:547
 msgid "Drivers and Hardware"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:546
+#: xml/release-notes.xml:552
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:547
+#: xml/release-notes.xml:553
 msgid ""
-"When UEFI Secure Boot is enabled, openSUSE Leap 15.2 now enables a kernel "
-"module signature check for third-party drivers "
-"(<literal>CONFIG_MODULE_SIG=y</literal>). Importantly, this affects NVIDIA "
-"or AMD graphics drivers from the manufacturer's repositories. The signature "
-"check has the following behavior:"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:557
-msgid "Kernel modules that are signed but fail the check will be blocked."
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:562
-msgid ""
-"Kernel modules that are not signed will be treated as being <quote>tainted</"
-"quote> and will result in a warning message, but they will function."
+"openSUSE Leap 15.2 now enables a kernel module signature check for third-"
+"party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
+"security measure to avoid untrusted code running in the kernel."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:569
+#: xml/release-notes.xml:559
+msgid ""
+"This may prevent third-party kernel modules from being loaded if UEFI Secure "
+"Boot is enabled. Importantly, this affects NVIDIA or AMD graphics drivers "
+"from the manufacturer's repositories. Kernel Module Packages (KMPs) from the "
+"official openSUSE repositories are not affected, because the modules they "
+"contain are signed with the openSUSE key. The signature check has the "
+"following behavior:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:570
+msgid ""
+"Kernel modules that are signed with a key that is either known as untrusted "
+"or cannot be verified against the system's trusted key data base will be "
+"blocked."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:577
+msgid ""
+"Kernel modules that are not signed will be treated as being <quote>tainted</"
+"quote>. Loading them will result in a warning message, but they will "
+"function."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:584
+msgid ""
+"It is possible to generate a custom certificate, enroll it into the system's "
+"Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
+"with this certificate's key. Modules signed in this manner will neither be "
+"blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
+"openSUSE:UEFI\"/>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:591
 #, fuzzy
 #| msgid ""
 #| "To report bugs against this release, use the openSUSE Bugzilla. For more "
@@ -911,12 +945,12 @@ msgstr ""
 "<link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/> را ببینید."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:578
+#: xml/release-notes.xml:600
 msgid "Desktop"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:579
+#: xml/release-notes.xml:601
 #, fuzzy
 #| msgid ""
 #| "This section lists general issues with openSUSE Leap 42.2 that do not "
@@ -927,12 +961,12 @@ msgstr ""
 "را لیست میکند."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:583
+#: xml/release-notes.xml:605
 msgid "KDE 4 and Qt 4 are unmaintained"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:584
+#: xml/release-notes.xml:606
 msgid ""
 "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and "
 "Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt "
@@ -943,17 +977,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:670
+#: xml/release-notes.xml:692
 msgid "More Information and Feedback"
 msgstr "اطلاعات بیشتر و بازخورد"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:673
+#: xml/release-notes.xml:695
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "مستندات <filename>README</filename> بر روی رسانه را بخوانید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:678
+#: xml/release-notes.xml:700
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -961,19 +995,19 @@ msgstr ""
 "اطلاعات دقیقتر راجع به تغییرات یک بسته را از پرونده ی RPM آن بسته ببینید:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:682
+#: xml/release-notes.xml:704
 #, fuzzy, no-wrap
 #| msgid "rpm --changelog -qp <placeholder-1/>.rpm"
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:683
+#: xml/release-notes.xml:705
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "<replaceable>نام فایل</replaceable> را با نام RPM جایگزین کنید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:688
+#: xml/release-notes.xml:710
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -982,14 +1016,14 @@ msgstr ""
 "گزارش تمامی تغییرات اعمال شده در بسته های به روز شده را مطالعه کنید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:694
+#: xml/release-notes.xml:716
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "در فهرست <filename>docu</filename>در رسانه اطلاعات بیشتری را بیابید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:700
+#: xml/release-notes.xml:722
 #, fuzzy
 #| msgid ""
 #| "To report bugs against this release, use the openSUSE Bugzilla. For more "
@@ -1004,7 +1038,7 @@ msgstr ""
 "<link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/> را ببینید."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:706
+#: xml/release-notes.xml:728
 #, fuzzy
 #| msgid ""
 #| "To report bugs against this release, use the openSUSE Bugzilla. For more "
@@ -1019,7 +1053,7 @@ msgstr ""
 "<link href=\"http://en.opensuse.org/Submitting_Bug_Reports\"/> را ببینید."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:713
+#: xml/release-notes.xml:735
 #, fuzzy
 #| msgid "Copyright © <?dbtimestamp format=\"Y\" ?> SUSE LLC"
 msgid "Copyright © SUSE LLC"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-23 23:00+0200\n"
+"POT-Creation-Date: 2020-06-26 23:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -417,158 +417,173 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:462
-msgid "<package>lua51-luajit</package>: Replaced by <package>moonjit</package>."
+msgid "<package>lilo</package>: Has been obsolete for a decade, replaced by <package>grub2</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:468
+msgid "<package>lua51-luajit</package>: Replaced by <package>moonjit</package>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:474
 msgid "<package>mp3gain</package> and <package>wxmp3gain</package>: The package <package>mp3gain</package> was removed because it has a security issue and is no longer maintained upstream. The package <package>wxmp3gain</package> depended on <package>mp3gain</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:476
+#: xml/release-notes.xml:482
 msgid "<package>nodejs8</package>: Replaced by <package>nodejs10</package> and <package>nodejs12</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:483
+#: xml/release-notes.xml:489
 msgid "<package>python-django_compressor</package>: Replaced by <package>python-django-compressor</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:489
+#: xml/release-notes.xml:495
 msgid "<package>python-pep8</package>: Replaced by <package>python-pycodestyle</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:495
+#: xml/release-notes.xml:501
 msgid "<package>python-pyside</package> and <package>python-pyside-tools</package>: Removed because it depends on the insecure <command>libqt4</command>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:502
+#: xml/release-notes.xml:508
 msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:507
+#: xml/release-notes.xml:513
 msgid "<package>slapi-nis</package>: Removed because this module is not maintained outside of FreeIPA environments, and we do not ship FreeIPA."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:513
+#: xml/release-notes.xml:519
 msgid "<package>tomahawk</package>: Removed because the package is no longer maintained upstream."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:519
+#: xml/release-notes.xml:525
 msgid "<package>vokoscreen</package>: Replaced by <package>vokoscreenNG</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:525
+#: xml/release-notes.xml:531
 msgid "<package>bareftp</package>, <package>docky</package>, <package>fsharp</package>, <package>gnome-desktop-sharp2</package>, <package>gnome-sharp2</package>, <package>mono-debugger</package>, <package>mono-upnp</package>, <package>pdfmod</package>, and <package>taglib-sharp</package>: Removed because the packages do not work with Mono 6.x."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:541
+#: xml/release-notes.xml:547
 msgid "Drivers and Hardware"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:546
+#: xml/release-notes.xml:552
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:547
-msgid "When UEFI Secure Boot is enabled, openSUSE Leap 15.2 now enables a kernel module signature check for third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). Importantly, this affects NVIDIA or AMD graphics drivers from the manufacturer's repositories. The signature check has the following behavior:"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:557
-msgid "Kernel modules that are signed but fail the check will be blocked."
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:562
-msgid "Kernel modules that are not signed will be treated as being <quote>tainted</quote> and will result in a warning message, but they will function."
+#: xml/release-notes.xml:553
+msgid "openSUSE Leap 15.2 now enables a kernel module signature check for third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important security measure to avoid untrusted code running in the kernel."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:569
-msgid "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_drivers\"/>."
+#: xml/release-notes.xml:559
+msgid "This may prevent third-party kernel modules from being loaded if UEFI Secure Boot is enabled. Importantly, this affects NVIDIA or AMD graphics drivers from the manufacturer's repositories. Kernel Module Packages (KMPs) from the official openSUSE repositories are not affected, because the modules they contain are signed with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
 
-#. (itstool) path: sect1/title
-#: xml/release-notes.xml:578
-msgid "Desktop"
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:570
+msgid "Kernel modules that are signed with a key that is either known as untrusted or cannot be verified against the system's trusted key data base will be blocked."
 msgstr ""
 
-#. (itstool) path: sect1/para
-#: xml/release-notes.xml:579
-msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
-msgstr ""
-
-#. (itstool) path: sect2/title
-#: xml/release-notes.xml:583
-msgid "KDE 4 and Qt 4 are unmaintained"
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:577
+msgid "Kernel modules that are not signed will be treated as being <quote>tainted</quote>. Loading them will result in a warning message, but they will function."
 msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:584
+msgid "It is possible to generate a custom certificate, enroll it into the system's Machine Owner Key (MOK) data base, and sign locally compiled kernel modules with this certificate's key. Modules signed in this manner will neither be blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:591
+msgid "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_drivers\"/>."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:600
+msgid "Desktop"
+msgstr ""
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:601
+msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:605
+msgid "KDE 4 and Qt 4 are unmaintained"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:606
 msgid "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt 4 packages for compatibility reasons. However these packages will no longer receive updates and security fixes. Therefore it is strongly recommended to replace all installed KDE 4 and Qt 4 packages with packages from Plasma 5 and Qt 5 providing the same or at least similar functionalities."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:670
+#: xml/release-notes.xml:692
 msgid "More Information and Feedback"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:673
+#: xml/release-notes.xml:695
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:678
+#: xml/release-notes.xml:700
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr ""
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:682
+#: xml/release-notes.xml:704
 #, no-wrap
 msgid ""
 "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:683
+#: xml/release-notes.xml:705
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:688
+#: xml/release-notes.xml:710
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:694
+#: xml/release-notes.xml:716
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:700
+#: xml/release-notes.xml:722
 msgid "For additional or updated documentation, see <link xlink:href=\"https://doc.opensuse.org/\"/>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:706
+#: xml/release-notes.xml:728
 msgid "For the latest product news, from openSUSE, visit <link xlink:href=\"https://www.opensuse.org\"/>."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:713
+#: xml/release-notes.xml:735
 msgid "Copyright © SUSE LLC"
 msgstr ""
 
