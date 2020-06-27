@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2020-06-26 23:33+0200\n"
-"PO-Revision-Date: 2020-06-25 04:50+0000\n"
+"PO-Revision-Date: 2020-06-29 07:57+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_2/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_2/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -784,13 +784,12 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:462
-#, fuzzy
-#| msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
 msgid ""
 "<package>lilo</package>: Has been obsolete for a decade, replaced by "
 "<package>grub2</package>."
 msgstr ""
-"<package>qgo</package>: <package>q5go</package> に置き換えられています。"
+"<package>lilo</package>: 10 年以上にわたって廃止予定とされてきたもので、現在は "
+"<package>grub2</package> に置き換えられています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:468
@@ -910,23 +909,14 @@ msgstr "Secure Boot: サードパーティ製のドライバに対する署名�
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:553
-#, fuzzy
-#| msgid ""
-#| "When UEFI Secure Boot is enabled, openSUSE Leap 15.2 now enables a kernel "
-#| "module signature check for third-party drivers "
-#| "(<literal>CONFIG_MODULE_SIG=y</literal>). Importantly, this affects "
-#| "NVIDIA or AMD graphics drivers from the manufacturer's repositories. The "
-#| "signature check has the following behavior:"
 msgid ""
 "openSUSE Leap 15.2 now enables a kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
 "security measure to avoid untrusted code running in the kernel."
 msgstr ""
-"UEFI Secure Boot が有効化されている場合、 openSUSE Leap 15.2 ではカーネルモ"
-"ジュールに対して署名のチェックを行なうようになっています "
-"(<literal>CONFIG_MODULE_SIG=y</literal>) 。特に NVIDIA 社や AMD 社が提供する"
-"リポジトリからドライバをインストールする場合は注意してください。なお、署名の"
-"チェックは下記のような動作をします:"
+"openSUSE Leap 15.2 ではサードパーティ製のドライバに対するカーネルモジュールの署名チェックを行なうようになっています "
+"(<literal>CONFIG_MODULE_SIG=y</literal>) "
+"。これはカーネル内で不正なコードを実行しないようにするための重要なセキュリティ設定です。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
@@ -938,6 +928,10 @@ msgid ""
 "contain are signed with the openSUSE key. The signature check has the "
 "following behavior:"
 msgstr ""
+"UEFI Secure Boot が有効化されている場合、これによってサードパーティ製のカーネルモジュールを読み込めなくなってしまうことがあります。特に "
+"NVIDIA 社や AMD 社が自社のリポジトリ内で提供する、グラフィックカード向けのドライバがそれに該当します。公式の openSUSE "
+"リポジトリ内にあるカーネルモジュールパッケージ (KMP) については、 openSUSE "
+"の鍵による署名が付与されていることから、問題なく動作します。なお、署名チェックは下記のように動作します:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:570
@@ -945,22 +939,17 @@ msgid ""
 "Kernel modules that are signed with a key that is either known as untrusted "
 "or cannot be verified against the system's trusted key data base will be "
 "blocked."
-msgstr ""
+msgstr "カーネルモジュールが未知の鍵で署名されている場合や、システム側で信頼するもの以外の鍵で署名されている場合は、読み込みが失敗します。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:577
-#, fuzzy
-#| msgid ""
-#| "Kernel modules that are not signed will be treated as being "
-#| "<quote>tainted</quote> and will result in a warning message, but they "
-#| "will function."
 msgid ""
 "Kernel modules that are not signed will be treated as being <quote>tainted</"
 "quote>. Loading them will result in a warning message, but they will "
 "function."
 msgstr ""
-"署名されていないカーネルモジュールの場合は <quote>tainted</quote> (汚染) 扱い"
-"として処理され、警告メッセージが表示されますが、そのまま動作します。"
+"署名されていないカーネルモジュールの場合は <quote>tainted</quote> (汚染) "
+"扱いとして処理されます。警告メッセージが表示されますが、そのまま動作します。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:584
@@ -971,6 +960,10 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
+"独自の証明書を作成してシステムの所有者鍵 (Machine Owner Key (MOK)) データベースにそれを取り込み、かつその証明書を利用してカーネ"
+"ルモジュールに署名を行なうことで回避することも可能です。この方法で署名されたカーネルモジュールは問題なく読み込むことができるほか、警告を表示するようなこと"
+"もありません。詳しくは <link xlink:href=\"https://ja.opensuse.org/openSUSE:UEFI\"/> "
+"をお読みください。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:591
