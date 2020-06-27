@@ -3,10 +3,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2020-06-26 23:33+0200\n"
-"PO-Revision-Date: 2020-06-25 14:03+0000\n"
+"PO-Revision-Date: 2020-06-29 07:57+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
-"Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_2/sk/>\n"
+"Language-Team: Slovak <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_2/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -762,12 +762,12 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:462
-#, fuzzy
-#| msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
 msgid ""
 "<package>lilo</package>: Has been obsolete for a decade, replaced by "
 "<package>grub2</package>."
-msgstr "<package>qgo</package>: Nahradené s <package>q5go</package>."
+msgstr ""
+"<package>lilo</package>: Bol zastaraný už desať rokov, nahradil ho "
+"<package>grub2</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:468
@@ -882,23 +882,15 @@ msgstr "Secure Boot: Ovládače tretích strán musia byť správne podpísané"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:553
-#, fuzzy
-#| msgid ""
-#| "When UEFI Secure Boot is enabled, openSUSE Leap 15.2 now enables a kernel "
-#| "module signature check for third-party drivers "
-#| "(<literal>CONFIG_MODULE_SIG=y</literal>). Importantly, this affects "
-#| "NVIDIA or AMD graphics drivers from the manufacturer's repositories. The "
-#| "signature check has the following behavior:"
 msgid ""
 "openSUSE Leap 15.2 now enables a kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
 "security measure to avoid untrusted code running in the kernel."
 msgstr ""
-"Ak je povolený UEFI Secure Boot, openSUSE Leap 15.2 teraz umožňuje kontrolu "
-"podpisov modulov jadra pre ovládače tretích strán "
-"(<literal>CONFIG_MODULE_SIG=y</literal>). Dôležité je, že to ovplyvňuje "
-"grafické ovládače NVIDIA alebo AMD z repozitárov výrobcov. Kontrola podpisu "
-"má nasledujúce správanie:"
+"openSUSE Leap 15.2 teraz umožňuje kontrolu podpisov modulov jadra pre "
+"ovládače tretích strán (<literal>CONFIG_MODULE_SIG=y</literal>). Toto je "
+"dôležité bezpečnostné opatrenie, aby sa zabránilo spusteniu nedôveryhodného "
+"kódu v jadre."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
@@ -910,6 +902,12 @@ msgid ""
 "contain are signed with the openSUSE key. The signature check has the "
 "following behavior:"
 msgstr ""
+"Ak je povolený UEFI Secure Boot, môže to zabrániť načítaniu modulov jadra "
+"tretích strán. Dôležité je, že to ovplyvňuje grafické ovládače NVIDIA alebo "
+"AMD z repozitárov výrobcov. Balíky modulov jadra (Kernel Module Packages, "
+"KMPs) z oficiálnych repozitárov openSUSE nie sú ovplyvnené, pretože moduly, "
+"ktoré obsahujú, sú podpísané kľúčom openSUSE. Kontrola podpisu má "
+"nasledujúce správanie:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:570
@@ -918,21 +916,20 @@ msgid ""
 "or cannot be verified against the system's trusted key data base will be "
 "blocked."
 msgstr ""
+"Moduly jadra, ktoré sú podpísané kľúčom, ktorý je buď známy ako "
+"nedôveryhodný, alebo ho nemožno overiť na základe systémovej databázy "
+"dôveryhodných kľúčov, budú zablokované."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:577
-#, fuzzy
-#| msgid ""
-#| "Kernel modules that are not signed will be treated as being "
-#| "<quote>tainted</quote> and will result in a warning message, but they "
-#| "will function."
 msgid ""
 "Kernel modules that are not signed will be treated as being <quote>tainted</"
 "quote>. Loading them will result in a warning message, but they will "
 "function."
 msgstr ""
 "S modulmi jadra, ktoré nie sú podpísané, sa bude zaobchádzať ako s "
-"<quote>kazovými</quote> a výsledkom bude varovná správa, ale budú fungovať."
+"<quote>kazovými</quote>. Ich načítanie bude mať za následok varovnú správu, "
+"ale budú fungovať."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:584
@@ -943,6 +940,11 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
+"Je možné vygenerovať vlastný certifikát, zaregistrovať ho do systémovej "
+"databázy Machine Owner Key (MOK) a podpísať lokálne skompilované moduly "
+"jadra s týmto certifikačným kľúčom. Moduly podpísané týmto spôsobom nebudú "
+"zablokované ani nevyvolajú varovania. Pozrite si <link xlink:href=\""
+"https://en.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:591
