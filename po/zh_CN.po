@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2020-06-26 23:33+0200\n"
-"PO-Revision-Date: 2020-06-26 21:26+0000\n"
+"PO-Revision-Date: 2020-06-30 01:49+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
-"notes-opensuse/leap-15_2/zh_CN/>\n"
+"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_2/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -711,12 +711,10 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:462
-#, fuzzy
-#| msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
 msgid ""
 "<package>lilo</package>: Has been obsolete for a decade, replaced by "
 "<package>grub2</package>."
-msgstr "<package>qgo</package>：被替换为 <package>q5go</package>。"
+msgstr "<package>lilo</package>：已废弃十年，替换为 <package>grub2</package>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:468
@@ -827,21 +825,13 @@ msgstr "安全引导：第三方驱动需要正确签名"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:553
-#, fuzzy
-#| msgid ""
-#| "When UEFI Secure Boot is enabled, openSUSE Leap 15.2 now enables a kernel "
-#| "module signature check for third-party drivers "
-#| "(<literal>CONFIG_MODULE_SIG=y</literal>). Importantly, this affects "
-#| "NVIDIA or AMD graphics drivers from the manufacturer's repositories. The "
-#| "signature check has the following behavior:"
 msgid ""
 "openSUSE Leap 15.2 now enables a kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
 "security measure to avoid untrusted code running in the kernel."
 msgstr ""
-"当启用 UEFI 安全引导，openSUSE Leap 15.2 现在会启用对第三方驱动的内核签名检查"
-"（<literal>CONFIG_MODULE_SIG=y</literal>）。重要的是，这将影响 NVIDIA 和 AMD "
-"厂商仓库的显卡驱动。签名检查将表现为以下行为："
+"openSUSE Leap 15.2 现在会启用对第三方驱动的内核签名检查（<literal>CONFIG_MODULE_SIG=y</literal>）"
+"。这是个安全措施，避免在内核中运行了未信任的代码。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
@@ -853,6 +843,8 @@ msgid ""
 "contain are signed with the openSUSE key. The signature check has the "
 "following behavior:"
 msgstr ""
+"如果启用了 UEFI 安全引导，这可能会阻止到第三方内核模块的加载。重要的是，这也会影响 NVIDIA 或者 AMD 厂商软件仓库的显卡驱动。来自 "
+"openSUSE 官方仓库的内核模块软件包（KMP）则不受影响，因为仓库内的模块已用 openSUSE 密钥签名过。签名检查表现为以下行为："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:570
@@ -860,18 +852,15 @@ msgid ""
 "Kernel modules that are signed with a key that is either known as untrusted "
 "or cannot be verified against the system's trusted key data base will be "
 "blocked."
-msgstr ""
+msgstr "不受信任或未被系统可信密钥数据库验证过的密钥所签名的内核模块，将被屏蔽。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:577
-#, fuzzy
 msgid ""
 "Kernel modules that are not signed will be treated as being <quote>tainted</"
 "quote>. Loading them will result in a warning message, but they will "
 "function."
-msgstr ""
-"未签名的内核模块将视为 <quote>污染</quote> 然后产生警告消息，但它们的功能仍会"
-"生效。"
+msgstr "未签名的内核模块将视为 <quote>受污染</quote> 然后产生警告消息，但它们的功能仍会生效。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:584
@@ -882,6 +871,8 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
+"可以生成自定义证书，注册进系统的机器所有者密钥（MOK）数据库，然后用这个证书密钥签名本地编译的内核模块。使用此方法签名的模块既不会被屏蔽也不会引起警告。"
+"详情查看 <link xlink:href=\"https://zh.opensuse.org/openSUSE:UEFI\"/>。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:591
