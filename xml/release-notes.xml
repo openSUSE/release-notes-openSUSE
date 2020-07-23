@@ -559,25 +559,16 @@
    <para>
     This may prevent third-party
     kernel modules from being loaded if UEFI Secure Boot is enabled.
-    Importantly, this affects NVIDIA or AMD graphics drivers from the
-    manufacturer's repositories. Kernel Module Packages (KMPs) from
-    the official &osuse; repositories are not affected, because the
-    modules they contain are signed with the openSUSE key.
-    The signature check has the following behavior:
+    Kernel Module Packages (KMPs) from the official &osuse; repositories
+    are not affected, because the modules they contain are signed with
+    the openSUSE key. The signature check has the following behavior:
    </para>
    <itemizedlist>
     <listitem>
      <para>
-      Kernel modules that are signed with a key that is either known as
-      untrusted or cannot be verified against the system's trusted key data
-      base will be blocked.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      Kernel modules that are not signed will be treated as being
-      <quote>tainted</quote>. Loading them will result in a warning message,
-      but they will function.
+      Kernel modules that are unsigned or signed with a key that is either
+      known as untrusted or cannot be verified against the system's trusted
+      key data base will be blocked.
      </para>
     </listitem>
    </itemizedlist>
@@ -589,8 +580,10 @@
      See <link xlink:href="https://en.opensuse.org/openSUSE:UEFI"/>.
    </para>
    <para>
-    For more information, see
-    <link xlink:href="https://en.opensuse.org/SDB:NVIDIA_drivers"/>.
+     Since this affects also NVIDIA graphics we addressed this in our
+     official packages for openSUSE. You still need to enroll a new MOK
+     key after installation though. For more information, see
+    <link xlink:href="https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot"/>.
    </para>
   </sect2>
 
