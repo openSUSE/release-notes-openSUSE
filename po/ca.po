@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2020-06-26 23:33+0200\n"
+"POT-Creation-Date: 2020-07-23 14:50+0200\n"
 "PO-Revision-Date: 2020-06-30 01:49+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_2/ca/>\n"
+"Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_2/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -652,8 +652,8 @@ msgid ""
 "See <link xlink:href=\"https://www.gcompris.net\"/>."
 msgstr ""
 "<package>gcompris</package> (old GTK version): s'ha suprimit perquè no té "
-"manteniment i s'ha reemplaçat ara per <package>gcompris-qt</package>. Vegeu <"
-"link xlink:href=\"https://www.gcompris.net\"/>."
+"manteniment i s'ha reemplaçat ara per <package>gcompris-qt</package>. Vegeu "
+"<link xlink:href=\"https://www.gcompris.net\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:380
@@ -877,11 +877,11 @@ msgid ""
 "<package>pdfmod</package>, and <package>taglib-sharp</package>: Removed "
 "because the packages do not work with Mono 6.x."
 msgstr ""
-"<package>bareftp</package>, <package>docky</package>, "
-"<package>fsharp</package>, <package>gnome-desktop-sharp2</package>, <package"
-">gnome-sharp2</package>, <package>mono-debugger</package>, <package>mono-"
-"upnp</package>, <package>pdfmod</package> i <package>taglib-sharp</package>: "
-"s'han suprimit perquè no funcionen amb Mono 6.x."
+"<package>bareftp</package>, <package>docky</package>, <package>fsharp</"
+"package>, <package>gnome-desktop-sharp2</package>, <package>gnome-sharp2</"
+"package>, <package>mono-debugger</package>, <package>mono-upnp</package>, "
+"<package>pdfmod</package> i <package>taglib-sharp</package>: s'han suprimit "
+"perquè no funcionen amb Mono 6.x."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:547
@@ -903,19 +903,25 @@ msgid ""
 "security measure to avoid untrusted code running in the kernel."
 msgstr ""
 "L'openSUSE Leap 15.2 ara habilita una comprovació de signatura dels mòduls "
-"del nucli per als controladors de tercers "
-"(<literal>CONFIG_MODULE_SIG=y</literal>). És una mesura de seguretat "
-"important per evitar que s’executi codi que no sigui de confiança al nucli."
+"del nucli per als controladors de tercers (<literal>CONFIG_MODULE_SIG=y</"
+"literal>). És una mesura de seguretat important per evitar que s’executi "
+"codi que no sigui de confiança al nucli."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
+#, fuzzy
+#| msgid ""
+#| "This may prevent third-party kernel modules from being loaded if UEFI "
+#| "Secure Boot is enabled. Importantly, this affects NVIDIA or AMD graphics "
+#| "drivers from the manufacturer's repositories. Kernel Module Packages "
+#| "(KMPs) from the official openSUSE repositories are not affected, because "
+#| "the modules they contain are signed with the openSUSE key. The signature "
+#| "check has the following behavior:"
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
-"Boot is enabled. Importantly, this affects NVIDIA or AMD graphics drivers "
-"from the manufacturer's repositories. Kernel Module Packages (KMPs) from the "
-"official openSUSE repositories are not affected, because the modules they "
-"contain are signed with the openSUSE key. The signature check has the "
-"following behavior:"
+"Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
+"repositories are not affected, because the modules they contain are signed "
+"with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
 "Això pot evitar que es carreguin mòduls del nucli de tercers si està "
 "activada l'arrencada segura d'UEFI. És important destacar que això afecta "
@@ -925,29 +931,23 @@ msgstr ""
 "d'openSUSE. El control de signatura té el comportament següent:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:570
+#: xml/release-notes.xml:568
+#, fuzzy
+#| msgid ""
+#| "Kernel modules that are signed with a key that is either known as "
+#| "untrusted or cannot be verified against the system's trusted key data "
+#| "base will be blocked."
 msgid ""
-"Kernel modules that are signed with a key that is either known as untrusted "
-"or cannot be verified against the system's trusted key data base will be "
-"blocked."
+"Kernel modules that are unsigned or signed with a key that is either known "
+"as untrusted or cannot be verified against the system's trusted key data "
+"base will be blocked."
 msgstr ""
 "Es blocaran els mòduls del nucli signats amb una clau coneguda com no "
 "confiable o que no es pugui verificar amb la base de dades de claus de "
 "confiança del sistema."
 
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:577
-msgid ""
-"Kernel modules that are not signed will be treated as being <quote>tainted</"
-"quote>. Loading them will result in a warning message, but they will "
-"function."
-msgstr ""
-"Els mòduls del nucli que no estiguin signats es tractaran com a "
-"<quote>adulterats</quote>. Carregar-los resultarà en un missatge d'avís, "
-"però funcionaran."
-
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:584
+#: xml/release-notes.xml:575
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -962,33 +962,34 @@ msgstr ""
 "xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:591
+#: xml/release-notes.xml:582
 msgid ""
-"For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
-"NVIDIA_drivers\"/>."
+"Since this also affects NVIDIA graphics drivers, we addressed this in our "
+"official packages for openSUSE. However, you need to manually enroll a new "
+"MOK key after installation to make the new packages work. For instructions "
+"how to install the drivers and enroll the MOK key, see <link xlink:href="
+"\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
-"Per a més informació, vegeu <link xlink:href=\"https://en.opensuse.org/SDB:"
-"NVIDIA_drivers\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:594
 msgid "Desktop"
 msgstr "Escriptori"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:601
+#: xml/release-notes.xml:595
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr ""
 "Aquesta secció llista problemes de l'escriptori i canvis a l'openSUSE Leap "
 "15.2."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:605
+#: xml/release-notes.xml:599
 msgid "KDE 4 and Qt 4 are unmaintained"
 msgstr "El KDE 4 i Qt 4 no tenen manteniment"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:606
+#: xml/release-notes.xml:600
 msgid ""
 "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and "
 "Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt "
@@ -1005,17 +1006,17 @@ msgstr ""
 "i Qt 5 amb les mateixes funcions o, almenys, funcions similars."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:692
+#: xml/release-notes.xml:686
 msgid "More Information and Feedback"
 msgstr "Més informació i informació de retorn"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:695
+#: xml/release-notes.xml:689
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Llegiu els documents <filename>README</filename> del mitjà."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:700
+#: xml/release-notes.xml:694
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1024,19 +1025,19 @@ msgstr ""
 "respecte del seu RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:704
+#: xml/release-notes.xml:698
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NOMDELFITXER</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:705
+#: xml/release-notes.xml:699
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Reemplaceu <replaceable>NOMDELFITXER</replaceable> amb el nom de l'RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:710
+#: xml/release-notes.xml:704
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1046,7 +1047,7 @@ msgstr ""
 "actualitzats."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:716
+#: xml/release-notes.xml:710
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1054,7 +1055,7 @@ msgstr ""
 "Trobeu més informació dins del directori <filename>docu</filename> del mitjà."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:722
+#: xml/release-notes.xml:716
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1063,7 +1064,7 @@ msgstr ""
 "href=\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:728
+#: xml/release-notes.xml:722
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1072,9 +1073,25 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:735
+#: xml/release-notes.xml:729
 msgid "Copyright © SUSE LLC"
 msgstr "Dret de còpia © SUSE LLC"
+
+#~ msgid ""
+#~ "Kernel modules that are not signed will be treated as being "
+#~ "<quote>tainted</quote>. Loading them will result in a warning message, "
+#~ "but they will function."
+#~ msgstr ""
+#~ "Els mòduls del nucli que no estiguin signats es tractaran com a "
+#~ "<quote>adulterats</quote>. Carregar-los resultarà en un missatge d'avís, "
+#~ "però funcionaran."
+
+#~ msgid ""
+#~ "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
+#~ "NVIDIA_drivers\"/>."
+#~ msgstr ""
+#~ "Per a més informació, vegeu <link xlink:href=\"https://en.opensuse.org/"
+#~ "SDB:NVIDIA_drivers\"/>."
 
 #~ msgid "15.1"
 #~ msgstr "15.1"

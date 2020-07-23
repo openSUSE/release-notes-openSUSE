@@ -6,11 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
-"POT-Creation-Date: 2020-06-26 23:33+0200\n"
+"POT-Creation-Date: 2020-07-23 14:50+0200\n"
 "PO-Revision-Date: 2020-06-29 07:57+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_2/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_2/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -788,8 +788,8 @@ msgid ""
 "<package>lilo</package>: Has been obsolete for a decade, replaced by "
 "<package>grub2</package>."
 msgstr ""
-"<package>lilo</package>: 10 年以上にわたって廃止予定とされてきたもので、現在は "
-"<package>grub2</package> に置き換えられています。"
+"<package>lilo</package>: 10 年以上にわたって廃止予定とされてきたもので、現在"
+"は <package>grub2</package> に置き換えられています。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:468
@@ -914,45 +914,51 @@ msgid ""
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
 "security measure to avoid untrusted code running in the kernel."
 msgstr ""
-"openSUSE Leap 15.2 ではサードパーティ製のドライバに対するカーネルモジュールの署名チェックを行なうようになっています "
-"(<literal>CONFIG_MODULE_SIG=y</literal>) "
-"。これはカーネル内で不正なコードを実行しないようにするための重要なセキュリティ設定です。"
+"openSUSE Leap 15.2 ではサードパーティ製のドライバに対するカーネルモジュールの"
+"署名チェックを行なうようになっています (<literal>CONFIG_MODULE_SIG=y</"
+"literal>) 。これはカーネル内で不正なコードを実行しないようにするための重要な"
+"セキュリティ設定です。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
+#, fuzzy
+#| msgid ""
+#| "This may prevent third-party kernel modules from being loaded if UEFI "
+#| "Secure Boot is enabled. Importantly, this affects NVIDIA or AMD graphics "
+#| "drivers from the manufacturer's repositories. Kernel Module Packages "
+#| "(KMPs) from the official openSUSE repositories are not affected, because "
+#| "the modules they contain are signed with the openSUSE key. The signature "
+#| "check has the following behavior:"
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
-"Boot is enabled. Importantly, this affects NVIDIA or AMD graphics drivers "
-"from the manufacturer's repositories. Kernel Module Packages (KMPs) from the "
-"official openSUSE repositories are not affected, because the modules they "
-"contain are signed with the openSUSE key. The signature check has the "
-"following behavior:"
+"Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
+"repositories are not affected, because the modules they contain are signed "
+"with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
-"UEFI Secure Boot が有効化されている場合、これによってサードパーティ製のカーネルモジュールを読み込めなくなってしまうことがあります。特に "
-"NVIDIA 社や AMD 社が自社のリポジトリ内で提供する、グラフィックカード向けのドライバがそれに該当します。公式の openSUSE "
-"リポジトリ内にあるカーネルモジュールパッケージ (KMP) については、 openSUSE "
-"の鍵による署名が付与されていることから、問題なく動作します。なお、署名チェックは下記のように動作します:"
+"UEFI Secure Boot が有効化されている場合、これによってサードパーティ製のカーネ"
+"ルモジュールを読み込めなくなってしまうことがあります。特に NVIDIA 社や AMD 社"
+"が自社のリポジトリ内で提供する、グラフィックカード向けのドライバがそれに該当"
+"します。公式の openSUSE リポジトリ内にあるカーネルモジュールパッケージ (KMP) "
+"については、 openSUSE の鍵による署名が付与されていることから、問題なく動作し"
+"ます。なお、署名チェックは下記のように動作します:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:570
+#: xml/release-notes.xml:568
+#, fuzzy
+#| msgid ""
+#| "Kernel modules that are signed with a key that is either known as "
+#| "untrusted or cannot be verified against the system's trusted key data "
+#| "base will be blocked."
 msgid ""
-"Kernel modules that are signed with a key that is either known as untrusted "
-"or cannot be verified against the system's trusted key data base will be "
-"blocked."
-msgstr "カーネルモジュールが未知の鍵で署名されている場合や、システム側で信頼するもの以外の鍵で署名されている場合は、読み込みが失敗します。"
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:577
-msgid ""
-"Kernel modules that are not signed will be treated as being <quote>tainted</"
-"quote>. Loading them will result in a warning message, but they will "
-"function."
+"Kernel modules that are unsigned or signed with a key that is either known "
+"as untrusted or cannot be verified against the system's trusted key data "
+"base will be blocked."
 msgstr ""
-"署名されていないカーネルモジュールの場合は <quote>tainted</quote> (汚染) "
-"扱いとして処理されます。警告メッセージが表示されますが、そのまま動作します。"
+"カーネルモジュールが未知の鍵で署名されている場合や、システム側で信頼するもの"
+"以外の鍵で署名されている場合は、読み込みが失敗します。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:584
+#: xml/release-notes.xml:575
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -960,39 +966,42 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
-"独自の証明書を作成してシステムの所有者鍵 (Machine Owner Key (MOK)) データベースにそれを取り込み、かつその証明書を利用してカーネ"
-"ルモジュールに署名を行なうことで回避することも可能です。この方法で署名されたカーネルモジュールは問題なく読み込むことができるほか、警告を表示するようなこと"
-"もありません。詳しくは <link xlink:href=\"https://ja.opensuse.org/openSUSE:UEFI\"/> "
-"をお読みください。"
+"独自の証明書を作成してシステムの所有者鍵 (Machine Owner Key (MOK)) データベー"
+"スにそれを取り込み、かつその証明書を利用してカーネルモジュールに署名を行なう"
+"ことで回避することも可能です。この方法で署名されたカーネルモジュールは問題な"
+"く読み込むことができるほか、警告を表示するようなこともありません。詳しくは "
+"<link xlink:href=\"https://ja.opensuse.org/openSUSE:UEFI\"/> をお読みくださ"
+"い。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:591
+#: xml/release-notes.xml:582
 msgid ""
-"For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
-"NVIDIA_drivers\"/>."
+"Since this also affects NVIDIA graphics drivers, we addressed this in our "
+"official packages for openSUSE. However, you need to manually enroll a new "
+"MOK key after installation to make the new packages work. For instructions "
+"how to install the drivers and enroll the MOK key, see <link xlink:href="
+"\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
-"詳しくは <link xlink:href=\"https://ja.opensuse.org/SDB:NVIDIA_drivers\"/> を"
-"お読みください。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:594
 msgid "Desktop"
 msgstr "デスクトップについて"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:601
+#: xml/release-notes.xml:595
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr ""
 "本章では、 openSUSE Leap 15.2 のデスクトップ関連の問題や変更点を説明していま"
 "す。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:605
+#: xml/release-notes.xml:599
 msgid "KDE 4 and Qt 4 are unmaintained"
 msgstr "KDE 4 および Qt 4 のメンテナンス終了について"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:606
+#: xml/release-notes.xml:600
 msgid ""
 "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and "
 "Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt "
@@ -1009,17 +1018,17 @@ msgstr ""
 "ケージや、類似の機能を持つパッケージへの移行を強くお勧めします。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:692
+#: xml/release-notes.xml:686
 msgid "More Information and Feedback"
 msgstr "さらに詳しい情報とフィードバック"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:695
+#: xml/release-notes.xml:689
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "まずはメディア内の <filename>README</filename> 文書をお読みください。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:700
+#: xml/release-notes.xml:694
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1028,20 +1037,20 @@ msgstr ""
 "下記のコマンドを実行します:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:704
+#: xml/release-notes.xml:698
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:705
+#: xml/release-notes.xml:699
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "<replaceable>ファイル名</replaceable> の箇所を RPM の名前に置き換えてお使いく"
 "ださい。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:710
+#: xml/release-notes.xml:704
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1051,7 +1060,7 @@ msgstr ""
 "並んでいます。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:716
+#: xml/release-notes.xml:710
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1060,7 +1069,7 @@ msgstr ""
 "い情報があります。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:722
+#: xml/release-notes.xml:716
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1069,7 +1078,7 @@ msgstr ""
 "場合は、 <link xlink:href=\"https://doc.opensuse.org/\"/> をご覧ください。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:728
+#: xml/release-notes.xml:722
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1078,9 +1087,25 @@ msgstr ""
 "\"https://www.opensuse.org\"/> をご覧ください。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:735
+#: xml/release-notes.xml:729
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
+
+#~ msgid ""
+#~ "Kernel modules that are not signed will be treated as being "
+#~ "<quote>tainted</quote>. Loading them will result in a warning message, "
+#~ "but they will function."
+#~ msgstr ""
+#~ "署名されていないカーネルモジュールの場合は <quote>tainted</quote> (汚染) "
+#~ "扱いとして処理されます。警告メッセージが表示されますが、そのまま動作しま"
+#~ "す。"
+
+#~ msgid ""
+#~ "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
+#~ "NVIDIA_drivers\"/>."
+#~ msgstr ""
+#~ "詳しくは <link xlink:href=\"https://ja.opensuse.org/SDB:NVIDIA_drivers\"/"
+#~ "> をお読みください。"
 
 #~ msgid "Kernel modules that are signed but fail the check will be blocked."
 #~ msgstr ""

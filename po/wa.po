@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES.wa.po_[PqrAXb]\n"
-"POT-Creation-Date: 2020-06-26 23:33+0200\n"
+"POT-Creation-Date: 2020-07-23 14:50+0200\n"
 "PO-Revision-Date: 2009-11-01 15:52+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -733,31 +733,21 @@ msgstr ""
 #: xml/release-notes.xml:559
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
-"Boot is enabled. Importantly, this affects NVIDIA or AMD graphics drivers "
-"from the manufacturer's repositories. Kernel Module Packages (KMPs) from the "
-"official openSUSE repositories are not affected, because the modules they "
-"contain are signed with the openSUSE key. The signature check has the "
-"following behavior:"
+"Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
+"repositories are not affected, because the modules they contain are signed "
+"with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:570
+#: xml/release-notes.xml:568
 msgid ""
-"Kernel modules that are signed with a key that is either known as untrusted "
-"or cannot be verified against the system's trusted key data base will be "
-"blocked."
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:577
-msgid ""
-"Kernel modules that are not signed will be treated as being <quote>tainted</"
-"quote>. Loading them will result in a warning message, but they will "
-"function."
+"Kernel modules that are unsigned or signed with a key that is either known "
+"as untrusted or cannot be verified against the system's trusted key data "
+"base will be blocked."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:584
+#: xml/release-notes.xml:575
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -767,35 +757,32 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:591
-#, fuzzy
-#| msgid ""
-#| "Download the EPUB files from <ulink url=\"http://en.opensuse.org/"
-#| "Documentation\"/>."
+#: xml/release-notes.xml:582
 msgid ""
-"For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
-"NVIDIA_drivers\"/>."
+"Since this also affects NVIDIA graphics drivers, we addressed this in our "
+"official packages for openSUSE. However, you need to manually enroll a new "
+"MOK key after installation to make the new packages work. For instructions "
+"how to install the drivers and enroll the MOK key, see <link xlink:href="
+"\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
-"Aberwetez les fitchîs EPUB di <ulink url=\"http://en.opensuse.org/"
-"Documentation\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:594
 msgid "Desktop"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:601
+#: xml/release-notes.xml:595
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:605
+#: xml/release-notes.xml:599
 msgid "KDE 4 and Qt 4 are unmaintained"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:606
+#: xml/release-notes.xml:600
 msgid ""
 "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and "
 "Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt "
@@ -806,50 +793,50 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:692
+#: xml/release-notes.xml:686
 #, fuzzy
 msgid "More Information and Feedback"
 msgstr "Informåcion sol memwere"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:695
+#: xml/release-notes.xml:689
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:700
+#: xml/release-notes.xml:694
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:704
+#: xml/release-notes.xml:698
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:705
+#: xml/release-notes.xml:699
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:710
+#: xml/release-notes.xml:704
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:716
+#: xml/release-notes.xml:710
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:722
+#: xml/release-notes.xml:716
 #, fuzzy
 #| msgid ""
 #| "Download the EPUB files from <ulink url=\"http://en.opensuse.org/"
@@ -862,7 +849,7 @@ msgstr ""
 "Documentation\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:728
+#: xml/release-notes.xml:722
 #, fuzzy
 #| msgid ""
 #| "Download the EPUB files from <ulink url=\"http://en.opensuse.org/"
@@ -875,10 +862,21 @@ msgstr ""
 "Documentation\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:735
+#: xml/release-notes.xml:729
 #, fuzzy
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © 2009 Novell, Inc."
+
+#, fuzzy
+#~| msgid ""
+#~| "Download the EPUB files from <ulink url=\"http://en.opensuse.org/"
+#~| "Documentation\"/>."
+#~ msgid ""
+#~ "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
+#~ "NVIDIA_drivers\"/>."
+#~ msgstr ""
+#~ "Aberwetez les fitchîs EPUB di <ulink url=\"http://en.opensuse.org/"
+#~ "Documentation\"/>."
 
 #, fuzzy
 #~ msgid "Minimal System Installation"

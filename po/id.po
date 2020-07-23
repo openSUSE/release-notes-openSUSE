@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Indonesian (release-notes-openSUSE)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-26 23:33+0200\n"
+"POT-Creation-Date: 2020-07-23 14:50+0200\n"
 "PO-Revision-Date: 2020-05-07 08:52+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/release-notes-"
@@ -924,31 +924,21 @@ msgstr ""
 #: xml/release-notes.xml:559
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
-"Boot is enabled. Importantly, this affects NVIDIA or AMD graphics drivers "
-"from the manufacturer's repositories. Kernel Module Packages (KMPs) from the "
-"official openSUSE repositories are not affected, because the modules they "
-"contain are signed with the openSUSE key. The signature check has the "
-"following behavior:"
+"Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
+"repositories are not affected, because the modules they contain are signed "
+"with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:570
+#: xml/release-notes.xml:568
 msgid ""
-"Kernel modules that are signed with a key that is either known as untrusted "
-"or cannot be verified against the system's trusted key data base will be "
-"blocked."
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:577
-msgid ""
-"Kernel modules that are not signed will be treated as being <quote>tainted</"
-"quote>. Loading them will result in a warning message, but they will "
-"function."
+"Kernel modules that are unsigned or signed with a key that is either known "
+"as untrusted or cannot be verified against the system's trusted key data "
+"base will be blocked."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:584
+#: xml/release-notes.xml:575
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -958,37 +948,34 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:591
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <link xlink:href=\"https://"
-#| "doc.opensuse.org/\"/>."
+#: xml/release-notes.xml:582
 msgid ""
-"For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
-"NVIDIA_drivers\"/>."
+"Since this also affects NVIDIA graphics drivers, we addressed this in our "
+"official packages for openSUSE. However, you need to manually enroll a new "
+"MOK key after installation to make the new packages work. For instructions "
+"how to install the drivers and enroll the MOK key, see <link xlink:href="
+"\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
-"Untuk dokumentasi tambahan atau terbaru, lihat <link xlink:href=\"https://"
-"doc.opensuse.org/\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:594
 msgid "Desktop"
 msgstr "Desktop"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:601
+#: xml/release-notes.xml:595
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr ""
 "Bagian ini berisi daftar perubahan dan masalah desktop dalam openSUSE Leap "
 "15.2."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:605
+#: xml/release-notes.xml:599
 msgid "KDE 4 and Qt 4 are unmaintained"
 msgstr "KDE 4 dan Qt 4 tidak dipelihara"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:606
+#: xml/release-notes.xml:600
 msgid ""
 "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and "
 "Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt "
@@ -1007,35 +994,35 @@ msgstr ""
 
 # bnc#809347
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:692
+#: xml/release-notes.xml:686
 msgid "More Information and Feedback"
 msgstr "Informasi Lebih Lanjut dan Umpan Balik"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:695
+#: xml/release-notes.xml:689
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Baca dokumen <filename>README</filename> pada media."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:700
+#: xml/release-notes.xml:694
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Melihat informasi perubahan detail tentang paket tertentu dari RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:704
+#: xml/release-notes.xml:698
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NAMABERKAS</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:705
+#: xml/release-notes.xml:699
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Ganti <replaceable>FILENAME</replaceable> dengan nama dari RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:710
+#: xml/release-notes.xml:704
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1045,7 +1032,7 @@ msgstr ""
 "diperbaharui."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:716
+#: xml/release-notes.xml:710
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1054,7 +1041,7 @@ msgstr ""
 "dalam media."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:722
+#: xml/release-notes.xml:716
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1063,7 +1050,7 @@ msgstr ""
 "doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:728
+#: xml/release-notes.xml:722
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1072,9 +1059,20 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:735
+#: xml/release-notes.xml:729
 msgid "Copyright © SUSE LLC"
 msgstr "Hak Cipta © SUSE LLC"
+
+#, fuzzy
+#~| msgid ""
+#~| "For additional or updated documentation, see <link xlink:href=\"https://"
+#~| "doc.opensuse.org/\"/>."
+#~ msgid ""
+#~ "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
+#~ "NVIDIA_drivers\"/>."
+#~ msgstr ""
+#~ "Untuk dokumentasi tambahan atau terbaru, lihat <link xlink:href=\"https://"
+#~ "doc.opensuse.org/\"/>."
 
 #~ msgid "15.1"
 #~ msgstr "15.1"
