@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2020-07-23 14:50+0200\n"
-"PO-Revision-Date: 2020-06-29 07:57+0000\n"
+"PO-Revision-Date: 2020-07-26 08:51+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_2/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_2/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -921,41 +921,24 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
-#, fuzzy
-#| msgid ""
-#| "This may prevent third-party kernel modules from being loaded if UEFI "
-#| "Secure Boot is enabled. Importantly, this affects NVIDIA or AMD graphics "
-#| "drivers from the manufacturer's repositories. Kernel Module Packages "
-#| "(KMPs) from the official openSUSE repositories are not affected, because "
-#| "the modules they contain are signed with the openSUSE key. The signature "
-#| "check has the following behavior:"
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
-"UEFI Secure Boot が有効化されている場合、これによってサードパーティ製のカーネ"
-"ルモジュールを読み込めなくなってしまうことがあります。特に NVIDIA 社や AMD 社"
-"が自社のリポジトリ内で提供する、グラフィックカード向けのドライバがそれに該当"
-"します。公式の openSUSE リポジトリ内にあるカーネルモジュールパッケージ (KMP) "
-"については、 openSUSE の鍵による署名が付与されていることから、問題なく動作し"
-"ます。なお、署名チェックは下記のように動作します:"
+"UEFI Secure Boot が有効化されている場合、これによってサードパーティ製のカーネルモジュールを読み込めなくなってしまうことがあります。"
+"公式の openSUSE リポジトリ内にあるカーネルモジュールパッケージ (KMP) については、 openSUSE "
+"の鍵による署名が付与されていることから、問題なく動作します。なお、署名チェックは下記のように動作します:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:568
-#, fuzzy
-#| msgid ""
-#| "Kernel modules that are signed with a key that is either known as "
-#| "untrusted or cannot be verified against the system's trusted key data "
-#| "base will be blocked."
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
 msgstr ""
-"カーネルモジュールが未知の鍵で署名されている場合や、システム側で信頼するもの"
-"以外の鍵で署名されている場合は、読み込みが失敗します。"
+"カーネルモジュールが未署名の場合や未知の鍵で署名されている場合、もしくはシステム側で信頼する鍵以外で署名されている場合は、読み込みが失敗します。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:575
@@ -982,6 +965,10 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:href="
 "\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"この問題は NVIDIA 社のグラフィックカード向けドライバでも発生するため、 openSUSE "
+"では公式のパッケージとして提供することで解決しています。ただし、新しいパッケージを動作させるには、新しい MOK "
+"鍵を登録する必要があることに注意してください。ドライバのインストール方法と MOK 鍵の登録方法について、詳しくは <link xlink:href=\""
+"https://ja.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/> をお読みください。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:594
