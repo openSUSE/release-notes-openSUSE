@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2020-07-23 14:50+0200\n"
-"PO-Revision-Date: 2020-10-08 20:48+0000\n"
+"PO-Revision-Date: 2020-10-09 20:01+0000\n"
 "Last-Translator: Andrés Barrantes Silman <andresbs2000@protonmail.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_2/es/>\n"
@@ -139,9 +139,9 @@ msgid ""
 "previous release notes listed here: <link xlink:href=\"https://en.opensuse."
 "org/openSUSE:Release_Notes\"/>."
 msgstr ""
-"Si actualiza desde una versión previa a ésta de openSUSE Leap, vea las notas "
-"de las versiones anteriores listadas a continuación: <link xlink:href="
-"\"https://en.opensuse.org/openSUSE:Release_Notes\"/>."
+"Si actualiza desde una versión previa de openSUSE Leap, véase las notas de "
+"lanzamiento anteriores en <link xlink:href=\"https://en.opensuse.org/"
+"openSUSE:Release_Notes\"/>."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:64
@@ -177,9 +177,9 @@ msgid ""
 "information, see <link xlink:href=\"https://en.opensuse.org/"
 "Submitting_Bug_Reports\"/>."
 msgstr ""
-"Para informe de errores en esta versión, utilice el Bugzilla de openSUSE. "
-"Para más información, vea <link xlink:href=\"https://en.opensuse.org/"
-"Submitting_Bug_Reports\"/>."
+"Para informar errores en esta versión, utilice el Bugzilla de openSUSE. "
+"Véase <link xlink:href=\"https://en.opensuse.org/Submitting_Bug_Reports\"/> "
+"(inglés)."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:81
@@ -691,17 +691,14 @@ msgstr "<package>H2rename</package>: Eliminado por falta de mantenimiento."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:396
-#, fuzzy
-#| msgid ""
-#| "<package>keepassx</package> and <package>kpassgen</package>: Replaced by "
-#| "<package>keepassxc</package>."
 msgid ""
 "<package>ixpdimm_sw</package>, <package>invm-cim</package>, <package>invm-"
 "cli</package>, and <package>invm-i18n</package>: Replaced by "
 "<package>ipmctl</package>."
 msgstr ""
-"<package>keepassx</package> y <package>kpassgen</package>: Sustituidos por "
-"<package>keepassxc</package>."
+"<package>ixpdimm_sw</package>, <package>invm-cim</package>, <package>invm-"
+"cli</package>, y <package>invm-i18n</package>: reemplazados por "
+"<package>ipmctl</package>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:403
@@ -886,13 +883,6 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:531
-#, fuzzy
-#| msgid ""
-#| "<package>kaccessible</package>, <package>kepas</package>, "
-#| "<package>konsole4</package>, <package>klinkstatus</package>, "
-#| "<package>kppp</package>, <package>kremotecontrol</package>, "
-#| "<package>kvpnc</package>, and <package>kvkbd</package>: Removed because "
-#| "these packages are no longer maintained upstream."
 msgid ""
 "<package>bareftp</package>, <package>docky</package>, <package>fsharp</"
 "package>, <package>gnome-desktop-sharp2</package>, <package>gnome-sharp2</"
@@ -900,11 +890,11 @@ msgid ""
 "<package>pdfmod</package>, and <package>taglib-sharp</package>: Removed "
 "because the packages do not work with Mono 6.x."
 msgstr ""
-"<package>kaccessible</package>, <package>kepas</package>, <package>konsole4</"
-"package>, <package>klinkstatus</package>, <package>kppp</package>, "
-"<package>kremotecontrol</package>, <package>kvpnc</package> y "
-"<package>kvkbd</package>: Eliminados por no recibir mantenimiendo sus "
-"proyectos originales."
+"<package>bareftp</package>, <package>docky</package>, "
+"<package>fsharp</package>, <package>gnome-desktop-sharp2</package>, <package"
+">gnome-sharp2</package>, <package>mono-debugger</package>, <package>mono-"
+"upnp</package>, <package>pdfmod</package>, y <package>taglib-sharp</package>:"
+" Eliminados debido a incompatibilidades con Mono 6.x."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:547
@@ -925,6 +915,10 @@ msgid ""
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
 "security measure to avoid untrusted code running in the kernel."
 msgstr ""
+"A partir de openSUSE Leap 15.2 se verifica la autenticidad de los módulos de "
+"terceros en el kernel (<literal>CONFIG_MODULE_SIG=y</literal>). Esto es una "
+"medidad de seguridad importante para prevenir la ejecución de código "
+"desconfiado en el kernel."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
@@ -934,6 +928,11 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
+"Esto previene que módulos de terceros sean integrados al kernel si el "
+"arranque seguro UEFI se encuentra activado. Los Paquetes de Módulos del "
+"Kernel (KMPs) que provengan de los repositorios oficiales de openSUSE no "
+"serán afectados, pues estos se firman con la llave de openSUSE. La "
+"verificación de la signatura tiene el siguiente comportamiento:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:568
@@ -942,6 +941,8 @@ msgid ""
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
 msgstr ""
+"Los módulos sin firmar o con una signatura establecida como desconfiada o "
+"que no esté en la base de datos de llaves del sistema, serán rechazados."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:575
@@ -952,6 +953,11 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
+"Existe la posiblidad de crear un cerificado personalizado, inscribirlo en la "
+"base de datos \"Machine Owner Key\" (MOK) y firmar módulos compilados en el "
+"sistema con dicho certificado. Los módulos firmados bajo esta modalidad no "
+"son bloqueados ni generan advertencias. Véase <link xlink:href=\""
+"https://es.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:582
