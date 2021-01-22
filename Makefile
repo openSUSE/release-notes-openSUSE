@@ -97,10 +97,7 @@ po/%.po: release-notes.pot
 po/%.mo: po/%.po
 	msgfmt $< -o $@
 
-english: build/release-notes.en/release-notes.en_color_en.pdf \
-  build/release-notes.en/single-html/release-notes.en/index.html \
-  build/release-notes.en/yast-html/release-notes.en.html \
-  build/release-notes.en/release-notes.en.txt
+english: build/release-notes.en/release-notes.en_color_en.pdf build/release-notes.en/release-notes.en.txt
 
 
 # FIXME: Enable use of its:translate attribute in GeekoDoc/DocBook...
