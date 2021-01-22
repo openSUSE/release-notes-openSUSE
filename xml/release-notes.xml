@@ -29,7 +29,7 @@
     <dm:url>https://bugzilla.opensuse.org/enter_bug.cgi</dm:url>
     <dm:product>openSUSE Distribution</dm:product>
     <dm:component>Release Notes</dm:component>
-    <dm:assignee>fs@suse.com</dm:assignee>
+    <dm:assignee>sknorr@suse.com</dm:assignee>
    </dm:bugtracker>
   </dm:docmanager>
  </info>
@@ -95,8 +95,8 @@
    Make sure to also review <xref linkend="sec.driver"/>.
   </para> -->
 
-  <sect2 xml:id="sec.install.transactional-server-role">
-   <title>Using Atomic Updates With the System Role <emphasis>Transactional Server</emphasis></title>
+  <sect2 xml:id="installation-transactional-server-role">
+   <title>Using atomic updates with the system role <emphasis>Transactional Server</emphasis></title>
    <!-- boo#1092953, boo#1093098 -->
    <para>
     The installer supports the system role <emphasis>Transactional
@@ -110,7 +110,7 @@
     with the system role <emphasis>Transactional Server</emphasis>.
    </para>
    <note>
-    <title>Incompatible Packages</title>
+    <title>Incompatible packages</title>
     <para>
      Some packages modify the contents of <filename>/var</filename> or
      <filename>/srv</filename> in their RPM <literal>%post</literal> scripts.
@@ -155,7 +155,7 @@
     </listitem>
    </itemizedlist>
    <important>
-    <title><emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space</title>
+    <title><emphasis>Transactional Server</emphasis> needs at least 12 GB of disk space</title>
     <para>
      The system role <emphasis>Transactional Server</emphasis> needs a disk
      size of at least 12 GB to accommodate Btrfs snapshots.
@@ -213,8 +213,8 @@
    </para>
   </sect2>
 
-  <sect2 xml:id="sec.install.small-disk">
-   <title>Installing on Hard Disks With Less Than 12 GB of Capacity</title>
+  <sect2 xml:id="installation-small-disk">
+   <title>Installing on hard disks with less than 12 GB of capacity</title>
    <!-- boo#1093098 -->
    <para>
     The installer will only propose a partitioning scheme if the available
@@ -249,9 +249,9 @@
    </para>
   </sect2>
 
-  <sect2 xml:id="sec.install.uefi-part">
+  <sect2 xml:id="installation-uefi-part">
   <!-- bnc#850056 -->
-   <title>UEFI, GPT, and MS-DOS Partitions</title>
+   <title>UEFI, GPT, and MS-DOS partitions</title>
    <para>
     Together with the EFI/UEFI specification, a new style of partitioning
     arrived: GPT (GUID Partition Table). This new schema uses globally unique
@@ -279,7 +279,7 @@
  </sect1>
 
  <sect1 xml:id="upgrade">
-  <title>System Upgrade</title>
+  <title>System upgrade</title>
 
   <para>
    This section lists notes related to upgrading the system. For supported
@@ -302,22 +302,22 @@
    Make sure to also review <xref linkend="sec.driver"/>.
   </para> -->
   <para>
-   Additionally, check <xref linkend="sec.package"/>.
+   Additionally, check <xref linkend="removed-deprecated"/>.
   </para>
 
-  <!-- <sect2 xml:id="sec.upgrade.150">
-   <title>Upgrading from &opensuseleap; 15.0</title>
+  <!-- <sect2 xml:id="sec.upgrade.152">
+   <title>Upgrading from &opensuseleap; 15.2</title>
    <para/>
 
   </sect2> -->
 
  </sect1>
 
- <sect1 xml:id="sec.package">
-  <title>Packaging Changes</title>
+ <sect1 xml:id="removed-deprecated">
+  <title>Removed and deprecated packages and features</title>
 
-  <sect2 xml:id="sec.package.deprecated">
-   <title>Deprecated Packages</title>
+  <sect2 xml:id="deprecated">
+   <title>Deprecated packages and features</title>
    <para>
     Deprecated packages are still shipped as part of the distribution but are
     scheduled to be removed the next version of &thisflavor;. These packages
@@ -325,20 +325,15 @@
     receive updates.
    </para>
 
-   <itemizedlist>
+   <!-- <itemizedlist>
     <listitem>
      <para>
-      <package>libqt4</package>: Will receive neither updates nor security fixes.
-      The package will be removed in the next version of &opensuseleap;.
+      <package>example-package</package> is considered deprecated because of
+      [reason]. For more information, see
+      <link xlink:href="https://bugzilla.opensuse.org/BUGID"/>.
      </para>
     </listitem>
-    <listitem>
-     <para>
-      <package>kdelibs4</package>: Will receive neither updates nor security fixes.
-      The package will be removed in the next version of &opensuseleap;.
-     </para>
-    </listitem>
-   </itemizedlist>
+   </itemizedlist> -->
 
    <para>
     To check whether installed packages are no longer maintained: Make sure
@@ -348,210 +343,41 @@
    <screen>zypper lifecycle</screen>
   </sect2>
 
-  <sect2 xml:id="sec.package.removed">
-   <title>Removed Packages</title>
+  <sect2 xml:id="removed">
+   <title>Removed packages and features</title>
    <para>
     Removed packages are not shipped as part of the distribution anymore.
    </para>
-
    <itemizedlist>
     <listitem>
      <para>
-      <package>artha</package>: Removed because it is unmaintained and has
-      unpatched security issues. See
-      <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1143860"/>.
+      <package>libqt4</package> and <package>kdelibs4</package> have been
+      removed because they were unmaintained and had security issues.
+      For more information, see <xref linkend="desktop-remove-kde4"/>.
      </para>
     </listitem>
-    <listitem>
+    <!-- <listitem>
      <para>
-      <package>fate</package>: Removed because it uses insecure KDE4 and Qt4
-      libraries and <literal>features.opensuse.org</literal> is no longer
-      used for feature requests.
+      <package>example-package</package> has been removed because of [reason].
+      For more information, see
+      <link xlink:href="https://bugzilla.opensuse.org/BUGID"/>.
      </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>gcompris</package> (old GTK version): Removed because it is
-      unmaintained and has been replaced by now <package>gcompris-qt</package>.
-      See <link xlink:href="https://www.gcompris.net"/>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>gstreamer-plugins-qt</package>,
-      <package>gstreamer-plugins-qt5</package>, and
-      <package>ktp-call-ui</package>: Removed because these packages
-      are unmaintained and no longer build.
-      The package <package>ktp-call-ui</package> depended on
-      <package>gstreamer-plugins-qt</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>H2rename</package>: Removed because the package
-      is unmaintained.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>ixpdimm_sw</package>, <package>invm-cim</package>,
-      <package>invm-cli</package>, and <package>invm-i18n</package>:
-      Replaced by <package>ipmctl</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>jag-level-editor</package>: Replaced by
-      <package>jag-editor</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>jovie</package>: Removed because the package is no longer
-      maintained upstream. See also
-      <link xlink:href="https://kde.org/applications/unmaintained/org.kde.jovie"/>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>kaccessible</package>, <package>kepas</package>,
-      <package>konsole4</package>, <package>klinkstatus</package>,
-      <package>kppp</package>, <package>kremotecontrol</package>,
-      <package>kvpnc</package>, and <package>kvkbd</package>: Removed because
-      these packages are no longer maintained upstream.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>kdesdk4-scripts</package>: Replaced by
-      <package>kdesdk-scripts</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>kdeuser</package>: Replaced by
-      <package>kde-user-manager</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>keepassx</package> and <package>kpassgen</package>: Replaced by
-      <package>keepassxc</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>kile5</package>: Replaced by
-      <package>kile</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>libkdegames4</package>: Replaced by
-      <package>libkdegames5</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>libkquoath</package>, <package>libjreen</package>, and
-      <package>libqross</package>: Removed because the packages are no longer
-      maintained upstream and use the insecure <command>libqt4</command>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>lilo</package>: Has been obsolete for a decade, replaced by
-      <package>grub2</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>lua51-luajit</package>: Replaced by
-      <package>moonjit</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>mp3gain</package> and <package>wxmp3gain</package>: The
-      package <package>mp3gain</package> was removed because it has a
-      security issue and is no longer maintained upstream. The package
-      <package>wxmp3gain</package> depended on <package>mp3gain</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>nodejs8</package>: Replaced by
-      <package>nodejs10</package> and
-      <package>nodejs12</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>python-django_compressor</package>: Replaced by
-      <package>python-django-compressor</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>python-pep8</package>: Replaced by
-      <package>python-pycodestyle</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>python-pyside</package> and
-      <package>python-pyside-tools</package>: Removed because it depends on
-      the insecure <command>libqt4</command>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>qgo</package>: Replaced by <package>q5go</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>slapi-nis</package>: Removed because this module is not maintained
-      outside of FreeIPA environments, and we do not ship FreeIPA.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>tomahawk</package>: Removed because the package is no longer
-      maintained upstream.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>vokoscreen</package>: Replaced by
-      <package>vokoscreenNG</package>.
-     </para>
-    </listitem>
-    <listitem>
-     <para>
-      <package>bareftp</package>, <package>docky</package>,
-      <package>fsharp</package>, <package>gnome-desktop-sharp2</package>,
-      <package>gnome-sharp2</package>, <package>mono-debugger</package>,
-      <package>mono-upnp</package>, <package>pdfmod</package>, and
-      <package>taglib-sharp</package>: Removed because the packages do not
-      work with Mono 6.x.
-     </para>
-    </listitem>
+    </listitem> -->
    </itemizedlist>
 
   </sect2>
 
  </sect1>
 
- <sect1 xml:id="sec.driver">
-  <title>Drivers and Hardware</title>
+ <sect1 xml:id="driver-hardware">
+  <title>Drivers and hardware</title>
   <para/>
 
-  <sect2 xml:id="sec.driver.sig">
+  <sect2 xml:id="driver-hardware-secure-boot-sign-driver">
    <!-- bsc#173158 -->
-   <title>Secure Boot: Third-Party Drivers Need to Be Properly Signed</title>
+   <title>Secure Boot: third-party drivers need to be properly signed</title>
    <para>
-    &thisflavor; 15.2 now enables a kernel
+    &thisflavor; 15.2 and later enable a kernel
     module signature check for third-party drivers
     (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important
     security measure to avoid untrusted code running in the kernel.
@@ -573,11 +399,11 @@
     </listitem>
    </itemizedlist>
    <para>
-     It is possible to generate a custom certificate, enroll it
-     into the system's Machine Owner Key (MOK) data base,
-     and sign locally compiled kernel modules with this certificate's key.
-     Modules signed in this manner will neither be blocked nor cause warnings.
-     See <link xlink:href="https://en.opensuse.org/openSUSE:UEFI"/>.
+    It is possible to generate a custom certificate, enroll it
+    into the system's Machine Owner Key (MOK) data base,
+    and sign locally compiled kernel modules with this certificate's key.
+    Modules signed in this manner will neither be blocked nor cause warnings.
+    See <link xlink:href="https://en.opensuse.org/openSUSE:UEFI"/>.
    </para>
    <para>
     Since this also affects NVIDIA graphics drivers, we addressed this in our
@@ -590,39 +416,27 @@
 
  </sect1>
 
-  <sect1 xml:id="general">
+ <sect1 xml:id="desktop">
   <title>Desktop</title>
    <para>
     This section lists desktop issues and changes in &thisversion;.
    </para>
-   <sect2 xml:id="sec.general.kde">
-    <title>KDE 4 and Qt4 removal</title>
+
+   <sect2 xml:id="desktop-remove-kde4">
+    <title>KDE 4 and Qt4 have been removed</title>
     <para>
-     KDE 4 packages will not be part of &opensuseleap; 15.3.
-     Please update your system to Plasma 5 and Qt 5.
-     Some of Qt 4 packages might still remain for compatability reasons.
+     KDE 4 packages are no longer part of &opensuseleap; 15.3.
+     Update your system to Plasma 5 and Qt 5.
+     Some Qt 4 packages may still remain for compatibility reasons.
+     For more information, see
      <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1179613"/>.
     </para>
    </sect2>
 
-<!--
-  <sect2 xml:id="sec.general.ypbind">
-   <!-/- boo#1129587 -/->
-   <title>NIS/ypbind and NetworkManager</title>
-   <para>
-     If you use NIS for authentication on your workstation, we recommend
-     using <package>wicked</package> instead of
-     <package>NetworkManager</package> for managing network
-     interfaces, as <package>ypbind</package> does not integrate well
-     with NetworkManager.
-   </para>
-  </sect2>
-  -->
-
  </sect1>
 
- <!-- <sect1 xml:id="sec.server">
-  <title>Server Software</title>
+ <!-- <sect1 xml:id="server">
+  <title>Server software</title>
 
   <para>
    This section lists changes to server software features in &thisversion;.
@@ -631,7 +445,7 @@
  </sect1> -->
 
 
-<!-- <sect1 xml:id="sec.security">
+<!-- <sect1 xml:id="security">
   <title>Security</title>
 
   <para>
@@ -639,9 +453,9 @@
   </para> -->
 
 <!--
-  <sect2 xml:id="sec.security.amanda">
+  <sect2 xml:id="security-amanda">
    <!-/- boo#1116922 -/->
-   <title>Users and Groups Associated with AMANDA Backup Utility</title>
+   <title>Users and groups associated with AMANDA backup utility</title>
    <para>
     AMANDA (<emphasis>Advanced Maryland Automatic Network Disk
     Archiver</emphasis>) is a backup solution that allows setting up a master
@@ -681,7 +495,7 @@
  </sect1> -->
 
  <sect1 xml:id="feedback">
-  <title>More Information and Feedback</title>
+  <title>More information and feedback</title>
   <itemizedlist>
    <listitem>
     <para>
