@@ -8,7 +8,7 @@
 # * When creating output:   $ make linguas; make all
 # * To clean up:            $ make clean
 
-.PHONY: clean po pot pdf text single-html yast-html translatedxml profile
+.PHONY: clean po pot pdf text single-html yast-html translatedxml profile english
 
 ifndef LANGS
   LANGS := $(shell cat po/LINGUAS)
@@ -96,6 +96,9 @@ po/%.po: release-notes.pot
 
 po/%.mo: po/%.po
 	msgfmt $< -o $@
+
+english: build/release-notes.en/release-notes.en_color_en.pdf build/release-notes.en/release-notes.en.txt
+
 
 # FIXME: Enable use of its:translate attribute in GeekoDoc/DocBook...
 xml/release-notes.%.xml: po/%.mo xml/release-notes.ent xml/release-notes.xml
