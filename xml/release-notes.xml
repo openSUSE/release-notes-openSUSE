@@ -312,18 +312,26 @@
   </sect2> -->
 
   <sect2 xml:id="sec.upgrade.kernel">
-	  <title>Unification of &sles; and &opensuseleap; kernel packaging</title>
-
+   <title>Unification of &sles; and &opensuseleap; kernel packaging</title>
    <para>
-    The original kernel was split into three subpackages: kernel-default, kernel-default-extra, and kernel-default-optional. Similarly, kernel-preempt was also split into kernel-preempt, kernel-preempt-extra, and kernel-preempt-optional. The -optional package contains optional modules only for openSUSE Leap. The -extra package contains unsupported modules. The kernel preemption mode can be controlled by setting the preempt=voluntary kernel parameter on the command line. This parameter works with kernel-default.
-   <para/>
-
+    The original kernel was split into three subpackages:
+    <package>kernel-default</package>, <package>kernel-default-extra</package>,
+    and <package>kernel-default-optional</package>. Similarly,
+    <package>kernel-preempt</package> was also split into
+    <package>kernel-preempt</package>, <package>kernel-preempt-extra</package>,
+    and <package>kernel-preempt-optional</package>. The
+    <literal>-optional</literal> package contains optional modules only for
+    openSUSE Leap. The <literal>-extra</literal> package contains unsupported
+    modules. The kernel preemption mode can be controlled by setting the
+    <literal>preempt=voluntary</literal> kernel parameter on the command line.
+    This parameter works with <package>kernel-default</package>.
+   </para>
    <para>
-    Users should be aware of the split and need to make sure that required rpms are installed based on the requirements of a particular system.
-   <para/>
-
+    Users should be aware of the split and need to make sure that the required
+    packages are installed based on the requirements of a particular system.
+   </para>
   </sect2>
-
+         
  </sect1>
 
  <sect1 xml:id="removed-deprecated">
