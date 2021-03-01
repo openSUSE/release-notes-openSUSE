@@ -311,24 +311,24 @@
 
   </sect2> -->
 
-  <sect2 xml:id="sec.upgrade.kernel">
-   <title>Unification of &sles; and &opensuseleap; kernel packaging</title>
+  <sect2 xml:id="sec-upgrade-kernel">
+   <title>Alignment of &sles; and &opensuseleap; kernel packaging</title>
    <para>
-    The original kernel was split into three subpackages:
+    On &opensuseleap;, the default kernel has been split into three subpackages:
     <package>kernel-default</package>, <package>kernel-default-extra</package>,
     and <package>kernel-default-optional</package>. Similarly,
-    <package>kernel-preempt</package> was also split into
+    <package>kernel-preempt</package> has also been split into
     <package>kernel-preempt</package>, <package>kernel-preempt-extra</package>,
     and <package>kernel-preempt-optional</package>. The
     <literal>-optional</literal> package contains optional modules only for
-    openSUSE Leap. The <literal>-extra</literal> package contains unsupported
+    &opensuseleap;. The <literal>-extra</literal> package contains unsupported
     modules. The kernel preemption mode can be controlled by setting the
     <literal>preempt=voluntary</literal> kernel parameter on the command line.
     This parameter works with <package>kernel-default</package>.
    </para>
    <para>
-    Users should be aware of the split and need to make sure that the required
-    packages are installed based on the requirements of a particular system.
+    If you use this kernel variant, make sure that all RPMs required for your
+    use case are installed.
    </para>
   </sect2>
          
