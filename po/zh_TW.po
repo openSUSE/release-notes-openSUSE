@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2021-01-22 15:23+0100\n"
+"POT-Creation-Date: 2021-03-01 16:10+0100\n"
 "PO-Revision-Date: 2020-07-02 07:26+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
@@ -557,20 +557,49 @@ msgstr ""
 msgid "Additionally, check <xref linkend=\"removed-deprecated\"/>."
 msgstr "另外，請見 <xref linkend=\"sec.package\"/> 的說明。"
 
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:315
+msgid ""
+"Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel packaging"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:316
+msgid ""
+"On openSUSE Leap, the default kernel has been split into three subpackages: "
+"<package>kernel-default</package>, <package>kernel-default-extra</package>, "
+"and <package>kernel-default-optional</package>. Similarly, <package>kernel-"
+"preempt</package> has also been split into <package>kernel-preempt</"
+"package>, <package>kernel-preempt-extra</package>, and <package>kernel-"
+"preempt-optional</package>. The <literal>-optional</literal> package "
+"contains optional modules only for openSUSE Leap. The <literal>-extra</"
+"literal> package contains unsupported modules. The kernel preemption mode "
+"can be controlled by setting the <literal>preempt=voluntary</literal> kernel "
+"parameter on the command line. This parameter works with <package>kernel-"
+"default</package>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:329
+msgid ""
+"If you use this kernel variant, make sure that all RPMs required for your "
+"use case are installed."
+msgstr ""
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:317
+#: xml/release-notes.xml:338
 msgid "Removed and deprecated packages and features"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:320
+#: xml/release-notes.xml:341
 #, fuzzy
 #| msgid "Deprecated Packages"
 msgid "Deprecated packages and features"
 msgstr "不建議的套件"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:321
+#: xml/release-notes.xml:342
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -582,7 +611,7 @@ msgstr ""
 "新。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:338
+#: xml/release-notes.xml:359
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -592,25 +621,25 @@ msgstr ""
 "openSUSE</package> 套件，接著使用以下指令："
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:343
+#: xml/release-notes.xml:364
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:347
+#: xml/release-notes.xml:368
 #, fuzzy
 #| msgid "Removed Packages"
 msgid "Removed packages and features"
 msgstr "移除的套件"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:348
+#: xml/release-notes.xml:369
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "移除的套件將不再隨發行版一起發布。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:353
+#: xml/release-notes.xml:374
 msgid ""
 "<package>libqt4</package> and <package>kdelibs4</package> have been removed "
 "because they were unmaintained and had security issues. For more "
@@ -618,21 +647,21 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:373
+#: xml/release-notes.xml:394
 #, fuzzy
 #| msgid "Drivers and Hardware"
 msgid "Drivers and hardware"
 msgstr "驅動程式與硬體"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:378
+#: xml/release-notes.xml:399
 #, fuzzy
 #| msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgid "Secure Boot: third-party drivers need to be properly signed"
 msgstr "Secure Boot：需要正確地簽章第三方驅動程式"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:379
+#: xml/release-notes.xml:400
 #, fuzzy
 #| msgid ""
 #| "openSUSE Leap 15.2 now enables a kernel module signature check for third-"
@@ -648,7 +677,7 @@ msgstr ""
 "心中執行不被信任的程式碼。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:385
+#: xml/release-notes.xml:406
 #, fuzzy
 #| msgid ""
 #| "This may prevent third-party kernel modules from being loaded if UEFI "
@@ -669,7 +698,7 @@ msgstr ""
 "openSUSE 金鑰簽章過，故不會受影響。簽章檢查會有以下的行為："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:394
+#: xml/release-notes.xml:415
 #, fuzzy
 #| msgid ""
 #| "Kernel modules that are signed with a key that is either known as "
@@ -684,7 +713,7 @@ msgstr ""
 "止載入。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:401
+#: xml/release-notes.xml:422
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -698,7 +727,7 @@ msgstr ""
 "openSUSE:UEFI\"/>。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:408
+#: xml/release-notes.xml:429
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -708,26 +737,26 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:420
+#: xml/release-notes.xml:441
 msgid "Desktop"
 msgstr "桌面環境"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:421
+#: xml/release-notes.xml:442
 #, fuzzy
 #| msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr "這個小節列出 openSUSE Leap 15.2 關於桌面環境的問題與變動。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:426
+#: xml/release-notes.xml:447
 #, fuzzy
 #| msgid "KDE 4 and Qt 4 are unmaintained"
 msgid "KDE 4 and Qt4 have been removed"
 msgstr "不再維護 KDE 4 與 Qt 4"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:427
+#: xml/release-notes.xml:448
 msgid ""
 "KDE 4 packages are no longer part of openSUSE Leap 15.3. Update your system "
 "to Plasma 5 and Qt 5. Some Qt 4 packages may still remain for compatibility "
@@ -736,37 +765,37 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:498
+#: xml/release-notes.xml:519
 #, fuzzy
 #| msgid "More Information and Feedback"
 msgid "More information and feedback"
 msgstr "更多資訊與反饋"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:501
+#: xml/release-notes.xml:522
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "請閱讀安裝媒體上的 <filename>README</filename> 文件。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:506
+#: xml/release-notes.xml:527
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "從套件 RPM 檢視某個套件詳細的變動歷史資訊："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:510
+#: xml/release-notes.xml:531
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:511
+#: xml/release-notes.xml:532
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "將 <replaceable>FILENAME</replaceable> 代換為 RPM 名稱。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:516
+#: xml/release-notes.xml:537
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -775,14 +804,14 @@ msgstr ""
 "新套件的變動歷史（按時間先後排序）。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:522
+#: xml/release-notes.xml:543
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:528
+#: xml/release-notes.xml:549
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -791,7 +820,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:534
+#: xml/release-notes.xml:555
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -800,7 +829,7 @@ msgstr ""
 "opensuse.org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:541
+#: xml/release-notes.xml:562
 msgid "Copyright © SUSE LLC"
 msgstr "版權所有 © SUSE LLC"
 
