@@ -87,6 +87,14 @@ When the above dependencies are satisfied, you can create output using:
     using the scripts contained in the directory `tools` in this repository's
     `master` branch.
 
+## Configuration for Web Release Notes
+
+The `master` branch of this repository used to contain a configuration file
+that determined which release notes to update on https://doc.opensuse.org/.
+This configuration file and the associated script have moved and are now part
+of the repository https://github.com/openSUSE/doc-o-o.
+
+
 ## More Information
 
 Find general information about the release notes at
