@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Indonesian (release-notes-openSUSE)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-23 14:50+0200\n"
-"PO-Revision-Date: 2020-07-28 12:34+0000\n"
-"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"PO-Revision-Date: 2021-03-11 12:56+0000\n"
+"Last-Translator: M. Edwin Zakaria <medwin@opensuse.org>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_2/id/>\n"
 "Language: id\n"
@@ -20,7 +20,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Penerjemah\n"
-"M. Edwin Zakaria <medwin@opensuse.org>, 2016, 2018, 2019\n"
+"M. Edwin Zakaria <medwin@opensuse.org>, 2016, 2018, 2019, 2021\n"
 "Andika Triwidada <andika@gmail.com>, 2019, 2020"
 
 #. (itstool) path: article/title
@@ -620,7 +620,7 @@ msgstr "Paket-Paket yang Dihapus"
 #: xml/release-notes.xml:353
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr ""
-"Paket-paket yang dihapus tidak dikirim sebagai bagian dari distribusi lagi."
+"Paket-paket yang dihapus tidak lagi dikirim sebagai bagian dari distribusi."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:359
@@ -886,12 +886,12 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:547
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "Driver dan perangkat keras"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:552
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
-msgstr ""
+msgstr "Secure Boot: Driver Pihak Ketiga Harus Ditandangan dengan Benar"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:553
@@ -900,6 +900,10 @@ msgid ""
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
 "security measure to avoid untrusted code running in the kernel."
 msgstr ""
+"openSUSE Leap 15.3 sekarang memungkinkan pemeriksaan tandatangan modul "
+"kernel untuk driver pihak ketiga (<literal>CONFIG_MODULE_SIG=y</literal>). "
+"Hal ini merupakan langkah kemanan yang penting untuk mengindari kode yang "
+"tidak terpercaya berjalan di dalam kernel."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
@@ -909,6 +913,11 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
+"Hal ini mungkin mencegah digunakannya modul kernel pihak ketiga jika UEFI "
+"Secure Boot diaktifkan. Kernel Module Packages (KMPs) dari repositori "
+"openSUSE resmi tidak akan terpengaruh, karena modul yang didalamnya telah "
+"ditandatangan dengan kunci openSUSE. Pemeriksaan tandatangan memiliki sifat "
+"sebagai berikut:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:568
@@ -917,6 +926,9 @@ msgid ""
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
 msgstr ""
+"Modul kernel yang tidak ditandatangani atau ditandatangani dengan kunci yang "
+"tidak dipercaya atau tidak bisa diverifikasi dengan basis data kunci "
+"terpecaya yang dimiliki oleh sistem akan diblok."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:575
@@ -927,6 +939,11 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
+"Adalah mungkin untuk membuat sertifikat khusus, dimasukkan ke dalam basis "
+"data Machine Owner Key (MOK), dan menandatangan secara lokal modul kernal "
+"yang dikompilasi dengan sertifikat tersebut. Modul yan ditandatangan dengan "
+"cara ini tidak akan diblok atau menyebabkan peringatan. Lihat <link "
+"xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:582
@@ -937,6 +954,11 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:href="
 "\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Karena hal ini juga berpengaruh terhadap driver NVIDIA, kami menegaskannya "
+"pada paket resmi openSUSE. Akan tetapi, Anda harus secara manual membuat "
+"kunci MOK baru setelah instalasi untuk membuat paket baru dapat berfungsi. "
+"Untuk instruksi bagaimana menginstal driver dan membuat kunci MOK, lihat <"
+"link xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:594
@@ -1000,7 +1022,7 @@ msgstr "rpm --changelog -qp <replaceable>NAMABERKAS</replaceable>.rpm"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:699
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr "Ganti <replaceable>FILENAME</replaceable> dengan nama dari RPM."
+msgstr "Ganti <replaceable>NAMABERKAS</replaceable> dengan nama dari RPM."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:704
