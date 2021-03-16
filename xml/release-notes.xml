@@ -305,11 +305,37 @@
    Additionally, check <xref linkend="removed-deprecated"/>.
   </para>
 
-  <!-- <sect2 xml:id="sec.upgrade.152">
-   <title>Upgrading from &opensuseleap; 15.2</title>
+   
+  <sect2 xml:id="sec.upgrade.152">
+   <title>Seamless upgrade from &opensuseleap; 15.2</title>
+   <!-- bnc#1182629 -->
+   <para>
+   &opensuseleap; 15.3 is newly built on top of binary rpms from &sles;
+   This change was introduced as part of Closing The Leap Gap (CtLG) effort
+   to bring &opensuseleap; and &sles; closer together.
+
+   Unlike in 15.2 the default installation of &opensuseleap; 15.3 contains
+   majority of rpms from &sles;. These rpms are signed by SUSE LLC instead 
+   of openSUSE key. 
+
+   Package libzypp 12.25.8 introduces whitelist for SUSE LLC and
+   openSUSE vendor exchange to allow seamless migration.
+
+   This whitelist removes need to specify --allow-vendor-change for openSUSE
+   and SUSE LLC vendor exchange only.
+
+   You might still need to specify --allow-vendor-change during migration
+   in case you're using various OBS repositories signed with other keys.
+   
+   &opensuseleap; releases older than 15.2 do not contain this feature
+   as they have already reached EOL. All users are adviced to upgrade to 
+   &opensuseleap;15.2 with latest updates prior upgrading to 15.3.
+   
+   Following parameters can be used as workaround for libzypp older than 12.25.8.
+   <command>zypper dup ... --allow-vendor-change --force-resolution ... </command>
    <para/>
 
-  </sect2> -->
+  </sect2>
 
   <sect2 xml:id="sec-upgrade-kernel">
    <title>Alignment of &sles; and &opensuseleap; kernel packaging</title>
