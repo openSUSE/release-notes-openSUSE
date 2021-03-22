@@ -310,31 +310,30 @@
    <title>Seamless upgrade from &opensuseleap; 15.2</title>
    <!-- bnc#1182629 -->
    <para>
-   &opensuseleap; 15.3 is newly built on top of binary rpms from &sles;
-   This change was introduced as part of Closing The Leap Gap (CtLG) effort
-   to bring &opensuseleap; and &sles; closer together.
-
-   Unlike in 15.2 the default installation of &opensuseleap; 15.3 contains
-   majority of rpms from &sles;. These rpms are signed by SUSE LLC instead 
-   of openSUSE key. 
-
-   Package libzypp 12.25.8 introduces whitelist for SUSE LLC and
-   openSUSE vendor exchange to allow seamless migration.
-
-   This whitelist removes need to specify --allow-vendor-change for openSUSE
-   and SUSE LLC vendor exchange only.
-
-   You might still need to specify --allow-vendor-change during migration
-   in case you're using various OBS repositories signed with other keys.
-   
-   &opensuseleap; releases older than 15.2 do not contain this feature
-   as they have already reached EOL. All users are adviced to upgrade to 
-   &opensuseleap; 15.2 with latest updates prior upgrading to 15.3.
-   
-   Following parameters can be used as workaround for libzypp older than 12.25.8.
-   <command>zypper dup ... --allow-vendor-change --force-resolution ... </command>
-   <para/>
-
+    &opensuseleap; 15.3 is newly built on top of binary rpms from &sles;. This
+    change was introduced as part of the Closing The Leap Gap (CtLG) effort to
+    bring &opensuseleap; and &sles; closer together.
+   </para>
+   <para>
+    Unlike 15.2, the default installation of &opensuseleap; 15.3 contains the
+    majority of rpms from &sles;. These rpms are signed by SUSE LLC instead of
+    using the &opensuse; key. The <package>libzypp</package> package version
+    12.25.8 introduced whitelist for the SUSE LLC and &opensuse; vendor exchange
+    to allow seamless migration. This whitelist removes the need to specify
+    <literal>--allow-vendor-change</literal>
+     for &opensuse; and SUSE LLC vendor exchange only. You might still need to
+     specify
+    <literal>--allow-vendor-change</literal> during migration if you are using
+    OBS repositories signed with other keys.
+   </para>
+   <para>
+    &opensuseleap; releases older than 15.2 do not contain this feature because
+    they are not supported anymore. All users are advised to upgrade to
+    &opensuseleap; 15.2 with the latest updates before upgrading to 15.3. The
+    following parameters can be used as a workaround for
+    <package>libzypp</package> versions older than 12.25.8:
+   </para>
+   <screen>zypper dup --allow-vendor-change --force-resolution</screen>
   </sect2>
 
   <sect2 xml:id="sec-upgrade-kernel">
