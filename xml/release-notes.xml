@@ -454,6 +454,22 @@
     </para>
    </sect2>
 
+   <sect2 xml:id="ibus-layout-name-change">
+    <title>Manual config migration of IBus is necessary due to layout name change</title>
+    <para>
+     Since IBus 1.5.23 renames some keyboard layouts, it cannot load configuration
+     containing these renamed layouts after upgrading. Thereby, it might change the
+     layout to US. The renamed layouts include be:*:ger, ch:*:ger, de:*:ger,
+     gr:*:gre, ro:*:rum, and, sk:*:slo.
+     See <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1177545"/>.
+     </para>
+     <para>
+     Users need to migrate configuration manually. Please open GNOME Settings and
+     choose an appropriate layout. For desktop environments other than GNOME,
+     please run <literal>ibus-setup</literal> instead.
+    </para>
+   </sect2>
+
  </sect1>
 
  <!-- <sect1 xml:id="server">
