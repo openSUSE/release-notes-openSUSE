@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-03 20:27+0200\n"
-"PO-Revision-Date: 2021-03-11 15:56+0000\n"
+"PO-Revision-Date: 2021-05-04 01:28+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
-"Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/nl/>\n"
+"Language-Team: Dutch <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.6\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -28,7 +28,7 @@ msgid "translator-credits"
 msgstr ""
 "Ruurd Pels <ruurdpels@kde.nl>, 2006\n"
 "Rinse de Vries <rinsedevries@kde.nl>, 2006, 2007\n"
-"Freek de Kruijf <freek@opensuse.org>, 2008-2020\n"
+"Freek de Kruijf <freek@opensuse.org>, 2008-2021\n"
 "Nathan Follens <nthn@unseen.is>, 2016-2017"
 
 #. (itstool) path: article/title
@@ -560,10 +560,8 @@ msgstr "Controleer bovendien <xref linkend=\"removed-deprecated\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:310
-#, fuzzy
-#| msgid "Upgrading from openSUSE Leap 42.2"
 msgid "Seamless upgrade from openSUSE Leap 15.2"
-msgstr "Opwaardering vanaf openSUSE Leap 42.2"
+msgstr "Naadloze opwaardering vanaf openSUSE Leap 15.2"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:312
@@ -573,6 +571,10 @@ msgid ""
 "Leap Gap (CtLG) effort to bring openSUSE Leap and SUSE Linux Enterprise "
 "Server closer together."
 msgstr ""
+"openSUSE Leap 15.3 is nieuw gebouwd bovenop binaire rpms uit de SUSE Linux "
+"Enterprise Server. Deze wijziging is geïntroduceerd als onderdeel van de "
+"inspanning Closing The Leap Gap (CtLG) om openSUSE Leap en SUSE Linux "
+"Enterprise Server dichter bij elkaar te brengen."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:317
@@ -587,6 +589,16 @@ msgid ""
 "vendor-change</literal> during migration if you are using OBS repositories "
 "signed with other keys."
 msgstr ""
+"Anders dan 15.2 bevat de standaard installatie van openSUSE Leap 15.3 de "
+"meerderheid van rpms uit SUSE Linux Enterprise Server. Deze rpms zijn "
+"ondertekend door SUSE LLC in plaats van de openSUSE sleutel. Het pakket "
+"<package>libzypp</package> versie 12.25.8 introduceert een witte lijst voor "
+"uitwisseling tussen de leveranciers SUSE LLC en openSUSE  om naadloze "
+"migratie toe te staan. Deze witte lijst verwijdert de noodzaak om <literal"
+">--allow-vendor-change</literal> voor leverancier openSUSE en SUSE LLC te "
+"specificeren alleen voor dezen. U zou nog steeds <literal>--allow-vendor-"
+"change</literal> tijdens de migratie moeten specificeren als u OBS "
+"opslagruimten ondertekend met andere sleutels gebruikt."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:329
@@ -597,12 +609,17 @@ msgid ""
 "parameters can be used as a workaround for <package>libzypp</package> "
 "versions older than 12.25.8:"
 msgstr ""
+"openSUSE Leap uitgaven ouder dan 15.2 bevatten deze functie niet omdat ze "
+"niet langer worden ondersteund. Alle gebruikers worden geadviseerd om op te "
+"waarderen naar openSUSE Leap 15.2 met de laatste updates alvorens op te "
+"waarderen naar 15.3. De volgende parameters kunnen gebruikt worden als een "
+"omweg voor versies van <package>libzypp</package> ouder dan 12.25.8:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:336
 #, no-wrap
 msgid "zypper dup --allow-vendor-change --force-resolution"
-msgstr ""
+msgstr "zypper dup --allow-vendor-change --force-resolution"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:340
@@ -825,6 +842,8 @@ msgstr ""
 #: xml/release-notes.xml:483
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
+"Handmatige migratie van de configuratie van IBus is noodzakelijk vanwege "
+"wijziging in de naam van de indeling"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:484
@@ -836,6 +855,12 @@ msgid ""
 "Slovak. See <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1177545\"/> for more information."
 msgstr ""
+"Omdat <package>IBus</package> versie 1.5.23 sommige toetsenbordindelingen "
+"heeft hernoemd, kan het een configuratie met deze hernoemde indelingen na "
+"opwaardering niet laden. Het kan daarbij de indeling naar US resetten. "
+"Indelingen van de volgende talen zijn betrokken: Belgisch, Duits, Grieks, "
+"Roemeens en Slovaaks. Zie <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=1177545\"/> voor meer informatie."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:491
@@ -844,6 +869,9 @@ msgid ""
 "an appropriate layout. For desktop environments other than GNOME, run "
 "<literal>ibus-setup</literal> instead."
 msgstr ""
+"Gebruikers moeten de configuratie handmatig migreren. Open GNOME "
+"instellingen en kies een toepasselijke indeling. Voor bureabladomgevingen "
+"anders dan GNOME, voer in plaats daarvan uit <literal>ibus-setup</literal>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:560
