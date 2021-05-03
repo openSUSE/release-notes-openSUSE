@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2021-05-03 20:27+0200\n"
-"PO-Revision-Date: 2021-03-10 14:38+0000\n"
+"PO-Revision-Date: 2021-05-04 01:28+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.6\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -560,10 +560,8 @@ msgstr "このほか、 <xref linkend=\"removed-deprecated\"/> もご覧くだ�
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:310
-#, fuzzy
-#| msgid "Upgrading from openSUSE Leap 42.2"
 msgid "Seamless upgrade from openSUSE Leap 15.2"
-msgstr "openSUSE Leap 42.2 からのアップグレード"
+msgstr "openSUSE Leap 15.2 からの円滑なアップグレード"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:312
@@ -573,6 +571,9 @@ msgid ""
 "Leap Gap (CtLG) effort to bring openSUSE Leap and SUSE Linux Enterprise "
 "Server closer together."
 msgstr ""
+"openSUSE Leap 15.3 では新たに、 SUSE Linux Enterprise Server "
+"が提供するバイナリを利用して構築されるようになっています。この変更は openSUSE Leap と SUSE Linux Enterprise "
+"Server をさらに近づけるための活動である、 Closing The Leap Gap (CtLG) のうちの 1 つとして行なわれたものです。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:317
@@ -587,6 +588,12 @@ msgid ""
 "vendor-change</literal> during migration if you are using OBS repositories "
 "signed with other keys."
 msgstr ""
+"15.2 とは異なり、 openSUSE Leap 15.3 の既定のインストールでは、 SUSE Linux Enterprise Server "
+"が提供する多数の RPM がインストールされますが、これらの RPM は openSUSE の鍵ではなく、 SUSE LLC の鍵で署名されています。 "
+"<package>libzypp</package> パッケージのバージョン 12.25.8 では円滑な移行を支援するため、 SUSE LLC と "
+"openSUSE のベンダ変更を許可するためのホワイトリストが設定されていて、この機能によって <literal>--allow-vendor-"
+"change</literal> を指定しなくてもベンダ変更ができるようになっています。ただし、他の鍵で署名されている OBS "
+"リポジトリを使用している場合は、移行時に <literal>--allow-vendor-change</literal> の指定が必要となります。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:329
@@ -597,12 +604,15 @@ msgid ""
 "parameters can be used as a workaround for <package>libzypp</package> "
 "versions older than 12.25.8:"
 msgstr ""
+"openSUSE Leap 15.2 以前のバージョンの場合、このような機能に対応していませんので、 15.3 にアップグレードする場合は、あらかじめ "
+"openSUSE Leap 15.2 にアップグレードしておき、最新の更新を適用するようにしてください。また、 <package>libzypp</"
+"package> パッケージのバージョン 12.25.8 以前をお使いの場合は、下記のパラメータを回避策として使用することができます:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:336
 #, no-wrap
 msgid "zypper dup --allow-vendor-change --force-resolution"
-msgstr ""
+msgstr "zypper dup --allow-vendor-change --force-resolution"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:340
@@ -824,7 +834,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
 msgid "Manual config migration of IBus is necessary due to layout name change"
-msgstr ""
+msgstr "レイアウト名の変更に伴う ibus の設定変更について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:484
@@ -836,6 +846,11 @@ msgid ""
 "Slovak. See <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1177545\"/> for more information."
 msgstr ""
+"<package>IBus</package> バージョン 1.5.23 "
+"ではいくつかのキーボード配列の名前が変更されているため、アップグレード前のキーボード配列をそのまま移行できない場合があります。このような場合は、"
+"キーボード配列が US 配列に戻ってしまいます。具体的にはベルギー語, ドイツ語, ギリシャ語, ルーマニア語, スロバキア語が影響を受けます。詳しくは "
+"<link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1177545\"/> "
+"をお読みください。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:491
@@ -844,6 +859,8 @@ msgid ""
 "an appropriate layout. For desktop environments other than GNOME, run "
 "<literal>ibus-setup</literal> instead."
 msgstr ""
+"これらのキーボード配列をお使いの場合は、設定をやり直す必要があります。 GNOME 設定を開いて必要なキーボード配列を選択してください。 GNOME "
+"以外のデスクトップ環境をお使いの場合は、 <literal>ibus-setup</literal> を起動してください。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:560
