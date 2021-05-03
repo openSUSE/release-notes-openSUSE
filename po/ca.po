@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2021-05-03 20:27+0200\n"
-"PO-Revision-Date: 2021-03-10 14:38+0000\n"
+"PO-Revision-Date: 2021-05-04 01:28+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/ca/>\n"
+"Language-Team: Catalan <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.6\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -556,10 +556,8 @@ msgstr "Addicionalment, marqueu <xref linkend=\"removed-deprecated\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:310
-#, fuzzy
-#| msgid "Upgrading from openSUSE Leap 42.2"
 msgid "Seamless upgrade from openSUSE Leap 15.2"
-msgstr "Actualitzar des de l'openSUSE Leap 42.2"
+msgstr "Actualització contínua des de l'openSUSE Leap 15.2"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:312
@@ -569,6 +567,10 @@ msgid ""
 "Leap Gap (CtLG) effort to bring openSUSE Leap and SUSE Linux Enterprise "
 "Server closer together."
 msgstr ""
+"L'openSUSE Leap 15.3 és de construcció nova sobre rpms binaris del SUSE "
+"Linux Enterprise Server. Aquest canvi es va introduir com a part de l'esforç "
+"anomenat Closing The Leap Gap (Tancant la bretxa del Leap) (CtLG) per "
+"apropar l'openSUSE Leap i SUSE Linux Enterprise Server."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:317
@@ -583,6 +585,16 @@ msgid ""
 "vendor-change</literal> during migration if you are using OBS repositories "
 "signed with other keys."
 msgstr ""
+"A diferència del 15.2, la instal·lació predeterminada de l’openSUSE Leap "
+"15.3 conté la majoria d'rpms de SUSE Linux Enterprise Server. Aquests rpms "
+"estan signats per SUSE LLC en lloc d’usar la clau d'openSUSE. El paquet "
+"<package>libzypp</package> amb la versió 12.25.8 va introduir la llista "
+"blanca per a l'intercanvi de proveïdors de SUSE LLC i openSUSE per permetre "
+"una migració perfecta. Aquesta llista blanca elimina la necessitat "
+"d'especificar <literal>--allow-vendor-change</literal> només per a "
+"l'intercanvi de proveïdors d'openSUSE i SUSE LLC. És possible que encara "
+"hàgiu d'especificar <literal> --allow-vendor-change </literal> durant la "
+"migració si useu repositoris OBS signats amb altres claus."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:329
@@ -593,12 +605,18 @@ msgid ""
 "parameters can be used as a workaround for <package>libzypp</package> "
 "versions older than 12.25.8:"
 msgstr ""
+"Les versions d'openSUSE Leap anteriors a 15.2 no contenen aquesta "
+"característica perquè ja no tenen suport. Es recomana a tots els usuaris que "
+"actualitzin a openSUSE Leap 15.2 amb les darreres actualitzacions abans d’"
+"actualitzar al 15.3. Els paràmetres següents es poden usar com a solució "
+"alternativa per a versions de <package>libzypp</package> anteriors a la 12.25"
+".8:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:336
 #, no-wrap
 msgid "zypper dup --allow-vendor-change --force-resolution"
-msgstr ""
+msgstr "zypper dup --allow-vendor-change --force-resolution"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:340
@@ -819,6 +837,8 @@ msgstr ""
 #: xml/release-notes.xml:483
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
+"La migració manual de la configuració de l'IBus és necessària a causa del "
+"canvi de nom de disposicions."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:484
@@ -830,6 +850,13 @@ msgid ""
 "Slovak. See <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1177545\"/> for more information."
 msgstr ""
+"Atès que la versió 1.5.23 de l'<package>IBus</package> va canviar el nom "
+"d'algunes disposicions de teclat, no pot carregar la configuració que "
+"contingui aquestes disposicions després de l'actualització. Per tant, es pot "
+"restablir la disposició a US. Se'n veuen afectades les disposicions de les "
+"llengües següents: belga, alemany, grec, romanès i eslovac. Consulteu <link "
+"xlink: href =\"https://bugzilla.opensuse.org/show_bug.cgi?id=1177545\"/> per "
+"obtenir-ne més informació."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:491
@@ -838,6 +865,9 @@ msgid ""
 "an appropriate layout. For desktop environments other than GNOME, run "
 "<literal>ibus-setup</literal> instead."
 msgstr ""
+"Els usuaris han de migrar la configuració manualment. Obriu la configuració "
+"del GNOME i trieu una disposició adequada. Per a entorns d'escriptori "
+"diferents del GNOME, executeu <literal>ibus-setup</literal>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:560
