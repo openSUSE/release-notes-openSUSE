@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
-"POT-Creation-Date: 2021-03-01 16:17+0100\n"
+"POT-Creation-Date: 2021-05-03 20:27+0200\n"
 "PO-Revision-Date: 2021-04-10 11:57+0000\n"
 "Last-Translator: Lucie Charrier <c.chalu@free.fr>\n"
-"Language-Team: French <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_3/fr/>\n"
+"Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_3/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -156,8 +156,8 @@ msgstr ""
 "rencontrez en utilisant cette préversion d'openSUSE Leap 15.3. Pour plus "
 "d'informations, consultez <link xlink:href=\"https://en.opensuse.org/"
 "Submitting_Bug_Reports\"/>. Si vous voulez voir un point ajouté à ces notes "
-"de version, veuillez déposer un rapport de bug pour le composant <quote>"
-"Release Notes</quote>."
+"de version, veuillez déposer un rapport de bug pour le composant "
+"<quote>Release Notes</quote>."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:76
@@ -218,15 +218,15 @@ msgid ""
 "openSUSE Leap 15.3 also work with the system role <emphasis>Transactional "
 "Server</emphasis>."
 msgstr ""
-"L'installateur propose le rôle système <emphasis>serveur "
-"transactionnel</emphasis>. Ce rôle système inclut un système de mise à jour "
-"qui est capable d'appliquer les mises à jour de manière atomique (en une "
-"seule opération) et qui permet de facilement les annuler si cela devient "
-"nécessaire. Ces fonctionnalités sont basées sur les outils de gestion de "
-"paquets sur lesquels les autres distributions openSUSE et SUSE reposent. "
-"Cela signifie que la vaste majorité des paquets RPM qui fonctionnent avec "
-"d'autres rôles système d'openSUSE Leap 15.3 fonctionnent aussi avec le "
-"nouveau rôle <emphasis>serveur transactionnel</emphasis>."
+"L'installateur propose le rôle système <emphasis>serveur transactionnel</"
+"emphasis>. Ce rôle système inclut un système de mise à jour qui est capable "
+"d'appliquer les mises à jour de manière atomique (en une seule opération) et "
+"qui permet de facilement les annuler si cela devient nécessaire. Ces "
+"fonctionnalités sont basées sur les outils de gestion de paquets sur "
+"lesquels les autres distributions openSUSE et SUSE reposent. Cela signifie "
+"que la vaste majorité des paquets RPM qui fonctionnent avec d'autres rôles "
+"système d'openSUSE Leap 15.3 fonctionnent aussi avec le nouveau rôle "
+"<emphasis>serveur transactionnel</emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:113
@@ -564,7 +564,53 @@ msgid "Additionally, check <xref linkend=\"removed-deprecated\"/>."
 msgstr "En outre, veuillez vérifier <xref linkend=\"removed-deprecated\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:315
+#: xml/release-notes.xml:310
+#, fuzzy
+#| msgid "Upgrading from openSUSE Leap 42.2"
+msgid "Seamless upgrade from openSUSE Leap 15.2"
+msgstr "Mise à niveau depuis openSUSE Leap 42.2"
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:312
+msgid ""
+"openSUSE Leap 15.3 is newly built on top of binary rpms from SUSE Linux "
+"Enterprise Server. This change was introduced as part of the Closing The "
+"Leap Gap (CtLG) effort to bring openSUSE Leap and SUSE Linux Enterprise "
+"Server closer together."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:317
+msgid ""
+"Unlike 15.2, the default installation of openSUSE Leap 15.3 contains the "
+"majority of rpms from SUSE Linux Enterprise Server. These rpms are signed by "
+"SUSE LLC instead of using the openSUSE key. The <package>libzypp</package> "
+"package version 12.25.8 introduced whitelist for the SUSE LLC and openSUSE "
+"vendor exchange to allow seamless migration. This whitelist removes the need "
+"to specify <literal>--allow-vendor-change</literal> for openSUSE and SUSE "
+"LLC vendor exchange only. You might still need to specify <literal>--allow-"
+"vendor-change</literal> during migration if you are using OBS repositories "
+"signed with other keys."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:329
+msgid ""
+"openSUSE Leap releases older than 15.2 do not contain this feature because "
+"they are not supported anymore. All users are advised to upgrade to openSUSE "
+"Leap 15.2 with the latest updates before upgrading to 15.3. The following "
+"parameters can be used as a workaround for <package>libzypp</package> "
+"versions older than 12.25.8:"
+msgstr ""
+
+#. (itstool) path: sect2/screen
+#: xml/release-notes.xml:336
+#, no-wrap
+msgid "zypper dup --allow-vendor-change --force-resolution"
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:340
 msgid ""
 "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel packaging"
 msgstr ""
@@ -572,7 +618,7 @@ msgstr ""
 "d'openSUSE Leap"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:316
+#: xml/release-notes.xml:341
 msgid ""
 "On openSUSE Leap, the default kernel has been split into three subpackages: "
 "<package>kernel-default</package>, <package>kernel-default-extra</package>, "
@@ -589,17 +635,17 @@ msgstr ""
 "Sur openSUSE Leap, le noyau par défaut a été divisé en trois sous-paquets : "
 "<package>kernel-default</package>, <package>kernel-default-extra</package>, "
 "et <package>kernel-default-optional</package>. De même, <package>kernel-"
-"preempt</package> a également été divisé en <package>kernel-preempt</package>"
-", <package>kernel-preempt-extra</package>, et <package>kernel-preempt-"
-"optional</package>. Le paquet <literal>-optional</literal> contient des "
-"modules optionnels uniquement pour openSUSE Leap. Le paquet "
-"<literal>-extra</literal> contient des modules non pris en charge. Le mode "
-"de préemption du noyau peut être contrôlé en définissant le paramètre "
+"preempt</package> a également été divisé en <package>kernel-preempt</"
+"package>, <package>kernel-preempt-extra</package>, et <package>kernel-"
+"preempt-optional</package>. Le paquet <literal>-optional</literal> contient "
+"des modules optionnels uniquement pour openSUSE Leap. Le paquet <literal>-"
+"extra</literal> contient des modules non pris en charge. Le mode de "
+"préemption du noyau peut être contrôlé en définissant le paramètre "
 "<literal>preempt=voluntary</literal> du noyau sur la ligne de commande. Ce "
 "paramètre fonctionne avec <package>kernel-default</package>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:329
+#: xml/release-notes.xml:354
 msgid ""
 "If you use this kernel variant, make sure that all RPMs required for your "
 "use case are installed."
@@ -608,17 +654,17 @@ msgstr ""
 "nécessaires à votre type d'utilisation sont bien installés."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:338
+#: xml/release-notes.xml:363
 msgid "Removed and deprecated packages and features"
 msgstr "Paquets et fonctionnalités supprimés et dépréciés"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:341
+#: xml/release-notes.xml:366
 msgid "Deprecated packages and features"
 msgstr "Paquets et fonctionnalités obsolètes"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:342
+#: xml/release-notes.xml:367
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -631,7 +677,7 @@ msgstr ""
 "déconseillée et ils peuvent ne pas recevoir de mise à jour."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:359
+#: xml/release-notes.xml:384
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -642,23 +688,23 @@ msgstr ""
 "commande :"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:364
+#: xml/release-notes.xml:389
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:368
+#: xml/release-notes.xml:393
 msgid "Removed packages and features"
 msgstr "Paquets et fonctionnalités supprimés"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:369
+#: xml/release-notes.xml:394
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "Les paquets supprimés ne font plus partie de la distribution."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:374
+#: xml/release-notes.xml:399
 msgid ""
 "<package>libqt4</package> and <package>kdelibs4</package> have been removed "
 "because they were unmaintained and had security issues. For more "
@@ -669,17 +715,17 @@ msgstr ""
 "Pour plus d'informations, voir <xref linkend=\"desktop-remove-kde4\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:394
+#: xml/release-notes.xml:419
 msgid "Drivers and hardware"
 msgstr "Pilotes et matériel"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:399
+#: xml/release-notes.xml:424
 msgid "Secure Boot: third-party drivers need to be properly signed"
 msgstr "Secure Boot : les pilotes tiers doivent être correctement signés"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:400
+#: xml/release-notes.xml:425
 msgid ""
 "openSUSE Leap 15.2 and later enable a kernel module signature check for "
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
@@ -691,7 +737,7 @@ msgstr ""
 "importante pour éviter l’exécution de code non-approuvé dans le noyau."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:406
+#: xml/release-notes.xml:431
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -705,7 +751,7 @@ msgstr ""
 "comportement suivant :"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:415
+#: xml/release-notes.xml:440
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -716,7 +762,7 @@ msgstr ""
 "de données de clés du système seront bloqués."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:422
+#: xml/release-notes.xml:447
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -732,7 +778,7 @@ msgstr ""
 "UEFI\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:429
+#: xml/release-notes.xml:454
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -748,24 +794,24 @@ msgstr ""
 "xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:441
+#: xml/release-notes.xml:466
 msgid "Desktop"
 msgstr "Bureau"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:442
+#: xml/release-notes.xml:467
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr ""
 "Cette section liste les problèmes et les changements liés aux environnements "
 "de bureau dans openSUSE Leap 15.3."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:447
+#: xml/release-notes.xml:472
 msgid "KDE 4 and Qt4 have been removed"
 msgstr "KDE 4 et Qt 4 ont été supprimés"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:448
+#: xml/release-notes.xml:473
 msgid ""
 "KDE 4 packages are no longer part of openSUSE Leap 15.3. Update your system "
 "to Plasma 5 and Qt 5. Some Qt 4 packages may still remain for compatibility "
@@ -774,23 +820,47 @@ msgid ""
 msgstr ""
 "Les paquets KDE 4 ne font plus partie d'openSUSE Leap 15.3. Mettez votre "
 "système à jour vers Plasma 5 et Qt 5. Certains paquets Qt 4 peuvent "
-"subsister pour des raisons de compatibilité. Pour plus d'informations, voir <"
-"link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
+"subsister pour des raisons de compatibilité. Pour plus d'informations, voir "
+"<link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:483
+msgid "Manual config migration of IBus is necessary due to layout name change"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:484
+msgid ""
+"Since <package>IBus</package> version 1.5.23 renamed some keyboard layouts, "
+"it cannot load configuration containing these renamed layouts after "
+"upgrading. Thereby, it might reset the layout to US. Layouts of the "
+"following languages are affected: Belgian, German, Greek, Romanian, and "
+"Slovak. See <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
+"id=1177545\"/> for more information."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:491
+msgid ""
+"Users need to migrate configuration manually. Open GNOME Settings and choose "
+"an appropriate layout. For desktop environments other than GNOME, run "
+"<literal>ibus-setup</literal> instead."
+msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:519
+#: xml/release-notes.xml:560
 msgid "More information and feedback"
 msgstr "Plus d'informations et de retours"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:522
+#: xml/release-notes.xml:563
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 "Veuillez lire les documents <filename>README</filename> sur le support de "
 "stockage."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:527
+#: xml/release-notes.xml:568
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -799,19 +869,19 @@ msgstr ""
 "paquet particulier à partir de RPM :"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:531
+#: xml/release-notes.xml:572
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NOM_DU_PAQUET</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:532
+#: xml/release-notes.xml:573
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Remplacez <replaceable>NOM_DU_PAQUET</replaceable> par le nom du paquet RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:537
+#: xml/release-notes.xml:578
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -821,7 +891,7 @@ msgstr ""
 "apportées aux paquets mis à jours."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:543
+#: xml/release-notes.xml:584
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -830,7 +900,7 @@ msgstr ""
 "le support de stockage."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:590
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -839,7 +909,7 @@ msgstr ""
 "href=\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:555
+#: xml/release-notes.xml:596
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -848,7 +918,7 @@ msgstr ""
 "www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:562
+#: xml/release-notes.xml:603
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
 
@@ -2284,9 +2354,6 @@ msgstr "Copyright © SUSE LLC"
 #~ msgstr ""
 #~ "Pour éviter de tels problèmes, modifiez les permissions avec la commande "
 #~ "<command>chmod</command>."
-
-#~ msgid "Upgrading from openSUSE Leap 42.2"
-#~ msgstr "Mise à niveau depuis openSUSE Leap 42.2"
 
 #~ msgid ""
 #~ "The following packages have been removed or replaced compared to openSUSE "
