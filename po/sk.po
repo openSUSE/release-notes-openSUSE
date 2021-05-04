@@ -3,16 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2021-05-03 20:27+0200\n"
-"PO-Revision-Date: 2021-03-02 10:40+0000\n"
+"PO-Revision-Date: 2021-05-04 20:57+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
-"Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/sk/>\n"
+"Language-Team: Slovak <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.6\n"
 
 # Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -448,7 +448,7 @@ msgid ""
 "to break if too much data gets written to the UEFI storage area. However, "
 "there is no clear data of how much is <quote>too much</quote>."
 msgstr ""
-"<emphasis>Pozadie:</emphasis>  Niektoré firmware UEFI obsahujú chyby, ktoré "
+"<emphasis>Pozadie:</emphasis> Niektoré firmware UEFI obsahujú chyby, ktoré "
 "spôsobujú nefunkčnosť, ak je zapísaných do úložného priestoru UEFI príliš "
 "veľa dát. Nikto v skutočnosti nevie, koľko je to <quote>príliš veľa</quote>."
 
@@ -547,10 +547,8 @@ msgstr "Okrem toho skontrolujte <xref linkend=\"removed-deprecated\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:310
-#, fuzzy
-#| msgid "Upgrading from openSUSE Leap 42.2"
 msgid "Seamless upgrade from openSUSE Leap 15.2"
-msgstr "Zvýšenie verzie systému z openSUSE Leap 42.2"
+msgstr "Bezproblémové zvýšenie verzie z openSUSE Leap 15.2"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:312
@@ -560,6 +558,10 @@ msgid ""
 "Leap Gap (CtLG) effort to bring openSUSE Leap and SUSE Linux Enterprise "
 "Server closer together."
 msgstr ""
+"openSUSE Leap 15.3 je novo postavené na binárnych balíkoch rpm zo SUSE Linux "
+"Enterprise Server. Táto zmena bola zavedená ako súčasť úsilia Closing The "
+"Leap Gap (CtLG) priblížiť openSUSE Leap a SUSE Linux Enterprise Server "
+"bližšie k sebe."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:317
@@ -574,6 +576,15 @@ msgid ""
 "vendor-change</literal> during migration if you are using OBS repositories "
 "signed with other keys."
 msgstr ""
+"Na rozdiel od verzie 15.2 obsahuje predvolená inštalácia openSUSE Leap 15.3 "
+"väčšinu balíkov rpms zo SUSE Linux Enterprise Server. Tieto balíky rpm sú "
+"podpísané od SUSE LLC namiesto použitia kľúča openSUSE. Veryia balíka "
+"<package>libzypp</package> 12.25.8 zaviedol zoznam povolených pre výmena "
+"dodávateľov SUSE LLC a openSUSE, ktorá umožňuje bezproblémovú migráciu. "
+"Tento zoznam povolených odstraňuje potrebu špecifikovať <literal>--allow-"
+"vendor-change</literal> iba pre výmena dodávateľov openSUSE a SUSE LLC. "
+"Možno budete stále musieť špecifikovať <literal>--allow-vendor-change</"
+"literal> počas migrácie, ak používate repozitáre OBS podpísané inými kľúčmi."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:329
@@ -584,12 +595,17 @@ msgid ""
 "parameters can be used as a workaround for <package>libzypp</package> "
 "versions older than 12.25.8:"
 msgstr ""
+"Vydania openSUSE Leap staršie ako 15.2 túto funkciu neobsahujú, pretože už "
+"nie sú podporované. Všetkým používateľom sa odporúča povýšiť na openSUSE "
+"Leap 15.2 s najnovšími aktualizáciami pred zvýšením verzie na 15.3. "
+"Nasledujúce parametre možno použiť ako riešenie pre verzie <package>libzypp</"
+"package> staršie ako 12.25.8:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:336
 #, no-wrap
 msgid "zypper dup --allow-vendor-change --force-resolution"
-msgstr ""
+msgstr "zypper dup --allow-vendor-change --force-resolution"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:340
@@ -804,6 +820,7 @@ msgstr ""
 #: xml/release-notes.xml:483
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
+"Ručná migrácia konfigurácie IBus je nevyhnutná z dôvodu zmeny názvu rozložení"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:484
@@ -815,6 +832,12 @@ msgid ""
 "Slovak. See <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1177545\"/> for more information."
 msgstr ""
+"Pretože verzia <package>IBus</package> 1.5.23 premenovala niektoré "
+"rozloženia klávesníc, po zvýšení verzie nedokáže načítať konfiguráciu "
+"obsahujúcu tieto premenované rozloženia. Týmto by sa mohlo rozloženie "
+"vynulovať na USA. Ovplyvnené sú rozloženia nasledujúcich jazykov: belgický, "
+"nemecký, grécky, rumunský a slovenský. Viac informácií nájdete na <link "
+"xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1177545\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:491
@@ -823,6 +846,9 @@ msgid ""
 "an appropriate layout. For desktop environments other than GNOME, run "
 "<literal>ibus-setup</literal> instead."
 msgstr ""
+"Používatelia musia migrovať konfiguráciu ručne. Otvorte nastavenia GNOME a "
+"zvoľte príslušné rozloženie. Pre desktopové prostredia iné ako GNOME "
+"spustite namiesto toho <literal>ibus-setup</literal> ."
 
 # bnc#809347
 #. (itstool) path: sect1/title
