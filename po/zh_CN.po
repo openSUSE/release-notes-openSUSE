@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2021-05-03 20:27+0200\n"
-"PO-Revision-Date: 2021-03-30 15:57+0000\n"
+"PO-Revision-Date: 2021-05-05 11:55+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
-"notes-opensuse/leap-15_3/zh_CN/>\n"
+"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.6\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -24,7 +24,7 @@ msgid "translator-credits"
 msgstr ""
 "玛格丽特‧苏 <marguerite@opensuse.org>, 2013\n"
 "Grover Chou <groverchout@opensuse.org>, 2017\n"
-"Dingzhong Chen <wsxy162@gmail.com>, 2018"
+"Dingzhong Chen <wsxy162@gmail.com>, 2018, 2021"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -504,10 +504,8 @@ msgstr "如需了解更多信息，请见 <xref linkend=\"removed-deprecated\"/>
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:310
-#, fuzzy
-#| msgid "Upgrading from openSUSE Leap 42.2"
 msgid "Seamless upgrade from openSUSE Leap 15.2"
-msgstr "从 openSUSE Leap 42.2 升级"
+msgstr "从 openSUSE Leap 15.2 无缝升级"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:312
@@ -517,6 +515,9 @@ msgid ""
 "Leap Gap (CtLG) effort to bring openSUSE Leap and SUSE Linux Enterprise "
 "Server closer together."
 msgstr ""
+"openSUSE Leap 15.3 构建于 SUSE Linux Enterprise Server 的二进制 RPM 包之上。这个改变由 "
+"Closing The Leap Gap (CtLG) 计划推出，为了拉近 penSUSE Leap 和 SUSE Linux Enterprise "
+"Server 的距离。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:317
@@ -531,6 +532,11 @@ msgid ""
 "vendor-change</literal> during migration if you are using OBS repositories "
 "signed with other keys."
 msgstr ""
+"不像 15.2，openSUSE Leap 15.3 的默认安装会包含大多数来自 SUSE Linux Enterprise Server 的 RPM "
+"包。这篇 RPM 包使用 SUSE LLC 而非 openSUSE 的密钥来签名。<package>libzypp</package> 软件包版本 "
+"12.25.8 为 SUSE LCC 和 openSUSE 厂商更换引入了白名单功能，令迁移无缝进行。白名单只适用于 openSUSE 和 SUSE "
+"LLC 的厂商更换，移除其指定 <literal>--allow-vendor-change</literal> 的需要。当你使用以其他密钥签名的 "
+"OBS 仓库进行迁移时，你依旧需要指定 <literal>--allow-vendor-change</literal>。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:329
@@ -541,12 +547,14 @@ msgid ""
 "parameters can be used as a workaround for <package>libzypp</package> "
 "versions older than 12.25.8:"
 msgstr ""
+"openSUSE Leap 早于 15.2 的发行版本不包含此功能，因为它们已不再受支持。建议所有用户在升级到 15.3 之前都升级到 openSUSE "
+"Leap 15.2 并更新到最新。以下参数可以用作 <package>libzypp</package> 版本低于 12.25.8 的替代解决方法："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:336
 #, no-wrap
 msgid "zypper dup --allow-vendor-change --force-resolution"
-msgstr ""
+msgstr "zypper dup --allow-vendor-change --force-resolution"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:340
@@ -744,7 +752,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:483
 msgid "Manual config migration of IBus is necessary due to layout name change"
-msgstr ""
+msgstr "因为布局名称变动必须手动配置 IBus 的迁移"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:484
@@ -756,6 +764,9 @@ msgid ""
 "Slovak. See <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1177545\"/> for more information."
 msgstr ""
+"由于 <package>IBus</package> 1.5.23 版本重命名了一些键盘布局，在升级过后无法加载包含这些重命名布局的配置。因此，它可能会重"
+"置为美国布局。以下地区的语言布局受到影响：比利时、德国、希腊、罗马尼亚和斯洛伐克。详情见 <link xlink:href=\"https"
+"://bugzilla.opensuse.org/show_bug.cgi?id=1177545\"/>。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:491
@@ -764,6 +775,8 @@ msgid ""
 "an appropriate layout. For desktop environments other than GNOME, run "
 "<literal>ibus-setup</literal> instead."
 msgstr ""
+"用户需要手动迁移配置。打开 GNOME 设置后选择合适的布局。对于非 GNOME 的其他桌面环境，运行 <literal>ibus-setup</"
+"literal> 来配置。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:560
