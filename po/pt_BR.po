@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2021-05-03 20:27+0200\n"
-"PO-Revision-Date: 2021-03-10 14:38+0000\n"
+"PO-Revision-Date: 2021-05-07 17:57+0000\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/pt_BR/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.6.1\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -555,10 +555,8 @@ msgstr "Adicionalmente, verifique <xref linkend=\"removed-deprecated\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:310
-#, fuzzy
-#| msgid "Upgrading from openSUSE Leap 42.2"
 msgid "Seamless upgrade from openSUSE Leap 15.2"
-msgstr "Atualizando do openSUSE Leap 42.2"
+msgstr "Atualizando do openSUSE Leap 15.2"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:312
@@ -568,6 +566,10 @@ msgid ""
 "Leap Gap (CtLG) effort to bring openSUSE Leap and SUSE Linux Enterprise "
 "Server closer together."
 msgstr ""
+"O openSUSE Leap 15.3 foi criado recentemente com base nos RPMs do SUSE Linux "
+"Enterprise Server. Esta alteração foi introduzida como parte do esforço "
+"\"Closing The Leap Gap (CtLG)\" para aproximar o openSUSE Leap e o SUSE "
+"Linux Enterprise Server ainda mais."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:317
@@ -582,6 +584,16 @@ msgid ""
 "vendor-change</literal> during migration if you are using OBS repositories "
 "signed with other keys."
 msgstr ""
+"Diferente do 15.2, a instalação padrão do openSUSE Leap 15.3 contém a "
+"maioria dos RPMs vindos do SUSE Linux Enterprise Server. Estes RPMs são "
+"assinados pela SUSE LLC ao invés da chave do openSUSE. O pacote "
+"<package>libzypp</package> versão 12.25.8 introduziu a lista de permissões "
+"para SUSE LLC e openSUSE poderem trocar de fornecedor permitindo a migração "
+"sem problemas. A lista de permissões removeu a necessidade de especificar "
+"<literal>--allow-vendor-change</literal> apenas para a troca entre os "
+"fornecedores openSUSE e SUSE LLC. Você pode ainda precisar especificar "
+"<literal>--allow-vendor-change</literal> durante a migração se estiver "
+"utilizando repositórios do OBS assinados com outras chaves."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:329
@@ -592,12 +604,18 @@ msgid ""
 "parameters can be used as a workaround for <package>libzypp</package> "
 "versions older than 12.25.8:"
 msgstr ""
+"As versões do openSUSE Leap mais antigas do que a 15.2 não contém este "
+"recurso pois elas não são mais suportadas. Todos os usuários são "
+"aconselhados a atualizar para o openSUSE Leap 15.2 com as últimas "
+"atualizações antes de atualizar para o 15.3. Os parâmetros a seguir podem "
+"ser usados como solução alternativa para versões do <package>libzypp</"
+"package> mais antigas que 12.25.8:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:336
 #, no-wrap
 msgid "zypper dup --allow-vendor-change --force-resolution"
-msgstr ""
+msgstr "zypper dup --allow-vendor-change --force-resolution"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:340
@@ -817,6 +835,8 @@ msgstr ""
 #: xml/release-notes.xml:483
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
+"A migração da configuração manual do IBus é necessária devido à alteração do "
+"nome do layout"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:484
@@ -828,6 +848,12 @@ msgid ""
 "Slovak. See <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1177545\"/> for more information."
 msgstr ""
+"Desde que a versão 1.5.23 do <package>IBus</package> renomeou alguns layouts "
+"de teclado, ele não pode carregar a configuração que contém estes layouts "
+"renomeados após a atualização. Assim, ele pode redefinir o layout para o dos "
+"EUA. Os layouts dos idiomas a seguir foram afetados: alemão, belga, "
+"eslovaco, grego e romeno. Veja <link xlink:href=\"https://bugzilla.opensuse."
+"org/show_bug.cgi?id=1177545\"/> para mais informação."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:491
