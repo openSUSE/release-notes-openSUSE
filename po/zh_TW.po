@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2020-07-23 14:50+0200\n"
-"PO-Revision-Date: 2021-03-01 20:48+0000\n"
-"Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
+"PO-Revision-Date: 2021-05-13 08:57+0000\n"
+"Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_2/zh_TW/>\n"
 "Language: zh_TW\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.6.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -330,9 +330,8 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
-"要取消最後一個快照對 root 檔案系統所做的變更，請先確認您的系統是使用最後一個"
-"快照之前的快照開機，然後執行：\n"
-"<command>transactional-update rollback</command>"
+"要取消最後一個快照對 root 檔案系統所做的變更，請先確認您的系統是使用最後一個快照之前的快照開機，然後執行：<command"
+">transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:195
@@ -428,10 +427,9 @@ msgid ""
 "is recommended to install any firmware updates the hardware vendor "
 "recommends."
 msgstr ""
-"openSUSE 藉由只寫入能夠啟動系統的最少需要的資料量，來降低這個風險。寫入的資料"
-"至少要能告訴 UEFI 韌體 openSUSE 啟動程式的位置。官方 Linux 核心提供使用 UEFI "
-"儲存區來寫入開機及當機資訊的功能  (<literal>pstore</literal>)，在此預設被停"
-"用。無論如何，建議安裝任何硬體製造商建議的韌體更新。"
+"openSUSE 藉由只寫入能夠啟動系統的最少需要的資料量，來降低這個風險。寫入的資料至少要能告訴 UEFI 韌體 openSUSE 啟動程式的位置。"
+"官方 Linux 核心提供使用 UEFI 儲存區來寫入開機及當機資訊的功能 "
+"(<literal>pstore</literal>)，在此預設被停用。無論如何，建議安裝任何硬體製造商建議的韌體更新。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:254
@@ -843,39 +841,22 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:559
-#, fuzzy
-#| msgid ""
-#| "This may prevent third-party kernel modules from being loaded if UEFI "
-#| "Secure Boot is enabled. Importantly, this affects NVIDIA or AMD graphics "
-#| "drivers from the manufacturer's repositories. Kernel Module Packages "
-#| "(KMPs) from the official openSUSE repositories are not affected, because "
-#| "the modules they contain are signed with the openSUSE key. The signature "
-#| "check has the following behavior:"
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
-"若 UEFI Secure Boot 被啟用，該功能會阻擋第三方核心模組被載入。重要的是，這也"
-"會影響來自 NVIDIA 或 AMD 廠商自行維護套件庫的圖形驅動程式。來自 openSUSE 官方"
-"套件庫的內核模組套件 (Kernel Module Packages, KMPs)，由於這些模組已使用 "
-"openSUSE 金鑰簽章過，故不會受影響。簽章檢查會有以下的行為："
+"若 UEFI Secure Boot 被啟用，該功能會阻擋第三方核心模組被載入。來自 openSUSE 官方套件庫的核心模組套件 (Kernel "
+"Module Packages, KMPs)，由於這些模組已使用 openSUSE 金鑰簽章過，故不會受影響。簽章檢查會有以下的行為："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:568
-#, fuzzy
-#| msgid ""
-#| "Kernel modules that are signed with a key that is either known as "
-#| "untrusted or cannot be verified against the system's trusted key data "
-#| "base will be blocked."
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
-msgstr ""
-"被已知為不被信任的金鑰簽章或是無法使用系統信任金鑰資料庫驗證的核心模組會被禁"
-"止載入。"
+msgstr "未簽章過、或被已知為不被信任或是無法使用系統信任金鑰資料庫驗證的金鑰簽章過的核心模組會被禁止載入。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:575
@@ -900,6 +881,9 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:href="
 "\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"因為這也影響了 NVIDIA 圖形驅動程式，我們已在 openSUSE 官方套件中解決了這個問題。然而，在安裝之後，您需要手動加入一個新的 MOK "
+"金鑰才能使新套件運作。關於如何安裝驅動程式與加入 MOK 金鑰的指引，請見 <link xlink:href=\"https://en.opensuse."
+"org/SDB:NVIDIA_drivers#Secureboot\"/>。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:594
