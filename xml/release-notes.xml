@@ -334,6 +334,27 @@
     <package>libzypp</package> versions older than 12.25.8:
    </para>
    <screen>zypper dup --allow-vendor-change --force-resolution</screen>
+
+   <para>
+    &opensuseleap; 15.3 supplies all required rpm veryfication keys including the &sles;
+    as part of <package>openSUSE-build-key</package>.
+    All keys are also newly available in the oss repository.
+
+    <package>libzypp-17.25.11</package> imports all keys automatically.
+    However, we recommend following steps in case you need to import keys manually.
+
+    Download key
+    https://download.opensuse.org/distribution/leap/15.3/repo/oss/39db7c82-5847eb1f.asc
+
+    Create the directory /var/cache/zypp/pubkeys if it does not exist and put the file there.
+    Rename the file so it ends on '.key'
+    You can put multiple .key filest here, also concatenated key files containing multiple keys.
+
+    If you do the 'zypper dup' interactively, zypp will show and ask to import the missing key if is found in there.
+    Even if the file would contain multiple keys, zypp will import just the one required.
+
+    <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1184326"/>
+   </para>
   </sect2>
 
   <sect2 xml:id="sec-upgrade-kernel">
