@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2021-05-27 15:07+0200\n"
-"PO-Revision-Date: 2021-05-04 01:28+0000\n"
+"PO-Revision-Date: 2021-05-27 20:59+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/ca/>\n"
+"Language-Team: Catalan <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.6\n"
+"X-Generator: Weblate 4.6.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -92,7 +92,7 @@ msgid ""
 "incomplete."
 msgstr ""
 "Les notes de la versió estan en desenvolupament constant. Per descobrir-ne "
-"les últimes actualitzacions, vegeu-ne la versió en línia a  <link xlink:href="
+"les últimes actualitzacions, vegeu-ne la versió en línia a <link xlink:href="
 "\"https://doc.opensuse.org/release-notes\"/>. La versió en anglès "
 "s'actualitza sempre que cal. Les versions traduïdes poden ser temporalment "
 "incompletes."
@@ -217,7 +217,7 @@ msgid ""
 msgstr ""
 "L'instal·lador admet el rol de sistema <emphasis>Servidor transaccional</"
 "emphasis>. Aquest rol de sistema presenta un sistema d'actualització nou que "
-"aplica les actualitzacions  atòmicament (com una única operació) i fa que "
+"aplica les actualitzacions atòmicament (com una única operació) i fa que "
 "sigui fàcil revertir-les si esdevé necessari. Aquestes funcionalitats estan "
 "basades en les eines de gestió de paquets en què es basen totes les altres "
 "distribucions de SUSE i d'openSUSE. Això vol dir que una àmplia majoria de "
@@ -236,8 +236,8 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
-"Alguns paquets modifiquen els continguts  de <filename>/var</filename> o "
-"<filename>/srv</filename> als scripts  <literal>%post</literal> d'RPM. "
+"Alguns paquets modifiquen els continguts de <filename>/var</filename> o "
+"<filename>/srv</filename> als scripts <literal>%post</literal> d'RPM. "
 "Aquests paquets no són compatibles. Si en trobeu un, tramiteu un informe "
 "d'error."
 
@@ -364,8 +364,8 @@ msgid ""
 msgstr ""
 "Per retrocedir a la instantània anterior, que és l'últim conjunt de canvis "
 "del sistema de fitxers d'arrel, assegureu-vos que el sistema s'hagi arrencat "
-"amb amb la penúltima instantània i executeu el següent: "
-"<command>transactional-update rollback</command>"
+"amb la penúltima instantània i executeu el següent: <command>transactional-"
+"update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:195
@@ -507,7 +507,7 @@ msgid ""
 "rewrite consists of two different operations: Removing the old entry and "
 "creating a new entry that replaces the first one."
 msgstr ""
-"Addicionalment, l'especificació UEFI  també permet particions de llegat MBR "
+"Addicionalment, l'especificació UEFI també permet particions de llegat MBR "
 "(MS-DOS). Els carregadors d'arrencada de Linux (ELILO o GRUB2) intenten "
 "generar automàticament un GUID per a aquestes particions de llegat i "
 "escriure-les al microprogramari. Aquest GUID pot canviar freqüentment i "
@@ -626,6 +626,10 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"L'openSUSE Leap 15.3 proporciona totes les claus de verificació d'RPM "
+"necessàries, incloses les del SUSE Linux Enterprise Server, com a part del "
+"paquet <package>openSUSE-build-key</package>. Totes les claus també estan "
+"disponibles al repositori OSS."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:345
@@ -634,6 +638,9 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"El paquet <package>libzypp</package>, versió 17.25.11, hauria d’importar "
+"automàticament les claus necessàries que s’identifiquen com de confiança. Si "
+"és així, se us notificarà la importació i no caldrà fer cap altra acció."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:350
@@ -642,12 +649,15 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Si el sistema no ha importat la clau que s'ha usat per signar el "
+"<literal>repodata</literal>, l'haureu d'importar manualment. Podeu comprovar-"
+"ho executant l'ordre següent:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:355
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:356
@@ -656,6 +666,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"La sortida hauria d'incloure una línia que comenci pel text següent: <literal"
+">gpg-pubkey-39db7c82- *</literal> Si no ho fa, feu el següent per importar "
+"la clau manualment:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:362
@@ -664,6 +677,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Descarregueu-vos la clau del SUSE Linux Enterprise 15 des de <link "
+"xlink:href=\"https://download.opensuse.org/distribution/leap/15.3/repo/oss/"
+"gpg-pubkey-39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:368
@@ -671,6 +687,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Deseu la clau al directori <literal>/var/cache/zypp/pubkeys</literal>. "
+"Canvieu-ne el nom perquè acabi amb <literal>.key </literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:374
@@ -680,19 +698,19 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Executeu l'ordre <literal>zypper dup</literal>. Se us demanarà que importeu "
+"la clau que falta. Això passarà fins i tot si la clau és al directori "
+"esmentat abans. Si el fitxer conté diverses claus, el zypper només importarà "
+"la clau necessària."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:383
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-#| "show_bug.cgi?id=1044816\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"Per a més informació, vegeu <link xlink:href=\"https://bugzilla.suse.com/"
-"show_bug.cgi?id=1044816\"/>."
+"Per a més informació, vegeu <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=1184326\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:389
@@ -767,6 +785,8 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"El <package>midori</package>, un navegador web lleuger basat en WebKit i GTK "
+"+, ja no és compatible i està previst que se suprimeixi a la pròxima versió."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:442
