@@ -83,7 +83,7 @@ When the above dependencies are satisfied, you can create output using:
 
 ### Web version:
   * The web version is built in the [OBS Project Documentation:Auto](https://build.opensuse.org/project/show/Documentation:Auto).
-  * It is synced to the [documentation server](https://doc.opensuse.org/
+  * It is synced to the [documentation server](https://doc.opensuse.org/)
     using the scripts from https://github.com/openSUSE/doc-o-o/tree/main/rn-config.
 
 ## More information
