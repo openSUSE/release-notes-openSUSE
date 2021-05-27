@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-27 15:07+0200\n"
-"PO-Revision-Date: 2021-05-04 01:28+0000\n"
+"PO-Revision-Date: 2021-05-27 20:59+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
-"Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/nl/>\n"
+"Language-Team: Dutch <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.6\n"
+"X-Generator: Weblate 4.6.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -629,6 +629,10 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 levert alle vereiste RPM verificatiesleutels, inclusief "
+"die van de SUSE Linux Enterprise Server, als onderdell van het pakket "
+"<package>openSUSE-build-key</package>. Alle sleutels zijn ook nieuw "
+"beschikbaar in de OSS opslagruimte."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:345
@@ -637,6 +641,10 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"De <package>libzypp</package> pakketversie 17.25.11 zou automatisch de "
+"vereiste sleutels moeten importeren die geïdentificeerd zijn als vertrouwd. "
+"Als het is gedaan, zult u een melding krijgen over het importeren en zal er "
+"geen andere actie nodig zijn."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:350
@@ -645,12 +653,15 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Als het systeem de sleutel nietheeft geïmporteerd die gebruikt was om de "
+"<literal>repodata</literal> te ondertekenen, dan moet u deze handmatig "
+"importeren. U kunt dat controleren door het volgende commando uit te voeren:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:355
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:356
@@ -659,6 +670,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"De uitvoer zou een tegel moeten bevatten die begint met de volgende tekst: "
+"<literal>gpg-pubkey-39db7c82-*</literal> zo niet, doe het volgende om de "
+"sleutel handmatig te importeren:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:362
@@ -667,6 +681,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Download de sleutel van SUSE Linux Enterprise 15 uit <link xlink:href=\"https"
+"://download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-"
+"39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:368
@@ -674,6 +691,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Sla de sleuetel op in de map <literal>/var/cache/zypp/pubkeys</literal>. "
+"Hernoem het zodat het eindigt met <literal>.key</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:374
@@ -683,19 +702,19 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Voer het commando <literal>zypper dup</literal> uit. U zal gevraagd worden "
+"om de ontbrekende sleutel te importeren. Dit zal gebeuren zelfs als de "
+"sleutel in de bovenstaand genoemde map zit. Als het bestand meerdere "
+"sleutels bevat zal zypper alleen de vereiste sleutel importeren."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:383
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-#| "show_bug.cgi?id=1044816\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"Voor meer informatie, zie <link xlink:href=\"https://bugzilla.suse.com/"
-"show_bug.cgi?id=1044816\"/>."
+"Voor meer informatie, zie <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=1184326\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:389
@@ -769,6 +788,9 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"<package>midori</package>, een lichtgewicht webbrowser gebaseerd op WebKit "
+"en GTK+, wordt niet langer ondersteund en is gepland om in de volgende "
+"uitgave te zijn verwijderd."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:442
