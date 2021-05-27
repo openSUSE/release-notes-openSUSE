@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2021-05-03 20:27+0200\n"
+"POT-Creation-Date: 2021-05-27 15:07+0200\n"
 "PO-Revision-Date: 2021-05-04 01:28+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_3/ca/>\n"
+"Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_3/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -607,19 +607,95 @@ msgid ""
 msgstr ""
 "Les versions d'openSUSE Leap anteriors a 15.2 no contenen aquesta "
 "característica perquè ja no tenen suport. Es recomana a tots els usuaris que "
-"actualitzin a openSUSE Leap 15.2 amb les darreres actualitzacions abans d’"
-"actualitzar al 15.3. Els paràmetres següents es poden usar com a solució "
-"alternativa per a versions de <package>libzypp</package> anteriors a la 12.25"
-".8:"
+"actualitzin a openSUSE Leap 15.2 amb les darreres actualitzacions abans "
+"d’actualitzar al 15.3. Els paràmetres següents es poden usar com a solució "
+"alternativa per a versions de <package>libzypp</package> anteriors a la "
+"12.25.8:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:336
+#: xml/release-notes.xml:337
 #, no-wrap
 msgid "zypper dup --allow-vendor-change --force-resolution"
 msgstr "zypper dup --allow-vendor-change --force-resolution"
 
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:339
+msgid ""
+"openSUSE Leap 15.3 provides all the required RPM verification keys, "
+"including the SUSE Linux Enterprise Server ones, as part of the "
+"<package>openSUSE-build-key</package> package. All the keys are also newly "
+"available inside the OSS repository."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:345
+msgid ""
+"The <package>libzypp</package> package version 17.25.11 should automatically "
+"import the required keys that are identified as trusted. If it has, you will "
+"be notified about the import and no other action will be needed."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:350
+msgid ""
+"If the system has not imported the key that was used to sign the "
+"<literal>repodata</literal>, you will need to import it manually. You can "
+"check by running the following command:"
+msgstr ""
+
+#. (itstool) path: sect2/screen
+#: xml/release-notes.xml:355
+#, no-wrap
+msgid "rpm -qa gpg-pubkey"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:356
+msgid ""
+"The output should include a line starting with the following text: "
+"<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
+"following to import the key manually:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:362
+msgid ""
+"Download the SUSE Linux Enterprise 15 key from <link xlink:href=\"https://"
+"download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
+"pubkey-39db7c82-5847eb1f.asc\"/>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:368
+msgid ""
+"Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
+"Rename it so that it ends with <literal>.key</literal>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:374
+msgid ""
+"Run the <literal>zypper dup</literal> command. You will be asked to import "
+"the missing key. This will happen even if the key is in the directory "
+"mentioned above. If the file contains multiple keys, zypper will import only "
+"the required key."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:383
+#, fuzzy
+#| msgid ""
+#| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
+#| "show_bug.cgi?id=1044816\"/>."
+msgid ""
+"For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=1184326\"/>."
+msgstr ""
+"Per a més informació, vegeu <link xlink:href=\"https://bugzilla.suse.com/"
+"show_bug.cgi?id=1044816\"/>."
+
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:340
+#: xml/release-notes.xml:389
 msgid ""
 "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel packaging"
 msgstr ""
@@ -627,7 +703,7 @@ msgstr ""
 "Server i l'openSUSE Leap"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:341
+#: xml/release-notes.xml:390
 msgid ""
 "On openSUSE Leap, the default kernel has been split into three subpackages: "
 "<package>kernel-default</package>, <package>kernel-default-extra</package>, "
@@ -654,7 +730,7 @@ msgstr ""
 "package>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:354
+#: xml/release-notes.xml:403
 msgid ""
 "If you use this kernel variant, make sure that all RPMs required for your "
 "use case are installed."
@@ -663,17 +739,17 @@ msgstr ""
 "per a l'ús que us cal estan instal·lats."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:363
+#: xml/release-notes.xml:412
 msgid "Removed and deprecated packages and features"
 msgstr "Paquets i característiques suprimits i obsolets"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:366
+#: xml/release-notes.xml:415
 msgid "Deprecated packages and features"
 msgstr "Paquets i característiques obsolets"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:367
+#: xml/release-notes.xml:416
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -685,8 +761,15 @@ msgstr ""
 "Leap. Aquests paquets existeixen per ajudar a fer la migració, però se'n "
 "desencoratja l'ús i poden no rebre actualitzacions."
 
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:435
+msgid ""
+"<package>midori</package>, a lightweight web browser based on WebKit and GTK"
+"+, is no longer suppored and is scheduled for removal in next release."
+msgstr ""
+
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:384
+#: xml/release-notes.xml:442
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -697,23 +780,23 @@ msgstr ""
 "package> estigui instal·lat i useu l'ordre següent:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:389
+#: xml/release-notes.xml:447
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:393
+#: xml/release-notes.xml:451
 msgid "Removed packages and features"
 msgstr "Paquets i característiques suprimits"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:394
+#: xml/release-notes.xml:452
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "Els paquets suprimits ja no s'inclouen com a part de la distribució."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:399
+#: xml/release-notes.xml:457
 msgid ""
 "<package>libqt4</package> and <package>kdelibs4</package> have been removed "
 "because they were unmaintained and had security issues. For more "
@@ -724,19 +807,19 @@ msgstr ""
 "informació, vegeu <xref linkend=\"desktop-remove-kde4\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:419
+#: xml/release-notes.xml:477
 msgid "Drivers and hardware"
 msgstr "Controladors i maquinari"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:424
+#: xml/release-notes.xml:482
 msgid "Secure Boot: third-party drivers need to be properly signed"
 msgstr ""
 "Arrencada segura: els controladors de tercers han d'estar signats "
 "correctament."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:425
+#: xml/release-notes.xml:483
 msgid ""
 "openSUSE Leap 15.2 and later enable a kernel module signature check for "
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
@@ -748,7 +831,7 @@ msgstr ""
 "important per evitar que s’executi codi que no sigui de confiança al nucli."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:431
+#: xml/release-notes.xml:489
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -762,7 +845,7 @@ msgstr ""
 "comportament següent:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:440
+#: xml/release-notes.xml:498
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -773,7 +856,7 @@ msgstr ""
 "confiança del sistema."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:447
+#: xml/release-notes.xml:505
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -788,7 +871,7 @@ msgstr ""
 "xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:454
+#: xml/release-notes.xml:512
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -804,24 +887,24 @@ msgstr ""
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:466
+#: xml/release-notes.xml:524
 msgid "Desktop"
 msgstr "Escriptori"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:467
+#: xml/release-notes.xml:525
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr ""
 "Aquesta secció llista problemes de l'escriptori i canvis a l'openSUSE Leap "
 "15.3."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:472
+#: xml/release-notes.xml:530
 msgid "KDE 4 and Qt4 have been removed"
 msgstr "El KDE 4 i Qt 4 s'han suprimit."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:473
+#: xml/release-notes.xml:531
 msgid ""
 "KDE 4 packages are no longer part of openSUSE Leap 15.3. Update your system "
 "to Plasma 5 and Qt 5. Some Qt 4 packages may still remain for compatibility "
@@ -834,14 +917,14 @@ msgstr ""
 "<link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:483
+#: xml/release-notes.xml:541
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
 "La migració manual de la configuració de l'IBus és necessària a causa del "
 "canvi de nom de disposicions."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:484
+#: xml/release-notes.xml:542
 msgid ""
 "Since <package>IBus</package> version 1.5.23 renamed some keyboard layouts, "
 "it cannot load configuration containing these renamed layouts after "
@@ -859,7 +942,7 @@ msgstr ""
 "obtenir-ne més informació."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:491
+#: xml/release-notes.xml:549
 msgid ""
 "Users need to migrate configuration manually. Open GNOME Settings and choose "
 "an appropriate layout. For desktop environments other than GNOME, run "
@@ -870,17 +953,17 @@ msgstr ""
 "diferents del GNOME, executeu <literal>ibus-setup</literal>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:560
+#: xml/release-notes.xml:618
 msgid "More information and feedback"
 msgstr "Més informació i informació de retorn"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:563
+#: xml/release-notes.xml:621
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Llegiu els documents <filename>README</filename> del mitjà."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:568
+#: xml/release-notes.xml:626
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -889,19 +972,19 @@ msgstr ""
 "respecte del seu RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:572
+#: xml/release-notes.xml:630
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NOMDELFITXER</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:573
+#: xml/release-notes.xml:631
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Reemplaceu <replaceable>NOMDELFITXER</replaceable> amb el nom de l'RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:578
+#: xml/release-notes.xml:636
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -911,7 +994,7 @@ msgstr ""
 "actualitzats."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:584
+#: xml/release-notes.xml:642
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -919,7 +1002,7 @@ msgstr ""
 "Trobeu més informació dins del directori <filename>docu</filename> del mitjà."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:590
+#: xml/release-notes.xml:648
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -928,7 +1011,7 @@ msgstr ""
 "href=\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:596
+#: xml/release-notes.xml:654
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -937,7 +1020,7 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:603
+#: xml/release-notes.xml:661
 msgid "Copyright © SUSE LLC"
 msgstr "Dret de còpia © SUSE LLC"
 
@@ -2286,13 +2369,6 @@ msgstr "Dret de còpia © SUSE LLC"
 #~ msgstr ""
 #~ "Si decidiu desinstal·lar el controlador Nvidia més tard, assegureu-vos de "
 #~ "reinstal·lar el paquet <package>drm-kmp-default</package>."
-
-#~ msgid ""
-#~ "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-#~ "show_bug.cgi?id=1044816\"/>."
-#~ msgstr ""
-#~ "Per a més informació, vegeu <link xlink:href=\"https://bugzilla.suse.com/"
-#~ "show_bug.cgi?id=1044816\"/>."
 
 #~ msgid ""
 #~ "Open YaST and from it, open <menuchoice><guimenu>/etc/sysconfig Manager</"
