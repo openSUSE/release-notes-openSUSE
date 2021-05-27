@@ -1,9 +1,9 @@
 This is the repository for the openSUSE release notes.
 
 If you are looking for an online version of the release notes, see the
-[documentation server](https://doc.opensuse.org/release-notes).
+[documentation server](https://doc.opensuse.org/).
 
-To learn how to contribute, read on...
+To learn how to contribute, read on!
 
 ## Writing
 
@@ -12,10 +12,10 @@ To learn how to contribute, read on...
   * Before proposing a release notes entry about a concerns a software bug,
     make sure that the software bug itself is reported on Bugzilla.
 
-### Getting the Change In
+### Getting the change in
 If you see an issue or want to add an entry, you can contribute in two ways:
 
-* Create a [bug report](https://bugzilla.opensuse.org/enter_bug.cgi?&product=openSUSE%20Distribution&component=Release%20Notes&short_desc=[rn]+&assigned_to=sknorr%40suse.com).
+* Create a [bug report](https://bugzilla.opensuse.org/enter_bug.cgi?&product=openSUSE%20Distribution&component=Release%20Notes&short_desc=[rn]+&assigned_to=lukas.kucharczyk%40suse.com).
   You will need an openSUSE account to do so.
   * Make sure to mention the affected openSUSE version.
   * If you are proposing a new entry, create a draft entry.
@@ -42,7 +42,7 @@ To translate openSUSE release notes, use [Weblate](https://l10n.opensuse.org/pro
 
 ## Building
 
-### Build Requirements
+### Build requirements
 
 * Task runner:
   - `make`
@@ -56,7 +56,7 @@ To translate openSUSE release notes, use [Weblate](https://l10n.opensuse.org/pro
   - `xml2po`
   - `xmlcharent`
 
-### Manual Build
+### Manual build
 
 When the above dependencies are satisfied, you can create output using:
 
@@ -65,7 +65,7 @@ When the above dependencies are satisfied, you can create output using:
   make all
   ```
 
-### Build Service Build
+### Build Service build
 * On the [build service](https://build.opensuse.org), search for the package
   `release-notes-openSUSE`. This package contains everything you need
   to get the release notes to build on OBS.
@@ -78,16 +78,15 @@ When the above dependencies are satisfied, you can create output using:
 
 ### Package:
   * The name of package is `release-notes-openSUSE`.
-  * The package is throughout the maintenance period of the distribution
+  * The package is updated throughout the maintenance period of the distribution
     whenever need arises.
 
-### Web Version:
+### Web version:
   * The web version is built in the [OBS Project Documentation:Auto](https://build.opensuse.org/project/show/Documentation:Auto).
-  * It is synced to the [documentation server](https://doc.opensuse.org/release-notes)
-    using the scripts contained in the directory `tools` in this repository's
-    `master` branch.
+  * It is synced to the [documentation server](https://doc.opensuse.org/
+    using the scripts from https://github.com/openSUSE/doc-o-o/tree/main/rn-config.
 
-## More Information
+## More information
 
 Find general information about the release notes at
 [https://en.opensuse.org/openSUSE:Release_Notes](https://en.opensuse.org/openSUSE:Release_Notes).
