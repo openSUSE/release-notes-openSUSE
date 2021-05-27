@@ -333,7 +333,40 @@
     following parameters can be used as a workaround for
     <package>libzypp</package> versions older than 12.25.8:
    </para>
+
    <screen>zypper dup --allow-vendor-change --force-resolution</screen>
+
+   <para>
+    &opensuseleap; 15.3 supplies all the required rpm verification keys including the &sles;
+    ones as part of <package>openSUSE-build-key</package>.
+    All the keys are newly available inside the OSS repository.
+
+    The <package>libzypp</package> package version 17.25.11 imports the required keys that were identified as trusted automatically.
+    In such a case, you will be notified about the import and no other action will be needed.
+
+    We recommend the following steps in case you need to import keys manually.
+    This would be the case if the system has not imported the key, which was used to sign the repodata.
+    Keys which are used just to sign packages will be auto-imported.
+
+    You can check if you're affected by running following command.
+   </para>
+   <screen>rpm -qa gpg-pubkey # The output should contain SLE-15 key gpg-pubkey-39db7c82*</screen>
+   <para>
+    If your system does not have the key imported, then please proceed with the following:
+
+    Download the SLE 15 key
+    https://download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-39db7c82-5847eb1f.asc
+
+    Create the directory /var/cache/zypp/pubkeys if it does not exist and put the file there.
+    Rename the file so it ends on '.key'
+    You can put multiple .key files here, also concatenated key files containing multiple keys.
+
+    If you do the 'zypper dup' interactively, zypp will show and ask to import the missing key if it is found in there.
+    Even if the file contained multiple keys, zypper would import just the required one.
+
+    <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1184326"/>
+   </para>
+
   </sect2>
 
   <sect2 xml:id="sec-upgrade-kernel">
