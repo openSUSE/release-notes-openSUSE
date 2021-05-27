@@ -20,16 +20,16 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-27 15:07+0200\n"
-"PO-Revision-Date: 2021-05-03 18:56+0000\n"
+"PO-Revision-Date: 2021-05-27 13:23+0000\n"
 "Last-Translator: Lukas Kucharczyk <lukas.kucharczyk@suse.com>\n"
-"Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/cs/>\n"
+"Language-Team: Czech <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.6\n"
+"X-Generator: Weblate 4.6.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -628,6 +628,10 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 zahrnuje všechny klíče použité k ověření balíčků, včetně "
+"těch pro SUSE Linux Enterprise Server, v rámci balíčku <package>openSUSE-"
+"build-key</package>. Všechny klíče jsou rovněž nově dostupné v repozitáři "
+"OSS."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:345
@@ -636,6 +640,10 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"Balíček <package>libzypp</package> verze 17.25.11 by měl automaticky "
+"importovat všechny vyžadované klíče, které jsou považované za důvěryhodné. "
+"Pokud se tak stalo, budete o tomto informováni a nic dalšího již nemusíte "
+"dělat."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:350
@@ -644,12 +652,15 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Pokud však systém neimportoval klíč, kterým byly podepsány "
+"<literal>repodata</literal>, budete ho muset importovat ručně. Zkontrolovat "
+"situaci můžete následujícím příkazem:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:355
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:356
@@ -658,6 +669,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"Ve výstupu byste měli vidět řádek začínající následujícím textem: <literal"
+">gpg-pubkey-39db7c82-*</literal>. Pokud tam není, následujícím způsobem klíč "
+"importujte ručně:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:362
@@ -666,6 +680,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Stáhněte klíč SUSE Linux Enterprise 15 z <link xlink:href=\"https://download."
+"opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-39db7c82-5847eb1f."
+"asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:368
@@ -673,6 +690,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Uložte klíč do adresáře <literal>/var/cache/zypp/pubkeys</literal>. "
+"Přejmenujte soubor tak, aby měl příponu <literal>.key</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:374
@@ -682,19 +701,18 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Spusťte příkaz <literal>zypper dup</literal>. Budete požádání o import "
+"chybějícího klíče, a to i pokud se klíč nachází ve výše zmíněném adresáři. "
+"Pokud soubor obsahuje více klíčů, bude importován jen požadovaný klíč."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:383
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-#| "show_bug.cgi?id=1044816\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"Více informací najdete na <link href=\"xlink:https://bugzilla.suse.com/"
-"show_bug.cgi?id=1044816\"/>."
+"Více informací najdete na <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=1184326\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:389
@@ -765,6 +783,8 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"<package>midori</package>, lehký prohlížeč založený na technologiích WebKit "
+"a GTK+, již není podporován a bude v další verzi odstraněn."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:442
