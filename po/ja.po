@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2021-05-27 15:07+0200\n"
-"PO-Revision-Date: 2021-05-27 02:02+0000\n"
+"PO-Revision-Date: 2021-05-28 06:08+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -627,6 +627,9 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 では、 <package>openSUSE-build-key</package> パッケージとして、 SUSE "
+"Linux Enterprise Server のものを含む必要な全ての RPM 検証鍵が提供されています。 OSS "
+"リポジトリでも同様に必要な鍵全てが提供されています。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:345
@@ -635,6 +638,8 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"<package>libzypp</package> パッケージのバージョン 17.25.11 では、必要となるそれらの鍵を信頼済みとして取り込む機能が提"
+"供されていますので、取り込みに関する通知メッセージは表示されるものの、追加の作業は不要になっています。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:350
@@ -643,12 +648,14 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"何らかの問題でシステム内に <literal>repodata</literal> の署名に使用している検証鍵を取り込めなかった場合は、手作業で鍵を取り込"
+"むこともできます。鍵を取り込んでいるかどうかを確認したい場合は、下記のように入力して実行してください:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:355
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:356
@@ -657,6 +664,8 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"上記を実行すると、 <literal>gpg-pubkey-39db7c82-</literal> "
+"で始まる行が表示されるはずです。表示されない場合は、必要な鍵を取り込むことができていませんので、下記の手順で鍵を取り込んでください:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:362
@@ -665,6 +674,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"まずは <link xlink:href=\"https://download.opensuse.org/distribution/leap/15.3/"
+"repo/oss/gpg-pubkey-39db7c82-5847eb1f.asc\"/> にアクセスして、 SUSE Linux Enterprise "
+"15 の鍵をダウンロードします。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:368
@@ -672,6 +684,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"ダウンロードした鍵を <literal>/var/cache/zypp/pubkeys</literal> ディレクトリ内に保存します。なお、"
+"保存にあたっては <literal>.key</literal> で終わるファイル名で保存してください。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:374
@@ -681,19 +695,17 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"あとは <literal>zypper dup</literal> コマンドを実行してください。これにより、鍵の取り込みに関するメッセージが表示されます。"
+"なお、メッセージは上述のディレクトリ内に鍵が存在する場合にのみ表示されます。また、複数の鍵が存在する場合、 zypper は必要な鍵のみを取り込みます。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:383
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-#| "show_bug.cgi?id=1044816\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"詳しくは <link xlink:href=\"https://bugzilla.suse.com/show_bug.cgi?"
-"id=1044816\"/> をお読みください。"
+"詳しくは <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"1184326\"/> をお読みください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:389
@@ -769,6 +781,8 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"<package>midori</package> は WebKit と GTK+ をベースにした軽量型 Web "
+"ブラウザですが、サポートが行われておらず、次期リリースで削除される予定です。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:442
