@@ -19,11 +19,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-27 15:07+0200\n"
+"POT-Creation-Date: 2021-05-28 11:15+0200\n"
 "PO-Revision-Date: 2021-05-27 13:23+0000\n"
 "Last-Translator: Lukas Kucharczyk <lukas.kucharczyk@suse.com>\n"
-"Language-Team: Czech <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_3/cs/>\n"
+"Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_3/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -669,9 +669,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
-"Ve výstupu byste měli vidět řádek začínající následujícím textem: <literal"
-">gpg-pubkey-39db7c82-*</literal>. Pokud tam není, následujícím způsobem klíč "
-"importujte ručně:"
+"Ve výstupu byste měli vidět řádek začínající následujícím textem: "
+"<literal>gpg-pubkey-39db7c82-*</literal>. Pokud tam není, následujícím "
+"způsobem klíč importujte ručně:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:362
@@ -681,8 +681,8 @@ msgid ""
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
 "Stáhněte klíč SUSE Linux Enterprise 15 z <link xlink:href=\"https://download."
-"opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-39db7c82-5847eb1f."
-"asc\"/>."
+"opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-39db7c82-5847eb1f.asc"
+"\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:368
@@ -825,18 +825,76 @@ msgstr ""
 "bezpečností problémy. Další informace viz <xref linkend=\"desktop-remove-"
 "kde4\"/>."
 
+#. (itstool) path: sect3/title
+#: xml/release-notes.xml:472
+msgid "Berkeley DB removed from packages"
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:473
+msgid ""
+"Berkeley DB, used as a database in certain packages, is dual-licensed under "
+"GNU AGPLv3/Sleepycat licenses. Because service vendors that redistribute our "
+"packages could find packages with these licenses potentially detrimental to "
+"their solutions, we have decided to remove Berkeley DB as a dependency from "
+"these packages. In the long term, SUSE aims to provide a solution without "
+"Berkeley DB."
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:481
+#, fuzzy
+#| msgid "These release notes cover the following areas:"
+msgid "This change affects the following packages:"
+msgstr "Tyto poznámky jsou děleny do následujících okruhů:"
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:486
+msgid "<literal>apr-util</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:491
+msgid "<literal>cyrus-sasl</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:496
+msgid "<literal>iproute2</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:501
+msgid "<literal>perl</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:506
+msgid "<literal>php7</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:511
+msgid "<literal>postfix</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:516
+msgid "<literal>rpm</literal>"
+msgstr ""
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:477
+#: xml/release-notes.xml:528
 msgid "Drivers and hardware"
 msgstr "Ovladače a hardware"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:533
 msgid "Secure Boot: third-party drivers need to be properly signed"
 msgstr "Secure Boot: Ovladače od třetích stran by měly být správně podepsány"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:483
+#: xml/release-notes.xml:534
 msgid ""
 "openSUSE Leap 15.2 and later enable a kernel module signature check for "
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
@@ -848,7 +906,7 @@ msgstr ""
 "systému."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:489
+#: xml/release-notes.xml:540
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -861,7 +919,7 @@ msgstr ""
 "openSUSE. Kontrola podpisu pracuje takto:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:498
+#: xml/release-notes.xml:549
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -872,7 +930,7 @@ msgstr ""
 "zablokovány."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:505
+#: xml/release-notes.xml:556
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -886,7 +944,7 @@ msgstr ""
 "zprávy. Viz <link xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:512
+#: xml/release-notes.xml:563
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -901,24 +959,24 @@ msgstr ""
 "href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:524
+#: xml/release-notes.xml:575
 msgid "Desktop"
 msgstr "Běžné uživatelské funkce"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:525
+#: xml/release-notes.xml:576
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr ""
 "Tato sekce uvádí problémy a změny v běžných uživatelských funkcí systému "
 "openSUSE Leap 15.3."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:530
+#: xml/release-notes.xml:581
 msgid "KDE 4 and Qt4 have been removed"
 msgstr "KDE 4 a Qt4 byly odebrány"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:531
+#: xml/release-notes.xml:582
 msgid ""
 "KDE 4 packages are no longer part of openSUSE Leap 15.3. Update your system "
 "to Plasma 5 and Qt 5. Some Qt 4 packages may still remain for compatibility "
@@ -931,12 +989,12 @@ msgstr ""
 "\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:541
+#: xml/release-notes.xml:592
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr "Ruční migrace nastavení programu IBus kvůli změnám v názvech rozvržení"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:542
+#: xml/release-notes.xml:593
 msgid ""
 "Since <package>IBus</package> version 1.5.23 renamed some keyboard layouts, "
 "it cannot load configuration containing these renamed layouts after "
@@ -953,7 +1011,7 @@ msgstr ""
 "bugzilla.opensuse.org/show_bug.cgi?id=1177545\"/> for more information."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:600
 msgid ""
 "Users need to migrate configuration manually. Open GNOME Settings and choose "
 "an appropriate layout. For desktop environments other than GNOME, run "
@@ -964,17 +1022,17 @@ msgstr ""
 "možné spustit příkaz <literal>ibus-setup</literal>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:618
+#: xml/release-notes.xml:669
 msgid "More information and feedback"
 msgstr "Další informace a zpětná vazba"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:621
+#: xml/release-notes.xml:672
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Přečtěte si dokumenty <filename>README</filename> na disku."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:626
+#: xml/release-notes.xml:677
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -983,18 +1041,18 @@ msgstr ""
 "jejich souborech RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:630
+#: xml/release-notes.xml:681
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NÁZEV_SOUBORU</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:631
+#: xml/release-notes.xml:682
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "<replaceable>NÁZEV_SOUBORU</replaceable> nahraďte názvem souboru RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:636
+#: xml/release-notes.xml:687
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1003,14 +1061,14 @@ msgstr ""
 "souboru <filename>ChangeLog</filename> v kořenovém adresáři tohoto média."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:642
+#: xml/release-notes.xml:693
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "Další informace najdete na médiu v adresáři <filename>docu</filename>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:648
+#: xml/release-notes.xml:699
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1019,7 +1077,7 @@ msgstr ""
 "\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:654
+#: xml/release-notes.xml:705
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1028,7 +1086,7 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:661
+#: xml/release-notes.xml:712
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
 
@@ -1569,11 +1627,6 @@ msgstr "Copyright © SUSE LLC"
 #~ msgstr ""
 #~ "Případně použijte vstupní metodu IBus umožňující zapsání potřebných znaků "
 #~ "bez použití předřadné klávesy."
-
-#, fuzzy
-#~| msgid "These release notes cover the following areas:"
-#~ msgid "To change the defaults, use the following alternatives:"
-#~ msgstr "Tyto poznámky jsou děleny do následujících okruhů:"
 
 #~ msgid "No Screen Lock When Using GNOME Shell But Not GDM"
 #~ msgstr "Zámek obrazovky není dostupný používáte-li GNOME Shell, ale ne GDM"

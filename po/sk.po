@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
-"POT-Creation-Date: 2021-05-27 15:07+0200\n"
+"POT-Creation-Date: 2021-05-28 11:15+0200\n"
 "PO-Revision-Date: 2021-05-27 20:59+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
-"Language-Team: Slovak <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_3/sk/>\n"
+"Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_3/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -802,18 +802,76 @@ msgstr ""
 "pretože boli neudržiavané a mali bezpečnostné problémy. Viac informácií "
 "nájdete na <xref linkend=\"desktop-remove-kde4\"/>."
 
+#. (itstool) path: sect3/title
+#: xml/release-notes.xml:472
+msgid "Berkeley DB removed from packages"
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:473
+msgid ""
+"Berkeley DB, used as a database in certain packages, is dual-licensed under "
+"GNU AGPLv3/Sleepycat licenses. Because service vendors that redistribute our "
+"packages could find packages with these licenses potentially detrimental to "
+"their solutions, we have decided to remove Berkeley DB as a dependency from "
+"these packages. In the long term, SUSE aims to provide a solution without "
+"Berkeley DB."
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:481
+#, fuzzy
+#| msgid "To change the defaults, use the following alternatives:"
+msgid "This change affects the following packages:"
+msgstr "Ak chcete zmeniť predvolené hodnoty, použite nasledujúce alternatívy:"
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:486
+msgid "<literal>apr-util</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:491
+msgid "<literal>cyrus-sasl</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:496
+msgid "<literal>iproute2</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:501
+msgid "<literal>perl</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:506
+msgid "<literal>php7</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:511
+msgid "<literal>postfix</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:516
+msgid "<literal>rpm</literal>"
+msgstr ""
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:477
+#: xml/release-notes.xml:528
 msgid "Drivers and hardware"
 msgstr "Ovládače a hardvér"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:533
 msgid "Secure Boot: third-party drivers need to be properly signed"
 msgstr "Secure Boot: Ovládače tretích strán musia byť správne podpísané"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:483
+#: xml/release-notes.xml:534
 msgid ""
 "openSUSE Leap 15.2 and later enable a kernel module signature check for "
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
@@ -825,7 +883,7 @@ msgstr ""
 "kódu v jadre."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:489
+#: xml/release-notes.xml:540
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -839,7 +897,7 @@ msgstr ""
 "správanie:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:498
+#: xml/release-notes.xml:549
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -850,7 +908,7 @@ msgstr ""
 "dôveryhodných kľúčov, budú zablokované."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:505
+#: xml/release-notes.xml:556
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -865,7 +923,7 @@ msgstr ""
 "openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:512
+#: xml/release-notes.xml:563
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -880,22 +938,22 @@ msgstr ""
 "org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:524
+#: xml/release-notes.xml:575
 msgid "Desktop"
 msgstr "Desktop"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:525
+#: xml/release-notes.xml:576
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr "Táto časť uvádza desktopové problémy a zmeny v openSUSE Leap 15.3."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:530
+#: xml/release-notes.xml:581
 msgid "KDE 4 and Qt4 have been removed"
 msgstr "KDE 4 a Qt 4 boli odstránené"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:531
+#: xml/release-notes.xml:582
 msgid ""
 "KDE 4 packages are no longer part of openSUSE Leap 15.3. Update your system "
 "to Plasma 5 and Qt 5. Some Qt 4 packages may still remain for compatibility "
@@ -908,13 +966,13 @@ msgstr ""
 "bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:541
+#: xml/release-notes.xml:592
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
 "Ručná migrácia konfigurácie IBus je nevyhnutná z dôvodu zmeny názvu rozložení"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:542
+#: xml/release-notes.xml:593
 msgid ""
 "Since <package>IBus</package> version 1.5.23 renamed some keyboard layouts, "
 "it cannot load configuration containing these renamed layouts after "
@@ -931,7 +989,7 @@ msgstr ""
 "xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1177545\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:600
 msgid ""
 "Users need to migrate configuration manually. Open GNOME Settings and choose "
 "an appropriate layout. For desktop environments other than GNOME, run "
@@ -943,35 +1001,35 @@ msgstr ""
 
 # bnc#809347
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:618
+#: xml/release-notes.xml:669
 msgid "More information and feedback"
 msgstr "Ďalšie informácie a spätná väzba"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:621
+#: xml/release-notes.xml:672
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Prečítajte si dokumenty <filename>README</filename> na médiu."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:626
+#: xml/release-notes.xml:677
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Získajte podrobné informácie o zmenách konkrétneho balíka z jeho RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:630
+#: xml/release-notes.xml:681
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:631
+#: xml/release-notes.xml:682
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>FILENAME</replaceable> s názvom RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:636
+#: xml/release-notes.xml:687
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -981,7 +1039,7 @@ msgstr ""
 "úrovni média."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:642
+#: xml/release-notes.xml:693
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -989,7 +1047,7 @@ msgstr ""
 "Ďalšie informácie nájdete na médiu v adresári <filename>docu</filename>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:648
+#: xml/release-notes.xml:699
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -998,7 +1056,7 @@ msgstr ""
 "\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:654
+#: xml/release-notes.xml:705
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1007,7 +1065,7 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:661
+#: xml/release-notes.xml:712
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
 
@@ -1674,10 +1732,6 @@ msgstr "Copyright © SUSE LLC"
 #~ "správcu prihlásenia a desktopového sedenia. Počínajúc openSUSE Leap 15.0 "
 #~ "hodnoty už nie sú definované pomocou <filename>/etc/sysconfig</filename>, "
 #~ "ale s alternatívnym systémom."
-
-#~ msgid "To change the defaults, use the following alternatives:"
-#~ msgstr ""
-#~ "Ak chcete zmeniť predvolené hodnoty, použite nasledujúce alternatívy:"
 
 #~ msgid "Login manager: <literal>default-displaymanager</literal>"
 #~ msgstr "Správca prihlásenia: <literal>default-displaymanager</literal>"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-27 15:07+0200\n"
+"POT-Creation-Date: 2021-05-28 11:15+0200\n"
 "PO-Revision-Date: 2013-12-04 19:04+0100\n"
 "Last-Translator: Olav Pettershagen <olpetter@bbnett.no>\n"
 "Language-Team: Norwegian Nynorsk\n"
@@ -720,18 +720,76 @@ msgid ""
 "information, see <xref linkend=\"desktop-remove-kde4\"/>."
 msgstr ""
 
+#. (itstool) path: sect3/title
+#: xml/release-notes.xml:472
+msgid "Berkeley DB removed from packages"
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:473
+msgid ""
+"Berkeley DB, used as a database in certain packages, is dual-licensed under "
+"GNU AGPLv3/Sleepycat licenses. Because service vendors that redistribute our "
+"packages could find packages with these licenses potentially detrimental to "
+"their solutions, we have decided to remove Berkeley DB as a dependency from "
+"these packages. In the long term, SUSE aims to provide a solution without "
+"Berkeley DB."
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:481
+#, fuzzy
+#| msgid "These release notes cover the following areas:"
+msgid "This change affects the following packages:"
+msgstr "Disse versjonsmerknadene dekker følgende områder:"
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:486
+msgid "<literal>apr-util</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:491
+msgid "<literal>cyrus-sasl</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:496
+msgid "<literal>iproute2</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:501
+msgid "<literal>perl</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:506
+msgid "<literal>php7</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:511
+msgid "<literal>postfix</literal>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:516
+msgid "<literal>rpm</literal>"
+msgstr ""
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:477
+#: xml/release-notes.xml:528
 msgid "Drivers and hardware"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:533
 msgid "Secure Boot: third-party drivers need to be properly signed"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:483
+#: xml/release-notes.xml:534
 msgid ""
 "openSUSE Leap 15.2 and later enable a kernel module signature check for "
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
@@ -739,7 +797,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:489
+#: xml/release-notes.xml:540
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -748,7 +806,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:498
+#: xml/release-notes.xml:549
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -756,7 +814,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:505
+#: xml/release-notes.xml:556
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -766,7 +824,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:512
+#: xml/release-notes.xml:563
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -776,22 +834,22 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:524
+#: xml/release-notes.xml:575
 msgid "Desktop"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:525
+#: xml/release-notes.xml:576
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:530
+#: xml/release-notes.xml:581
 msgid "KDE 4 and Qt4 have been removed"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:531
+#: xml/release-notes.xml:582
 msgid ""
 "KDE 4 packages are no longer part of openSUSE Leap 15.3. Update your system "
 "to Plasma 5 and Qt 5. Some Qt 4 packages may still remain for compatibility "
@@ -800,12 +858,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:541
+#: xml/release-notes.xml:592
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:542
+#: xml/release-notes.xml:593
 msgid ""
 "Since <package>IBus</package> version 1.5.23 renamed some keyboard layouts, "
 "it cannot load configuration containing these renamed layouts after "
@@ -816,7 +874,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:600
 msgid ""
 "Users need to migrate configuration manually. Open GNOME Settings and choose "
 "an appropriate layout. For desktop environments other than GNOME, run "
@@ -824,43 +882,43 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:618
+#: xml/release-notes.xml:669
 #, fuzzy
 msgid "More information and feedback"
 msgstr "Mer informasjon"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:621
+#: xml/release-notes.xml:672
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:626
+#: xml/release-notes.xml:677
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:630
+#: xml/release-notes.xml:681
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:631
+#: xml/release-notes.xml:682
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:636
+#: xml/release-notes.xml:687
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:642
+#: xml/release-notes.xml:693
 #, fuzzy
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
@@ -868,7 +926,7 @@ msgid ""
 msgstr "Tidssoneinformasjon i <filename>/etc/adjtime</filename>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:648
+#: xml/release-notes.xml:699
 #, fuzzy
 #| msgid ""
 #| "For more information, see <ulink url=\"http://en.opensuse.org/Adobe_Reader"
@@ -880,7 +938,7 @@ msgstr ""
 "For mer informasjon, se <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:654
+#: xml/release-notes.xml:705
 #, fuzzy
 #| msgid ""
 #| "For more information, see <ulink url=\"http://en.opensuse.org/Adobe_Reader"
@@ -892,7 +950,7 @@ msgstr ""
 "For mer informasjon, se <ulink url=\"http://en.opensuse.org/Adobe_Reader\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:661
+#: xml/release-notes.xml:712
 #, fuzzy
 msgid "Copyright © SUSE LLC"
 msgstr "Med enerett © 2013 SUSE LLC"
@@ -941,11 +999,6 @@ msgstr "Med enerett © 2013 SUSE LLC"
 #~ msgid ""
 #~ "The Smarty cache moved to <filename>/var/cache/postfixadmin</filename>."
 #~ msgstr "MySQ-sokkelen er flyttet til <filename>/var/run/mysql</filename>."
-
-#, fuzzy
-#~| msgid "These release notes cover the following areas:"
-#~ msgid "To change the defaults, use the following alternatives:"
-#~ msgstr "Disse versjonsmerknadene dekker følgende områder:"
 
 #, fuzzy
 #~| msgid ""
