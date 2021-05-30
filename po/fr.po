@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2021-05-28 11:15+0200\n"
-"PO-Revision-Date: 2021-05-14 20:01+0000\n"
+"PO-Revision-Date: 2021-05-30 18:58+0000\n"
 "Last-Translator: Lucie Charrier <c.chalu@free.fr>\n"
-"Language-Team: French <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/fr/>\n"
+"Language-Team: French <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -636,6 +636,10 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 fournit toutes les clés de vérification RPM requises, y "
+"compris celles de SUSE Linux Enterprise Server, intégrées dans le paquet "
+"<package>openSUSE-build-key</package>. Toutes les clés sont également "
+"nouvellement disponibles à l'intérieur du dépôt OSS."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:345
@@ -644,6 +648,10 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"Le paquet <package>libzypp</package> version 17.25.11 devrait "
+"automatiquement importer les clés requises qui sont identifiées comme étant "
+"de confiance. Si c'est le cas, vous serez notifié de l'importation et aucune "
+"autre action ne sera nécessaire."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:350
@@ -652,12 +660,15 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Si le système n'a pas importé la clé qui a été utilisée pour signer les "
+"<literal>repodata</literal>, vous devrez l'importer manuellement. Vous "
+"pouvez vérifier en exécutant la commande suivante :"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:355
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:356
@@ -666,6 +677,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"La sortie devrait inclure une ligne commençant par le texte suivant : "
+"<literal>gpg-pubkey-39db7c82-*</literal> Si ce n'est pas le cas, faites ce "
+"qui suit pour importer la clé manuellement :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:362
@@ -674,6 +688,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Téléchargez la clé SUSE Linux Enterprise 15 à partir de <link xlink:href="
+"\"https://download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-"
+"39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:368
@@ -681,6 +698,9 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Enregistrez la clé dans le répertoire <literal>/var/cache/zypp/pubkeys</"
+"literal>. Renommez-la de manière à ce qu'elle se termine par <literal>."
+"key</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:374
@@ -690,19 +710,19 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Exécutez la commande <literal>zypper dup</literal>. Il vous sera demandé "
+"d'importer la clé manquante. Cela se produira même si la clé se trouve dans "
+"le répertoire mentionné ci-dessus. Si le fichier contient plusieurs clés, "
+"zypper n'importera que la clé requise."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:383
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
-#| "NVIDIA_drivers\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"Pour plus d'informations, consultez <link xlink:href=\"https://en.opensuse."
-"org/SDB:NVIDIA_drivers\"/>."
+"Pour plus d'informations, consultez <link xlink:href=\"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=1184326\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:389
@@ -777,6 +797,9 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"<package>midori</package>, un navigateur web léger basé sur WebKit et GTK+, "
+"n'est plus pris en charge et sa suppression est prévue dans la prochaine "
+"version."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:442
@@ -819,7 +842,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:472
 msgid "Berkeley DB removed from packages"
-msgstr ""
+msgstr "Berkeley DB supprimé des paquets"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:473
@@ -831,49 +854,52 @@ msgid ""
 "these packages. In the long term, SUSE aims to provide a solution without "
 "Berkeley DB."
 msgstr ""
+"Berkeley DB, utilisé comme base de données dans certains paquets, est sous "
+"double licence GNU AGPLv3/Sleepycat. Comme les fournisseurs de services qui "
+"redistribuent nos paquets pourraient trouver les paquets avec ces licences "
+"potentiellement préjudiciables à leurs solutions, nous avons décidé de "
+"supprimer Berkeley DB comme dépendance de ces paquets. À long terme, SUSE "
+"vise à fournir une solution sans Berkeley DB."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:481
-#, fuzzy
-#| msgid "To change the defaults, use the following alternatives:"
 msgid "This change affects the following packages:"
-msgstr ""
-"Pour changer les réglages par défaut, utilisez les alternatives suivantes :"
+msgstr "Ce changement affecte les paquets suivants :"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:486
 msgid "<literal>apr-util</literal>"
-msgstr ""
+msgstr "<literal>apr-util</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:491
 msgid "<literal>cyrus-sasl</literal>"
-msgstr ""
+msgstr "<literal>cyrus-sasl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:496
 msgid "<literal>iproute2</literal>"
-msgstr ""
+msgstr "<literal>iproute2</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:501
 msgid "<literal>perl</literal>"
-msgstr ""
+msgstr "<literal>perl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:506
 msgid "<literal>php7</literal>"
-msgstr ""
+msgstr "<literal>php7</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:511
 msgid "<literal>postfix</literal>"
-msgstr ""
+msgstr "<literal>postfix</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:516
 msgid "<literal>rpm</literal>"
-msgstr ""
+msgstr "<literal>rpm</literal>"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:528
