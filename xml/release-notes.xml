@@ -95,6 +95,38 @@
    Make sure to also review <xref linkend="sec.driver"/>.
   </para> -->
 
+  <sect2 xml:id="installation-new-update-repos">
+   <title>&opensuseleap; now has three update repositories</title>
+   <!-- boo#1186593 -->
+   <para>
+    The &opensuseleap; 15.3 maintenance setup consists of three main update repositories.
+    These are: <literal>repo-update</literal>, <literal>repo-backports-update</literal>, and <literal>repo-sle-update</literal>. The latter two are new and
+    are a result of re-using binaries from &sle;.
+
+    These repositories are available and checked during the online installation of &opensuseleap;.
+    We recommend you to use them.
+    New update repository definitions for &opensuseleap; 15.3 will be additionally supplied via a 0day maintenance update of the <package>openSUSE-release</package> package.
+
+    The update will be delivered via the traditional <literal>repo-update</literal> maintenance channel.
+    It will carry a special update flag that means it touches the software management area which is then specially handled by zypper.
+    You should double-check using the <command>zypper up</command> command whether all updates were processed.
+   </para>
+   <link xlink:href="ihttps://bugzilla.opensuse.org/show_bug.cgi?id=1186593"/>.
+   <para>
+    The <literal>repo-sle-update</literal> repository is for &opensuseleap; (OSS) updates. It is the smallest one and
+    contains system configuration packages, including release package, branding, and potential forks of &sle; packages.
+    This repository has also a <literal>debug-info</literal> variant.
+   </para>
+   <para>
+    The <literal>repo-backports-update</literal> repository is an update repository for openSUSE Backports that contains updates for the majority of &opensuseleap; packages.
+    This repository also has a <literal>debug-info</literal> variant.
+   </para>
+   <para>
+     The third repository is an update repository that contains combined updates from all active &sle; update streams.
+     This repository is without the <literal>debug-info</literal> variant.
+    </para>
+  </sect2>
+
   <sect2 xml:id="installation-transactional-server-role">
    <title>Using atomic updates with the system role <emphasis>Transactional Server</emphasis></title>
    <!-- boo#1092953, boo#1093098 -->
