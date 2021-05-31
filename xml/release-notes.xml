@@ -559,6 +559,33 @@
  <sect1 xml:id="driver-hardware">
   <title>Drivers and hardware</title>
   <para/>
+  <sect2 xml:id="driver-hardware-secure-boot-opensuse-kmps">
+   <!-- bsc#1182641 -->
+   <title>Secure Boot: &sle; kernel and openSUSE signed Kernel Module Packages</title>
+   <para>
+    &thisflavor; 15.3 uses a kernel binary from &sle;, which means
+    that all kernel modules (.ko) in Kernel Module Packages (KMPs)
+    must be signed by &sle; kernel. Otherwise, the ko file can not be loaded
+    by kernel when secure boot is enabled.
+   </para>
+   <para>
+    There still have some KMPs (or RPMs) in Leap repo on OBS,
+    those kernel modules (.ko) are signed by openSUSE key, e.g. virtual-box.
+   </para>
+   <para>
+    <package>openSUSE-signkey-cert</package> includes the certificate of
+    openSUSE signing key for signing kernel module file (.ko) in openSUSE KMP
+    and calls mokutil help user to enroll certificate to MOK.
+    So the openSUSE KMP can be verified by kernel.
+    This package is a part of the base pattern and suggested by the
+    <package>openSUSE-release</package>
+   </para>
+   <para>
+    Systems without base pattern which are subjects to these KMPs are adviced to get
+    <package>openSUSE-signkey-cert</package> installed manually. System reboot is required.
+    </para>
+    <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1182641"/>.
+  </sect2>
 
   <sect2 xml:id="driver-hardware-secure-boot-sign-driver">
    <!-- bsc#173158 -->
