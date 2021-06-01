@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2021-06-01 11:53+0200\n"
-"PO-Revision-Date: 2021-05-28 15:59+0000\n"
+"PO-Revision-Date: 2021-06-01 14:58+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/ca/>\n"
+"Language-Team: Catalan <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -197,7 +197,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
 msgid "openSUSE Leap now has three update repositories"
-msgstr ""
+msgstr "Ara l'openSUSE Leap té tres repositoris d’actualitzacions"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:101
@@ -218,6 +218,23 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"La configuració de manteniment de l'openSUSE Leap 15.3 consta de tres "
+"repositoris d’actualitzacions principals. Són aquests: <literal> repo-update "
+"</literal>, <literal> repo-backports-update </literal> i <literal> repo-sle-"
+"update </literal>. Els dos darrers són nous i són el resultat de la "
+"reutilització de fitxers binaris del SUSE Linux Enterprise. Aquests "
+"repositoris estan disponibles i es comproven durant la instal·lació en línia "
+"de l’openSUSE Leap. Us recomanem que els feu servir. Les definicions noves "
+"del repositori d'actualitzacions per a l'openSUSE Leap 15.3 se "
+"subministraran addicionalment mitjançant una actualització de manteniment de "
+"0 dies del paquet <package> openSUSE-release </package>. L'actualització "
+"s'entregarà mitjançant el tradicional canal de manteniment <literal> repo-"
+"update </literal>. Portarà un indicador d'actualització especial que "
+"significa que toca l'àrea de gestió de programari, que després és gestionada "
+"especialment pel zypper. Haureu de comprovar de nou mitjançant l'ordre "
+"<command> zypper up </command> si s'han processat totes les actualitzacions. "
+"Per obtenir més informació, consulteu <link xlink: href = \"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=1186593\" />."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -228,6 +245,11 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"El repositori <literal>repo-sle-update</literal> és per a actualitzacions de "
+"l'openSUSE Leap (OSS). És el més petit i conté paquets de configuració del "
+"sistema, inclosos els paquets de llançament, marca i bifurcacions potencials "
+"dels paquets del SUSE Linux Enterprise. Aquest repositori també té una "
+"variant <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -237,6 +259,10 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"El repositori <literal>repo-backports-update</literal> és un dipòsit d’"
+"actualitzacions per a l'openSUSE Backports que conté actualitzacions per a "
+"la majoria de paquets de l'openSUSE Leap. Aquest repositori també té una "
+"variant <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -245,6 +271,10 @@ msgid ""
 "from all active SUSE Linux Enterprise update streams. This repository is "
 "without the <literal>debug-info</literal> variant."
 msgstr ""
+"El tercer repositori és un dipòsit d’actualitzacions que conté "
+"actualitzacions combinades de tots els fluxos d’actualització del SUSE Linux "
+"Enterprise actius. Aquest repositori no té la variant <literal>debug-"
+"info</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -947,16 +977,12 @@ msgstr "Controladors i maquinari"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:564
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
 msgstr ""
-"Alineament de l'empaquetament del nucli entre el SUSE Linux Enterprise "
-"Server i l'openSUSE Leap"
+"Arrencada segura: nucli de SUSE Linux Enterprise i paquets de mòduls de "
+"nucli signats per openSUSE"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:565
@@ -968,6 +994,13 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"El paquet recentment introduït <package>openSUSE-signkey-cert</package> és "
+"necessari per a KMPs d'openSUSE com ara <package>virtualbox</package>, però "
+"només en mode d'arrencada segura. El paquet inclou el certificat de clau de "
+"signatura d'openSUSE per signar el fitxer del mòdul del nucli (<literal>.ko "
+"</literal>) al KMP d'openSUSE i crida <literal>mokutil</literal> per ajudar "
+"l'usuari a inscriure el certificat a MOK. D'aquesta manera, el nucli pot "
+"verificar el KMP d'openSUSE."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:572
@@ -978,6 +1011,11 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Si no teniu instal·lat el patró de base i useu algun d'aquests KMP. Us "
+"recomanem que instal·leu el paquet <package>openSUSE-signkey-cert</package> "
+"manualment. Cal reiniciar el sistema. Podeu trobar més informació sobre "
+"aquest procés i la inscripció manual a <link xlink:href=\"https://en.opensuse"
+".org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:582
