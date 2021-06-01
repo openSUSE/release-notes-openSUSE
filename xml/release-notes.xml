@@ -559,6 +559,23 @@
  <sect1 xml:id="driver-hardware">
   <title>Drivers and hardware</title>
   <para/>
+  <sect2 xml:id="driver-hardware-secure-boot-opensuse-kmps">
+   <!-- bsc#1182641 -->
+   <title>Secure Boot: &sle; kernel and openSUSE signed Kernel Module Packages</title>
+   <para>
+    The newly introduced <package>openSUSE-signkey-cert</package> package is required for openSUSE KMPs like <package>virtualbox</package>,
+    but only in Secure Boot mode. The package includes the certificate of
+    openSUSE signing key for signing kernel module file (<literal>.ko</literal>) in openSUSE KMP
+    and calls <literal>mokutil</literal> to help user enroll the certificate to MOK.
+    This way, the openSUSE KMP can be verified by the kernel.
+   </para>
+   <para>
+    If you do not have the base pattern installed and are using any of these KMPs, we recommend
+    installing the <package>openSUSE-signkey-cert</package> package manually. A system reboot is required.
+    More information about this process and manual enrollment can be found at
+    <link xlink:href="https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot"/>.
+   </para>
+  </sect2>
 
   <sect2 xml:id="driver-hardware-secure-boot-sign-driver">
    <!-- bsc#173158 -->
