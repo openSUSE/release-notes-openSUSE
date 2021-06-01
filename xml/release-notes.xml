@@ -563,19 +563,11 @@
    <!-- bsc#1182641 -->
    <title>Secure Boot: &sle; kernel and openSUSE signed Kernel Module Packages</title>
    <para>
-    &thisflavor; 15.3 uses a kernel binary from &sle;, which means
-    that all kernel modules (.ko) in Kernel Module Packages (KMPs)
-    must be signed by &sle; key. Otherwise, the ko file can not be loaded
-    by kernel when secure boot is enabled.
-   </para>
-   <para>
     Newly introduced <package>openSUSE-signkey-cert</package> is required for openSUSE KMPs like virtual-box,
     but only in secure boot mode. Package includes the certificate of
     openSUSE signing key for signing kernel module file (.ko) in openSUSE KMP
     and calls mokutil help user to enroll certificate to MOK.
     So the openSUSE KMP can be verified by kernel.
-    <package>openSUSE-signkey-cert</package> package is a part of the base pattern and suggested by the
-    <package>openSUSE-release</package>.
    </para>
    <para>
     Systems without the base pattern which are subject to these KMPs are advised to get
