@@ -565,25 +565,25 @@
    <para>
     &thisflavor; 15.3 uses a kernel binary from &sle;, which means
     that all kernel modules (.ko) in Kernel Module Packages (KMPs)
-    must be signed by &sle; kernel. Otherwise, the ko file can not be loaded
+    must be signed by &sle; key. Otherwise, the ko file can not be loaded
     by kernel when secure boot is enabled.
    </para>
    <para>
-    There still have some KMPs (or RPMs) in Leap repo on OBS,
-    those kernel modules (.ko) are signed by openSUSE key, e.g. virtual-box.
-   </para>
-   <para>
-    <package>openSUSE-signkey-cert</package> includes the certificate of
+    <package>openSUSE-signkey-cert</package> is required for openSUSE KMPs like virtual-box,
+    but only in secure boot mode. Package includes the certificate of
     openSUSE signing key for signing kernel module file (.ko) in openSUSE KMP
     and calls mokutil help user to enroll certificate to MOK.
     So the openSUSE KMP can be verified by kernel.
-    This package is a part of the base pattern and suggested by the
-    <package>openSUSE-release</package>
+    <package>openSUSE-signkey-cert</package> package is a part of the base pattern and suggested by the
+    <package>openSUSE-release</package>.
    </para>
    <para>
-    Systems without base pattern which are subjects to these KMPs are adviced to get
-    <package>openSUSE-signkey-cert</package> installed manually. System reboot is required.
-    </para>
+    Systems without the base pattern which are subject to these KMPs are advised to get
+    <package>openSUSE-signkey-cert</package> installed manually. A system reboot is required.
+    More information about this process and manual enrollment can be found on the following wiki page
+    <link xlink:href="https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot"/>.
+   </para>
+
     <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1182641"/>.
   </sect2>
 
