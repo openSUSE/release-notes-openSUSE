@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "POT-Creation-Date: 2021-06-01 11:53+0200\n"
-"PO-Revision-Date: 2021-06-01 14:58+0000\n"
+"PO-Revision-Date: 2021-06-02 00:58+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/ja/>\n"
@@ -227,15 +227,14 @@ msgid ""
 msgstr ""
 "openSUSE Leap 15.3 を通常の手順でインストールすると、 3 種類の更新リポジトリ <literal>repo-update</"
 "literal>, <literal>repo-backports-update</literal>, <literal>repo-sle-"
-"update</literal> が設定されます。後ろの 2 つは本バージョンより追加されたもので、 SUSE Linux Enterprise "
-"が提供するパッケージをそのまま提供しているものになります。これらのリポジトリは openSUSE Leap "
-"のインストール時に設定され、オンライン更新でも使用されますので、そのまま設定しておくことをお勧めします。また、 openSUSE Leap 15.3 "
-"の公開当初からの更新として、 <package>openSUSE-release</package> というパッケージも提供され、このパッケージ内に後者 "
-"2 つのリポジトリ設定が含まれています。このパッケージは <literal>repo-update</literal> リポジトリで提供され、 "
-"zypper 側で特別に対応するようソフトウエア管理スタックの更新フラグが設定されていますので、再度 <command>zypper up</"
-"command> を実行することで、後者 2 つのリポジトリが提供する更新パッケージも適用されるようになります。詳しくは <link "
-"xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1186593\"/> "
-"をお読みください。"
+"update</literal> が設定されます。後者 2 つは本バージョンより追加されたもので、 SUSE Linux Enterprise "
+"が提供するパッケージをそのまま提供しているものです。これらのリポジトリは openSUSE Leap "
+"のインストール時に設定され、オンラインインストールの場合には自動的に使用されます。また後者 2 つのリポジトリ設定は、 openSUSE Leap "
+"15.3 の公開当初からの更新として、 <package>openSUSE-release</package> というパッケージにも含まれています。"
+"このパッケージは <literal>repo-update</literal> リポジトリで提供され、 zypper "
+"側で特別に対応するようソフトウエア管理スタックの更新フラグが設定されていますので、適用後に再度 <command>zypper up</command> "
+"を実行することで、後者 2 つのリポジトリが提供する更新パッケージも適用されるようになります。詳しくは <link xlink:href=\"https"
+"://bugzilla.opensuse.org/show_bug.cgi?id=1186593\"/> をお読みください。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -246,6 +245,10 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"なお、 <literal>repo-sle-update</literal> リポジトリには openSUSE Leap (OSS) "
+"の更新が含まれています。このリポジトリは更新リポジトリの中で最も小さく、リリースパッケージやブランディング、 SUSE Linux Enterprise "
+"とは潜在的に異なるパッケージが含まれています。また、このリポジトリには <literal>debug-info</literal> "
+"の追加リポジトリも用意されています。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -255,6 +258,9 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"<literal>repo-backports-update</literal> リポジトリは openSUSE Backports "
+"と呼ばれる更新リポジトリで、こちらに openSUSE Leap の中のほとんどのパッケージが含まれています。このリポジトリにも追加の <literal"
+">debug-info</literal> リポジトリが用意されています。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -263,6 +269,8 @@ msgid ""
 "from all active SUSE Linux Enterprise update streams. This repository is "
 "without the <literal>debug-info</literal> variant."
 msgstr ""
+"残りのリポジトリは SUSE Linux Enterprise ストリームが提供する更新リポジトリです。こちらのリポジトリのみ、 <literal"
+">debug-info</literal> 追加リポジトリが用意されていません。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -962,16 +970,11 @@ msgstr "ドライバとハードウエア"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:564
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
 msgstr ""
-"SUSE Linux Enterprise Server と openSUSE Leap の間におけるカーネルパッケージ"
-"の共通化について"
+"Secure Boot: SUSE Linux Enterprise のカーネルと openSUSE が署名したカーネルモジュールパッケージの関係について"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:565
@@ -983,6 +986,11 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"新しく提供されるようになった <package>openSUSE-signkey-cert</package> パッケージは "
+"<package>virtualbox</package> などの openSUSE が提供するカーネルモジュールに必要なパッケージで、特に "
+"Secure Boot モードで必須となるものです。このパッケージには、 openSUSE 提供のカーネルモジュール (<literal>."
+"ko</literal>) で使用される署名鍵と、証明書を MOK に取り込む <literal>mokutil</literal> "
+"を呼び出す仕組みが用意されています。これにより、 openSUSE 提供のカーネルモジュールも、問題なく読み込めるようになっています。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:572
@@ -993,6 +1001,10 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"なお、ベースパターンをインストールしていない環境で、これらのカーネルモジュールパッケージ (KMP) を使用している場合は、 <package"
+">openSUSE-signkey-cert</package> パッケージを手作業でインストールすることをお勧めします。この場合、システムの再起動が必要"
+"となることに注意してください。詳しい手順や証明書の取り込みについて、詳しくは <link xlink:href=\"https://ja.opensuse"
+".org/SDB:NVIDIA_drivers#Secureboot\"/> をお読みください。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:582
