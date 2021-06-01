@@ -563,16 +563,16 @@
    <!-- bsc#1182641 -->
    <title>Secure Boot: &sle; kernel and openSUSE signed Kernel Module Packages</title>
    <para>
-    Newly introduced <package>openSUSE-signkey-cert</package> is required for openSUSE KMPs like virtual-box,
-    but only in secure boot mode. Package includes the certificate of
-    openSUSE signing key for signing kernel module file (.ko) in openSUSE KMP
-    and calls mokutil help user to enroll certificate to MOK.
-    So the openSUSE KMP can be verified by kernel.
+    The newly introduced <package>openSUSE-signkey-cert</package> package is required for openSUSE KMPs like <package>virtualbox</package>,
+    but only in Secure Boot mode. The package includes the certificate of
+    openSUSE signing key for signing kernel module file (<literal>.ko</literal>) in openSUSE KMP
+    and calls <literal>mokutil</literal> to help user enroll the certificate to MOK.
+    This way, the openSUSE KMP can be verified by the kernel.
    </para>
    <para>
-    Systems without the base pattern which are subject to these KMPs are advised to get
-    <package>openSUSE-signkey-cert</package> installed manually. A system reboot is required.
-    More information about this process and manual enrollment can be found on the following wiki page
+    If you do not have the base pattern installed and are using any of these KMPs, we recommend
+    installing the <package>openSUSE-signkey-cert</package> package manually. A system reboot is required.
+    More information about this process and manual enrollment can be found at
     <link xlink:href="https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot"/>.
    </para>
   </sect2>
