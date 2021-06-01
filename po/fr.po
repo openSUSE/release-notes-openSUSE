@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: French (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2021-06-01 11:53+0200\n"
-"PO-Revision-Date: 2021-06-01 14:58+0000\n"
-"Last-Translator: Guillaume GARDET <guillaume.gardet@opensuse.org>\n"
+"PO-Revision-Date: 2021-06-01 20:00+0000\n"
+"Last-Translator: Lucie Charrier <c.chalu@free.fr>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/fr/>\n"
 "Language: fr\n"
@@ -200,7 +200,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
 msgid "openSUSE Leap now has three update repositories"
-msgstr ""
+msgstr "openSUSE Leap a maintenant trois dépôts de mise à jour"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:101
@@ -221,6 +221,22 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"La configuration de la maintenance d'openSUSE Leap 15.3 consiste en trois "
+"dépôts principaux de mise à jour. Ce sont : <literal>repo-update</literal>, "
+"<literal>repo-backports-update</literal>, et <literal>repo-sle-update</"
+"literal>. Les deux derniers sont nouveaux et résultent de la réutilisation "
+"de binaires de SUSE Linux Enterprise. Ces dépôts sont disponibles et "
+"vérifiés pendant l'installation en ligne d'openSUSE Leap. Nous vous "
+"recommandons de les utiliser. Les nouvelles définitions de référentiel de "
+"mise à jour pour openSUSE Leap 15.3 seront en outre fournies via une mise à "
+"jour de maintenance 0day du paquet <package>openSUSE-release</package>. La "
+"mise à jour sera livrée via le traditionnel canal de maintenance <literal"
+">repo-update</literal>. Elle portera un drapeau spécial de mise à jour qui "
+"signifie qu'elle touche la zone de gestion des logiciels qui est alors "
+"spécialement traitée par zypper. Vous devriez revérifier à l'aide de la "
+"commande <command>zypper up</command> si toutes les mises à jour ont été "
+"traitées. Pour plus d'informations, voir <link xlink:href=\"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=1186593\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -231,6 +247,11 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Le dépôt <literal>repo-sle-update</literal> est destiné aux mises à jour "
+"d'openSUSE Leap (OSS). C'est le plus petit et il contient les paquets de "
+"configuration du système, y compris le paquet de version, la marque et les "
+"forks potentiels des paquets SUSE Linux Enterprise. Ce dépôt possède "
+"également une déclinaison <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -240,6 +261,10 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Le dépôt <literal>repo-backports-update</literal> est un dépôt de mise à "
+"jour pour openSUSE Backports qui contient des mises à jour pour la majorité "
+"des paquets openSUSE Leap. Ce dépôt a également une déclinaison <literal"
+">debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -248,6 +273,9 @@ msgid ""
 "from all active SUSE Linux Enterprise update streams. This repository is "
 "without the <literal>debug-info</literal> variant."
 msgstr ""
+"Le troisième dépôt est un dépôt de mise à jour qui contient les mises à jour "
+"combinées de tous les flux actifs de mise à jour de SUSE Linux Enterprise. "
+"Ce dépôt est dépourvu de la déclinaison <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -977,6 +1005,13 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"Le paquet nouvellement introduit <package>openSUSE-signkey-cert</package> "
+"est requis pour les KMPs d'openSUSE comme <package>virtualbox</package>, "
+"mais seulement en mode Secure Boot. Le paquet inclut le certificat de la clé "
+"de signature d'openSUSE pour signer le fichier du module du noyau (<literal>."
+"ko</literal>) dans openSUSE KMP et appelle <literal>mokutil</literal> pour "
+"aider l'utilisateur à inscrire le certificat dans MOK. De cette façon, le "
+"KMP d'openSUSE peut être vérifié par le noyau."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:572
@@ -987,6 +1022,12 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Si le modèle de base n'est pas installé et que vous utilisez l'un de ces "
+"KMP, nous vous recommandons d'installer manuellement le paquet <package"
+">openSUSE-signkey-cert</package>. Un redémarrage du système est nécessaire. "
+"Vous trouverez de plus amples informations sur ce processus et sur "
+"l'inscription manuelle à l'adresse <link xlink:href=\"https://en.opensuse."
+"org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:582
