@@ -3,10 +3,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
 "POT-Creation-Date: 2021-06-01 11:53+0200\n"
-"PO-Revision-Date: 2021-05-28 19:58+0000\n"
+"PO-Revision-Date: 2021-06-01 20:00+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
-"Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/sk/>\n"
+"Language-Team: Slovak <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -195,7 +195,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
 msgid "openSUSE Leap now has three update repositories"
-msgstr ""
+msgstr "openSUSE Leap má teraz tri aktualizačné repozitáre"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:101
@@ -216,6 +216,21 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"Nastavenie údržby openSUSE Leap 15.3 sa skladá z troch hlavných "
+"aktualizačných repozitárov. Tie sú: <literal>repo-update</literal>, <literal"
+">repo-backports-update</literal> a <literal>repo-sle-update</literal>. "
+"Posledné dva menované sú nové a sú výsledkom opätovného použitia binárnych "
+"súborov zo SUSE Linux Enterprise. Tieto repozitáre sú dostupné a "
+"kontrolované počas online inštalácie openSUSE Leap. Odporúčame vám ich "
+"použiť. Nové definície aktualizačných repozitárov pre openSUSE Leap 15.3 "
+"budú dodatočne poskytnuté cez 0day údržbovú aktualizáciu balíka <package"
+">openSUSE-release</package>. Aktualizácia sa uskutoční prostredníctvom "
+"tradičného kanála údržby <literal>repo-update</literal>. Bude mať špeciálny "
+"aktualizačný príznak, čo znamená, že sa dotkne oblasti správy softvéru, "
+"ktorú má potom špeciálne na starosti zypper. Mali by ste pomocou príkazu "
+"<command>zypper up</command> prekontrolovať, či boli spracované všetky "
+"aktualizácie. Viac informácií nájdete na <link xlink:href=\"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=1186593\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -226,6 +241,10 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Repozitár <literal>repo-sle-update</literal> je pre aktualizácie openSUSE "
+"Leap (OSS). Je najmenší a obsahuje systémové konfiguračné balíky vrátane "
+"balíkov vydaní, budovania značky a potenciálnych vetiev balíkov SUSE Linux "
+"Enterprise. Tento repozitár má aj variant <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -235,6 +254,9 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Repozitár <literal>repo-backports-update</literal> je aktualizačný repozitár "
+"pre openSUSE Backports, ktorý obsahuje aktualizácie pre väčšinu balíkov "
+"openSUSE Leap. Tento repozitár má aj variant <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -243,6 +265,9 @@ msgid ""
 "from all active SUSE Linux Enterprise update streams. This repository is "
 "without the <literal>debug-info</literal> variant."
 msgstr ""
+"Tretí repozitár je aktualizačný repozitár, ktorý obsahuje kombinované "
+"aktualizácie zo všetkých aktívnych aktualizačných prúdov SUSE Linux "
+"Enterprise. Tento repozitár je bez variantu <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -934,16 +959,12 @@ msgstr "Ovládače a hardvér"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:564
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
 msgstr ""
-"Zosúladenie tvorby balíkov jadra pre SUSE Linux Enterprise Server a openSUSE "
-"Leap"
+"Secure Boot: Balíky jadra SUSE Linux Enterprise Server a podpísaných modulov "
+"jadra openSUSE"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:565
@@ -955,6 +976,12 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"Novo zavedený balík <package>openSUSE-signkey-cert</package> sa vyžaduje pre "
+"openSUSE KMP ako napríklad <package>virtualbox</package>, ale iba v režime "
+"Secure Boot. Balík obsahuje certifikát podpisového kľúča openSUSE na "
+"podpisovanie súboru modulov jadra (<literal>.ko</literal>) v openSUSE KMP a "
+"volá <literal>mokutil</literal> na pomoc používateľovi zapísať certifikát do "
+"MOK. Týmto spôsobom môže byť openSUSE KMP overené jadrom."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:572
@@ -965,6 +992,11 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Ak nemáte nainštalovanú základnú šablónu a používate niektorý z týchto KMP, "
+"odporúčame vám balík <package>openSUSE-signkey-cert</package> nainštalovať "
+"ručne. Vyžaduje sa reštart systému. Viac informácií o tomto procese a ručnom "
+"zapísaní nájdete na <link xlink:href=\"https://en.opensuse.org/"
+"SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:582
