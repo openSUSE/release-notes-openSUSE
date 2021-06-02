@@ -11,10 +11,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-01 11:53+0200\n"
-"PO-Revision-Date: 2021-05-28 15:59+0000\n"
+"PO-Revision-Date: 2021-06-02 11:00+0000\n"
 "Last-Translator: Freek de Kruijf <freek@opensuse.org>\n"
-"Language-Team: Dutch <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/nl/>\n"
+"Language-Team: Dutch <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -202,7 +202,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
 msgid "openSUSE Leap now has three update repositories"
-msgstr ""
+msgstr "openSUSE Leap heeft nu drie opslagruimten voor bijwerken"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:101
@@ -223,6 +223,23 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"De opzet voor onderhoud van openSUSE Leap 15.3 bestaat uit drie hoofd "
+"opslagruimten voor bijwerken. Dit zijn: <literal>repo-update</literal>, "
+"<literal>repo-backports-update</literal> en <literal>repo-sle-update</"
+"literal>. De laatste twee zijn nieuw en zijn het resultaat van opnieuw "
+"gebruiken van binaire programma's uit SUSE Linux Enterprise. Deze "
+"opslagruimten zijn beschikbaar en gecontroleerd tijdens de online "
+"installatie van openSUSE Leap. We bevelen u aan ze te gebruiken. Nieuwe "
+"definities van opslagruimten voor bijwerken voor openSUSE Leap 15.3 zullen "
+"als extra geleverd worden via een 0day bijwerken voor onderhoud van het "
+"pakket <package>openSUSE-release</package>. Het element voor bijwerken zal "
+"geleverd worden via het traditionele <literal>repo-update</literal> "
+"onderhoudskanaal. Het zal een speciale bijwerkvlag bevatten die betekent dat "
+"het het softwarebeheergebied beïnvloed wat dan speciaal behandeld wordt door "
+"zypper. U zou het gebruik van commando <command>zypper up</command> dubbel "
+"moeten controleren of alle elementen voor bijwerken zijn verwerkt. Voor meer "
+"informatie, zie <link xlink:href=\"https://bugzilla.opensuse.org/show_bug."
+"cgi?id=1186593\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -233,6 +250,11 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"De opslagruimte <literal>repo-sle-update</literal> is voor het bijwerken van "
+"openSUSE Leap (OSS). Het is de kleinste en bevat pakketten voor "
+"systeemconfiguratie, inclusief uitgavepakket, branding,en potentiele "
+"afsplitsingen van SUSE Linux Enterprise pakketten. Deze opslagruimte heeft "
+"ook een variant <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -242,6 +264,10 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"De opslagruimte <literal>repo-backports-update</literal> is een opslagruimte "
+"voor bijwerken voor openSUSE Backports die elementen voor bijwerken bevat "
+"voor de meerderheid van openSUSE Leap pakketten. Deze opslagruimte heeft ook "
+"een variant <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -250,6 +276,10 @@ msgid ""
 "from all active SUSE Linux Enterprise update streams. This repository is "
 "without the <literal>debug-info</literal> variant."
 msgstr ""
+"De derde opslagruimte is een opslagruimte voor bijwerken die gecombineerde "
+"elementen voor bijwerken bevat van alle actieve SUSE Linux Enterprise "
+"bijwerkstreams. Deze opslagruimte heeft geen variant <literal>debug-"
+"info</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -954,16 +984,12 @@ msgstr "Stuurprogramma's en hardware"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:564
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
 msgstr ""
-"In lijn brengen van SUSE Linux Enterprise Server en openSUSE Leap kernel in "
-"pakketvorm maken"
+"Veilig opstarten: de kernel van SUSE Linux Enterprise en openSUSE "
+"ondertekende kernelmodulepakketten"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:565
@@ -975,6 +1001,13 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"Het nieuw geïntroduceerde pakket <package>openSUSE-signkey-cert</package> is "
+"vereist voor openSUSE KMP's zoals <package>virtualbox</package>, maar alleen "
+"in modus Veilig opstarten. Het pakket bevat het certificaat van de openSUSE "
+"ondertekeningssleutel voor ondertekenen van het kernelmodulebestand "
+"(<literal>.ko</literal>) in openSUSE KMP en roept <literal>mokutil</literal> "
+"op om de gebruiker te helpen het certificaat in de MOK aan te brenegen. Op "
+"deze manier kan de openSUSE KMP geverifieerd worden door de kernel."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:572
@@ -985,6 +1018,12 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Als u het basispatroon niet hebt geïnstalleerd en een van deze KMP's "
+"gebruikt, dan bevelen we het handmatig installeren van het pakket <package"
+">openSUSE-signkey-cert</package> aan. Het opnieuw opstarten van het systeem "
+"is vereist. Meer informatie over dit proces en handmatig aanbrengen is te "
+"vinden op <link xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#"
+"Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:582
