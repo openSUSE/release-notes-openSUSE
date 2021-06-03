@@ -20,10 +20,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-01 11:53+0200\n"
-"PO-Revision-Date: 2021-05-27 13:23+0000\n"
-"Last-Translator: Lukas Kucharczyk <lukas.kucharczyk@suse.com>\n"
-"Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/cs/>\n"
+"PO-Revision-Date: 2021-06-03 15:59+0000\n"
+"Last-Translator: Aleš Kastner <alkas@volny.cz>\n"
+"Language-Team: Czech <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -212,7 +212,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
 msgid "openSUSE Leap now has three update repositories"
-msgstr ""
+msgstr "openSUSE Leap má teď tři aktualizační úložiště"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:101
@@ -233,6 +233,20 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"Nastavení údržby openSUSE Leap 15.3 se skládá ze tří hlavních úložišť "
+"aktualizace. Jsou to: <literal>repo-update</literal>, <literal>repo-"
+"backports-update</literal> a <literal>repo-sle-update</literal>. Druhé dva "
+"jsou nové a jsou výsledkem opětovného použití binárek ze SUSE Linux "
+"Enterprise. Tato úložiště jsou k dispozici a kontrolována během online "
+"instalace openSUSE Leap. Doporučujeme, abyste je používali. Nové definice "
+"úložiště aktualizací pro openSUSE Leap 15.3 budou dodatečně dodávány při "
+"aktualizaci údržby \"0day\" balíčku <package>openSUSE-release</package>. "
+"Aktualizace bude doručena tradičním kanálem údržby <literal>repo-update</"
+"literal>. Bude mít zvláštní příznak aktualizace, což znamená, že se dotýká "
+"oblasti správy softwaru, která je pak speciálně zpracována Zypperem. Měli "
+"byste zkontrolovat příkazem <command>zypper up</command>, zda byly "
+"zpracovány všechny aktualizace. Další informace viz <link xlink:href=\"https"
+"://bugzilla.opensuse.org/show_bug.cgi?id=1186593\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -243,6 +257,10 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Úložiště <literal>repo-sle-update</literal> je určeno pro aktualizace "
+"openSUSE Leap (OSS). Je nejmenší a obsahuje systémové konfigurační balíčky "
+"včetně balíčků vydání, budování značky a potenciálních větví balíčků SUSE "
+"Linux Enterprise. Toto úložiště má i variantu <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -252,6 +270,9 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Úložiště <literal>repo-backports-update</literal> je aktualizační úložiště "
+"pro openSUSE Backports, které obsahuje aktualizace pro většinu balíčků "
+"openSUSE Leap. Toto úložiště má i variantu <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -260,6 +281,9 @@ msgid ""
 "from all active SUSE Linux Enterprise update streams. This repository is "
 "without the <literal>debug-info</literal> variant."
 msgstr ""
+"Třetí úložiště je aktualizační a obsahuje kombinované aktualizace ze všech "
+"aktivních aktualizačních proudů SUSE Linux Enterprise. Toto úložiště nemá "
+"variantu <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -880,7 +904,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:504
 msgid "Berkeley DB removed from packages"
-msgstr ""
+msgstr "Berkeley DB odstraněná z balíčků"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:505
@@ -892,48 +916,52 @@ msgid ""
 "these packages. In the long term, SUSE aims to provide a solution without "
 "Berkeley DB."
 msgstr ""
+"Berkeley DB, používaná jako databáze v určitých balíčcích, je dvojmo "
+"licencovaná pod licencemi GNU AGPLv3/Sleepycat. Vzhledem k tomu, že "
+"dodavatelé služby, kteří dále distribuují naše balíčky, by mohli zjistit, že "
+"balíčky s těmito licencemi by mohly škodit jejich řešení, rozhodli jsme se "
+"odstranit Berkeley DB jako závislost z těchto balíčků. V dlouhodobém "
+"horizontu se SUSE zaměřuje na řešení neobsahující Berkeley DB."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:513
-#, fuzzy
-#| msgid "These release notes cover the following areas:"
 msgid "This change affects the following packages:"
-msgstr "Tyto poznámky jsou děleny do následujících okruhů:"
+msgstr "Tyto změny ovlivní následující balíčky:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:518
 msgid "<literal>apr-util</literal>"
-msgstr ""
+msgstr "<literal>apr-util</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:523
 msgid "<literal>cyrus-sasl</literal>"
-msgstr ""
+msgstr "<literal>cyrus-sasl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:528
 msgid "<literal>iproute2</literal>"
-msgstr ""
+msgstr "<literal>iproute2</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:533
 msgid "<literal>perl</literal>"
-msgstr ""
+msgstr "<literal>perl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
 msgid "<literal>php7</literal>"
-msgstr ""
+msgstr "<literal>php7</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:543
 msgid "<literal>postfix</literal>"
-msgstr ""
+msgstr "<literal>postfix</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:548
 msgid "<literal>rpm</literal>"
-msgstr ""
+msgstr "<literal>rpm</literal>"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:560
@@ -942,14 +970,12 @@ msgstr "Ovladače a hardware"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:564
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
-msgstr "Sjednocení balení jádra SUSE Linux Enterprise Server a openSUSE Leap"
+msgstr ""
+"Bezpečný boot: Jádro SUSE Linux Enterprise a openSUSE podepsané balíčky "
+"modulu jádra"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:565
@@ -961,6 +987,12 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"Pro openSUSE KMP např. <package>virtualbox</package> se vyžaduje nově "
+"zavedený balíček <package>openSUSE-signkey-cert</package>, ale jen v režimu "
+"Bezpečný boot. Balíček obsahuje certifikát podpisového klíče openSUSE pro "
+"podepisování souborů modulů jádra (<literal>.ko</literal>) v openSUSE KMP a "
+"volá <literal>mokutil</literal> na pomoc uživateli se zápisem certifikátu do "
+"MOK. Takto lze openSUSE KMP ověřit jádrem."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:572
@@ -971,6 +1003,11 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Nemáte-li instalovanou základní šablonu a používáte některou z těchto KMP, "
+"doporučujeme instalovat balíček <package>openSUSE-signkey-cert</package> "
+"manuálně. Vyžaduje to restart systému. Více informací o tomto procesu a "
+"ručním zápisu najdete na <link xlink:href=\"https://en.opensuse.org/"
+"SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:582
