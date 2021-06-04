@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2021-06-01 11:53+0200\n"
-"PO-Revision-Date: 2021-06-02 15:58+0000\n"
+"PO-Revision-Date: 2021-06-04 17:00+0000\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/pt_BR/>\n"
@@ -220,6 +220,22 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"A configuração de manutenção do openSUSE Leap 15.3 consiste em três "
+"repositórios de atualização principais. São eles: <literal>repo-update</"
+"literal>, <literal>repo-backports-update</literal> e <literal>repo-sle-"
+"update</literal>. Os dois últimos são novos e são o resultado do reuso dos "
+"binários do SUSE Linux Enterprise. Estes repositórios estão disponíveis e "
+"marcados durante a instalação online do openSUSE Leap. Recomendamos que você "
+"os use. As novas definições de repositórios para o openSUSE Leap 15.3 serão "
+"fornecidas adicionalmente através da atualização de manutenção de 0 dia do "
+"pacote <package>openSUSE-release</package>. A atualização será entregue pelo "
+"canal de manutenção tradicional <literal>repo-update</literal>. Ele "
+"carregará um sinalizador de atualização especial que significa que ele toca "
+"a área de gerenciamento de software que é manupilado especialmente pelo "
+"zypper. Você deve verificar novamente usando o comando <command>zypper up</"
+"command> se todas as atualizações foram processadas. Para mais informações, "
+"veja <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"1186593\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -230,6 +246,11 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"O repositório <literal>repo-sle-update</literal> é para as atualizações do "
+"openSUSE Leap (OSS). É o menor e contém pacotes de configuração do sistema, "
+"incluindo pacotes de versão (\"release\"), identidade visual e potenciais "
+"forks de pacotes do SUSE Linux Enterprise. Este repositório também tem uma "
+"variante <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -239,6 +260,10 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"O repositório <literal>repo-backports-update</literal> é um repositório de "
+"atualização para o openSUSE Backports que contém atualizações da maioria dos "
+"pacotes do openSUSE Leap. Este repositório também tem uma variante <literal"
+">debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -247,6 +272,9 @@ msgid ""
 "from all active SUSE Linux Enterprise update streams. This repository is "
 "without the <literal>debug-info</literal> variant."
 msgstr ""
+"O terceiro repositório é um repositório de atualização que contém as "
+"atualizações combinadas de todas as versões ativas do SUSE Linux Enterprise. "
+"Este repositório não tem a variante <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -675,6 +703,10 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"O openSUSE Leap 15.3 fornece todas as chaves de verificação RPM, incluindo "
+"as do SUSE Linux Enterprise Server como parte do pacote <package>openSUSE-"
+"build-key</package>. Todas as chaves também estão disponíveis no repositório "
+"OSS."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:377
@@ -683,6 +715,10 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"O pacote <package>libzypp</package> versão 17.25.11 deve importar "
+"automaticamente as chaves necessárias que são identificadas como confiáveis. "
+"Se tiver, você será notificado sobre a importação e nenhuma outra ação será "
+"necessária."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:382
@@ -691,6 +727,9 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Se o sistema não importou a chave que foi usada para assinar o "
+"<literal>repodata</literal>, você precisará importá-la manualmente. Você "
+"pode verificar executando o seguinte comando:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:387
@@ -705,6 +744,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"A saída deve incluir uma linha começando com o seguinte texto: <literal>gpg-"
+"pubkey-39db7c82-*</literal> Se não tiver, faça a importação da chave "
+"manualmente:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:394
@@ -713,6 +755,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Baixe a chave do SUSE Linux Enterprise 15 de <link xlink:href=\"https"
+"://download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-"
+"39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:400
@@ -720,6 +765,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Salve a chave na pasta <literal>/var/cache/zypp/pubkeys</literal>. Renomeie "
+"para que ela termine com <literal>.key</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:406
@@ -729,6 +776,10 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Execute o comando <literal>zypper dup</literal>. Você será perguntado sobre "
+"importar a chave faltante. Isto irá ocorrer mesmo se a chave estiver na "
+"pasta mencionada anteriormente. Se o arquivo contiver múltiplas chaves, o "
+"zypper irá importar apenas a chave necessária."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:415
