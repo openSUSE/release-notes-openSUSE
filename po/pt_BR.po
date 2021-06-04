@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2021-06-01 11:53+0200\n"
-"PO-Revision-Date: 2021-06-04 17:00+0000\n"
+"PO-Revision-Date: 2021-06-04 21:58+0000\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/pt_BR/>\n"
@@ -863,6 +863,8 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"<package>midori</package>, um navegador da Web leve baseado no WebKit e GTK+ "
+"não é mais suportado e está agendado para remoção na próxima versão."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:474
@@ -905,7 +907,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:504
 msgid "Berkeley DB removed from packages"
-msgstr ""
+msgstr "Berkeley DB removido dos pacotes"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:505
@@ -917,6 +919,12 @@ msgid ""
 "these packages. In the long term, SUSE aims to provide a solution without "
 "Berkeley DB."
 msgstr ""
+"O Berkeley DB, usado como banco de dados em certos pacotes, tem dupla "
+"licença sob a GNU AGPLv3 e Sleepycat. Os fornecedores de serviço que "
+"redistribuem nossos pacotes podem achar que pacotes com estas licenças "
+"potencialmente prejudiciais às suas soluções, decidimos remover o Berkeley "
+"DB como dependência destes pacotes. A longo prazo, a SUSE tem como objetivo "
+"fornecer uma solução sem o Berkeley DB."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:513
@@ -965,16 +973,12 @@ msgstr "Drivers e hardware"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:564
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
 msgstr ""
-"Alinhamento do empacotamento do kernel do SUSE Linux Enterprise Server e do "
-"openSUSE Leap"
+"Inicialização segura: Kernel do SUSE Linux Enterprise Server e pacotes de "
+"módulos do kernel assinados pelo openSUSE"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:565
@@ -986,6 +990,13 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"O pacote recém introduzido <package>openSUSE-signkey-cert</package> é "
+"necessário para os KMPs do openSUSE KMPs como <package>virtualbox</package>, "
+"mas apenas no modo de inicialização segura. O pacote inclui o certificado da "
+"chave de assinatura do openSUSE para assinar os arquivos de módulo do kernel "
+"(<literal>.ko</literal>) no KMP do openSUSE e chama o <literal>mokutil</"
+"literal> para ajudar o usuário a inscrever o certificado no MOK. Desta "
+"forma, o KMP do openSUSE pode ser verificado pelo kernel."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:572
@@ -996,6 +1007,12 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Se você não tem o padrão base instalado e está usando qualquer um destes "
+"KMPs, recomendamos que instale o pacote <package>openSUSE-signkey-cert</"
+"package> manualmente. Uma reinicialização do sistema é necessária. Mais "
+"informação sobre este processo e sobre a inscrição manual pode ser "
+"encontrado em <link xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#"
+"Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:582
@@ -1024,11 +1041,11 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
-"Isso pode impedir que módulos de kernel de terceiros sejam carregados se o "
-"UEFI Secure Boot estiver ativado. Os pacotes de módulos do kernel (KMPs) dos "
-"repositórios oficiais do openSUSE não são afetados, porque os módulos que "
-"eles contêm são assinados com a chave do openSUSE. A verificação de "
-"assinatura tem o seguinte comportamento:"
+"Isso pode impedir que módulos de kernel de terceiros sejam carregados se a "
+"inicialização segura UEFI estiver ativada. Os pacotes de módulos do kernel "
+"(KMPs) dos repositórios oficiais do openSUSE não são afetados, porque os "
+"módulos que eles contêm são assinados com a chave do openSUSE. A verificação "
+"de assinatura tem o seguinte comportamento:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:598
