@@ -17,10 +17,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2021-06-24 14:32+0200\n"
-"PO-Revision-Date: 2021-05-14 20:01+0000\n"
-"Last-Translator: Victor hck <correohck@gmail.com>\n"
-"Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/es/>\n"
+"PO-Revision-Date: 2021-07-04 15:49+0000\n"
+"Last-Translator: Ioannes Andreas <ioannes@disroot.org>\n"
+"Language-Team: Spanish <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Javier Llorente, 2013-2018\n"
 "Carlos Robinson M., 2007-2008, 2013-2014\n"
 "Victorhck, 2015-2021\n"
-"Ioannes Andreas <ioannes@opensuse.org>, 2018-2020"
+"Ioannes Andreas <ioannes@opensuse.org>, 2018-2021"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -139,7 +139,7 @@ msgid ""
 "previous release notes listed here: <link xlink:href=\"https://en.opensuse."
 "org/openSUSE:Release_Notes\"/>."
 msgstr ""
-"Si actualiza desde una versión antigua de openSUSE Leap, véase las notas de "
+"Si actualiza desde una versión antigua de openSUSE Leap, vea las notas de "
 "lanzamiento anteriores en <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:Release_Notes\"/> (inglés)."
 
@@ -197,27 +197,21 @@ msgstr "Instalación"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:89
-#, fuzzy
-#| msgid ""
-#| "This section contains installation-related notes. For detailed upgrade "
-#| "instructions, see the documentation at <link xlink:href=\"https://doc."
-#| "opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-"
-#| "basics.html\"/>."
 msgid ""
 "This section contains installation-related notes. For detailed upgrade "
 "instructions, see the documentation at <link xlink:href=\"https://doc."
 "opensuse.org/documentation/leap/startup/html/book-startup/part-basics.html\"/"
 ">."
 msgstr ""
-"Esta sección contiene notas relacionadas con la instalación. Para obtener "
-"instrucciones detalladas de actualización, consulte la documentación en: "
-"<link xlink:href=\"https://doc.opensuse.org/documentation/leap/startup/html/"
-"book.opensuse.startup/part-basics.html\"/>."
+"Esta sección contiene notas relacionadas con la instalación. Para "
+"instrucciones detalladas de actualización, vea la documentación en: <link "
+"xlink:href=\"https://doc.opensuse.org/documentation/leap/startup/html/"
+"book-startup/part-basics.html\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
 msgid "openSUSE Leap now has three update repositories"
-msgstr ""
+msgstr "openSUSE Leap tiene ahora tres repositorios de actualización"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:101
@@ -238,6 +232,23 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"La configuración de mantenimiento de openSUSE Leap 15.3 consta de tres "
+"repositorios de actualización principales. Estos son: <literal>repo-update</"
+"literal>, <literal>repo-backports-update</literal> y <literal>repo-sle-"
+"update</literal>. Los dos últimos son nuevos y son el resultado de la "
+"reutilización de los archivos binarios de SUSE Linux Enterprise. Estos "
+"repositorios están disponibles y comprobados durante la instalación en línea "
+"de openSUSE Leap. Le recomendamos usarlos. Las nuevas definiciones del "
+"repositorio de actualización para openSUSE Leap se suministrarán "
+"adicionalmente mediante una actualización de mantenimiento de 0días del "
+"paquete <package>openSUSE-release</package>. La actualización se entregará "
+"mediante el canal tradicional de mantenimiento <literal>repo-update</"
+"literal>. Llevará una bandera de actualización especial que significa que "
+"toca el área de administración de software que luego es gestionada "
+"especialmente por zypper. Debería comprobar nuevamente si todas las "
+"actualizaciones fueron procesadas mediante el comando <command>zypper up</"
+"command>. Para más información, vea <link xlink:href=\"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=1186593\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -248,6 +259,11 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"El repositorio <literal>repo-update</literal> es para actualizaciones (OSS) "
+"de openSUSE Leap. Es el más pequeño y contiene paquetes de configuración del "
+"sistema, incluido el paquete de lanzamiento, la marca y las posibles "
+"bifurcaciones de los paquetes de SUSE Linux Enterprise. Este repositorio "
+"tiene también una variante <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -257,6 +273,10 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"El repositorio <literal>repo-backports-update</literal> es un repositorio de "
+"actualización para openSUSE Backports que contiene actualizaciones para la "
+"mayoría de paquetes de openSUSE Leap. Este repositorio también tiene una "
+"variante <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -266,6 +286,10 @@ msgid ""
 "Enterprise update streams. This repository is without the <literal>debug-"
 "info</literal> variant."
 msgstr ""
+"El tercer repositorio, llamado <literal>repo-sle-update</literal>, es un "
+"repositorio de actualización que contiene actualizaciones combinadas de "
+"todos los flujos de actualización activos de SUSE Linux Enterprise. Este "
+"repositorio no tiene la variante <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -700,6 +724,10 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 proporciona todas las claves de verificación RPM "
+"requeridas, incluyendo las de SUSE Linux Enterprise, como parte del paquete "
+"<package>openSUSE-build-key</package>. Todas las claves están disponibles "
+"también en el repositorio OSS."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:377
@@ -708,6 +736,10 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"La versión 17.25.11 del paquete <package>libzypp</package> debería importar "
+"automáticamente las claves requeridas que están identificadas como "
+"auténticas. Si es así, será notificado sobre la importación y no será "
+"necesaria otra acción."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:382
@@ -716,12 +748,15 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Si el sistema no ha importado la clave que ha sido usada para firmar el "
+"<literal>repodata</literal>, necesitará importarla manualmente. Puede "
+"verificar ejecutando el siguiente comando:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:387
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:388
@@ -730,6 +765,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"La salida debería incluir una línea que inicie con el siguiente texto: "
+"<literal>gpg-pubkey-39db7c82-*</literal>. Si no es así, efectúe lo siguiente "
+"para importar la clave manualmente:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:394
@@ -738,6 +776,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Descargue la clave de SUSE Linux Enterprise 15 desde <link xlink:href=\"https"
+"://download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-"
+"39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:400
@@ -745,6 +786,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Guarde la clave en el directorio <literal>/var/cache/zypp/pubkeys</literal>. "
+"Renombre la clave para que acabe con <literal>.key</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:406
@@ -754,19 +797,19 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Ejecute el comando <literal>zypper dup</literal>. Será consultado sobre "
+"importar la clave faltante. Esto sucederá si la clave está en el directorio "
+"mencionado antes. Si el archivo contiene múltiples claves, zypper importará "
+"solamente la requerida."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:415
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-#| "show_bug.cgi?id=1044816\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"Para obtener más información, visite <link xlink:href=\"https://bugzilla."
-"suse.com/show_bug.cgi?id=1044816\"/>."
+"Para más información, vea <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=1184326\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:421
@@ -841,6 +884,8 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"<package>midori</package>, un navegador web ligero basado en WebKit y GTK+, "
+"no es soportado más y está programada su remoción para la siguiente versión."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:474
@@ -883,7 +928,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:504
 msgid "Berkeley DB removed from packages"
-msgstr ""
+msgstr "Berkeley DB ha sido removido de los paquetes"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:505
@@ -895,48 +940,52 @@ msgid ""
 "these packages. In the long term, SUSE aims to provide a solution without "
 "Berkeley DB."
 msgstr ""
+"Berkeley DB, usado como base de datos en ciertos paquetes, tiene doble "
+"licencia bajo GNU AGPLv3/Sleepycat. Como los proveedores de servicio que "
+"redistribuyen nuestros paquetes podrían encontrar algunos con licencias "
+"potencialmente perjudiciales para sus soluciones, hemos decidido remover "
+"Berkeley DB como dependencia de éstos. A largo plazo, SUSE tiene como "
+"objetivo proporcionar una solución sin Berkeley DB."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:513
-#, fuzzy
-#| msgid "To change the defaults, use the following alternatives:"
 msgid "This change affects the following packages:"
-msgstr "Para cambiar los valores por omisión, use las siguientes alternativas:"
+msgstr "Este cambio afecta a los siguientes paquetes:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:518
 msgid "<literal>apr-util</literal>"
-msgstr ""
+msgstr "<literal>apr-util</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:523
 msgid "<literal>cyrus-sasl</literal>"
-msgstr ""
+msgstr "<literal>cyrus-sasl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:528
 msgid "<literal>iproute2</literal>"
-msgstr ""
+msgstr "<literal>iproute2</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:533
 msgid "<literal>perl</literal>"
-msgstr ""
+msgstr "<literal>perl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
 msgid "<literal>php7</literal>"
-msgstr ""
+msgstr "<literal>php7</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:543
 msgid "<literal>postfix</literal>"
-msgstr ""
+msgstr "<literal>postfix</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:548
 msgid "<literal>rpm</literal>"
-msgstr ""
+msgstr "<literal>rpm</literal>"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:560
@@ -945,16 +994,12 @@ msgstr "Controladores y hardware"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:564
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
 msgstr ""
-"Unión de SUSE Linux Enterprise Server y el empaquetado del kernel de "
-"openSUSE Leap"
+"Arranque seguro: núcleo de SUSE Linux Enterprise y paquetes de módulos del "
+"núcleo firmados por openSUSE"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:565
@@ -966,6 +1011,13 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"El paquete recientemente introducido <package>openSUSE-signkey-cert</"
+"package> es necesario para los KMP de openSUSE como <package>virtualbox</"
+"package>, pero sólo en modo de arranque seguro. El paquete incluye el "
+"certificado de clave autentificadora de openSUSE para refrendar los archivos "
+"del módulo del kernel (<literal>.ko</literal>) al KMP de openSUSE y llama a "
+"<literal>mokutil</literal> para ayudar al usuario a inscribir el certificado "
+"en MOK. De este modo, el KMP de openSUSE puede ser verificado por el núcleo."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:572
@@ -976,6 +1028,11 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Si no tiene el patrón base instalado y está usando algunos de estos KMP, le "
+"recomendamos instalar el paquete <package>openSUSE-signkey-cert</package> "
+"manualmente. Es necesario reiniciar el sistema. Puede encontrar más "
+"información sobre este proceso y la inscripción manual en <link xlink:href="
+"\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:582
