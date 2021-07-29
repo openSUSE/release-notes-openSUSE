@@ -3,16 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2021-06-24 14:32+0200\n"
-"PO-Revision-Date: 2021-06-03 15:59+0000\n"
+"PO-Revision-Date: 2021-07-29 18:11+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
-"notes-opensuse/leap-15_3/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 4.7.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -172,21 +172,14 @@ msgstr "安裝"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:89
-#, fuzzy
-#| msgid ""
-#| "This section contains installation-related notes. For detailed upgrade "
-#| "instructions, see the documentation at <link xlink:href=\"https://doc."
-#| "opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-"
-#| "basics.html\"/>."
 msgid ""
 "This section contains installation-related notes. For detailed upgrade "
 "instructions, see the documentation at <link xlink:href=\"https://doc."
 "opensuse.org/documentation/leap/startup/html/book-startup/part-basics.html\"/"
 ">."
 msgstr ""
-"此章節包含了安裝相關的要點。關於詳細的升級教學，請參閱在<link xlink:href="
-"\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse."
-"startup/part-basics.html\"/>的文件。"
+"此章節包含了安裝相關的要點。關於詳細的升級教學，請參閱在<link xlink:href=\"https://doc.opensuse.org/"
+"documentation/leap/startup/html/book-startup/part-basics.html\"/>的文件。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -212,6 +205,15 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"openSUSE Leap 15.3 維護組態包括三個主要更新套件庫，分別為：<literal>repo-"
+"update</literal>、<literal>repo-backports-update</literal>，以及 <literal>repo-"
+"sle-update</literal>。後二個為新增的套件庫，並且是重覆使用來自 SUSE Linux Enterprise "
+"二進位套件的成果。這些套件庫已就緒，並會在進行 openSUSE Leap 線上安裝時做檢查。我們建議您使用它們。供 openSUSE Leap "
+"15.3 使用的新套件庫定義會透過即時的 <package>openSUSE-release</package> 套件維護更新來提供。"
+"此項更新會透過傳統的 <literal>repo-update</literal> 維護頻道來遞送。它將帶有一個特別的更新旗標來表示它修改了軟體管理區域 "
+"(接著由 zypper 來進行特別處理)。您應該使用 <command>zypper up</command> "
+"命令再三確認是否所有更新都有處理過。欲知詳情，請見 <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=1186593\"/>。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -222,6 +224,9 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"<literal>repo-update</literal> 套件庫用於 openSUSE Leap 開源軟體 (OSS) "
+"的更新。它是最小的一個，並且收錄系統設定套件，包含發行相關、品牌相關，以及 SUSE Linux Enterprise 套件的分支。"
+"該套件庫也有一個對應的 <literal>debug-info</literal> 套件庫。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -231,6 +236,8 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"<literal>repo-backports-update</literal> 套件庫是 openSUSE Backports 的更新套件庫，其收錄 "
+"openSUSE Leap 主要的套件更新。該套件庫也有一個對應的 <literal>debug-info</literal> 套件庫。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -240,6 +247,8 @@ msgid ""
 "Enterprise update streams. This repository is without the <literal>debug-"
 "info</literal> variant."
 msgstr ""
+"第三個套件庫，<literal>repo-sle-update</literal>，是一個更新套件庫，收錄來自所有尚在維護中 SUSE Linux "
+"Enterprise 更新流的合併更新。該套件庫沒有對應的 <literal>debug-info</literal> 套件庫。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -631,6 +640,8 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 提供所有必需的 RPM 驗證金鑰，包括 SUSE Linux Enterprise Server 的金鑰，皆為 "
+"<package>openSUSE-build-key</package> 套件的一部分。所有金鑰皆新增至 OSS 套件庫。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:377
@@ -639,6 +650,8 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"<package>libzypp</package> 套件版本 17.25.11 "
+"應會自動匯入被認定為可信任的必需金鑰。若是如此，您會被通知匯入已經完成，您不需做其他操作。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:382
@@ -646,13 +659,13 @@ msgid ""
 "If the system has not imported the key that was used to sign the "
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
-msgstr ""
+msgstr "若系統尚未匯入用來簽署 <literal>repodata</literal> 的金鑰，您將需要手動匯入。您可以執行以下指令來進行檢查："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:387
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:388
@@ -661,6 +674,7 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"其輸出應該包含以 <literal>gpg-pubkey-39db7c82-*</literal> 為開頭的一行文字。若無，則請按照以下步驟來手動匯入："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:394
@@ -669,6 +683,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"從 <link xlink:href=\"https://download.opensuse.org/distribution/leap/15.3/"
+"repo/oss/gpg-pubkey-39db7c82-5847eb1f.asc\"/> 下載 SUSE Linux Enterprise 15 "
+"的金鑰。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:400
@@ -676,6 +693,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"儲存金鑰至 <literal>/var/cache/zypp/pubkeys</literal> 目錄。將其更名為以 <literal>.key</"
+"literal> 結尾的檔名。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:406
@@ -685,19 +704,17 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"執行 <literal>zypper dup</literal> "
+"命令。您將會被提問是否要匯入缺失的金鑰。即使該金鑰已存在前述的目錄下，該情況仍會發生。若該檔案包含了多把金鑰，zypper 將只會匯入必要的金鑰。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:415
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-#| "show_bug.cgi?id=1044816\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"如需取得更多資訊，請見 <link xlink:href=\"https://bugzilla.suse.com/show_bug."
-"cgi?id=1044816\"/>。"
+"如需取得更多資訊，請見 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"1184326\"/>。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:421
@@ -768,6 +785,7 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"<package>midori</package>，一個基於 WebKit 及 GTK+ 的輕量級網頁瀏覽器，已不再支援且將會在下次發行中被移除。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:474
@@ -808,7 +826,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:504
 msgid "Berkeley DB removed from packages"
-msgstr ""
+msgstr "Berkeley DB 自相依套件中移除"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:505
@@ -820,48 +838,49 @@ msgid ""
 "these packages. In the long term, SUSE aims to provide a solution without "
 "Berkeley DB."
 msgstr ""
+"Berkeley DB 在某些套件中作為資料庫，是以 GNU AGPLv3/Sleepycat "
+"雙許可證來授權。由於重散布我們套件的服務商發現該套件的許可證將會有危害他們解決方案的潛在問題，我們決定將 Berkeley DB "
+"自這些套件的相依套件中移除。SUSE 將會提供不使用 Berkeley DB 的解決方案做為長期目標。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:513
-#, fuzzy
-#| msgid "To change the defaults, use the following alternatives:"
 msgid "This change affects the following packages:"
-msgstr "要變更預設值，請使用以下 alternatives："
+msgstr "這個變動影響下列套件："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:518
 msgid "<literal>apr-util</literal>"
-msgstr ""
+msgstr "<literal>apr-util</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:523
 msgid "<literal>cyrus-sasl</literal>"
-msgstr ""
+msgstr "<literal>cyrus-sasl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:528
 msgid "<literal>iproute2</literal>"
-msgstr ""
+msgstr "<literal>iproute2</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:533
 msgid "<literal>perl</literal>"
-msgstr ""
+msgstr "<literal>perl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:538
 msgid "<literal>php7</literal>"
-msgstr ""
+msgstr "<literal>php7</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:543
 msgid "<literal>postfix</literal>"
-msgstr ""
+msgstr "<literal>postfix</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:548
 msgid "<literal>rpm</literal>"
-msgstr ""
+msgstr "<literal>rpm</literal>"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:560
@@ -870,16 +889,10 @@ msgstr "驅動程式與硬體"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:564
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
-msgstr ""
-"SUSE Linux Enterprise Server 與 openSUSE Leap 作業系統核心套件打包方式的一致"
-"性"
+msgstr "Secure Boot: SUSE Linux Enterprise 作業系統核心與 openSUSE 簽章的核心模組套件"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:565
@@ -891,6 +904,11 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"新導入的 <package>openSUSE-signkey-cert</package> 套件對於像是 <package>virtualbox</"
+"package> 之類的 openSUSE KMP (核心模組套件) 是必需的，但只在 Secure Boot 模式下才需要。該套件包含了用來簽署 "
+"openSUSE KMP 中核心模組檔案 (<literal>.ko</literal>) 的 openSUSE 簽署金鑰證書，並且呼叫 "
+"<literal>mokutil</literal> 以幫助使用者將該證書登錄至 MOK。如此一來，openSUSE KMP "
+"才能夠通過作業系統核心的驗證。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:572
@@ -901,6 +919,9 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"若您沒有安裝這個基礎模式，並且正在使用任何的 KMP，我們建議手動安裝 <package>openSUSE-signkey-"
+"cert</package>。系統重新啟動是必需的。關於更多該流程以及手動登錄的資訊，可以在 <link xlink:href=\"https://en."
+"opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/> 找到。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:582
