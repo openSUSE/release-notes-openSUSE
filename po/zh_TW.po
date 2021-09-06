@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2020-07-23 14:50+0200\n"
+"POT-Creation-Date: 2021-09-06 12:22+0200\n"
 "PO-Revision-Date: 2021-05-13 08:57+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_2/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
+"notes-opensuse/leap-15_2/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -261,7 +261,9 @@ msgid ""
 "To avoid issues with and data loss because of updates, the root file system "
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
-msgstr "為了避免因為更新造成的問題與資料遺失，root 檔案系統必須禁止寫入。是故 root 檔案系統在正常操作下是以唯讀方式裝載。"
+msgstr ""
+"為了避免因為更新造成的問題與資料遺失，root 檔案系統必須禁止寫入。是故 root 檔"
+"案系統在正常操作下是以唯讀方式裝載。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:148
@@ -330,8 +332,9 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
-"要取消最後一個快照對 root 檔案系統所做的變更，請先確認您的系統是使用最後一個快照之前的快照開機，然後執行：<command"
-">transactional-update rollback</command>"
+"要取消最後一個快照對 root 檔案系統所做的變更，請先確認您的系統是使用最後一個"
+"快照之前的快照開機，然後執行：<command>transactional-update rollback</"
+"command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:195
@@ -427,9 +430,10 @@ msgid ""
 "is recommended to install any firmware updates the hardware vendor "
 "recommends."
 msgstr ""
-"openSUSE 藉由只寫入能夠啟動系統的最少需要的資料量，來降低這個風險。寫入的資料至少要能告訴 UEFI 韌體 openSUSE 啟動程式的位置。"
-"官方 Linux 核心提供使用 UEFI 儲存區來寫入開機及當機資訊的功能 "
-"(<literal>pstore</literal>)，在此預設被停用。無論如何，建議安裝任何硬體製造商建議的韌體更新。"
+"openSUSE 藉由只寫入能夠啟動系統的最少需要的資料量，來降低這個風險。寫入的資料"
+"至少要能告訴 UEFI 韌體 openSUSE 啟動程式的位置。官方 Linux 核心提供使用 UEFI "
+"儲存區來寫入開機及當機資訊的功能 (<literal>pstore</literal>)，在此預設被停"
+"用。無論如何，建議安裝任何硬體製造商建議的韌體更新。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:254
@@ -847,8 +851,9 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
-"若 UEFI Secure Boot 被啟用，該功能會阻擋第三方核心模組被載入。來自 openSUSE 官方套件庫的核心模組套件 (Kernel "
-"Module Packages, KMPs)，由於這些模組已使用 openSUSE 金鑰簽章過，故不會受影響。簽章檢查會有以下的行為："
+"若 UEFI Secure Boot 被啟用，該功能會阻擋第三方核心模組被載入。來自 openSUSE "
+"官方套件庫的核心模組套件 (Kernel Module Packages, KMPs)，由於這些模組已使用 "
+"openSUSE 金鑰簽章過，故不會受影響。簽章檢查會有以下的行為："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:568
@@ -856,7 +861,9 @@ msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
-msgstr "未簽章過、或被已知為不被信任或是無法使用系統信任金鑰資料庫驗證的金鑰簽章過的核心模組會被禁止載入。"
+msgstr ""
+"未簽章過、或被已知為不被信任或是無法使用系統信任金鑰資料庫驗證的金鑰簽章過的"
+"核心模組會被禁止載入。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:575
@@ -881,27 +888,54 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:href="
 "\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
-"因為這也影響了 NVIDIA 圖形驅動程式，我們已在 openSUSE 官方套件中解決了這個問題。然而，在安裝之後，您需要手動加入一個新的 MOK "
-"金鑰才能使新套件運作。關於如何安裝驅動程式與加入 MOK 金鑰的指引，請見 <link xlink:href=\"https://en.opensuse."
-"org/SDB:NVIDIA_drivers#Secureboot\"/>。"
+"因為這也影響了 NVIDIA 圖形驅動程式，我們已在 openSUSE 官方套件中解決了這個問"
+"題。然而，在安裝之後，您需要手動加入一個新的 MOK 金鑰才能使新套件運作。關於如"
+"何安裝驅動程式與加入 MOK 金鑰的指引，請見 <link xlink:href=\"https://en."
+"opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>。"
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:593
+msgid "Hibernation Disabled When Kernel Locked Down"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:594
+msgid ""
+"The kernel lockdown feature is designed to prevent access to a running "
+"kernel image. This is active, for example, when a system boots in EFI Secure "
+"Boot mode."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:598
+#, fuzzy
+#| msgid ""
+#| "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
+#| "NVIDIA_drivers\"/>."
+msgid ""
+"For more information, see <link xlink:href=\"https://www.mankier.com/7/"
+"kernel_lockdown\"/>."
+msgstr ""
+"要了解更多資訊，請參閱 <link xlink:href=\"https://en.opensuse.org/SDB:"
+"NVIDIA_drivers\"/>。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:594
+#: xml/release-notes.xml:606
 msgid "Desktop"
 msgstr "桌面環境"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:595
+#: xml/release-notes.xml:607
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr "這個小節列出 openSUSE Leap 15.2 關於桌面環境的問題與變動。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:599
+#: xml/release-notes.xml:611
 msgid "KDE 4 and Qt 4 are unmaintained"
 msgstr "不再維護 KDE 4 與 Qt 4"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:612
 msgid ""
 "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and "
 "Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt "
@@ -916,35 +950,35 @@ msgstr ""
 "或至少類似功能的 Plasma 5 與 Qt 5 套件。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:686
+#: xml/release-notes.xml:698
 msgid "More Information and Feedback"
 msgstr "更多資訊與反饋"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:689
+#: xml/release-notes.xml:701
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "請閱讀安裝媒體上的 <filename>README</filename> 文件。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:694
+#: xml/release-notes.xml:706
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "從套件 RPM 檢視某個套件詳細的變動歷史資訊："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:698
+#: xml/release-notes.xml:710
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:699
+#: xml/release-notes.xml:711
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "將 <replaceable>FILENAME</replaceable> 代換為 RPM 名稱。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:704
+#: xml/release-notes.xml:716
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -953,14 +987,14 @@ msgstr ""
 "新套件的變動歷史（按時間先後排序）。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:710
+#: xml/release-notes.xml:722
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "在安裝媒體中的 <filename>docu</filename> 目錄可找到更多的資訊。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:716
+#: xml/release-notes.xml:728
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -969,7 +1003,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:722
+#: xml/release-notes.xml:734
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -978,7 +1012,7 @@ msgstr ""
 "opensuse.org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:729
+#: xml/release-notes.xml:741
 msgid "Copyright © SUSE LLC"
 msgstr "版權所有 © SUSE LLC"
 
@@ -989,13 +1023,6 @@ msgstr "版權所有 © SUSE LLC"
 #~ msgstr ""
 #~ "未被簽章的核心模組將會視為<quote>受汙染 (tainted)</quote>。載入會出現警告"
 #~ "訊息，但仍可正常運作。"
-
-#~ msgid ""
-#~ "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
-#~ "NVIDIA_drivers\"/>."
-#~ msgstr ""
-#~ "要了解更多資訊，請參閱 <link xlink:href=\"https://en.opensuse.org/SDB:"
-#~ "NVIDIA_drivers\"/>。"
 
 #~ msgid "15.1"
 #~ msgstr "15.1"

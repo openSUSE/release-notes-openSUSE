@@ -6,11 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2020-07-23 14:50+0200\n"
+"POT-Creation-Date: 2021-09-06 12:22+0200\n"
 "PO-Revision-Date: 2021-05-05 11:55+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_2/zh_CN/>\n"
+"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
+"notes-opensuse/leap-15_2/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -842,8 +842,9 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
-"如果启用了 UEFI 安全引导，这可能会阻止到第三方内核模块的加载。来自 openSUSE 官方仓库的内核模块软件包（KMP）则不受影响，"
-"因为仓库内的模块已用 openSUSE 密钥签名过。签名检查表现为以下行为："
+"如果启用了 UEFI 安全引导，这可能会阻止到第三方内核模块的加载。来自 openSUSE "
+"官方仓库的内核模块软件包（KMP）则不受影响，因为仓库内的模块已用 openSUSE 密钥"
+"签名过。签名检查表现为以下行为："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:568
@@ -851,7 +852,9 @@ msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
-msgstr "未签名的内核模块，或者其签名密钥不受信任也未被系统可信密钥数据库验证过的，将被屏蔽。"
+msgstr ""
+"未签名的内核模块，或者其签名密钥不受信任也未被系统可信密钥数据库验证过的，将"
+"被屏蔽。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:575
@@ -875,27 +878,54 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:href="
 "\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
-"因为这也会影响到 NVIDIA 显卡驱动，我们在 openSUSE 的官方软件包中解决了这个问题。但是，你需要在安装完后手动注册新的 MOK "
-"密钥，才能让这个新软件包工作。更多如何安装驱动和注册 MOK 密钥的说明，参见 <link xlink:href=\""
-"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>。"
+"因为这也会影响到 NVIDIA 显卡驱动，我们在 openSUSE 的官方软件包中解决了这个问"
+"题。但是，你需要在安装完后手动注册新的 MOK 密钥，才能让这个新软件包工作。更多"
+"如何安装驱动和注册 MOK 密钥的说明，参见 <link xlink:href=\"https://en."
+"opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>。"
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:593
+msgid "Hibernation Disabled When Kernel Locked Down"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:594
+msgid ""
+"The kernel lockdown feature is designed to prevent access to a running "
+"kernel image. This is active, for example, when a system boots in EFI Secure "
+"Boot mode."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:598
+#, fuzzy
+#| msgid ""
+#| "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
+#| "NVIDIA_drivers\"/>."
+msgid ""
+"For more information, see <link xlink:href=\"https://www.mankier.com/7/"
+"kernel_lockdown\"/>."
+msgstr ""
+"更多信息，请访问 <link xlink:href=\"https://zh.opensuse.org/SDB:NVIDIA_驱动"
+"\"/>。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:594
+#: xml/release-notes.xml:606
 msgid "Desktop"
 msgstr "桌面"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:595
+#: xml/release-notes.xml:607
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr "此章节列出了 openSUSE Leap 15.2 上的桌面问题和更改。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:599
+#: xml/release-notes.xml:611
 msgid "KDE 4 and Qt 4 are unmaintained"
 msgstr "KDE 4 和 Qt 4 已不维护"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:612
 msgid ""
 "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and "
 "Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt "
@@ -910,35 +940,35 @@ msgstr ""
 "Plasma 5 和 Qt 5 提供的功能相同或接近的软件包。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:686
+#: xml/release-notes.xml:698
 msgid "More Information and Feedback"
 msgstr "更多信息和反馈"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:689
+#: xml/release-notes.xml:701
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "请阅读安装介质上的 <filename>README</filename> 文档。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:694
+#: xml/release-notes.xml:706
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "从 RPM 中获取关于某特定软件包的详细修订历史信息："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:698
+#: xml/release-notes.xml:710
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>文件名</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:699
+#: xml/release-notes.xml:711
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "将 <replaceable>文件名</replaceable> 替换为 RPM 的名称。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:704
+#: xml/release-notes.xml:716
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -947,14 +977,14 @@ msgstr ""
 "软件包更新历史。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:710
+#: xml/release-notes.xml:722
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:716
+#: xml/release-notes.xml:728
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -963,7 +993,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:722
+#: xml/release-notes.xml:734
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -972,7 +1002,7 @@ msgstr ""
 "org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:729
+#: xml/release-notes.xml:741
 msgid "Copyright © SUSE LLC"
 msgstr "版权所有 © SUSE LLC"
 
@@ -983,13 +1013,6 @@ msgstr "版权所有 © SUSE LLC"
 #~ msgstr ""
 #~ "未签名的内核模块将视为 <quote>受污染</quote> 然后产生警告消息，但它们的功"
 #~ "能仍会生效。"
-
-#~ msgid ""
-#~ "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
-#~ "NVIDIA_drivers\"/>."
-#~ msgstr ""
-#~ "更多信息，请访问 <link xlink:href=\"https://zh.opensuse.org/SDB:NVIDIA_驱"
-#~ "动\"/>。"
 
 #~ msgid "Kernel modules that are signed but fail the check will be blocked."
 #~ msgstr "已签名但检查失败的内核模块将被屏蔽。"
