@@ -25,11 +25,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.fi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-24 14:32+0200\n"
+"POT-Creation-Date: 2021-09-08 11:06+0200\n"
 "PO-Revision-Date: 2021-08-28 12:45+0000\n"
 "Last-Translator: Tommi Nieminen <software@legisign.org>\n"
-"Language-Team: Finnish <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_3/fi/>\n"
+"Language-Team: Finnish <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_3/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -238,14 +238,15 @@ msgstr ""
 "literal> ja <literal>repo-sle-update</literal>. Kaksi jälkimmäistä ovat "
 "uusia ja tulosta SUSE Linux Enterprisen binaarien uudelleenkäytöstä. Nämä "
 "päivityslähteet ovat käytettävissä ja tarkistetaan openSUSE Leapin "
-"verkkoasennuksessa. Niitä suositellaan käytettäväksi. Lisäksi ”nollan päivän”"
-" ylläpitopäivitysten kautta uusia päivityslähdemäärityksiä tarjoaa <package"
-">openSUSE-release</package>-paketti. Päivitys toimitetaan perinteiseltä "
-"<literal>repo-update</literal>-ylläpitokanavalta, jolla on erityinen "
-"päivityslippu merkiksi siitä, että se käyttää ohjelmistohallinta-aluetta, "
-"jonka sitten zypper käsittelee erityistavalla. <command>zypper up</command> -"
-"komennolla voi varmistaa, että kaikki päivitykset käsitellään. Lisätietoa: "
-"<link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1186593\"/>."
+"verkkoasennuksessa. Niitä suositellaan käytettäväksi. Lisäksi ”nollan "
+"päivän” ylläpitopäivitysten kautta uusia päivityslähdemäärityksiä tarjoaa "
+"<package>openSUSE-release</package>-paketti. Päivitys toimitetaan "
+"perinteiseltä <literal>repo-update</literal>-ylläpitokanavalta, jolla on "
+"erityinen päivityslippu merkiksi siitä, että se käyttää ohjelmistohallinta-"
+"aluetta, jonka sitten zypper käsittelee erityistavalla. <command>zypper up</"
+"command> -komennolla voi varmistaa, että kaikki päivitykset käsitellään. "
+"Lisätietoa: <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
+"id=1186593\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -283,8 +284,8 @@ msgid ""
 msgstr ""
 "Kolmas lähde nimeltä <literal>repo-sle-update</literal> on päivityslähde, "
 "joka sisältää yhdistelmäpäivitykset kaikista aktiivisista SUSE Linux "
-"Enterprisen päivitysvirroista. Tällä lähteellä ei ole <literal>debug-"
-"info</literal>-muunnelmaa."
+"Enterprisen päivitysvirroista. Tällä lähteellä ei ole <literal>debug-info</"
+"literal>-muunnelmaa."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -308,13 +309,13 @@ msgid ""
 "Server</emphasis>."
 msgstr ""
 "Asennus tukee <emphasis>transaktionaalinen palvelin</emphasis> -"
-"järjestelmäroolia. Sen piirteisiin kuuluu päivitykset atomisesti ("
-"jakamattomina toimenpiteinä) tekevä päivitysjärjestelmä, jonka ansiosta "
+"järjestelmäroolia. Sen piirteisiin kuuluu päivitykset atomisesti "
+"(jakamattomina toimenpiteinä) tekevä päivitysjärjestelmä, jonka ansiosta "
 "muutokset voi tarvittaessa helposti kumota. Ominaisuus pohjautuu kaikkien "
 "SUSE- ja openSUSE-jakelujen käyttämiin paketinhallintatyökaluihin, joten "
 "valtaosa openSUSE Leap 15.3:n muissakin järjestelmärooleissa toimivista RPM-"
-"paketeista toimii myös <emphasis>transaktionaalisessa "
-"palvelimessa</emphasis>."
+"paketeista toimii myös <emphasis>transaktionaalisessa palvelimessa</"
+"emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:145
@@ -409,8 +410,21 @@ msgstr ""
 "Järjestelmärooli <emphasis>transaktionaalinen palvelin</emphasis> vaatii "
 "vähintään 12 Gt levyn Btrfs-tilannevedosten käyttöön ottamiseksi."
 
+#. (itstool) path: important/title
+#: xml/release-notes.xml:198
+msgid "YaST Does Not Work Transactional Mode"
+msgstr ""
+
+#. (itstool) path: important/para
+#: xml/release-notes.xml:201
+msgid ""
+"Currently, YaST does not work with transactional updates. This is because "
+"YaST performs things immediately and because it cannot edit a read-only "
+"filesystem."
+msgstr ""
+
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:196
+#: xml/release-notes.xml:206
 msgid ""
 "To work with transactional updates, always use the command "
 "<command>transactional-update</command> instead of YaST and Zypper for all "
@@ -421,12 +435,12 @@ msgstr ""
 "Zypperin sijaan:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:203
+#: xml/release-notes.xml:213
 msgid "Update the system: <command>transactional-update up</command>"
 msgstr "Järjestelmän päivitys: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:209
+#: xml/release-notes.xml:219
 msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
@@ -435,7 +449,7 @@ msgstr ""
 "<replaceable>PAKETIN_NIMI</replaceable></command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:215
+#: xml/release-notes.xml:225
 msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
@@ -444,7 +458,7 @@ msgstr ""
 "<replaceable>PAKETIN_NIMI</replaceable></command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:221
+#: xml/release-notes.xml:231
 msgid ""
 "To revert the last snapshot, that is the last set of changes to the root "
 "file system, make sure your system is booted into the next to last snapshot "
@@ -455,7 +469,7 @@ msgstr ""
 "tilannevedokseen ja aja: <command>transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:227
+#: xml/release-notes.xml:237
 msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
@@ -464,7 +478,7 @@ msgstr ""
 "määrätilanteeseen."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:233
+#: xml/release-notes.xml:243
 msgid ""
 "When using this system role, by default, the system will perform a daily "
 "update and reboot between 03:30 am and 05:00 am. Both of these actions are "
@@ -477,13 +491,13 @@ msgstr ""
 "komennolla:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:239
+#: xml/release-notes.xml:249
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
 msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:240
+#: xml/release-notes.xml:250
 msgid ""
 "For more information about transactional updates, see the openSUSE Kubic "
 "blog posts <link xlink:href=\"https://kubic.opensuse.org/blog/2018-04-04-"
@@ -496,12 +510,12 @@ msgstr ""
 "blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:249
+#: xml/release-notes.xml:259
 msgid "Installing on hard disks with less than 12 GB of capacity"
 msgstr "Asennus kiintolevyille, joilla on tilaa alle 12 Gt"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:251
+#: xml/release-notes.xml:261
 msgid ""
 "The installer will only propose a partitioning scheme if the available hard "
 "disk size is larger than 12 GB. If you want to set up, for example, very "
@@ -513,12 +527,12 @@ msgstr ""
 "hienosäädä osiointiparametrit käyttämällä ohjattua osiointia."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:260
+#: xml/release-notes.xml:270
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr "UEFI – Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:261
+#: xml/release-notes.xml:271
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
@@ -532,7 +546,7 @@ msgstr ""
 "riittää todisteeksi siitä, että kone käynnistyy UEFIlla."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:268
+#: xml/release-notes.xml:278
 msgid ""
 "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it "
 "to break if too much data gets written to the UEFI storage area. However, "
@@ -544,7 +558,7 @@ msgstr ""
 "<quote>liikaa</quote>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:273
+#: xml/release-notes.xml:283
 msgid ""
 "openSUSE minimizes the risk by not writing more than the bare minimum "
 "required to boot the OS. The minimum means telling the UEFI firmware about "
@@ -563,12 +577,12 @@ msgstr ""
 "laitevalmistajan suosittelemat laiteohjelmistopäivitykset."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:286
+#: xml/release-notes.xml:296
 msgid "UEFI, GPT, and MS-DOS partitions"
 msgstr "UEFI-, GPT- ja MS-DOS-osiot"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:287
+#: xml/release-notes.xml:297
 msgid ""
 "Together with the EFI/UEFI specification, a new style of partitioning "
 "arrived: GPT (GUID Partition Table). This new schema uses globally unique "
@@ -581,7 +595,7 @@ msgstr ""
 "osiotyyppien tunnisteina."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:293
+#: xml/release-notes.xml:303
 msgid ""
 "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) "
 "partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically "
@@ -598,7 +612,7 @@ msgstr ""
 "sen korvaava tietue luodaan."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:301
+#: xml/release-notes.xml:311
 msgid ""
 "Modern firmware has a garbage collector that collects deleted entries and "
 "frees the memory reserved for old entries. A problem arises when faulty "
@@ -611,17 +625,17 @@ msgstr ""
 "käynnistyskelvoton järjestelmä."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:307
+#: xml/release-notes.xml:317
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr "Kiertääksesi ongelman muunna vanha MBR-osio GPT:ksi."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:314
+#: xml/release-notes.xml:324
 msgid "System upgrade"
 msgstr "Järjestelmäpäivitys"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:316
+#: xml/release-notes.xml:326
 msgid ""
 "This section lists notes related to upgrading the system. For supported "
 "scenarios and detailed upgrade instructions, see the documentation at:"
@@ -630,17 +644,17 @@ msgstr ""
 "skenaarioista sekä yksityiskohtaiset päivitysohjeet löytää osoitteesta:"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:336
+#: xml/release-notes.xml:346
 msgid "Additionally, check <xref linkend=\"removed-deprecated\"/>."
 msgstr "Tarkista lisäksi <xref linkend=\"removed-deprecated\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:342
+#: xml/release-notes.xml:352
 msgid "Seamless upgrade from openSUSE Leap 15.2"
 msgstr "Saumaton päivittäminen openSUSE Leap 15.2:sta"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:344
+#: xml/release-notes.xml:354
 msgid ""
 "openSUSE Leap 15.3 is newly built on top of binary rpms from SUSE Linux "
 "Enterprise Server. This change was introduced as part of the Closing The "
@@ -653,7 +667,7 @@ msgstr ""
 "toisiaan."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:349
+#: xml/release-notes.xml:359
 msgid ""
 "Unlike 15.2, the default installation of openSUSE Leap 15.3 contains the "
 "majority of rpms from SUSE Linux Enterprise Server. These rpms are signed by "
@@ -671,12 +685,12 @@ msgstr ""
 "12.25.8 esitteli hyväksyntäluettelon SUSE LLC:n ja openSUSEn väliselle "
 "toimittajavaihdokselle saumattoman siirtymisen mahdollistamiseksi. "
 "Hyväksyntäluettelo poistaa tarpeen <literal>--allow-vendor-change</literal>-"
-"valitsimelle openSUSE- ja SUSE LLC -toimittajavaihdosten osalta. <literal"
-">--allow-vendor-change</literal> on yhä annettava siirtymisen aikana, jos "
+"valitsimelle openSUSE- ja SUSE LLC -toimittajavaihdosten osalta. <literal>--"
+"allow-vendor-change</literal> on yhä annettava siirtymisen aikana, jos "
 "käytössä on muilla avaimilla allekirjoitettuja OBS-lähteitä."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:361
+#: xml/release-notes.xml:371
 msgid ""
 "openSUSE Leap releases older than 15.2 do not contain this feature because "
 "they are not supported anymore. All users are advised to upgrade to openSUSE "
@@ -691,13 +705,13 @@ msgstr ""
 "<package>libzypp</package>-versioille:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:369
+#: xml/release-notes.xml:379
 #, no-wrap
 msgid "zypper dup --allow-vendor-change --force-resolution"
 msgstr "zypper dup --allow-vendor-change --force-resolution"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:371
+#: xml/release-notes.xml:381
 msgid ""
 "openSUSE Leap 15.3 provides all the required RPM verification keys, "
 "including the SUSE Linux Enterprise Server ones, as part of the "
@@ -709,7 +723,7 @@ msgstr ""
 "pakettia. Kaikki avaimet ovat myös heti saatavilla OSS-asennuslähteestä."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:377
+#: xml/release-notes.xml:387
 msgid ""
 "The <package>libzypp</package> package version 17.25.11 should automatically "
 "import the required keys that are identified as trusted. If it has, you will "
@@ -720,7 +734,7 @@ msgstr ""
 "tulee ilmoitus eikä muuta tarvitse tehdä."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:382
+#: xml/release-notes.xml:392
 msgid ""
 "If the system has not imported the key that was used to sign the "
 "<literal>repodata</literal>, you will need to import it manually. You can "
@@ -731,34 +745,34 @@ msgstr ""
 "voi tarkistaa komennolla:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:387
+#: xml/release-notes.xml:397
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
 msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:388
+#: xml/release-notes.xml:398
 msgid ""
 "The output should include a line starting with the following text: "
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
-"Tulosteessa tulisi olla rivi, joka alkaa tekstillä: <literal>gpg-pubkey-"
-"39db7c82-*</literal>. Ellei näin ole, avaimen voi tuoda itse näin:"
+"Tulosteessa tulisi olla rivi, joka alkaa tekstillä: <literal>gpg-"
+"pubkey-39db7c82-*</literal>. Ellei näin ole, avaimen voi tuoda itse näin:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:394
+#: xml/release-notes.xml:404
 msgid ""
 "Download the SUSE Linux Enterprise 15 key from <link xlink:href=\"https://"
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
-"Lataa SUSE Linux Enterprise 15:n avain osoitteesta <link xlink:href=\"https"
-"://download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-"
-"39db7c82-5847eb1f.asc\"/>."
+"Lataa SUSE Linux Enterprise 15:n avain osoitteesta <link xlink:href="
+"\"https://download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
+"pubkey-39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:400
+#: xml/release-notes.xml:410
 msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
@@ -767,7 +781,7 @@ msgstr ""
 "sen nimeä niin, että sillä on pääte <literal>.key</literal>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:406
+#: xml/release-notes.xml:416
 msgid ""
 "Run the <literal>zypper dup</literal> command. You will be asked to import "
 "the missing key. This will happen even if the key is in the directory "
@@ -779,16 +793,16 @@ msgstr ""
 "useampia avaimia, zypper tuo vain vaaditun avaimen."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:415
+#: xml/release-notes.xml:425
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"Lisätietoa: <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
-"1184326\"/>."
+"Lisätietoa: <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
+"id=1184326\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:421
+#: xml/release-notes.xml:431
 msgid ""
 "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel packaging"
 msgstr ""
@@ -796,7 +810,7 @@ msgstr ""
 "kytkeminen"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:422
+#: xml/release-notes.xml:432
 msgid ""
 "On openSUSE Leap, the default kernel has been split into three subpackages: "
 "<package>kernel-default</package>, <package>kernel-default-extra</package>, "
@@ -822,7 +836,7 @@ msgstr ""
 "toimii paketille <package>kernel-default</package>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:435
+#: xml/release-notes.xml:445
 msgid ""
 "If you use this kernel variant, make sure that all RPMs required for your "
 "use case are installed."
@@ -831,17 +845,17 @@ msgstr ""
 "RPM:t on asennettu."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:444
+#: xml/release-notes.xml:454
 msgid "Removed and deprecated packages and features"
 msgstr "Poistetut ja vanhentuneet paketit ja ominaisuudet"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:447
+#: xml/release-notes.xml:457
 msgid "Deprecated packages and features"
 msgstr "Vanhentuneet paketit ja ominaisuudet"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:448
+#: xml/release-notes.xml:458
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -853,7 +867,7 @@ msgstr ""
 "siirtämisessä, mutta niitä ei tulisi käyttää eivätkä ne saa päivityksiä."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:467
+#: xml/release-notes.xml:477
 msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
@@ -863,7 +877,7 @@ msgstr ""
 "julkaisussa."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:474
+#: xml/release-notes.xml:484
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -873,23 +887,23 @@ msgstr ""
 "<package>lifecycle-data-openSUSE</package> on asennettu ja käytä komentoa:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:479
+#: xml/release-notes.xml:489
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:483
+#: xml/release-notes.xml:493
 msgid "Removed packages and features"
 msgstr "Poistetut paketit ja ominaisuudet"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:484
+#: xml/release-notes.xml:494
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "Poistettuja paketteja ei enää toimiteta julkaisun osana."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:489
+#: xml/release-notes.xml:499
 msgid ""
 "<package>libqt4</package> and <package>kdelibs4</package> have been removed "
 "because they were unmaintained and had security issues. For more "
@@ -900,12 +914,12 @@ msgstr ""
 "<xref linkend=\"desktop-remove-kde4\"/>."
 
 #. (itstool) path: sect3/title
-#: xml/release-notes.xml:504
+#: xml/release-notes.xml:514
 msgid "Berkeley DB removed from packages"
 msgstr "Berkeley DB on poistettu paketeista"
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:505
+#: xml/release-notes.xml:515
 msgid ""
 "Berkeley DB, used as a database in certain packages, is dual-licensed under "
 "GNU AGPLv3/Sleepycat licenses. Because service vendors that redistribute our "
@@ -922,52 +936,52 @@ msgstr ""
 "Berkeley DB:tä."
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:513
+#: xml/release-notes.xml:523
 msgid "This change affects the following packages:"
 msgstr "Muutos vaikuttaa seuraaviin paketteihin:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:518
+#: xml/release-notes.xml:528
 msgid "<literal>apr-util</literal>"
 msgstr "<literal>apr-util</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:523
+#: xml/release-notes.xml:533
 msgid "<literal>cyrus-sasl</literal>"
 msgstr "<literal>cyrus-sasl</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:528
+#: xml/release-notes.xml:538
 msgid "<literal>iproute2</literal>"
 msgstr "<literal>iproute2</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:533
+#: xml/release-notes.xml:543
 msgid "<literal>perl</literal>"
 msgstr "<literal>perl</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:538
+#: xml/release-notes.xml:548
 msgid "<literal>php7</literal>"
 msgstr "<literal>php7</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:543
+#: xml/release-notes.xml:553
 msgid "<literal>postfix</literal>"
 msgstr "<literal>postfix</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:548
+#: xml/release-notes.xml:558
 msgid "<literal>rpm</literal>"
 msgstr "<literal>rpm</literal>"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:560
+#: xml/release-notes.xml:570
 msgid "Drivers and hardware"
 msgstr "Ajurit ja laitteisto"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:564
+#: xml/release-notes.xml:574
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
@@ -976,7 +990,7 @@ msgstr ""
 "ydinmoduulipaketit"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:565
+#: xml/release-notes.xml:575
 msgid ""
 "The newly introduced <package>openSUSE-signkey-cert</package> package is "
 "required for openSUSE KMPs like <package>virtualbox</package>, but only in "
@@ -989,12 +1003,12 @@ msgstr ""
 "openSUSEn KMP:ihin kuten <package>virtualbox</package> mutta ainoastaan "
 "Secure Boot -tilassa. Paketti sisältää openSUSEn allekirjoitusavaimen "
 "varmenteen ydinmoduulitiedostojen (<literal>.ko</literal>) "
-"allekirjoitettamiseksi openSUSE KMP:ssä, ja se kutsuu "
-"<literal>mokutil</literal>-ohjelmaa auttamaan käyttäjään tuomaan varmenteen "
-"MOK:hon. Näin ydin voi tarkistaa openSUSEn KMP:n."
+"allekirjoitettamiseksi openSUSE KMP:ssä, ja se kutsuu <literal>mokutil</"
+"literal>-ohjelmaa auttamaan käyttäjään tuomaan varmenteen MOK:hon. Näin ydin "
+"voi tarkistaa openSUSEn KMP:n."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:572
+#: xml/release-notes.xml:582
 msgid ""
 "If you do not have the base pattern installed and are using any of these "
 "KMPs, we recommend installing the <package>openSUSE-signkey-cert</package> "
@@ -1005,17 +1019,17 @@ msgstr ""
 "Ellei pohjakuviota ole asennettu ja käytössä on jokin näistä KMP:istä, "
 "käyttäjää suositellaan asentamaan <package>openSUSE-signkey-cert</package> "
 "käsin. Järjestelmä pitää käynnistää uudelleen. Lisätietoa toimenpiteistä ja "
-"käyttöönotosta on osoitteessa <link xlink:href=\"https://en.opensuse.org/"
-"SDB:NVIDIA_drivers#Secureboot\"/>."
+"käyttöönotosta on osoitteessa <link xlink:href=\"https://en.opensuse.org/SDB:"
+"NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:582
+#: xml/release-notes.xml:592
 msgid "Secure Boot: third-party drivers need to be properly signed"
 msgstr ""
 "Secure Boot: kolmannen osapuolen ajurit vaativat kelvollisen allekirjoituksen"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:583
+#: xml/release-notes.xml:593
 msgid ""
 "openSUSE Leap 15.2 and later enable a kernel module signature check for "
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
@@ -1027,7 +1041,7 @@ msgstr ""
 "ajaminen ytimessä."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:589
+#: xml/release-notes.xml:599
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -1040,7 +1054,7 @@ msgstr ""
 "allekirjoitettu openSUSEn avaimella. Allekirjoitus toimii seuraavalla tapaa:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:598
+#: xml/release-notes.xml:608
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -1051,7 +1065,7 @@ msgstr ""
 "järjestelmän luotettujen avainten tietokantaa vasten, estetään."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:605
+#: xml/release-notes.xml:615
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -1066,7 +1080,7 @@ msgstr ""
 "opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:612
+#: xml/release-notes.xml:622
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -1081,24 +1095,24 @@ msgstr ""
 "xlink=https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:624
+#: xml/release-notes.xml:634
 msgid "Desktop"
 msgstr "Työpöytä"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:625
+#: xml/release-notes.xml:635
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr ""
 "Tässä osiossa luetellaan openSUSE Leap 15.3:n työpöytään liittyvät ongelmat "
 "ja muutokset."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:630
+#: xml/release-notes.xml:640
 msgid "KDE 4 and Qt4 have been removed"
 msgstr "KDE 4 ja Qt4 on poistettu"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:631
+#: xml/release-notes.xml:641
 msgid ""
 "KDE 4 packages are no longer part of openSUSE Leap 15.3. Update your system "
 "to Plasma 5 and Qt 5. Some Qt 4 packages may still remain for compatibility "
@@ -1111,13 +1125,13 @@ msgstr ""
 "opensuse.org/show_bug.cgi?id=1179613\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:641
+#: xml/release-notes.xml:651
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
 "IBusin asetusten siirto käsin on tarpeen asettelun nimen muuttumisen takia"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:642
+#: xml/release-notes.xml:652
 msgid ""
 "Since <package>IBus</package> version 1.5.23 renamed some keyboard layouts, "
 "it cannot load configuration containing these renamed layouts after "
@@ -1134,7 +1148,7 @@ msgstr ""
 "opensuse.org/show_bug.cgi?id=1177545\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:649
+#: xml/release-notes.xml:659
 msgid ""
 "Users need to migrate configuration manually. Open GNOME Settings and choose "
 "an appropriate layout. For desktop environments other than GNOME, run "
@@ -1145,35 +1159,35 @@ msgstr ""
 "<literal>ibus-setup</literal>-ohjelmaa."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:718
+#: xml/release-notes.xml:728
 msgid "More information and feedback"
 msgstr "Lisätietoa ja palaute"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:721
+#: xml/release-notes.xml:731
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Lue <filename>README</filename>-tiedostot tietovälineeltä."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:726
+#: xml/release-notes.xml:736
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Löydät määräpaketin yksityiskohtaiset muutolokitiedot sen RPM:stä:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:730
+#: xml/release-notes.xml:740
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>TIEDOSTONIMI</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:731
+#: xml/release-notes.xml:741
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Korvaa <replaceable>TIEDOSTONIMI</replaceable> RPM:n nimellä."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:736
+#: xml/release-notes.xml:746
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1183,14 +1197,14 @@ msgstr ""
 "tehdyistä muutoksista."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:742
+#: xml/release-notes.xml:752
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "Lisätietoa löytyy tietovälineen <filename>docu</filename>-kansiosta."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:748
+#: xml/release-notes.xml:758
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1199,7 +1213,7 @@ msgstr ""
 "doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:754
+#: xml/release-notes.xml:764
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1208,7 +1222,7 @@ msgstr ""
 "opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:761
+#: xml/release-notes.xml:771
 msgid "Copyright © SUSE LLC"
 msgstr "Tekijänoikeudet © SUSE LLC"
 
