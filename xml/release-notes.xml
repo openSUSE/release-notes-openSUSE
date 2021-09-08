@@ -161,6 +161,16 @@
      size of at least 12 GB to accommodate Btrfs snapshots.
     </para>
    </important>
+   <important>
+     <!-- bsc#1134997 -->
+     <title>
+      &yast; Does Not Work Transactional Mode
+     </title>
+     <para>
+      Currently, &yast; does not work with transactional updates.
+      This is because &yast; performs things immediately and because it cannot edit a read-only filesystem. 
+     </para>
+   </important>
    <para>
     To work with transactional updates, always use the command
     <command>transactional-update</command> instead of &yast; and Zypper for
