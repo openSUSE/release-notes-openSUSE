@@ -20,7 +20,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenSUSE\n"
-"POT-Creation-Date: 2021-09-08 10:55+0200\n"
+"POT-Creation-Date: 2021-09-09 09:53+0200\n"
 "PO-Revision-Date: 2012-11-19 15:00+0200\n"
 "Last-Translator: Lucian Oprea <oprea.luci@gmail.com>\n"
 "Language-Team: Romanian <LL@li.org>\n"
@@ -388,12 +388,26 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:238
+#: xml/release-notes.xml:239
+msgid "Btrfs Filesystem RAM and Storage Requirements"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:240
+msgid ""
+"The Btrfs filesystem is best used on systems with sufficient RAM and "
+"storage. SSD is also recommended. There have been user reports of "
+"performance degradation on systems with low amounts of RAM (4 GiB or less) "
+"and regular hard disk drives."
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:249
 msgid "UEFI—Unified Extensible Firmware Interface"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:239
+#: xml/release-notes.xml:250
 msgid ""
 "Prior to installing openSUSE on a system that boots using UEFI (Unified "
 "Extensible Firmware Interface), you are urgently advised to check for any "
@@ -403,7 +417,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:246
+#: xml/release-notes.xml:257
 msgid ""
 "<emphasis>Background:</emphasis> Some UEFI firmware has bugs that cause it "
 "to break if too much data gets written to the UEFI storage area. However, "
@@ -411,7 +425,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:251
+#: xml/release-notes.xml:262
 msgid ""
 "openSUSE minimizes the risk by not writing more than the bare minimum "
 "required to boot the OS. The minimum means telling the UEFI firmware about "
@@ -423,12 +437,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:264
+#: xml/release-notes.xml:275
 msgid "UEFI, GPT, and MS-DOS Partitions"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:265
+#: xml/release-notes.xml:276
 msgid ""
 "Together with the EFI/UEFI specification, a new style of partitioning "
 "arrived: GPT (GUID Partition Table). This new schema uses globally unique "
@@ -437,7 +451,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:271
+#: xml/release-notes.xml:282
 msgid ""
 "Additionally, the UEFI specification also allows legacy MBR (MS-DOS) "
 "partitions. The Linux boot loaders (ELILO or GRUB 2) try to automatically "
@@ -448,7 +462,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:279
+#: xml/release-notes.xml:290
 msgid ""
 "Modern firmware has a garbage collector that collects deleted entries and "
 "frees the memory reserved for old entries. A problem arises when faulty "
@@ -457,39 +471,39 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:285
+#: xml/release-notes.xml:296
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:292
+#: xml/release-notes.xml:303
 msgid "System Upgrade"
 msgstr "Actualizare sistem"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:294
+#: xml/release-notes.xml:305
 msgid ""
 "This section lists notes related to upgrading the system. For supported "
 "scenarios and detailed upgrade instructions, see the documentation at:"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:314
+#: xml/release-notes.xml:325
 msgid "Additionally, check <xref linkend=\"sec.package\"/>."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:327
+#: xml/release-notes.xml:338
 msgid "Packaging Changes"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:330
+#: xml/release-notes.xml:341
 msgid "Deprecated Packages"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:331
+#: xml/release-notes.xml:342
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -498,21 +512,21 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:340
+#: xml/release-notes.xml:351
 msgid ""
 "<package>libqt4</package>: Will receive neither updates nor security fixes. "
 "The package will be removed in the next version of openSUSE Leap."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:346
+#: xml/release-notes.xml:357
 msgid ""
 "<package>kdelibs4</package>: Will receive neither updates nor security "
 "fixes. The package will be removed in the next version of openSUSE Leap."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:353
+#: xml/release-notes.xml:364
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -520,23 +534,23 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:358
+#: xml/release-notes.xml:369
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:362
+#: xml/release-notes.xml:373
 msgid "Removed Packages"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:363
+#: xml/release-notes.xml:374
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:369
+#: xml/release-notes.xml:380
 msgid ""
 "<package>artha</package>: Removed because it is unmaintained and has "
 "unpatched security issues. See <link xlink:href=\"https://bugzilla.opensuse."
@@ -544,7 +558,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:376
+#: xml/release-notes.xml:387
 msgid ""
 "<package>fate</package>: Removed because it uses insecure KDE4 and Qt4 "
 "libraries and <literal>features.opensuse.org</literal> is no longer used for "
@@ -552,7 +566,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:383
+#: xml/release-notes.xml:394
 msgid ""
 "<package>gcompris</package> (old GTK version): Removed because it is "
 "unmaintained and has been replaced by now <package>gcompris-qt</package>. "
@@ -560,7 +574,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:390
+#: xml/release-notes.xml:401
 msgid ""
 "<package>gstreamer-plugins-qt</package>, <package>gstreamer-plugins-qt5</"
 "package>, and <package>ktp-call-ui</package>: Removed because these packages "
@@ -569,13 +583,13 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:400
+#: xml/release-notes.xml:411
 msgid ""
 "<package>H2rename</package>: Removed because the package is unmaintained."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:406
+#: xml/release-notes.xml:417
 msgid ""
 "<package>ixpdimm_sw</package>, <package>invm-cim</package>, <package>invm-"
 "cli</package>, and <package>invm-i18n</package>: Replaced by "
@@ -583,14 +597,14 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:413
+#: xml/release-notes.xml:424
 msgid ""
 "<package>jag-level-editor</package>: Replaced by <package>jag-editor</"
 "package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:419
+#: xml/release-notes.xml:430
 msgid ""
 "<package>jovie</package>: Removed because the package is no longer "
 "maintained upstream. See also <link xlink:href=\"https://kde.org/"
@@ -598,7 +612,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:426
+#: xml/release-notes.xml:437
 msgid ""
 "<package>kaccessible</package>, <package>kepas</package>, <package>konsole4</"
 "package>, <package>klinkstatus</package>, <package>kppp</package>, "
@@ -608,38 +622,38 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:435
+#: xml/release-notes.xml:446
 msgid ""
 "<package>kdesdk4-scripts</package>: Replaced by <package>kdesdk-scripts</"
 "package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:441
+#: xml/release-notes.xml:452
 msgid ""
 "<package>kdeuser</package>: Replaced by <package>kde-user-manager</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:447
+#: xml/release-notes.xml:458
 msgid ""
 "<package>keepassx</package> and <package>kpassgen</package>: Replaced by "
 "<package>keepassxc</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:453
+#: xml/release-notes.xml:464
 msgid "<package>kile5</package>: Replaced by <package>kile</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:459
+#: xml/release-notes.xml:470
 msgid ""
 "<package>libkdegames4</package>: Replaced by <package>libkdegames5</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:465
+#: xml/release-notes.xml:476
 msgid ""
 "<package>libkquoath</package>, <package>libjreen</package>, and "
 "<package>libqross</package>: Removed because the packages are no longer "
@@ -647,20 +661,20 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:472
+#: xml/release-notes.xml:483
 msgid ""
 "<package>lilo</package>: Has been obsolete for a decade, replaced by "
 "<package>grub2</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:478
+#: xml/release-notes.xml:489
 msgid ""
 "<package>lua51-luajit</package>: Replaced by <package>moonjit</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:484
+#: xml/release-notes.xml:495
 msgid ""
 "<package>mp3gain</package> and <package>wxmp3gain</package>: The package "
 "<package>mp3gain</package> was removed because it has a security issue and "
@@ -669,60 +683,60 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:492
+#: xml/release-notes.xml:503
 msgid ""
 "<package>nodejs8</package>: Replaced by <package>nodejs10</package> and "
 "<package>nodejs12</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:499
+#: xml/release-notes.xml:510
 msgid ""
 "<package>python-django_compressor</package>: Replaced by <package>python-"
 "django-compressor</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:505
+#: xml/release-notes.xml:516
 msgid ""
 "<package>python-pep8</package>: Replaced by <package>python-pycodestyle</"
 "package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:511
+#: xml/release-notes.xml:522
 msgid ""
 "<package>python-pyside</package> and <package>python-pyside-tools</package>: "
 "Removed because it depends on the insecure <command>libqt4</command>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:518
+#: xml/release-notes.xml:529
 msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:523
+#: xml/release-notes.xml:534
 msgid ""
 "<package>slapi-nis</package>: Removed because this module is not maintained "
 "outside of FreeIPA environments, and we do not ship FreeIPA."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:529
+#: xml/release-notes.xml:540
 msgid ""
 "<package>tomahawk</package>: Removed because the package is no longer "
 "maintained upstream."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:535
+#: xml/release-notes.xml:546
 msgid ""
 "<package>vokoscreen</package>: Replaced by <package>vokoscreenNG</package>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:541
+#: xml/release-notes.xml:552
 msgid ""
 "<package>bareftp</package>, <package>docky</package>, <package>fsharp</"
 "package>, <package>gnome-desktop-sharp2</package>, <package>gnome-sharp2</"
@@ -732,17 +746,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:557
+#: xml/release-notes.xml:568
 msgid "Drivers and Hardware"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:562
+#: xml/release-notes.xml:573
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:563
+#: xml/release-notes.xml:574
 msgid ""
 "openSUSE Leap 15.2 now enables a kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
@@ -750,7 +764,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:569
+#: xml/release-notes.xml:580
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -759,7 +773,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:578
+#: xml/release-notes.xml:589
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -767,7 +781,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:585
+#: xml/release-notes.xml:596
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -777,7 +791,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:592
+#: xml/release-notes.xml:603
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -787,12 +801,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:603
+#: xml/release-notes.xml:614
 msgid "Hibernation Disabled When Kernel Locked Down"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:604
+#: xml/release-notes.xml:615
 msgid ""
 "The kernel lockdown feature is designed to prevent access to a running "
 "kernel image. This is active, for example, when a system boots in EFI Secure "
@@ -800,7 +814,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:608
+#: xml/release-notes.xml:619
 #, fuzzy
 #| msgid ""
 #| "Find more detailed information about new features at <ulink url=\"http://"
@@ -813,34 +827,34 @@ msgstr ""
 "opensuse.org/AppArmor/Changes_AppArmor_2_1\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:615
+#: xml/release-notes.xml:626
 msgid "NVIDIA G03 Drivers Not Supported"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:616
+#: xml/release-notes.xml:627
 msgid ""
 "Older NVIDIA graphics cards that require the NVIDIA G03 drivers are not "
 "supported."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:624
+#: xml/release-notes.xml:635
 msgid "Desktop"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:625
+#: xml/release-notes.xml:636
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:629
+#: xml/release-notes.xml:640
 msgid "KDE 4 and Qt 4 are unmaintained"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:630
+#: xml/release-notes.xml:641
 msgid ""
 "Updating from KDE 4 and Qt 4 to Plasma 5 and Qt 5 is recommended. KDE 4 and "
 "Qt 4 are no longer supported. openSUSE Leap 15.2 still contains KDE 4 and Qt "
@@ -851,50 +865,50 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:716
+#: xml/release-notes.xml:727
 #, fuzzy
 msgid "More Information and Feedback"
 msgstr "Informații despre memorie"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:719
+#: xml/release-notes.xml:730
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:724
+#: xml/release-notes.xml:735
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:728
+#: xml/release-notes.xml:739
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:729
+#: xml/release-notes.xml:740
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:734
+#: xml/release-notes.xml:745
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:740
+#: xml/release-notes.xml:751
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:746
+#: xml/release-notes.xml:757
 #, fuzzy
 #| msgid ""
 #| "Find more detailed information about new features at <ulink url=\"http://"
@@ -907,7 +921,7 @@ msgstr ""
 "opensuse.org/AppArmor/Changes_AppArmor_2_1\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:752
+#: xml/release-notes.xml:763
 #, fuzzy
 #| msgid ""
 #| "Find more detailed information about new features at <ulink url=\"http://"
@@ -920,7 +934,7 @@ msgstr ""
 "opensuse.org/AppArmor/Changes_AppArmor_2_1\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:759
+#: xml/release-notes.xml:770
 #, fuzzy
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © 2012 Novell, Inc."
