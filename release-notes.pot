@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-09-08 11:16+0200\n"
+"POT-Creation-Date: 2022-01-07 13:16+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr ""
 
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:32
-msgid "fs@suse.com"
+msgid "lukas.kucharczyk@suse.com"
 msgstr ""
 
 #. (itstool) path: article/para
@@ -108,7 +108,7 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:89
-msgid "This section contains installation-related notes. For detailed upgrade instructions, see the documentation at <link xlink:href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-basics.html\"/>."
+msgid "This section contains installation-related notes. For detailed installation instructions, see the documentation at <link xlink:href=\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-basics.html\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -345,110 +345,115 @@ msgstr ""
 msgid "<package>gap</package>: Removed because the package is not FHS-compliant. For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1143860\"/>."
 msgstr ""
 
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:371
+msgid "<package>tensorflow</package>: Removed because the package Tensorflow 1.x is deprecated, package tensorflow2 should be used instead."
+msgstr ""
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:378
+#: xml/release-notes.xml:382
 msgid "Drivers and Hardware"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:383
+#: xml/release-notes.xml:387
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:384
+#: xml/release-notes.xml:388
 msgid "openSUSE Leap 15.2 now enables a kernel module signature check for third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important security measure to avoid untrusted code running in the kernel."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:390
+#: xml/release-notes.xml:394
 msgid "This may prevent third-party kernel modules from being loaded if UEFI Secure Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE repositories are not affected, because the modules they contain are signed with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:399
+#: xml/release-notes.xml:403
 msgid "Kernel modules that are unsigned or signed with a key that is either known as untrusted or cannot be verified against the system's trusted key data base will be blocked."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:406
+#: xml/release-notes.xml:410
 msgid "It is possible to generate a custom certificate, enroll it into the system's Machine Owner Key (MOK) data base, and sign locally compiled kernel modules with this certificate's key. Modules signed in this manner will neither be blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:413
+#: xml/release-notes.xml:417
 msgid "Since this also affects NVIDIA graphics drivers, we addressed this in our official packages for openSUSE. However, you need to manually enroll a new MOK key after installation to make the new packages work. For instructions how to install the drivers and enroll the MOK key, see <link xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:425
+#: xml/release-notes.xml:429
 msgid "Desktop"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:426
+#: xml/release-notes.xml:430
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.4."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:430
+#: xml/release-notes.xml:434
 msgid "KDE 4 and Qt4 removal"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:431
+#: xml/release-notes.xml:435
 msgid "KDE 4 packages will not be part of openSUSE Leap 15.3. Please update your system to Plasma 5 and Qt 5. Some of Qt 4 packages might still remain for compatability reasons. <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:519
 msgid "More Information and Feedback"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:518
+#: xml/release-notes.xml:522
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:523
+#: xml/release-notes.xml:527
 msgid "View a detailed changelog information about a particular package from its RPM:"
 msgstr ""
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:527
+#: xml/release-notes.xml:531
 #, no-wrap
 msgid ""
 "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:528
+#: xml/release-notes.xml:532
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:533
+#: xml/release-notes.xml:537
 msgid "Check the <filename>ChangeLog</filename> file in the top level of the medium for a chronological log of all changes made to the updated packages."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:539
+#: xml/release-notes.xml:543
 msgid "Find more information in the <filename>docu</filename> directory on the medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:545
+#: xml/release-notes.xml:549
 msgid "For additional or updated documentation, see <link xlink:href=\"https://doc.opensuse.org/\"/>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:551
+#: xml/release-notes.xml:555
 msgid "For the latest product news, from openSUSE, visit <link xlink:href=\"https://www.opensuse.org\"/>."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:558
+#: xml/release-notes.xml:562
 msgid "Copyright © SUSE LLC"
 msgstr ""
 

@@ -16,7 +16,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2021-09-08 11:16+0200\n"
+"POT-Creation-Date: 2022-01-07 13:16+0100\n"
 "PO-Revision-Date: 2020-10-09 22:48+0000\n"
 "Last-Translator: Andrés Barrantes Silman <andresbs2000@protonmail.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/release-notes-"
@@ -83,8 +83,8 @@ msgstr "Distribución openSUSE"
 
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:32
-msgid "fs@suse.com"
-msgstr "fs@suse.com"
+msgid "lukas.kucharczyk@suse.com"
+msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:37
@@ -218,8 +218,14 @@ msgstr "Instalación"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:89
+#, fuzzy
+#| msgid ""
+#| "This section contains installation-related notes. For detailed upgrade "
+#| "instructions, see the documentation at <link xlink:href=\"https://doc."
+#| "opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-"
+#| "basics.html\"/>."
 msgid ""
-"This section contains installation-related notes. For detailed upgrade "
+"This section contains installation-related notes. For detailed installation "
 "instructions, see the documentation at <link xlink:href=\"https://doc."
 "opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-"
 "basics.html\"/>."
@@ -678,20 +684,33 @@ msgstr ""
 "problemas de seguridad sin parchear. Vea <link xlink:href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=1143860\"/>."
 
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:371
+#, fuzzy
+#| msgid ""
+#| "<package>tomahawk</package>: Removed because the package is no longer "
+#| "maintained upstream."
+msgid ""
+"<package>tensorflow</package>: Removed because the package Tensorflow 1.x is "
+"deprecated, package tensorflow2 should be used instead."
+msgstr ""
+"<package>tomahawk</package>: Eliminado por no recibir mantenimiento en el "
+"proyecto original."
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:378
+#: xml/release-notes.xml:382
 msgid "Drivers and Hardware"
 msgstr "Controladores y hardware"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:383
+#: xml/release-notes.xml:387
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr ""
 "Arranque seguro: los controladores de terceros tienen que estar firmados "
 "debidamente"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:384
+#: xml/release-notes.xml:388
 msgid ""
 "openSUSE Leap 15.2 now enables a kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
@@ -703,7 +722,7 @@ msgstr ""
 "desconfiado en el kernel."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:390
+#: xml/release-notes.xml:394
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -717,7 +736,7 @@ msgstr ""
 "verificación de la signatura tiene el siguiente comportamiento:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:399
+#: xml/release-notes.xml:403
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -727,7 +746,7 @@ msgstr ""
 "que no esté en la base de datos de llaves del sistema, serán rechazados."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:406
+#: xml/release-notes.xml:410
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -742,7 +761,7 @@ msgstr ""
 "opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:413
+#: xml/release-notes.xml:417
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -758,12 +777,12 @@ msgstr ""
 "NVIDIA_drivers#Secureboot\"/> (en inglés)."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:425
+#: xml/release-notes.xml:429
 msgid "Desktop"
 msgstr "Escritorio"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:426
+#: xml/release-notes.xml:430
 #, fuzzy
 #| msgid "This section lists desktop issues and changes in openSUSE Leap 15.2."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.4."
@@ -772,14 +791,14 @@ msgstr ""
 "Leap 15.2."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:430
+#: xml/release-notes.xml:434
 #, fuzzy
 #| msgid "KDE 4 and Qt 4 are unmaintained"
 msgid "KDE 4 and Qt4 removal"
 msgstr "KDE 4 y Qt 4 no son mantenidos"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:431
+#: xml/release-notes.xml:435
 msgid ""
 "KDE 4 packages will not be part of openSUSE Leap 15.3. Please update your "
 "system to Plasma 5 and Qt 5. Some of Qt 4 packages might still remain for "
@@ -789,19 +808,19 @@ msgstr ""
 
 # CER: no estoy seguro de la traducción de Feedback. Tiene el sentido de comentarios de los usuarios hacia los desarrolladores o la distro.
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:519
 msgid "More Information and Feedback"
 msgstr "Mas información y comentarios"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:518
+#: xml/release-notes.xml:522
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 "Encuentre más información en los documentos <filename>README</filename> del "
 "medio."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:523
+#: xml/release-notes.xml:527
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -810,20 +829,20 @@ msgstr ""
 "respecto a su RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:527
+#: xml/release-notes.xml:531
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NOMBRE_DEL_ARCHIVO</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:528
+#: xml/release-notes.xml:532
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Sustituya <replaceable>NOMBRE_DEL_ARCHIVO</replaceable> por el nombre del "
 "RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:533
+#: xml/release-notes.xml:537
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -833,7 +852,7 @@ msgstr ""
 "hechos a los paquetes actualizados."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:539
+#: xml/release-notes.xml:543
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -842,7 +861,7 @@ msgstr ""
 "medio."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:545
+#: xml/release-notes.xml:549
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -851,7 +870,7 @@ msgstr ""
 "\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:551
+#: xml/release-notes.xml:555
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -860,9 +879,12 @@ msgstr ""
 "href=\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:558
+#: xml/release-notes.xml:562
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
+
+#~ msgid "fs@suse.com"
+#~ msgstr "fs@suse.com"
 
 #~ msgid "15.2"
 #~ msgstr "15.2"
@@ -1057,13 +1079,6 @@ msgstr "Copyright © SUSE LLC"
 #~ msgstr ""
 #~ "<package>slapi-nis</package>: Eliminado porque este módulo no es "
 #~ "mantenido fuera de entornos FreeIPA y nosotros no incluimos FreeIPA."
-
-#~ msgid ""
-#~ "<package>tomahawk</package>: Removed because the package is no longer "
-#~ "maintained upstream."
-#~ msgstr ""
-#~ "<package>tomahawk</package>: Eliminado por no recibir mantenimiento en el "
-#~ "proyecto original."
 
 #~ msgid ""
 #~ "<package>vokoscreen</package>: Replaced by <package>vokoscreenNG</"
