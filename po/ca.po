@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
-"POT-Creation-Date: 2022-01-07 13:17+0100\n"
+"POT-Creation-Date: 2022-03-07 14:24+0100\n"
 "PO-Revision-Date: 2022-03-01 15:12+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_3/ca/>\n"
+"Language-Team: Catalan <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_3/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -927,11 +927,31 @@ msgstr ""
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:514
+msgid "ReiserFS support removed"
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:515
+msgid ""
+"With openSUSE Leap 15.3, support for ReiserFS has been completely removed "
+"from YaST and the kernel, and the installer will block the upgrade when it "
+"detects a ReiserFS file system."
+msgstr ""
+
+#. (itstool) path: sect3/para
+#: xml/release-notes.xml:520
+msgid ""
+"For existing data partitions formatted with ReiserFS, we suggest converting "
+"them to Btrfs before migrating your system to openSUSE Leap 15.3."
+msgstr ""
+
+#. (itstool) path: sect3/title
+#: xml/release-notes.xml:526
 msgid "Berkeley DB removed from packages"
 msgstr "Berkeley DB s'ha suprimit dels paquets"
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:515
+#: xml/release-notes.xml:527
 msgid ""
 "Berkeley DB, used as a database in certain packages, is dual-licensed under "
 "GNU AGPLv3/Sleepycat licenses. Because service vendors that redistribute our "
@@ -948,52 +968,52 @@ msgstr ""
 "paquets. A la llarga, SUSE pretén proporcionar una solució sense Berkeley DB."
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:523
+#: xml/release-notes.xml:535
 msgid "This change affects the following packages:"
 msgstr "Aquest canvi afecta els paquets següents:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:528
+#: xml/release-notes.xml:540
 msgid "<literal>apr-util</literal>"
 msgstr "<literal>apr-util</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:533
+#: xml/release-notes.xml:545
 msgid "<literal>cyrus-sasl</literal>"
 msgstr "<literal>cyrus-sasl</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:538
+#: xml/release-notes.xml:550
 msgid "<literal>iproute2</literal>"
 msgstr "<literal>iproute2</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:543
+#: xml/release-notes.xml:555
 msgid "<literal>perl</literal>"
 msgstr "<literal>perl</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:548
+#: xml/release-notes.xml:560
 msgid "<literal>php7</literal>"
 msgstr "<literal>php7</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:553
+#: xml/release-notes.xml:565
 msgid "<literal>postfix</literal>"
 msgstr "<literal>postfix</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:558
+#: xml/release-notes.xml:570
 msgid "<literal>rpm</literal>"
 msgstr "<literal>rpm</literal>"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:570
+#: xml/release-notes.xml:582
 msgid "Drivers and hardware"
 msgstr "Controladors i maquinari"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:574
+#: xml/release-notes.xml:586
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
@@ -1002,7 +1022,7 @@ msgstr ""
 "nucli signats per openSUSE"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:575
+#: xml/release-notes.xml:587
 msgid ""
 "The newly introduced <package>openSUSE-signkey-cert</package> package is "
 "required for openSUSE KMPs like <package>virtualbox</package>, but only in "
@@ -1020,7 +1040,7 @@ msgstr ""
 "verificar el KMP d'openSUSE."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:582
+#: xml/release-notes.xml:594
 msgid ""
 "If you do not have the base pattern installed and are using any of these "
 "KMPs, we recommend installing the <package>openSUSE-signkey-cert</package> "
@@ -1035,14 +1055,14 @@ msgstr ""
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:592
+#: xml/release-notes.xml:604
 msgid "Secure Boot: third-party drivers need to be properly signed"
 msgstr ""
 "Arrencada segura: els controladors de tercers han d'estar signats "
 "correctament."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:593
+#: xml/release-notes.xml:605
 msgid ""
 "openSUSE Leap 15.2 and later enable a kernel module signature check for "
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
@@ -1054,7 +1074,7 @@ msgstr ""
 "important per evitar que s’executi codi que no sigui de confiança al nucli."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:599
+#: xml/release-notes.xml:611
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -1068,7 +1088,7 @@ msgstr ""
 "comportament següent:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:608
+#: xml/release-notes.xml:620
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -1079,7 +1099,7 @@ msgstr ""
 "confiança del sistema."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:615
+#: xml/release-notes.xml:627
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -1094,7 +1114,7 @@ msgstr ""
 "xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:622
+#: xml/release-notes.xml:634
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -1110,24 +1130,24 @@ msgstr ""
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:634
+#: xml/release-notes.xml:646
 msgid "Desktop"
 msgstr "Escriptori"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:635
+#: xml/release-notes.xml:647
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr ""
 "Aquesta secció llista problemes de l'escriptori i canvis a l'openSUSE Leap "
 "15.3."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:640
+#: xml/release-notes.xml:652
 msgid "KDE 4 and Qt4 have been removed"
 msgstr "El KDE 4 i Qt 4 s'han suprimit."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:641
+#: xml/release-notes.xml:653
 msgid ""
 "KDE 4 packages are no longer part of openSUSE Leap 15.3. Update your system "
 "to Plasma 5 and Qt 5. Some Qt 4 packages may still remain for compatibility "
@@ -1140,14 +1160,14 @@ msgstr ""
 "<link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:651
+#: xml/release-notes.xml:663
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
 "La migració manual de la configuració de l'IBus és necessària a causa del "
 "canvi de nom de disposicions."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:652
+#: xml/release-notes.xml:664
 msgid ""
 "Since <package>IBus</package> version 1.5.23 renamed some keyboard layouts, "
 "it cannot load configuration containing these renamed layouts after "
@@ -1165,7 +1185,7 @@ msgstr ""
 "obtenir-ne més informació."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:659
+#: xml/release-notes.xml:671
 msgid ""
 "Users need to migrate configuration manually. Open GNOME Settings and choose "
 "an appropriate layout. For desktop environments other than GNOME, run "
@@ -1176,17 +1196,17 @@ msgstr ""
 "diferents del GNOME, executeu <literal>ibus-setup</literal>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:728
+#: xml/release-notes.xml:740
 msgid "More information and feedback"
 msgstr "Més informació i informació de retorn"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:731
+#: xml/release-notes.xml:743
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Llegiu els documents <filename>README</filename> del mitjà."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:736
+#: xml/release-notes.xml:748
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -1195,19 +1215,19 @@ msgstr ""
 "respecte del seu RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:740
+#: xml/release-notes.xml:752
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NOMDELFITXER</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:741
+#: xml/release-notes.xml:753
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 "Reemplaceu <replaceable>NOMDELFITXER</replaceable> amb el nom de l'RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:746
+#: xml/release-notes.xml:758
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1217,7 +1237,7 @@ msgstr ""
 "actualitzats."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:752
+#: xml/release-notes.xml:764
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1225,7 +1245,7 @@ msgstr ""
 "Trobeu més informació dins del directori <filename>docu</filename> del mitjà."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:758
+#: xml/release-notes.xml:770
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1234,7 +1254,7 @@ msgstr ""
 "href=\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:764
+#: xml/release-notes.xml:776
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1243,7 +1263,7 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:771
+#: xml/release-notes.xml:783
 msgid "Copyright © SUSE LLC"
 msgstr "Dret de còpia © SUSE LLC"
 

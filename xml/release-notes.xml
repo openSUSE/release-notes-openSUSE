@@ -200,7 +200,7 @@
     </title>
     <para>
      Currently, &yast; does not work with transactional updates.
-     This is because &yast; performs things immediately and because it cannot edit a read-only filesystem. 
+     This is because &yast; performs things immediately and because it cannot edit a read-only filesystem.
     </para>
   </important>
    <para>
@@ -347,7 +347,7 @@
    Additionally, check <xref linkend="removed-deprecated"/>.
   </para>
 
-   
+
   <sect2 xml:id="sec.upgrade.152">
    <title>Seamless upgrade from &opensuseleap; 15.2</title>
    <!-- bnc#1182629 -->
@@ -447,7 +447,7 @@
     use case are installed.
    </para>
   </sect2>
-         
+
  </sect1>
 
  <sect1 xml:id="removed-deprecated">
@@ -510,6 +510,18 @@
      </para>
     </listitem> -->
    </itemizedlist>
+   <sect3 xml:id="boo-1195500">
+    <title>ReiserFS support removed</title>
+    <para>
+     With &thisversion;, support for ReiserFS has been completely removed from
+     YaST and the kernel, and the installer will block the upgrade when it
+     detects a ReiserFS file system.
+    </para>
+    <para>
+     For existing data partitions formatted with ReiserFS, we suggest converting
+     them to Btrfs before migrating your system to &thisversion;.
+   </para>
+   </sect3>
    <sect3 xml:id="boo-1186564">
     <title>Berkeley DB removed from packages</title>
     <para>
@@ -651,7 +663,7 @@
     <title>Manual config migration of IBus is necessary due to layout name change</title>
     <para>
      Since <package>IBus</package> version 1.5.23 renamed some keyboard layouts, it cannot load configuration
-     containing these renamed layouts after upgrading. Thereby, it might reset 
+     containing these renamed layouts after upgrading. Thereby, it might reset
      the layout to US. Layouts of the following languages are affected:
      Belgian, German, Greek, Romanian, and Slovak.
      See <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1177545"/> for more information.
