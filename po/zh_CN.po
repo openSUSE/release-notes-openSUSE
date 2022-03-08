@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2022-03-07 14:24+0100\n"
-"PO-Revision-Date: 2021-07-04 15:49+0000\n"
+"PO-Revision-Date: 2022-03-08 14:12+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
-"notes-opensuse/leap-15_3/zh_CN/>\n"
+"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 4.9.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -70,10 +70,8 @@ msgstr "openSUSE 发行版"
 
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:32
-#, fuzzy
-#| msgid "sknorr@suse.com"
 msgid "lukas.kucharczyk@suse.com"
-msgstr "sknorr@suse.com"
+msgstr "lukas.kucharczyk@suse.com"
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:37
@@ -177,21 +175,14 @@ msgstr "安装"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:89
-#, fuzzy
-#| msgid ""
-#| "This section contains installation-related notes. For detailed upgrade "
-#| "instructions, see the documentation at <link xlink:href=\"https://doc."
-#| "opensuse.org/documentation/leap/startup/html/book-startup/part-basics.html"
-#| "\"/>."
 msgid ""
 "This section contains installation-related notes. For detailed installation "
 "instructions, see the documentation at <link xlink:href=\"https://doc."
 "opensuse.org/documentation/leap/startup/html/book-startup/part-basics.html\"/"
 ">."
 msgstr ""
-"此章节为关于安装过程的描述。详细的升级指引请参考文档 <link xlink:href="
-"\"https://doc.opensuse.org/documentation/leap/startup/html/book-startup/part-"
-"basics.html\"/>。"
+"此章节为关于安装过程的描述。详细的安装指引请参考文档 <link xlink:href=\"https://doc.opensuse.org/"
+"documentation/leap/startup/html/book-startup/part-basics.html\"/>。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -379,7 +370,7 @@ msgstr ""
 #. (itstool) path: important/title
 #: xml/release-notes.xml:198
 msgid "YaST Does Not Work Transactional Mode"
-msgstr ""
+msgstr "YaST 不能在事务模式下使用"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:201
@@ -387,7 +378,7 @@ msgid ""
 "Currently, YaST does not work with transactional updates. This is because "
 "YaST performs things immediately and because it cannot edit a read-only "
 "filesystem."
-msgstr ""
+msgstr "当前，YaST 不适用于事务更新。这是因为 YaST 是即时执行操作的，并且它也无法编辑只读文件系统。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:206
@@ -850,7 +841,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:514
 msgid "ReiserFS support removed"
-msgstr ""
+msgstr "ReiserFS 支持已被移除"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:515
@@ -859,13 +850,15 @@ msgid ""
 "from YaST and the kernel, and the installer will block the upgrade when it "
 "detects a ReiserFS file system."
 msgstr ""
+"在 openSUSE Leap 15.3 中，已从 YaST 和内核中完全移除对 ReiserFS 的支持，并且安装程序在检测到 ReiserFS "
+"文件系统时会阻止升级。"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:520
 msgid ""
 "For existing data partitions formatted with ReiserFS, we suggest converting "
 "them to Btrfs before migrating your system to openSUSE Leap 15.3."
-msgstr ""
+msgstr "对于现有以 ReiserFS 格式化的数据分区，我们建议在将你的系统迁移到 openSUSE Leap 15.3 前先转换成 Btrfs。"
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:526
@@ -1003,9 +996,7 @@ msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
-msgstr ""
-"未签名的内核模块，或者其签名密钥不受信任也未被系统可信密钥数据库验证过的，将"
-"被屏蔽。"
+msgstr "未签名与不受信任或未被系统可信密钥数据库验证过的密钥所签名的内核模块，将被屏蔽。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:627
@@ -1029,10 +1020,9 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:href="
 "\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
-"因为这也会影响到 NVIDIA 显卡驱动，我们在 openSUSE 的官方软件包中解决了这个问"
-"题。但是，你需要在安装完后手动注册新的 MOK 密钥，才能让这个新软件包工作。更多"
-"如何安装驱动和注册 MOK 密钥的说明，参见 <link xlink:href=\"https://en."
-"opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>。"
+"由于这也会影响到 NVIDIA 显卡驱动，因此我们在官方软件包中解决了这个问题。但是，你仍需要在安装后手动注册新的 Mok 密钥，以使新软件包工作。"
+"有关如何安装驱动和注册 Mok 密钥的说明，请参考 <link xlink:href=\"https://zh.opensuse.org/"
+"SDB:NVIDIA_%E9%A9%B1%E5%8A%A8#.E5.AE.89.E5.85.A8.E5.90.AF.E5.8A.A8\"/>。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:646
