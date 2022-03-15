@@ -10,17 +10,17 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2022-01-07 13:18+0100\n"
-"PO-Revision-Date: 2021-05-12 23:57+0000\n"
-"Last-Translator: Alex Minton <alex239@gmail.com>\n"
-"Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_2/ru/>\n"
+"PO-Revision-Date: 2022-03-16 02:12+0000\n"
+"Last-Translator: Sergey Mashkov <cy6ergn0m@gmail.com>\n"
+"Language-Team: Russian <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_2/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 4.9.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -75,7 +75,7 @@ msgstr "Дистрибутив openSUSE"
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:32
 msgid "lukas.kucharczyk@suse.com"
-msgstr ""
+msgstr "lukas.kucharczyk@suse.com"
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:37
@@ -185,12 +185,6 @@ msgstr "Установка"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:89
-#, fuzzy
-#| msgid ""
-#| "This section contains installation-related notes. For detailed upgrade "
-#| "instructions, see the documentation at <link xlink:href=\"https://doc."
-#| "opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-"
-#| "basics.html\"/>."
 msgid ""
 "This section contains installation-related notes. For detailed installation "
 "instructions, see the documentation at <link xlink:href=\"https://doc."
@@ -198,9 +192,9 @@ msgid ""
 "basics.html\"/>."
 msgstr ""
 "Данный раздел содержит информацию по установке. Подробные инструкции по "
-"обновлению приведены в документации на <link xlink:href=\"https://doc."
-"opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-"
-"basics.html\"/>."
+"установке приведены в документации на <link xlink:href=\"https://doc.opensuse"
+".org/documentation/leap/startup/html/book.opensuse.startup/part-basics.html\""
+"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -325,7 +319,7 @@ msgstr ""
 #. (itstool) path: important/title
 #: xml/release-notes.xml:166
 msgid "YaST Does Not Work Transactional Mode"
-msgstr ""
+msgstr "YaST Транзакционный режим Не Работает"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:169
@@ -334,6 +328,9 @@ msgid ""
 "YaST performs things immediately and because it cannot edit a read-only "
 "filesystem."
 msgstr ""
+"На данный момент YaST не работает с транзакционными обновлениями. Это потому "
+"что YaST делает вещи сразу и поэтому он не может редактировать файловые "
+"системы только для чтения."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:174
@@ -911,7 +908,7 @@ msgstr "Драйверы и оборудование"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:573
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
-msgstr "Secure Boot: Сторонние драйверы должны быть корректно подписаны"
+msgstr "Secure Boot: Сторонние драйвера должны быть правильно подписаны"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:574
@@ -920,9 +917,10 @@ msgid ""
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
 "security measure to avoid untrusted code running in the kernel."
 msgstr ""
-"В openSUSE Leap 15.2 теперь включена проверка подписи модулей ядра для "
-"сторонних драйверов (<literal>CONFIG_MODULE_SIG=y</literal>). Это важная "
-"мера безопасности, чтобы избежать запуска недоверенного кода в ядре."
+"openSUSE LEap 15.2 теперь включает проверка подписей модулей ядра для "
+"сторонних драйверов (<literal>CONFIG_MODULE_SIG=y</literal>). Этот важный "
+"параметр безопасности позволяет исключить выполнение недоверенного кода в "
+"ядре."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:580
@@ -932,10 +930,10 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
-"Это может предотвратить загрузку сторонних модулей ядра, если включён режим "
-"UEFI Secure Boot. К пакетам с модулями ядра (KMP) из официальных "
-"репозиториев openSUSE это не относится, поскольку их модули подписаны ключом "
-"openSUSE. Проверка подписи ведёт себя следующим образом:"
+"Это может помешать загрузке сторонних модулей ядра если UEFI Secure Boot "
+"включена. Пакеты модулей ядра (KMPs) из официальных репозиториев openSUSE не "
+"затронуты, потому что они подписаны ключём openSUSE. Эта проверка подписей "
+"имеет следующее поведение:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:589
@@ -944,9 +942,8 @@ msgid ""
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
 msgstr ""
-"Модули ядра, не подписанные либо подписанные ключом, который известен как "
-"недоверенный либо не может быть проверен по системной базе доверенных "
-"ключей, будут заблокированы."
+"Неподписанные модули ядра или подписанные ключом, который или известен как "
+"небезопасный или не может быть проверен, будут заблокированы."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:596
@@ -957,11 +954,11 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
-"Можно сгенерировать пользовательский сертификат, выкатить его в системную "
-"базу данных Machine Owner Key (MOK) и подписать локально скомпилированные "
-"модули ядра ключом этого сертфиката. Модули, подписанные таким образом, не "
-"будут заблокированы и не приведут к выдаче предупреждений. См. <link xlink:"
-"href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
+"Есть возможность сгенерировать свой сертификат и добавить его в базу данных "
+"Machine Owner Key (MOK), а затем подписывать локально собранные модули с "
+"помощью этого сертификата. Модули, подписанные таким образом не будут ни "
+"заблокированы, ни вызывать предупрежлений. Для дополнительных деталей см. "
+"<link xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:603
@@ -972,12 +969,11 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:href="
 "\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
-"Поскольку это также затрагивает графические драйвера NVIDIA, мы внесли "
-"соответствующие изменения в официальные пакеты для openSUSE. Тем не менее, "
-"вам нужно вручную зареистрировать новый ключ MOK после установки, чтобы "
-"новые пакеты заработали. Инструкции по установке драйверов и регистрации "
-"ключа MOK приведены на странице <link xlink:href=\"https://en.opensuse.org/"
-"SDB:NVIDIA_drivers#Secureboot\"/>."
+"Поскольку это также затрагивает графические драйвера NVIDIA, мы уделили "
+"этому внимание в наших официальных пакетах для openSUSE. Однако, вам надо "
+"вручную добавлять новый MOK ключ после установки, чтобы новые пакеты "
+"работали. Смотрите инструкции по установке драйверов и MOK-ключей <link "
+"xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:614
