@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
-"POT-Creation-Date: 2022-03-04 15:18+0100\n"
+"POT-Creation-Date: 2022-03-29 13:49+0200\n"
 "PO-Revision-Date: 2018-04-14 05:36+0000\n"
 "Last-Translator: Andriy Bandura <andriykopanytsia@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/release-notes-"
@@ -606,10 +606,15 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:349
+#, fuzzy
+#| msgid ""
+#| "To check whether installed packages are no longer maintained: Make sure "
+#| "that <package>lifecycle-data-openSUSE</package> is installed, then use "
+#| "the command:"
 msgid ""
-"To check whether installed packages are no longer maintained: Make sure that "
-"<package>lifecycle-data-openSUSE</package> is installed, then use the "
-"command:"
+"To check whether installed packages are no longer maintained, make sure that "
+"the <package>lifecycle-data-openSUSE</package> package is installed, then "
+"use the command:"
 msgstr ""
 "Щоб перевірити, чи мають підтримку встановлені пакети, переконайтеся, що "
 "встановлено <package>lifecycle-data-openSUSE</package>, а потім "
@@ -650,13 +655,22 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:371
 msgid ""
+"<package>cloud-init-vmware-guestinfo</package>: Package does not work with "
+"<literal>cloud-init</literal> version 21.2 and later versions. In "
+"<literal>cloud-init</literal> 21.4 there is a new data source that replaces "
+"it."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:380
+msgid ""
 "<package>digikam</package>: Digikam is no longer available on ppc64le as "
 "libqt5-qtwebkit was dropped. Package will be provided only for x86_64, "
 "aarch64, and armv7 architectures."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:376
+#: xml/release-notes.xml:385
 #, fuzzy
 #| msgid ""
 #| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
@@ -670,7 +684,7 @@ msgstr ""
 "cgi?id=1044816\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:382
+#: xml/release-notes.xml:391
 #, fuzzy
 #| msgid ""
 #| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
@@ -684,7 +698,7 @@ msgstr ""
 "cgi?id=1044816\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:388
+#: xml/release-notes.xml:397
 #, fuzzy
 #| msgid ""
 #| "<package>dropbear</package>: Removed because there are no relevant "
@@ -697,17 +711,17 @@ msgstr ""
 "<package>openssh</package>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:399
+#: xml/release-notes.xml:408
 msgid "Drivers and Hardware"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:404
+#: xml/release-notes.xml:413
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:405
+#: xml/release-notes.xml:414
 msgid ""
 "openSUSE Leap 15.2 now enables a kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an important "
@@ -715,7 +729,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:411
+#: xml/release-notes.xml:420
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -724,7 +738,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:420
+#: xml/release-notes.xml:429
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -732,7 +746,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:427
+#: xml/release-notes.xml:436
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -742,7 +756,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:434
+#: xml/release-notes.xml:443
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -752,12 +766,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:446
+#: xml/release-notes.xml:455
 msgid "Desktop"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:447
+#: xml/release-notes.xml:456
 #, fuzzy
 #| msgid ""
 #| "This section lists general issues with openSUSE Leap 15.0 that do not "
@@ -768,12 +782,12 @@ msgstr ""
 "збігаються із жодною іншою категорією."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:451
+#: xml/release-notes.xml:460
 msgid "KDE 4 and Qt 4 removal"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:452
+#: xml/release-notes.xml:461
 msgid ""
 "KDE 4 packages will not be part of openSUSE Leap 15.4. Please update your "
 "system to Plasma 5 and Qt 5. Some of Qt 4 packages might still remain for "
@@ -782,17 +796,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:536
+#: xml/release-notes.xml:545
 msgid "More Information and Feedback"
 msgstr "Додаткові відомості та зворотній зв'язок"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:539
+#: xml/release-notes.xml:548
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Прочитайте документи <filename>README</filename> на носії."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:544
+#: xml/release-notes.xml:553
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
@@ -800,18 +814,18 @@ msgstr ""
 "Переглянути докладний журнал змін конкретного пакунку за допомогою RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:548
+#: xml/release-notes.xml:557
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>НАЗВА_ФАЙЛУ</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:558
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Замініть <replaceable>НАЗВАФАЙЛУ</replaceable> назвою пакунку RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:554
+#: xml/release-notes.xml:563
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -820,7 +834,7 @@ msgstr ""
 "<filename>ChangeLog</filename> на верхньому рівні носія."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:560
+#: xml/release-notes.xml:569
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -828,7 +842,7 @@ msgstr ""
 "Більше інформації ви знайдете у каталозі <filename>docu</filename> на DVD."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:566
+#: xml/release-notes.xml:575
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -837,7 +851,7 @@ msgstr ""
 "\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:572
+#: xml/release-notes.xml:581
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -846,7 +860,7 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:579
+#: xml/release-notes.xml:588
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
 
