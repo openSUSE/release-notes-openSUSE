@@ -3,16 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2022-01-07 13:18+0100\n"
-"PO-Revision-Date: 2021-05-13 08:57+0000\n"
+"PO-Revision-Date: 2022-04-03 04:12+0000\n"
 "Last-Translator: Ramax Lo <ramaxlo@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/release-"
-"notes-opensuse/leap-15_2/zh_TW/>\n"
+"Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_2/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 4.9.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -69,7 +69,7 @@ msgstr "openSUSE 發行版"
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:32
 msgid "lukas.kucharczyk@suse.com"
-msgstr ""
+msgstr "lukas.kucharczyk@suse.com"
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:37
@@ -172,21 +172,15 @@ msgstr "安裝"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:89
-#, fuzzy
-#| msgid ""
-#| "This section contains installation-related notes. For detailed upgrade "
-#| "instructions, see the documentation at <link xlink:href=\"https://doc."
-#| "opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-"
-#| "basics.html\"/>."
 msgid ""
 "This section contains installation-related notes. For detailed installation "
 "instructions, see the documentation at <link xlink:href=\"https://doc."
 "opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-"
 "basics.html\"/>."
 msgstr ""
-"此章節包含了安裝相關的要點。關於詳細的升級教學，請參閱在<link xlink:href="
-"\"https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse."
-"startup/part-basics.html\"/>的文件。"
+"此章節包含了安裝相關的要點。關於詳細的安裝教學，請參閱在<link xlink:href=\"https://doc.opensuse.org/"
+"documentation/leap/startup/html/book.opensuse.startup/part-basics.html\"/> "
+"的文件。"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -301,7 +295,7 @@ msgstr ""
 #. (itstool) path: important/title
 #: xml/release-notes.xml:166
 msgid "YaST Does Not Work Transactional Mode"
-msgstr ""
+msgstr "YaST 在交易型模式下無法使用"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:169
@@ -309,7 +303,7 @@ msgid ""
 "Currently, YaST does not work with transactional updates. This is because "
 "YaST performs things immediately and because it cannot edit a read-only "
 "filesystem."
-msgstr ""
+msgstr "目前 YaST 無法在交易型模式下使用。這是因為 YaST 會立即執行操作，並且它無法對唯讀檔案系統作修改。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:174
@@ -884,9 +878,8 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
-"若 UEFI Secure Boot 被啟用，該功能會阻擋第三方核心模組被載入。來自 openSUSE "
-"官方套件庫的核心模組套件 (Kernel Module Packages, KMPs)，由於這些模組已使用 "
-"openSUSE 金鑰簽章過，故不會受影響。簽章檢查會有以下的行為："
+"若 UEFI Secure Boot 被啟用，該功能會阻擋第三方核心模組被載入。來自 openSUSE 官方套件庫的內核模組套件 (Kernel "
+"Module Packages, KMPs)，由於這些模組已使用 openSUSE 金鑰簽章過，故不會受影響。簽章檢查會有以下的行為："
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:589
@@ -894,9 +887,7 @@ msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
-msgstr ""
-"未簽章過、或被已知為不被信任或是無法使用系統信任金鑰資料庫驗證的金鑰簽章過的"
-"核心模組會被禁止載入。"
+msgstr "未被簽章過，或被已知為不被信任的金鑰簽章，或是無法使用系統信任金鑰資料庫驗證的核心模組會被禁止載入。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:596
@@ -921,9 +912,8 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:href="
 "\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
-"因為這也影響了 NVIDIA 圖形驅動程式，我們已在 openSUSE 官方套件中解決了這個問"
-"題。然而，在安裝之後，您需要手動加入一個新的 MOK 金鑰才能使新套件運作。關於如"
-"何安裝驅動程式與加入 MOK 金鑰的指引，請見 <link xlink:href=\"https://en."
+"由於這也會影響 NVIDIA 圖形驅動程式，我們會在 openSUSE 官方套件中處理這個問題。然而在安裝之後，您需要手動註冊一個新的 MOK "
+"金鑰來讓新套件可以運作。關於如何安裝驅動程式以及註冊 MOK 金鑰的教學，請見 <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>。"
 
 #. (itstool) path: sect2/title
