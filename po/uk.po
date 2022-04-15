@@ -14,17 +14,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2022-03-07 14:24+0100\n"
-"PO-Revision-Date: 2021-12-03 01:12+0000\n"
+"PO-Revision-Date: 2022-04-15 22:12+0000\n"
 "Last-Translator: Taras Panchenko <top39@ukr.net>\n"
-"Language-Team: Ukrainian <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/uk/>\n"
+"Language-Team: Ukrainian <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.8.1\n"
+"X-Generator: Weblate 4.9.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -33,7 +33,7 @@ msgstr ""
 "Переклад:\n"
 "о. Іван Петрущак <fr.ivan@ukrainian-orthodox.org>, 2005-2011,\n"
 "Андрій Бандура <andriykopanytsia@gmail.com>, 2012-2018\n"
-"Тарас Панченко <top39@ukr.net>, 2021"
+"Тарас Панченко <top39@ukr.net>, 2021-2022"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -80,10 +80,8 @@ msgstr "Дистрибутив openSUSE"
 
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:32
-#, fuzzy
-#| msgid "sknorr@suse.com"
 msgid "lukas.kucharczyk@suse.com"
-msgstr "sknorr@suse.com"
+msgstr "lukas.kucharczyk@suse.com"
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:37
@@ -137,7 +135,7 @@ msgid ""
 "previous release notes listed here: <link xlink:href=\"https://en.opensuse."
 "org/openSUSE:Release_Notes\"/>."
 msgstr ""
-"Якщо ви оновлюєтеся зі старішої версії до цього випуску openSUSE, див. "
+"Якщо ви оновлюєтеся з старішої версії до цього випуску openSUSE, див. "
 "попередні примітки тут: <link xlink:href=\"https://en.opensuse.org/openSUSE:"
 "Release_Notes\"/>."
 
@@ -174,9 +172,9 @@ msgid ""
 "information, see <link xlink:href=\"https://en.opensuse.org/"
 "Submitting_Bug_Reports\"/>."
 msgstr ""
-"Для повідомлень про вади у цьому випуску використовуйте openSUSE Bugzilla. "
-"Більше інформації можна знайти за адресою <link xlink:href=\"https://en."
-"opensuse.org/Submitting_Bug_Reports\"/>."
+"Для повідомлень про помилки в цьому випуску використовуйте openSUSE "
+"Bugzilla. Більше інформації можна знайти за адресою <link xlink:href=\"https"
+"://en.opensuse.org/Submitting_Bug_Reports\"/>."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:81
@@ -390,6 +388,11 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Щоб це налаштування працювало, необхідно внести дві додаткові зміни до "
+"файлової системи: щоб дозволити запис конфігурації користувача в "
+"<filename>/etc</filename>, ця тека автоматично налаштовується на "
+"використання OverlayFS. <filename>/var</filename> тепер є окремим підтомом з "
+"правами на запис для процесів."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:190
@@ -405,11 +408,13 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Системній ролі <emphasis>Транзакційний сервер</emphasis> потрібен дисковий "
+"простір щонайменше 12 Гб для розміщення знімків Btrfs."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:198
 msgid "YaST Does Not Work Transactional Mode"
-msgstr ""
+msgstr "YaST Не працює трансакційний режим"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:201
@@ -418,6 +423,9 @@ msgid ""
 "YaST performs things immediately and because it cannot edit a read-only "
 "filesystem."
 msgstr ""
+"Наразі YaST не працює з транзакційними оновленнями. Це тому, що YaST виконує "
+"дії негайно і тому, що він не може редагувати файлову систему лише для "
+"читання."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:206
@@ -426,11 +434,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Щоб працювати з транзакційними оновленнями, завжди використовуйте команду "
+"<command>transactional-update</command> замість YaST і Zypper для керування "
+"всім програмним забезпеченням:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:213
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Оновити систему: <command>трансакційне оновлення</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:219
@@ -438,6 +449,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Встановити пакунок: <command>transactional-update pkg in "
+"<replaceable>НАЗВА_ПАКУНКУ</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:225
@@ -445,6 +458,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Вилучити пакунок: <command>transactional-update pkg rm "
+"<replaceable>НАЗВА_ПАКУНКУ</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -453,6 +468,9 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Щоб повернути останній знімок, тобто останній набір змін у кореневій "
+"файловій системі, переконайтеся, що ваша система завантажена передостаннім "
+"знімком та запустіть: <command>transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:237
@@ -460,6 +478,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"За бажанням додайте ID знімка в кінець команди, щоб відкотитися до "
+"визначеного ID."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:243
@@ -469,12 +489,16 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"При використанні цієї системної ролі, типово, система виконуватиме щоденне "
+"оновлення та перезавантажуватиметься між 03:30 ранку та 05:00 ранку. Обидві "
+"ці дії засновані на systemd і, за потреби, їх можна вимкнути за допомогою "
+"<command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:249
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr ""
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:250
@@ -485,9 +509,9 @@ msgid ""
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
 "Для отримання додаткової інформації про транзакційні оновлення дивіться "
-"публікації блогу openSUSE Kubic: <link xlink:href=\"https://kubic.opensuse."
-"org/blog/2018-04-04-transactionalupdates/\"/> та <link xlink:href=\"https://"
-"kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
+"публікації блогу openSUSE Kubic <link xlink:href=\"https://kubic.opensuse."
+"org/blog/2018-04-04-transactionalupdates/\"/> та <link xlink:href=\"https"
+"://kubic.opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:259
@@ -502,6 +526,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Програма встановлення запропонує схему розподілу, лише якщо доступний розмір "
+"накопичувача перевищує 12 ГБ. Якщо ви хочете налаштувати, наприклад, дуже "
+"маленькі образи віртуальних машин, скористайтеся керованим розподільником, "
+"щоб налаштувати параметри розбиття вручну."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:270
@@ -519,8 +547,8 @@ msgid ""
 "install such an update. A pre-installation of Windows 8 or later is a strong "
 "indication that your system boots using UEFI."
 msgstr ""
-"Перед установкою openSUSE на систему, яка завантажується за допомогою UEFI "
-"(Unified Extensible Firmware Interface), ми рекомендуємо вам перевірити "
+"Перед встановленням openSUSE на систему, яка завантажується за допомогою "
+"UEFI (Unified Extensible Firmware Interface), ми рекомендуємо вам перевірити "
 "наявність оновлень прошивки, рекомендованих виробником, і у випадку їх "
 "існування встановити такі оновлення. Наперед встановлена Windows 8 чи новіша "
 "є безперечною ознакою того, що ваша система використовує UEFI."
@@ -792,10 +820,10 @@ msgid ""
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
-"Застарілі пакунки все ще постачаються як частина дистрибутиву, але "
-"планується, що вони будуть видалені у прийдешній версії openSUSE Leap. Ці "
-"пакунки існують для полегшення міграції, але їх використання не "
-"рекомендується і вони можуть не отримувати оновлення."
+"Застарілі пакунки все ще постачаються у вигляді частини дистрибутиву, але "
+"планується, що вони будуть видалені у наступній версії openSUSE Leap. Ці "
+"пакунки існують для сприяння міграції, але їхнє використання не "
+"рекомендується і для них можуть бути відсутні оновлення."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:477
@@ -829,7 +857,7 @@ msgstr "Вилучені пакунки та властивості"
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:494
 msgid "Removed packages are not shipped as part of the distribution anymore."
-msgstr ""
+msgstr "Вилучені пакунки більше не розповсюджуються як частина дистрибутиву."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:499
@@ -969,6 +997,10 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
+"Це може завадити завантаженню модулів ядра сторонніх виробників, якщо "
+"ввімкнено UEFI Secure Boot. Пакунки модулів ядра (KMP) з офіційних сховищ "
+"openSUSE це не стосується, оскільки модулі, які вони містять, підписані "
+"ключем openSUSE. Перевірка підпису має таку поведінку:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:620
@@ -977,6 +1009,9 @@ msgid ""
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
 msgstr ""
+"Модулі ядра, які не підписані або підписані ключем, який відомий як "
+"ненадійний або не може бути перевірений у базі даних надійних ключів "
+"системи, буде заблоковано."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:627
@@ -987,6 +1022,11 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
+"Можна створити власний сертифікат, зареєструвати його в системній базі даних "
+"Machine Owner Key (MOK) та підписати локально скомпільовані модулі ядра цим "
+"ключем сертифіката. Модулі, підписані таким чином, не будуть ані "
+"блокуватися, ані викликати попередження. Див. <link xlink:href=\"https://en."
+"opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:634
@@ -997,11 +1037,17 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:href="
 "\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Оскільки це також впливає на графічні драйвери NVIDIA, ми розглянули це в "
+"наших офіційних пакунках для openSUSE. Однак вам потрібно вручну "
+"зареєструвати новий ключ MOK після встановлення, щоб нові пакунки працювали. "
+"Для отримання інструкції щодо встановлення драйверів та реєстрації ключа "
+"MOK, див. <link xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#"
+"Secureboot\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:646
 msgid "Desktop"
-msgstr ""
+msgstr "Стільниця"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:647
@@ -1056,7 +1102,7 @@ msgstr "Додаткові відомості та зворотній зв'яз�
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:743
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr "Прочитайте документи <filename>README</filename> на носії."
+msgstr "Прочитайте документи <filename>README</filename> на носієві."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:748
@@ -1092,7 +1138,7 @@ msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
-"Більше інформації ви знайдете у теці <filename>docu</filename> на носії."
+"Більше інформації ви знайдете у теці <filename>docu</filename> на носієві."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:770
