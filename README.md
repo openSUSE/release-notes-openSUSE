@@ -83,9 +83,7 @@ When the above dependencies are satisfied, you can create output using:
 
 ### Web Version:
   * The web version is built in the [OBS Project Documentation:Auto](https://build.opensuse.org/project/show/Documentation:Auto).
-  * It is synced to the [documentation server](https://doc.opensuse.org/release-notes)
-    using the scripts contained in the directory `tools` in this repository's
-    `master` branch.
+  * It is synced to the [documentation server](https://doc.opensuse.org/release-notes) using the scripts in the [doc.opensuse.org repository](https://github.com/openSUSE/doc-o-o).
 
 ## More Information
 
