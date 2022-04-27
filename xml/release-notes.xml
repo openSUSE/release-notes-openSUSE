@@ -318,6 +318,29 @@
     To work around this problem, convert the legacy MBR partition to GPT.
    </para>
   </sect2>
+
+  <sect2 xml:id="installation-tlp">
+   <title><literal>tlp</literal> package service</title>
+   <para>
+    During installation on a laptop, the <literal>tlp</literal> package is
+    installed (together with its sub-package <literal>tlp-rdw</literal>, if the
+    installation of recommended packages is enabled). This package provides
+    additional tools to save battery power on laptops, especially Lenovo
+    laptops.
+   </para>
+   <para>
+    The service is not enabled by default because it might interfere with other
+    specialized laptop tools, for example,
+    <literal>laptop-mode-tools</literal>, <literal>rfkill</literal>,
+    <literal>gnome-power-manager</literal>, or
+    <literal>kde-power-manager</literal>. To enable and start the service
+    explicitly, use YaST Services Manager or use the command <literal>
+     systemctl enable --now tlp.service
+    </literal>. If you encounter any unexpected behavior afterward, for example,
+    WiFi problems or non-functional USB ports, disable the service again.
+   </para>
+  </sect2>
+
  </sect1>
 
  <sect1 xml:id="upgrade">
