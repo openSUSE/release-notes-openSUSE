@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2022-04-27 13:59+0200\n"
-"PO-Revision-Date: 2022-03-09 16:12+0000\n"
+"PO-Revision-Date: 2022-05-03 18:12+0000\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive68@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/pt_BR/>\n"
@@ -631,10 +631,8 @@ msgstr "Para corrigir este problema, converta a partição antiga MBR para GPT."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:323
-#, fuzzy
-#| msgid "<literal>rpm</literal>"
 msgid "<literal>tlp</literal> package service"
-msgstr "<literal>rpm</literal>"
+msgstr "Pacote de serviço <literal>tlp</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:324
@@ -644,6 +642,11 @@ msgid ""
 "installation of recommended packages is enabled). This package provides "
 "additional tools to save battery power on laptops, especially Lenovo laptops."
 msgstr ""
+"Durante a instalação em um notebook, o pacote <literal>tlp</literal> é "
+"instalado (junto com seu subpacote <literal>tlp-rdw</literal> se a "
+"instalação de pacotes recomendados estiver ativa). Este pacote fornece "
+"ferramentas adicionais para economia de energia das baterias em notebooks, "
+"especialmente nos notebooks Lenovo."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:331
@@ -657,6 +660,14 @@ msgid ""
 "behavior afterward, for example, WiFi problems or non-functional USB ports, "
 "disable the service again."
 msgstr ""
+"O serviço não é habilitado por padrão porque pode interferir com outras "
+"ferramentas especializadas para notebooks como, por exemplo, <literal>laptop-"
+"mode-tools</literal>, <literal>rfkill</literal>, <literal>gnome-power-"
+"manager</literal> ou <literal>kde-power-manager</literal>. Para habiltiar e "
+"inciar o serviço explicitamente, use o Gerenciador de serviços do YaST ou "
+"use o comando <literal> systemctl enable --now tlp.service </literal>. Se "
+"você encontrar qualquer comportamento inesperado, por exemplo, problemas no "
+"Wi-Fi ou portas USB não funcionando, desabilite o serviço novamente."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:347
