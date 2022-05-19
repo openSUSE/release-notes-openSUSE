@@ -20,10 +20,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-27 13:59+0200\n"
-"PO-Revision-Date: 2022-04-06 22:12+0000\n"
-"Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
-"Language-Team: Czech <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/cs/>\n"
+"PO-Revision-Date: 2022-05-19 10:35+0000\n"
+"Last-Translator: Lukas Kucharczyk <lukas.kucharczyk@suse.com>\n"
+"Language-Team: Czech <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -193,22 +193,15 @@ msgstr "Instalace"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:89
-#, fuzzy
-#| msgid ""
-#| "This section contains installation-related notes. For detailed upgrade "
-#| "instructions, see the documentation at <link xlink:href=\"https://doc."
-#| "opensuse.org/documentation/leap/startup/html/book-startup/part-basics.html"
-#| "\"/>."
 msgid ""
 "This section contains installation-related notes. For detailed installation "
 "instructions, see the documentation at <link xlink:href=\"https://doc."
 "opensuse.org/documentation/leap/startup/html/book-startup/part-basics.html\"/"
 ">."
 msgstr ""
-"Tato sekce obsahuje poznámky ohledně instalace. Detailní informace ohledně "
-"povýšení na novou verzi najdete v dokumentaci na <link xlink:href=\"https://"
-"doc.opensuse.org/documentation/leap/startup/html/book.startup/part-basics."
-"html\"/>."
+"Tato sekce obsahuje poznámky k instalaci. Detailnější informace pak najdete "
+"v dokumentaci na <link xlink:href=\"https://doc.opensuse.org/documentation/"
+"leap/startup/html/book-startup/part-basics.html\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -635,10 +628,8 @@ msgstr ""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:323
-#, fuzzy
-#| msgid "<literal>rpm</literal>"
 msgid "<literal>tlp</literal> package service"
-msgstr "<literal>rpm</literal>"
+msgstr "Služba balíčku <literal>tlp</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:324
@@ -648,6 +639,9 @@ msgid ""
 "installation of recommended packages is enabled). This package provides "
 "additional tools to save battery power on laptops, especially Lenovo laptops."
 msgstr ""
+"Součástí instalace na notebooky je balíček <literal>tlp</literal> (spolu s "
+"podbalíčkem <literal>tlp-rdw</literal>, pokud je povolena instalace "
+"doporučených balíčků)."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:331
@@ -661,6 +655,13 @@ msgid ""
 "behavior afterward, for example, WiFi problems or non-functional USB ports, "
 "disable the service again."
 msgstr ""
+"Tato služba není automaticky zapnuta, protože by mohla být nekompatibilní s "
+"jinými specializovanými aplikacemi pro notebooky, např. <literal>laptop-mode-"
+"tools</literal>, <literal>rfkill</literal>, <literal>gnome-power-manager</"
+"literal> nebo <literal>kde-power-manager</literal>. Chcete-li službu "
+"zapnout, použíjte YaST Services Manager nebo příkaz <literal> systemctl "
+"enable --now tlp.service </literal>. Pokud po zapnutí zaznamenáte jakékoliv "
+"problémy, např. s Wi-Fi nebo nefunkčními USB porty, službu opět vypněte."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:347
@@ -952,7 +953,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:537
 msgid "ReiserFS support removed"
-msgstr ""
+msgstr "Odstranění podpory pro souborový systém ReiserFS"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:538
@@ -961,6 +962,9 @@ msgid ""
 "from YaST and the kernel, and the installer will block the upgrade when it "
 "detects a ReiserFS file system."
 msgstr ""
+"V openSUSE Leap 15.3 byla zcela odstraněna podpora pro ReiserFS z aplikace "
+"YaST i z jádra systému. Pokud budepři instalaci zjištěna přítomnost "
+"souborového systému ReiserFS, nebude moci instalace pokračovat."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:543
@@ -968,6 +972,8 @@ msgid ""
 "For existing data partitions formatted with ReiserFS, we suggest converting "
 "them to Btrfs before migrating your system to openSUSE Leap 15.3."
 msgstr ""
+"Existujicí datové oddíly souborového systému ReiserFS doporučujeme před "
+"migrací na openSUSE Leap 15.3 převést na souborový systém Btrfs."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:549
