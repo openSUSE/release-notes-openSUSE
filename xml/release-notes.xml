@@ -451,12 +451,13 @@
 
  <sect2 xml:id="sec.driver.rpiusbboot">
    <!-- bsc#1198992 -->
-   <title>Raspberry Pi4: Net-iso installation from USB-stick</title>
+   <title>Network install image hangs on boot on Raspberry Pi 4</title>
    <para>
-    Users who are used to installing or upgrading Raspberry Pi4 via USB stick
-    will need to add an extra boot parameter 'console=tty' otherwise the boot of install media will hang.
-    See details in the known issues section of our Raspberry Pi4 Hardware Compatability List
-    <link xlink:href="https://en.opensuse.org/HCL:Raspberry_Pi4#Boot_from_USB_in_Net_install_image_of_Leap_15.4_hangs_on_boot"/>.
+     Booting the network install image from USB stick on Raspberry Pi 4 hangs on
+     boot. To resolve this issue, add the <literal>console=tty</literal> boot
+     parameter. See details in the known issues section of our <link
+     xlink:href="https://en.opensuse.org/HCL:Raspberry_Pi4#Boot_from_USB_in_Net_install_image_of_Leap_15.4_hangs_on_boot">Raspberry
+     Pi 4 Hardware Compatibility List</link>.
    </para>
   </sect2>
 
