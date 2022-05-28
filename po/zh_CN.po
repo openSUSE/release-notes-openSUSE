@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2022-05-27 10:47+0200\n"
-"PO-Revision-Date: 2022-03-08 14:12+0000\n"
-"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
-"notes-opensuse/leap-15_4/zh_CN/>\n"
+"PO-Revision-Date: 2022-05-28 17:12+0000\n"
+"Last-Translator: Grover Chou <groverchout@gmail.com>\n"
+"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_4/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "玛格丽特‧苏 <marguerite@opensuse.org>, 2013\n"
-"Grover Chou <groverchout@opensuse.org>, 2017\n"
+"Grover Chou <groverchout@opensuse.org>, 2017, 2022\n"
 "Dingzhong Chen <wsxy162@gmail.com>, 2018"
 
 #. (itstool) path: article/title
@@ -222,9 +222,8 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
-"有些软件包在它们的 RPM <literal>%post</literal> 脚本里修改了 <filename>/var</"
-"filename> 或 <filename>/srv</filename> 里的内容。这些软件包都是不兼容的。若您"
-"发现了这种软件包，请提交故障报告。"
+"有些软件包在它们的 RPM <literal>%post</literal> 脚本中修改了 <filename>/var</filename> 或 "
+"<filename>/srv</filename> 里的内容，这些软件包都是不兼容的。若您发现了这种软件包，请提交故障报告。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:121
@@ -540,18 +539,12 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:349
-#, fuzzy
-#| msgid ""
-#| "To check whether installed packages are no longer maintained: Make sure "
-#| "that <package>lifecycle-data-openSUSE</package> is installed, then use "
-#| "the command:"
 msgid ""
 "To check whether installed packages are no longer maintained, make sure that "
 "the <package>lifecycle-data-openSUSE</package> package is installed, then "
 "use the command:"
 msgstr ""
-"如需确认安装的软件包是否还有人维护，请先安装 <package>lifecycle-data-"
-"openSUSE</package> 软件包，再执行如下命令："
+"如需确认安装的软件包是否不再维护，请先安装 <package>lifecycle-data-openSUSE</package> 软件包，再执行如下命令："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:354
@@ -588,6 +581,8 @@ msgid ""
 "<literal>cloud-init</literal> 21.4 there is a new data source that replaces "
 "it."
 msgstr ""
+"<package>cloud-init-vmware-guestinfo</package>：该软件包无法与 <literal>cloud-init</"
+"literal> 21.2 及之后的版本共同使用。在 <literal>cloud-init</literal> 21.4 版本中会有新的数据源取代它。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:380
@@ -642,20 +637,14 @@ msgstr "安全引导：第三方驱动需要正确签名"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:414
-#, fuzzy
-#| msgid ""
-#| "openSUSE Leap 15.2 now enables a kernel module signature check for third-"
-#| "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
-#| "important security measure to avoid untrusted code running in the kernel."
 msgid ""
 "Starting with openSUSE Leap 15.2, kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>) is now enabled. This "
 "is an important security measure to avoid untrusted code running in the "
 "kernel."
 msgstr ""
-"openSUSE Leap 15.2 现在会启用对第三方驱动的内核签名检查"
-"（<literal>CONFIG_MODULE_SIG=y</literal>）。这是个安全措施，避免在内核中运行"
-"了未信任的代码。"
+"从 openSUSE Leap 15.2 开始，会对第三方驱动启用内核模块签名检查（<literal>CONFIG_MODULE_SIG=y</liter"
+"al>）。这是一个重要的安全措施，以避免在内核中运行未经信任的代码。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:420
@@ -709,7 +698,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:454
 msgid "Network install image hangs on boot on Raspberry Pi 4"
-msgstr ""
+msgstr "Raspberry Pi 4 的网络安装镜像在启动时挂起"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:455
@@ -721,6 +710,10 @@ msgid ""
 "Raspberry_Pi4#Boot_from_USB_in_Net_install_image_of_Leap_15.4_hangs_on_boot"
 "\">Raspberry Pi 4 Hardware Compatibility List</link>."
 msgstr ""
+"为解决 Raspberry Pi 4 通过 USB 网络安装镜像启动时挂起的问题，需要添加 <literal>console=tty</literal> "
+"启动参数。详情请见 <link xlink:href=\"https://en.opensuse.org/"
+"HCL:Raspberry_Pi4#Boot_from_USB_in_Net_install_image_of_Leap_15."
+"4_hangs_on_boot\">Raspberry Pi 4 硬件兼容性列表（英文）</link>中的已知问题章节。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:467
