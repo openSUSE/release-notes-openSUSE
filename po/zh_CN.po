@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2022-04-27 13:59+0200\n"
-"PO-Revision-Date: 2022-05-28 17:12+0000\n"
-"Last-Translator: Grover Chou <groverchout@gmail.com>\n"
+"PO-Revision-Date: 2022-06-04 09:12+0000\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -572,10 +572,8 @@ msgstr "规避方法很简单：将传统的 MBR 分区转换成新的 GPT 分�
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:323
-#, fuzzy
-#| msgid "<literal>rpm</literal>"
 msgid "<literal>tlp</literal> package service"
-msgstr "<literal>rpm</literal>"
+msgstr "<literal>tlp</literal> 软件包服务"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:324
@@ -585,6 +583,8 @@ msgid ""
 "installation of recommended packages is enabled). This package provides "
 "additional tools to save battery power on laptops, especially Lenovo laptops."
 msgstr ""
+"在笔记本电脑的安装期间，<literal>tlp</literal> 软件包会被安装（如果启用了建议软件包的安装，它的子包 <literal>tlp-"
+"rdw</literal> 也会一并安装）。此软件包提供额外工具来节省笔记本电脑上的电池电量，尤其是联想品牌的笔记本。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:331
@@ -598,6 +598,11 @@ msgid ""
 "behavior afterward, for example, WiFi problems or non-functional USB ports, "
 "disable the service again."
 msgstr ""
+"该服务不会自动启用，因为它可能会干扰其他特定的笔记本电脑工具，例如，<literal>laptop-mode-"
+"tools</literal>、<literal>rfkill</literal>、<literal>gnome-power-manager</"
+"literal> 或 <literal>kde-power-manager</literal>。要明确启用和开始这个服务，使用 YaST "
+"服务管理器或命令 <literal> systemctl enable --now tlp.service "
+"</literal>。如果你之后遇到任何意外的行为，例如，WiFi 问题或者不能工作的 USB 端口，请再次禁用此服务。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:347
