@@ -158,7 +158,7 @@ $(YAST_PROFILED_FILES): po/LINGUAS translatedxml
 text: $(TXT_FILES)
 $(TXT_FILES): po/LINGUAS translatedxml
 	lang=$(LANG_COMMAND) ; \
-	LC_CTYPE=$${lang}.utf8 LANG=$${lang} $(DAPS_COMMAND) text \
+	LANG=$${lang}.utf8 $(DAPS_COMMAND) text \
 	PROFCONDITION="general\;$(LIFECYCLE)"
 
 $(DIRS):
