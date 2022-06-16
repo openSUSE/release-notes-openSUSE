@@ -396,10 +396,14 @@
     they are not supported anymore. All users are advised to upgrade to
     &opensuseleap; 15.2 with the latest updates before upgrading to 15.3. The
     following parameters can be used as a workaround for
-    <package>libzypp</package> versions older than 12.25.8:
+    <package>libzypp</package> versions older than 12.25.8 (replace 15.0 below
+    with your current &opensuse; version):
    </para>
 
-   <screen>zypper dup --allow-vendor-change --force-resolution</screen>
+   <screen>
+zypper addrepo --check --refresh --name 'openSUSE-Leap-15.0-Update' http://download.opensuse.org/update/leap/15.0/oss/ repo-update
+zypper dup --allow-vendor-change --force-resolution
+  </screen>
 
    <para>
     &opensuseleap; 15.3 provides all the required RPM verification keys,
