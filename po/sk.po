@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Slovak (release-notes-openSUSE)\n"
-"POT-Creation-Date: 2022-04-27 13:59+0200\n"
+"POT-Creation-Date: 2022-06-16 08:56+0200\n"
 "PO-Revision-Date: 2022-04-29 17:12+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
-"Language-Team: Slovak <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_3/sk/>\n"
+"Language-Team: Slovak <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap-15_3/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -653,12 +653,12 @@ msgid ""
 msgstr ""
 "Služba nie je v predvolenom nastavení povolená, pretože by mohla napríklad "
 "kolidovať s inými špecializovanými nástrojmi pre prenosné počítače, napíklad "
-"<literal>laptop-mode-tools</literal>, <literal>rfkill</literal>, <literal"
-">gnome-power-manager</literal> alebo <literal>kde-power-manager</literal>. "
-"Ak chcete službu explicitne povoliť a spustiť, použite Správcu služieb YaST "
-"alebo príkaz <literal> systemctl enable --now tlp.service </literal>. Ak sa "
-"potom vyskytne neočakávané správanie, napríklad problémy s WiFi alebo "
-"nefunkčné porty USB, službu znova zakážte."
+"<literal>laptop-mode-tools</literal>, <literal>rfkill</literal>, "
+"<literal>gnome-power-manager</literal> alebo <literal>kde-power-manager</"
+"literal>. Ak chcete službu explicitne povoliť a spustiť, použite Správcu "
+"služieb YaST alebo príkaz <literal> systemctl enable --now tlp.service </"
+"literal>. Ak sa potom vyskytne neočakávané správanie, napríklad problémy s "
+"WiFi alebo nefunkčné porty USB, službu znova zakážte."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:347
@@ -722,12 +722,20 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:394
+#, fuzzy
+#| msgid ""
+#| "openSUSE Leap releases older than 15.2 do not contain this feature "
+#| "because they are not supported anymore. All users are advised to upgrade "
+#| "to openSUSE Leap 15.2 with the latest updates before upgrading to 15.3. "
+#| "The following parameters can be used as a workaround for "
+#| "<package>libzypp</package> versions older than 12.25.8:"
 msgid ""
 "openSUSE Leap releases older than 15.2 do not contain this feature because "
 "they are not supported anymore. All users are advised to upgrade to openSUSE "
 "Leap 15.2 with the latest updates before upgrading to 15.3. The following "
 "parameters can be used as a workaround for <package>libzypp</package> "
-"versions older than 12.25.8:"
+"versions older than 12.25.8 (replace 15.0 below with your current openSUSE "
+"version):"
 msgstr ""
 "Vydania openSUSE Leap staršie ako 15.2 túto funkciu neobsahujú, pretože už "
 "nie sú podporované. Všetkým používateľom sa odporúča povýšiť na openSUSE "
@@ -736,13 +744,17 @@ msgstr ""
 "package> staršie ako 12.25.8:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:402
+#: xml/release-notes.xml:403
 #, no-wrap
-msgid "zypper dup --allow-vendor-change --force-resolution"
-msgstr "zypper dup --allow-vendor-change --force-resolution"
+msgid ""
+"\n"
+"zypper addrepo --check --refresh --name 'openSUSE-Leap-15.0-Update' http://download.opensuse.org/update/leap/15.0/oss/ repo-update\n"
+"zypper dup --allow-vendor-change --force-resolution\n"
+"  "
+msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:404
+#: xml/release-notes.xml:408
 msgid ""
 "openSUSE Leap 15.3 provides all the required RPM verification keys, "
 "including the SUSE Linux Enterprise Server ones, as part of the "
@@ -754,7 +766,7 @@ msgstr ""
 "build-key</package>. Všetky kľúče sú tiež novo dostupné v repozitári OSS."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:410
+#: xml/release-notes.xml:414
 msgid ""
 "The <package>libzypp</package> package version 17.25.11 should automatically "
 "import the required keys that are identified as trusted. If it has, you will "
@@ -765,7 +777,7 @@ msgstr ""
 "budete o importe informovaní a nebudú potrebné žiadne ďalšie kroky."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:415
+#: xml/release-notes.xml:419
 msgid ""
 "If the system has not imported the key that was used to sign the "
 "<literal>repodata</literal>, you will need to import it manually. You can "
@@ -776,13 +788,13 @@ msgstr ""
 "skontrolovať spustením nasledujúceho príkazu:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:420
+#: xml/release-notes.xml:424
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
 msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:421
+#: xml/release-notes.xml:425
 msgid ""
 "The output should include a line starting with the following text: "
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
@@ -793,7 +805,7 @@ msgstr ""
 "ste kľúč importovali ručne:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:427
+#: xml/release-notes.xml:431
 msgid ""
 "Download the SUSE Linux Enterprise 15 key from <link xlink:href=\"https://"
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
@@ -804,7 +816,7 @@ msgstr ""
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:433
+#: xml/release-notes.xml:437
 msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
@@ -813,7 +825,7 @@ msgstr ""
 "Premenujte ho tak, aby končil s <literal>.key</literal>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:439
+#: xml/release-notes.xml:443
 msgid ""
 "Run the <literal>zypper dup</literal> command. You will be asked to import "
 "the missing key. This will happen even if the key is in the directory "
@@ -825,7 +837,7 @@ msgstr ""
 "Ak súbor obsahuje viacero kľúčov, zypper naimportuje iba požadovaný kľúč."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:448
+#: xml/release-notes.xml:452
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
@@ -834,7 +846,7 @@ msgstr ""
 "show_bug.cgi?id=1184326\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:454
+#: xml/release-notes.xml:458
 msgid ""
 "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel packaging"
 msgstr ""
@@ -842,7 +854,7 @@ msgstr ""
 "Leap"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:455
+#: xml/release-notes.xml:459
 msgid ""
 "On openSUSE Leap, the default kernel has been split into three subpackages: "
 "<package>kernel-default</package>, <package>kernel-default-extra</package>, "
@@ -868,7 +880,7 @@ msgstr ""
 "Tento parameter funguje s <package>kernel-default</package>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:468
+#: xml/release-notes.xml:472
 msgid ""
 "If you use this kernel variant, make sure that all RPMs required for your "
 "use case are installed."
@@ -877,17 +889,17 @@ msgstr ""
 "potrebné pre váš prípad použitia."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:477
+#: xml/release-notes.xml:481
 msgid "Removed and deprecated packages and features"
 msgstr "Odstránené a zastarané balíčky a funkcie"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:480
+#: xml/release-notes.xml:484
 msgid "Deprecated packages and features"
 msgstr "Zastarané balíky a vlastnosti"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:481
+#: xml/release-notes.xml:485
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -900,7 +912,7 @@ msgstr ""
 "aktualizácie."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:500
+#: xml/release-notes.xml:504
 msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
@@ -910,7 +922,7 @@ msgstr ""
 "ďalšie vydanie."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:507
+#: xml/release-notes.xml:511
 msgid ""
 "To check whether installed packages are no longer maintained: Make sure that "
 "<package>lifecycle-data-openSUSE</package> is installed, then use the "
@@ -921,23 +933,23 @@ msgstr ""
 "potom použite príkaz:"
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:512
+#: xml/release-notes.xml:516
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "životný cyklus zypper"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:516
+#: xml/release-notes.xml:520
 msgid "Removed packages and features"
 msgstr "Odstránené balíky a vlastnosti"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:517
+#: xml/release-notes.xml:521
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "Odstránené balíky už nie sú dodávané ako súčasť distribúcie."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:522
+#: xml/release-notes.xml:526
 msgid ""
 "<package>libqt4</package> and <package>kdelibs4</package> have been removed "
 "because they were unmaintained and had security issues. For more "
@@ -948,12 +960,12 @@ msgstr ""
 "nájdete na <xref linkend=\"desktop-remove-kde4\"/>."
 
 #. (itstool) path: sect3/title
-#: xml/release-notes.xml:537
+#: xml/release-notes.xml:541
 msgid "ReiserFS support removed"
 msgstr "Odstránená podpora ReiserFS"
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:538
+#: xml/release-notes.xml:542
 msgid ""
 "With openSUSE Leap 15.3, support for ReiserFS has been completely removed "
 "from YaST and the kernel, and the installer will block the upgrade when it "
@@ -963,7 +975,7 @@ msgstr ""
 "inštalátor zablokuje aktualizáciu, keď zistí súborový systém ReiserFS."
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:543
+#: xml/release-notes.xml:547
 msgid ""
 "For existing data partitions formatted with ReiserFS, we suggest converting "
 "them to Btrfs before migrating your system to openSUSE Leap 15.3."
@@ -972,12 +984,12 @@ msgstr ""
 "migráciou systému na openSUSE Leap 15.3 konvertovať na Btrfs."
 
 #. (itstool) path: sect3/title
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:553
 msgid "Berkeley DB removed from packages"
 msgstr "Berkeley DB odstránená z balíkov"
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:550
+#: xml/release-notes.xml:554
 msgid ""
 "Berkeley DB, used as a database in certain packages, is dual-licensed under "
 "GNU AGPLv3/Sleepycat licenses. Because service vendors that redistribute our "
@@ -994,52 +1006,52 @@ msgstr ""
 "SUSE kladie za cieľ poskytnúť riešenie bez Berkeley DB."
 
 #. (itstool) path: sect3/para
-#: xml/release-notes.xml:558
+#: xml/release-notes.xml:562
 msgid "This change affects the following packages:"
 msgstr "Táto zmena ovplyvní nasledujúce balíky:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:563
+#: xml/release-notes.xml:567
 msgid "<literal>apr-util</literal>"
 msgstr "<literal>apr-util</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:568
+#: xml/release-notes.xml:572
 msgid "<literal>cyrus-sasl</literal>"
 msgstr "<literal>cyrus-sasl</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:573
+#: xml/release-notes.xml:577
 msgid "<literal>iproute2</literal>"
 msgstr "<literal>iproute2</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:578
+#: xml/release-notes.xml:582
 msgid "<literal>perl</literal>"
 msgstr "<literal>perl</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:583
+#: xml/release-notes.xml:587
 msgid "<literal>php7</literal>"
 msgstr "<literal>php7</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:588
+#: xml/release-notes.xml:592
 msgid "<literal>postfix</literal>"
 msgstr "<literal>postfix</literal>"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:593
+#: xml/release-notes.xml:597
 msgid "<literal>rpm</literal>"
 msgstr "<literal>rpm</literal>"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:605
+#: xml/release-notes.xml:609
 msgid "Drivers and hardware"
 msgstr "Ovládače a hardvér"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:609
+#: xml/release-notes.xml:613
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
@@ -1048,7 +1060,7 @@ msgstr ""
 "jadra openSUSE"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:610
+#: xml/release-notes.xml:614
 msgid ""
 "The newly introduced <package>openSUSE-signkey-cert</package> package is "
 "required for openSUSE KMPs like <package>virtualbox</package>, but only in "
@@ -1065,7 +1077,7 @@ msgstr ""
 "MOK. Týmto spôsobom môže byť openSUSE KMP overené jadrom."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:617
+#: xml/release-notes.xml:621
 msgid ""
 "If you do not have the base pattern installed and are using any of these "
 "KMPs, we recommend installing the <package>openSUSE-signkey-cert</package> "
@@ -1080,12 +1092,12 @@ msgstr ""
 "NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:627
+#: xml/release-notes.xml:631
 msgid "Secure Boot: third-party drivers need to be properly signed"
 msgstr "Secure Boot: Ovládače tretích strán musia byť správne podpísané"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:628
+#: xml/release-notes.xml:632
 msgid ""
 "openSUSE Leap 15.2 and later enable a kernel module signature check for "
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
@@ -1097,7 +1109,7 @@ msgstr ""
 "kódu v jadre."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:634
+#: xml/release-notes.xml:638
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -1111,7 +1123,7 @@ msgstr ""
 "správanie:"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:643
+#: xml/release-notes.xml:647
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -1122,7 +1134,7 @@ msgstr ""
 "dôveryhodných kľúčov, budú zablokované."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:650
+#: xml/release-notes.xml:654
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -1137,7 +1149,7 @@ msgstr ""
 "openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:657
+#: xml/release-notes.xml:661
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -1152,22 +1164,22 @@ msgstr ""
 "org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:669
+#: xml/release-notes.xml:673
 msgid "Desktop"
 msgstr "Desktop"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:670
+#: xml/release-notes.xml:674
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr "Táto časť uvádza desktopové problémy a zmeny v openSUSE Leap 15.3."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:675
+#: xml/release-notes.xml:679
 msgid "KDE 4 and Qt4 have been removed"
 msgstr "KDE 4 a Qt 4 boli odstránené"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:676
+#: xml/release-notes.xml:680
 msgid ""
 "KDE 4 packages are no longer part of openSUSE Leap 15.3. Update your system "
 "to Plasma 5 and Qt 5. Some Qt 4 packages may still remain for compatibility "
@@ -1180,13 +1192,13 @@ msgstr ""
 "bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:686
+#: xml/release-notes.xml:690
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
 "Ručná migrácia konfigurácie IBus je nevyhnutná z dôvodu zmeny názvu rozložení"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:687
+#: xml/release-notes.xml:691
 msgid ""
 "Since <package>IBus</package> version 1.5.23 renamed some keyboard layouts, "
 "it cannot load configuration containing these renamed layouts after "
@@ -1203,7 +1215,7 @@ msgstr ""
 "xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1177545\"/>."
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:694
+#: xml/release-notes.xml:698
 msgid ""
 "Users need to migrate configuration manually. Open GNOME Settings and choose "
 "an appropriate layout. For desktop environments other than GNOME, run "
@@ -1215,35 +1227,35 @@ msgstr ""
 
 # bnc#809347
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:763
+#: xml/release-notes.xml:767
 msgid "More information and feedback"
 msgstr "Ďalšie informácie a spätná väzba"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:766
+#: xml/release-notes.xml:770
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Prečítajte si dokumenty <filename>README</filename> na médiu."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:771
+#: xml/release-notes.xml:775
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Získajte podrobné informácie o zmenách konkrétneho balíka z jeho RPM:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:775
+#: xml/release-notes.xml:779
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>NÁZOV_SÚBORU</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:776
+#: xml/release-notes.xml:780
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Nahraďte <replaceable>FILENAME</replaceable> s názvom RPM."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:781
+#: xml/release-notes.xml:785
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -1253,7 +1265,7 @@ msgstr ""
 "úrovni média."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:787
+#: xml/release-notes.xml:791
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
@@ -1261,7 +1273,7 @@ msgstr ""
 "Ďalšie informácie nájdete na médiu v adresári <filename>docu</filename>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:793
+#: xml/release-notes.xml:797
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -1270,7 +1282,7 @@ msgstr ""
 "\"https://doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:799
+#: xml/release-notes.xml:803
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -1279,9 +1291,13 @@ msgstr ""
 "\"https://www.opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:806
+#: xml/release-notes.xml:810
 msgid "Copyright © SUSE LLC"
 msgstr "Copyright © SUSE LLC"
+
+#, no-wrap
+#~ msgid "zypper dup --allow-vendor-change --force-resolution"
+#~ msgstr "zypper dup --allow-vendor-change --force-resolution"
 
 #~ msgid "Packaging Changes"
 #~ msgstr "Zmeny balenia"
