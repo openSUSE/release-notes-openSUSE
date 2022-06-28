@@ -463,12 +463,12 @@
 
  </sect1>
 
-  <sect1 xml:id="general">
+  <sect1 xml:id="desktop">
   <title>Desktop</title>
    <para>
     This section lists desktop issues and changes in &thisversion;.
    </para>
-   <sect2 xml:id="sec.general.kde">
+   <sect2 xml:id="sec.desktop.kde">
     <title>KDE 4 and Qt 4 removal</title>
     <para>
      KDE 4 packages will not be part of &opensuseleap; 15.4.
@@ -479,7 +479,7 @@
    </sect2>
 
 <!--
-  <sect2 xml:id="sec.general.ypbind">
+  <sect2 xml:id="sec.desktop.ypbind">
    <!-/- boo#1129587 -/->
    <title>NIS/ypbind and NetworkManager</title>
    <para>
@@ -492,7 +492,26 @@
   </sect2>
   -->
 
- </sect1>
+  </sect1>
+
+  <sect1 xml:id="general">
+   <title>General</title>
+
+   <sect2 xml:id="sec.general.iotop">
+    <!-- boo#1200669 -->
+    <title><command>iotop</command> support</title>
+    <para>
+     <command>iotop</command> does not display values for SWAPIN and IO %.
+    </para>
+    <para>
+     Since Linux kernel 5.14, either kernel boot parameter
+     <literal>delayacct</literal> needs to be specified or
+     <literal>kernel.task_delayacct</literal> sysctl needs to be
+     enabled.
+    </para>
+   </sect2>
+
+  </sect1>
 
  <!-- <sect1 xml:id="sec.server">
   <title>Server Software</title>
