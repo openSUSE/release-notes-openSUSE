@@ -6,11 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2022-05-27 10:47+0200\n"
+"POT-Creation-Date: 2022-07-04 09:47+0200\n"
 "PO-Revision-Date: 2022-05-28 17:12+0000\n"
 "Last-Translator: Grover Chou <groverchout@gmail.com>\n"
-"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap-15_4/zh_CN/>\n"
+"Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
+"notes-opensuse/leap-15_4/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -222,8 +222,9 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
-"有些软件包在它们的 RPM <literal>%post</literal> 脚本中修改了 <filename>/var</filename> 或 "
-"<filename>/srv</filename> 里的内容，这些软件包都是不兼容的。若您发现了这种软件包，请提交故障报告。"
+"有些软件包在它们的 RPM <literal>%post</literal> 脚本中修改了 <filename>/var</"
+"filename> 或 <filename>/srv</filename> 里的内容，这些软件包都是不兼容的。若您"
+"发现了这种软件包，请提交故障报告。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:121
@@ -544,7 +545,8 @@ msgid ""
 "the <package>lifecycle-data-openSUSE</package> package is installed, then "
 "use the command:"
 msgstr ""
-"如需确认安装的软件包是否不再维护，请先安装 <package>lifecycle-data-openSUSE</package> 软件包，再执行如下命令："
+"如需确认安装的软件包是否不再维护，请先安装 <package>lifecycle-data-openSUSE</"
+"package> 软件包，再执行如下命令："
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:354
@@ -581,8 +583,9 @@ msgid ""
 "<literal>cloud-init</literal> 21.4 there is a new data source that replaces "
 "it."
 msgstr ""
-"<package>cloud-init-vmware-guestinfo</package>：该软件包无法与 <literal>cloud-init</"
-"literal> 21.2 及之后的版本共同使用。在 <literal>cloud-init</literal> 21.4 版本中会有新的数据源取代它。"
+"<package>cloud-init-vmware-guestinfo</package>：该软件包无法与 "
+"<literal>cloud-init</literal> 21.2 及之后的版本共同使用。在 <literal>cloud-"
+"init</literal> 21.4 版本中会有新的数据源取代它。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:380
@@ -643,8 +646,9 @@ msgid ""
 "is an important security measure to avoid untrusted code running in the "
 "kernel."
 msgstr ""
-"从 openSUSE Leap 15.2 开始，会对第三方驱动启用内核模块签名检查（<literal>CONFIG_MODULE_SIG=y</liter"
-"al>）。这是一个重要的安全措施，以避免在内核中运行未经信任的代码。"
+"从 openSUSE Leap 15.2 开始，会对第三方驱动启用内核模块签名检查"
+"（<literal>CONFIG_MODULE_SIG=y</literal>）。这是一个重要的安全措施，以避免在"
+"内核中运行未经信任的代码。"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:420
@@ -710,10 +714,11 @@ msgid ""
 "Raspberry_Pi4#Boot_from_USB_in_Net_install_image_of_Leap_15.4_hangs_on_boot"
 "\">Raspberry Pi 4 Hardware Compatibility List</link>."
 msgstr ""
-"为解决 Raspberry Pi 4 通过 USB 网络安装镜像启动时挂起的问题，需要添加 <literal>console=tty</literal> "
-"启动参数。详情请见 <link xlink:href=\"https://en.opensuse.org/"
-"HCL:Raspberry_Pi4#Boot_from_USB_in_Net_install_image_of_Leap_15."
-"4_hangs_on_boot\">Raspberry Pi 4 硬件兼容性列表（英文）</link>中的已知问题章节。"
+"为解决 Raspberry Pi 4 通过 USB 网络安装镜像启动时挂起的问题，需要添加 "
+"<literal>console=tty</literal> 启动参数。详情请见 <link xlink:href=\"https://"
+"en.opensuse.org/HCL:"
+"Raspberry_Pi4#Boot_from_USB_in_Net_install_image_of_Leap_15.4_hangs_on_boot"
+"\">Raspberry Pi 4 硬件兼容性列表（英文）</link>中的已知问题章节。"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:467
@@ -743,35 +748,58 @@ msgstr ""
 "\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:557
+#: xml/release-notes.xml:498
+msgid "General"
+msgstr "常规"
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:502
+msgid "<command>iotop</command> support"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:503
+msgid "<command>iotop</command> does not display values for SWAPIN and IO %."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:506
+msgid ""
+"Since Linux kernel 5.14, either kernel boot parameter <literal>delayacct</"
+"literal> needs to be specified or <literal>kernel.task_delayacct</literal> "
+"sysctl needs to be enabled."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:576
 msgid "More Information and Feedback"
 msgstr "更多信息和反馈"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:560
+#: xml/release-notes.xml:579
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "请阅读安装介质上的 <filename>README</filename> 文档。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:565
+#: xml/release-notes.xml:584
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "从 RPM 中获取关于某特定软件包的详细修订历史信息："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:569
+#: xml/release-notes.xml:588
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>文件名</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:570
+#: xml/release-notes.xml:589
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "将 <replaceable>文件名</replaceable> 替换为 RPM 的名称。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:575
+#: xml/release-notes.xml:594
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -780,14 +808,14 @@ msgstr ""
 "软件包更新历史。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:581
+#: xml/release-notes.xml:600
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:587
+#: xml/release-notes.xml:606
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -796,7 +824,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:593
+#: xml/release-notes.xml:612
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -805,7 +833,7 @@ msgstr ""
 "org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:619
 msgid "Copyright © SUSE LLC"
 msgstr "版权所有 © SUSE LLC"
 
@@ -2038,9 +2066,6 @@ msgstr "版权所有 © SUSE LLC"
 #~ msgstr ""
 #~ "请注意最小化安装默认没有防火墙。若需要，请安装 <literal>SuSEfirewall2</"
 #~ "literal>。"
-
-#~ msgid "General"
-#~ msgstr "常规"
 
 #~ msgid "Thanks for using openSUSE."
 #~ msgstr "感谢使用 openSUSE。"
