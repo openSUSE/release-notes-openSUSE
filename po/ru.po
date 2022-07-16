@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2022-05-10 15:13+0000\n"
-"Last-Translator: Michael <michaelbelachev@gmail.com>\n"
-"Language-Team: Russian <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_3/ru/>\n"
+"PO-Revision-Date: 2022-07-16 12:12+0000\n"
+"Last-Translator: Alex Minton <alex239@gmail.com>\n"
+"Language-Team: Russian <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_3/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -273,6 +273,10 @@ msgid ""
 "Enterprise update streams. This repository is without the <literal>debug-"
 "info</literal> variant."
 msgstr ""
+"Репозиторий <literal>repo-sle-update</literal> — это репозиторий обновлений, "
+"который содержит все обновления из всех активных каналов обновлений SUSE "
+"Linux Enterprise. У этого репозитория нет варианта <literal>debug-"
+"info</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -622,7 +626,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:323
 msgid "<literal>tlp</literal> package service"
-msgstr ""
+msgstr "Служба из пакета <literal>tlp</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:324
@@ -632,6 +636,11 @@ msgid ""
 "installation of recommended packages is enabled). This package provides "
 "additional tools to save battery power on laptops, especially Lenovo laptops."
 msgstr ""
+"Во время установки на ноутбуке автоматически устанавливается пакет "
+"<literal>tlp</literal> (а также его подпакет <literal>tlp-rdw</literal>, "
+"если включена установка рекомендованных пакетов). Этот пакет предоставляет "
+"дополнительные инструменты для экономии заряда батареи ноутбука, особенно на "
+"ноутбуках Lenovo."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:331
@@ -645,6 +654,14 @@ msgid ""
 "behavior afterward, for example, WiFi problems or non-functional USB ports, "
 "disable the service again."
 msgstr ""
+"Служба не включается по умолчанию, поскольку может вмешиваться в работу "
+"других утилит для ноутбуков, например, <literal>laptop-mode-tools</literal>, "
+"<literal>rfkill</literal>, <literal>gnome-power-manager</literal> или "
+"<literal>kde-power-manager</literal>. Для явного разрешения и запуска службы "
+"используйте Менеджер служб YaST или команду <literal> systemctl enable --now "
+"tlp.service </literal>. Если после этого вы столкнётесь с непредсказуемым "
+"поведением оборудования, например, отключением WiFi или неработающими "
+"портами USB, отключите данную службу."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:347
@@ -707,13 +724,6 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:394
-#, fuzzy
-#| msgid ""
-#| "openSUSE Leap releases older than 15.2 do not contain this feature "
-#| "because they are not supported anymore. All users are advised to upgrade "
-#| "to openSUSE Leap 15.2 with the latest updates before upgrading to 15.3. "
-#| "The following parameters can be used as a workaround for "
-#| "<package>libzypp</package> versions older than 12.25.8:"
 msgid ""
 "openSUSE Leap releases older than 15.2 do not contain this feature because "
 "they are not supported anymore. All users are advised to upgrade to openSUSE "
@@ -725,7 +735,8 @@ msgstr ""
 "В выпусках openSUSE Leap старше 15.2 такой возможности нет, поскольку они "
 "более не поддерживаются. Всем пользователям следует обновиться до openSUSE "
 "Leap 15.2 перед обновлением до 15.3. Следующие параметры могут быть "
-"использованы с версиями <package>libzypp</package> старше 12.25.8:"
+"использованы с версиями <package>libzypp</package> старше 12.25.8 (замените "
+"15.0 на свою текущую версию openSUSE):"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:403
@@ -736,6 +747,11 @@ msgid ""
 "zypper dup --allow-vendor-change --force-resolution\n"
 "  "
 msgstr ""
+"\n"
+"zypper addrepo --check --refresh --name 'openSUSE-Leap-15.0-update' "
+"http://download.opensuse.org/update/leap/15.0/oss/ repo-update\n"
+"zypper dup --allow-vendor-change --force-resolution\n"
+"  "
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:408
@@ -745,6 +761,9 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 предоставляет все необходимые ключи проверки RPM, в том "
+"числе ключи SUSE Linux Enterprise Server, в составе пакета <package>openSUSE-"
+"build-key</package>. Все ключи также вновь доступны в репозитории OSS."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:414
@@ -753,6 +772,10 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"Пакет <package>libzypp</package> версии 17.25.11 должен автоматически "
+"импортировать необходимые ключи, идентифицированные как доверенные. Если это "
+"произойдёт, вы получите уведомление об импорте и дальнейших действий не "
+"потребуется."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:419
@@ -761,12 +784,15 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Если же ключ, которым подписан <literal>repodata</literal>, не был "
+"импортирован, то вам придётся сделать это вручную. Проверить можно с помощью "
+"следующей команды:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:424
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
@@ -775,6 +801,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"В выводе команды должна быть строка, начинающаяся с <literal>gpg-pubkey-"
+"39db7c82-*</literal>. Если же её там нет, то для ручного импорта выполните "
+"следующее:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:431
@@ -783,6 +812,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Загрузите ключ SUSE Linux Enterprise 15 с <link xlink:href=\"https://download"
+".opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-39db7c82-5847eb1f."
+"asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
@@ -790,6 +822,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Сохраните ключ в каталоге <literal>/var/cache/zypp/pubkeys</literal>. "
+"Переименуйте файл, чтобы имя заканчивалось на <literal>.key</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:443
@@ -799,19 +833,19 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Выполните команду <literal>zypper dup</literal>. Вы получите запрос на "
+"импорт недостающего ключа. Это произойдёт, даже если ключ уже в упомянутом "
+"выше каталоге. Если в файле несколько ключей, zypper импортирует только "
+"нужный ключ."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
-#, fuzzy
-#| msgid ""
-#| "For additional or updated documentation, see <link xlink:href=\"https://"
-#| "doc.opensuse.org/\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"Дополнительная и обновлённая документация по адресу <link xlink:href="
-"\"https://doc.opensuse.org/\"/>."
+"Больше сведений по адресу <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=1184326\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:458
@@ -835,15 +869,15 @@ msgid ""
 "parameter on the command line. This parameter works with <package>kernel-"
 "default</package>."
 msgstr ""
-"В openSUSE Leap ядро по умолчанию было разделено на три подпакета: "
-"<package>kernel-default</package>, <package>kernel-default-extra</package> и "
-"<package>kernel-default-optional</package>. Аналогично, пакет "
-"<package>kernel-preempt</package> также был разделён на <package>kernel-"
-"preempt</package>, <package>kernel-preempt-extra</package> и <package>kernel-"
-"preempt-optional</package>. Пакетс суффиксом <literal>-optional</literal> "
-"содержит необязательные модули только для openSUSE Leap. В пакете с "
-"суффиксом <literal>-extra</literal> находятся неподдерживаемые модули. "
-"Режимом вытеснения в ядре можно управлять с помощью параметра "
+"В openSUSE Leap ядро по умолчанию было разделено на три подпакета: <package"
+">kernel-default</package>, <package>kernel-default-extra</package> и <package"
+">kernel-default-optional</package>. Аналогично, пакет <package>kernel-"
+"preempt</package> также был разделён на <package>kernel-preempt</package>, "
+"<package>kernel-preempt-extra</package> и <package>kernel-preempt-optional</"
+"package>. Пакет с суффиксом <literal>-optional</literal> содержит "
+"необязательные модули только для openSUSE Leap. В пакете с суффиксом "
+"<literal>-extra</literal> находятся неподдерживаемые модули. Режимом "
+"вытеснения в ядре можно управлять с помощью параметра "
 "<literal>preempt=voluntary</literal> в командной строке. Этот параметр "
 "работает с <package>kernel-default</package>."
 
@@ -885,6 +919,8 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"<package>midori</package>, легковесный веб-браузер на базе WebKit и GTK+, "
+"более не поддерживается и будет удалён в следующем выпуске."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:511
@@ -927,7 +963,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:541
 msgid "ReiserFS support removed"
-msgstr ""
+msgstr "Поддержка ReiserFS удалена"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:542
@@ -936,6 +972,9 @@ msgid ""
 "from YaST and the kernel, and the installer will block the upgrade when it "
 "detects a ReiserFS file system."
 msgstr ""
+"Начиная с openSUSE Leap 15.3, поддержка ReiserFS полностью удалена из YaST и "
+"ядра, установщик заблокирует обновление при обнаружении файловой системы "
+"ReiserFS."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:547
@@ -943,11 +982,13 @@ msgid ""
 "For existing data partitions formatted with ReiserFS, we suggest converting "
 "them to Btrfs before migrating your system to openSUSE Leap 15.3."
 msgstr ""
+"Существующие разделы данных, форматированные в ReiserFS, мы предлагаем "
+"сконвертировать в Btrfs перед миграцией на openSUSE Leap 15.3."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:553
 msgid "Berkeley DB removed from packages"
-msgstr ""
+msgstr "Berkeley DB удалена из пакетов"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:554
@@ -962,11 +1003,8 @@ msgstr ""
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:562
-#, fuzzy
-#| msgid "To change the defaults, use the following alternatives:"
 msgid "This change affects the following packages:"
-msgstr ""
-"Чтобы изменить значения по умолчанию, используйте следующие альтернативы:"
+msgstr "Это изменение затрагивает следующие пакеты:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:567
@@ -1010,15 +1048,12 @@ msgstr "Драйверы и оборудование"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:613
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
 msgstr ""
-"Согласование пакетов ядра для SUSE Linux Enterprise Server и openSUSE Leap"
+"Secure Boot: Ядро SUSE Linux Enterprise и подписанные openSUSE пакеты "
+"модулей ядра"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:614
