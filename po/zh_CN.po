@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2022-07-04 09:47+0200\n"
+"POT-Creation-Date: 2022-09-09 12:48+0200\n"
 "PO-Revision-Date: 2022-05-28 17:12+0000\n"
 "Last-Translator: Grover Chou <groverchout@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
@@ -566,80 +566,27 @@ msgstr "移除的软件包不再随发行版一起发布。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:365
+#, fuzzy
+#| msgid ""
+#| "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</"
+#| "package>."
 msgid ""
-"<package>python2</package>: Python 2 reached EOL and will no longer be part "
-"of distribution. For more information, see <link xlink:href=\"https://code."
-"opensuse.org/leap/features/issue/15\"/>."
+"<package>gnome-todo</package>: gnome-todo was replaced by package Endeavour."
 msgstr ""
-"<package>python2</package>：Python2 的生命周期已结束，不再纳入发行版的组成部"
-"分。更多信息，请参考 <link xlink:href=\"https://code.opensuse.org/leap/"
-"features/issue/15\"/>。"
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:371
-msgid ""
-"<package>cloud-init-vmware-guestinfo</package>: Package does not work with "
-"<literal>cloud-init</literal> version 21.2 and later versions. In "
-"<literal>cloud-init</literal> 21.4 there is a new data source that replaces "
-"it."
-msgstr ""
-"<package>cloud-init-vmware-guestinfo</package>：该软件包无法与 "
-"<literal>cloud-init</literal> 21.2 及之后的版本共同使用。在 <literal>cloud-"
-"init</literal> 21.4 版本中会有新的数据源取代它。"
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:380
-msgid ""
-"<package>digikam</package>: Digikam is no longer available on ppc64le as "
-"libqt5-qtwebkit was dropped. Package will be provided only for x86_64, "
-"aarch64, and armv7 architectures."
-msgstr ""
-"<package>digikam</package>：由于 libqt5-qtwebkit 在 ppc64le 上已被删除，所以 "
-"ppc64le 中 Digikam 不再可用。该软件包只会在 x86_64、aarch64 和 armv7 架构中提"
-"供。"
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:385
-msgid ""
-"<package>chessx</package>: Removed because of a startup issue and problems "
-"with upstream. For more information, see <link xlink:href=\"https://bugzilla."
-"opensuse.org/show_bug.cgi?id=1192907\"/>."
-msgstr ""
-"<package>chessx</package>：因为启动问题和上游的问题而被移除。更多信息，请参"
-"考 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-"id=1192907\"/>。"
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:391
-msgid ""
-"<package>gap</package>: Removed because the package is not FHS-compliant. "
-"For more information, see <link xlink:href=\"https://code.opensuse.org/leap/"
-"features/issue/24\"/>."
-msgstr ""
-"<package>gap</package>：因为软件包不符合 FHS 而被移除。更多信息，请参考 "
-"<link xlink:href=\"https://code.opensuse.org/leap/features/issue/24\"/>。"
-
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:397
-msgid ""
-"<package>tensorflow</package>: Removed because the package Tensorflow 1.x is "
-"deprecated, package tensorflow2 should be used instead."
-msgstr ""
-"<package>tensorflow</package>：因为软件包 Tensorflow 1.x 已过时而被移除，取而"
-"代之的是 tensorflow2 软件包。"
+"<package>gnome-system-log</package>：被替换为 <package>gnome-logs</package>。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:408
+#: xml/release-notes.xml:376
 msgid "Drivers and Hardware"
 msgstr "驱动与硬件"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:413
+#: xml/release-notes.xml:381
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr "安全引导：第三方驱动需要正确签名"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:414
+#: xml/release-notes.xml:382
 msgid ""
 "Starting with openSUSE Leap 15.2, kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>) is now enabled. This "
@@ -651,7 +598,7 @@ msgstr ""
 "内核中运行未经信任的代码。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:420
+#: xml/release-notes.xml:388
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -663,7 +610,7 @@ msgstr ""
 "签名过。签名检查表现为以下行为："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:429
+#: xml/release-notes.xml:397
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -673,7 +620,7 @@ msgstr ""
 "蔽。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:436
+#: xml/release-notes.xml:404
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -686,7 +633,7 @@ msgstr ""
 "情查看 <link xlink:href=\"https://zh.opensuse.org/openSUSE:UEFI\"/>。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:443
+#: xml/release-notes.xml:411
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -700,12 +647,12 @@ msgstr ""
 "NVIDIA_%E9%A9%B1%E5%8A%A8#.E5.AE.89.E5.85.A8.E5.90.AF.E5.8A.A8\"/>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:454
+#: xml/release-notes.xml:422
 msgid "Network install image hangs on boot on Raspberry Pi 4"
 msgstr "Raspberry Pi 4 的网络安装镜像在启动时挂起"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:455
+#: xml/release-notes.xml:423
 msgid ""
 "Booting the network install image from USB stick on Raspberry Pi 4 hangs on "
 "boot. To resolve this issue, add the <literal>console=tty</literal> boot "
@@ -721,22 +668,22 @@ msgstr ""
 "\">Raspberry Pi 4 硬件兼容性列表（英文）</link>中的已知问题章节。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:467
+#: xml/release-notes.xml:435
 msgid "Desktop"
 msgstr "桌面"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:468
+#: xml/release-notes.xml:436
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.4."
 msgstr "此章节列出了 openSUSE Leap 15.4 上的桌面问题和更改。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:472
+#: xml/release-notes.xml:440
 msgid "KDE 4 and Qt 4 removal"
 msgstr "移除 KDE 4 和 Qt 4"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:473
+#: xml/release-notes.xml:441
 msgid ""
 "KDE 4 packages will not be part of openSUSE Leap 15.4. Please update your "
 "system to Plasma 5 and Qt 5. Some of Qt 4 packages might still remain for "
@@ -748,22 +695,22 @@ msgstr ""
 "\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:498
+#: xml/release-notes.xml:466
 msgid "General"
 msgstr "常规"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:502
+#: xml/release-notes.xml:470
 msgid "<command>iotop</command> support"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:503
+#: xml/release-notes.xml:471
 msgid "<command>iotop</command> does not display values for SWAPIN and IO %."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:506
+#: xml/release-notes.xml:474
 msgid ""
 "Since Linux kernel 5.14, either kernel boot parameter <literal>delayacct</"
 "literal> needs to be specified or <literal>kernel.task_delayacct</literal> "
@@ -771,35 +718,35 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:576
+#: xml/release-notes.xml:544
 msgid "More Information and Feedback"
 msgstr "更多信息和反馈"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:579
+#: xml/release-notes.xml:547
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "请阅读安装介质上的 <filename>README</filename> 文档。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:584
+#: xml/release-notes.xml:552
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "从 RPM 中获取关于某特定软件包的详细修订历史信息："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:588
+#: xml/release-notes.xml:556
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>文件名</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:589
+#: xml/release-notes.xml:557
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "将 <replaceable>文件名</replaceable> 替换为 RPM 的名称。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:594
+#: xml/release-notes.xml:562
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -808,14 +755,14 @@ msgstr ""
 "软件包更新历史。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:568
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:606
+#: xml/release-notes.xml:574
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -824,7 +771,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:612
+#: xml/release-notes.xml:580
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -833,9 +780,61 @@ msgstr ""
 "org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:619
+#: xml/release-notes.xml:587
 msgid "Copyright © SUSE LLC"
 msgstr "版权所有 © SUSE LLC"
+
+#~ msgid ""
+#~ "<package>python2</package>: Python 2 reached EOL and will no longer be "
+#~ "part of distribution. For more information, see <link xlink:href="
+#~ "\"https://code.opensuse.org/leap/features/issue/15\"/>."
+#~ msgstr ""
+#~ "<package>python2</package>：Python2 的生命周期已结束，不再纳入发行版的组成"
+#~ "部分。更多信息，请参考 <link xlink:href=\"https://code.opensuse.org/leap/"
+#~ "features/issue/15\"/>。"
+
+#~ msgid ""
+#~ "<package>cloud-init-vmware-guestinfo</package>: Package does not work "
+#~ "with <literal>cloud-init</literal> version 21.2 and later versions. In "
+#~ "<literal>cloud-init</literal> 21.4 there is a new data source that "
+#~ "replaces it."
+#~ msgstr ""
+#~ "<package>cloud-init-vmware-guestinfo</package>：该软件包无法与 "
+#~ "<literal>cloud-init</literal> 21.2 及之后的版本共同使用。在 "
+#~ "<literal>cloud-init</literal> 21.4 版本中会有新的数据源取代它。"
+
+#~ msgid ""
+#~ "<package>digikam</package>: Digikam is no longer available on ppc64le as "
+#~ "libqt5-qtwebkit was dropped. Package will be provided only for x86_64, "
+#~ "aarch64, and armv7 architectures."
+#~ msgstr ""
+#~ "<package>digikam</package>：由于 libqt5-qtwebkit 在 ppc64le 上已被删除，所"
+#~ "以 ppc64le 中 Digikam 不再可用。该软件包只会在 x86_64、aarch64 和 armv7 架"
+#~ "构中提供。"
+
+#~ msgid ""
+#~ "<package>chessx</package>: Removed because of a startup issue and "
+#~ "problems with upstream. For more information, see <link xlink:href="
+#~ "\"https://bugzilla.opensuse.org/show_bug.cgi?id=1192907\"/>."
+#~ msgstr ""
+#~ "<package>chessx</package>：因为启动问题和上游的问题而被移除。更多信息，请"
+#~ "参考 <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
+#~ "id=1192907\"/>。"
+
+#~ msgid ""
+#~ "<package>gap</package>: Removed because the package is not FHS-compliant. "
+#~ "For more information, see <link xlink:href=\"https://code.opensuse.org/"
+#~ "leap/features/issue/24\"/>."
+#~ msgstr ""
+#~ "<package>gap</package>：因为软件包不符合 FHS 而被移除。更多信息，请参考 "
+#~ "<link xlink:href=\"https://code.opensuse.org/leap/features/issue/24\"/>。"
+
+#~ msgid ""
+#~ "<package>tensorflow</package>: Removed because the package Tensorflow 1.x "
+#~ "is deprecated, package tensorflow2 should be used instead."
+#~ msgstr ""
+#~ "<package>tensorflow</package>：因为软件包 Tensorflow 1.x 已过时而被移除，"
+#~ "取而代之的是 tensorflow2 软件包。"
 
 #~ msgid "fs@suse.com"
 #~ msgstr "fs@suse.com"
@@ -2299,13 +2298,6 @@ msgstr "版权所有 © SUSE LLC"
 #~ msgstr ""
 #~ "<package>dropbear</package>：被移除，因为相比 <package>openssh</package> "
 #~ "来说不具有相应的优势。"
-
-#~ msgid ""
-#~ "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</"
-#~ "package>."
-#~ msgstr ""
-#~ "<package>gnome-system-log</package>：被替换为 <package>gnome-logs</"
-#~ "package>。"
 
 #~ msgid ""
 #~ "<package>labplot</package>: Labplot has been replaced by its Qt5 version, "
