@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2022-06-23 19:13+0000\n"
-"Last-Translator: Javier Llorente <javier@opensuse.org>\n"
+"PO-Revision-Date: 2022-12-22 08:38+0000\n"
+"Last-Translator: Ioannes Andreas <ioannes@disroot.org>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/es/>\n"
 "Language: es\n"
@@ -648,10 +648,8 @@ msgstr "Para solucionar este problema, convierta la partición MBR en GPT."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:323
-#, fuzzy
-#| msgid "<literal>rpm</literal>"
 msgid "<literal>tlp</literal> package service"
-msgstr "<literal>rpm</literal>"
+msgstr "Paquete de servicio <literal>tlp</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:324
@@ -661,6 +659,11 @@ msgid ""
 "installation of recommended packages is enabled). This package provides "
 "additional tools to save battery power on laptops, especially Lenovo laptops."
 msgstr ""
+"Durante la instalación en ordenadores portátiles, el paquete <literal>tlp</"
+"literal> es instalado (junto con el subpaquete <literal>tlp-rdw</literal>, "
+"si la instalación de paquetes recomendados está habilitada). Este paquete "
+"provee de herramientas adicionales para el ahorro de energía en baterías de "
+"ordenadores portátiles, especialmente de la marca Lenovo."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:331
@@ -674,6 +677,15 @@ msgid ""
 "behavior afterward, for example, WiFi problems or non-functional USB ports, "
 "disable the service again."
 msgstr ""
+"El servicio no está habilitado por defecto porque puede interferir con otras "
+"herramientas especializadas para portátiles como, por ejemplo, <literal"
+">laptop-mode-tools</literal>, <literal>rfkill</literal>, <literal>gnome-"
+"power-manager</literal> o <literal>kde-power-manager</literal>. Para "
+"habilitar e iniciar el servicio de manera explícita, use el Gestor de "
+"Servicios de YaST o use el comando <literal>systemctl enable --now tlp."
+"service</literal>. Si se encuentra con cualquier comportamiento inesperado "
+"como, por ejemplo, problemas con WiFi o puertos USB no operativos, "
+"deshabilite el servicio nuevamente."
 
 # CER: Usamos la misma traducci´on para update y upgrade, y hay que diferenciarlos
 #. (itstool) path: sect1/title
@@ -741,13 +753,6 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:394
-#, fuzzy
-#| msgid ""
-#| "openSUSE Leap releases older than 15.2 do not contain this feature "
-#| "because they are not supported anymore. All users are advised to upgrade "
-#| "to openSUSE Leap 15.2 with the latest updates before upgrading to 15.3. "
-#| "The following parameters can be used as a workaround for "
-#| "<package>libzypp</package> versions older than 12.25.8:"
 msgid ""
 "openSUSE Leap releases older than 15.2 do not contain this feature because "
 "they are not supported anymore. All users are advised to upgrade to openSUSE "
@@ -760,8 +765,9 @@ msgstr ""
 "esta funcionalidad porque ya no están mantenidas. A todos los usuarios se "
 "les aconseja actualizar a openSUSE Leap 15.2 con las últimas actualizaciones "
 "antes de actualizar a la versión 15.3. Los siguientes parámetros pueden ser "
-"utilizados como solución alternativa para versión anteriores de la 12.25.8 "
-"de <package>libzypp</package>:"
+"utilizados como solución alternativa para versión anteriores de la 12.25.8 ("
+"reemplace 15.0 a continuación con su versión actual de openSUSE) de "
+"<package>libzypp</package>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:403
@@ -772,6 +778,11 @@ msgid ""
 "zypper dup --allow-vendor-change --force-resolution\n"
 "  "
 msgstr ""
+"\n"
+"zypper addrepo --check --refresh --name 'openSUSE-Leap-15.0-Update' "
+"http://download.opensuse.org/update/leap/15.0/oss/ repo-update\n"
+"zypper dup --allow-vendor-change --force-resolution\n"
+"  "
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:408
@@ -985,7 +996,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:541
 msgid "ReiserFS support removed"
-msgstr ""
+msgstr "Soporte para ReiserFS removido"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:542
@@ -994,6 +1005,9 @@ msgid ""
 "from YaST and the kernel, and the installer will block the upgrade when it "
 "detects a ReiserFS file system."
 msgstr ""
+"Con openSUSE Leap 15.3, el soporte para ReiserFS ha sido removido "
+"completamente de YaST y del kernel. Además, el instalador bloqueará la "
+"actualización cuando detecte un sistema de archivos ReiserFS."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:547
@@ -1001,6 +1015,8 @@ msgid ""
 "For existing data partitions formatted with ReiserFS, we suggest converting "
 "them to Btrfs before migrating your system to openSUSE Leap 15.3."
 msgstr ""
+"Para las particiones de datos existentes formateadas con ReiserFS, sugerimos "
+"convertirlas a Btrfs antes de migrar su sistema a openSUSE Leap 15.3."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:553
