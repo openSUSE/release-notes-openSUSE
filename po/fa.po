@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2023-03-03 15:14+0000\n"
+"PO-Revision-Date: 2023-03-03 20:14+0000\n"
 "Last-Translator: Mohammad Rezaei Seresht <m.networking@gmail.com>\n"
 "Language-Team: Persian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/master/fa/>\n"
@@ -235,6 +235,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor</command> همه نمایه های AppArmor را به "
+"درستی بارگیری مجدد کرد. (این روش توصیه شده برای بارگیری مجدد پروفایل های "
+"AppArmor بوده و همچنان باقی می ماند.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -244,6 +247,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl راه‌اندازی مجدد apparmor</command> به این معنی است که "
+"AppArmor متوقف می‌شود، در نتیجه تمام نمایه‌های AppArmor بارگیری می‌شود و سپس "
+"راه‌اندازی مجدد می‌شود که تمام فرآیندهای موجود را محدود نمی‌کند. فقط "
+"فرآیندهای تازه شروع شده پس از آن دوباره محدود می شوند."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -252,6 +259,8 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"متأسفانه، <systemitem>systemd</systemitem> راه حلی را در قالب فایل واحد خود "
+"برای مشکل ناشی از سناریوی <literal>restart</literal> ارائه نمی دهد."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -260,6 +269,9 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"با شروع AppArmor 2.12، دستور <command>systemctl stop apparmor</command> کار "
+"نخواهد کرد. در نتیجه، <command>systemctl restart apparmor</command> اکنون "
+"نمایه های AppArmor را به درستی بارگیری می کند."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -268,6 +280,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"برای بارگیری تمام نمایه‌های AppArmor، از دستور جدید <command>aa-teardown</"
+"command> استفاده کنید که با رفتار قبلی <command>systemctl stop apparmor</"
+"command> مطابقت دارد."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
@@ -276,11 +291,14 @@ msgid ""
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
+"برای اطلاعات بیشتر، به <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=996520\"/> و <link xlink:href=\"https://bugzilla.opensuse."
+"org/ مراجعه کنید show_bug.cgi?id=853019\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "بدون ترکیب کلید نوشتن پیش‌فرض"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -291,6 +309,11 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"در نسخه‌های قبلی openSUSE، ترکیب کلید نوشتن اجازه تایپ کاراکترهایی را می‌داد "
+"که بخشی از طرح‌بندی صفحه‌کلید معمولی نبودند. به عنوان مثال، برای تولید "
+"<quote>å</quote>، می توانید <keycombo><keycap function=\"shift\"/"
+"><keycap>راست Ctrl</keycap></keycombo> را فشار داده و رها کنید و سپس "
+"<keycap> را فشار دهید. a</keycap> دو بار."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -299,6 +322,9 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"در openSUSE Tumbleweed، دیگر ترکیبی از کلیدهای نوشتن از پیش تعریف شده وجود "
+"ندارد زیرا <keycombo><keycap function=\"shift\"/><keycap>Right "
+"Ctrl</keycap></keycombo> دیگر آنطور که انتظار می رود کار نمی کند."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:203
@@ -306,6 +332,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"برای تعریف یک ترکیب کلید ترکیبی سفارشی در سراسر سیستم، از فایل <filename>/"
+"etc/X11/Xmodmap</filename> استفاده کنید و به دنبال خطوط زیر بگردید:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -320,6 +348,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! مثال سوم: کلید کنترل سمت راست را به کلید نوشتن تغییر دهید.\n"
+"!! برای انجام Compose Character، این کلید و سپس دو را فشار دهید\n"
+"!! کاراکترها (به عنوان مثال «a» و «^» برای دریافت 342).\n"
+"!remove Control = Control_R\n"
+"!keysym Control_R = چند_کلید\n"
+"!add Control = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:215
@@ -328,6 +364,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"برای برداشتن کامنت کد مثال، کاراکترهای <literal>!</literal> را در ابتدای "
+"سطرها حذف کنید. با این حال، توجه داشته باشید که اگر از <filename>Xmodmap</"
+"filename> استفاده می‌کنید، تنظیمات <command>setxkbmap</command> بازنویسی "
+"می‌شود."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -336,6 +376,8 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"برای تعریف یک ترکیب کلید ترکیبی مخصوص کاربر، از ابزار پیکربندی صفحه کلید "
+"دسکتاپ یا ابزار خط فرمان <command>setxkbmap</command> استفاده کنید:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:228
@@ -345,6 +387,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_KEY</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -354,6 +400,10 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"برای متغیر <replaceable>COMPOSE_KEY</replaceable>، از نویسه دلخواه خود "
+"استفاده کنید، برای مثال <literal>ralt</literal>، <literal>lwin</literal>، "
+"<literal>rwin</literal>، <literal> </literal>، <literal>rctl</literal>، یا "
+"<literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:240
@@ -372,18 +422,14 @@ msgstr "اطلاعات بیشتر و بازخورد"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:266
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "اسناد <filename>README</filename> را در رسانه بخوانید."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:271
-#, fuzzy
-#| msgid ""
-#| "Get detailed changelog information about a particular package from the "
-#| "RPM:"
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
-msgstr "اطلاعات جزئی تری را راجع به تغییرات یک بسته ی مشخص RPM دریافت کنید:"
+msgstr "مشاهده جزئیات تغییرات در مورد یک بسته خاص از RPM آن:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:275
@@ -394,27 +440,24 @@ msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "نام RPM را جایگزین <replaceable>FILENAME</replaceable> کنید."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:281
-#, fuzzy
-#| msgid ""
-#| "Check the <filename>ChangeLog</filename> file in the top level of the DVD "
-#| "for a chronological log of all changes made to the updated packages."
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
-"پرونده ی <filename>ChangeLog</filename> در بالاترین مسیر DVD برای بررسی "
-"گزارش تمامی تغییرات اعمال شده در بسته های به روز شده را مطالعه کنید."
+"فایل <filename>ChangeLog</filename> را در سطح بالای رسانه بررسی کنید تا یک "
+"گزارش زمانی از همه تغییرات ایجاد شده در بسته‌های به‌روزرسانی شده وجود داشته "
+"باشد."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:287
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
-msgstr ""
+msgstr "اطلاعات بیشتر را در فهرست <filename>docu</filename> در رسانه بیابید."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:293
@@ -422,6 +465,8 @@ msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
 msgstr ""
+"برای اسناد اضافی یا به روز شده، به <link xlink:href=\"https://doc.opensuse."
+"org/\"/> مراجعه کنید."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:299
@@ -429,18 +474,18 @@ msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
+"برای آخرین اخبار محصول، از openSUSE، به <link xlink:href=\"https://www."
+"opensuse.org\"/> مراجعه کنید."
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:306
-#, fuzzy
-#| msgid "Copyright © 2015 SUSE LLC"
 msgid "Copyright © SUSE LLC"
-msgstr "کپی رایت © 2015 SUSE LLC"
+msgstr "حق چاپ © SUSE LLC"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:310
 msgid "Thanks for using openSUSE."
-msgstr "از شما به دلیل استفاده از openSUSE تشکر میکنیم."
+msgstr "برای استفاده از openSUSE متشکریم."
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:313
