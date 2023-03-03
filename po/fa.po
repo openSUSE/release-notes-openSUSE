@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2022-10-26 10:13+0000\n"
-"Last-Translator: Mohammad Rezaei Seresht <securesage@aol.com>\n"
+"PO-Revision-Date: 2023-03-03 15:14+0000\n"
+"Last-Translator: Mohammad Rezaei Seresht <m.networking@gmail.com>\n"
 "Language-Team: Persian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/fa/>\n"
 "Language: fa\n"
@@ -301,16 +301,20 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
+"برخی از بسته‌ها محتوای <filename>/var</filename> یا <filename>/srv</"
+"filename> را در اسکریپت‌های RPM <literal>%post</literal> خود تغییر می‌دهند. "
+"این بسته ها ناسازگار هستند. اگر چنین بسته ای را پیدا کردید، یک گزارش باگ "
+"ارسال کنید."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:153
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "برای ارائه این ویژگی ها، این سیستم به روز رسانی به موارد زیر متکی است:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:159
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "اسنپ‌شات های Btrfs"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:160
@@ -320,18 +324,21 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"قبل از شروع به روز رسانی سیستم، یک اسنپ‌شات Btrfs جدید از سیستم فایل ریشه "
+"ایجاد می شود. سپس، تمام تغییرات به‌روزرسانی در آن اسنپ‌شات Btrfs نصب می‌شود. "
+"برای تکمیل به روز رسانی، سپس می توانید سیستم را در اسنپ‌شات جدید راه اندازی "
+"مجدد کنید."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:167
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"برای برگرداندن به روز رسانی، به جای آن، به سادگی از اسنپ‌شات قبلی بوت کنید."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:173
-#, fuzzy
-#| msgid "Mount the initial root filesystem:"
 msgid "A read-only root file system"
-msgstr "فایل سیستم ریشه ی ابتدایی را سوار کنید:"
+msgstr "یک فایل سیستم root فقط خواندنی"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:174
@@ -340,6 +347,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"برای جلوگیری از مشکلات و از دست رفتن داده ها به دلیل به روز رسانی، سیستم "
+"فایل ریشه نباید در غیر این صورت نوشته شود. بنابراین، سیستم فایل ریشه در طول "
+"عملیات عادی فقط به صورت خواندنی نصب می شود."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:180
@@ -349,6 +359,10 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"برای انجام این راه‌اندازی، دو تغییر اضافی در سیستم فایل لازم است: برای اجازه "
+"نوشتن پیکربندی کاربر در <filename>/etc</filename>، این فهرست به‌طور خودکار "
+"برای استفاده از OverlayFS پیکربندی می‌شود. <filename>/var</filename> اکنون "
+"یک زیرجلد جداگانه است که می‌توان آن را توسط فرآیندها نوشت."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:190
@@ -362,11 +376,13 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"نقش سیستم <emphasis>Transactional Server</emphasis> به اندازه دیسک حداقل 12 "
+"گیگابایت برای قرار دادن اسنپ‌شات Btrfs نیاز دارد."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:198
 msgid "YaST Does Not Work Transactional Mode"
-msgstr ""
+msgstr "YaST حالت تراکنشی کار نمی کند"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:201
@@ -375,6 +391,9 @@ msgid ""
 "YaST performs things immediately and because it cannot edit a read-only "
 "filesystem."
 msgstr ""
+"در حال حاضر، YaST با به روز رسانی تراکنش ها کار نمی کند. این به این دلیل است "
+"که YaST کارها را بلافاصله انجام می دهد و نمی تواند یک فایل سیستم فقط خواندنی "
+"را ویرایش کند."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:206
@@ -383,11 +402,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"برای کار با به‌روزرسانی‌های تراکنشی، همیشه از دستور <command>transactional-"
+"update</command> به جای YaST و Zypper برای مدیریت تمام نرم‌افزار استفاده "
+"کنید:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:213
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "سیستم را به روز کنید: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:219
@@ -395,6 +417,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"یک بسته را نصب کنید: <command>transactional-update pkg در "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:225
@@ -402,6 +426,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"حذف یک بسته: <command>transactional-update pkg rm "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -410,6 +436,9 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"برای برگرداندن آخرین اسنپ‌شات، که آخرین مجموعه تغییرات در سیستم فایل ریشه "
+"است، مطمئن شوید که سیستم شما در اسنپ‌شات بعدی راه‌اندازی شده است و اجرا "
+"کنید:<command>transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:237
@@ -417,6 +446,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"در صورت تمایل، یک شناسه اسنپ‌شات به انتهای فرمان اضافه کنید تا به یک شناسه "
+"خاص برگردید."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:243
@@ -1085,10 +1116,9 @@ msgstr ""
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:779
-#, fuzzy, no-wrap
-#| msgid "rpm --changelog -qp <placeholder-1/>.rpm"
+#, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr "rpm --changelog -qp <placeholder-1/>.rpm"
+msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:780
