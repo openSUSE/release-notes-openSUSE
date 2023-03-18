@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2019-03-01 18:19+0000\n"
+"PO-Revision-Date: 2023-03-18 09:27+0000\n"
 "Last-Translator: Manuel Vazquez <xixirei@yahoo.es>\n"
 "Language-Team: Galician <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/master/gl/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.3\n"
+"X-Generator: Weblate 4.9.1\n"
 "X-Poedit-Language: Galician\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -140,6 +140,16 @@ msgid ""
 "disabled by default. Nevertheless, it is recommended to install any firmware "
 "updates the hardware vendor recommends."
 msgstr ""
+"<emphasis> Antecedentes: </emphasis> Algúns firmware da UEFI teñen erros que "
+"provocan que se rompa se se escriben demasiados datos na área de "
+"almacenamento da UEFI. Ninguén sabe realmente canto é \"demasiado\". "
+"openSUSE minimiza o risco ao non escribir máis que o mínimo necesario para "
+"arrincar o SO. O mínimo significa comunicarlle ao firmware UEFI a situación "
+"do cargador de arranque openSUSE. As funcións do núcleo Linux upstream que "
+"usan a área de almacenamento UEFI para almacenar información de inicio e "
+"fallo (<literal> pstore </literal>) foron desactivadas de xeito "
+"predeterminado. Non obstante, recoméndase instalar todas as actualizacións "
+"de firmware que o provedor de hardware recomenda."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:85
@@ -169,6 +179,12 @@ msgid ""
 "rewrite consist of two different operation: removing the old entry and "
 "creating a new entry that replaces the first one."
 msgstr ""
+"Ademais, a especificación UEFI tamén permite particións MBR (MS-DOS) "
+"legadas. Os cargadores de arranque Linux (ELILO ou GRUB2) intentan xerar "
+"automaticamente unha GUID para esas particións legais e escribilas no "
+"firmware. Tal GUID pode cambiar con frecuencia, provocando unha reescritura "
+"no firmware. Unha reescritura consta de dúas operacións diferentes: eliminar "
+"a entrada antiga e crear unha nova entrada que substitúa á primeira."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:101
@@ -178,6 +194,10 @@ msgid ""
 "firmware does not collect and free those entries; this may end up with a non-"
 "bootable system."
 msgstr ""
+"O firmware moderno conta cun colector de lixo que recolle as entradas "
+"eliminadas e libera a memoria reservada para as entradas antigas. Un "
+"problema xorde cando o firmware defectuoso non recolle e libera esas "
+"entradas; isto pode acabar cun sistema non iniciable."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:107
@@ -185,6 +205,8 @@ msgid ""
 "The workaround is simple: convert the legacy MBR partition to the new GPT to "
 "avoid this problem completely."
 msgstr ""
+"A solución é sinxela: converta a partición MBR legada na nova GPT para "
+"evitar este problema por completo."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:124
@@ -194,7 +216,7 @@ msgstr "Xeral"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:127
 msgid "System with LUKS-Encrypted Partition Does Not Boot"
-msgstr ""
+msgstr "O sistema con partición cifrada LUKS non se inicia"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:128
@@ -204,6 +226,10 @@ msgid ""
 "line. See also <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=966255\"/>."
 msgstr ""
+"Nalgúns casos, Plymouth non mostra o paso de frase correctamente. Para "
+"solucionar isto, engada <literal> plymouth.enable = 0 </literal> á liña de "
+"ordes do kernel. Vexa tamén <link xlink: href = \"https://bugzilla.opensuse."
+"org/show_bug.cgi?id=966255\" />."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:137
@@ -217,6 +243,9 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"No pasado, podía haber confusión sobre a diferenza entre o funcionamento de "
+"AppArmor entre as <command> systemctl </command> subordes <literal> reload </"
+"literal> e <literal> reiniciar </literal>:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -225,6 +254,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command> systemctl reload apparmor </command> volvía cargar todos os perfís "
+"de AppArmor. (Foi e segue sendo o xeito recomendado de cargar os perfís de "
+"AppArmor.)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -234,6 +266,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command> systemrtl restart apparmor </command> significaba que AppArmor "
+"parase, descargando así todos os perfís de AppArmor e reiniciou o que deixou "
+"todos os procesos existentes sen definir. Só os procesos recentemente "
+"iniciados serían confinados de novo."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
