@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.de\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2022-09-10 17:13+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"PO-Revision-Date: 2023-03-31 14:14+0000\n"
+"Last-Translator: Georg Mayer <georgbmayer@yahoo.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/de/>\n"
 "Language: de\n"
@@ -647,10 +647,8 @@ msgstr ""
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:323
-#, fuzzy
-#| msgid "<literal>rpm</literal>"
 msgid "<literal>tlp</literal> package service"
-msgstr "<literal>rpm</literal>"
+msgstr "<literal>tlp</literal> Paketdienst"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:324
@@ -660,6 +658,11 @@ msgid ""
 "installation of recommended packages is enabled). This package provides "
 "additional tools to save battery power on laptops, especially Lenovo laptops."
 msgstr ""
+"Während der Installation auf einem Laptop wird das <literal>tlp</literal> "
+"Paket installiert(mit seinem Unterpaket <literal>tlp-rdw</literal>, falls "
+"die Installation empfohlener Pakete aktiviert ist). Diese Pakete stellt "
+"zusätzliche Tools zum Sparen von Akkuladung auf Laptops, vorallem Lenovo "
+"Laptops, bereit."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:331
@@ -673,6 +676,14 @@ msgid ""
 "behavior afterward, for example, WiFi problems or non-functional USB ports, "
 "disable the service again."
 msgstr ""
+"Dieser Dienst ist nicht standardmäßig aktiviert, da es möglicherweise mit "
+"anderen Laptop Tools, zum Beispiel <literal>laptop-mode-tools</literal>, "
+"<literal>rfkill</literal>, <literal>gnome-power-manager</literal>, oder "
+"<literal>kde-power-manager</literal> aneckt. Um den Dienst doch zu starten, "
+"benutzen Sie die YaST Dienstverwaltung oder den Befehl <literal> systemctl "
+"enable --now tlp.service </literal>. Falls Sie danach ein unerwartetes "
+"Problem bemerken, zum Beispiel mit dem WLAN oder mit USB-Anschlüssen, "
+"deaktivieren Sie den Dienst wieder."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:347
@@ -738,13 +749,6 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:394
-#, fuzzy
-#| msgid ""
-#| "openSUSE Leap releases older than 15.2 do not contain this feature "
-#| "because they are not supported anymore. All users are advised to upgrade "
-#| "to openSUSE Leap 15.2 with the latest updates before upgrading to 15.3. "
-#| "The following parameters can be used as a workaround for "
-#| "<package>libzypp</package> versions older than 12.25.8:"
 msgid ""
 "openSUSE Leap releases older than 15.2 do not contain this feature because "
 "they are not supported anymore. All users are advised to upgrade to openSUSE "
@@ -758,7 +762,7 @@ msgstr ""
 "Leap 15.2 mit den neuesten Aktualisierungen vor einem Upgrade auf 15.3 zu "
 "aktualisieren. Die folgenden Parameter können zur Umgehung bei "
 "<package>libzypp</package> Versionen genutzt werden, die älter als 12.25.8 "
-"sind:"
+"sind(ersetzen Sie unten 15.0 mit Ihrer aktuellen openSUSE Version):"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:403
@@ -769,6 +773,11 @@ msgid ""
 "zypper dup --allow-vendor-change --force-resolution\n"
 "  "
 msgstr ""
+"\n"
+"zypper addrepo --check --refresh --name 'openSUSE-Leap-15.0-Update' "
+"http://download.opensuse.org/update/leap/15.0/oss/ repo-update\n"
+"zypper dup --allow-vendor-change --force-resolution\n"
+"  "
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:408
@@ -1211,6 +1220,10 @@ msgid ""
 "reasons. For more information, see <link xlink:href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=1179613\"/>."
 msgstr ""
+"KDE 4 Pakete sind nicht länger ein Teil von opensuse Leap 15.3. Updaten Sie "
+"Ihr System auf Plasma und Qt 5. Einige Qt 4 Pakete bleiben möglicherweise "
+"noch aus Kompatibilitätsgründen erhalten. Für mehr Informationen siehe <link "
+"xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:690
