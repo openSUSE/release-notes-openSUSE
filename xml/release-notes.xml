@@ -95,7 +95,7 @@
    Make sure to also review <xref linkend="sec.driver"/>.
   </para> -->
 
-  <sect2 xml:id="sec.install.transactional-server-role">
+  <sect2 xml:id="installation-transactional-server-role">
    <title>Using Atomic Updates With the System Role <emphasis>Transactional Server</emphasis></title>
    <!-- boo#1092953, boo#1093098 -->
    <para>
@@ -223,7 +223,7 @@
    </para>
   </sect2>
 
-  <sect2 xml:id="sec.install.small-disk">
+  <sect2 xml:id="installation-small-disk">
    <title>Installing on Hard Disks With Less Than 12 GB of Capacity</title>
    <!-- boo#1093098 -->
    <para>
@@ -234,7 +234,7 @@
    </para>
   </sect2>
 
-  <sect2 xml:id="sec.install.uefi">
+  <sect2 xml:id="installation-uefi">
    <title>UEFI&mdash;Unified Extensible Firmware Interface</title>
    <para>
     Prior to installing &opensuse; on a system that boots using UEFI (Unified
@@ -259,7 +259,7 @@
    </para>
   </sect2>
 
-  <sect2 xml:id="sec.install.uefi-part">
+  <sect2 xml:id="installation-uefi-part">
   <!-- bnc#850056 -->
    <title>UEFI, GPT, and MS-DOS Partitions</title>
    <para>
@@ -312,10 +312,10 @@
    Make sure to also review <xref linkend="sec.driver"/>.
   </para> -->
   <para>
-   Additionally, check <xref linkend="sec.package"/>.
+   Additionally, check <xref linkend="packages"/>.
   </para>
 
-  <!-- <sect2 xml:id="sec.upgrade.150">
+  <!-- <sect2 xml:id="upgrade-150">
    <title>Upgrading from &opensuseleap; 15.0</title>
    <para/>
 
@@ -323,10 +323,10 @@
 
  </sect1>
 
- <sect1 xml:id="sec.package">
+ <sect1 xml:id="packages">
   <title>Packaging Changes</title>
 
-  <sect2 xml:id="sec.package.deprecated">
+  <sect2 xml:id="packages-deprecated">
    <title>Deprecated Packages</title>
    <para>
     Deprecated packages are still shipped as part of the distribution but are
@@ -354,7 +354,7 @@
    <screen>zypper lifecycle</screen>
   </sect2>
 
-  <sect2 xml:id="sec.package.removed">
+  <sect2 xml:id="packages-removed">
    <title>Removed Packages</title>
    <para>
     Removed packages are not shipped as part of the distribution anymore.
@@ -380,11 +380,11 @@
 
  </sect1>
 
- <sect1 xml:id="sec.driver">
+ <sect1 xml:id="drivers-hardware">
   <title>Drivers and Hardware</title>
   <para/>
 
-  <sect2 xml:id="sec.driver.sig">
+  <sect2 xml:id="driver-hardware-signatures">
    <!-- bsc#173158 -->
    <title>Secure Boot: Third-Party Drivers Need to Be Properly Signed</title>
    <para>
@@ -425,7 +425,7 @@
    </para>
   </sect2>
 
- <sect2 xml:id="sec.driver.rpiusbboot">
+ <sect2 xml:id="drivers-hardware-rpiusbboot">
    <!-- bsc#1198992 -->
    <title>Network install image hangs on boot on Raspberry Pi 4</title>
    <para>
@@ -444,18 +444,53 @@
    <para>
     This section lists desktop issues and changes in &thisversion;.
    </para>
-   <sect2 xml:id="sec.desktop.kde">
+   <sect2 xml:id="desktop-kde">
     <title>KDE 4 and Qt 4 removal</title>
     <para>
      KDE 4 packages will not be part of &opensuseleap; 15.4.
      Please update your system to Plasma 5 and Qt 5.
      Some of Qt 4 packages might still remain for compatability reasons.
-     <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1179613"/>.
+     <link xlink:href="https://bugzilla.opensuse.org/show_bug.cgi?id=1179613" />.
     </para>
    </sect2>
 
-<!--
-  <sect2 xml:id="sec.desktop.ypbind">
+  <sect2>
+   <title><literal>nouveau</literal> disabled for Nvidia Turing and Ampere GPUs / openGPU
+    recommendation</title>
+   <para>
+    The <literal>nouveau</literal> driver is still considered experimental for Nvidia Turing and Ampere GPUs.
+    Therefore it has been disabled by default on systems with these GPUs.
+   </para>
+
+   <para>
+    Instead of using the <literal>nouveau</literal> driver we recommend using Nvidia's new openGPU driver.
+    Install this driver by installing these following packages:
+   </para>
+
+   <itemizedlist>
+    <listitem>
+     <para><literal>nvidia-open-driver-G06-signed-kmp-default</literal></para>
+    </listitem>
+    <listitem>
+     <para><literal>kernel-firmware-nvidia-gsp-G06</literal></para>
+    </listitem>
+   </itemizedlist>
+
+   <para>Then uncomment the <literal>options nvidia</literal> line in the <literal>/etc/modprobe.d/50-nvidia-default.conf</literal>
+    file so that it looks like the following afterwards:</para>
+
+   <screen>
+### Enable support on *all* Turing/Ampere GPUs: Alpha Quality!
+options nvidia NVreg_OpenRmEnableUnsupportedGpus=1
+   </screen>
+
+   <para>If you prefer using <literal>nouveau</literal> driver anyway, add <literal>nouveau.force_probe=1</literal> to your kernel
+    boot parameters, and do not install the above openGPU package.</para>
+
+  </sect2>
+
+  <!--
+  <sect2 xml:id="desktop-ypbind">
    <!-/- boo#1129587 -/->
    <title>NIS/ypbind and NetworkManager</title>
    <para>
@@ -473,8 +508,8 @@
   <sect1 xml:id="general">
    <title>General</title>
 
-   <sect2 xml:id="sec.general.iotop">
-    <!-- boo#1200669 -->
+   <sect2 xml:id="desktop-iotop">
+   <!-- boo#1200669 -->
     <title><command>iotop</command> support</title>
     <para>
      <command>iotop</command> does not display values for SWAPIN and IO %.
@@ -489,7 +524,7 @@
 
   </sect1>
 
- <!-- <sect1 xml:id="sec.server">
+ <!-- <sect1 xml:id="server">
   <title>Server Software</title>
 
   <para>
@@ -499,15 +534,15 @@
  </sect1> -->
 
 
-<!-- <sect1 xml:id="sec.security">
+ <!-- <sect1 xml:id="security">
   <title>Security</title>
 
   <para>
    This section lists changes to security features in &thisversion;.
   </para> -->
 
-<!--
-  <sect2 xml:id="sec.security.amanda">
+ <!--
+  <sect2 xml:id="security-amanda">
    <!-/- boo#1116922 -/->
    <title>Users and Groups Associated with AMANDA Backup Utility</title>
    <para>
@@ -534,10 +569,10 @@
    </para>
   </sect2>
 -->
-<!-- </sect1> -->
+ <!-- </sect1> -->
 
 
- <!-- <sect1 xml:id="sec.technical">
+ <!-- <sect1 xml:id="technical">
   <title>Technical</title>
   <para/>
 
@@ -593,7 +628,8 @@
   </itemizedlist>
 
   <para>
-   Copyright © <?dbtimestamp format="Y" ?> SUSE LLC
+   Copyright ©
+   <?dbtimestamp format="Y"?> SUSE LLC
   </para>
 
  </sect1>
