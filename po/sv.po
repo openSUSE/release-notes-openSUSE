@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2023-04-26 10:14+0000\n"
+"PO-Revision-Date: 2023-05-10 12:14+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/sv/>\n"
@@ -232,6 +232,11 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Det huvudsakliga <literal>repo-update</literal> förrådet är för openSUSE "
+"Leap (OSS) uppdateringar. Det är det minsta och innehåller "
+"systemkonfigurationspaket, inklusive släppaket, vårat varumärke och "
+"potentiella delar av SUSE Linux Enterprise paket. Detta förråd har också en "
+"<literal>debug-info</literal> variant."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -241,6 +246,10 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Det <literal>repo-backports-update</literal> förrådet är ett "
+"uppdateringsförråd för openSUSE Backports som innehåller uppdateringar för "
+"de flesta openSUSE Leap paket. Även detta förråd har en <literal>debug-info</"
+"literal> variant."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -250,6 +259,10 @@ msgid ""
 "Enterprise update streams. This repository is without the <literal>debug-"
 "info</literal> variant."
 msgstr ""
+"Det tredje förrådet, som heter <literal>repo-sle-update</literal>, är ett "
+"uppdateringsförråd som innehåller kombinerade uppdateringar från alla aktiva "
+"SUSE Linux Enterprise uppdateringsströmmar. Detta förråd är utan en <literal"
+">debug-info</literal> variant."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -357,14 +370,10 @@ msgstr ""
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:190
-#, fuzzy
-#| msgid ""
-#| "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk "
-#| "Space"
 msgid ""
 "<emphasis>Transactional Server</emphasis> needs at least 12 GB of disk space"
 msgstr ""
-"<emphasis>Transactional Server</emphasis> behöver minst 12 GB diskutrymme"
+"<emphasis>Transaktionell Server</emphasis> behöver minst 12 GB diskutrymme"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:191
@@ -631,6 +640,14 @@ msgid ""
 "behavior afterward, for example, WiFi problems or non-functional USB ports, "
 "disable the service again."
 msgstr ""
+"Denna tjänsten är inte aktiverad som standard eftersom den kan störa andra "
+"specialiserade laptopverktyg, till exempel, <literal>laptop-mode-tools</"
+"literal>, <literal>rfkill</literal>, <literal>gnome-power-manager</literal>, "
+"eller <literal>kde-power-manager</literal>. För att aktivera och starta "
+"tjänsten uttryckligen, använd YaST Tjänstehanterare eller använd kommandot "
+"<literal> systemctl enable --now tlp.service </literal>. Om du stöter på "
+"något oväntat beteende efteråt, till exempel WiFi-problem eller icke-"
+"fungerande USB-portar, inaktivera tjänsten igen."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:347
@@ -696,13 +713,6 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:394
-#, fuzzy
-#| msgid ""
-#| "openSUSE Leap releases older than 15.2 do not contain this feature "
-#| "because they are not supported anymore. All users are advised to upgrade "
-#| "to openSUSE Leap 15.2 with the latest updates before upgrading to 15.3. "
-#| "The following parameters can be used as a workaround for "
-#| "<package>libzypp</package> versions older than 12.25.8:"
 msgid ""
 "openSUSE Leap releases older than 15.2 do not contain this feature because "
 "they are not supported anymore. All users are advised to upgrade to openSUSE "
@@ -715,7 +725,8 @@ msgstr ""
 "eftersom de inte stöds längre. Alla användare rekommenderas att uppgradera "
 "till OpenSUSE Leap 15.2 med dom senaste uppgraderingarna innan du uppdaterar "
 "till 15.3. Dessa följande parameterar kan användas som lösning för "
-"<package>libzypp</package> versioner äldre än 12.25.8:"
+"<package>libzypp</package> versioner äldre än 12.25.8_(ersätt 15.0 nedan med "
+"din nuvarande openSUSE-version):"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:403
@@ -726,6 +737,11 @@ msgid ""
 "zypper dup --allow-vendor-change --force-resolution\n"
 "  "
 msgstr ""
+"\n"
+"zypper addrepo --check --refresh --name 'openSUSE-Leap-15.0-Update' "
+"http://download.opensuse.org/update/leap/15.0/oss/ repo-update\n"
+"zypper dup --allow-vendor-change --force-resolution\n"
+"  "
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:408
@@ -735,6 +751,10 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 tillhandahåller alla nödvändiga RPM-verifieringsnycklar, "
+"inklusive SUSE Linux Enterprise Server, som en del av <package>openSUSE-"
+"build-key</package> paketet. Alla nycklar är också nyligen tillgängliga i "
+"OSS-förrådet."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:414
@@ -972,6 +992,12 @@ msgid ""
 "these packages. In the long term, SUSE aims to provide a solution without "
 "Berkeley DB."
 msgstr ""
+"Berkeley DB, som används som en databas i vissa paket, är dubbellicensierad "
+"under GNU AGPLv3/Sleepycat-licenser. Eftersom tjänsteleverantörer som "
+"omdistribuerar våra paket kan hitta paket med dessa licenser potentiellt "
+"skadliga för deras lösningar, har vi beslutat att ta bort Berkeley DB som "
+"ett beroende från dessa paket. På lång sikt siktar SUSE på att "
+"tillhandahålla en lösning utan Berkeley DB."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:562
@@ -1037,6 +1063,13 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"Det nyligen introducerade <package>openSUSE-signkey-cert</package> paketet "
+"krävs för openSUSE KMPs som till exempel <package>virtualbox</package>, men "
+"endast i Säkert uppstartsläge. Detta paket inkluderar certifikatet för "
+"openSUSE-signeringsnyckeln för signering av kärnmodulfilen (<literal>."
+"ko</literal>) i openSUSE KMP och samtal <literal> mokutil</literal> för att "
+"hjälpa användaren att registrera certifikatet till MOK. På så sätt kan "
+"openSUSE KMP verifieras av kärnan."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:621
@@ -1047,6 +1080,11 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Om du inte har basmönstret installerat och använder någon av dessa KMP:er "
+"rekommenderar vi att du installerar paketet <package>openSUSE-signkey-cert</"
+"package> manuellt. En omstart av systemet krävs. Mer information om denna "
+"process och manuell registrering finns på <link xlink:href=\"https://en."
+"opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:631
