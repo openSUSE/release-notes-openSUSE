@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2023-05-08 17:14+0000\n"
+"PO-Revision-Date: 2023-05-11 14:14+0000\n"
 "Last-Translator: meshari alnaim <m.alnaim426@gmail.com>\n"
 "Language-Team: Arabic <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/master/ar/>\n"
@@ -83,19 +83,14 @@ msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:46
-#, fuzzy
-#| msgid ""
-#| "To report bugs against this release, use the openSUSE Bugzilla. For more "
-#| "information, see <ulink url=\"https://en.opensuse.org/openSUSE:"
-#| "Submitting_bug_reports\"/>."
 msgid ""
 "To report bugs against this release, use the openSUSE Bugzilla. For more "
 "information, see <link xlink:href=\"https://en.opensuse.org/openSUSE:"
 "Submitting_bug_reports\"/>."
 msgstr ""
-"للإبلاغ عن أخطاء هذا الإصدار، استخدم أوبن سوزي بجزيلا.  لمزيد من المعلومات، "
-"راجع <ulink url=\"https://en.opensuse.org/openSUSE:Submitting_bug_reports\"/"
-">."
+"للإبلاغ عن أخطاء هذا الإصدار، استخدم أوبن سوزي بجزيلا. لمزيد من المعلومات، "
+"راجع الرابط <link xlink:href=\"https://en.opensuse.org/openSUSE:"
+"Submitting_bug_reports\"/>."
 
 # dialog title for ftp installation
 #. (itstool) path: sect1/title
@@ -207,21 +202,16 @@ msgstr "النظام الذي يستخدم  تقسيم LUKS-Encrypted غير ق�
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:128
-#, fuzzy
-#| msgid ""
-#| "In some cases, Plymouth does not display the passphrase prompt properly. "
-#| "To fix this, add <literal>plymouth.enable=0</literal> to the kernel "
-#| "command line. See also <ulink url=\"https://bugzilla.opensuse.org/"
-#| "show_bug.cgi?id=966255\"/>."
 msgid ""
 "In some cases, Plymouth does not display the passphrase prompt properly. To "
 "fix this, add <literal>plymouth.enable=0</literal> to the kernel command "
 "line. See also <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=966255\"/>."
 msgstr ""
-"في بعض الحالات، لا يعرض Plymouth مطالبة بكلمة المرور بشكل صحيح.  لإصلاح هذا، "
-"أضف<literal>plymouth.enable=0</literal> إلى سطر أوامر النواة.  أنظر أيضا. "
-"<ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?id=966255\"/>."
+"في بعض الحالات، لا يعرض بوليموث Plymouth مطالبة كلمة المرور بشكل صحيح. "
+"لإصلاح هذا، أضف<literal>plymouth.enable=0</literal> إلى سطر أوامر النواة.  "
+"أنظر أيضا <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id="
+"966255\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:137
@@ -258,6 +248,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> يعني أن آب أرمر AppArmor "
+"سيتوقف ، وبالتالي يتم إلغاء تحميل جميع ملفات تعريف آب أرمر AppArmor ثم إعادة "
+"التشغيل مما ترك جميع العمليات الحالية غير مقيدة. عندئذٍ فقط سيتم تقييد "
+"العمليات الحديثة مرة أخرى."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -266,6 +260,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"لسوء الحظ ،أمر سيستم دي <systemitem>systemd</systemitem> لا يوفر حلاً ضمن "
+"تنسيق ملف الوحدة unit fileالخاص به للمشكلة التي يطرحها إعادة تشغيل "
+"<literal>restart</literal> ملف الوحدة."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -274,6 +271,10 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"بدءًا من \"آب أرمر 2.12\" \"AppArmor 2.12\" ، لن يعمل الأمر <command> "
+"systemctl stop apparmor </command>. نتيجة لذلك ، سيقوم الأمر "
+"<command>systemctl restart apparmor</command> الآن بإعادة تحميل ملفات تعريف "
+"آب أرمر بشكل صحيح."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -282,25 +283,25 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"لإلغاء تحميل جميع ملفات تعريف آب أرمر AppArmor ، استخدم الأمر الجديد "
+"<command> aa-teardown </command> الذي يطابق السلوك السابق للأمر <command> "
+"systemctl stop apparmor </command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
-#, fuzzy
-#| msgid ""
-#| "For details, see <ulink url=\"https://bugzilla.opensuse.org/show_bug.cgi?"
-#| "id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
-"لمزيد من التفاصيل، انظر <ulink url=\"https://bugzilla.opensuse.org/show_bug."
-"cgi?id=735404\">https://bugzilla.opensuse.org/show_bug.cgi?id=735404</ulink>."
+"لمزيد من التفاصيل، انظر الرابط <link xlink:href=\"https://bugzilla.opensuse."
+"org/show_bug.cgi?id=996520\"/> والرابط <link xlink:href=\"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=853019\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "لا يوجد تركيبة مفاتيح افتراضية"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -311,6 +312,10 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"في الإصدارات السابقة من أوبن سوزي ، سمحت تركيبة المفاتيح المكونة لكتابة "
+"الأحرف التي لم تكن جزءًا من تخطيط لوحة المفاتيح العادي. على سبيل المثال ،"
+"ﻹنتاج <quote>å</quote>،يمكنك الضغط وتحرير<keycombo><keycap function=\"shift\""
+"/><keycap>ctrl اﻷيمن</keycap></keycombo>ثم اضغط<keycap>a</keycap>مرتين."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -319,6 +324,9 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"في أوبن سوزي تمبلويد Tumbleweed ، لم يعد هناك تركيبة مفاتيح إنشاء محددة مسبقً"
+"ا لأن <keycombo><keycap function=\"shift\"/><keycap>اليمين Ctrl</keycap></"
+"keycombo> لا يعمل كما هو متوقع بعد الآن."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:203
@@ -326,6 +334,8 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"لتحديد تركيبة مفاتيح إنشاء مخصصة على مستوى النظام ، استخدم الملف <filename>/"
+"etc/X11/Xmodmap</filename> وابحث عن الأسطر التالية:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -340,6 +350,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Third example: Change right Control key to Compose key.\n"
+"!! To do Compose Character, press this key and afterwards two\n"
+"!! characters (e.g. `a' and `^' to get 342).\n"
+"!remove  Control  = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add     Control  = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:215
@@ -348,6 +366,9 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"لتفعيل اﻷوامر في المثال السابق ،قم بحذف الرمز <literal>!</literal> من أول "
+"السطر.ومع ذلك ، لاحظ أن الإعداد من ملف<filename>Xmodmap</filename> سيتم "
+"الكتابة عليها إذا إستخدمت اﻷمر <command>setxkbmap</command>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -356,6 +377,8 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"لتحديد تركيبة مفاتيح خاصة بالمستخدم ، استخدم أداة تكوين لوحة مفاتيح سطح "
+"المكتب أو أداة سطر الأوامر <command>setxkbmap</command> :"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:228
@@ -365,6 +388,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -option "
+"compose:<replaceable>COMPOSE_KEY</replaceable>\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -374,6 +401,10 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"للمتغير <replaceable>COMPOSE_KEY</replaceable> ،استخدم أزرار لوحة المفاتيح "
+"المفضلة، مثلاً <literal>ralt</literal>, <literal>lwin</literal>, "
+"<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
+"أو <literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:240
@@ -381,6 +412,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"بدلاً من ذلك ، استخدم طريقة إدخال آي بس IBus التي تتيح كتابة الأحرف التي "
+"تريدها بدون إستخدام مفتاح إنشاء Compose key ."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:263
@@ -403,13 +436,12 @@ msgstr "مشاهدة معلومات مفصلة بالتغييرات حول مج�
 #: xml/release-notes.xml:275
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr ""
-"أستخدم اﻷمر : rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
+msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr "غير <replaceable>اسم الملف</replaceable> باسم حزمة RPM."
+msgstr "غَير أسم الملف <replaceable>FILENAME</replaceable> باسم حزمة RPM."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:281
