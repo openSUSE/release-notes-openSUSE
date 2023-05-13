@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.ru\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2023-05-09 16:17+0200\n"
-"PO-Revision-Date: 2023-05-12 19:14+0000\n"
+"PO-Revision-Date: 2023-05-13 10:14+0000\n"
 "Last-Translator: Alex Minton <alex239@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap_15-5/ru/>\n"
@@ -27,7 +27,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Переводчики:\n"
-"Александр Мелентьев <minton@opensuse.org>, 2008-2022"
+"Александр Мелентьев <minton@opensuse.org>, 2008-2023"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -633,6 +633,10 @@ msgid ""
 "frequent ABI breaks. Current versions of Electron are still available from "
 "the devel:languages:nodejs repository on OBS."
 msgstr ""
+"<package>nodejs-electron</package>: эта старая версия Electron более не "
+"поддерживается, и мы не можем поддерживать эту среду исполнения на "
+"протяжении всего срока сопровождения Leap из-за частых изменений ABI. "
+"Текущие версии Electron доступны в репозитории devel:languages:nodejs в OBS."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:384
@@ -768,6 +772,8 @@ msgid ""
 "<literal>nouveau</literal> disabled for Nvidia Turing and Ampere GPUs / "
 "openGPU recommendation"
 msgstr ""
+"<literal>nouveau</literal> отключён для видеокарт Nvidia Turing и Ampere / "
+"рекомендуется openGPU"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:460
@@ -776,6 +782,9 @@ msgid ""
 "Nvidia Turing and Ampere GPUs. Therefore it has been disabled by default on "
 "systems with these GPUs."
 msgstr ""
+"Драйвер <literal>nouveau</literal> всё ещё считается экспериментальным для "
+"видеокарт Nvidia семейств Turing и Ampere. В связи с этим он по умолчанию "
+"отключён на системах с этими видеоадаптерами."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:465
@@ -784,16 +793,19 @@ msgid ""
 "Nvidia's new openGPU driver. Install this driver by installing these "
 "following packages:"
 msgstr ""
+"Вместо драйвера <literal>nouveau</literal> мы рекомендуем использовать новый "
+"драйвер openGPU от Nvidia. Установить этот драйвер можно из следующих "
+"пакетов:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:472
 msgid "<literal>nvidia-open-driver-G06-signed-kmp-default</literal>"
-msgstr ""
+msgstr "<literal>nvidia-open-driver-G06-signed-kmp-default</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:475
 msgid "<literal>kernel-firmware-nvidia-gsp-G06</literal>"
-msgstr ""
+msgstr "<literal>kernel-firmware-nvidia-gsp-G06</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:479
@@ -802,6 +814,9 @@ msgid ""
 "etc/modprobe.d/50-nvidia-default.conf</literal> file so that it looks like "
 "the following afterwards:"
 msgstr ""
+"Затем раскомментируйте строку <literal>options nvidia</literal> в файле "
+"<literal>/etc/modprobe.d/50-nvidia-default.conf</literal>, чтобы он выглядел "
+"следующим образом:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:482
@@ -812,6 +827,10 @@ msgid ""
 "options nvidia NVreg_OpenRmEnableUnsupportedGpus=1\n"
 "   "
 msgstr ""
+"\n"
+"### Enable support on *all* Turing/Ampere GPUs: Alpha Quality!\n"
+"options nvidia NVreg_OpenRmEnableUnsupportedGpus=1\n"
+"   "
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:487
@@ -820,6 +839,9 @@ msgid ""
 "<literal>nouveau.force_probe=1</literal> to your kernel boot parameters, and "
 "do not install the above openGPU package."
 msgstr ""
+"Если вы предпочитаете всё равно использовать драйвер <literal>nouveau</"
+"literal>, добавьте <literal>nouveau.force_probe=1</literal> к параметрам "
+"загрузки ядра и не устанавливайте вышеупомянутые пакеты openGPU."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:509
