@@ -308,9 +308,9 @@
    </listitem>
   </itemizedlist>
 
-  <!-- <para>
-   Make sure to also review <xref linkend="sec.driver"/>.
-  </para> -->
+  <para>
+    Make sure to also review <emphasis>the new 4096 bit RSA signing key</emphasis> described in <xref linkend="sec.security"/>.
+  </para>
   <para>
    Additionally, check <xref linkend="packages"/>.
   </para>
@@ -534,23 +534,22 @@ options nvidia NVreg_OpenRmEnableUnsupportedGpus=1
  </sect1> -->
 
 
- <!-- <sect1 xml:id="security">
+ <sect1 xml:id="security">
   <title>Security</title>
 
   <para>
    This section lists changes to security features in &thisversion;.
   </para> -->
 
- <!--
-  <sect2 xml:id="security-amanda">
-   <!-/- boo#1116922 -/->
-   <title>Users and Groups Associated with AMANDA Backup Utility</title>
+ 
+  <sect2 xml:id="security-new-signing-key">
+   <title>Usage of 4096 bit RSA RPM and repository signing key</title>
    <para>
-    AMANDA (<emphasis>Advanced Maryland Automatic Network Disk
-    Archiver</emphasis>) is a backup solution that allows setting up a master
-    backup server to back up multiple hosts over network to tape
-    drives/changers or disks or optical media. This tool is shipped in
-    &osuse; within the package <package>amanda</package>.
+     We switched the RPM and repository signing key of &opensuseleap; 15.5
+     from 2048 bit RSA to a 4096 bit RSA key. This key was previously introduced to &opensuseleap; 15.4
+     users in a maintenance update. Users upgrading from older releases
+     will need to import the new key manually as described in
+     <link xlink:href="https://news.opensuse.org/2023/01/23/new-4096-bit-signing-key/"/>.
    </para>
    <para>
     The execution of the binaries in this package is restricted to the group
@@ -568,8 +567,8 @@ options nvidia NVreg_OpenRmEnableUnsupportedGpus=1
     or the group.
    </para>
   </sect2>
--->
- <!-- </sect1> -->
+
+</sect1>
 
 
  <!-- <sect1 xml:id="technical">
