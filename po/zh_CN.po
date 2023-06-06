@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2023-05-09 16:17+0200\n"
+"POT-Creation-Date: 2023-06-06 08:52+0200\n"
 "PO-Revision-Date: 2022-05-28 17:12+0000\n"
 "Last-Translator: Grover Chou <groverchout@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
@@ -544,24 +544,24 @@ msgstr ""
 "文档："
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:314
+#: xml/release-notes.xml:311
 #, fuzzy
-#| msgid "Additionally, check <xref linkend=\"sec.package\"/>."
-msgid "Additionally, check <xref linkend=\"packages\"/>."
-msgstr "如需了解更多信息，请见 <xref linkend=\"sec.package\"/>。"
+#| msgid "Make sure to also review <xref linkend=\"sec.driver\"/>."
+msgid "Make sure to also review the following sections of this documentation:"
+msgstr "请务必查阅 <xref linkend=\"sec.driver\"/>。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:327
+#: xml/release-notes.xml:336
 msgid "Packaging Changes"
 msgstr "打包更改"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:330
+#: xml/release-notes.xml:339
 msgid "Deprecated Packages"
 msgstr "弃用的软件包"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:331
+#: xml/release-notes.xml:340
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -572,7 +572,7 @@ msgstr ""
 "这些软件包存在是为了方面迁移，但不鼓励使用它们且它们可能不会再收到更新。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:349
+#: xml/release-notes.xml:358
 msgid ""
 "To check whether installed packages are no longer maintained, make sure that "
 "the <package>lifecycle-data-openSUSE</package> package is installed, then "
@@ -582,23 +582,23 @@ msgstr ""
 "package> 软件包，再执行如下命令："
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:354
+#: xml/release-notes.xml:363
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:358
+#: xml/release-notes.xml:367
 msgid "Removed Packages"
 msgstr "移除的软件包"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:359
+#: xml/release-notes.xml:368
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "移除的软件包不再随发行版一起发布。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:365
+#: xml/release-notes.xml:374
 #, fuzzy
 #| msgid ""
 #| "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</"
@@ -609,7 +609,7 @@ msgstr ""
 "<package>gnome-system-log</package>：被替换为 <package>gnome-logs</package>。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:368
+#: xml/release-notes.xml:377
 #, fuzzy
 #| msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
 msgid ""
@@ -618,7 +618,7 @@ msgid ""
 msgstr "<package>qgo</package>：被替换为 <package>q5go</package>。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:371
+#: xml/release-notes.xml:380
 msgid ""
 "<package>nodejs-electron</package>: This old version of Electron is EOL, and "
 "we are unable to support this runtime throughout Leap's lifetime due to "
@@ -627,17 +627,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:384
+#: xml/release-notes.xml:393
 msgid "Drivers and Hardware"
 msgstr "驱动与硬件"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:389
+#: xml/release-notes.xml:398
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr "安全引导：第三方驱动需要正确签名"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:390
+#: xml/release-notes.xml:399
 msgid ""
 "Starting with openSUSE Leap 15.2, kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>) is now enabled. This "
@@ -649,7 +649,7 @@ msgstr ""
 "内核中运行未经信任的代码。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:396
+#: xml/release-notes.xml:405
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -661,7 +661,7 @@ msgstr ""
 "签名过。签名检查表现为以下行为："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:405
+#: xml/release-notes.xml:414
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -671,7 +671,7 @@ msgstr ""
 "蔽。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:412
+#: xml/release-notes.xml:421
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -684,7 +684,7 @@ msgstr ""
 "情查看 <link xlink:href=\"https://zh.opensuse.org/openSUSE:UEFI\"/>。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:419
+#: xml/release-notes.xml:428
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -698,12 +698,12 @@ msgstr ""
 "NVIDIA_%E9%A9%B1%E5%8A%A8#.E5.AE.89.E5.85.A8.E5.90.AF.E5.8A.A8\"/>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:430
+#: xml/release-notes.xml:439
 msgid "Network install image hangs on boot on Raspberry Pi 4"
 msgstr "Raspberry Pi 4 的网络安装镜像在启动时挂起"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:431
+#: xml/release-notes.xml:440
 msgid ""
 "Booting the network install image from USB stick on Raspberry Pi 4 hangs on "
 "boot. To resolve this issue, add the <literal>console=tty</literal> boot "
@@ -719,28 +719,34 @@ msgstr ""
 "Pi 4 硬件兼容性列表（英文）</link>中的已知问题章节。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:443
+#: xml/release-notes.xml:452
 msgid "Desktop"
 msgstr "桌面"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:444
+#: xml/release-notes.xml:453
 #, fuzzy
 #| msgid "This section lists desktop issues and changes in openSUSE Leap 15.4."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.5."
 msgstr "此章节列出了 openSUSE Leap 15.4 上的桌面问题和更改。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:448
+#: xml/release-notes.xml:457
 msgid "KDE 4 and Qt 4 removal"
 msgstr "移除 KDE 4 和 Qt 4"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:449
+#: xml/release-notes.xml:458
+#, fuzzy
+#| msgid ""
+#| "KDE 4 packages will not be part of openSUSE Leap 15.4. Please update your "
+#| "system to Plasma 5 and Qt 5. Some of Qt 4 packages might still remain for "
+#| "compatability reasons. <link xlink:href=\"https://bugzilla.opensuse.org/"
+#| "show_bug.cgi?id=1179613\"/>."
 msgid ""
 "KDE 4 packages will not be part of openSUSE Leap 15.4. Please update your "
 "system to Plasma 5 and Qt 5. Some of Qt 4 packages might still remain for "
-"compatability reasons. <link xlink:href=\"https://bugzilla.opensuse.org/"
+"compatibility reasons. <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1179613\"/>."
 msgstr ""
 "KDE 4 软件包将不会成为 openSUSE Leap 15.4 的一部分。请更新你的系统到 Plasma "
@@ -748,14 +754,14 @@ msgstr ""
 "href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:458
+#: xml/release-notes.xml:467
 msgid ""
 "<literal>nouveau</literal> disabled for Nvidia Turing and Ampere GPUs / "
 "openGPU recommendation"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:460
+#: xml/release-notes.xml:469
 msgid ""
 "The <literal>nouveau</literal> driver is still considered experimental for "
 "Nvidia Turing and Ampere GPUs. Therefore it has been disabled by default on "
@@ -763,7 +769,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:465
+#: xml/release-notes.xml:474
 msgid ""
 "Instead of using the <literal>nouveau</literal> driver we recommend using "
 "Nvidia's new openGPU driver. Install this driver by installing these "
@@ -771,17 +777,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:472
+#: xml/release-notes.xml:481
 msgid "<literal>nvidia-open-driver-G06-signed-kmp-default</literal>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:475
+#: xml/release-notes.xml:484
 msgid "<literal>kernel-firmware-nvidia-gsp-G06</literal>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:479
+#: xml/release-notes.xml:488
 msgid ""
 "Then uncomment the <literal>options nvidia</literal> line in the <literal>/"
 "etc/modprobe.d/50-nvidia-default.conf</literal> file so that it looks like "
@@ -789,7 +795,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:491
 #, no-wrap
 msgid ""
 "\n"
@@ -799,7 +805,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:487
+#: xml/release-notes.xml:496
 msgid ""
 "If you prefer using <literal>nouveau</literal> driver anyway, add "
 "<literal>nouveau.force_probe=1</literal> to your kernel boot parameters, and "
@@ -807,22 +813,22 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:509
+#: xml/release-notes.xml:518
 msgid "General"
 msgstr "常规"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:513
+#: xml/release-notes.xml:522
 msgid "<command>iotop</command> support"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:514
+#: xml/release-notes.xml:523
 msgid "<command>iotop</command> does not display values for SWAPIN and IO %."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:517
+#: xml/release-notes.xml:526
 msgid ""
 "Since Linux kernel 5.14, either kernel boot parameter <literal>delayacct</"
 "literal> needs to be specified or <literal>kernel.task_delayacct</literal> "
@@ -830,35 +836,64 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:587
+#: xml/release-notes.xml:547
+msgid "Security"
+msgstr "安全"
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:549
+#, fuzzy
+#| msgid ""
+#| "This section lists changes to security features in openSUSE Leap 15.1."
+msgid "This section lists changes to security features in openSUSE Leap 15.5."
+msgstr "本节列出了 openSUSE Leap 15.1 中安全特性的变更。"
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:555
+msgid "Usage of 4096 bit RSA RPM and repository signing key"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:556
+msgid ""
+"We switched the RPM and repository signing key of openSUSE Leap 15.5 from "
+"2048 bit RSA to a 4096 bit RSA key. This key was previously introduced to "
+"openSUSE Leap 15.4 users in a maintenance update. Users upgrading from older "
+"releases will need to import the new key manually as described in <link "
+"xlink:href=\"https://news.opensuse.org/2023/01/23/new-4096-bit-signing-key/"
+"\"/>."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:580
 msgid "More Information and Feedback"
 msgstr "更多信息和反馈"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:590
+#: xml/release-notes.xml:583
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "请阅读安装介质上的 <filename>README</filename> 文档。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:595
+#: xml/release-notes.xml:588
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "从 RPM 中获取关于某特定软件包的详细修订历史信息："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:599
+#: xml/release-notes.xml:592
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>文件名</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:593
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "将 <replaceable>文件名</replaceable> 替换为 RPM 的名称。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:605
+#: xml/release-notes.xml:598
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -867,14 +902,14 @@ msgstr ""
 "软件包更新历史。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:611
+#: xml/release-notes.xml:604
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:617
+#: xml/release-notes.xml:610
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -883,7 +918,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:623
+#: xml/release-notes.xml:616
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -892,9 +927,38 @@ msgstr ""
 "org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:630
+#: xml/release-notes.xml:623
 msgid "Copyright © SUSE LLC"
 msgstr "版权所有 © SUSE LLC"
+
+#~ msgid ""
+#~ "The execution of the binaries in this package is restricted to the group "
+#~ "<systemitem class=\"groupname\">amanda</systemitem>. However, some of "
+#~ "those binaries use the attribute <literal>setuid</literal> to gain "
+#~ "<systemitem class=\"username\">root</systemitem> rights. As the "
+#~ "implementation of at least some of these binaries is problematic, the "
+#~ "user <systemitem class=\"username\">amanda</systemitem> and members of "
+#~ "the group <systemitem class=\"groupname\">amanda</systemitem> are "
+#~ "effectively privileged users whose rights are equivalent to those of "
+#~ "<systemitem class=\"username\">root</systemitem>."
+#~ msgstr ""
+#~ "执行该软件包中的二进制文件的权限仅限于组 <systemitem "
+#~ "class=\"groupname\">amanda</systemitem>。但是，其中某些二进制文件使用属性 "
+#~ "<literal>setuid</literal> 来获取 <systemitem class=\"username\">root</"
+#~ "systemitem> 权限。鉴于至少其中某些二进制文件的实现是有问题的，用户 "
+#~ "<systemitem class=\"username\">amanda</systemitem> 组 <systemitem "
+#~ "class=\"groupname\">amanda</systemitem> 的成员实际上是特权用户，其权限等同"
+#~ "于 <systemitem class=\"username\">root</systemitem> 的权限。"
+
+#~ msgid ""
+#~ "Hence, carefully consider who you allow access to either the user account "
+#~ "or the group."
+#~ msgstr "所以，请谨慎考虑允许哪些用户访问该用户或组。"
+
+#, fuzzy
+#~| msgid "Additionally, check <xref linkend=\"sec.package\"/>."
+#~ msgid "Additionally, check <xref linkend=\"packages\"/>."
+#~ msgstr "如需了解更多信息，请见 <xref linkend=\"sec.package\"/>。"
 
 #~ msgid "15.4"
 #~ msgstr "15.4"
@@ -1229,13 +1293,6 @@ msgstr "版权所有 © SUSE LLC"
 #~ "package> 来代替 <package>NetworkManager</package> 进行网络接口管理，原因"
 #~ "是 <package>ypbind</package> 与 NetworkManager 的集成并不是十分完善。"
 
-#~ msgid "Security"
-#~ msgstr "安全"
-
-#~ msgid ""
-#~ "This section lists changes to security features in openSUSE Leap 15.1."
-#~ msgstr "本节列出了 openSUSE Leap 15.1 中安全特性的变更。"
-
 #~ msgid "Users and Groups Associated with AMANDA Backup Utility"
 #~ msgstr "与 AMANDA 备份工具相关的用户和组"
 
@@ -1250,30 +1307,6 @@ msgstr "版权所有 © SUSE LLC"
 #~ "emphasis>) 是一个备份解决方案。该方案允许设置一个主备份服务器来通过网络备"
 #~ "份多个主机到磁带机/换碟机、磁盘或者光学介质。该工具包含在 openSUSE 中的"
 #~ "<package>amanda</package>软件包中。"
-
-#~ msgid ""
-#~ "The execution of the binaries in this package is restricted to the group "
-#~ "<systemitem class=\"groupname\">amanda</systemitem>. However, some of "
-#~ "those binaries use the attribute <literal>setuid</literal> to gain "
-#~ "<systemitem class=\"username\">root</systemitem> rights. As the "
-#~ "implementation of at least some of these binaries is problematic, the "
-#~ "user <systemitem class=\"username\">amanda</systemitem> and members of "
-#~ "the group <systemitem class=\"groupname\">amanda</systemitem> are "
-#~ "effectively privileged users whose rights are equivalent to those of "
-#~ "<systemitem class=\"username\">root</systemitem>."
-#~ msgstr ""
-#~ "执行该软件包中的二进制文件的权限仅限于组 <systemitem "
-#~ "class=\"groupname\">amanda</systemitem>。但是，其中某些二进制文件使用属性 "
-#~ "<literal>setuid</literal> 来获取 <systemitem class=\"username\">root</"
-#~ "systemitem> 权限。鉴于至少其中某些二进制文件的实现是有问题的，用户 "
-#~ "<systemitem class=\"username\">amanda</systemitem> 组 <systemitem "
-#~ "class=\"groupname\">amanda</systemitem> 的成员实际上是特权用户，其权限等同"
-#~ "于 <systemitem class=\"username\">root</systemitem> 的权限。"
-
-#~ msgid ""
-#~ "Hence, carefully consider who you allow access to either the user account "
-#~ "or the group."
-#~ msgstr "所以，请谨慎考虑允许哪些用户访问该用户或组。"
 
 #~ msgid "Minimal System Installation"
 #~ msgstr "最小化系统安装"
@@ -1313,9 +1346,6 @@ msgstr "版权所有 © SUSE LLC"
 
 #~ msgid "15.0"
 #~ msgstr "15.0"
-
-#~ msgid "Make sure to also review <xref linkend=\"sec.driver\"/>."
-#~ msgstr "请务必查阅 <xref linkend=\"sec.driver\"/>。"
 
 #~ msgid "Upgrading from openSUSE Leap 42.3"
 #~ msgstr "从 openSUSE Leap 42.3 升级"

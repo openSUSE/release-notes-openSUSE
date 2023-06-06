@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-09 12:48+0200\n"
+"POT-Creation-Date: 2023-06-06 08:52+0200\n"
 "PO-Revision-Date: 2023-04-21 08:14+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
-"Language-Team: Georgian <https://l10n.opensuse.org/projects/"
-"release-notes-opensuse/leap_15-5/ka/>\n"
+"Language-Team: Georgian <https://l10n.opensuse.org/projects/release-notes-"
+"opensuse/leap_15-5/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -429,22 +429,22 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:314
-msgid "Additionally, check <xref linkend=\"packages\"/>."
+#: xml/release-notes.xml:311
+msgid "Make sure to also review the following sections of this documentation:"
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:327
+#: xml/release-notes.xml:336
 msgid "Packaging Changes"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:330
+#: xml/release-notes.xml:339
 msgid "Deprecated Packages"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:331
+#: xml/release-notes.xml:340
 msgid ""
 "Deprecated packages are still shipped as part of the distribution but are "
 "scheduled to be removed the next version of openSUSE Leap. These packages "
@@ -453,7 +453,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:349
+#: xml/release-notes.xml:358
 msgid ""
 "To check whether installed packages are no longer maintained, make sure that "
 "the <package>lifecycle-data-openSUSE</package> package is installed, then "
@@ -461,36 +461,36 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:354
+#: xml/release-notes.xml:363
 #, no-wrap
 msgid "zypper lifecycle"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:358
+#: xml/release-notes.xml:367
 msgid "Removed Packages"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:359
+#: xml/release-notes.xml:368
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:365
+#: xml/release-notes.xml:374
 msgid ""
 "<package>gnome-todo</package>: gnome-todo was replaced by package Endeavour."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:368
+#: xml/release-notes.xml:377
 msgid ""
 "<package>msgpack</package>: msgpack was replaced by msgpack-c and msgpack-"
 "cxx."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:371
+#: xml/release-notes.xml:380
 msgid ""
 "<package>nodejs-electron</package>: This old version of Electron is EOL, and "
 "we are unable to support this runtime throughout Leap's lifetime due to "
@@ -499,17 +499,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:384
+#: xml/release-notes.xml:393
 msgid "Drivers and Hardware"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:389
+#: xml/release-notes.xml:398
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:390
+#: xml/release-notes.xml:399
 msgid ""
 "Starting with openSUSE Leap 15.2, kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>) is now enabled. This "
@@ -518,7 +518,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:396
+#: xml/release-notes.xml:405
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -527,7 +527,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:405
+#: xml/release-notes.xml:414
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -535,7 +535,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:412
+#: xml/release-notes.xml:421
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -545,7 +545,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:419
+#: xml/release-notes.xml:428
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -555,12 +555,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:430
+#: xml/release-notes.xml:439
 msgid "Network install image hangs on boot on Raspberry Pi 4"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:431
+#: xml/release-notes.xml:440
 msgid ""
 "Booting the network install image from USB stick on Raspberry Pi 4 hangs on "
 "boot. To resolve this issue, add the <literal>console=tty</literal> boot "
@@ -571,38 +571,38 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:443
+#: xml/release-notes.xml:452
 msgid "Desktop"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:444
+#: xml/release-notes.xml:453
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.5."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:448
+#: xml/release-notes.xml:457
 msgid "KDE 4 and Qt 4 removal"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:449
+#: xml/release-notes.xml:458
 msgid ""
 "KDE 4 packages will not be part of openSUSE Leap 15.4. Please update your "
 "system to Plasma 5 and Qt 5. Some of Qt 4 packages might still remain for "
-"compatability reasons. <link xlink:href=\"https://bugzilla.opensuse.org/"
+"compatibility reasons. <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1179613\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:458
+#: xml/release-notes.xml:467
 msgid ""
 "<literal>nouveau</literal> disabled for Nvidia Turing and Ampere GPUs / "
 "openGPU recommendation"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:460
+#: xml/release-notes.xml:469
 msgid ""
 "The <literal>nouveau</literal> driver is still considered experimental for "
 "Nvidia Turing and Ampere GPUs. Therefore it has been disabled by default on "
@@ -610,7 +610,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:465
+#: xml/release-notes.xml:474
 msgid ""
 "Instead of using the <literal>nouveau</literal> driver we recommend using "
 "Nvidia's new openGPU driver. Install this driver by installing these "
@@ -618,17 +618,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:472
+#: xml/release-notes.xml:481
 msgid "<literal>nvidia-open-driver-G06-signed-kmp-default</literal>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:475
+#: xml/release-notes.xml:484
 msgid "<literal>kernel-firmware-nvidia-gsp-G06</literal>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:479
+#: xml/release-notes.xml:488
 msgid ""
 "Then uncomment the <literal>options nvidia</literal> line in the <literal>/"
 "etc/modprobe.d/50-nvidia-default.conf</literal> file so that it looks like "
@@ -636,7 +636,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:482
+#: xml/release-notes.xml:491
 #, no-wrap
 msgid ""
 "\n"
@@ -646,7 +646,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:487
+#: xml/release-notes.xml:496
 msgid ""
 "If you prefer using <literal>nouveau</literal> driver anyway, add "
 "<literal>nouveau.force_probe=1</literal> to your kernel boot parameters, and "
@@ -654,22 +654,22 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:509
+#: xml/release-notes.xml:518
 msgid "General"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:513
+#: xml/release-notes.xml:522
 msgid "<command>iotop</command> support"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:514
+#: xml/release-notes.xml:523
 msgid "<command>iotop</command> does not display values for SWAPIN and IO %."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:517
+#: xml/release-notes.xml:526
 msgid ""
 "Since Linux kernel 5.14, either kernel boot parameter <literal>delayacct</"
 "literal> needs to be specified or <literal>kernel.task_delayacct</literal> "
@@ -677,63 +677,89 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:587
+#: xml/release-notes.xml:547
+msgid "Security"
+msgstr ""
+
+#. (itstool) path: sect1/para
+#: xml/release-notes.xml:549
+msgid "This section lists changes to security features in openSUSE Leap 15.5."
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:555
+msgid "Usage of 4096 bit RSA RPM and repository signing key"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:556
+msgid ""
+"We switched the RPM and repository signing key of openSUSE Leap 15.5 from "
+"2048 bit RSA to a 4096 bit RSA key. This key was previously introduced to "
+"openSUSE Leap 15.4 users in a maintenance update. Users upgrading from older "
+"releases will need to import the new key manually as described in <link "
+"xlink:href=\"https://news.opensuse.org/2023/01/23/new-4096-bit-signing-key/"
+"\"/>."
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: xml/release-notes.xml:580
 msgid "More Information and Feedback"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:590
+#: xml/release-notes.xml:583
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:595
+#: xml/release-notes.xml:588
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:599
+#: xml/release-notes.xml:592
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:600
+#: xml/release-notes.xml:593
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:605
+#: xml/release-notes.xml:598
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:611
+#: xml/release-notes.xml:604
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:617
+#: xml/release-notes.xml:610
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:623
+#: xml/release-notes.xml:616
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:587
+#: xml/release-notes.xml:623
 msgid "Copyright © SUSE LLC"
 msgstr "საავტორო უფლებები დაცულია © SUSE LLC"
 
