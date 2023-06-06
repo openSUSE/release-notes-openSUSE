@@ -309,11 +309,20 @@
   </itemizedlist>
 
   <para>
-    Make sure to also review <emphasis>the new 4096 bit RSA signing key</emphasis> described in <xref linkend="sec.security"/>.
+    Make sure to also review the following sections of this documentation:
   </para>
-  <para>
-   Additionally, check <xref linkend="packages"/>.
-  </para>
+  <itemizedlist>
+    <listitem>
+      <para>
+        <xref linkend="packages"/>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <xref linkend="security-new-signing-key"/>
+      </para>
+    </listitem>
+  </itemizedlist>
 
   <!-- <sect2 xml:id="upgrade-150">
    <title>Upgrading from &opensuseleap; 15.0</title>
@@ -539,9 +548,9 @@ options nvidia NVreg_OpenRmEnableUnsupportedGpus=1
 
   <para>
    This section lists changes to security features in &thisversion;.
-  </para> -->
+  </para>
 
- 
+
   <sect2 xml:id="security-new-signing-key">
    <title>Usage of 4096 bit RSA RPM and repository signing key</title>
    <para>
@@ -550,21 +559,6 @@ options nvidia NVreg_OpenRmEnableUnsupportedGpus=1
      users in a maintenance update. Users upgrading from older releases
      will need to import the new key manually as described in
      <link xlink:href="https://news.opensuse.org/2023/01/23/new-4096-bit-signing-key/"/>.
-   </para>
-   <para>
-    The execution of the binaries in this package is restricted to the group
-    <systemitem class="groupname">amanda</systemitem>. However, some of those
-    binaries use the attribute <literal>setuid</literal> to gain
-    <systemitem class="username">root</systemitem> rights. As the
-    implementation of at least some of these binaries is problematic, the user
-    <systemitem class="username">amanda</systemitem> and members of the group
-    <systemitem class="groupname">amanda</systemitem> are effectively
-    privileged users whose rights are equivalent to those of
-    <systemitem class="username">root</systemitem>.
-   </para>
-   <para>
-    Hence, carefully consider who you allow access to either the user account
-    or the group.
    </para>
   </sect2>
 
