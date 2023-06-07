@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.fi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 08:52+0200\n"
+"POT-Creation-Date: 2023-06-07 09:50+0200\n"
 "PO-Revision-Date: 2022-04-27 14:12+0000\n"
 "Last-Translator: Tommi Nieminen <software@legisign.org>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/release-notes-"
@@ -219,11 +219,17 @@ msgstr "Asennus"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:89
+#, fuzzy
+#| msgid ""
+#| "This section contains installation-related notes. For detailed "
+#| "installation instructions, see the documentation at <link xlink:"
+#| "href=\"https://doc.opensuse.org/documentation/leap/startup/html/book."
+#| "opensuse.startup/part-basics.html\"/>."
 msgid ""
 "This section contains installation-related notes. For detailed installation "
 "instructions, see the documentation at <link xlink:href=\"https://doc."
-"opensuse.org/documentation/leap/startup/html/book.opensuse.startup/part-"
-"basics.html\"/>."
+"opensuse.org/documentation/leap/startup/html/book-startup/part-basics.html\"/"
+">."
 msgstr ""
 "Tässä osiossa on asennukseen liittyviä huomautuksia. Yksityiskohtaiset "
 "päivitysohjeet löytyvät osoitteesta <link xlink:href=\"https://doc.opensuse."
@@ -866,23 +872,40 @@ msgid ""
 "do not install the above openGPU package."
 msgstr ""
 
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:503
+msgid "Starting <literal>ibus</literal> automatically under KDE Plasma"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:504
+msgid ""
+"<literal>ibus</literal> does not start automatically under KDE Plasma. This "
+"can be fixed by adding the appropriate command to the autostart section. To "
+"do that, go to System Settings, Startup and Shutdown, Autostart and there "
+"click on the Add… button, and then click on Add Application…. In the opened "
+"dialog window type <literal>ibus-daemon -x</literal> into the text box and "
+"click OK. For more information see <link xlink:href=\"https://bugzilla.suse."
+"com/show_bug.cgi?id=1211977\"/>."
+msgstr ""
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:518
+#: xml/release-notes.xml:532
 msgid "General"
 msgstr "Yleistä"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:522
+#: xml/release-notes.xml:536
 msgid "<command>iotop</command> support"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:523
+#: xml/release-notes.xml:537
 msgid "<command>iotop</command> does not display values for SWAPIN and IO %."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:526
+#: xml/release-notes.xml:540
 msgid ""
 "Since Linux kernel 5.14, either kernel boot parameter <literal>delayacct</"
 "literal> needs to be specified or <literal>kernel.task_delayacct</literal> "
@@ -890,12 +913,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:547
+#: xml/release-notes.xml:561
 msgid "Security"
 msgstr "Turvallisuus"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:549
+#: xml/release-notes.xml:563
 #, fuzzy
 #| msgid ""
 #| "This section lists changes to security features in openSUSE Leap 15.1."
@@ -905,51 +928,51 @@ msgstr ""
 "muutokset."
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:555
+#: xml/release-notes.xml:569
 msgid "Usage of 4096 bit RSA RPM and repository signing key"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:556
+#: xml/release-notes.xml:570
 msgid ""
 "We switched the RPM and repository signing key of openSUSE Leap 15.5 from "
 "2048 bit RSA to a 4096 bit RSA key. This key was previously introduced to "
 "openSUSE Leap 15.4 users in a maintenance update. Users upgrading from older "
 "releases will need to import the new key manually as described in <link "
-"xlink:href=\"https://news.opensuse.org/2023/01/23/new-4096-bit-signing-key/"
-"\"/>."
+"xlink:href=\"https://en.opensuse.org/SDB:System_upgrade#0."
+"_New_4096_bit_RSA_signing_key\"/>."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:580
+#: xml/release-notes.xml:594
 msgid "More Information and Feedback"
 msgstr "Lisätietoa ja palautemahdollisuus"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:583
+#: xml/release-notes.xml:597
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "Lue <filename>README</filename>-tiedostot tietovälineeltä."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:588
+#: xml/release-notes.xml:602
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "Löydät määräpaketin yksityiskohtaiset muutolokitiedot sen RPM:stä:"
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:592
+#: xml/release-notes.xml:606
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>TIEDOSTONIMI</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:593
+#: xml/release-notes.xml:607
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "Korvaa <replaceable>TIEDOSTONIMI</replaceable> RPM:n nimellä."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:598
+#: xml/release-notes.xml:612
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -959,14 +982,14 @@ msgstr ""
 "tehdyistä muutoksista."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:604
+#: xml/release-notes.xml:618
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "Lisätietoa löytyy tietovälineen <filename>docu</filename>-kansiosta."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:610
+#: xml/release-notes.xml:624
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -975,7 +998,7 @@ msgstr ""
 "doc.opensuse.org/\"/>."
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:616
+#: xml/release-notes.xml:630
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -984,7 +1007,7 @@ msgstr ""
 "opensuse.org\"/>."
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:623
+#: xml/release-notes.xml:637
 msgid "Copyright © SUSE LLC"
 msgstr "Tekijänoikeudet © SUSE LLC"
 
