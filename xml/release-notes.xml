@@ -498,16 +498,19 @@ options nvidia NVreg_OpenRmEnableUnsupportedGpus=1
 
   </sect2>
 
-  </sect2>
-   <!-- boo#1211977 -->
-   <title>ibus can not start under KDE Plasma</title>
-   <para>
-     ibus can not start under KDE Plasma. This problem is fixed to add <literal>ibus-daemon -x</literal> to KDE Autostart.
-     How to add : Choose [System Settings] - [Setup and Shutdown] - [Autostart] - [Add...] - [Add Application...]
-     Then you can see application choosen dialog, Enter <literal>ibus-daemon -x<lliteral> to text box and click OK.
-     <link xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=1211977" />.
-   </para>
-  </sect2>
+  <sect2>
+    <!-- boo#1211977 -->
+    <title>Starting <literal>ibus</literal> automatically under KDE Plasma</title>
+    <para>
+      <literal>ibus</literal> does not start automatically under KDE Plasma. This
+      can be fixed by adding the appropriate command to the autostart section. To
+      do that, go to System Settings, Startup and Shutdown, Autostart and there
+      click on the Add… button, and then click on Add Application…. In the opened
+      dialog window type <literal>ibus-daemon -x</literal> into the text box and
+      click OK. For more information see <link
+      xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=1211977" />.
+    </para>
+   </sect2>
 
   <!--
   <sect2 xml:id="desktop-ypbind">
