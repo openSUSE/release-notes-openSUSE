@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.it\n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2022-11-06 18:13+0000\n"
+"PO-Revision-Date: 2023-09-25 23:15+0000\n"
 "Last-Translator: Paolo Za <zapaolo@email.it>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/it/>\n"
@@ -214,10 +214,10 @@ msgid ""
 "opensuse.org/documentation/leap/startup/html/book-startup/part-basics.html\"/"
 ">."
 msgstr ""
-"Questa sezione contiene le note relative all'installazione. Per avere delle "
-"istruzioni dettagliate, fare riferimento alla documentazione in <link xlink:"
-"href=\"https://doc.opensuse.org/documentation/leap/startup/html/book."
-"opensuse.startup/part-basics.html\"/>."
+"Questa sezione contiene le note relative all'installazione. Per avere "
+"istruzioni dettagliate sull'installazione, fare riferimento alla "
+"documentazione in <link xlink:href=\"https://doc.opensuse.org/documentation/"
+"leap/startup/html/book.opensuse.-startup/part-basics.html\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:99
@@ -715,6 +715,13 @@ msgid ""
 "versions older than 12.25.8 (replace 15.0 below with your current openSUSE "
 "version):"
 msgstr ""
+"Le versioni di openSUSE Leap precedenti alla 15.2 non contengono questa "
+"funzionalità perché non sono più supportate. Tutti gli utenti sono stati "
+"avvertiti di aggiornare openSUSE Leap 15.2 con gli ultimi aggiornamenti "
+"prima di passare alla 15.3. I seguenti parametri possono essere utilizzati "
+"come soluzione alternativa per le versioni di <package>libzypp</package> più "
+"vecchie della 12.25.8 (sostituisci il 15.0 seguente con la versione di "
+"openSUSE corrente):"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:403
@@ -725,6 +732,11 @@ msgid ""
 "zypper dup --allow-vendor-change --force-resolution\n"
 "  "
 msgstr ""
+"\n"
+"zypper addrepo --check --refresh --name 'openSUSE-Leap-15.0-Update' "
+"http://download.opensuse.org/update/leap/15.0/oss/ repo-update\n"
+"zypper dup --allow-vendor-change --force-resolution\n"
+"  "
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:408
@@ -734,6 +746,10 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 fornisce, come parte del pacchetto <package>openSUSE-"
+"build-key</package>, tutte le chiavi richieste per la verifica degli RPM, "
+"incluse quelle per SUSE Linux Enterprise Server. Tutte le chiavi sono anche "
+"nuovamente disponibili dentro al repository OSS."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:414
@@ -742,6 +758,10 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"La versione 17.25.11 del pacchetto <package>libzypp</package> dovrebbe "
+"importare automaticamente le chiavi richieste, che sono identificate e "
+"fidate. Se è così ti verrà data una notifica sull'importazione, e non sarà "
+"necessaria nessun'altra azione."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:419
@@ -750,12 +770,15 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Se il sistema non ha importato le chiavi che sono state usate per firmare "
+"<literal>repodata</literal>, allora queste dovranno essere importate "
+"manualmente. Ciò può essere controllato digitando:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:424
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
@@ -764,6 +787,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"L'output dovrebbe includere una riga che inizia col seguente testo: <literal"
+">gpg-pubkey-39db7c82-*</literal>. Diversamente, per importare manualmente la "
+"chiave bisogna eseguire i comandi seguenti:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:431
@@ -772,6 +798,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Scaricare la chiave di SUSE Linux Enterprise da <link xlink:href=\"https"
+"://download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-"
+"39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
@@ -779,6 +808,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Salvare la chiave nella cartella <literal>/var/cache/zypp/pubkeys</literal>. "
+"Rinominarla per fare in modo che finisca con <literal>.key</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:443
@@ -788,19 +819,19 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Eseguire il comando <literal>zypper dup</literal>: verrà chiesto di "
+"importare la chiave mancante. Ciò succede anche se la chiave si trova nella "
+"cartella menzionata sopra. Se il file contiene più chiavi, zypper importerà "
+"solo quella richiesta."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-#| "show_bug.cgi?id=1044816\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"Per ulteriori informazioni, si veda <link xlink:href=\"https://bugzilla.suse."
-"com/show_bug.cgi?id=1044816\"/>."
+"Per ulteriori informazioni, si veda <link xlink:href=\"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=1184326\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:458
@@ -875,6 +906,9 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"Il pacchetto <package>midori</package>, un browser web leggero basato su "
+"WebKit e GTK+, non è più supportato ed è programmato per la rimozione nella "
+"versione successiva."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:511
