@@ -1,12 +1,13 @@
 on:
   push:
-    paths: &only_paths
+    paths:
       - "DC-*"
       - "xml/*"
 
   pull_request:
     paths:
-      - *only_paths
+      - "DC-*"
+      - "xml/*"
 
 jobs:
   validate:
