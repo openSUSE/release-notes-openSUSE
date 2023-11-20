@@ -1,21 +1,21 @@
 on:
-    push:
-        paths: &only_paths
-            - "DC-*"
-            - "xml/*"
-    pull_request: 
-        paths:
-            - *only_paths
-            
+  push:
+    paths: &only_paths
+      - "DC-*"
+      - "xml/*"
+
+  pull_request:
+    paths:
+      - *only_paths
 
 jobs:
-    validate:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - uses: openSUSE/doc-ci@gha-validate
-              with:
-                dc-files: "DC-release-notes"
-                validate-ids: true
-                validate-images: true
-                validate-tables: true
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: openSUSE/doc-ci@gha-validate
+        with:
+          dc-files: "DC-release-notes"
+          validate-ids: true
+          validate-images: true
+          validate-tables: true
