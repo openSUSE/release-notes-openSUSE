@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
-"POT-Creation-Date: 2023-06-07 09:50+0200\n"
+"POT-Creation-Date: 2023-11-06 08:28+0100\n"
 "PO-Revision-Date: 2022-05-28 17:12+0000\n"
 "Last-Translator: Grover Chou <groverchout@gmail.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/release-"
@@ -603,47 +603,90 @@ msgstr "移除的软件包"
 msgid "Removed packages are not shipped as part of the distribution anymore."
 msgstr "移除的软件包不再随发行版一起发布。"
 
-#. (itstool) path: listitem/para
-#: xml/release-notes.xml:374
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:372
 #, fuzzy
 #| msgid ""
-#| "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</"
-#| "package>."
+#| "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
+#| "NVIDIA_drivers\"/>."
 msgid ""
-"<package>gnome-todo</package>: gnome-todo was replaced by package Endeavour."
+"The following packages were all superseded by <link xlink:href=\"https://en."
+"opensuse.org/SDB:NVIDIA_SUSE_Prime\">NVIDIA SUSE Prime</link>. Also see "
+"<xref linkend=\"drivers-hardware-bumblebee\"/>"
 msgstr ""
-"<package>gnome-system-log</package>：被替换为 <package>gnome-logs</package>。"
+"更多信息，请访问 <link xlink:href=\"https://zh.opensuse.org/SDB:NVIDIA_驱动"
+"\"/>。"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:377
 #, fuzzy
-#| msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
-msgid ""
-"<package>msgpack</package>: msgpack was replaced by msgpack-c and msgpack-"
-"cxx."
-msgstr "<package>qgo</package>：被替换为 <package>q5go</package>。"
+#| msgid "<package>castor</package>: Fails to build on 42.3."
+msgid "<package>bbswitch</package>"
+msgstr "<package>castor</package>：在 42.3 上构建失败。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:380
-msgid ""
-"<package>nodejs-electron</package>: This old version of Electron is EOL, and "
-"we are unable to support this runtime throughout Leap's lifetime due to "
-"frequent ABI breaks. Current versions of Electron are still available from "
-"the devel:languages:nodejs repository on OBS."
+#: xml/release-notes.xml:382
+#, fuzzy
+#| msgid "<package>castor</package>: Fails to build on 42.3."
+msgid "<package>bumblebee</package>"
+msgstr "<package>castor</package>：在 42.3 上构建失败。"
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:387
+msgid "<package>bumblebee-status</package>"
 msgstr ""
 
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:392
+#, fuzzy
+#| msgid "<package>castor</package>: Fails to build on 42.3."
+msgid "<package>dkms</package>"
+msgstr "<package>castor</package>：在 42.3 上构建失败。"
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:397
+#, fuzzy
+#| msgid "<package>castor</package>: Fails to build on 42.3."
+msgid "<package>primus</package>"
+msgstr "<package>castor</package>：在 42.3 上构建失败。"
+
+#. (itstool) path: listitem/para
+#: xml/release-notes.xml:402
+#, fuzzy
+#| msgid "<package>castor</package>: Fails to build on 42.3."
+msgid "<package>VirtualGl</package>"
+msgstr "<package>castor</package>：在 42.3 上构建失败。"
+
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:393
+#: xml/release-notes.xml:413
 msgid "Drivers and Hardware"
 msgstr "驱动与硬件"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:398
+#: xml/release-notes.xml:418
+#, fuzzy
+#| msgid "Removed Packages"
+msgid "Removal of Bumblebee packages"
+msgstr "移除的软件包"
+
+#. (itstool) path: sect2/para
+#: xml/release-notes.xml:419
+msgid ""
+"Packages maintained as part of <link xlink:href=\"https://build.opensuse.org/"
+"project/show/X11:Bumblebee\">X11:Bumblebee</link> project were succeeded by "
+"<link xlink:href=\"https://en.opensuse.org/SDB:NVIDIA_SUSE_Prime\">NVIDIA "
+"SUSE Prime</link>. Bumblebee packages will no longer be part of the standard "
+"distribution. See details in <link xlink:href=\"https://code.opensuse.org/"
+"leap/features/issue/142\">the drop feature request tracker</link>."
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: xml/release-notes.xml:427
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
 msgstr "安全引导：第三方驱动需要正确签名"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:399
+#: xml/release-notes.xml:428
 msgid ""
 "Starting with openSUSE Leap 15.2, kernel module signature check for third-"
 "party drivers (<literal>CONFIG_MODULE_SIG=y</literal>) is now enabled. This "
@@ -655,7 +698,7 @@ msgstr ""
 "内核中运行未经信任的代码。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:405
+#: xml/release-notes.xml:434
 msgid ""
 "This may prevent third-party kernel modules from being loaded if UEFI Secure "
 "Boot is enabled. Kernel Module Packages (KMPs) from the official openSUSE "
@@ -667,7 +710,7 @@ msgstr ""
 "签名过。签名检查表现为以下行为："
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:414
+#: xml/release-notes.xml:443
 msgid ""
 "Kernel modules that are unsigned or signed with a key that is either known "
 "as untrusted or cannot be verified against the system's trusted key data "
@@ -677,7 +720,7 @@ msgstr ""
 "蔽。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:421
+#: xml/release-notes.xml:450
 msgid ""
 "It is possible to generate a custom certificate, enroll it into the system's "
 "Machine Owner Key (MOK) data base, and sign locally compiled kernel modules "
@@ -690,7 +733,7 @@ msgstr ""
 "情查看 <link xlink:href=\"https://zh.opensuse.org/openSUSE:UEFI\"/>。"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:428
+#: xml/release-notes.xml:457
 msgid ""
 "Since this also affects NVIDIA graphics drivers, we addressed this in our "
 "official packages for openSUSE. However, you need to manually enroll a new "
@@ -704,12 +747,12 @@ msgstr ""
 "NVIDIA_%E9%A9%B1%E5%8A%A8#.E5.AE.89.E5.85.A8.E5.90.AF.E5.8A.A8\"/>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:439
+#: xml/release-notes.xml:468
 msgid "Network install image hangs on boot on Raspberry Pi 4"
 msgstr "Raspberry Pi 4 的网络安装镜像在启动时挂起"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:440
+#: xml/release-notes.xml:469
 msgid ""
 "Booting the network install image from USB stick on Raspberry Pi 4 hangs on "
 "boot. To resolve this issue, add the <literal>console=tty</literal> boot "
@@ -725,24 +768,24 @@ msgstr ""
 "Pi 4 硬件兼容性列表（英文）</link>中的已知问题章节。"
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:452
+#: xml/release-notes.xml:481
 msgid "Desktop"
 msgstr "桌面"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:453
+#: xml/release-notes.xml:482
 #, fuzzy
 #| msgid "This section lists desktop issues and changes in openSUSE Leap 15.4."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.5."
 msgstr "此章节列出了 openSUSE Leap 15.4 上的桌面问题和更改。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:457
+#: xml/release-notes.xml:486
 msgid "KDE 4 and Qt 4 removal"
 msgstr "移除 KDE 4 和 Qt 4"
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:458
+#: xml/release-notes.xml:487
 #, fuzzy
 #| msgid ""
 #| "KDE 4 packages will not be part of openSUSE Leap 15.4. Please update your "
@@ -760,14 +803,14 @@ msgstr ""
 "href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:467
+#: xml/release-notes.xml:496
 msgid ""
 "<literal>nouveau</literal> disabled for Nvidia Turing and Ampere GPUs / "
 "openGPU recommendation"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:469
+#: xml/release-notes.xml:498
 msgid ""
 "The <literal>nouveau</literal> driver is still considered experimental for "
 "Nvidia Turing and Ampere GPUs. Therefore it has been disabled by default on "
@@ -775,7 +818,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:474
+#: xml/release-notes.xml:503
 msgid ""
 "Instead of using the <literal>nouveau</literal> driver we recommend using "
 "Nvidia's new openGPU driver. Install this driver by installing these "
@@ -783,17 +826,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:481
+#: xml/release-notes.xml:510
 msgid "<literal>nvidia-open-driver-G06-signed-kmp-default</literal>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:484
+#: xml/release-notes.xml:513
 msgid "<literal>kernel-firmware-nvidia-gsp-G06</literal>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:488
+#: xml/release-notes.xml:517
 msgid ""
 "Then uncomment the <literal>options nvidia</literal> line in the <literal>/"
 "etc/modprobe.d/50-nvidia-default.conf</literal> file so that it looks like "
@@ -801,7 +844,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/screen
-#: xml/release-notes.xml:491
+#: xml/release-notes.xml:520
 #, no-wrap
 msgid ""
 "\n"
@@ -811,7 +854,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:496
+#: xml/release-notes.xml:525
 msgid ""
 "If you prefer using <literal>nouveau</literal> driver anyway, add "
 "<literal>nouveau.force_probe=1</literal> to your kernel boot parameters, and "
@@ -819,12 +862,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:503
+#: xml/release-notes.xml:532
 msgid "Starting <literal>ibus</literal> automatically under KDE Plasma"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:504
+#: xml/release-notes.xml:533
 msgid ""
 "<literal>ibus</literal> does not start automatically under KDE Plasma. This "
 "can be fixed by adding the appropriate command to the autostart section. To "
@@ -836,22 +879,22 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:532
+#: xml/release-notes.xml:561
 msgid "General"
 msgstr "常规"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:536
+#: xml/release-notes.xml:565
 msgid "<command>iotop</command> support"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:537
+#: xml/release-notes.xml:566
 msgid "<command>iotop</command> does not display values for SWAPIN and IO %."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:540
+#: xml/release-notes.xml:569
 msgid ""
 "Since Linux kernel 5.14, either kernel boot parameter <literal>delayacct</"
 "literal> needs to be specified or <literal>kernel.task_delayacct</literal> "
@@ -859,12 +902,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:561
+#: xml/release-notes.xml:590
 msgid "Security"
 msgstr "安全"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:563
+#: xml/release-notes.xml:592
 #, fuzzy
 #| msgid ""
 #| "This section lists changes to security features in openSUSE Leap 15.1."
@@ -872,12 +915,12 @@ msgid "This section lists changes to security features in openSUSE Leap 15.5."
 msgstr "本节列出了 openSUSE Leap 15.1 中安全特性的变更。"
 
 #. (itstool) path: sect2/title
-#: xml/release-notes.xml:569
+#: xml/release-notes.xml:598
 msgid "Usage of 4096 bit RSA RPM and repository signing key"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: xml/release-notes.xml:570
+#: xml/release-notes.xml:599
 msgid ""
 "We switched the RPM and repository signing key of openSUSE Leap 15.5 from "
 "2048 bit RSA to a 4096 bit RSA key. This key was previously introduced to "
@@ -888,35 +931,35 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: xml/release-notes.xml:594
+#: xml/release-notes.xml:623
 msgid "More Information and Feedback"
 msgstr "更多信息和反馈"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:597
+#: xml/release-notes.xml:626
 msgid "Read the <filename>README</filename> documents on the medium."
 msgstr "请阅读安装介质上的 <filename>README</filename> 文档。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:602
+#: xml/release-notes.xml:631
 msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr "从 RPM 中获取关于某特定软件包的详细修订历史信息："
 
 #. (itstool) path: listitem/screen
-#: xml/release-notes.xml:606
+#: xml/release-notes.xml:635
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 msgstr "rpm --changelog -qp <replaceable>文件名</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:607
+#: xml/release-notes.xml:636
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
 msgstr "将 <replaceable>文件名</replaceable> 替换为 RPM 的名称。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:612
+#: xml/release-notes.xml:641
 msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
@@ -925,14 +968,14 @@ msgstr ""
 "软件包更新历史。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:618
+#: xml/release-notes.xml:647
 msgid ""
 "Find more information in the <filename>docu</filename> directory on the "
 "medium."
 msgstr "可于介质上的 <filename>docu</filename> 文件夹获取更多信息。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:624
+#: xml/release-notes.xml:653
 msgid ""
 "For additional or updated documentation, see <link xlink:href=\"https://doc."
 "opensuse.org/\"/>."
@@ -941,7 +984,7 @@ msgstr ""
 ">。"
 
 #. (itstool) path: listitem/para
-#: xml/release-notes.xml:630
+#: xml/release-notes.xml:659
 msgid ""
 "For the latest product news, from openSUSE, visit <link xlink:href=\"https://"
 "www.opensuse.org\"/>."
@@ -950,9 +993,27 @@ msgstr ""
 "org\"/>。"
 
 #. (itstool) path: sect1/para
-#: xml/release-notes.xml:637
+#: xml/release-notes.xml:666
 msgid "Copyright © SUSE LLC"
 msgstr "版权所有 © SUSE LLC"
+
+#, fuzzy
+#~| msgid ""
+#~| "<package>gnome-system-log</package>: Replaced by <package>gnome-logs</"
+#~| "package>."
+#~ msgid ""
+#~ "<package>gnome-todo</package>: gnome-todo was replaced by package "
+#~ "Endeavour."
+#~ msgstr ""
+#~ "<package>gnome-system-log</package>：被替换为 <package>gnome-logs</"
+#~ "package>。"
+
+#, fuzzy
+#~| msgid "<package>qgo</package>: Replaced by <package>q5go</package>."
+#~ msgid ""
+#~ "<package>msgpack</package>: msgpack was replaced by msgpack-c and msgpack-"
+#~ "cxx."
+#~ msgstr "<package>qgo</package>：被替换为 <package>q5go</package>。"
 
 #~ msgid ""
 #~ "The execution of the binaries in this package is restricted to the group "
@@ -1263,13 +1324,6 @@ msgstr "版权所有 © SUSE LLC"
 #~ msgstr ""
 #~ "未签名的内核模块将视为 <quote>受污染</quote> 然后产生警告消息，但它们的功"
 #~ "能仍会生效。"
-
-#~ msgid ""
-#~ "For more information, see <link xlink:href=\"https://en.opensuse.org/SDB:"
-#~ "NVIDIA_drivers\"/>."
-#~ msgstr ""
-#~ "更多信息，请访问 <link xlink:href=\"https://zh.opensuse.org/SDB:NVIDIA_驱"
-#~ "动\"/>。"
 
 #~ msgid "Kernel modules that are signed but fail the check will be blocked."
 #~ msgstr "已签名但检查失败的内核模块将被屏蔽。"
@@ -2727,11 +2781,6 @@ msgstr "版权所有 © SUSE LLC"
 #~ "<package>lxdm</package>: Unmaintained, use <package>lightdm</package> "
 #~ "instead."
 #~ msgstr "<package>nodejs</package>：被重命名为 <package>nodejs4</package>。"
-
-#, fuzzy
-#~| msgid "<package>castor</package>: Fails to build on 42.3."
-#~ msgid "<package>uClibc</package>: Unmaintained."
-#~ msgstr "<package>castor</package>：在 42.3 上构建失败。"
 
 #~ msgid "KDE Software for Personal Information Management (KDE PIM)"
 #~ msgstr "KDE 的个人信息管理软件（KDE PIM）"
