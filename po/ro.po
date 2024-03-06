@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenSUSE\n"
 "POT-Creation-Date: 2018-02-28 19:51+0100\n"
-"PO-Revision-Date: 2024-01-04 14:02+0000\n"
+"PO-Revision-Date: 2024-03-06 11:42+0000\n"
 "Last-Translator: C S <catalin.stefan@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/master/ro/>\n"
@@ -49,7 +49,7 @@ msgstr "Note de pre-lansare"
 #. (itstool) path: info/releaseinfo
 #: xml/release-notes.xml:16
 msgid "@VERSION@"
-msgstr ""
+msgstr "@VERSIUNE@"
 
 #. (itstool) path: info/productname
 #. (itstool) path: bugtracker/product
@@ -65,11 +65,16 @@ msgid ""
 "laptop or server. You can surf the web, manage your e-mails and photos, do "
 "office work, play videos or music and have a lot of fun!"
 msgstr ""
+"openSUSE Tumbleweed este un sistem de operare gratuit și bazat pe Linux "
+"pentru PC-ul, laptopul sau serverul dumneavoastră. Puteți naviga pe "
+"internet, vă puteți gestiona e-mailurile și fotografiile, puteți face muncă "
+"de birou, puteți reda videoclipuri sau muzică și vă puteți distra foarte "
+"mult!"
 
 #. (itstool) path: bugtracker/url
 #: xml/release-notes.xml:30
 msgid "https://bugzilla.opensuse.org/enter_bug.cgi"
-msgstr ""
+msgstr "https://bugzilla.opensuse.org/enter_bug.cgi"
 
 #. (itstool) path: bugtracker/assignee
 #: xml/release-notes.xml:33
@@ -98,6 +103,9 @@ msgid ""
 "information, see <link xlink:href=\"https://en.opensuse.org/openSUSE:"
 "Submitting_bug_reports\"/>."
 msgstr ""
+"Pentru a raporta erori în legătură cu această versiune, folosiți openSUSE "
+"Bugzilla. Pentru mai multe informații, consultați <link xlink:href=\"https"
+"://en.opensuse.org/openSUSE:Submitting_bug_reports\"/>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:54
@@ -107,7 +115,7 @@ msgstr "Instalare"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:59
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr ""
+msgstr "UEFI-Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:60
@@ -118,6 +126,12 @@ msgid ""
 "install such an update. A pre-installed Windows 8 is a strong indication "
 "that your system boots using UEFI."
 msgstr ""
+"Înainte de a instala openSUSE pe un sistem care pornește folosind UEFI ("
+"Unified Extensible Firmware Interface), vă recomandăm să verificați de "
+"urgență dacă există actualizări de firmware recomandate de furnizorul de "
+"hardware și, dacă sunt disponibile, să instalați o astfel de actualizare. Un "
+"Windows 8 preinstalat este un indiciu puternic că sistemul dumneavoastră "
+"pornește folosind UEFI."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:68
@@ -132,6 +146,17 @@ msgid ""
 "disabled by default. Nevertheless, it is recommended to install any firmware "
 "updates the hardware vendor recommends."
 msgstr ""
+"<emphasis>Background:</emphasis> Unele firmware-uri UEFI au erori care le "
+"fac să se întrerupă dacă se scriu prea multe date în zona de stocare UEFI. "
+"Totuși, nimeni nu știe cu adevărat cât de mult înseamnă \"prea mult\". "
+"openSUSE minimizează riscul prin faptul că nu scrie mai mult decât minimul "
+"necesar pentru a porni sistemul de operare. Minimul înseamnă să îi spui "
+"firmware-ului UEFI despre locația încărcătorului de pornire openSUSE. "
+"Caracteristicile nucleului Linux Kernel din amonte care utilizează zona de "
+"stocare UEFI pentru stocarea informațiilor de pornire și de avarie "
+"(<literal>pstore</literal>) au fost dezactivate în mod implicit. Cu toate "
+"acestea, se recomandă instalarea oricăror actualizări de firmware "
+"recomandate de furnizorul de hardware."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:85
@@ -146,6 +171,10 @@ msgid ""
 "identifiers (128-bit values displayed in 32 hexadecimal digits) to identify "
 "devices and partition types."
 msgstr ""
+"Odată cu specificația EFI/UEFI, a apărut un nou stil de partiționare: GPT ("
+"GUID Partition Table). Această nouă schemă utilizează identificatori unici "
+"la nivel global (valori pe 128 de biți afișate în 32 de cifre hexazecimale) "
+"pentru a identifica dispozitivele și tipurile de partiții."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:92
@@ -157,6 +186,13 @@ msgid ""
 "rewrite consist of two different operation: removing the old entry and "
 "creating a new entry that replaces the first one."
 msgstr ""
+"În plus, specificația UEFI permite, de asemenea, partiții MBR (MS-DOS) "
+"tradiționale. Încărcătoarele de pornire Linux (ELILO sau GRUB2) încearcă să "
+"genereze automat un GUID pentru aceste partiții tradiționale și să le scrie "
+"în firmware. Un astfel de GUID se poate schimba frecvent, provocând o "
+"rescriere în firmware. O rescriere constă în două operațiuni diferite: "
+"eliminarea intrării vechi și crearea unei noi intrări care o înlocuiește pe "
+"prima."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:101
@@ -166,6 +202,10 @@ msgid ""
 "firmware does not collect and free those entries; this may end up with a non-"
 "bootable system."
 msgstr ""
+"Firmware-ul modern are un colector de gunoi care colectează intrările șterse "
+"și eliberează memoria rezervată pentru intrările vechi. O problemă apare "
+"atunci când un firmware defect nu colectează și nu eliberează aceste intrări;"
+" în acest caz, se poate ajunge la un sistem care nu poate fi pornit."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:107
@@ -173,6 +213,8 @@ msgid ""
 "The workaround is simple: convert the legacy MBR partition to the new GPT to "
 "avoid this problem completely."
 msgstr ""
+"Soluția este simplă: convertiți partiția MBR veche în noua partiție GPT "
+"pentru a evita complet această problemă."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:124
@@ -182,7 +224,7 @@ msgstr "General"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:127
 msgid "System with LUKS-Encrypted Partition Does Not Boot"
-msgstr ""
+msgstr "Sistemul cu partiție criptată LUKS nu pornește"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:128
@@ -192,11 +234,16 @@ msgid ""
 "line. See also <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=966255\"/>."
 msgstr ""
+"În unele cazuri, Plymouth nu afișează în mod corespunzător solicitarea de "
+"introducere a frazei de acces. Pentru a remedia acest lucru, adăugați "
+"<literal>plymouth.enable=0</literal> la linia de comandă a kernelului. "
+"Consultați, de asemenea, <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=966255\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:137
 msgid "<command>systemctl stop apparmor</command> Does Not Work"
-msgstr ""
+msgstr "<command>systemctl stop apparmor</command> Nu funcționează"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:138
@@ -205,6 +252,10 @@ msgid ""
 "very similarly named <command>systemctl</command> subcommands "
 "<literal>reload</literal> and <literal>restart</literal> worked for AppArmor:"
 msgstr ""
+"În trecut, putea exista o confuzie cu privire la diferența dintre modul în "
+"care subcomanda <command>systemctl</command> cu nume foarte asemănător "
+"<literal>reload</literal> și <literal>restart</literal> funcționa pentru "
+"AppArmor:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:146
@@ -213,6 +264,9 @@ msgid ""
 "profiles. (It was and continues to be the recommended way of reloading "
 "AppArmor profiles.)"
 msgstr ""
+"<command>systemctl reload apparmor<command> a reîncărcat corect toate "
+"profilurile AppArmor. (Aceasta a fost și continuă să fie modalitatea "
+"recomandată de reîncărcare a profilurilor AppArmor)"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:153
@@ -222,6 +276,10 @@ msgid ""
 "all existing processes unconfined. Only newly started processes would then "
 "be confined again."
 msgstr ""
+"<command>systemctl restart apparmor</command> a însemnat că AppArmor se va "
+"opri, descărcând astfel toate profilurile încărcate în memoria AppArmor și "
+"apoi va reporni, ceea ce a lăsat toate procesele existente neizolate. Doar "
+"procesele nou pornite vor fi din nou izolate."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:161
@@ -230,6 +288,9 @@ msgid ""
 "within its unit file format for the issue posed by the <literal>restart</"
 "literal> scenario."
 msgstr ""
+"Din păcate, <systemitem>systemd</systemitem> nu oferă o soluție în cadrul "
+"formatului său de fișier de unitate pentru problema pusă de scenariul "
+"<literal>restart</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:166
@@ -238,6 +299,9 @@ msgid ""
 "command> will not work. As a consequence, <command>systemctl restart "
 "apparmor</command> will now correctly reload AppArmor profiles."
 msgstr ""
+"Începând cu AppArmor 2.12, comanda <command>systemctl stop apparmor</"
+"command> nu va funcționa. În consecință, <command>systemctl restart "
+"apparmor</command> va reîncărca acum corect profilurile AppArmor."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:172
@@ -246,6 +310,9 @@ msgid ""
 "command> instead which matches the previous behavior of <command>systemctl "
 "stop apparmor</command>."
 msgstr ""
+"Pentru a descărca toate profilurile AppArmor, utilizați în schimb noua "
+"comandă <command>aa-teardown</command> care se potrivește cu comportamentul "
+"anterior al <command>systemctl stop apparmor</command>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:177
@@ -254,11 +321,14 @@ msgid ""
 "show_bug.cgi?id=996520\"/> and <link xlink:href=\"https://bugzilla.opensuse."
 "org/show_bug.cgi?id=853019\"/>."
 msgstr ""
+"Pentru mai multe informații, consultați <link xlink:href=\"https://bugzilla."
+"opensuse.org/show_bug.cgi?id=996520\"/> și <link xlink:href=\"https"
+"://bugzilla.opensuse.org/show_bug.cgi?id=853019\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:187
 msgid "No Default Compose Key Combination"
-msgstr ""
+msgstr "Nu există o combinație implicită de taste de compunere"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:188
@@ -269,6 +339,12 @@ msgid ""
 "function=\"shift\"/><keycap>Right Ctrl</keycap></keycombo> and then press "
 "<keycap>a</keycap> twice."
 msgstr ""
+"În versiunile anterioare ale openSUSE, combinația de taste de compunere "
+"permitea tastarea caracterelor care nu făceau parte din configurația "
+"obișnuită a tastaturii. De exemplu, pentru a produce <quote>å</quote>, "
+"puteați să apăsați și să eliberați <keycombo><keycap function=\"shift\"/"
+"><keycap>Ctrl dreapta</keycap></keycombo> și apoi să apăsați <keycap>a</"
+"keycap> de două ori."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:195
@@ -277,6 +353,10 @@ msgid ""
 "combination because <keycombo><keycap function=\"shift\"/><keycap>Right "
 "Ctrl</keycap></keycombo> does not work as expected anymore."
 msgstr ""
+"În openSUSE Tumbleweed, nu mai există o combinație de taste predefinită "
+"pentru a compune, deoarece <keycombo><keycap function=\"shift\"/"
+"><keycap>Ctrl dreapta</keycap></keycombo> nu mai funcționează conform "
+"așteptărilor."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:203
@@ -284,6 +364,9 @@ msgid ""
 "To define a system-wide custom compose key combination, use the file "
 "<filename>/etc/X11/Xmodmap</filename> and look for the following lines:"
 msgstr ""
+"Pentru a defini o combinație de taste de compunere personalizată la nivel de "
+"sistem, utilizați fișierul <filename>/etc/X11/Xmodmap</filename> și căutați "
+"următoarele linii:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:207
@@ -298,6 +381,14 @@ msgid ""
 "!add     Control  = Control_R\n"
 "[...]"
 msgstr ""
+"[...]\n"
+"!! Al treilea exemplu: Schimbați tasta Control dreapta în tasta Compose.\n"
+"!! Pentru a face Compose Character, apăsați această tastă și apoi două\n"
+"!!! caractere (de exemplu, `a' și `^' pentru a obține 342).\n"
+"!remove Control = Control_R\n"
+"!keysym Control_R = Multi_key\n"
+"!add Control = Control_R\n"
+"[...]"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:215
@@ -306,6 +397,10 @@ msgid ""
 "the beginning of lines. However, note that the setup from <filename>Xmodmap</"
 "filename> will be overwritten if you are using <command>setxkbmap</command>."
 msgstr ""
+"Pentru a decomenta codul de exemplu, eliminați caracterele <literal>!</"
+"literal> de la începutul liniilor. Cu toate acestea, rețineți că "
+"configurația din <filename>Xmodmap</filename> va fi suprascrisă dacă "
+"utilizați <<command>>setxkbmap</</command>>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:223
@@ -314,6 +409,9 @@ msgid ""
 "keyboard configuration tool or the command-line tool <command>setxkbmap</"
 "command>:"
 msgstr ""
+"Pentru a defini o combinație de taste de compunere specifică utilizatorului, "
+"utilizați instrumentul de configurare a tastaturii de pe desktop sau "
+"instrumentul de linie de comandă <command>setxkbmap<command>:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:228
@@ -323,6 +421,10 @@ msgid ""
 "setxkbmap <replaceable>[...]</replaceable> -option compose:<replaceable>COMPOSE_KEY</replaceable>\n"
 "     "
 msgstr ""
+"\n"
+"setxkbmap <replaceable>[...]</replaceable> -opțiunea "
+"compose:<replaceable>COMPOSE_KEY</replaceable>.\n"
+"     "
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -332,6 +434,10 @@ msgid ""
 "<literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</literal>, "
 "or <literal>caps</literal>."
 msgstr ""
+"Pentru variabila <replaceable>COMPOSE_KEY</replaceable>, utilizați "
+"caracterul preferat, de exemplu <literal>ralt</literal>, <literal>lwin</"
+"literal>, <literal>rwin</literal>, <literal>menu</literal>, <literal>rctl</"
+"literal>, sau <literal>caps</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:240
@@ -339,6 +445,8 @@ msgid ""
 "Alternatively, use an IBus input method that allows typing the characters "
 "you need without a Compose key."
 msgstr ""
+"Alternativ, utilizați o metodă de introducere IBus care permite tastarea "
+"caracterelor de care aveți nevoie fără o tastă de compunere."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:263
@@ -349,7 +457,7 @@ msgstr "Informații despre memorie"
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:266
 msgid "Read the <filename>README</filename> documents on the medium."
-msgstr ""
+msgstr "Citiți documentele <filename>README</filename> de pe suport."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:271
@@ -357,17 +465,19 @@ msgid ""
 "View a detailed changelog information about a particular package from its "
 "RPM:"
 msgstr ""
+"Vizualizați un jurnal de modificări detaliat despre un anumit pachet din RPM-"
+"ul său:"
 
 #. (itstool) path: listitem/screen
 #: xml/release-notes.xml:275
 #, no-wrap
 msgid "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
-msgstr ""
+msgstr "rpm --changelog -qp <replaceable>FILENAME</replaceable>.rpm"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:276
 msgid "Replace <replaceable>FILENAME</replaceable> with the name of the RPM."
-msgstr ""
+msgstr "Înlocuiți <replaceable>FILENAME</replaceable> cu numele RPM-ului."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:281
@@ -375,6 +485,9 @@ msgid ""
 "Check the <filename>ChangeLog</filename> file in the top level of the medium "
 "for a chronological log of all changes made to the updated packages."
 msgstr ""
+"Verificați fișierul <filename>ChangeLog</filename> de la nivelul superior al "
+"suportului pentru un jurnal cronologic al tuturor modificărilor efectuate "
+"asupra pachetelor actualizate."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:287
