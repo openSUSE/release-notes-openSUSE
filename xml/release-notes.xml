@@ -1121,6 +1121,14 @@ options nvidia NVreg_OpenRmEnableUnsupportedGpus=1
      xlink:href="https://en.opensuse.org/SDB:System_upgrade#0._New_4096_bit_RSA_signing_key" />. </para>
   </sect2>
 
+  <sect2 xml:id="cockpit-root-login">
+   <title>Cockpit root login is disabled by default</title>
+   <para>Cockpit is newly part of &opensuseleap; 15.6. However, similarly to sshd,
+    the password-based login for root is disabled by default.
+    Users need to manually edit <literal>/etc/cockpit/disallowed-users</literal>
+    and restart <literal>cockpit.socket</literal> as described in <link
+     xlink:href="https://news.opensuse.org/2024/04/29/try-cockpit-in-leap-rc/" />.</para>
+  </sect2>
  </sect1>
 
 
