@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2024-06-12 12:46+0000\n"
+"PO-Revision-Date: 2024-06-12 15:47+0000\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/sl/>\n"
@@ -111,6 +111,8 @@ msgid ""
 "For more information about upgrading to a current openSUSE version, see "
 "<link xlink:href=\"https://en.opensuse.org/SDB:System_upgrade\"/>."
 msgstr ""
+"Za dodatne informacije o nadgrajevanju na najnovejšo različico openSUSE si "
+"oglejte <link xlink:href=\"https://en.opensuse.org/SDB:System_upgrade\"/>."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:59
@@ -119,6 +121,9 @@ msgid ""
 "previous release notes listed here: <link xlink:href=\"https://en.opensuse."
 "org/openSUSE:Release_Notes\"/>."
 msgstr ""
+"Če na to izdajo openSUSE nadgrajujete s starejše različice, si oglejte "
+"prejšnje opombe ob izdaji, ki jih najdete tukaj: <link xlink:href=\"https"
+"://en.opensuse.org/openSUSE:Release_Notes\"/>."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:64
@@ -127,6 +132,9 @@ msgid ""
 "project.</phrase> Information about the project is available at <link xlink:"
 "href=\"https://www.opensuse.org\"/>."
 msgstr ""
+"<phrase condition=\"beta\">Ta javni beta preizkus je del projekta openSUSE.</"
+"phrase> Informacije o projektu so na voljo na <link xlink:href=\"https://www."
+"opensuse.org\"/>."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:69
@@ -145,6 +153,9 @@ msgid ""
 "information, see <link xlink:href=\"https://en.opensuse.org/"
 "Submitting_Bug_Reports\"/>."
 msgstr ""
+"Da poročate o napakah v tej izdaji, uporabite sistem openSUSE Bugzilla. Za "
+"dodatne informacije si oglejte <link xlink:href=\"https://en.opensuse.org/"
+"Submitting_Bug_Reports\"/>."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:81
@@ -252,16 +263,20 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
+"Nekateri paketi v svojih skriptih <literal>%post</literal> spremenijo "
+"vsebino map <filename>/var</filename> ali <filename>/srv</filename>. Taki "
+"paketi niso združljivi. Če najdete tak paket, vas prosimo, da nam poročate o "
+"napaki."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:153
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "Da posodobitveni sistem lahko ponudi te zmožnosti, se zanaša na:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:159
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Posnetke btrfs"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:160
@@ -271,16 +286,22 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Pred začetkom posodabljanja sistema se ustvari nov posnetek btrfs korenskega "
+"datotečnega sistema. Vse spremembe iz posodobitve so nato nameščene v ta "
+"posnetek btrfs. Za zaključek posodobitve lahko nato sistem znova zaženete v "
+"novi posnetek."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:167
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"Da razveljavite posodobitev, preprosto znova zaženite sistem iz prejšnjega "
+"posnetka."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:173
 msgid "A read-only root file system"
-msgstr ""
+msgstr "Korenski datotečni sistem samo za branje"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:174
@@ -289,6 +310,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"Da bi se izognili težavam in izgubam podatkov zaradi posodobitev, se v "
+"korenski datotečni sistem običajno ne sme pisati. Zato je korenski datotečni "
+"sistem med običajnim delom priklopljen samo za branje."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:180
@@ -298,6 +322,10 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"Da tak sistem deluje, je potrebno spremeniti dve stvari glede datotečnega "
+"sistema. Za omogočanje zapisovanja uporabniških nastavitev v <filename>/etc</"
+"filename> se to mapo nastavi za uporabo OverlayFS. Mapa <filename>/var</"
+"filename> pa je sedaj ločen pod-nosilec v katerega procesi lahko pišejo."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:190
@@ -311,11 +339,13 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Sistemska vloga <emphasis>transakcijski strežnik</emphasis> potrebuje vsaj "
+"12 GB prostora na disku za shranjevanje posnetkov btrfs."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:198
 msgid "YaST Does Not Work Transactional Mode"
-msgstr ""
+msgstr "YaST s transakcijskim načinom ne deluje"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:201
@@ -324,6 +354,9 @@ msgid ""
 "YaST performs things immediately and because it cannot edit a read-only "
 "filesystem."
 msgstr ""
+"Trenutno YaST še ne deluje s transakcijskimi posodobitvami. Razlog za to je, "
+"da YaST stvari izvaja takoj in ker ne more urejati datotečnega sistema, ki "
+"je samo za branje."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:206
@@ -332,11 +365,13 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Za delo s transakcijskimi posodobitvami vedno uporabljajte ukaz <command"
+">transactional-update</command> namesto YaST in zypper:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:213
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Posodobitev sistema <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:219
@@ -344,6 +379,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Namestitev paketa: <command>transactional-update pkg in "
+"<replaceable>IME_PAKETA</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:225
@@ -351,6 +388,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Odstranitev paketa: <command>transactional-update pkg rm "
+"<replaceable>IME_PAKETA</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:231
@@ -359,6 +398,9 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"Da razveljavite zadnji posnetek (zadnji nabor sprememb korenskega "
+"datotečnega sistema), se prepričajte, da je sistem zagnan v predzadnji "
+"posnetek in zaženite ukaz <command>transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:237
@@ -366,6 +408,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Druga možnost je, da na konec ukaza dodate določilnik posnetka in tako "
+"povrnete sistem na določen posnetek."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:243
@@ -375,12 +419,16 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Ko uporabljate to sistemsko vlogo, bo privzeto vsak dan med 3:30 in 5:00 "
+"opravljena sistemska posodobitev s ponovnim zagonom. Obe ti dejanji "
+"temeljita na systemd in ju po potrebi lahko onemogočite z ukazom "
+"<command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:249
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr ""
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:250
@@ -390,6 +438,10 @@ msgid ""
 "transactionalupdates/\"/> and <link xlink:href=\"https://kubic.opensuse.org/"
 "blog/2018-04-20-transactionalupdates2/\"/>."
 msgstr ""
+"Za dodatne informacije o transakcijskih posodobitvah si oglejte objavi na "
+"blogu openSUSE Kubic <link xlink:href=\"https://kubic.opensuse.org/blog/"
+"2018-04-04-transactionalupdates/\"/> in <link xlink:href=\"https://kubic."
+"opensuse.org/blog/2018-04-20-transactionalupdates2/\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:259
@@ -404,6 +456,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Namestilnik bo predlagal shemo razdelitve diska samo če je razpoložljiva "
+"velikost trdega diska večja od 12 GB. Če na primer želite nastaviti zelo "
+"majhen posnetek diska za navidezni računalnik, uporabite vodeno "
+"razdeljevanje diska in ročno prilagodite parametre razdeljevanja."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:270
@@ -419,6 +475,11 @@ msgid ""
 "install such an update. A pre-installation of Windows 8 or later is a strong "
 "indication that your system boots using UEFI."
 msgstr ""
+"Pred nameščanjem openSUSE na sistem, ki se zaganja z uporabo UEFI (Unified "
+"Extensible Firmware Interface), vam močno priporočamo, da preverite, ali "
+"imate nameščene najnovejše različice strojne programske opreme, ki jih "
+"priporoča izdelovalec. Če je pred-nameščen Windows 8 ali novejši, je to "
+"dober pokazatelj, da se sistem zaganja z uporabo UEFI."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:278
@@ -427,6 +488,9 @@ msgid ""
 "to break if too much data gets written to the UEFI storage area. However, "
 "there is no clear data of how much is <quote>too much</quote>."
 msgstr ""
+"<emphasis>Ozadje</emphasis>: Nekatera strojna programska oprema UEFI vsebuje "
+"napake, ki povzročijo težave, če se v UEFI-jevo področje za shranjevanje "
+"zapiše preveč podatkov. Nihče zares ne ve koliko je »preveč«."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:283
@@ -439,6 +503,14 @@ msgid ""
 "is recommended to install any firmware updates the hardware vendor "
 "recommends."
 msgstr ""
+"Operacijski sistem openSUSE poskuša kar najbolj zmanjšati tveganje in zapiše "
+"le toliko, kolikor je najmanj potrebno za zagon operacijskega sistema. To "
+"pomeni, da se strojni programski opremi UEFI pove le o mestu zagonskega "
+"nalagalnika openSUSE. Zmožnosti jedra Linux, ki UEFI-jevo področje za "
+"shranjevanje uporabljajo za zapisovanje podatkov o zagonu in sesutjih "
+"(<literal>pstore</literal>), so privzeto onemogočene. Kljub temu močno "
+"priporočamo, da namestite vse posodobitve strojne programske opreme, ki jih "
+"priporoča izdelovalec strojne opreme."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:296
@@ -468,6 +540,12 @@ msgid ""
 "rewrite consists of two different operations: Removing the old entry and "
 "creating a new entry that replaces the first one."
 msgstr ""
+"Poleg tega specifikacija UEFI dovoljuje tudi zastarele razdelke MBR (MS-DOS)"
+". Zagonski nalagalniki za Linux (GRUB2 in ELILO) poskušajo samodejno "
+"ustvariti GUID za te zastarele razdelke in jih zapisati v strojno programsko "
+"opremo. Tak GUID se lahko pogosto spreminja, kar povzroči ponovno pisanje v "
+"strojni programski opremi. Ponovno pisanje je sestavljeno iz dveh dejanj: "
+"odstranitve starega vnosa in ustvaritve novega vnosa, ki nadomesti starega."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:311
@@ -477,11 +555,16 @@ msgid ""
 "firmware does not collect and free those entries. This can result in a non-"
 "bootable system."
 msgstr ""
+"Moderna strojna programska oprema vsebuje sprostitveni zbiralnik, ki zbere "
+"izbrisane vnose in sprosti pomnilnik rezerviran za stare vnose. Do težave "
+"pride, ko strojna programska oprema z napakami ne zbere in ne sprosti "
+"prostora za te vnose. To lahko povzroči, da sistema ni več mogoče zagnati."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:317
 msgid "To work around this problem, convert the legacy MBR partition to GPT."
 msgstr ""
+"To težavo lahko zaobidete s pretvorbo zastarelega razdelka MBR v novi GPT."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:323
@@ -522,6 +605,8 @@ msgid ""
 "This section lists notes related to upgrading the system. For supported "
 "scenarios and detailed upgrade instructions, see the documentation at:"
 msgstr ""
+"Ta odsek vsebuje opombe glede nadgrajevanja sistema. Za podprte scenarije in "
+"podrobna navodila za nadgrajevanje si oglejte dokumentacijo na:"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:369
@@ -695,6 +780,10 @@ msgid ""
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
+"Opuščeni paketi so še vedno del distribucije, vendar bodo odstranjeni v "
+"naslednji različici openSUSE Leap. Ti paketi so še na voljo za pomoč pri "
+"selitvi, a je njihova uporaba odsvetovana in morda tudi ne bodo prejeli "
+"posodobitev."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:504
