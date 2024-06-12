@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-09 16:53+0200\n"
-"PO-Revision-Date: 2024-06-12 15:46+0000\n"
+"PO-Revision-Date: 2024-06-12 18:46+0000\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_4/sl/>\n"
@@ -104,6 +104,10 @@ msgid ""
 "version. Before starting the upgrade, make sure that all maintenance updates "
 "for openSUSE Leap 15.4 are applied."
 msgstr ""
+"Dosežen je bil konec obdobja vzdrževanja za openSUSE Leap 15.. Da bi vaš "
+"sistem ostal posodobljen in varen, nadgradite na najnovejšo različico "
+"openSUSE. Preden začnete z nadgradnjo, se prepričajte, da so uveljavljene "
+"vse vzdrževalne posodobitve za openSUSE Leap 15.4."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:54
@@ -571,17 +575,17 @@ msgstr ""
 #: xml/release-notes.xml:354
 #, no-wrap
 msgid "zypper lifecycle"
-msgstr ""
+msgstr "zypper lifecycle"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:358
 msgid "Removed Packages"
-msgstr ""
+msgstr "Odstranjeni paketi"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:359
 msgid "Removed packages are not shipped as part of the distribution anymore."
-msgstr ""
+msgstr "Odstranjeni paketi niso več del distribucije."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:365
@@ -634,12 +638,12 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:408
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "Gonilniki in strojna oprema"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:413
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
-msgstr ""
+msgstr "Varni zagon: gonilniki tretjih oseb morajo biti pravilno podpisani"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:414
@@ -658,6 +662,10 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
+"Če je omogočen tudi varni zagon UEFI, lahko to modulom jedra tretjih oseb "
+"prepreči nalaganje. Na pakete z moduli jedra iz uradnih virov openSUSE to "
+"nima vpliva, ker so vsebovani moduli podpisani s ključem od openSUSE. "
+"Preverjanje podpisov deluje na naslednji način:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:429
@@ -666,6 +674,9 @@ msgid ""
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
 msgstr ""
+"Moduli jedra; ki niso podpisani ali so podpisani s ključem, ki je znan in mu "
+"ni zaupano ali zaupanja ni moč preveriti v sistemski podatkovni zbirki; bodo "
+"blokirani."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:436
@@ -676,6 +687,11 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
+"Možno je ustvariti lastno potrdilo, ga dodati v sistemsko podatkovno zbirko "
+"ključev lastnika računalnika (angl. Machine Owner Key, MOK), in krajevno "
+"prevedene module jedra podpisati s ključem potrdila. Moduli, ki so podpisani "
+"na ta način, ne bodo blokirani in ne bodo sprožili opozoril. Oglejte si "
+"<link xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:443
@@ -686,11 +702,16 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:"
 "href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Ker to vpliva tudi na gonilnike za grafične kartice NVIDIA, smo to naslovili "
+"v naših uradnih paketih za openSUSE. Vendar morate po namestitvi ročno "
+"dodati nov ključ MOK, da bi ti novi paketi delovali. Za navodila o "
+"nameščanju gonilnikov in dodajanju ključa MOK si oglejte <link xlink:href="
+"\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:454
 msgid "Network install image hangs on boot on Raspberry Pi 4"
-msgstr ""
+msgstr "Odtis za omrežno nameščanje se ob zagonu na Raspberry Pi 4 obesi"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:455
@@ -702,11 +723,18 @@ msgid ""
 "Raspberry_Pi4#Boot_from_USB_in_Net_install_image_of_Leap_15.4_hangs_on_boot\">Raspberry "
 "Pi 4 Hardware Compatibility List</link>."
 msgstr ""
+"Zaganjanje odtisa za omrežno nameščanje s ključka USB na Raspberry Pi 4 se "
+"ob zagonu obesi. Da to težavo rešite, dodajte zagonski parameter "
+"<literal>console=tty</literal>. Za podrobnosti si oglejte odsek o znanih "
+"težavah na našem <link xlink:href=\"https://en.opensuse.org/"
+"HCL:Raspberry_Pi4#Boot_from_USB_in_Net_install_image_of_Leap_15."
+"4_hangs_on_boot\">seznamu združljivosti s strojno opremo Raspberry Pi "
+"4</link>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:467
 msgid "Desktop"
-msgstr ""
+msgstr "Namizno okolje"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:468
@@ -716,7 +744,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:472
 msgid "KDE 4 and Qt 4 removal"
-msgstr ""
+msgstr "Odstranitev KDE 4 in Qt 4"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:473
@@ -735,12 +763,13 @@ msgstr "Splošno"
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:502
 msgid "<command>iotop</command> support"
-msgstr ""
+msgstr "Podpora za <command>iotop</command>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:503
 msgid "<command>iotop</command> does not display values for SWAPIN and IO %."
 msgstr ""
+"Ukaz <command>iotop</command> ne prikazuje vrednosti za SWAPIN and IO %."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:506
@@ -749,6 +778,9 @@ msgid ""
 "literal> needs to be specified or <literal>kernel.task_delayacct</literal> "
 "sysctl needs to be enabled."
 msgstr ""
+"Od različice 5.14 jedra Linux dalje je potrebno dodati zagonski parameter "
+"jedra <literal>delayacct</literal> ali pa z ukazom »sysctl« omogočiti "
+"<literal>kernel.task_delayacct</literal>."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:576
