@@ -1129,6 +1129,18 @@ options nvidia NVreg_OpenRmEnableUnsupportedGpus=1
     and restart <literal>cockpit.socket</literal> as described in <link
      xlink:href="https://news.opensuse.org/2024/04/29/try-cockpit-in-leap-rc/" /> to allow root login.</para>
   </sect2>
+
+  <sect2 xml:id="sshd-obscurekeystroke-timing">
+   <title>OpenSSH Has ObscureKeystrokeTiming Turned On by Default</title>
+   <para>This is a change from &opensuseleap; 15.5 that increases security but has performance
+    implications on X11 forwarding.
+    Users can use <literal>ssh -Y -oObscureKeystrokeTiming=interval:5 $HOST</literal> to
+    reduce packet delays from the default ~20ms to ~5ms while keeping the feature enabled.
+    Alternatively, users can manually set <literal>ObscureKeystrokeTiming=no</literal> in <literal>~/.ssh/config</literal>
+    as described in <link
+     xlink:href="https://bugzilla.suse.com/show_bug.cgi?id=12294492" /></para>
+  </sect2>
+
  </sect1>
 
 
