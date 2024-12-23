@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2024-12-22 12:42+0000\n"
+"PO-Revision-Date: 2024-12-23 13:50+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/uk/>\n"
@@ -721,6 +721,15 @@ msgid ""
 "vendor-change</literal> during migration if you are using OBS repositories "
 "signed with other keys."
 msgstr ""
+"На відміну від 15.2 більшість rpm-пакетів інсталяції openSUSE Leap 15.3 за "
+"замовчуванням взяті з SUSE Linux Enterprise Server. Ці rpm-пакети підписані "
+"SUSE LLC замість використання ключа openSUSE. У пакеті <package>libzypp</"
+"package> версії 12.25.8 представлено білий список для заміни постачальників "
+"SUSE LLC і openSUSE, щоб забезпечити легку міграцію. Цей білий список дає "
+"змогу не вказувати опцію <literal>--allow-vendor-change</literal> під час "
+"заміни лише openSUSE і SUSE LLC. Вам все ще може знадобитися вказати під час "
+"міграції опцію <literal>--allow-vendor-change</literal> у разі, якщо "
+"використовувалися репозиторії OBS, підписані іншими ключами."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:394
@@ -732,6 +741,11 @@ msgid ""
 "versions older than 12.25.8 (replace 15.0 below with your current openSUSE "
 "version):"
 msgstr ""
+"У випусках openSUSE Leap старше 15.2 такої можливості немає, оскільки вони "
+"більше не підтримуються. Усім користувачам слід оновитися до openSUSE Leap "
+"15.2 перед оновленням до 15.3. Наступні параметри можуть бути використані з "
+"версіями <package>libzypp</package>, старшими за 12.25.8 (замініть 15.0 на "
+"свою поточну версію openSUSE):"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:403
@@ -742,6 +756,11 @@ msgid ""
 "zypper dup --allow-vendor-change --force-resolution\n"
 "  "
 msgstr ""
+"\n"
+"zypper addrepo --check --refresh --name 'openSUSE-Leap-15.0-Update' http://"
+"download.opensuse.org/update/leap/15.0/oss/ repo-update\n"
+"zypper dup --allow-vendor-change --force-resolution\n"
+"  "
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:408
@@ -751,6 +770,9 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 надає всі необхідні ключі перевірки RPM, зокрема ключі "
+"SUSE Linux Enterprise Server, у складі пакета <package>openSUSE-build-key</"
+"package>. Усі ключі також знову доступні в репозиторії OSS."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:414
@@ -759,6 +781,9 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"Пакет <package>libzypp</package> версії 17.25.11 повинен автоматично "
+"імпортувати необхідні ключі, ідентифіковані як довірені. Якщо це станеться, "
+"Ви отримаєте повідомлення про імпорт і подальших дій не буде потрібно."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:419
@@ -767,12 +792,15 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Якщо ж ключ, яким підписаний <literal>repodata</literal>, не було "
+"імпортовано, то Вам доведеться зробити це вручну. Перевірити можна за "
+"допомогою такої команди:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:424
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
