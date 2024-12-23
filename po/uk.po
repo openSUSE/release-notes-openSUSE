@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES-openSUSE.uk\n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2024-12-23 13:50+0000\n"
+"PO-Revision-Date: 2024-12-23 20:50+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/uk/>\n"
@@ -809,6 +809,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"У виводі команди має бути рядок, що починається з <literal>gpg-pubkey-"
+"39db7c82-*</literal>. Якщо ж його там немає, то для ручного імпорту "
+"виконайте таке:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:431
@@ -817,6 +820,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Завантажте ключ SUSE Linux Enterprise 15 з <link xlink:href=\"https://"
+"download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-"
+"39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
@@ -824,6 +830,8 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Збережіть ключ у теці <literal>/var/cache/zypp/pubkeys</literal>. "
+"Перейменуйте файл, щоб назва закінчувалася на <literal>.key</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:443
@@ -833,6 +841,9 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Виконайте команду <literal>zypper dup</literal>. Ви отримаєте запит на "
+"імпорт відсутнього ключа. Це станеться, навіть якщо ключ уже в згаданій вище "
+"теці. Якщо у файлі кілька ключів, zypper імпортує тільки потрібний ключ."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
@@ -848,6 +859,7 @@ msgstr ""
 msgid ""
 "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel packaging"
 msgstr ""
+"Узгодження пакетів ядра для SUSE Linux Enterprise Server та openSUSE Leap"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:459
@@ -864,6 +876,17 @@ msgid ""
 "parameter on the command line. This parameter works with <package>kernel-"
 "default</package>."
 msgstr ""
+"В openSUSE Leap ядро за замовчуванням було розділене на три підпакети: "
+"<package>kernel-default</package>, <package>kernel-default-extra</package> і "
+"<package>kernel-default-optional</package>. Аналогічно, пакет <package"
+">kernel-preempt</package> також розділили на <package>kernel-preempt</"
+"package>, <package>kernel-preempt-extra</package> і <package>kernel-preempt-"
+"optional</package>. Пакет із суфіксом <literal>-optional</literal> містить "
+"необов'язкові модулі тільки для openSUSE Leap. У пакеті з суфіксом "
+"<literal>-extra</literal> знаходяться непідтримувані модулі. Режимом "
+"витіснення в ядрі можна керувати за допомогою параметра "
+"<literal>preempt=voluntary</literal> у командному рядку. Цей параметр працює "
+"з <package>kernel-default</package>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:472
@@ -871,16 +894,18 @@ msgid ""
 "If you use this kernel variant, make sure that all RPMs required for your "
 "use case are installed."
 msgstr ""
+"Якщо Ви використовуєте цей варіант ядра, то переконайтеся, що всі необхідні "
+"для даного випадку RPM встановлені."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:481
 msgid "Removed and deprecated packages and features"
-msgstr ""
+msgstr "Видалені та застарілі пакети й можливості"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:484
 msgid "Deprecated packages and features"
-msgstr "Застарілі пакунки та властивості"
+msgstr "Застарілі пакунки та можливості"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:485
