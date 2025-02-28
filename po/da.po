@@ -3,16 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2023-05-09 16:53+0200\n"
-"PO-Revision-Date: 2020-06-15 11:35+0000\n"
-"Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
-"Language-Team: Danish <https://l10n.opensuse.org/projects/release-notes-"
-"opensuse/leap-15_2/da/>\n"
+"PO-Revision-Date: 2025-02-28 02:50+0000\n"
+"Last-Translator: Lau Frederik Petersen <xb2bllbbr@mozmail.com>\n"
+"Language-Team: Danish <https://l10n.opensuse.org/projects/"
+"release-notes-opensuse/leap-15_4/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 5.10.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -101,22 +101,16 @@ msgstr ""
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:48
-#, fuzzy
-#| msgid ""
-#| "The end of the maintenance period for openSUSE Leap 15.2 is now reached. "
-#| "To keep your systems up-to-date and secure, upgrade to a current openSUSE "
-#| "version. Before starting the upgrade, make sure that all maintenance "
-#| "updates for openSUSE Leap 15.2 are applied."
 msgid ""
 "The end of the maintenance period for openSUSE Leap 15.4 is now reached. To "
 "keep your systems up-to-date and secure, upgrade to a current openSUSE "
 "version. Before starting the upgrade, make sure that all maintenance updates "
 "for openSUSE Leap 15.4 are applied."
 msgstr ""
-"Vedligeholdelsesperioden af openSUSE Leap 15.2 er nu nået. Opgrader til "
+"Vedligeholdelsesperioden af openSUSE Leap 15.4 er nu nået. Opgrader til "
 "seneste version af openSUSE for at holde dine systemer opdateret og sikre. "
 "Før du starter opgraderingen, skal du sørge for, at alle opdateringer til "
-"openSUSE Leap 15.2 er installeret."
+"openSUSE Leap 15.4 er installeret."
 
 #. (itstool) path: article/para
 #: xml/release-notes.xml:54
@@ -225,6 +219,8 @@ msgid ""
 "Using Atomic Updates With the System Role <emphasis>Transactional Server</"
 "emphasis>"
 msgstr ""
+"Anvender atomiske opdateringer med systemrollen <emphasis>Transactional "
+"Server</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:101
@@ -251,11 +247,15 @@ msgid ""
 "srv</filename> in their RPM <literal>%post</literal> scripts. These packages "
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
+"Nogle pakker ændrer indholdet af <filename>/var</filename> eller "
+"<filename>/srv</filename> i deres RPM <literal>%post</literal> scripts. "
+"Disse pakker er inkompatible. Hvis du finder en sådan pakke, skal du "
+"indsende en fejlrapport."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:121
 msgid "To provide these features, this update system relies on:"
-msgstr ""
+msgstr "For at levere disse funktioner er dette opdateringssystem afhængigt af:"
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:127
@@ -270,16 +270,22 @@ msgid ""
 "that Btrfs snapshot. To complete the update, you can then restart the system "
 "into the new snapshot."
 msgstr ""
+"Før en systemopdatering startes, oprettes et nyt Btrfs snapshot af "
+"rodfilsystemet (root). Derefter installeres alle ændringer fra opdateringen "
+"i dette Btrfs snapshot. For at fuldføre opdateringen kan du derefter "
+"genstarte systemet i det nye snapshot."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:135
 msgid "To revert the update, simply boot from the previous snapshot instead."
 msgstr ""
+"For at fortryde opdateringen, skal du blot anvende det tidligere snapshot i "
+"stedet."
 
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:141
 msgid "A read-only root file system"
-msgstr ""
+msgstr "Et skrivebeskyttet rodfilsystem (root)"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:142
@@ -288,6 +294,9 @@ msgid ""
 "must not be written to otherwise. Therefore, the root file system is mounted "
 "read-only during normal operation."
 msgstr ""
+"For at undgå problemer og datatab på grund af opdateringer, må "
+"rodfilsystemet ikke skrives til på anden måde. Derfor bliver rodfilsystemet "
+"monteret som skrivebeskyttet under normal drift."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:148
@@ -297,12 +306,17 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"For at få dette setup til at fungere, måtte der laves to yderligere "
+"ændringer i filsystemet: For at tillade skrivning af brugerens konfiguration "
+"i <filename>/etc</filename>, bliver denne mappe automatisk konfigureret til "
+"at bruge OverlayFS. <filename>/var</filename> er nu et separat subvolume, "
+"som kan skrives til af processer."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:158
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
-msgstr ""
+msgstr "<emphasis>Transactional Server</emphasis> kræver mindst 12 GB diskplads"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:159
@@ -310,11 +324,13 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"Systemrollen <emphasis>Transactional Server</emphasis> kræver en "
+"diskstørrelse på mindst 12 GB for at kunne rumme Btrfs snapshots."
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:166
 msgid "YaST Does Not Work Transactional Mode"
-msgstr ""
+msgstr "YaST fungerer ikke i transaktionsmode"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:169
@@ -323,6 +339,9 @@ msgid ""
 "YaST performs things immediately and because it cannot edit a read-only "
 "filesystem."
 msgstr ""
+"I øjeblikket fungerer YaST ikke med transaktionsopdateringer. Dette skyldes, "
+"at YaST udfører handlinger med det samme, og fordi det ikke kan redigere et "
+"skrivebeskyttet filsystem."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:174
@@ -331,11 +350,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"For at arbejde med transaktionsopdateringer, brug altid kommandoen <command"
+">transactional-update</command> i stedet for YaST og Zypper til al "
+"softwarehåndtering:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:181
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "Opdater systemet: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:187
@@ -343,6 +365,8 @@ msgid ""
 "Install a package: <command>transactional-update pkg in "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Installer en pakke: <command>transactional-update pkg in "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:193
@@ -350,6 +374,8 @@ msgid ""
 "Remove a package: <command>transactional-update pkg rm "
 "<replaceable>PACKAGE_NAME</replaceable></command>"
 msgstr ""
+"Fjern en pakke: <command>transactional-update pkg rm "
+"<replaceable>PACKAGE_NAME</replaceable></command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:199
@@ -358,6 +384,9 @@ msgid ""
 "file system, make sure your system is booted into the next to last snapshot "
 "and run: <command>transactional-update rollback</command>"
 msgstr ""
+"For at fortryde det sidste snapshot, det vil sige det sidste sæt ændringer "
+"til rodfilsystemet, skal du sikre dig, at dit system anvender det næstsidste "
+"snapshot og køre: <command>transactional-update rollback</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:205
@@ -365,6 +394,8 @@ msgid ""
 "Optionally, add a snapshot ID to the end of the command to rollback to a "
 "specific ID."
 msgstr ""
+"Valgfrit, tilføj et snapshot-ID i slutningen af kommandoen for at fortryde "
+"til et specifikt ID."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:211
@@ -374,6 +405,10 @@ msgid ""
 "systemd-based and if necessary can be disabled using <command>systemctl</"
 "command>:"
 msgstr ""
+"Når du bruger denne systemrolle, vil systemet som standard udføre en daglig "
+"opdatering og genstart mellem kl. 03:30 og 05:00. Begge handlinger er "
+"systemd-baserede og kan om nødvendigt deaktiveres ved hjælp af "
+"<command>systemctl</command>:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:217
@@ -397,7 +432,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:227
 msgid "Installing on Hard Disks With Less Than 12 GB of Capacity"
-msgstr ""
+msgstr "Installation på harddiske med mindre end 12 GB kapacitet"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:229
@@ -407,6 +442,10 @@ msgid ""
 "small virtual machines images, use the guided partitioner to tune "
 "partitioning parameters manually."
 msgstr ""
+"Installationsprogrammet vil kun foreslå et partitioneringsskema, hvis den "
+"tilgængelige harddiskstørrelse er større end 12 GB. Hvis du for eksempel vil "
+"oprette meget små virtuelle maskinebilleder, kan du bruge den guidede "
+"partitioneringsværktøj til manuelt at justere partitioneringsparametre."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:238
@@ -535,12 +574,12 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:327
 msgid "Packaging Changes"
-msgstr ""
+msgstr "Pakkeændringer"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:330
 msgid "Deprecated Packages"
-msgstr ""
+msgstr "Forældede pakker"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:331
@@ -550,6 +589,10 @@ msgid ""
 "exist to aid migration, but their use is discouraged and they may not "
 "receive updates."
 msgstr ""
+"Forældede pakker bliver stadig leveret som en del af distributionen, men er "
+"planlagt til at blive fjernet i den næste version af openSUSE Leap. Disse "
+"pakker findes for at hjælpe med migration, men deres brug frarådes, og de "
+"modtager muligvis ikke opdateringer."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:349
@@ -573,7 +616,7 @@ msgstr "Fjernede pakker"
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:359
 msgid "Removed packages are not shipped as part of the distribution anymore."
-msgstr ""
+msgstr "Fjernede pakker leveres ikke længere som en del af distributionen."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:365
