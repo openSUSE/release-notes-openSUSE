@@ -1,0 +1,597 @@
+openSUSE Leap Releaseinformation #
+Publiceringsdatum: 2025-05-05
+
+1 Om versionskommentarerna
+2 openSUSE Leap Version 16.0
+3 Hämta källkoden
+4 Juridiska meddelanden
+
+openSUSE Leap är ett modernt, modulärt operativsystem för både multimodal och traditionell IT. Detta dokument ger en översikt över funktioner, möjligheter och begränsningar, och lyfter fram viktiga produktuppdateringar.
+1 Om versionsinformationen #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: id-about-the-release-notes
+
+Dessa versionskommentarer är identiska för alla arkitekturer, och den senaste versionen är alltid tillgänglig online på https://doc.opensuse.org.
+
+Poster listas bara en gång, men de kan refereras till på flera ställen om de är viktiga och tillhör mer än ett avsnitt.
+
+Versionsinformation listar vanligtvis bara ändringar som skett mellan två efterföljande utgåvor. Vissa viktiga poster från versionsinformationen för tidigare produktversioner upprepas. För att göra dessa poster lättare att identifiera innehåller de en anmärkning om detta.
+
+Upprepade poster tillhandahålls dock endast som en artighet. Om du hoppar över ett eller flera servicepaket bör du därför även kontrollera versionsinformationen för de överhoppade servicepaketen. Om du bara läser versionsinformationen för den aktuella versionen kan du missa viktiga ändringar.
+1.1 Dokumentation och annan information #
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: intro-documentation
+
+1.1.1 Tillgängligt på produktmediet #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: intro-documentation-media
+
+Läs README-filerna på mediat.
+
+Hämta detaljerad information om ändringsloggen för ett visst paket från RPM (där FILNAMN.rpm är namnet på RPM):
+    rpm --changelog -qp FILENAME.rpm
+
+Kontrollera ChangeLog-filen på den översta nivån av installationsmediet för en kronologisk logg över alla ändringar som gjorts i de uppdaterade paketen.
+
+
+Hitta mer information i docu-katalogen i installationsmediet för openSUSE Leap. Den här katalogen innehåller PDF-versioner av snabbstartsguiden för installation av openSUSE Leap.
+Hämta en lista över manualsidor med användningsinformation om ett visst paket från RPM (där FILNAMN.rpm är namnet på RPM):
+    rpm --docfiles -qp FILENAME.rpm | grep man
+
+1.1.2 Online-dokumentation #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: intro-documentation-external
+
+För den mest aktuella versionen av dokumentationen för openSUSE Leap, se:
+2 openSUSE Leap Version 16.0 #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-opensuse-leap-version-16-0
+
+Denna versionsinformation gäller för openSUSE Leap 16.0.
+
+2.1 Ändringar som påverkar alla arkitekturer #
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-changes-affecting-all-architectures
+
+2.1.1 Optimerade bibliotek för nyare hårdvaruarkitekturer #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: jsc-PED-12297
+
+Vi har lagt till stöd för funktionen glibc-HWCAPS som automatiskt laddar optimerade versioner av bibliotek för specifika nyare processorer.
+
+Bygginfrastrukturen för den här funktionen är aktiverad för följande bibliotek:
+
+    blosc2
+
+    boost
+
+    brotli
+
+    bzip2
+
+    flac
+
+    jsoncpp
+
+    lame
+
+    leveldb
+
+    libdb-4_8
+
+    libgcrypt
+
+    libiscsi
+
+    libjpeg-turbo
+
+    libjxl
+
+    libmng
+
+    libnettle
+
+    libpng16
+
+    libvorbis
+
+    libxmlb
+
+    lz4
+
+    lzo
+
+    openjpeg2
+
+    openssl-3
+
+    python311
+
+    python313
+
+    sqlite3
+
+    talloc
+
+    tree-sitter
+
+    wavpack
+
+    xxhash
+
+    xz
+
+    zlib
+
+    zopfli
+
+    zstd
+
+2.1.2 Ingen fjärrinloggning till root med lösenord #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: bsc-1240889
+
+Varning Varning
+
+Om du installerar systemet med endast ett root-lösenord och inte anger en SSH-nyckel för root-användaren, kommer sshd inte att aktiveras automatiskt efter installationen. Du kommer inte att kunna logga in på distans som root med lösenordet.
+
+Som standard är fjärrinloggning baserad på lösenord för root inaktiverad. Installationsprogrammet aktiverar endast sshd-tjänsten när en SSH-nyckel för root konfigureras under installationen. För att tillåta fjärrinloggning för root, konfigurera en SSH-nyckel för root under installationen.
+2.1.3 Standardtilldelning av användargrupp ändrad #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: bsc-1240989
+
+Tidigare tillhörde alla användarkonton en enda användargrupp.
+
+Nu istället för att läggas till i den gemensamma användargruppen, får varje ny användare nu sin egen primära grupp som matchar deras användarnamn. Detta beror på att USERGROUPS_ENAB är aktiverat i /usr/etc/login.defs. Denna ändring påverkar alla nya installationer och uppgraderade system som inte ändrade standardinställningen /etc/login.defs. Detta har flera konsekvenser:
+
+Filer som skapats av nya användare är som standard inte gruppläsbara
+Konfigurationer som använde den primära användargruppen som ett villkor fungerar inte längre
+
+Konfigurationer som använde den primära eller sekundära användargruppen som ett villkor måste manuellt läggas till användargruppen i dessa användarkonton för att fortsätta fungera, till exempel för @users i sudoers-filen.
+
+Hemkataloger som ärvts från ett tidigare system behöver standardisera filernas GID genom att köra: find "$HOME" -group users -exec chgrp myuser {} \;, eller chgrp -R myuser "$HOME" om du inte använde något annat GID än users.
+
+2.1.4 Stöd för SysV init.d-skript #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: jsc-PED-12156
+
+SysV init.d-skript har varit föråldrade sedan Leap 15 SP2.
+
+I Leap 16.0 har stödet för SysV init.d-skript tagits bort.
+
+2.2 Ändringar som påverkar alla arkitekturer (Beta4) #
+    Filenamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-changes-affecting-all-architectures-beta4
+
+2.2.1 SAP-arbetsbelastningar på Leap 16.0 #
+
+    Filenamn: /github/workspace/build/.profiled/noprofile/
+    ID: jsc-DOCTEAM-1829
+
+För att köra SAP-arbetsbelastningar på openSUSE Leap 16.0, gör följande:
+
+Kör dessa kommandon:
+
+    semanage boolean -m --on selinuxuser_execmod
+    semanage boolean -m --on unconfined_service_transition_to_confined_user
+    semanage permissive -a snapper_grub_plugin_t
+
+Starta om maskinen.
+
+    Kör restorecon -Rv /.
+
+2.3 Ändringar som påverkar alla arkitekturer (Beta3) #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-changes-affecting-all-architectures-beta3
+
+2.3.1 firewalld kan inte användas med många gränssnitt #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: jsc-DOCTEAM-1767
+
+På grund av en uppströmsbugg kan det ta lång tid eller ta en timeout för firewalld när många gränssnitt läggs till. Felet uppstår när firewalld startas om efter att en sådan konfiguration har tillämpats. Följande meddelande visas i systemloggarna:
+
+FEL:dbus.proxies:Introspect-fel på :1.18:/org/fedoraproject/FirewallD1: dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NoReply: Fick inget svar.
+Möjliga orsaker inkluderar: fjärrapplikationen skickade inget svar, meddelandebussens säkerhetspolicy blockerade svaret, svarstiden gick ut eller nätverksanslutningen bröts.
+
+Se https://github.com/firewalld/firewalld/issues/1399 för mer information.
+
+2.4 Ändringar som påverkar alla arkitekturer (Beta2) #
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-changes-affecting-all-architectures-beta2
+
+2.4.1 Byte från YaST till Cockpit #
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: bsc-1237605
+
+openSUSE Leap 16.0 har bytt från YaST till Cockpit för manuell systemadministration. Vi har förbättrat Cockpit med nya moduler i syfte att uppgradera dem senare. Trots att de är funktionella kan buggar uppstå och funktioner kan saknas.
+
+Nya moduler
+
+    cockpit-subscriptions: registrera, avregistrera och visa SUSE Linux Enterprise-registreringar. Fungerar ännu inte för oprivilegierade användare.
+
+    cockpit-repositories: läg till, ta bort, visa arkiv, ändra inställningar och uppdatera dem. Fungerar ännu inte för användare utan privilegier.
+
+    cockpit-packages: visa installerade paket, sök tillgängliga förråd, installera och avinstallera paket. Kräver administrativ åtkomst. Var medveten om att det inte finns några säkerhetsåtgärder implementerade vad gäller systemanvändbarhet.
+
+Förbättrade moduler
+
+    cockpit-packagekit: uppdatera paket från tillgängliga förråd. Modulen tillåter nu att individuellt välja paket att uppdatera.
+
+Uppströmsmoduler
+
+cockpit, cockpit-bridge, cockpit-kdump, cockpit-machines, cockpit-networkmanager, cockpit-podman, cockpit-selinux, cockpit-storaged, cockpit-system, cockpit-ws: Dessa moduler är uppdaterade till den senaste stabila basversionen 332 (eller respektive).
+
+Standardval
+
+Installation av mönstret cockpit kommer att hämta följande moduler: cockpit, cockpit-bridge, cockpit-networkmanager, cockpit-packagekit, cockpit-packages, cockpit-repos, cockpit-selinux, cockpit-storaged, cockpit-subscriptions, cockpit-system, cockpit-ws.
+
+2.4.2 dovecot 2.4 konfigurationsuppgradering #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: jsc-DOCTEAM-1714
+
+I openSUSE Leap 16.0 har dovecot uppgraderats till version 2.4. Konfigurationen av denna version är inkompatibel med tidigare versioner.
+
+Konfigurationen måste uppdateras manuellt. För mer information, se  https://doc.dovecot.org/2.4.0/installation/upgrade/2.3-to-2.4.html.
+
+2.5 Ändringar som påverkar alla arkitekturer (Beta1)
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-changes-affecting-all-architectures-beta1
+
+2.5.1 Vilka avbilder ingår i Beta1 #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: jsc-DOCTEAM-1700
+
+2.5.1.1 Onlineinstallationsprogram baserat på Agama (samma för SLES och SLES SAP): #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-online-installer-based-on-agama-same-for-sles-sles-sap
+
+    agama-installer.aarch64-11.0.0-SLE-Beta1.iso
+
+    agama-installer.ppc64le-11.0.0-SLE-Beta1.iso
+
+    agama-installer.s390x-11.0.0-SLE-Beta1.iso
+
+    agama-installer.x86_64-11.0.0-SLE-Beta1.iso
+
+2.5.1.2 Offline-installationsprogram baserat på Agama #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-offline-installer-based-on-agama
+
+    SLES 16.0
+
+        SLES-16.0-ppc64le-Beta1.install.iso
+
+        SLES-16.0-s390x-Beta1.install.iso
+
+        SLES-16.0-x86_64-Beta1.install.iso
+
+    SLES SAP 16.0
+
+        SLES-SAP-Packages-16.0-ppc64le-Beta1.install.iso
+
+        SLES-SAP-Packages-16.0-x86_64-Beta1.install.iso
+
+2.5.1.3 Minimal VM och minimala avbilder #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-minimal-vm-and-minimal-image-images
+
+    SLES16-Minimal-Image.aarch64-RaspberryPi-Beta1.raw.xz
+
+    SLES16-Minimal-Image.s390x-s390x-dasd-Beta1.raw.xz
+
+    SLES16-Minimal-Image.s390x-s390x-dasd-Cloud-Beta1.raw.xz
+
+    SLES16-Minimal-Image.s390x-s390x-fba-Beta1.raw.xz
+
+    SLES16-Minimal-Image.s390x-s390x-fba-Cloud-Beta1.raw.xz
+
+    SLES16-Minimal-VM.aarch64-Cloud-Beta1.qcow2
+
+    SLES16-Minimal-VM.aarch64-kvm-Beta1.qcow2
+
+    SLES16-Minimal-VM.s390x-s390x-Cloud-Beta1.qcow2
+
+    SLES16-Minimal-VM.s390x-s390x-kvm-Beta1.qcow2
+
+    SLES16-Minimal-VM.x86_64-Cloud-Beta1.qcow2
+
+    SLES16-Minimal-VM.x86_64-kvm-and-xen-Beta1.qcow2
+
+    SLES16-Minimal-VM.x86_64-MS-HyperV-Beta1.vhdx.xz
+
+    SLES16-Minimal-VM.x86_64-VMware-Beta1.vmdk
+
+    SLES16-Minimal-VM.x86_64-VMware-Beta1.vmx
+
+2.5.1.4 Paket-avbilder #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-packages-images
+
+    SLES-HA-16.0-aarch64-Beta1-Debug.iso
+
+    SLES-HA-16.0-aarch64-Beta1.iso
+
+    SLES-HA-16.0-aarch64-Beta1-Source.iso
+
+    SLES-HA-16.0-ppc64le-Beta1-Debug.iso
+
+    SLES-HA-16.0-ppc64le-Beta1.iso
+
+    SLES-HA-16.0-ppc64le-Beta1-Source.iso
+
+    SLES-HA-16.0-s390x-Beta1-Debug.iso
+
+    SLES-HA-16.0-s390x-Beta1.iso
+
+    SLES-HA-16.0-s390x-Beta1-Source.iso
+
+    SLES-HA-16.0-x86_64-Beta1-Debug.iso
+
+    SLES-HA-16.0-x86_64-Beta1.iso
+
+    SLES-HA-16.0-x86_64-Beta1-Source.iso
+
+    SLES-Packages-16.0-aarch64-Beta1-Debug.iso
+
+    SLES-Packages-16.0-aarch64-Beta1.iso
+
+    SLES-Packages-16.0-aarch64-Beta1-Source.iso
+
+    SLES-Packages-16.0-ppc64le-Beta1-Debug.iso
+
+    SLES-Packages-16.0-ppc64le-Beta1.iso
+
+    SLES-Packages-16.0-ppc64le-Beta1-Source.iso
+
+    SLES-Packages-16.0-s390x-Beta1-Debug.iso
+
+    SLES-Packages-16.0-s390x-Beta1.iso
+
+    SLES-Packages-16.0-s390x-Beta1-Source.iso
+
+    SLES-Packages-16.0-x86_64-Beta1-Debug.iso
+
+    SLES-Packages-16.0-x86_64-Beta1.iso
+
+    SLES-Packages-16.0-x86_64-Beta1-Source.iso
+
+    SLES-SAP-Packages-16.0-ppc64le-Beta1-Debug.iso
+
+    SLES-SAP-Packages-16.0-ppc64le-Beta1.iso
+
+    SLES-SAP-Packages-16.0-ppc64le-Beta1-Source.iso
+
+    SLES-SAP-Packages-16.0-x86_64-Beta1-Debug.iso
+
+    SLES-SAP-Packages-16.0-x86_64-Beta1.iso
+
+    SLES-SAP-Packages-16.0-x86_64-Beta1-Source.iso
+
+2.5.2 Diskkonfigurationsgränssnitt under installationen #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: bsc-1235855
+
+För närvarande lider det av dålig användbarhet att välja andra diskkonfigurationer än "En befintlig disk" (installation till en enda disk). Detta förväntas ändras i en framtida uppdatering.
+2.5.3 Icke-fungerande zypper efter installation #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: bsc-1236813
+
+Det finns för närvarande ett känt problem som lägger till ett icke-fungerande zypper-arkiv vilket förhindrar att zypper fungerar korrekt.
+
+För att åtgärda problemet, ta bort det aktuella förrådet och lägg till installationsmediets arkiv manuellt:
+
+    Ta bort förrådet med zypper rr. För att ta bort det första förrådet, kör till exempel: zypper rr 1.
+
+Lägg till installationsmediet som arkiv genom att köra zypper ar hd:/install?device=/dev/disk/by-label/agama-installer medium (mediet i slutet är ett namn du vill ge förrådet).
+
+Kör zypper refresh för att uppdatera det tillagda förrådet.
+
+2.5.4 systemd använder cgroup v2 som standard #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: jsc-PED-6311
+
+openSUSE Leap 16.0 använder cgroup v2 som standard och v1 stöds inte. Om du behöver använda cgroup v1 kan SLES 15 SP6 växlas till hybridläge med hjälp av en uppstartsparameter.
+
+2.6 IBM Z-specifika ändringar (s390x) #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: ibm-z
+
+2.6.1 parmfile pekar nu på ISO #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: bsc-1235858
+
+Tidigare pekade parmfile till en katalog med ouppackade filer.
+
+Nu behöver den peka till en loopmonterad ISO via FTP. Till exempel:
+root=live:ftp://$SERVER_URL/install/agama-online.iso
+agama.install_url=ftp://$SERVER_URL/install/agama
+
+För mer information se https://agama-project.github.io/docs/user/boot_options.
+
+2.6.2 Problem med diskval i gränssnittet under installationen #
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: bsc-1235857
+
+Om du vill aktivera en disk klickar du på Lagring i den vänstra panelen, sedan Installera nytt system och väljer "lagringstekniker". Sedan kan du välja en disktyp. Detta kan undvikas om du har definierat din parmfile enligt beskrivningen i avsnitt 2.6.1, "parmfile pekar nu på ISO".
+
+Om du väljer DASD bör du se diskar baserat på din parmfil och cio_ignore-konfiguration. Välj sedan en disk och aktivera den genom att klicka på Utför en åtgärd och sedan Aktivera. Detta kan ta en stund. Om den inte syns måste du klicka på Lagring eller uppdatera sidan.
+
+I zFCP-sektionen, efter att en disk har aktiverats, kommer en grå linje att visas. Detta är bara en visuell bugg, disken kommer att aktiveras korrekt.
+
+2.6.3 Installationsfel på zVM #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-installation-failure-on-zvm
+
+På grund av ett byte från linuxrc till dracut är parmfilen tom, vilket kan resultera i ett installationsfel.
+
+Som en lösning kan parmfile fyllas med ett dracut-liknande alternativ, till exempel:
+
+root=live:ftp://$IP_ADDRESS/install/agama-online.iso
+
+2.7 POWER-specifika ändringar (ppc64le) #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: power
+
+Informationen i det här avsnittet gäller openSUSE Leap för POWER 16.0.
+2.7.1 KVM-gäster i LPAR #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: jsc-PED-12179
+
+Möjligheten att köra KVM-gäster i en LPAR är en ny funktion i PowerVM Firmware 1060.10-versionen och stöds i openSUSE Leap 16.0. Detta gör det möjligt för användare att köra KVM-gäster i en PowerVM LPAR, vilket ger IBM PowerVM en branschstandardiserad Linux KVM-virtualiseringsstack, som enkelt integreras med befintliga Linux-virtualiseringsekosystem. Detta möjliggör många intressanta användningsområden som tidigare var svåra att realisera i en PowerVM LPAR.
+
+KVM i en PowerVM LPAR är en ny typ av LPAR (logisk partition) som tillåter openSUSE Leap 16.0-kärnan att vara värd för KVM-gäster inuti en LPAR på PowerVM. En KVM-aktiverad LPAR tillåter vanliga Linux KVM-verktyg (till exempel virsh) att skapa och hantera lätta Linux virtuella maskiner (VM). En KVM Linux LPAR använder dedikerade kärnor som gör det möjligt för Linux att ha full kontroll över när Linux virtuella maskiner är schemalagda att köras, precis som KVM på andra plattformar.
+2.8 Virtualisering #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: virtualization
+
+2.8.1 QEMU #
+
+    File Name: /github/workspace/build/.profiled/noprofile/
+    ID: virtualization-qemu
+
+QEMU har uppdaterats till version 9.2.2, en fullständig lista över ändringar finns på https://wiki.qemu.org/ChangeLog/9.2
+
+Höjdpunkter inkluderar: * Borttagna funktioner: https://qemu-project.gitlab.io/qemu/about/removed-features.html * Föråldrade funktioner: https://qemu-project.gitlab.io/qemu/about/deprecated.html
+2.8.2 libvirt #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: virtualization-libvirt
+
+libvirt har uppdaterats till version 11.2.0, detta inkluderar många stegvisa förbättringar och buggfixar, se https://libvirt.org/news.html#v11-2-0-2025-04-01
+
+libvirt tillhandahåller nu modulära daemoner.
+2.8.3 VMware #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: virtualization-vmware
+
+2.8.3.1 open-vm-tools #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-open-vm-tools
+
+open-vm-tools har uppdaterats till version 12.5.0, vilket åtgärdar några kritiska problem och buggfixar. Se https://github.com/vmware/open-vm-tools/blob/stable-12.5.0/ReleaseNotes.md
+2.8.4 Övriga #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: virtualization-other
+
+2.8.4.1 libguestfs #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-libguestfs
+
+libguestfs har uppdaterats till version 1.55.6.
+2.8.4.2 virt-v2v #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-virt-v2v
+
+Uppdatering till version 2.7.7. Se de viktigaste ändringarna på: https://libguestfs.org/virt-v2v-release-notes-2.7.7.html
+
+Implementera --parallel=N för parallella diskkopior
+
+Uppdaterade översättningar
+
+Diverse korrigeringar
+2.8.4.3 sevctl #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-sevctl
+
+sevctl-paketet har uppdaterats till version 0.6.0.
+2.8.4.4 snpguest #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-snpguest
+
+snpguest-paketet har uppdaterats till version 7.1.
+2.8.4.5 virtiofsd #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-virtiofsd
+
+virtiofsd har uppdaterats till 1.12.0.
+2.8.4.6 virt-manager #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-virt-manager
+
+virt-manager levereras nu i version 5.0.0. Spice och XML-redigering är inte tillgängliga i den här versionen. Du bör konfigurera VNC för fjärrvisning och göra all XML-redigering med hjälp av virsh-kommandot. En fullständig lista över ändringar finns på https://github.com/virt-manager/virt-manager/releases/tag/v5.0.0
+2.9 Borttagna och föråldrade funktioner och paket #
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: removed-deprecated
+
+Det här avsnittet listar funktioner och paket som har tagits bort från openSUSE Leap eller kommer att tas bort i kommande versioner.
+2.9.1 Borttagna funktioner och paket #
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: removed
+
+Följande funktioner och paket har tagits bort i den här versionen.
+
+    netiucv och lcs drivrutiner
+
+Avsnitt 2.1.4, ”Stöd för SysV init.d-skript”
+
+2.10 Föråldrade funktioner och paket #
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: deprecated
+
+Följande funktioner och paket är föråldrade och kommer att tas bort i en framtida version av openSUSE Leap.
+
+2MB OVMF-avbildningen kommer att föråldras och tas bort i openSUSE Leap 16.1.
+
+3 Hämta källkod #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-obtaining-source-code
+
+Denna SUSE-produkt innehåller material som licensierats till SUSE under GNU General Public License (GPL). GPL kräver att SUSE tillhandahåller källkoden som motsvarar det GPL-licensierade materialet. Källkoden finns tillgänglig för nedladdning på https://get.opensuse.org på Medium 2. I upp till tre år efter distributionen av SUSE-produkten kommer SUSE på begäran att skicka en kopia av källkoden. Skicka förfrågningar via e-post till sle_source_request@suse.com. SUSE kan ta ut en rimlig avgift för att täcka distributionskostnader.
+4 Juridiska meddelanden #
+
+    Filnamn: /github/workspace/build/.profiled/noprofile/
+    ID: v160-legal-notices
+
+LICENSE AGREEMENT openSUSE® Leap 15.6
+
+This agreement governs your download, installation, or use of openSUSE Leap 15.6 and its updates, regardless of the delivery mechanism. openSUSE Leap 15.6 is a collective work under US Copyright Law. Subject to the following terms, The openSUSE Project grants to you a license to this collective work pursuant to the GNU General Public License version 2. By downloading, installing, or using openSUSE Leap 15.6, you agree to the terms of this agreement.
+
+openSUSE Leap 15.6 is a modular Linux operating system consisting of hundreds of software components. The license agreement for each component is generally located in the component's source code. With the exception of certain files containing the “openSUSE” trademark discussed below, the license terms for the components permit you to copy and redistribute the component. With the potential exception of certain firmware files, the license terms for the components permit you to copy, modify, and redistribute the component, in both source code and binary code forms. This agreement does not limit your rights under, or grant you rights that supersede, the license terms of any particular component.
+
+openSUSE Leap 15.6 and each of its components, including the source code, documentation, appearance, structure, and organization, are copyrighted by The openSUSE Project and others and are protected under copyright and other laws. Title to openSUSE Leap 15.6 and any component, or to any copy, will remain with the aforementioned or its licensors, subject to the applicable license. The "openSUSE" trademark is a trademark of SUSE, LLC. in the US and other countries and is used by permission. This agreement permits you to distribute unmodified or modified copies of openSUSE Leap 15. using the “openSUSE” trademark on the condition that you follow The openSUSE Project’s trademark guidelines located at http://en.opensuse.org/Legal. You must abide by these trademark guidelines when distributing openSUSE Leap 15.6, regardless of whether openSUSE Leap 15.6 has been modified.
+
+Except as specifically stated in this agreement or a license for a particular component, TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, OPENSUSE Leap 15.6 AND THE COMPONENTS ARE PROVIDED AND LICENSED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT, OR FITNESS FOR A PARTICULAR PURPOSE. The openSUSE Project does not warrant that the functions contained in openSUSE Leap 15.6 will meet your requirements or that the operation of openSUSE Leap 15.6 will be entirely error free or appear precisely as described in the accompanying documentation. USE OF OPENSUSE Leap 15.6 IS AT YOUR OWN RISK.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE OPENSUSE PROJECT (AND ITS LICENSORS, SUBSIDIARIES, AND EMPLOYEES) WILL NOT BE LIABLE TO YOU FOR ANY DAMAGES, INCLUDING DIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, LOST PROFITS, OR LOST SAVINGS ARISING OUT OF THE USE OR INABILITY TO USE OPENSUSE Leap 15.6, EVEN IF THE OPENSUSE PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN A JURISDICTION THAT LIMITS THE EXCLUSION OR LIMITATION OF DAMAGES, THE OPENSUSE PROJECT’S (AND ITS LICENSORS’, SUBSIDIARIES’, AND EMPLOYEES’) AGGREGATE LIABILITY IS LIMITED TO $50US, OR IF SUCH A LIMITATION IS NOT ALLOWED, IS LIMITED TO THE MAXIMUM EXTENT ALLOWED.
+
+You acknowledge that openSUSE Leap 15.6 is subject to the U.S. Export Administration Regulations (the “EAR”) and you agree to comply with the EAR. You will not export or re-export openSUSE Leap 15.6 directly or indirectly, to: (1) any countries that are subject to US export restrictions; (2) any end user who you know or have reason to know will utilize openSUSE Leap 15.6 in the design, development or production of nuclear, chemical or biological weapons, or rocket systems, space launch vehicles, and sounding rockets, or unmanned air vehicle systems, except as authorized by the relevant government agency by regulation or specific license; or (3) any end user who has been prohibited from participating in the US export transactions by any federal agency of the US government. By downloading or using openSUSE Leap 15.6, you are agreeing to the foregoing and you are representing and warranting that You are not located in,under the control of, or a national or resident of any such country or on any such list. In addition, you are responsible for complying with any local laws in Your jurisdiction which may impact Your right to import, export or use openSUSE Leap 15.6. Please consult the Bureau of Industry and Security web page www.bis.doc.gov before exporting items subject to the EAR. It is your responsibility to obtain any necessary export approvals.
+
+If any provision of this agreement is held to be unenforceable, that will not affect the enforceability of the remaining provisions. This agreement will be governed by the laws of the State of Utah and of the US, without regard to any conflict of laws provisions, except that the United Nations Convention on the International Sale of Goods will not apply. This agreement sets forth the entire understanding and agreement between you and The openSUSE Project regarding its subject matter and may be amended only in a writing signed by both parties. No waiver of any right under this agreement will be effective unless in writing, signed by a duly authorized representative of the party to be bound. No waiver of any past or present right arising from any breach or failure to perform will be deemed to be a waiver of any future right arising under this agreement. Use, duplication, or disclosure by the U.S. Government is subject to the restrictions in FAR 52.227-14 (Dec 2007) Alternate III (Dec 2007), FAR 52.227-19 (Dec 2007), or DFARS 252.227-7013(b)(3) (Nov 1995), or applicable successor clauses.
+
+Copyright © 2008-2025 The openSUSE Project. All rights reserved. "SUSE" and "openSUSE" are registered trademarks of SUSE LLC, or its affiliates, which founded, sponsors, and is designated by, The openSUSE Project. "Linux" is a registered trademark of Linus Torvalds. All other trademarks are the property of their respective owners. 
