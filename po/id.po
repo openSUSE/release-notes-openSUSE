@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
 "PO-Revision-Date: 2025-10-04 06:59+0000\n"
-"Last-Translator: \"James \\\"Jim\\\" Ed Randson\" <jimedrand@disroot.org>\n"
+"Last-Translator: Ferdinan Rizky Budiarto <ferdinan.rizky@yahoo.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/"
 "release-notes-opensuse/leap-15_3/id/>\n"
 "Language: id\n"
@@ -22,7 +22,8 @@ msgstr ""
 "Penerjemah\n"
 "M. Edwin Zakaria <medwin@opensuse.org>, 2016, 2018, 2019\n"
 "Andika Triwidada <andika@gmail.com>, 2019, 2020\n"
-"Kukuh Syafaat <cho2@opensuse.org>, 2022-2023"
+"Kukuh Syafaat <cho2@opensuse.org>, 2022-2023\n"
+"Ferdinan Rizky <ferdinan.rizky@yahoo.com>, 2024-2025"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -175,7 +176,7 @@ msgid ""
 "Major new features of openSUSE Leap 15.3 are also listed at <link xlink:href="
 "\"https://en.opensuse.org/Features_15.3\"/>."
 msgstr ""
-"Fitur baru utama dari openSUSE Leap 15.3 juga  terdafar pada <link href="
+"Fitur baru utama dari openSUSE Leap 15.3 juga terdafar pada <link href="
 "\"https://www.opensuse.org/Features_15.3\"/>."
 
 #. (itstool) path: sect1/title
@@ -219,6 +220,22 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"Konfigurasi pemeliharaan openSUSE Leap 15.3 terdiri atas tiga repositori "
+"pembaruan utama, yaitu: <literal>repo-update</literal>, <literal>repo-"
+"backports-update</literal>, dan <literal>repo-sle-update</literal>. Dua "
+"repositori terakhir merupakan komponen baru yang berasal dari pemanfaatan "
+"ulang binary SUSE Linux Enterprise. Seluruh repositori ini tersedia serta "
+"diperiksa selama proses instalasi daring openSUSE Leap, dan pengguna "
+"disarankan untuk mengaktifkannya. Definisi repositori pembaruan baru untuk "
+"openSUSE Leap 15.3 akan didistribusikan melalui pembaruan pemeliharaan 0day "
+"pada paket <package>openSUSE-release</package>. Pembaruan tersebut "
+"disalurkan melalui kanal pemeliharaan <literal>repo-update</literal>. "
+"Pembaruan ini membawa penanda khusus yang menunjukkan adanya perubahan pada "
+"area manajemen perangkat lunak, sehingga diproses secara khusus oleh zypper. "
+"Pengguna disarankan untuk melakukan verifikasi dengan menjalankan perintah "
+"<command>zypper up</command> guna memastikan seluruh pembaruan telah "
+"diterapkan. Informasi lebih lanjut tersedia pada <link xlink:href="
+"\"https://bugzilla.opensuse.org/show_bug.cgi?id=1186593\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -229,8 +246,11 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
-"Repositori <literal>repo-update</literal> ini untuk pembaruan openSUSE Leap "
-"(OSS)."
+"Repositori <literal>repo-update</literal> digunakan untuk pembaruan openSUSE "
+"Leap (OSS). Ini merupakan repositori terkecil dan berisi paket konfigurasi "
+"sistem, termasuk paket rilis, branding, serta kemungkinan fork dari paket "
+"SUSE Linux Enterprise. Repositori ini juga memiliki varian <literal>debug-"
+"info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -240,6 +260,10 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Repositori <literal>repo-backports-update</literal> merupakan repositori "
+"pembaruan untuk openSUSE Backports yang berisi pembaruan bagi sebagian besar "
+"paket openSUSE Leap. Repositori ini juga memiliki varian <literal>debug-"
+"info</literal>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -249,6 +273,10 @@ msgid ""
 "Enterprise update streams. This repository is without the <literal>debug-"
 "info</literal> variant."
 msgstr ""
+"Repositori ketiga, yaitu <literal>repo-sle-update</literal>, merupakan "
+"repositori pembaruan yang berisi gabungan pembaruan dari seluruh update "
+"stream SUSE Linux Enterprise yang masih aktif. Repositori ini tidak memiliki "
+"varian <literal>debug-info</literal>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -496,7 +524,7 @@ msgstr ""
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:270
 msgid "UEFI—Unified Extensible Firmware Interface"
-msgstr "UEFI—Unified Extensible Firmware Interface"
+msgstr "UEFI — Unified Extensible Firmware Interface"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:271
@@ -538,13 +566,13 @@ msgid ""
 "recommends."
 msgstr ""
 "openSUSE meminimalkan risiko dengan tidak menulis lebih dari jumlah minimum "
-"yang diperlukan untuk boot ke OS. Minimum berarti memberi tahu perangkat "
-"tegar (firmware) UEFI tentang lokasi pemuat boot (boot loader) openSUSE. "
-"Fitur kernel Linux hulu yang menggunakan area penyimpanan UEFI untuk "
-"menyimpan informasi boot dan kres (<literal>pstore</literal>) telah "
-"dinonaktifkan secara bawaan. Namun demikian, disarankan untuk memasang "
-"pemutakhiran perangkat tegar (firmware) apa pun yang direkomendasikan oleh "
-"vendor perangkat keras."
+"yang diperlukan untuk mem-boot sistem operasi. Jumlah minimum tersebut "
+"berarti hanya memberi tahu firmware UEFI mengenai lokasi boot loader "
+"openSUSE. Fitur upstream kernel Linux yang menggunakan area penyimpanan UEFI "
+"untuk menyimpan informasi boot dan crash (<literal>pstore</literal>) "
+"dinonaktifkan secara bawaan. Meskipun demikian, disarankan untuk tetap "
+"memasang setiap pembaruan firmware yang direkomendasikan oleh vendor "
+"perangkat keras."
 
 # bnc#850056
 #. (itstool) path: sect2/title
@@ -605,7 +633,7 @@ msgstr "Untuk mengatasi masalah ini, konversi partisi MBR lama ke GPT."
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:323
 msgid "<literal>tlp</literal> package service"
-msgstr ""
+msgstr "Layanan paket <literal>tlp</literal>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:324
@@ -615,6 +643,11 @@ msgid ""
 "installation of recommended packages is enabled). This package provides "
 "additional tools to save battery power on laptops, especially Lenovo laptops."
 msgstr ""
+"Selama proses instalasi pada laptop, paket <literal>tlp</literal> akan "
+"dipasang (bersama dengan subpaket <literal>tlp-rdw</literal>, apabila "
+"instalasi paket yang direkomendasikan diaktifkan). Paket ini menyediakan "
+"perangkat tambahan untuk menghemat daya baterai pada laptop, khususnya "
+"laptop Lenovo."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:331
@@ -628,6 +661,15 @@ msgid ""
 "behavior afterward, for example, WiFi problems or non-functional USB ports, "
 "disable the service again."
 msgstr ""
+"Layanan ini tidak diaktifkan secara bawaan karena dapat mengganggu kinerja "
+"alat khusus laptop lainnya, misalnya <literal>laptop-mode-tools</literal>, "
+"<literal>rfkill</literal>, <literal>gnome-power-manager</literal>, atau "
+"<literal>kde-power-manager</literal>. Untuk mengaktifkan dan menjalankan "
+"layanan secara eksplisit, gunakan YaST Services Manager atau jalankan "
+"perintah: <literal>systemctl enable --now tlp.service</literal>. Apabila "
+"setelahnya Anda mengalami perilaku yang tidak diharapkan, misalnya masalah "
+"pada WiFi atau port USB yang tidak berfungsi, nonaktifkan kembali layanan "
+"tersebut."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:347
@@ -651,10 +693,8 @@ msgstr "Sebagai tambahan, periksa <xref linkend=\"removed-deprecated\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:375
-#, fuzzy
-#| msgid "Upgrading from openSUSE Leap 42.2"
 msgid "Seamless upgrade from openSUSE Leap 15.2"
-msgstr "Melakukan upgrade dari openSUSE Leap 42.2"
+msgstr "Peningkatan Versi Tanpa Hambatan dari openSUSE Leap 15.2"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:377
@@ -664,6 +704,10 @@ msgid ""
 "Leap Gap (CtLG) effort to bring openSUSE Leap and SUSE Linux Enterprise "
 "Server closer together."
 msgstr ""
+"openSUSE Leap 15.3 kini dibangun di atas binary RPM dari SUSE Linux "
+"Enterprise Server. Perubahan ini diperkenalkan sebagai bagian dari upaya "
+"Closing The Leap Gap (CtLG) untuk mendekatkan openSUSE Leap dengan SUSE "
+"Linux Enterprise Server."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:382
@@ -678,6 +722,16 @@ msgid ""
 "vendor-change</literal> during migration if you are using OBS repositories "
 "signed with other keys."
 msgstr ""
+"Berbeda dengan versi 15.2, instalasi bawaan openSUSE Leap 15.3 mencakup "
+"sebagian besar RPM dari SUSE Linux Enterprise Server. RPM tersebut "
+"ditandatangani oleh SUSE LLC, bukan menggunakan kunci openSUSE. Paket "
+"<package>libzypp</package> versi 12.25.8 memperkenalkan whitelist untuk "
+"pertukaran vendor antara SUSE LLC dan openSUSE guna memungkinkan migrasi "
+"tanpa hambatan. Whitelist ini menghilangkan kebutuhan untuk menyertakan opsi "
+"<literal>--allow-vendor-change</literal> khusus untuk pertukaran vendor "
+"antara openSUSE dan SUSE LLC. Namun, Anda mungkin tetap perlu menyertakan "
+"opsi <literal>--allow-vendor-change</literal> selama proses migrasi jika "
+"menggunakan repositori OBS yang ditandatangani dengan kunci lain."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:394
@@ -689,6 +743,13 @@ msgid ""
 "versions older than 12.25.8 (replace 15.0 below with your current openSUSE "
 "version):"
 msgstr ""
+"Rilis openSUSE Leap yang lebih lama dari versi 15.2 tidak memiliki fitur ini "
+"karena sudah tidak lagi didukung. Semua pengguna disarankan untuk "
+"meningkatkan versi ke openSUSE Leap 15.2 dengan pembaruan terbaru terlebih "
+"dahulu sebelum melakukan peningkatan ke 15.3. Parameter berikut dapat "
+"digunakan sebagai solusi sementara (workaround) untuk <package>libzypp</"
+"package> versi yang lebih lama dari 12.25.8 (gantikan angka 15.0 di bawah "
+"ini dengan versi openSUSE yang Anda gunakan saat ini):"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:403
@@ -699,6 +760,11 @@ msgid ""
 "zypper dup --allow-vendor-change --force-resolution\n"
 "  "
 msgstr ""
+"\n"
+"zypper addrepo --check --refresh --name 'openSUSE-Leap-15.0-Update' http://"
+"download.opensuse.org/update/leap/15.0/oss/ repo-update\n"
+"zypper dup --allow-vendor-change --force-resolution\n"
+"  "
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:408
@@ -708,6 +774,10 @@ msgid ""
 "<package>openSUSE-build-key</package> package. All the keys are also newly "
 "available inside the OSS repository."
 msgstr ""
+"openSUSE Leap 15.3 menyediakan seluruh kunci verifikasi RPM yang diperlukan, "
+"termasuk kunci milik SUSE Linux Enterprise Server, sebagai bagian dari paket "
+"<package>openSUSE-build-key</package>. Semua kunci tersebut juga kini "
+"tersedia di dalam repositori OSS."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:414
@@ -716,6 +786,10 @@ msgid ""
 "import the required keys that are identified as trusted. If it has, you will "
 "be notified about the import and no other action will be needed."
 msgstr ""
+"Paket <package>libzypp</package> versi 17.25.11 seharusnya secara otomatis "
+"mengimpor kunci yang diperlukan dan diidentifikasi sebagai tepercaya. Jika "
+"proses tersebut berhasil, Anda akan menerima pemberitahuan mengenai impor "
+"tersebut dan tidak diperlukan tindakan lain."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:419
@@ -724,12 +798,15 @@ msgid ""
 "<literal>repodata</literal>, you will need to import it manually. You can "
 "check by running the following command:"
 msgstr ""
+"Apabila sistem belum mengimpor kunci yang digunakan untuk menandatangani "
+"<literal>repodata</literal>, Anda perlu mengimpornya secara manual. Anda "
+"dapat memeriksanya dengan menjalankan perintah berikut:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:424
 #, no-wrap
 msgid "rpm -qa gpg-pubkey"
-msgstr ""
+msgstr "rpm -qa gpg-pubkey"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:425
@@ -738,6 +815,9 @@ msgid ""
 "<literal>gpg-pubkey-39db7c82-*</literal> If it does not, the do the "
 "following to import the key manually:"
 msgstr ""
+"Keluaran perintah seharusnya mencantumkan baris yang diawali dengan teks "
+"berikut: <literal>gpg-pubkey-39db7c82-*</literal> Apabila tidak muncul, "
+"lakukan langkah berikut untuk mengimpor kunci secara manual:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:431
@@ -746,6 +826,9 @@ msgid ""
 "download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-"
 "pubkey-39db7c82-5847eb1f.asc\"/>."
 msgstr ""
+"Unduh kunci SUSE Linux Enterprise 15 dari tautan berikut: <link xlink:href="
+"\"https://download.opensuse.org/distribution/leap/15.3/repo/oss/gpg-pubkey-"
+"39db7c82-5847eb1f.asc\"/>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:437
@@ -753,6 +836,9 @@ msgid ""
 "Save the key to the <literal>/var/cache/zypp/pubkeys</literal> directory. "
 "Rename it so that it ends with <literal>.key</literal>."
 msgstr ""
+"Simpan kunci tersebut ke direktori <literal>/var/cache/zypp/pubkeys</"
+"literal>. Ubah namanya sehingga diakhiri dengan ekstensi "
+"<literal>.key</literal>."
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:443
@@ -762,19 +848,20 @@ msgid ""
 "mentioned above. If the file contains multiple keys, zypper will import only "
 "the required key."
 msgstr ""
+"Jalankan perintah <literal>zypper dup</literal>. Anda akan diminta untuk "
+"mengimpor kunci yang belum ada. Hal ini akan tetap terjadi meskipun kunci "
+"tersebut sudah berada di direktori yang disebutkan sebelumnya. Jika berkas "
+"tersebut berisi beberapa kunci, zypper hanya akan mengimpor kunci yang "
+"diperlukan."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:452
-#, fuzzy
-#| msgid ""
-#| "For more information, see <link xlink:href=\"https://bugzilla.suse.com/"
-#| "show_bug.cgi?id=1044816\"/>."
 msgid ""
 "For more information, see <link xlink:href=\"https://bugzilla.opensuse.org/"
 "show_bug.cgi?id=1184326\"/>."
 msgstr ""
-"Untuk informasi lebih jauh, lihat <link xlink:href=\"https://bugzilla.suse."
-"com/show_bug.cgi?id=1044816\"/>."
+"Untuk informasi lebih lanjut, lihat <link xlink:href="
+"\"https://bugzilla.opensuse.org/show_bug.cgi?id=1184326\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:458
@@ -802,12 +889,12 @@ msgstr ""
 "Pada openSUSE Leap, kernel bawaan (default kernel) dibagi ke dalam tiga sub-"
 "paket: <package>kernel-default</package>, <package>kernel-default-extra</"
 "package>, dan <package>kernel-default-optional</package>. Hal yang sama, "
-"<package>kernel-preempt</package> juga dibagi ke dalam  <package>kernel-"
-"preempt</package>, <package>kernel-preempt-extra</package>, dan "
-"<package>kernel-preempt-optional</package>. Paket <literal>-optional</"
-"literal> berisi modul pilihan hanya untuk openSUSE Leap. Paket <literal>-"
-"extra</literal> berisi modul yang tidak didukung. Mode kernel preemption "
-"dapat dikontrol dengan mengatur parameter kernel <literal>preempt=voluntary</"
+"<package>kernel-preempt</package> juga dibagi ke dalam <package>kernel-"
+"preempt</package>, <package>kernel-preempt-extra</package>, dan <package"
+">kernel-preempt-optional</package>. Paket <literal>-optional</literal> "
+"berisi modul pilihan hanya untuk openSUSE Leap. Paket <literal>-extra</"
+"literal> berisi modul yang tidak didukung. Mode kernel preemption dapat "
+"dikontrol dengan mengatur parameter kernel <literal>preempt=voluntary</"
 "literal> melalui baris perintah. Parameter ini bekerja pada <package>kernel-"
 "default</package>."
 
@@ -849,6 +936,8 @@ msgid ""
 "<package>midori</package>, a lightweight web browser based on WebKit and GTK"
 "+, is no longer suppored and is scheduled for removal in next release."
 msgstr ""
+"<package>midori</package>, peramban web ringan berbasis WebKit dan GTK+, "
+"tidak lagi didukung dan dijadwalkan untuk dihapus pada rilis berikutnya."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:511
@@ -890,7 +979,7 @@ msgstr ""
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:541
 msgid "ReiserFS support removed"
-msgstr ""
+msgstr "Dukungan ReiserFS Dihapus"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:542
@@ -899,6 +988,9 @@ msgid ""
 "from YaST and the kernel, and the installer will block the upgrade when it "
 "detects a ReiserFS file system."
 msgstr ""
+"Pada openSUSE Leap 15.3, dukungan terhadap ReiserFS telah sepenuhnya dihapus "
+"dari YaST dan kernel. Program instalasi akan memblokir proses peningkatan "
+"versi apabila mendeteksi sistem berkas ReiserFS."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:547
@@ -906,11 +998,14 @@ msgid ""
 "For existing data partitions formatted with ReiserFS, we suggest converting "
 "them to Btrfs before migrating your system to openSUSE Leap 15.3."
 msgstr ""
+"Untuk partisi data yang sudah diformat menggunakan ReiserFS, disarankan "
+"untuk mengonversinya ke Btrfs sebelum melakukan migrasi sistem ke openSUSE "
+"Leap 15.3."
 
 #. (itstool) path: sect3/title
 #: xml/release-notes.xml:553
 msgid "Berkeley DB removed from packages"
-msgstr ""
+msgstr "Berkeley DB Dihapus dari Paket"
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:554
@@ -922,46 +1017,53 @@ msgid ""
 "these packages. In the long term, SUSE aims to provide a solution without "
 "Berkeley DB."
 msgstr ""
+"Berkeley DB, yang digunakan sebagai basis data pada beberapa paket, memiliki "
+"lisensi ganda di bawah GNU AGPLv3 dan Sleepycat. Karena penyedia layanan "
+"yang mendistribusikan ulang paket kami dapat menganggap lisensi tersebut "
+"berpotensi merugikan bagi solusi mereka, kami memutuskan untuk menghapus "
+"Berkeley DB sebagai dependensi dari paket-paket tersebut. Dalam jangka "
+"panjang, SUSE berencana untuk menyediakan solusi yang tidak lagi bergantung "
+"pada Berkeley DB."
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:562
 msgid "This change affects the following packages:"
-msgstr ""
+msgstr "Perubahan ini memengaruhi paket-paket berikut:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:567
 msgid "<literal>apr-util</literal>"
-msgstr ""
+msgstr "<literal>apr-util</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:572
 msgid "<literal>cyrus-sasl</literal>"
-msgstr ""
+msgstr "<literal>cyrus-sasl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:577
 msgid "<literal>iproute2</literal>"
-msgstr ""
+msgstr "<literal>iproute2</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:582
 msgid "<literal>perl</literal>"
-msgstr ""
+msgstr "<literal>perl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:587
 msgid "<literal>php7</literal>"
-msgstr ""
+msgstr "<literal>php7</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:592
 msgid "<literal>postfix</literal>"
-msgstr ""
+msgstr "<literal>postfix</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:597
 msgid "<literal>rpm</literal>"
-msgstr ""
+msgstr "<literal>rpm</literal>"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:609
@@ -970,16 +1072,12 @@ msgstr "Driver dan perangkat keras"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:613
-#, fuzzy
-#| msgid ""
-#| "Alignment of SUSE Linux Enterprise Server and openSUSE Leap kernel "
-#| "packaging"
 msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
 msgstr ""
-"Keselarasan pemaketan kernel antara SUSE Linux Enterprise Server dan "
-"openSUSE Leap"
+"Boot Aman: Kernel SUSE Linux Enterprise dan Paket Modul Kernel "
+"Tertandatangani openSUSE"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:614
@@ -991,6 +1089,15 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"Paket baru yang diperkenalkan, <package>openSUSE-signkey-cert</package>, "
+"diperlukan untuk KMP (Kernel Module Package) openSUSE seperti "
+"<package>virtualbox</package>, namun hanya ketika sistem berada dalam mode "
+"Boot Aman (Secure Boot). Paket ini berisi sertifikat kunci penandatanganan "
+"openSUSE yang digunakan untuk menandatangani berkas modul kernel "
+"(<literal>.ko</literal>) pada KMP openSUSE, serta memanggil "
+"<literal>mokutil</literal> untuk membantu pengguna mendaftarkan sertifikat "
+"tersebut ke MOK (Machine Owner Key). Dengan cara ini, KMP openSUSE dapat "
+"diverifikasi oleh kernel."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:621
@@ -1001,6 +1108,12 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Jika Anda tidak memiliki pattern dasar yang terpasang dan menggunakan salah "
+"satu KMP tersebut, disarankan untuk memasang paket <package>openSUSE-signkey-"
+"cert</package> secara manual. Sistem perlu dimulai ulang (reboot) "
+"setelahnya. Informasi lebih lanjut mengenai proses ini dan pendaftaran "
+"manual dapat ditemukan di <link xlink:href="
+"\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:631
@@ -1014,10 +1127,11 @@ msgid ""
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
 "important security measure to avoid untrusted code running in the kernel."
 msgstr ""
-"openSUSE Leap 15.2 dan yang lebih baru memungkinkan pemeriksaan tanda tangan "
-"modul kernel untuk driver pihak ketiga  (<literal>CONFIG_MODULE_SIG=y</"
-"literal>). Ini adalah tindakan keamanan penting untuk menghindari kode yang "
-"tidak terpercaya berjalan di dalam kernel."
+"openSUSE Leap 15.2 dan versi selanjutnya mengaktifkan pemeriksaan tanda "
+"tangan modul kernel untuk driver pihak ketiga "
+"(<literal>CONFIG_MODULE_SIG=y</literal>). Langkah ini merupakan tindakan "
+"keamanan penting untuk mencegah kode tidak tepercaya dijalankan di dalam "
+"kernel."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:638
@@ -1039,9 +1153,9 @@ msgid ""
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
 msgstr ""
-"Modul kernel yang tidak ditandatangani atau ditandatangani dengan kunci yang "
-"dikenal sebagai tidak tepercaya atau tidak dapat diverifikasi terhadap basis "
-"data kunci tepercaya sistem akan diblokir."
+"Modul kernel yang tidak ditandatangani, atau ditandatangani dengan kunci "
+"yang dikenal sebagai tidak tepercaya atau tidak dapat diverifikasi terhadap "
+"basis data kunci tepercaya sistem, akan diblokir."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:654
@@ -1110,6 +1224,8 @@ msgstr ""
 #: xml/release-notes.xml:690
 msgid "Manual config migration of IBus is necessary due to layout name change"
 msgstr ""
+"Migrasi konfigurasi manual untuk IBus diperlukan karena adanya perubahan "
+"nama tata letak (layout)"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:691
@@ -1121,6 +1237,13 @@ msgid ""
 "Slovak. See <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1177545\"/> for more information."
 msgstr ""
+"Sejak versi <package>IBus</package> 1.5.23 mengubah nama beberapa tata letak "
+"papan ketik, program ini tidak dapat memuat konfigurasi yang berisi tata "
+"letak yang telah diubah namanya setelah peningkatan versi. Akibatnya, tata "
+"letak mungkin kembali ke US. Tata letak dari bahasa-bahasa berikut "
+"terpengaruh: Belgia, Jerman, Yunani, Rumania, dan Slovakia. Untuk informasi "
+"lebih lanjut, lihat <link xlink:href="
+"\"https://bugzilla.opensuse.org/show_bug.cgi?id=1177545\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:698
@@ -1129,6 +1252,9 @@ msgid ""
 "an appropriate layout. For desktop environments other than GNOME, run "
 "<literal>ibus-setup</literal> instead."
 msgstr ""
+"Pengguna perlu melakukan migrasi konfigurasi secara manual. Buka GNOME "
+"Settings dan pilih tata letak yang sesuai. Untuk lingkungan desktop selain "
+"GNOME, jalankan perintah <literal>ibus-setup</literal>."
 
 # bnc#809347
 #. (itstool) path: sect1/title
