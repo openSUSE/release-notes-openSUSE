@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: translation@suse.de\n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2026-03-30 12:04+0000\n"
+"PO-Revision-Date: 2026-03-30 15:04+0000\n"
 "Last-Translator: mohammad alhargan <malham1@gmail.com>\n"
 "Language-Team: Arabic <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_3/ar/>\n"
@@ -26,7 +26,7 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "المترجمون"
+msgstr "قائمة المترجمين"
 
 #. (itstool) path: article/title
 #. (itstool) path: bugtracker/component
@@ -37,7 +37,7 @@ msgstr "ملاحظات الإصدار"
 #. (itstool) path: info/releaseinfo
 #: xml/release-notes.xml:16
 msgid "@VERSION@"
-msgstr "@VERSION@"
+msgstr "@الإصدار@"
 
 #. (itstool) path: info/productname
 #: xml/release-notes.xml:17
@@ -984,50 +984,52 @@ msgstr ""
 
 #. (itstool) path: sect3/para
 #: xml/release-notes.xml:562
-#, fuzzy
-#| msgid "These release notes cover the following areas:"
 msgid "This change affects the following packages:"
-msgstr "ملاحظات الإصدار تغطي المناطق الأتية:"
+msgstr "يؤثر هذا التغيير على الحزم التالية:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:567
+#, fuzzy
 msgid "<literal>apr-util</literal>"
-msgstr ""
+msgstr "<literal>apr-util</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:572
+#, fuzzy
 msgid "<literal>cyrus-sasl</literal>"
-msgstr ""
+msgstr "<literal>cyrus-sasl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:577
+#, fuzzy
 msgid "<literal>iproute2</literal>"
-msgstr ""
+msgstr "<literal>iproute2</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:582
+#, fuzzy
 msgid "<literal>perl</literal>"
-msgstr ""
+msgstr "<literal>perl</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:587
 msgid "<literal>php7</literal>"
-msgstr ""
+msgstr "<literal>php7</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:592
 msgid "<literal>postfix</literal>"
-msgstr ""
+msgstr "<literal>postfix</literal>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:597
 msgid "<literal>rpm</literal>"
-msgstr ""
+msgstr "<literal>rpm</literal>"
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:609
 msgid "Drivers and hardware"
-msgstr ""
+msgstr "برامج التشغيل والأجهزة"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:613
@@ -1035,6 +1037,8 @@ msgid ""
 "Secure Boot: SUSE Linux Enterprise kernel and openSUSE signed Kernel Module "
 "Packages"
 msgstr ""
+"التشغيل الآمن: نواة SUSE Linux Enterprise وحزم وحدات النواة الموقعة من "
+"openSUSE"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:614
@@ -1046,6 +1050,12 @@ msgid ""
 "and calls <literal>mokutil</literal> to help user enroll the certificate to "
 "MOK. This way, the openSUSE KMP can be verified by the kernel."
 msgstr ""
+"الحزمة <package>openSUSE-signkey-cert</package> التي تم طرحها مؤخرًا مطلوبة "
+"لبرامج KMP في openSUSE مثل <package>virtualbox</package>، ولكن فقط في وضع "
+"التمهيد الآمن (Secure Boot). تتضمن الحزمة شهادة مفتاح التوقيع openSUSE لتوقيع "
+"ملف وحدة النواة (<literal>.ko</literal>) في openSUSE KMP وتستدعي <literal>"
+"mokutil</literal> لمساعدة المستخدم على تسجيل الشهادة في MOK. وبهذه الطريقة، "
+"يمكن للنواة التحقق من صحة openSUSE KMP."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:621
@@ -1056,11 +1066,16 @@ msgid ""
 "process and manual enrollment can be found at <link xlink:href=\"https://en."
 "opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"إذا لم يكن النمط الأساسي مثبتًا وكنت تستخدم أيًا من برامج KMP هذه، فننصحك "
+"بتثبيت الحزمة <package>openSUSE-signkey-cert</package> يدويًّا. ويجب إعادة "
+"تشغيل النظام. يمكن العثور على مزيد من المعلومات حول هذه العملية والتسجيل "
+"اليدوي على الرابط <link xlink:href=\"https://en.opensuse.org/"
+"SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:631
 msgid "Secure Boot: third-party drivers need to be properly signed"
-msgstr ""
+msgstr "التشغيل الآمن: يجب أن تكون برامج تشغيل الطرف الثالث موقعة بشكل صحيح"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:632
@@ -1069,6 +1084,10 @@ msgid ""
 "third-party drivers (<literal>CONFIG_MODULE_SIG=y</literal>). This is an "
 "important security measure to avoid untrusted code running in the kernel."
 msgstr ""
+"تتيح إصدارات openSUSE Leap 15.2 والإصدارات الأحدث إمكانية التحقق من توقيع "
+"وحدات النواة الخاصة ببرامج التشغيل الخارجية (<literal>CONFIG_MODULE_SIG=y</"
+"literal>). ويُعد هذا إجراءً أمنيًا مهمًا لمنع تشغيل أي شفرات غير موثوق بها داخل "
+"النواة."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:638
@@ -1130,19 +1149,15 @@ msgstr "سطح المكتب"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:674
-#, fuzzy
-#| msgid ""
-#| "This section lists general issues with openSUSE Leap 15.0 that do not "
-#| "match any other category."
 msgid "This section lists desktop issues and changes in openSUSE Leap 15.3."
 msgstr ""
-"يعرض هذا المقطع الحالات العامة في أوبن سوزي Leap 15.0 التي لا تتطابق مع "
-"الحالات الاخرى."
+"يعرض هذا القسم المشكلات والتغييرات المتعلقة بسطح المكتب في إصدار openSUSE "
+"Leap 15.3."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:679
 msgid "KDE 4 and Qt4 have been removed"
-msgstr ""
+msgstr "تم إزالة KDE 4 و Qt4"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:680
@@ -1152,11 +1167,14 @@ msgid ""
 "reasons. For more information, see <link xlink:href=\"https://bugzilla."
 "opensuse.org/show_bug.cgi?id=1179613\"/>."
 msgstr ""
+"لم تعد حزم KDE 4 جزءًا من openSUSE Leap 15.3. قم بتحديث النظام إلى Plasma 5 و "
+"Qt 5. قد تظل بعض حزم Qt 4 موجودة لأسباب التوافق. لمزيد من المعلومات، انظر "
+"<link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1179613\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:690
 msgid "Manual config migration of IBus is necessary due to layout name change"
-msgstr ""
+msgstr "يلزم إجراء ترحيل يدوي لإعدادات IBus بسبب تغيير اسم تخطيط لوحة المفاتيح"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:691
@@ -1168,6 +1186,12 @@ msgid ""
 "Slovak. See <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1177545\"/> for more information."
 msgstr ""
+"نظرًا لأن الإصدار 1.5.23 من <package>IBus</package> قد أعاد تسمية بعض تخطيطات "
+"لوحة المفاتيح، فإنه لا يمكنه تحميل ملفات الاعداد التي تحتوي التخطيطات المعاد "
+"تسميتها بعد الترقية. وبالتالي، قد يعيد ضبط التخطيط إلى \"الولايات المتحدة\". "
+"وتتأثر تخطيطات اللغات التالية: البلجيكية، والألمانية، واليونانية، والرومانية، "
+"والسلوفاكية. انظر <link xlink:href=\"https://bugzilla.opensuse.org/"
+"show_bug.cgi?id=1177545\"/> لمزيد من المعلومات."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:698
@@ -1176,11 +1200,12 @@ msgid ""
 "an appropriate layout. For desktop environments other than GNOME, run "
 "<literal>ibus-setup</literal> instead."
 msgstr ""
+"يتعين على المستخدمين ترحيل الإعدادات يدويًّا. افتح «إعدادات GNOME» واختر تخطيطًا "
+"مناسبًا. بالنسبة لبيئات سطح المكتب بخلاف GNOME، قم بتشغيل <literal>ibus-setup</"
+"literal> بدلاً من ذلك."
 
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:767
-#, fuzzy
-#| msgid "More Information and Feedback"
 msgid "More information and feedback"
 msgstr "مزيد من المعلومات والعتليقات"
 
