@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2022-06-16 08:56+0200\n"
-"PO-Revision-Date: 2026-03-23 14:04+0000\n"
+"PO-Revision-Date: 2026-05-18 11:12+0000\n"
 "Last-Translator: Peter Andreasen <noesgaard@gmail.com>\n"
 "Language-Team: Danish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_3/da/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.5\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -216,6 +216,21 @@ msgid ""
 "see <link xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?"
 "id=1186593\"/>."
 msgstr ""
+"Vedligeholdelsesopsætningen for openSUSE Leap 15.3 består af tre primære "
+"opdateringsarkiver. Disse er: <literal>repo-update</literal>, <literal>repo-"
+"backports-update</literal> og <literal>repo-sle-update</literal>. De to "
+"sidstnævnte er nye og er et resultat af genanvendelse af binære filer fra "
+"SUSE Linux Enterprise. Disse arkiver er tilgængelige og kontrolleres under "
+"online-installationen af openSUSE Leap. Vi anbefaler, at du bruger dem. Nye "
+"definitioner af opdateringsarkiver til openSUSE Leap 15.3 vil desuden blive "
+"leveret via en 0-dages vedligeholdelsesopdatering af pakken <package>"
+"openSUSE-release</package>. Opdateringen vil blive leveret via den "
+"traditionelle vedligeholdelseskanal <literal>repo-update</literal>. Den vil "
+"indeholde et særligt opdateringsflag, hvilket betyder, at den berører "
+"softwarehåndteringsområdet, som derefter håndteres på en særlig måde af "
+"zypper. Du bør dobbelttjekke med kommandoen <command>zypper up</command>, om "
+"alle opdateringer blev behandlet. For yderligere information, se <link "
+"xlink:href=\"https://bugzilla.opensuse.org/show_bug.cgi?id=1186593\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:115
@@ -226,6 +241,11 @@ msgid ""
 "Enterprise packages. This repository has also a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Arkivet <literal>repo-update</literal> er til openSUSE Leap-opdateringer "
+"(OSS). Det er det mindste af arkiverne og indeholder "
+"systemkonfigurationspakker, herunder release-pakken, branding og potentielle "
+"afgreninger af SUSE Linux Enterprise-pakker. Dette arkiv har også en "
+"<literal>debug-info</literal>-variant."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:120
@@ -235,6 +255,9 @@ msgid ""
 "openSUSE Leap packages. This repository also has a <literal>debug-info</"
 "literal> variant."
 msgstr ""
+"Arkivet <literal>repo-backports-update</literal> er et opdateringsarkiv til "
+"openSUSE Backports, som indeholder opdateringer til størstedelen af openSUSE "
+"Leap-pakkerne. Dette arkiv har også en <literal>debug-info</literal>-variant."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:124
@@ -244,6 +267,10 @@ msgid ""
 "Enterprise update streams. This repository is without the <literal>debug-"
 "info</literal> variant."
 msgstr ""
+"Det tredje arkiv, som hedder <literal>repo-sle-update</literal>, er et "
+"opdateringsarkiv, der indeholder kombinerede opdateringer fra alle aktive "
+"SUSE Linux Enterprise-opdateringsstrømme. Dette arkiv er uden en <literal>"
+"debug-info</literal>-variant."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:131
@@ -251,6 +278,8 @@ msgid ""
 "Using atomic updates with the system role <emphasis>Transactional Server</"
 "emphasis>"
 msgstr ""
+"Brug af atomare opdateringer med systemrollen <emphasis>Transactional "
+"Server</emphasis>"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:133
@@ -264,11 +293,18 @@ msgid ""
 "openSUSE Leap 15.3 also work with the system role <emphasis>Transactional "
 "Server</emphasis>."
 msgstr ""
+"Installationsprogrammet understøtter systemrollen <emphasis>Transactional "
+"Server</emphasis>. Denne systemrolle har et opdateringssystem, der "
+"gennemfører opdateringer atomart (som én samlet handling), hvilket gør det "
+"nemt at rulle dem tilbage, hvis det skulle blive nødvendigt. Disse "
+"funktioner bygger på de samme pakkehåndteringsværktøjer, som alle andre "
+"SUSE- og openSUSE-distributioner også benytter. Det betyder, at langt "
+"størstedelen af de RPM-pakker, der virker med andre systemroller i openSUSE "
+"Leap 15.3, også fungerer med systemrollen <emphasis>Transactional Server</"
+"emphasis>."
 
 #. (itstool) path: note/title
 #: xml/release-notes.xml:145
-#, fuzzy
-#| msgid "Incompatible Packages"
 msgid "Incompatible packages"
 msgstr "Inkompatible pakker"
 
@@ -292,7 +328,7 @@ msgstr "For at levere disse funktioner er dette opdateringssystem afhængigt af:
 #. (itstool) path: formalpara/title
 #: xml/release-notes.xml:159
 msgid "Btrfs snapshots"
-msgstr ""
+msgstr "Btrfs-snapshots"
 
 #. (itstool) path: formalpara/para
 #: xml/release-notes.xml:160
@@ -349,6 +385,7 @@ msgstr ""
 msgid ""
 "<emphasis>Transactional Server</emphasis> needs at least 12 GB of disk space"
 msgstr ""
+"<emphasis>Transactional Server</emphasis> skal bruge mindst 12 GB diskplads"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:191
@@ -446,7 +483,7 @@ msgstr ""
 #: xml/release-notes.xml:249
 #, no-wrap
 msgid "systemctl disable --now transactional-update.timer rebootmgr.service"
-msgstr ""
+msgstr "systemctl disable --now transactional-update.timer rebootmgr.service"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:250
