@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: RELEASE-NOTES.hi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-09 16:53+0200\n"
-"PO-Revision-Date: 2026-05-17 12:12+0000\n"
+"PO-Revision-Date: 2026-05-18 15:12+0000\n"
 "Last-Translator: Shobha Tyagi <shobhatyagi.set@mriu.edu.in>\n"
 "Language-Team: Hindi <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_4/hi/>\n"
@@ -230,8 +230,8 @@ msgid ""
 "are incompatible. If you find such a package, file a bug report."
 msgstr ""
 "कुछ पैकेज अपने RPM <literal>%post</literal> स्क्रिप्ट्स में <filename>/var</filename> "
-"या <filename>/srv</filename> की सामग्री को संशोधित करते हैं। ये पैकेज असंगत हैं। यदि "
-"आपको ऐसा कोई पैकेज मिलता है, तो कृपया एक बग रिपोर्ट दर्ज करें।"
+"या <filename>/srv</filename> की सामग्री को संशोधित करते हैं। ये पैकेज असंगत होते हैं। "
+"यदि आपको ऐसा कोई पैकेज मिलता है, तो कृपया एक बग रिपोर्ट दर्ज करें।"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:121
@@ -285,12 +285,19 @@ msgid ""
 "this directory is automatically configured to use OverlayFS. <filename>/var</"
 "filename> is now a separate subvolume which can be written to by processes."
 msgstr ""
+"इस सेटअप को कार्यशील बनाने के लिए, फ़ाइल सिस्टम में दो अतिरिक्त परिवर्तन करने आवश्यक थे: "
+"उपयोगकर्ता कॉन्फ़िगरेशन को <filename>/etc</filename> में लिखने की अनुमति देने के लिए, "
+"इस निर्देशिका को स्वचालित रूप से OverlayFS का उपयोग करने के लिए कॉन्फ़िगर किया गया है। "
+"<filename>/var</filename> अब एक अलग सबवॉल्यूम है, जिसमें प्रक्रियाएँ (processes) लिख "
+"सकती हैं।"
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:158
 msgid ""
 "<emphasis>Transactional Server</emphasis> Needs At Least 12 GB of Disk Space"
 msgstr ""
+"<emphasis>Transactional Server</emphasis> को कम से कम १२ जीबी डिस्क स्थान की "
+"आवश्यकता होती है"
 
 #. (itstool) path: important/para
 #: xml/release-notes.xml:159
@@ -298,6 +305,8 @@ msgid ""
 "The system role <emphasis>Transactional Server</emphasis> needs a disk size "
 "of at least 12 GB to accommodate Btrfs snapshots."
 msgstr ""
+"सिस्टम रोल <emphasis>Transactional Server</emphasis> को Btrfs स्नैपशॉट्स के लिए "
+"कम से कम १२ जीबी डिस्क आकार की आवश्यकता होती है।"
 
 #. (itstool) path: important/title
 #: xml/release-notes.xml:166
@@ -311,6 +320,9 @@ msgid ""
 "YaST performs things immediately and because it cannot edit a read-only "
 "filesystem."
 msgstr ""
+"वर्तमान में YaST, transactional updates के साथ काम नहीं करता है। इसका कारण यह है कि "
+"YaST कार्यों को तुरंत निष्पादित करता है और यह एक केवल-पढ़ने योग्य (read-only) फ़ाइल "
+"सिस्टम को संपादित नहीं कर सकता।"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:174
@@ -319,11 +331,14 @@ msgid ""
 "<command>transactional-update</command> instead of YaST and Zypper for all "
 "software management:"
 msgstr ""
+"Transactional updates के साथ काम करने के लिए, सॉफ़्टवेयर प्रबंधन के सभी कार्यों के लिए "
+"YaST और Zypper के बजाय हमेशा <command>transactional-update</command> कमांड का "
+"उपयोग करें:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:181
 msgid "Update the system: <command>transactional-update up</command>"
-msgstr ""
+msgstr "सिस्टम को अपडेट करें: <command>transactional-update up</command>"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:187
@@ -460,6 +475,10 @@ msgid ""
 "firmware does not collect and free those entries. This can result in a non-"
 "bootable system."
 msgstr ""
+"आधुनिक फ़र्मवेयर में एक गार्बेज कलेक्टर होता है, जो हटाई गई प्रविष्टियों को एकत्रित करता है "
+"और पुरानी प्रविष्टियों के लिए आरक्षित मेमोरी को मुक्त करता है। समस्या तब उत्पन्न होती है "
+"जब त्रुटिपूर्ण फ़र्मवेयर उन प्रविष्टियों को एकत्रित और मुक्त नहीं करता। इससे सिस्टम बूट न होने "
+"की स्थिति उत्पन्न हो सकती है।"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:285
@@ -515,6 +534,9 @@ msgid ""
 "the <package>lifecycle-data-openSUSE</package> package is installed, then "
 "use the command:"
 msgstr ""
+"यह जाँचने के लिए कि इंस्टॉल किए गए पैकेज अब मेंटेन नहीं किए जा रहे हैं, सुनिश्चित करें कि "
+"<package>lifecycle-data-openSUSE</package> पैकेज इंस्टॉल है, फिर निम्न कमांड का "
+"उपयोग करें:"
 
 #. (itstool) path: sect2/screen
 #: xml/release-notes.xml:354
