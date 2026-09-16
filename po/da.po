@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2023-05-09 16:53+0200\n"
-"PO-Revision-Date: 2026-09-15 17:13+0000\n"
+"PO-Revision-Date: 2026-09-16 10:13+0000\n"
 "Last-Translator: Peter Andreasen <noesgaard@gmail.com>\n"
 "Language-Team: Danish <https://l10n.opensuse.org/projects/release-notes-"
 "opensuse/leap-15_4/da/>\n"
@@ -671,12 +671,12 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:408
 msgid "Drivers and Hardware"
-msgstr ""
+msgstr "Drivere og Hardware"
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:413
 msgid "Secure Boot: Third-Party Drivers Need to Be Properly Signed"
-msgstr ""
+msgstr "Secure Boot: Tredjepartsdrivere skal være korrekt signeret"
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:414
@@ -695,6 +695,10 @@ msgid ""
 "repositories are not affected, because the modules they contain are signed "
 "with the openSUSE key. The signature check has the following behavior:"
 msgstr ""
+"Dette kan forhindre tredjepartskernemoduler i at blive indlæst, hvis UEFI "
+"Secure Boot er aktiveret. Kernemodulpakker (KMP'er) fra de officielle "
+"openSUSE-arkiver er ikke berørt, da modulerne, de indeholder, er signeret "
+"med openSUSE-nøglen. Signaturkontrollen har følgende opførsel:"
 
 #. (itstool) path: listitem/para
 #: xml/release-notes.xml:429
@@ -703,6 +707,9 @@ msgid ""
 "as untrusted or cannot be verified against the system's trusted key data "
 "base will be blocked."
 msgstr ""
+"Kernemoduler, som er usignerede eller signerede med en nøgle, der enten er "
+"kendt som ubetroet eller ikke kan verificeres mod systemets database for "
+"betroede nøgler, vil blive blokeret."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:436
@@ -713,6 +720,11 @@ msgid ""
 "blocked nor cause warnings. See <link xlink:href=\"https://en.opensuse.org/"
 "openSUSE:UEFI\"/>."
 msgstr ""
+"Det er muligt at generere et specialtilpasset certifikat, registrere det i "
+"systemets Machine Owner Key-database (MOK-database) og signere lokalt "
+"kompilerede kernemoduler med dette certifikats nøgle. Moduler, der er "
+"signeret på denne måde, vil hverken blive blokeret eller udløse advarsler. "
+"Se <link xlink:href=\"https://en.opensuse.org/openSUSE:UEFI\"/>."
 
 #. (itstool) path: sect2/para
 #: xml/release-notes.xml:443
@@ -723,6 +735,12 @@ msgid ""
 "how to install the drivers and enroll the MOK key, see <link xlink:"
 "href=\"https://en.opensuse.org/SDB:NVIDIA_drivers#Secureboot\"/>."
 msgstr ""
+"Da dette også påvirker NVIDIA-grafikdrivere, har vi håndteret dette i vores "
+"officielle pakker til openSUSE. Du skal dog manuelt registrere en ny MOK-"
+"nøgle efter installationen for at få de nye pakker til at virke. For "
+"instruktioner om, hvordan du installerer driverne og registrerer MOK-nøglen, "
+"se <link xlink:href=\"https://en.opensuse.org/"
+"SDB:NVIDIA_drivers#Secureboot\"/>."
 
 #. (itstool) path: sect2/title
 #: xml/release-notes.xml:454
@@ -743,7 +761,7 @@ msgstr ""
 #. (itstool) path: sect1/title
 #: xml/release-notes.xml:467
 msgid "Desktop"
-msgstr ""
+msgstr "Skrivebord"
 
 #. (itstool) path: sect1/para
 #: xml/release-notes.xml:468
